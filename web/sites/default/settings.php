@@ -24,6 +24,16 @@ $config_directories = array(
 );
 
 /**
+ * Include docksal settings if not on Pantheon env
+ */
+
+if (!isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+$docksal_settings = __DIR__ . "/settings.docksal.php";
+if (file_exists($docksal_settings)) {
+  include $docksal_settings;
+}
+}
+/**
  * If there is a local settings file, then include it
  */
 $local_settings = __DIR__ . "/settings.local.php";
