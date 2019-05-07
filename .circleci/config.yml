@@ -133,9 +133,9 @@ jobs:
                 name: run composer install again to get dev dependencies
                 command: composer install
 
-            - run:
-                name: run functional tests with Behat
-                command: ./.ci/scripts/03-test
+            #- run:
+            #    name: run functional tests with Behat
+            #    command: ./.ci/scripts/03-test
 
             - run:
                 name: post-test actions
