@@ -28,6 +28,7 @@ $config_directories = array(
  */
 $settings['trusted_host_patterns'] = [
   '^mtcv.docksal$',
+  '^dev-mtcv.pantheonsite.io$',
 ];
 
 
