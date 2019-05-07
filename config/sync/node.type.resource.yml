@@ -1,0 +1,17 @@
+uuid: 7deb5168-852f-4796-85aa-b9c7dd6b30ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Resource
+type: resource
+description: 'This content type stores all legal and related services that appear in the self-help resource library.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

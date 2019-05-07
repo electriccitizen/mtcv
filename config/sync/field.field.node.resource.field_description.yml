@@ -1,0 +1,21 @@
+uuid: e981ecc0-8785-499e-bb3e-0d6915be54d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.resource
+  module:
+    - text
+id: node.resource.field_description
+field_name: field_description
+entity_type: node
+bundle: resource
+label: Description
+description: 'Enter a short 1-2 sentence description for this resource.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

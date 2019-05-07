@@ -1,0 +1,9 @@
+uuid: d07c3339-6c12-4545-9ece-a7d46e1e21ff
+langcode: en
+status: true
+dependencies: {  }
+id: text
+label: Text
+icon_uuid: null
+description: 'This is a simple text area you can use to compose your page in combination with other paragraph types.'
+behavior_plugins: {  }

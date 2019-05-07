@@ -1,0 +1,20 @@
+uuid: 5b20b21f-e1a7-4372-9c0c-4eee8834a920
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_crime
+field_name: field_crime
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

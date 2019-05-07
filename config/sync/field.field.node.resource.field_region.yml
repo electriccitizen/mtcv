@@ -1,0 +1,29 @@
+uuid: ac2c9e22-065d-4c6c-9662-9df8164d80da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_region
+    - node.type.resource
+    - taxonomy.vocabulary.region
+id: node.resource.field_region
+field_name: field_region
+entity_type: node
+bundle: resource
+label: Region
+description: 'Select the region where this resource is located.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      region: region
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

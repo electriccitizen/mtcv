@@ -1,0 +1,13 @@
+uuid: 78b5a4d3-7fac-4488-a427-a4a61b3f8fc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.code
+  module:
+    - tui_editor
+format: code
+editor: tui_editor
+settings:
+  saveHTMLToTextarea: 0
+image_upload: {  }

@@ -1,0 +1,8 @@
+uuid: f6f5a596-0673-48af-852c-b136db484e3e
+langcode: en
+status: true
+dependencies: {  }
+name: Region
+vid: region
+description: 'Store terms for geographic regions.'
+weight: 0

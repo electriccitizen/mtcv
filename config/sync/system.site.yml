@@ -1,0 +1,14 @@
+uuid: 3b59aee0-037e-4412-a0fa-96b9a36febb6
+name: jumpsuit.life
+mail: broeker@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
