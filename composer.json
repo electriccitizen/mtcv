@@ -25,7 +25,6 @@
         "drupal/pathauto": "^1.4",
         "drupal/simple_block": "^1.0@beta",
         "drupal/text_summary_options": "^1.0",
-        "drupal/tui_editor": "^1.9",
         "drush-ops/behat-drush-endpoint": "^9.3",
         "drush/drush": "~8",
         "egulias/email-validator": "^2",

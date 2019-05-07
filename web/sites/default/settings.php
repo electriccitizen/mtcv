@@ -24,6 +24,14 @@ $config_directories = array(
 );
 
 /**
+ * Trusted host patterns
+ */
+$settings['trusted_host_patterns'] = [
+  '^mtcv.docksal$',
+];
+
+
+/**
  * Include docksal settings if not on Pantheon env
  */
 
