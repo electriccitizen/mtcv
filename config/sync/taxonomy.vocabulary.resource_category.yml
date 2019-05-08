@@ -1,0 +1,8 @@
+uuid: 81e14bdf-e382-40cb-a7f5-1c01f3b7ec30
+langcode: en
+status: true
+dependencies: {  }
+name: 'Resource category'
+vid: resource_category
+description: 'Categories for crime victim resources'
+weight: 0
