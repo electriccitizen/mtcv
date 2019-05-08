@@ -2,7 +2,7 @@ uuid: 81e14bdf-e382-40cb-a7f5-1c01f3b7ec30
 langcode: en
 status: true
 dependencies: {  }
-name: 'Resource categor(ies)'
+name: 'Resource categorie(s)'
 vid: resource_category
 description: 'These terms are used to associate resources with additional, generic categories surrounding victim''s rights.'
 weight: 0

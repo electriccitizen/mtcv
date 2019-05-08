@@ -10,8 +10,8 @@ id: node.resource.field_crime
 field_name: field_crime
 entity_type: node
 bundle: resource
-label: Crime
-description: 'Select one or more crimes that apply to the this resource or service.'
+label: Crime(s)
+description: 'Select one or more to associate this resource with a specific crime(s) against an individual.'
 required: false
 translatable: false
 default_value: {  }
