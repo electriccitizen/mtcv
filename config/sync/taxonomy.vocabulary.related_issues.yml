@@ -2,7 +2,7 @@ uuid: 6eefb005-91bd-4ce7-ad41-6228964f7254
 langcode: en
 status: true
 dependencies: {  }
-name: 'Related issues'
+name: 'Related need(s)'
 vid: related_issues
-description: 'Stores terms for related life issues that apply to a service or resource.'
+description: 'These terms are used to associate resources with one or more related legal needs or life issues.'
 weight: 0

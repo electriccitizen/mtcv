@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 name: Region
 vid: region
-description: 'Store terms for geographic regions.'
+description: 'These terms are used to associate resources with a specific geographic region.'
 weight: 0

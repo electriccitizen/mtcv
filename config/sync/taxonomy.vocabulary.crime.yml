@@ -2,7 +2,7 @@ uuid: d95c6cee-7a56-4140-ab85-6993f81946c3
 langcode: en
 status: true
 dependencies: {  }
-name: Crime
+name: Crime(s)
 vid: crime
-description: 'This taxonomy stores terms that describe a specific crime.'
+description: 'These terms are used to associate resources with a specific crime against an individual. '
 weight: 0
