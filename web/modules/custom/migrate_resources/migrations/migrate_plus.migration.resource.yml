@@ -1,0 +1,135 @@
+# This migration demonstrates a simple import from a JSON file.
+id: resource
+label: JSON feed
+migration_group: Resource
+migration_tags:
+  - resources
+source:
+  # We use the JSON source plugin.
+  plugin: url
+  # In this example we get data from a local file, to get data from a URL
+  # define http as data_fetcher_plugin.
+  data_fetcher_plugin: http
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  # The data_parser normally limits the fields passed on to the source plugin
+  # to fields configured to be used as part of the migration. To support more
+  # dynamic migrations, the JSON data parser supports including the original
+  # data for the current row. Simply include the 'include_raw_data' flag set
+  # to `true` to enable this. This option is disabled by default to minimize
+  # memory footprint for migrations that do not need this capability.
+  # include_raw_data: true
+  # Flags whether to track changes to incoming data. If TRUE, we will maintain
+  # hashed source rows to determine whether incoming data has changed.
+  # track_changes: true
+  # Copy the example JSON file in artifacts folder to sites/default/files folder.
+
+  urls:
+    - 'https://api.airtable.com/v0/appZaO0GcvM8AqUem/Resources?api_key=keyOL0wdRbPvunssI'
+
+  # An xpath-like selector corresponding to the items to be imported.
+  item_selector: records
+
+  # Under 'fields', we list the data items to be imported. The first level keys
+  # are the source field names we want to populate (the names to be used as
+  # sources in the process configuration below). For each field we're importing,
+  # we provide a label (optional - this is for display in migration tools) and
+  # an xpath for retrieving that value. It's important to note that this xpath
+  # is relative to the elements retrieved by item_selector.
+  fields:
+    -
+      name: id
+      label: 'Unique identifier'
+      selector: id
+    -
+      name: Title
+      label: 'Product name'
+      selector: fields/Title
+    -
+      name: Description
+      label: 'Description'
+      selector: fields/Description
+    -
+      name: URL
+      label: 'URL'
+      selector: fields/URL
+    -
+      name: Region
+      label: 'Region'
+      selector: fields/Region
+    -
+      name: Crime
+      label: 'Crime'
+      selector: fields/Crime
+    -
+      name: RelatedNeed
+      label: 'Related Need'
+      selector: fields/RelatedNeed
+    -
+      name: ResourceCategory
+      label: 'Related Category'
+      selector: fields/ResourceCategory
+
+
+
+  # Under 'ids', we identify source fields populated above which will uniquely
+  # identify each imported item. The 'type' makes sure the migration map table
+  # uses the proper schema type for stored the IDs.
+  ids:
+    id:
+      type: string
+process:
+  # Note that the source field names here (name, description and price) were
+  # defined by the 'fields' configuration for the source plugin above.
+  type:
+    plugin: default_value
+    default_value: resource
+  title: Title
+  'field_description/value': Description
+  'field_description/format':
+    plugin: default_value
+    default_value: 'full_html'
+  'field_url/uri': URL
+  field_crime:
+    - plugin: explode
+      source: Crime
+      delimiter: ','
+    - plugin: extract
+      index:
+        - 0
+    - plugin: entity_lookup
+      ignore_case: true
+  field_related_issue:
+    - plugin: explode
+      source: RelatedNeed
+      delimiter: ','
+    - plugin: extract
+      index:
+        - 0
+    - plugin: entity_lookup
+      ignore_case: true
+  field_related_category:
+    - plugin: explode
+      source: ResourceCategory
+      delimiter: ','
+    - plugin: extract
+      index:
+        - 0
+    - plugin: entity_lookup
+      ignore_case: true
+  field_region:
+    - plugin: explode
+      source: Region
+      delimiter: ','
+    - plugin: extract
+      index:
+        - 0
+    - plugin: entity_lookup
+      ignore_case: true
+destination:
+  plugin: 'entity:node'
+migration_dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - migrate_json_example

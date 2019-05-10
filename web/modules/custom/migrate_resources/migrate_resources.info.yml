@@ -1,0 +1,11 @@
+type: module
+name: Migrate resources
+description: 'Migrate resources from Airtable JSON API'
+package: Custom
+dependencies:
+  - drupal:migrate
+  - migrate_plus:migrate_plus
+  - migrate_tools:migrate_tools
+
+version: '8.x-1.0'
+core: '8.x'
