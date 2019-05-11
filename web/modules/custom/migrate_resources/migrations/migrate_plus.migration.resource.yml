@@ -69,8 +69,10 @@ source:
       name: ResourceCategory
       label: 'Related Category'
       selector: fields/ResourceCategory
-
-
+    -
+      name: Screenshot
+      label: 'Screenshot'
+      selector: fields/Screenshot
 
   # Under 'ids', we identify source fields populated above which will uniquely
   # identify each imported item. The 'type' makes sure the migration map table
@@ -78,9 +80,12 @@ source:
   ids:
     id:
       type: string
+  constants:
+    file_destination: 'public://images/2019'
 process:
-  # Note that the source field names here (name, description and price) were
-  # defined by the 'fields' configuration for the source plugin above.
+  uid:
+    plugin: default_value
+    default_value: 1
   type:
     plugin: default_value
     default_value: resource
@@ -126,8 +131,16 @@ process:
         - 0
     - plugin: entity_lookup
       ignore_case: true
+  field_screenshot:
+    plugin: image_import
+    source: Screenshot
+    destination: 'public://images/2019'
+    uid: '@uid'
+    title: Title
+    alt: !file
 destination:
   plugin: 'entity:node'
+  default_bundle: resource
 migration_dependencies: {  }
 dependencies:
   enforced:
