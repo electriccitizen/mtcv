@@ -19,4 +19,9 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_crime: true
+  field_description: true
+  field_region: true
+  field_related_category: true
+  field_related_issue: true
   field_url: true

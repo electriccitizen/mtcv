@@ -8,9 +8,12 @@ dependencies:
     - field.field.node.resource.field_region
     - field.field.node.resource.field_related_category
     - field.field.node.resource.field_related_issue
+    - field.field.node.resource.field_screenshot
     - field.field.node.resource.field_url
+    - image.style.thumbnail
     - node.type.resource
   module:
+    - image
     - link
     - text
 id: node.resource.default
@@ -55,6 +58,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_screenshot:
+    weight: 26
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
     region: content
   field_url:
     weight: 2
