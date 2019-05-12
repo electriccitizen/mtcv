@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7eea50d3f347e3766b9c578b93f9aa56",
+    "content-hash": "41f7fa2fa8861023dec084f8c4adde72",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2135,6 +2135,9 @@
                     "recurse": false,
                     "replace": false,
                     "merge-extra": false
+                },
+                "patches_applied": {
+                    "Media library widget + Paragraphs broken: validation error on required field in paragraphs subform": "https://www.drupal.org/files/issues/2018-12-05/drupal-media-library-paragraphs-3003150-19-8.x.patch"
                 }
             },
             "autoload": {

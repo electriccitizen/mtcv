@@ -1,22 +1,22 @@
-uuid: 7f39c702-6476-468c-ac6b-377fe161ae77
+uuid: 400c599b-74b5-4460-84cd-80f1fbbe6f15
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: blog_path
-label: Page
+id: resource
+label: Resource
 type: 'canonical_entities:node'
-pattern: '[node:title]'
+pattern: 'resource/[node:title]'
 selection_criteria:
-  bef2da75-c5df-41ac-bf4e-d4b8ad800990:
+  68a06841-3218-48c4-a64c-aca0b8b3ad9e:
     id: node_type
     bundles:
-      page: page
+      resource: resource
     negate: false
     context_mapping:
       node: node
-    uuid: bef2da75-c5df-41ac-bf4e-d4b8ad800990
+    uuid: 68a06841-3218-48c4-a64c-aca0b8b3ad9e
 selection_logic: and
 weight: -5
 relationships: {  }

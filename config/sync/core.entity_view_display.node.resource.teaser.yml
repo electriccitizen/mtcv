@@ -24,4 +24,5 @@ hidden:
   field_region: true
   field_related_category: true
   field_related_issue: true
+  field_screenshot: true
   field_url: true
