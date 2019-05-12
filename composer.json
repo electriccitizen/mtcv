@@ -122,7 +122,14 @@
                 ".htaccess",
                 "web.config"
             ]
-        }
+        },
+        "patches": {
+            "drupal/core":{
+                "Media library widget + Paragraphs broken: validation error on required field in paragraphs subform": "https://www.drupal.org/files/issues/2018-12-05/drupal-media-library-paragraphs-3003150-19-8.x.patch"
+            }
+        },
+        "enable-patching": true
+
     },
     "config": {
         "optimize-autoloader": true,
