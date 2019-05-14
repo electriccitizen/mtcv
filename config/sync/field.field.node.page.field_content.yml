@@ -26,6 +26,9 @@ settings:
       text:
         weight: 2
         enabled: false
+      grid:
+        weight: 4
+        enabled: false
       image:
         weight: 5
         enabled: false
