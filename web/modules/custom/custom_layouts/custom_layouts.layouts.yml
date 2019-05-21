@@ -1,0 +1,21 @@
+one_col_standard:
+  label: 'One column (Standard)'
+  path: layouts/one_col_standard
+  template: one-col-standard
+  category: 'Columns: 1'
+  default_region: content
+  regions:
+    content:
+      label: Content
+
+two_col_standard:
+  label: 'Two column (Standard)'
+  path: layouts/two_col_standard
+  template: two-col-standard
+  category: 'Columns: 2'
+  default_region: first
+  regions:
+    first:
+      label: First
+    second:
+      label: Second

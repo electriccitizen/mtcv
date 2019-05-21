@@ -1,0 +1,27 @@
+layout_onecolumn_ec:
+  label: 'EC One Column [1]'
+  template: templates/layouts/columns
+  class: '\Drupal\ec_layouts\Plugin\Layout\EcLayout'
+  category: 'Columns: 1'
+  library: ec_layouts/ec_layouts  
+  default_region: primary
+  icon_map:
+    - [primary]
+  regions:
+    primary:
+      label: Content
+
+layout_twocolumn_halves_ec:
+  label: 'EC Two Column [1:1]'
+  template: templates/layouts/columns
+  class: '\Drupal\ec_layouts\Plugin\Layout\EcLayout'
+  category: 'Columns: 2'
+  library: ec_layouts/ec_layouts
+  default_region: primary
+  icon_map:
+    - [primary, secondary]
+  regions:
+    primary:
+      label: Primary
+    secondary:
+      label: Secondary

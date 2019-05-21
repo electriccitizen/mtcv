@@ -1,0 +1,56 @@
+uuid: 1b82c65c-ae81-40a9-9b56-b09a0a44eeec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.section.field_background_color
+    - field.field.paragraph.section.field_background_image
+    - field.field.paragraph.section.field_content
+    - field.field.paragraph.section.field_full_width
+    - paragraphs.paragraphs_type.section
+  module:
+    - color_field
+    - entity_reference_revisions
+id: paragraph.section.default
+targetEntityType: paragraph
+bundle: section
+mode: default
+content:
+  field_background_color:
+    weight: 2
+    label: above
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
+  field_background_image:
+    type: entity_reference_entity_view
+    weight: 4
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_content:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_full_width:
+    weight: 3
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+hidden: {  }

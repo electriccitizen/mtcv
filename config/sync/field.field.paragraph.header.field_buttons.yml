@@ -1,0 +1,46 @@
+uuid: bed3838b-179e-4572-96b5-a44b7fcb1c80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_buttons
+    - paragraphs.paragraphs_type.button
+    - paragraphs.paragraphs_type.header
+  module:
+    - entity_reference_revisions
+id: paragraph.header.field_buttons
+field_name: field_buttons
+entity_type: paragraph
+bundle: header
+label: Buttons
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      button: button
+    target_bundles_drag_drop:
+      button:
+        enabled: true
+        weight: 7
+      grid:
+        weight: 8
+        enabled: false
+      header:
+        weight: 9
+        enabled: false
+      image:
+        weight: 10
+        enabled: false
+      section:
+        weight: 11
+        enabled: false
+      text:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

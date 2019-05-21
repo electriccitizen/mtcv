@@ -1,19 +1,19 @@
-uuid: 1538105c-db49-4d5f-852a-66ce484b5d48
+uuid: e7ac6fc6-382c-48ba-885f-59fed867f861
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_hero
+    - field.storage.paragraph.field_background_image
     - media.type.image
-    - node.type.page
-id: node.page.field_hero
-field_name: field_hero
-entity_type: node
-bundle: page
-label: Hero
+    - paragraphs.paragraphs_type.section
+id: paragraph.section.field_background_image
+field_name: field_background_image
+entity_type: paragraph
+bundle: section
+label: 'Background image'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

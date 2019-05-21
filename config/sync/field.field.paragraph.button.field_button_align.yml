@@ -1,0 +1,23 @@
+uuid: 72837972-d3e2-48a2-a7e4-1767279dbc27
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_button_align
+    - paragraphs.paragraphs_type.button
+  module:
+    - options
+id: paragraph.button.field_button_align
+field_name: field_button_align
+entity_type: paragraph
+bundle: button
+label: 'Button align'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: center
+default_value_callback: ''
+settings: {  }
+field_type: list_string

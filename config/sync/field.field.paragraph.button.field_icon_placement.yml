@@ -1,0 +1,23 @@
+uuid: 0cc1ccd7-31a9-4a88-93dd-42c67c0ae9bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon_placement
+    - paragraphs.paragraphs_type.button
+  module:
+    - options
+id: paragraph.button.field_icon_placement
+field_name: field_icon_placement
+entity_type: paragraph
+bundle: button
+label: 'Icon placement'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

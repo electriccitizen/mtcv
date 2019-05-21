@@ -1,0 +1,49 @@
+uuid: 582effc3-5d0c-420c-a9e3-c029eb674479
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header
+    - node.type.page
+    - paragraphs.paragraphs_type.header
+  module:
+    - entity_reference_revisions
+id: node.page.field_header
+field_name: field_header
+entity_type: node
+bundle: page
+label: Hero!
+description: 'Add a "hero" section to get your page started! Your hero can be as simple as a plain headline or you can choose one of the more complex options to help your page stand out.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      header: header
+    target_bundles_drag_drop:
+      header:
+        enabled: true
+        weight: 8
+      grid:
+        weight: 9
+        enabled: false
+      grid_content:
+        weight: 10
+        enabled: false
+      grid_text:
+        weight: 11
+        enabled: false
+      image:
+        weight: 12
+        enabled: false
+      section:
+        weight: 13
+        enabled: false
+      text:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,23 @@
+uuid: 6d684144-df76-4fac-b4f7-ccdf0621fae6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_full_width
+    - paragraphs.paragraphs_type.section
+id: paragraph.section.field_full_width
+field_name: field_full_width
+entity_type: paragraph
+bundle: section
+label: 'Full width?'
+description: 'Select this option if you want this content section to break out of the layout and use the full width of the screen.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

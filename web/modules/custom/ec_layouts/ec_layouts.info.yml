@@ -1,0 +1,10 @@
+name: 'EC Layouts'
+type: module
+description: 'Provides simple, configurable layouts'
+# core: 8.x
+package: 'Custom'
+dependencies:
+  - layout_discovery
+
+version: '8.x-1.0'
+core: '8.x'

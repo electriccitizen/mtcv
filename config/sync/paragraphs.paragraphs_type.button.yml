@@ -1,0 +1,9 @@
+uuid: bde0e28a-e1c4-4eb5-9585-df8393fe33cc
+langcode: en
+status: true
+dependencies: {  }
+id: button
+label: Button
+icon_uuid: null
+description: 'Add a button that you can use in other components.'
+behavior_plugins: {  }

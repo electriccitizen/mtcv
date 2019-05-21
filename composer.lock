@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "41f7fa2fa8861023dec084f8c4adde72",
+    "content-hash": "aa0d90c55e7590a91efecefd5e74eea3",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1414,6 +1414,65 @@
             }
         },
         {
+            "name": "drupal/auto_entitylabel",
+            "version": "dev-2.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/auto_entitylabel.git",
+                "reference": "101b69dc799113d1485f5fe89b9fee07f6308522"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.1-beta1+15-dev",
+                    "datestamp": "1536175980",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Pravin Ajaaz",
+                    "homepage": "https://www.drupal.org/user/2910049"
+                },
+                {
+                    "name": "RenatoG",
+                    "homepage": "https://www.drupal.org/user/3326031"
+                },
+                {
+                    "name": "bforchhammer",
+                    "homepage": "https://www.drupal.org/user/216396"
+                },
+                {
+                    "name": "diqidoq",
+                    "homepage": "https://www.drupal.org/user/1001934"
+                },
+                {
+                    "name": "purushotam.rai",
+                    "homepage": "https://www.drupal.org/user/3193859"
+                }
+            ],
+            "description": "Allows hiding of entity label fields and automatic label creation.",
+            "homepage": "https://www.drupal.org/project/auto_entitylabel",
+            "support": {
+                "source": "https://git.drupalcode.org/project/auto_entitylabel",
+                "issues": "https://www.drupal.org/project/issues/auto_entitylabel"
+            },
+            "time": "2018-09-05T19:29:54+00:00"
+        },
+        {
             "name": "drupal/chosen",
             "version": "2.7.0",
             "source": {
@@ -1565,6 +1624,67 @@
             "homepage": "https://www.drupal.org/project/chosen",
             "support": {
                 "source": "https://git.drupalcode.org/project/chosen"
+            }
+        },
+        {
+            "name": "drupal/color_field",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/color_field.git",
+                "reference": "8.x-2.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/color_field-8.x-2.0.zip",
+                "reference": "8.x-2.0",
+                "shasum": "27c510d258e409e1d029d69cf7747e96c1087df6"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "require-dev": {
+                "drupal/token": "~1.3"
+            },
+            "suggest": {
+                "bower-asset/jquery-simple-color": "^v1.2.2: Provides JavaScript library necessary for the Color Grid widget",
+                "bower-asset/spectrum": "^1.8: Provides JavaScript library necessary for Spectrum widget."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.0",
+                    "datestamp": "1536168780",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "targoo",
+                    "homepage": "https://www.drupal.org/user/431910",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Nick Wilde",
+                    "homepage": "https://www.drupal.org/user/nickwilde",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Provides a color field type to store the color value and opacity",
+            "homepage": "https://www.drupal.org/project/color_field",
+            "support": {
+                "source": "http://cgit.drupalcode.org/color_field",
+                "issues": "https://www.drupal.org/project/issues/color_field?version=8.x"
             }
         },
         {
@@ -2401,6 +2521,59 @@
             "time": "2018-02-09T18:02:28+00:00"
         },
         {
+            "name": "drupal/entity_reference_layout",
+            "version": "1.0.0-alpha2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/entity_reference_layout.git",
+                "reference": "8.x-1.0-alpha2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/entity_reference_layout-8.x-1.0-alpha2.zip",
+                "reference": "8.x-1.0-alpha2",
+                "shasum": "ccdf71346e0b86de907c9069faad83b27ccf3007"
+            },
+            "require": {
+                "drupal/core": "*",
+                "drupal/inline_entity_form": "^1.0",
+                "drupal/paragraphs": "^1.6"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha2",
+                    "datestamp": "1557853985",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "justin2pin",
+                    "homepage": "https://www.drupal.org/user/278450"
+                }
+            ],
+            "description": "Entity reference field with layouts",
+            "homepage": "https://www.drupal.org/project/entity_reference_layout",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/entity_reference_layout",
+                "issues": "https://www.drupal.org/project/issues/entity_reference_layout"
+            }
+        },
+        {
             "name": "drupal/entity_reference_revisions",
             "version": "1.6.0",
             "source": {
@@ -2519,6 +2692,80 @@
             "homepage": "https://www.drupal.org/project/field_group",
             "support": {
                 "source": "https://git.drupalcode.org/project/field_group"
+            }
+        },
+        {
+            "name": "drupal/inline_entity_form",
+            "version": "1.0.0-rc1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/inline_entity_form.git",
+                "reference": "8.x-1.0-rc1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/inline_entity_form-8.x-1.0-rc1.zip",
+                "reference": "8.x-1.0-rc1",
+                "shasum": "898789fb6a0662fc2572b87f8d0654a0241473f9"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "require-dev": {
+                "drupal/entity_reference_revisions": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-rc1",
+                    "datestamp": "1527030784",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "dawehner",
+                    "homepage": "https://www.drupal.org/user/99340"
+                },
+                {
+                    "name": "joachim",
+                    "homepage": "https://www.drupal.org/user/107701"
+                },
+                {
+                    "name": "kaythay",
+                    "homepage": "https://www.drupal.org/user/2182186"
+                },
+                {
+                    "name": "rszrama",
+                    "homepage": "https://www.drupal.org/user/49344"
+                },
+                {
+                    "name": "slashrsm",
+                    "homepage": "https://www.drupal.org/user/744628"
+                },
+                {
+                    "name": "webflo",
+                    "homepage": "https://www.drupal.org/user/254778"
+                }
+            ],
+            "description": "Provides a widget for inline management (creation, modification, removal) of referenced entities.",
+            "homepage": "https://www.drupal.org/project/inline_entity_form",
+            "support": {
+                "source": "https://git.drupalcode.org/project/inline_entity_form"
             }
         },
         {
@@ -2809,6 +3056,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "LogicException": "https://www.drupal.org/files/issues/2019-05-03/3013171-13.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -8991,6 +9241,8 @@
     "aliases": [],
     "minimum-stability": "alpha",
     "stability-flags": {
+        "drupal/auto_entitylabel": 20,
+        "drupal/entity_reference_layout": 15,
         "drupal/simple_block": 10
     },
     "prefer-stable": true,

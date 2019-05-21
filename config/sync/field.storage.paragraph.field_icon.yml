@@ -1,0 +1,30 @@
+uuid: c630d32c-e85e-4334-8fb5-67a7ad3bdaad
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_icon
+field_name: field_icon
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: none
+      label: None
+    -
+      value: arrow-right
+      label: 'Arrow (right)'
+    -
+      value: arrow-left
+      label: 'Arrow (left)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

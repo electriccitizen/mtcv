@@ -1,0 +1,53 @@
+uuid: f0f57cd8-851f-42cf-ae97-b69379d0247c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.grid
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.section
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+id: paragraph.section.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: section
+label: Content
+description: 'Now add your content!'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      text: text
+      image: image
+      grid: grid
+    target_bundles_drag_drop:
+      text:
+        enabled: true
+        weight: -15
+      image:
+        enabled: true
+        weight: -14
+      grid:
+        enabled: true
+        weight: -13
+      grid_content:
+        weight: -12
+        enabled: false
+      section:
+        weight: -11
+        enabled: false
+      grid_text:
+        weight: -10
+        enabled: false
+      header:
+        weight: -9
+        enabled: false
+field_type: entity_reference_revisions

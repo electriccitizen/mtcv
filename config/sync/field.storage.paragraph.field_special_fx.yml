@@ -1,0 +1,36 @@
+uuid: e460681a-cc23-4b36-acbc-a651a985a529
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_special_fx
+field_name: field_special_fx
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: pulse
+      label: Pulse
+    -
+      value: fade-left
+      label: 'Fade (Left)'
+    -
+      value: fade-right
+      label: 'Fade (Right)'
+    -
+      value: fade-top
+      label: 'Fade (Top)'
+    -
+      value: fade-bottom
+      label: 'Fade (Bottom)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

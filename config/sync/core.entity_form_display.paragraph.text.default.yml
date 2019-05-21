@@ -3,16 +3,73 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.text.field_buttons
     - field.field.paragraph.text.field_header
+    - field.field.paragraph.text.field_special_fx
     - field.field.paragraph.text.field_text
     - paragraphs.paragraphs_type.text
   module:
+    - field_group
+    - paragraphs
     - text
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_content
+        - group_special_fx
+      parent_name: ''
+      weight: 20
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: Tabs
+    group_content:
+      children:
+        - field_header
+        - field_text
+      parent_name: group_tabs
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Content
+    group_special_fx:
+      children:
+        - field_special_fx
+      parent_name: group_tabs
+      weight: 21
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Special FX'
 id: paragraph.text.default
 targetEntityType: paragraph
 bundle: text
 mode: default
 content:
+  field_buttons:
+    type: entity_reference_paragraphs
+    weight: 22
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
   field_header:
     weight: 0
     settings:
@@ -20,6 +77,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_special_fx:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_text:
     weight: 1

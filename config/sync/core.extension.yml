@@ -2,6 +2,7 @@ module:
   admin_toolbar: 0
   admin_toolbar_tools: 0
   adminimal_admin_toolbar: 0
+  auto_entitylabel: 0
   automated_cron: 0
   big_pipe: 0
   block: 0
@@ -11,6 +12,7 @@ module:
   chosen_lib: 0
   ckeditor: 0
   color: 0
+  color_field: 0
   comment: 0
   config: 0
   contact: 0
@@ -22,6 +24,7 @@ module:
   editor: 0
   entity_reference_revisions: 0
   field: 0
+  field_group: 0
   field_ui: 0
   file: 0
   filter: 0
@@ -29,6 +32,8 @@ module:
   history: 0
   image: 0
   jsonapi: 0
+  layout_builder: 0
+  layout_discovery: 0
   link: 0
   media: 0
   media_library: 0

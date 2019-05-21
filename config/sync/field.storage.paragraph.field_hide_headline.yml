@@ -1,16 +1,15 @@
-uuid: 487fddfb-e756-432e-8959-cf84fc890829
+uuid: 014aa771-c1af-4eee-b5a0-6012629b3c33
 langcode: en
 status: true
 dependencies:
   module:
-    - node
-    - text
-id: node.field_summary
-field_name: field_summary
-entity_type: node
-type: text_long
+    - paragraphs
+id: paragraph.field_hide_headline
+field_name: field_hide_headline
+entity_type: paragraph
+type: boolean
 settings: {  }
-module: text
+module: core
 locked: false
 cardinality: 1
 translatable: true

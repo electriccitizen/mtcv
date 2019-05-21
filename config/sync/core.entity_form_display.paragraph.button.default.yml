@@ -1,0 +1,76 @@
+uuid: fbe88ec3-d7ea-4c55-9543-36f5695f45d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.button.field_button_align
+    - field.field.paragraph.button.field_button_color
+    - field.field.paragraph.button.field_button_link
+    - field.field.paragraph.button.field_button_size
+    - field.field.paragraph.button.field_button_style
+    - field.field.paragraph.button.field_button_text
+    - field.field.paragraph.button.field_icon
+    - field.field.paragraph.button.field_icon_placement
+    - paragraphs.paragraphs_type.button
+  module:
+    - link
+id: paragraph.button.default
+targetEntityType: paragraph
+bundle: button
+mode: default
+content:
+  field_button_align:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_button_color:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_button_link:
+    weight: 1
+    settings:
+      placeholder_url: 'Enter a link for your button'
+      placeholder_title: 'Enter your button text'
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_button_size:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_button_style:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_button_text:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_icon:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_icon_placement:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true

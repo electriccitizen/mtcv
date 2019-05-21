@@ -1,0 +1,9 @@
+type: module
+name: Custom layouts for paragraphs
+description: 'Simple layout options for paragraphs content layout'
+package: Custom
+dependencies:
+  - entity_reference_layout
+
+version: '8.x-1.0'
+core: '8.x'

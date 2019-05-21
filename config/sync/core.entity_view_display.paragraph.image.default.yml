@@ -4,9 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.image.field_caption
+    - field.field.paragraph.image.field_link
     - field.field.paragraph.image.field_single_image
+    - field.field.paragraph.image.field_special_fx
     - paragraphs.paragraphs_type.image
   module:
+    - link
+    - options
     - text
 id: paragraph.image.default
 targetEntityType: paragraph
@@ -20,6 +24,18 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
+  field_link:
+    weight: 4
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
   field_single_image:
     type: entity_reference_entity_view
     weight: 2
@@ -28,5 +44,12 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
+    region: content
+  field_special_fx:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
 hidden: {  }

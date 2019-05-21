@@ -1,0 +1,9 @@
+uuid: 4987846e-233d-41b4-8c55-1a8834270886
+langcode: en
+status: true
+dependencies: {  }
+id: section
+label: Section
+icon_uuid: null
+description: 'Add a section to begin adding content to your page! '
+behavior_plugins: {  }

@@ -1,0 +1,11 @@
+uuid: f0eead0d-92d6-46e9-b9b5-982340ab65cf
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:8222907c-95a0-4dc5-983e-5b4fd8874fb2'
+id: header
+label: Hero
+icon_uuid: 8222907c-95a0-4dc5-983e-5b4fd8874fb2
+description: 'Add a hero section to the top of your page'
+behavior_plugins: {  }

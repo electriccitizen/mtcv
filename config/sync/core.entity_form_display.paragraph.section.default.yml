@@ -1,0 +1,120 @@
+uuid: 2a9dc873-ca43-4905-a5a2-a63d6e2383ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.section.field_background_color
+    - field.field.paragraph.section.field_background_image
+    - field.field.paragraph.section.field_content
+    - field.field.paragraph.section.field_full_width
+    - paragraphs.paragraphs_type.section
+  module:
+    - color_field
+    - field_group
+    - media_library
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_content
+        - group_background
+        - group_settings
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        label: Tabs
+        direction: vertical
+        id: ''
+        classes: ''
+      label: Tabs
+    group_settings:
+      children:
+        - field_full_width
+      parent_name: group_tabs
+      weight: 22
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Settings
+    group_background:
+      children:
+        - field_background_image
+        - field_background_color
+      parent_name: group_tabs
+      weight: 21
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Background
+    group_content:
+      children:
+        - field_content
+      parent_name: group_tabs
+      weight: 20
+      format_type: tab
+      format_settings:
+        label: Content
+        formatter: closed
+        description: 'Let''s ride, cowboy!'
+        required_fields: true
+        id: ''
+        classes: ''
+      label: Content
+id: paragraph.section.default
+targetEntityType: paragraph
+bundle: section
+mode: default
+content:
+  field_background_color:
+    type: color_field_widget_box
+    weight: 24
+    region: content
+    settings:
+      default_colors: "\n#AC725E,#D06B64,#F83A22,#FA573C,#FF7537,#FFAD46\n#42D692,#16A765,#7BD148,#B3DC6C,#FBE983\n#92E1C0,#9FE1E7,#9FC6E7,#4986E7,#9A9CFF\n#B99AFF,#C2C2C2,#CABDBF,#CCA6AC,#F691B2\n#CD74E6,#A47AE2"
+    third_party_settings: {  }
+  field_background_image:
+    type: media_library_widget
+    weight: 23
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_content:
+    type: paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: '0'
+    third_party_settings: {  }
+    region: content
+  field_full_width:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+hidden:
+  created: true
+  status: true

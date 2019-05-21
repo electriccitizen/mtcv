@@ -16,12 +16,15 @@
         "drupal-composer/drupal-scaffold": "^2.0.1",
         "drupal/adminimal_admin_toolbar": "^1.9",
         "drupal/adminimal_theme": "^1.4",
+        "drupal/auto_entitylabel": "2.x-dev",
         "drupal/chosen": "^2.7",
+        "drupal/color_field": "^2.0",
         "drupal/config_direct_save": "^1.0",
         "drupal/config_installer": "^1.0",
         "drupal/console": "^1",
         "drupal/core": "^8.7.0",
         "drupal/devel": "^2.1",
+        "drupal/entity_reference_layout": "^1.0@alpha",
         "drupal/field_group": "^1.0",
         "drupal/migrate_file": "^1.1",
         "drupal/migrate_plus": "^4.2",
@@ -126,6 +129,9 @@
         "patches": {
             "drupal/core":{
                 "Media library widget + Paragraphs broken: validation error on required field in paragraphs subform": "https://www.drupal.org/files/issues/2018-12-05/drupal-media-library-paragraphs-3003150-19-8.x.patch"
+            },
+            "drupal/paragraphs":{
+                "LogicException": "https://www.drupal.org/files/issues/2019-05-03/3013171-13.patch"
             }
         },
         "enable-patching": true

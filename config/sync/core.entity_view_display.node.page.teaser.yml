@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.page.field_content
     - node.type.page
   module:
     - user
@@ -18,8 +17,4 @@ content:
   links:
     weight: 101
     region: content
-hidden:
-  field_content: true
-  field_hero: true
-  field_related_content: true
-  field_summary: true
+hidden: {  }

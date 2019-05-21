@@ -1,0 +1,19 @@
+uuid: 6b2d23c3-5b33-4f24-b5ae-b5440fd74713
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_button_text
+    - paragraphs.paragraphs_type.button
+id: paragraph.button.field_button_text
+field_name: field_button_text
+entity_type: paragraph
+bundle: button
+label: 'Button text'
+description: 'This is the text that will appear on your button.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

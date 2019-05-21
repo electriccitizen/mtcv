@@ -1,0 +1,20 @@
+/*
+ * @file
+ * Provides the layout styles for layout_twocol.
+ */
+
+.two-col-standard {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.two-col-standard > .region {
+  flex: 0 1 100%;
+}
+
+@media screen and (min-width: 40em) {
+  .two-col-standard > .region--first,
+  .two-col-standard > .region--second {
+    flex: 0 1 50%;
+  }
+}

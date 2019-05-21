@@ -1,0 +1,43 @@
+uuid: f3798175-637d-4f7d-929e-967e37c349e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.grid.field_columns
+    - field.field.paragraph.grid.field_grid_content
+    - paragraphs.paragraphs_type.grid
+  module:
+    - paragraphs
+id: paragraph.grid.default
+targetEntityType: paragraph
+bundle: grid
+mode: default
+content:
+  field_columns:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_grid_content:
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: '0'
+    third_party_settings: {  }
+    type: paragraphs
+    region: content
+hidden:
+  created: true
+  status: true
