@@ -1,0 +1,8 @@
+uuid: 68cb0251-8234-45f7-9815-3857410bc535
+langcode: en
+status: true
+dependencies: {  }
+name: Navigator
+vid: navigator
+description: 'Prompts for the Find Help tool'
+weight: 0
