@@ -1,8 +1,8 @@
-uuid: 68cb0251-8234-45f7-9815-3857410bc535
+uuid: f0e0864b-edc5-473e-9945-4fe3bcbe64ca
 langcode: en
 status: true
 dependencies: {  }
 name: Navigator
 vid: navigator
-description: 'Prompts for the Find Help tool'
+description: 'Prompts for the Legal Help finder.'
 weight: 0
