@@ -133,6 +133,9 @@
             },
             "drupal/paragraphs":{
                 "LogicException": "https://www.drupal.org/files/issues/2019-05-03/3013171-13.patch"
+            },
+            "drupal/paragraphs": {
+                "Field Group": "https://www.drupal.org/files/issues/2907094_7_field_group_support.patch"
             }
         },
         "enable-patching": true
