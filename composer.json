@@ -26,7 +26,7 @@
         "drupal/devel": "^2.1",
         "drupal/entity_redirect": "^1.5",
         "drupal/entity_reference_layout": "^1.0@alpha",
-        "drupal/field_group": "^1.0",
+        "drupal/field_group": "~3.0-rc1",
         "drupal/migrate_file": "^1.1",
         "drupal/migrate_plus": "^4.2",
         "drupal/migrate_tools": "^4.1",
