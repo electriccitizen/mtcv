@@ -1,0 +1,12 @@
+global-styling:
+  version: VERSION
+  css:
+    base:
+      css/crane.css: {}
+      js/crane.js: {}
+
+google-fonts:
+  version: VERSION
+  css:
+    base:
+      https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700: { type: external }

@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Adminimal theme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Template\Attribute;
+
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ */
+function crane_preprocess_html(&$variables) {
+  // Add adminimal class to the body.
+  if ($variables['attributes'] instanceof Attribute) {
+    $variables['attributes']->addClass('crane');
+  }
+  else {
+    $variables['attributes']['class'][] = 'crane';
+  }
+
+  // Add Google font styles based on the theme setting.
+  if (!theme_get_setting('disable_google_fonts')) {
+    $variables['#attached']['library'][] = 'crane/google-fonts';
+  }
+}
+
+/**
+ * Implements hook_form_system_theme_settings_alter().
+ */
+function crane_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\FormStateInterface &$form_state, $form_id = NULL) {
+  // Work-around for a core bug affecting admin themes. See issue #943212.
+  if (isset($form_id)) {
+    return;
+  }
+
+  $form['crane_settings'] = [
+    '#type' => 'details',
+    '#title' => t('Crane theme settings'),
+    '#open' => TRUE,
+  ];
+
+  $form['crane_settings']['disable_google_fonts'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Avoid using "Google" fonts'),
+    '#default_value' => theme_get_setting('disable_google_fonts'),
+    '#description' => t('Useful for languages that are not well supported by the chosen Google font. Like Japanese for example.'),
+  ];
+}

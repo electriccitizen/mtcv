@@ -1,0 +1,22 @@
+uuid: 62bb8c54-a778-4aa8-83e4-c436354bee29
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - crane
+_core:
+  default_config_hash: ni1MdBzSUKe_oPwJyWE-TwA-wpYkwdIi18c7TC7HTDM
+id: crane_breadcrumbs
+theme: crane
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }
