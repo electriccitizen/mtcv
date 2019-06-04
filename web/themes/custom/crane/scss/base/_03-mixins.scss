@@ -1,0 +1,343 @@
+/* ========================
+   MIXINS
+========================== */
+///mixin - transAll
+@mixin transAll($time){
+	transition: all $time ease;
+	-moz-transition: all $time ease;
+	-webkit-transition: all $time ease;
+	-webkit-transform: translateZ(0);
+}
+
+///mixin - transAll(.3s)
+@mixin transClear{
+	transition: none;
+	-moz-transition: none;
+	-webkit-transition: none;
+}
+
+@mixin visuallyHidden{
+	position: absolute !important;
+	font-size: 1px;
+	left: -900vw;
+	overflow: hidden;
+	height: 1px;
+	width: 1px;
+	word-wrap: normal;
+}
+
+
+/* HELPER MIXINS (used as a basis for other mixins or for browser prefixing)
+----------------- */
+
+///mixin - transform
+@mixin transform($transforms) {
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+	-webkit-transform: $transforms;
+	transform: $transforms;
+}
+
+///mixin - translate
+@mixin translate ($x, $y) {
+	@include transform(translate($x, $y));
+}
+@mixin translateX ($x) {
+	@include transform(translateX($x));
+}
+@mixin translateY ($y) {
+	@include transform(translateY($y));
+}
+@mixin translate3d ($x, $y, $z) {
+	@include transform(translate3d($x, $y, $z));
+}
+
+///mixin - skew
+@mixin skew ($x, $y) {
+	@include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+///mixin - scale
+@mixin scale($scalex, $scaley) {
+	@include transform(scale($scalex, $scaley));
+}
+@mixin scale3d($scalex, $scaley, $scalez) {
+	@include transform(scale($scalex, $scaley, $scalez));
+}
+
+///mixin - rotate
+@mixin rotate ($deg) {
+	@include transform(rotate(#{$deg}deg));
+}
+@mixin rotate3d ($rotx, $roty, $rotz, $deg) {
+	@include transform(rotate3d($rotx, $roty, $rotz, #{$deg}deg));
+}
+
+///mixin - perspective
+@mixin perspective ($perspective) {
+	@include transform(perspective(#{$perspective}));
+}
+
+///mixin - transform-origin
+@mixin transformOrigin ($origin) {
+	-moz-transform-origin: $origin;
+	-o-transform-origin: $origin;
+	-ms-transform-origin: $origin;
+	-webkit-transform-origin: $origin;
+	transform-origin: $origin;
+}
+
+///mixin - backface-visibility
+@mixin backfaceVisibility($backface){
+	-webkit-backface-visiblity: $backface;
+	-moz-backface-visiblity: $backface;
+	backface-visiblity: $backface;
+}
+
+///mixin - backgroundSize
+@mixin backgroundSize($back-width, $back-height){
+	background-size: #{$back-width} #{$back-height};
+}
+
+///mixin - transition
+@mixin transition($transition-property, $transition-time, $method) {
+	-webkit-transition: $transition-property $transition-time $method;
+	-moz-transition: $transition-property $transition-time $method;
+	-ms-transition: $transition-property $transition-time $method;
+	-o-transition: $transition-property $transition-time $method;
+	transition: $transition-property $transition-time $method;
+	backface-visibility: hidden;
+}
+
+///mixin - opacity
+@mixin opacity($opacity){
+	opacity: #{$opacity};
+	filter: Alpha(opacity=($opacity * 100));
+}
+
+///mixin - column-count
+@mixin cssColumns($columns, $gap){
+	-webkit-column-count: #{$columns};
+	-moz-column-count: #{$columns};
+	column-count: #{$columns};
+	-webkit-column-gap: #{$gap};
+	-moz-column-gap: #{$gap};
+	column-gap: #{$gap};
+}
+
+
+///mixin - calc
+@mixin calc($property, $expression) {
+	#{$property}: -webkit-calc(#{$expression});
+	#{$property}: -moz-calc(#{$expression});
+	#{$property}: calc(#{$expression});
+}
+
+///mixin - calcForce
+@mixin calcForce($property, $expression) {
+	#{$property}: -webkit-calc(#{$expression}) !important;
+	#{$property}: -moz-calc(#{$expression}) !important;
+	#{$property}: calc(#{$expression}) !important;
+}
+
+/// mixin - browserWipe
+@mixin browserWipe{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+}
+
+@mixin buttonWipe{
+	@include browserWipe;
+	background: none;
+	border: none;
+	color: inherit;
+}
+
+///mixin - listReset
+@mixin listReset {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+///mixin - fullback
+@mixin fullBack($fullback){
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -50vw;
+	z-index: -1;
+	width: 200vw;
+	height: 100%;
+	background: $fullback;
+}
+
+///mixin - fullBack
+@mixin halfBack($backColor,$backSide){
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	z-index: -1;
+	width: 100vw;
+	height: 100%;
+	background: $backColor;
+	@if $backSide == 'right'{
+		left: 0;
+	}@else{
+		right: 0;
+	}
+}
+
+///mixin - vert rule
+@mixin vertRule($rulePosition,$ruleHeight,$ruleColor) {
+	content: '';
+	display: block;
+	position: absolute;
+	#{$rulePosition}: 0;
+	top: (100% - $ruleHeight) / 2;
+	width: 1px;
+	height: $ruleHeight;
+	background: $ruleColor;
+}
+
+
+///mixin - button
+@mixin button{
+	
+}
+
+///mixin - outlineButton
+@mixin outlineButton($outlineColor){
+	
+}
+
+@mixin triangle($triDirection,$triHeight,$triWidth,$triColor){
+	width: 0;
+	height: 0;
+	-webkit-transform: rotate(0.05deg);
+	-moz-transform: scale(1.1);
+	transform: rotate(0.05deg);
+	$actualWidth: $triWidth / 2;
+	$actualHeight: $triHeight / 2;
+	@if $triDirection == 'up'{
+		border-right: $actualWidth double rgba(0,0,0,0);
+		border-left: $actualWidth double rgba(0,0,0,0);
+		border-bottom: $triHeight solid $triColor;
+	}@else if $triDirection == 'down'{
+		border-right: $actualWidth double rgba(0,0,0,0);
+		border-left: $actualWidth double rgba(0,0,0,0);
+		border-top: $triHeight solid $triColor;
+	}@else if $triDirection == 'left'{
+		border-top: $actualHeight double rgba(0,0,0,0);
+		border-bottom: $actualHeight double rgba(0,0,0,0);
+		border-right: $triWidth solid $triColor;
+	}@else if $triDirection == 'right'{
+		border-top: $actualHeight double rgba(0,0,0,0);
+		border-bottom: $actualHeight double rgba(0,0,0,0);
+		border-left: $triWidth solid $triColor;
+	}
+}
+
+
+/* LAYOUT MIXINS
+-------------------- */
+
+///mixin - auto
+@mixin auto{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+///mixin - edgeToEdge
+@mixin edgeToEdge {
+	margin-left:-20px;
+	margin-right:-20px;
+}
+
+///mixin - edgeToEdge
+@mixin edgeReset {
+	margin-left:0;
+	margin-right:0;
+}
+
+///mixin - clearfix
+@mixin clearFix {
+	&::after {
+		clear: both;
+		content: "";
+		display: table;
+	}
+}
+
+
+///mixin safe-flex
+@mixin safeFlex($direction, $wrap, $justify, $align){
+	display: flex;
+	display: -ms-flexbox;
+	flex-direction: $direction;
+	-ms-flex-direction: $direction;
+	@if $wrap == 'wrap'{
+		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+	}@else{
+		flex-wrap: nowrap;
+		-ms-flex-wrap: none;
+	}
+	@if $justify == 'start'{
+		justify-content: flex-start;
+		-ms-flex-pack: start;
+	}@else if $justify == 'end'{
+		justify-content: flex-end;
+		-ms-flex-pack: end;
+	}@else if $justify == 'center'{
+		justify-content: center;
+		-ms-flex-pack: center;
+	}@else if  $justify == 'justify'{
+		justify-content: space-between;
+		-ms-flex-pack: justify;
+	}
+	@if $align == 'start'{
+		align-items: flex-start;
+		-ms-flex-align: start;
+	}@else if $align == 'end'{
+		align-items: flex-end;
+		-ms-flex-align: end;
+	}@else if $align == 'center'{
+		align-items: center;
+		-ms-flex-align: center;
+	}@else if $align == 'stretch'{
+		align-items: stretch;
+		-ms-flex-align: stretch;
+	}@else if $align == 'baseline'{
+		align-items: baseline;
+		-ms-flex-align: baseline;
+	}
+}//end safe-flex
+
+///mixin safe flex size
+@mixin safeFlexSize($grow, $shrink, $size){
+	flex: $grow $shrink $size;
+	-ms-flex: $grow $shrink $size;
+}
+
+
+///mixin safe flex order
+@mixin safeFlexOrder($order){
+	order: $order;
+	-ms-flex-order: $order;
+}
+
+@mixin spacer($spaceMultiplier){
+	margin-bottom: 1em * $spaceMultiplier;
+}
+
+@mixin bleed($bleedWidth){
+	margin-left: $bleedWidth * -0.5;
+	margin-right: $bleedWidth * -0.5;
+	@include calc(width, "100% + "$bleedWidth);
+}
