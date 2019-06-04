@@ -1,0 +1,22 @@
+uuid: c7f7f395-c996-4570-9689-8787e8e34707
+langcode: en
+status: true
+dependencies:
+  theme:
+    - crane
+_core:
+  default_config_hash: lh5Hpu8skhSjpioFNwgrVdJ-bf-k1L_sFsuM35--2r8
+id: crane_primary_local_tasks
+theme: crane
+region: header
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: false
+visibility: {  }

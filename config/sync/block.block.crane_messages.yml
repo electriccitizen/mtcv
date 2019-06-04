@@ -1,0 +1,22 @@
+uuid: 34ec0786-5fc2-49aa-a10a-d0bcad971c73
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - crane
+_core:
+  default_config_hash: 0-6fXNATVL40XMwg0wEp7aa9RciC8F7QrV8hoW4aXyw
+id: crane_messages
+theme: crane
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

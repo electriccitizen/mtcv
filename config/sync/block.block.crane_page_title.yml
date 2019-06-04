@@ -1,0 +1,20 @@
+uuid: dfbbcf90-3eac-41da-b4c0-261294f9a353
+langcode: en
+status: true
+dependencies:
+  theme:
+    - crane
+_core:
+  default_config_hash: 876EIoomEo4ZQguDaWpLzx81Zkkq7QXFxOr5d7V-N30
+id: crane_page_title
+theme: crane
+region: header
+weight: -30
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }
