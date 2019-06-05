@@ -26,7 +26,6 @@ third_party_settings:
         classes: ''
         direction: vertical
       label: Tabs
-      region: content
     group_content:
       children:
         - field_header
@@ -41,7 +40,6 @@ third_party_settings:
         description: ''
         required_fields: true
       label: Content
-      region: content
     group_special_fx:
       children:
         - field_special_fx
@@ -55,7 +53,6 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Special FX'
-      region: content
 id: paragraph.text.default
 targetEntityType: paragraph
 bundle: text

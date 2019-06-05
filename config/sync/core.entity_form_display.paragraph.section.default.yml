@@ -29,7 +29,6 @@ third_party_settings:
         id: ''
         classes: ''
       label: Tabs
-      region: content
     group_settings:
       children:
         - field_full_width
@@ -43,7 +42,6 @@ third_party_settings:
         description: ''
         required_fields: true
       label: Settings
-      region: content
     group_background:
       children:
         - field_background_image
@@ -58,7 +56,6 @@ third_party_settings:
         description: ''
         required_fields: true
       label: Background
-      region: content
     group_content:
       children:
         - field_content
@@ -73,7 +70,6 @@ third_party_settings:
         id: ''
         classes: ''
       label: Content
-      region: content
 id: paragraph.section.default
 targetEntityType: paragraph
 bundle: section
