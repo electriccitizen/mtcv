@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * @file
+ * Contains citizen_custom.module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function citizen_custom_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the citizen custom module.
+    case 'help.page.citizen_custom':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Custom glue module for Electric Citizen sites') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+
+/**
+ * Implements hook_theme().
+ */
+function citizen_custom_theme() {
+  return [
+    'citizen_custom' => [
+      'template' => 'citizen_custom',
+      'render element' => 'children',
+    ],
+    'site_search' => [
+      'variables' => [
+        'title' => 'Site Search',
+      ],
+    ],
+  ];
+}
+
+
