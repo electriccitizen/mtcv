@@ -4,7 +4,10 @@ global:
     base:
       css/crane-front.css: {}
       js/crane-front.js: {}
-
+forms:
+  version: 1.0
+  js:
+    js/forms.js: {}
 fonts:
   version: 1.0
   css:

@@ -1,3 +1,53 @@
 /* ========================
   HEADER
 ========================== */
+header{
+	& > div{
+		border-top: 4px solid $red;
+		border-bottom: 6px solid $darkBlue;
+		padding: 10px 0;
+	}
+}
+
+/* HEADER BLOCKS
+----------------- */
+.block-system-branding-block{
+	width: 100%;
+	max-width: $siteMaxWidth + 120px;
+	padding-left: $siteMarginMobile;
+	padding-right: $siteMarginMobile;
+	@include safeFlex(row,nowrap,justify,center);
+	@include auto;
+	@include desk{
+		padding-left: $siteMarginDesk;
+		padding-right: $siteMarginDesk;
+	}
+	a.logo-link{
+		display: block;
+		max-width: 40px;
+		@include tab{
+			max-width: 60px;
+		}
+		img{
+			border: 1px solid transparent;
+			display: block;
+			width: 100%;
+		}
+		&:hover,&:focus{
+			text-decoration: none;
+			img{
+				border-color: $borderRule;
+			}
+		}
+	}//end logo a
+	a.site-link{
+		font-size: 1.4rem;
+		color: $link;
+		text-transform: uppercase;
+		text-decoration: none;
+		&:hover,&:focus{
+			color: $hoverLink;
+			text-decoration: underline;
+		}
+	}
+}//end branding block

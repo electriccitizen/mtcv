@@ -1,3 +1,142 @@
 /* ========================
   FORM ELEMENTS
 ========================== */
+@mixin placeholder{
+	$placeTint: .4;
+	&::-webkit-placeholder{
+		opacity: $placeTint;
+		color: $placeColor;
+	}
+	&::-moz-placeholder{
+		opacity: $placeTint;
+		color: $placeColor;
+	}
+	&:-ms-input-placeholder{
+		opacity: $placeTint;
+		color: $placeColor;
+	}
+	&::-webkit-input-placeholder{
+		opacity: $placeTint;
+		color: $placeColor;
+	}
+}
+
+@mixin placeholderFocus{
+	$placeFocusTint: .2;
+	&::-webkit-placeholder{
+		opacity: $placeFocusTint;
+		color: $placeFocusColor;
+	}
+	&::-moz-placeholder{
+		opacity: $placeFocusTint;
+		color: $placeFocusColor;
+	}
+	&:-ms-input-placeholder{
+		opacity: $placeFocusTint;
+		color: $placeFocusColor;
+	}
+	&::-webkit-input-placeholder{
+		opacity: $placeFocusTint;
+		color: $placeFocusColor;
+	}
+}
+
+@mixin textInput{
+	border: 2px solid $formElementBorder;
+	font-size: 1.6rem;
+	font-family: $bodyFont;
+	padding: 10px 6px 11px;
+	width: 100%;
+	line-height: 1;
+	@include placeholder;
+	&:focus{
+		@include placeholderFocus;
+	}
+}
+
+@mixin required{
+	&:after{
+		content: '*';
+		color: $validation;
+		position: relative;
+		top: -1px;
+		right: -.5rem;
+		font-size: 1.2rem;
+	}
+}
+
+/* FORM ELEMENTS
+------------------ */
+input[type="submit"].button{
+	@include submitButton;
+}
+
+// generic form-item
+.form-item{
+	width: 100%;
+	margin-bottom: $spaceMd;
+	label{
+		font-family: $headerFont;
+		font-size: $formLabel;
+		color: $black;
+		display: block;
+		margin-bottom: $spaceXs;
+		padding-bottom: 0;
+	}
+}//end form item
+
+// required items
+.form-required,.js-form-required{
+	position: relative;
+	@include required;
+}
+
+//descriptions
+.description{
+	font-size: 1.4rem;
+}
+input + .description{
+	padding-top: $spaceXs;
+}
+
+/* USER LOGIN
+--------------- */
+.user-login-form,#user-pass{
+	max-width: $desk;
+	@include auto;
+	.form-item:not([type="submit"]){
+		max-width: 400px;
+	}
+	.js-form-type-password{
+		position: relative;
+		.password-reset{
+			position: absolute;
+			top: 12px;
+			right: 0;
+			font-size: 1.5rem;
+		}
+		.show-password{
+			position: absolute;
+			top: 54px;
+			right: 12px;
+			font-size: 1.4rem;
+			color: $midGrey;
+			&:hover,&:focus{
+				color: $hoverLink;
+			}
+		}
+		input#edit-pass{
+			padding-right: 56px;
+		}
+		.description{
+			padding-top: 1rem;
+		}
+	}//end form type password
+	.description,p{
+		font-size: 1.4rem;
+	}
+	#edit-submit.button{
+		margin: 0;
+	}
+}//end user login form
+

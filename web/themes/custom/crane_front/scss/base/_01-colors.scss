@@ -4,13 +4,45 @@
 $white        : #ffffff;
 $offWhite     : #f6f6f6;
 $lightGrey    : #ededed;
+$grey         : #cccccc;
 $midGrey      : #676767;
 $darkGrey     : #4a4a4a;
 $black        : #121212;
 $red          : #bf0e0e;
 $darkBlue     : #323b49;
 
+$transBlack   : rgba(35,35,35,0.7);
+
 /* COMPONENT COLORS
 ----------------- */
-$siteBack: $white;
-$baseText: $black;
+$siteBack     : $white;
+$baseText     : $black;
+$borderRule   : $black;
+$link         : $red;
+$hoverLink    : $midGrey;
+$buttonBack        : $link;
+$buttonBackHover   : $hoverLink;
+$buttonBackActive  : darken($hoverLink, 5%);
+$buttonText        : $white;
+$buttonTextHover   : $white;
+$buttonTextActive  : $white;
+$submitBack        : $link;
+$submitText        : $white;
+$submitBackHover   : $grey;
+$submitTextHover   : $black;
+$resetBack         : $darkGrey;
+$resetText         : $white;
+$resetBackHover    : $grey;
+$resetTextHover    : $black;
+$formElementBorder        : $borderRule;
+$placeColor               : $baseText;
+$placeFocusColor          : $placeColor;
+$validation               : $red;
+$checkBox                 : $link;
+$checkBoxHover            : $black;
+$checkBoxBackHover        : $transBlack;
+$checkBoxChecked          : darken($checkBox, 5%);
+$checkBoxCheckedBack      : $transBlack;
+$checkBoxCheckedBackHover : $black;
+$selectArrow              : $midGrey;
+$selectHighlight          : $link;
