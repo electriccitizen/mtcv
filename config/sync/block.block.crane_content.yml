@@ -1,0 +1,22 @@
+uuid: b5546e14-5c57-48a9-a374-84cc0f66fd99
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - crane
+_core:
+  default_config_hash: csOlsazB2B7ht2OWm9LkdQFoaJ2FsGjcROowRBxwmEo
+id: crane_content
+theme: crane
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

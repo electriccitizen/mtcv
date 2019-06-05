@@ -1,0 +1,10 @@
+{
+  "name": "drupal/crane",
+  "description": "Drupal administration theme with modern minimalist design.",
+  "type": "drupal-theme",
+  "homepage": "https://www.drupal.org/project/crane",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/crane"
+  },
+  "license": "GPL-2.0+"
+}

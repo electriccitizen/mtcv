@@ -1,0 +1,20 @@
+uuid: c2c55cde-95ed-4267-ab7a-182c27e888b6
+langcode: en
+status: true
+dependencies:
+  theme:
+    - crane
+_core:
+  default_config_hash: 3xH0waKugjKqwCMs3VkYe6OWF6Dc1jUm5NIt6Ntk5Wk
+id: crane_local_actions
+theme: crane
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }
