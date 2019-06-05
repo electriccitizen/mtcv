@@ -1,0 +1,12 @@
+global:
+  version: 1.0
+  css:
+    base:
+      css/crane-front.css: {}
+      js/crane-front.js: {}
+
+fonts:
+  version: 1.0
+  css:
+    base:
+      https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700: { type: external }

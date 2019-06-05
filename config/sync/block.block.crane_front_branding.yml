@@ -1,15 +1,15 @@
-uuid: b1c77b1b-6484-4bd6-ae3f-3b36127be4ea
+uuid: a93fbc46-b859-4766-ad0b-494f249ec6c6
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - bartik
+    - crane_front
 _core:
   default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
-id: bartik_branding
-theme: bartik
+id: crane_front_branding
+theme: crane_front
 region: header
 weight: 0
 provider: null

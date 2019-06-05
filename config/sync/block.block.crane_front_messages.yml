@@ -1,16 +1,16 @@
-uuid: 08ee40fe-11cf-4bc5-8bf3-cc71b5fee01f
+uuid: 1e0389d6-8190-43af-a22d-1ead4061a12b
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - bartik
+    - crane_front
 _core:
   default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
-id: bartik_messages
-theme: bartik
-region: highlighted
+id: crane_front_messages
+theme: crane_front
+region: header
 weight: 0
 provider: null
 plugin: system_messages_block
