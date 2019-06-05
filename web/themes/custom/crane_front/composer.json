@@ -1,0 +1,10 @@
+{
+  "name": "drupal/crane_front",
+  "description": "Drupal Front-End theme for Crane login process.",
+  "type": "drupal-theme",
+  "homepage": "https://www.drupal.org/project/crane_front",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/crane_front"
+  },
+  "license": "GPL-2.0+"
+}
