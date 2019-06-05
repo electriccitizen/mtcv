@@ -1,3 +1,12 @@
+/* ============
+	BREAKPOINTS & GRID VARIABLES
+======================= */
+/* BREAKPOINT VARIABLES
+------------------------ */
+/* SPACING VARIABLES
+----------------------------- */
+/* LAYOUT VARIABLES
+-------------------- */
 /* ========================
    COLORS
 ========================== */
@@ -6,9 +15,12 @@
 /* ========================
    FONTS
 ========================== */
-/* ============
-	BREAKPOINTS & GRID VARIABLES
-======================= */
+/* FAMILIES
+-------------- */
+/* WEIGHTS
+------------- */
+/*  SIZES
+-------------------- */
 /* ========================
    MIXINS
 ========================== */
@@ -37,6 +49,109 @@ body {
 /* ========================
   TYPOGRAPHY
 ========================== */
+/* HEADING MIXINS
+------------------ */
+/* HEADING STYLING
+------------------- */
+h1 {
+  line-height: 1.15;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  font-feature-settings: "liga", "dlig";
+  font-size: 32px; }
+  @media (min-width: 760px) {
+    h1 {
+      font-size: 46px; } }
+  @media (min-width: 1200px) {
+    h1 {
+      font-size: 60px; } }
+
+h2 {
+  line-height: 1.15;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  font-feature-settings: "liga", "dlig";
+  font-size: 26px; }
+  @media (min-width: 760px) {
+    h2 {
+      font-size: 29px; } }
+  @media (min-width: 1200px) {
+    h2 {
+      font-size: 32px; } }
+
+h3 {
+  line-height: 1.15;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  font-feature-settings: "liga", "dlig";
+  font-size: 23px; }
+  @media (min-width: 760px) {
+    h3 {
+      font-size: 26px; } }
+
+h4 {
+  line-height: 1.15;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  font-feature-settings: "liga", "dlig";
+  font-size: 22px; }
+
+h5 {
+  line-height: 1.15;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  font-feature-settings: "liga", "dlig";
+  font-size: 20px; }
+
+h6 {
+  line-height: 1.15;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  font-feature-settings: "liga", "dlig";
+  font-size: 18px; }
+
+h2 + ul, h3 + ul, h4 + ul, h5 + ul, h6 + ul {
+  margin-top: 0; }
+
+/* GLOBAL TEXT SETTINGS 
+-------------------- */
+html, code {
+  font-size: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-kerning: normal;
+  font-kerning: normal;
+  font-synthesis: none; }
+
+body.adminimal.crane {
+  color: #121212;
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 400; }
+
+em {
+  font-style: italic; }
+
+strong {
+  font-weight: 700; }
+
+ul {
+  list-style-type: disc; }
+
+ol {
+  list-style-type: decimal; }
+  ol[type="A"] {
+    list-style-type: lower-alpha; }
+  ol[type="I"] {
+    list-style-type: upper-roman; }
+
 /* ==============
 	 ADMIN-NAV
 ================== */

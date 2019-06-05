@@ -4,6 +4,9 @@ features:
   comment_user_verification: 0
   favicon: 1
 logo:
-  use_default: 1
+  use_default: 0
+  path: themes/custom/crane_front/logo.png
 favicon:
-  use_default: 1
+  use_default: 0
+  path: themes/custom/crane_front/favicons/favicon.ico
+  mimetype: image/vnd.microsoft.icon

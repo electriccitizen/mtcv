@@ -1,0 +1,101 @@
+/* ============
+	BREAKPOINTS & GRID VARIABLES
+======================= */
+
+$em-base: 10px;
+
+/* BREAKPOINT VARIABLES
+------------------------ */
+$smallTab: 500px;
+$tab: 760px;
+$desk: 980px;
+$contentStop: 1200px;
+$textMax: 800px;
+$onlyTab: 760px 899px;
+$onlySmall: max-width 759px;
+$onlyPhone: max-width 499px;
+$mobileStop: max-width 979px;
+
+
+/* SPACING VARIABLES
+----------------------------- */
+$spaceXs: 1rem;
+$spaceSm: 2rem;
+$spaceMd: 3rem;
+$spaceLg: 4rem;
+$spaceXl: 6rem;
+
+$siteMarginMobile: 2rem;
+$siteMarginDesk: 6rem;
+
+/* LAYOUT VARIABLES
+-------------------- */
+$elementSpace: 3rem;
+$siteBottomSpace: 8rem;
+$sideBar: 240px;
+$sectionGutter: 40px;
+
+/// mixin - smallTab
+@mixin smallTab {
+	@include breakpoint($smallTab) {
+		@content;
+	}
+}
+
+/// mixin - tab
+@mixin tab {
+	@include breakpoint($tab) {
+		@content;
+	}
+}
+
+/// mixin - desk
+@mixin desk {
+	@include breakpoint($desk) {
+		@content;
+	}
+}
+
+///mixin - contentStop
+@mixin contentStop {
+	@include breakpoint($contentStop) {
+		@content;
+	}
+}
+
+
+///mixin - onlyTab
+@mixin onlyTab {
+	@include breakpoint($onlyTab) {
+		@content;
+	}
+}
+
+
+///mixin - onlySmall
+@mixin onlySmall {
+	@include breakpoint($onlySmall) {
+		@content;
+	}
+}
+
+///mixin - onlyPhone
+@mixin onlyPhone {
+	@include breakpoint($onlyPhone) {
+		@content;
+	}
+}
+
+///mixin - mobileStop
+@mixin mobileStop {
+	@include breakpoint($mobileStop) {
+		@content;
+	}
+}
+
+///mixin - desk
+@mixin desk {
+	@include breakpoint($desk) {
+		@content;
+	}
+}

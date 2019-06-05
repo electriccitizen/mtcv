@@ -19,32 +19,24 @@ function crane_preprocess_html(&$variables) {
   else {
     $variables['attributes']['class'][] = 'crane';
   }
-
-  // Add Google font styles based on the theme setting.
-  if (!theme_get_setting('disable_google_fonts')) {
-    $variables['#attached']['library'][] = 'crane/google-fonts';
-  }
-}
-
-/**
- * Implements hook_form_system_theme_settings_alter().
- */
-function crane_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\FormStateInterface &$form_state, $form_id = NULL) {
-  // Work-around for a core bug affecting admin themes. See issue #943212.
-  if (isset($form_id)) {
-    return;
-  }
-
-  $form['crane_settings'] = [
-    '#type' => 'details',
-    '#title' => t('Crane theme settings'),
-    '#open' => TRUE,
+  $preconnect = [
+    '#tag' => 'meta',
+    '#attributes' => [
+      'href' => 'https://fonts.googleapis.com',
+      'rel' => 'preconnect',
+    ],
+  ];
+  $preload = [
+    '#tag' => 'meta',
+    '#attributes' => [
+      'rel' => 'preload',
+      'href' => 'https://fonts.googleapis.com/css?family=Lato:400,400i,700|Montserrat:400,700&display=swap',
+      'as' => 'style',
+    ],
   ];
 
-  $form['crane_settings']['disable_google_fonts'] = [
-    '#type' => 'checkbox',
-    '#title' => t('Avoid using "Google" fonts'),
-    '#default_value' => theme_get_setting('disable_google_fonts'),
-    '#description' => t('Useful for languages that are not well supported by the chosen Google font. Like Japanese for example.'),
-  ];
+
+  $variables['page']['#attached']['html_head'][] = [$preconnect, 'preconnect'];
+  $variables['page']['#attached']['html_head'][] = [$preload, 'preload'];
 }
+

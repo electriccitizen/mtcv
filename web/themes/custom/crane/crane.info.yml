@@ -5,7 +5,8 @@ description: 'Drupal administration theme for Electric Citizen Gatsby sites.'
 base theme: adminimal_theme
 
 libraries:
-  - crane/global-styling
+  - crane/global
+  - crane/fonts
 libraries-override:
   system/base:
     css:

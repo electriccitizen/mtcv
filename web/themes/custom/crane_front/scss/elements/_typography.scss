@@ -1,3 +1,173 @@
 /* ========================
   TYPOGRAPHY
 ========================== */
+
+//h1 sizes
+$h1Sm: 32px;
+$h1Mid: 46px;
+$h1Lg: 60px;
+
+//h2 sizes
+$h2Sm: 26px;
+$h2Md: 29px;
+$h2Lg: 32px;
+
+//h3 sizes
+$h3Sm: 23px;
+$h3Mid: 26px;
+
+//h4 sizes
+$h4Sm: 22px;
+
+//h5 sizes
+$h5Sm: 20px;
+
+//h6 sizes
+$h6Sm: 18px;
+
+/* HEADING MIXINS
+------------------ */
+@mixin headerGlobals{
+	line-height: 1.15;
+	font-weight: $heavy;
+	font-family: $headerFont;
+	margin: 0;
+	font-feature-settings: "liga", "dlig";
+}
+
+
+@mixin heading1{
+	@include headerGlobals;
+	font-size: $h1Sm;
+	@include tab{
+		font-size: $h1Mid;
+	}
+	@include contentStop{
+		font-size: $h1Lg;
+	}
+}
+
+@mixin heading2 {
+	@include headerGlobals;
+	font-size: $h2Sm;
+	@include tab{
+		font-size: $h2Md;
+	}
+	@include contentStop{
+		font-size: $h2Lg;
+	}
+}
+
+@mixin heading3{
+	@include headerGlobals;
+	font-size: $h3Sm;
+	@include tab{
+		font-size: $h3Mid;
+	}
+}
+
+@mixin heading4{
+	@include headerGlobals;
+	font-size: $h4Sm;
+}
+
+@mixin heading5{
+	@include headerGlobals;
+	font-size: $h5Sm;
+}
+
+@mixin heading6{
+	@include headerGlobals;
+	font-size: $h6Sm;
+}
+
+@mixin blockTitle{
+	@include headerGlobals;
+	font-size: 2rem;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-align: center;
+	max-width: $textMax;
+	margin-bottom: $spaceMd;
+	@include auto;
+}
+
+@mixin inlineBlockTitle{
+	@include blockTitle;
+	margin-bottom: 0;
+	display: inline-block;
+	& + *{
+		display: inline;
+	}
+}
+
+
+/* HEADING STYLING
+------------------- */
+h1 {
+	@include heading1;
+}
+
+h2{
+	@include heading2;
+}
+
+h3{
+	@include heading3;
+}
+
+h4{
+	@include heading4;
+}
+
+h5{
+	@include heading5;
+}
+
+h6{
+	@include heading6;
+}
+
+h2+ul, h3+ul, h4+ul, h5+ul, h6+ul {
+	margin-top: 0;
+}
+
+/* GLOBAL TEXT SETTINGS 
+-------------------- */
+html,code{
+	font-family: $bodyFont;
+	font-size: $em-base;
+	line-height: 1.4;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-kerning: normal;
+	font-synthesis: none;
+}
+
+body {
+	color: $baseText;
+	margin: 0;
+	font-size: $baseSize;
+}
+
+em{
+	font-style: italic;
+}
+
+strong{
+	font-weight: $heavy;
+}
+
+ul {
+	list-style-type: disc;
+}
+
+ol {
+	list-style-type: decimal;
+	&[type="A"]{
+		list-style-type: lower-alpha;
+	}
+	&[type="I"]{
+		list-style-type: upper-roman;
+	}
+}

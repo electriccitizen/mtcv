@@ -9,4 +9,4 @@ fonts:
   version: 1.0
   css:
     base:
-      https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700: { type: external }
+      https://fonts.googleapis.com/css?family=Lato:400,400i,700|Montserrat:400,700&display=swap: { type: external, preprocess: false }
