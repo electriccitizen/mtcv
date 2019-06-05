@@ -1,0 +1,71 @@
+<?php
+
+namespace Drupal\bones\Form;
+
+use Drupal\Core\Form\ConfigFormBase;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Class BonesForm.
+ */
+class BonesForm extends ConfigFormBase {
+
+  /**
+   * {@inheritdoc}
+   */
+  protected function getEditableConfigNames() {
+    return [
+      'bones.bones',
+    ];
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getFormId() {
+    return 'bones_form';
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function buildForm(array $form, FormStateInterface $form_state) {
+    $config = $this->config('bones.bones');
+    $form['enabled_features'] = [
+      '#type' => 'checkboxes',
+      '#title' => $this->t('Enabled features'),
+      '#description' => $this->t('Select the enabled features for HERO component.'),
+      '#options' => [
+        '1' => t('one'),
+        '2' => t('two'),
+        '3' => t('three')
+      ],
+
+
+
+
+    ];
+
+
+    return parent::buildForm($form, $form_state);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function validateForm(array &$form, FormStateInterface $form_state) {
+    parent::validateForm($form, $form_state);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function submitForm(array &$form, FormStateInterface $form_state) {
+    parent::submitForm($form, $form_state);
+
+    $this->config('bones.bones')
+      ->set('enabled_features', $form_state->getValue('enabled_features'))
+      ->save();
+  }
+
+}

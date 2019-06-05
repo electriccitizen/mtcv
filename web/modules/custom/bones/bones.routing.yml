@@ -1,0 +1,11 @@
+
+bones.bones_form:
+  path: '/admin/config/bones/bones'
+  defaults:
+    _form: '\Drupal\bones\Form\BonesForm'
+    _title: 'Bone Configuration'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+

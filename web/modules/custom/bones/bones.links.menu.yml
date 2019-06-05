@@ -1,0 +1,7 @@
+bones.bones_form:
+  title: 'Bones Configuration'
+  route_name: bones.bones_form
+  description: 'Configure Bones'
+  parent: system.admin_config_system
+  weight: 99
+
