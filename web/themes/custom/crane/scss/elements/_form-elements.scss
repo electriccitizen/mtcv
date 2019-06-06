@@ -160,15 +160,15 @@ body .select2-container--default{
 		}
 		//rendered selection
 		.select2-selection__rendered{
-			padding: 4px 32px 4px 10px;
+			padding: 0 32px 0 10px;
 			color: $darkGrey;
 			text-align: left;
 			&:after{
 				@include faSolid($fa-var-angle-down, 20px);
 				display: block;
 				position: absolute;
-				bottom: 9px;
-				right: 14px;
+				bottom: 4px;
+				right: 10px;
 			}
 		}
 		.select2-selection__arrow{

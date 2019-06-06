@@ -4276,7 +4276,7 @@ body {
   border: none;
   color: #ffffff;
   line-height: 1.15;
-  padding: .35rem 1rem;
+  padding: .75rem 1.5rem;
   display: inline-block;
   vertical-align: top;
   text-decoration: none;
@@ -4289,36 +4289,29 @@ body {
   .adminimal.crane .button:hover, .adminimal.crane .button:focus {
     color: #121212;
     background-color: #cccccc;
+    box-shadow: none;
     transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -webkit-transform: translateZ(0);
-    outline: 1px solid #4a4a4a; }
+    outline: none; }
   .adminimal.crane .button:active {
     color: #121212;
     background-color: #b3b3b3; }
-  .text-with-summary .adminimal.crane .button, .text-long .adminimal.crane .button {
-    padding: 0;
-    background: none; }
-    .text-with-summary .adminimal.crane .button a, .text-long .adminimal.crane .button a {
-      background-color: #bf0e0e;
-      padding: 1.6rem 3rem;
-      display: block;
-      max-width: 260px;
-      text-decoration: none;
-      color: #ffffff; }
-      .text-with-summary .adminimal.crane .button a:hover, .text-with-summary .adminimal.crane .button a:focus, .text-long .adminimal.crane .button a:hover, .text-long .adminimal.crane .button a:focus {
-        color: #121212;
-        background-color: #cccccc;
-        transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        -webkit-transition: all 0.3s ease;
-        -webkit-transform: translateZ(0); }
-      .text-with-summary .adminimal.crane .button a:active, .text-long .adminimal.crane .button a:active {
-        color: #121212;
-        background-color: #b3b3b3; }
-    .text-with-summary .adminimal.crane .button + .button, .text-with-summary .adminimal.crane .button + .button-outline, .text-long .adminimal.crane .button + .button, .text-long .adminimal.crane .button + .button-outline {
-      margin-left: 1.5rem; }
+  .adminimal.crane .button.button--small {
+    background: transparent;
+    border: 1px solid #323b49;
+    color: #121212;
+    font-weight: 400;
+    font-size: 1.2rem; }
+    .adminimal.crane .button.button--small:hover, .adminimal.crane .button.button--small:focus {
+      background: #cccccc;
+      color: #121212; }
+    .adminimal.crane .button.button--small:active {
+      background: #b3b3b3;
+      color: #121212; }
+  .adminimal.crane .button[data-drupal-selector="edit-cancel"] {
+    min-width: 115px; }
 
 .adminimal.crane .button--primary {
   background-image: none;
@@ -4326,7 +4319,7 @@ body {
   border: none;
   color: #ffffff;
   line-height: 1.15;
-  padding: .35rem 1rem;
+  padding: .75rem 1.5rem;
   display: inline-block;
   vertical-align: top;
   text-decoration: none;
@@ -4341,36 +4334,15 @@ body {
   .adminimal.crane .button--primary:hover, .adminimal.crane .button--primary:focus {
     color: #121212;
     background-color: #cccccc;
+    box-shadow: none;
     transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -webkit-transform: translateZ(0);
-    outline: 1px solid #4a4a4a; }
+    outline: none; }
   .adminimal.crane .button--primary:active {
     color: #121212;
     background-color: #b3b3b3; }
-  .text-with-summary .adminimal.crane .button--primary, .text-long .adminimal.crane .button--primary {
-    padding: 0;
-    background: none; }
-    .text-with-summary .adminimal.crane .button--primary a, .text-long .adminimal.crane .button--primary a {
-      background-color: #bf0e0e;
-      padding: 1.6rem 3rem;
-      display: block;
-      max-width: 260px;
-      text-decoration: none;
-      color: #ffffff; }
-      .text-with-summary .adminimal.crane .button--primary a:hover, .text-with-summary .adminimal.crane .button--primary a:focus, .text-long .adminimal.crane .button--primary a:hover, .text-long .adminimal.crane .button--primary a:focus {
-        color: #121212;
-        background-color: #cccccc;
-        transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        -webkit-transition: all 0.3s ease;
-        -webkit-transform: translateZ(0); }
-      .text-with-summary .adminimal.crane .button--primary a:active, .text-long .adminimal.crane .button--primary a:active {
-        color: #121212;
-        background-color: #b3b3b3; }
-    .text-with-summary .adminimal.crane .button--primary + .button, .text-with-summary .adminimal.crane .button--primary + .button-outline, .text-long .adminimal.crane .button--primary + .button, .text-long .adminimal.crane .button--primary + .button-outline {
-      margin-left: 1.5rem; }
   .adminimal.crane .button--primary:hover, .adminimal.crane .button--primary:focus {
     background: #cccccc;
     color: #121212; }
@@ -4384,7 +4356,7 @@ body {
   border: none;
   color: #ffffff;
   line-height: 1.15;
-  padding: .35rem 1rem;
+  padding: .75rem 1.5rem;
   display: inline-block;
   vertical-align: top;
   text-decoration: none;
@@ -4400,36 +4372,15 @@ body {
   .adminimal.crane .button-outline:hover, .adminimal.crane .button-outline:focus {
     color: #121212;
     background-color: #cccccc;
+    box-shadow: none;
     transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -webkit-transform: translateZ(0);
-    outline: 1px solid #4a4a4a; }
+    outline: none; }
   .adminimal.crane .button-outline:active {
     color: #121212;
     background-color: #b3b3b3; }
-  .text-with-summary .adminimal.crane .button-outline, .text-long .adminimal.crane .button-outline {
-    padding: 0;
-    background: none; }
-    .text-with-summary .adminimal.crane .button-outline a, .text-long .adminimal.crane .button-outline a {
-      background-color: #bf0e0e;
-      padding: 1.6rem 3rem;
-      display: block;
-      max-width: 260px;
-      text-decoration: none;
-      color: #ffffff; }
-      .text-with-summary .adminimal.crane .button-outline a:hover, .text-with-summary .adminimal.crane .button-outline a:focus, .text-long .adminimal.crane .button-outline a:hover, .text-long .adminimal.crane .button-outline a:focus {
-        color: #121212;
-        background-color: #cccccc;
-        transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        -webkit-transition: all 0.3s ease;
-        -webkit-transform: translateZ(0); }
-      .text-with-summary .adminimal.crane .button-outline a:active, .text-long .adminimal.crane .button-outline a:active {
-        color: #121212;
-        background-color: #b3b3b3; }
-    .text-with-summary .adminimal.crane .button-outline + .button, .text-with-summary .adminimal.crane .button-outline + .button-outline, .text-long .adminimal.crane .button-outline + .button, .text-long .adminimal.crane .button-outline + .button-outline {
-      margin-left: 1.5rem; }
   .adminimal.crane .button-outline:hover, .adminimal.crane .button-outline:focus {
     background: #cccccc;
     color: #121212;
@@ -4442,27 +4393,6 @@ body {
     background: #b3b3b3;
     color: #121212;
     border-color: #b3b3b3; }
-  .text-with-summary .adminimal.crane .button-outline, .text-long .adminimal.crane .button-outline {
-    padding: 0;
-    background: none;
-    border: none;
-    width: auto; }
-    .text-with-summary .adminimal.crane .button-outline a, .text-long .adminimal.crane .button-outline a {
-      background: transparent;
-      border: 1px solid #bf0e0e;
-      display: block;
-      text-decoration: none;
-      color: #bf0e0e; }
-      .text-with-summary .adminimal.crane .button-outline a:hover, .text-with-summary .adminimal.crane .button-outline a:focus, .text-long .adminimal.crane .button-outline a:hover, .text-long .adminimal.crane .button-outline a:focus {
-        color: #121212;
-        background-color: #cccccc;
-        transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        -webkit-transition: all 0.3s ease;
-        -webkit-transform: translateZ(0); }
-      .text-with-summary .adminimal.crane .button-outline a:active, .text-long .adminimal.crane .button-outline a:active {
-        color: #121212;
-        background-color: #b3b3b3; }
 
 /* ========================
   FIELD
@@ -4478,7 +4408,7 @@ input[type="submit"].button {
   border: none;
   color: #ffffff;
   line-height: 1.15;
-  padding: .35rem 1rem;
+  padding: .75rem 1.5rem;
   display: inline-block;
   vertical-align: top;
   text-decoration: none;
@@ -4490,41 +4420,20 @@ input[type="submit"].button {
   margin-bottom: 3rem;
   background: #323b49;
   color: #ffffff;
-  padding: 0 3rem;
-  height: 43px; }
+  height: auto;
+  min-width: 115px; }
   input[type="submit"].button:hover, input[type="submit"].button:focus {
     color: #121212;
     background-color: #cccccc;
+    box-shadow: none;
     transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -webkit-transform: translateZ(0);
-    outline: 1px solid #4a4a4a; }
+    outline: none; }
   input[type="submit"].button:active {
     color: #121212;
     background-color: #b3b3b3; }
-  .text-with-summary input[type="submit"].button, .text-long input[type="submit"].button {
-    padding: 0;
-    background: none; }
-    .text-with-summary input[type="submit"].button a, .text-long input[type="submit"].button a {
-      background-color: #bf0e0e;
-      padding: 1.6rem 3rem;
-      display: block;
-      max-width: 260px;
-      text-decoration: none;
-      color: #ffffff; }
-      .text-with-summary input[type="submit"].button a:hover, .text-with-summary input[type="submit"].button a:focus, .text-long input[type="submit"].button a:hover, .text-long input[type="submit"].button a:focus {
-        color: #121212;
-        background-color: #cccccc;
-        transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        -webkit-transition: all 0.3s ease;
-        -webkit-transform: translateZ(0); }
-      .text-with-summary input[type="submit"].button a:active, .text-long input[type="submit"].button a:active {
-        color: #121212;
-        background-color: #b3b3b3; }
-    .text-with-summary input[type="submit"].button + .button, .text-with-summary input[type="submit"].button + .button-outline, .text-long input[type="submit"].button + .button, .text-long input[type="submit"].button + .button-outline {
-      margin-left: 1.5rem; }
   input[type="submit"].button:hover, input[type="submit"].button:focus {
     background: #cccccc;
     border-color: #cccccc;
@@ -4628,7 +4537,7 @@ body .select2-container--default {
     body .select2-container--default .select2-selection--single .select2-selection__placeholder {
       color: #121212; }
     body .select2-container--default .select2-selection--single .select2-selection__rendered {
-      padding: 4px 32px 4px 10px;
+      padding: 0 32px 0 10px;
       color: #4a4a4a;
       text-align: left; }
       body .select2-container--default .select2-selection--single .select2-selection__rendered:after {
@@ -4636,8 +4545,8 @@ body .select2-container--default {
         font-size: 20px;
         display: block;
         position: absolute;
-        bottom: 9px;
-        right: 14px; }
+        bottom: 4px;
+        right: 10px; }
     body .select2-container--default .select2-selection--single .select2-selection__arrow {
       display: none; }
       body .select2-container--default .select2-selection--single .select2-selection__arrow b {
