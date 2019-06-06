@@ -158,6 +158,13 @@ p{
 	}
 }
 
+a{
+	color: $link;
+	&:hover,&:focus{
+		color: $hoverLink;
+	}
+}
+
 em{
 	font-style: italic;
 }

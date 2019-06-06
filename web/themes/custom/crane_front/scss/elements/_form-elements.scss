@@ -80,7 +80,7 @@ input[type="submit"].button{
 		font-size: $formLabel;
 		color: $black;
 		display: block;
-		margin-bottom: $spaceXs;
+		margin-bottom: $spaceXs / 2;
 		padding-bottom: 0;
 	}
 }//end form item
@@ -91,52 +91,15 @@ input[type="submit"].button{
 	@include required;
 }
 
+input.form-text{
+	@include textInput;
+}
+
 //descriptions
 .description{
 	font-size: 1.4rem;
+	color: $midGrey;
 }
 input + .description{
 	padding-top: $spaceXs;
 }
-
-/* USER LOGIN
---------------- */
-.user-login-form,#user-pass{
-	max-width: $desk;
-	@include auto;
-	.form-item:not([type="submit"]){
-		max-width: 400px;
-	}
-	.js-form-type-password{
-		position: relative;
-		.password-reset{
-			position: absolute;
-			top: 12px;
-			right: 0;
-			font-size: 1.5rem;
-		}
-		.show-password{
-			position: absolute;
-			top: 54px;
-			right: 12px;
-			font-size: 1.4rem;
-			color: $midGrey;
-			&:hover,&:focus{
-				color: $hoverLink;
-			}
-		}
-		input#edit-pass{
-			padding-right: 56px;
-		}
-		.description{
-			padding-top: 1rem;
-		}
-	}//end form type password
-	.description,p{
-		font-size: 1.4rem;
-	}
-	#edit-submit.button{
-		margin: 0;
-	}
-}//end user login form
-

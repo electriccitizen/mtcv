@@ -3,8 +3,8 @@
 ========================== */
 header{
 	& > div{
-		border-top: 4px solid $red;
-		border-bottom: 6px solid $darkBlue;
+		border-top: 6px solid $darkBlue;
+		background: $offWhite;
 		padding: 10px 0;
 	}
 }

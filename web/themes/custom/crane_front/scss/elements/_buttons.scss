@@ -7,11 +7,12 @@
 
 ///mixin - button
 @mixin button{
+	background-image: none;
 	background-color: $buttonBack;
 	border: none;
 	color: $buttonText;
 	line-height: 1.15;
-	padding: 1.6rem 3rem;
+	padding: .35rem 1rem;
 	display: inline-block;
 	vertical-align: top;
 	text-decoration: none;
@@ -25,6 +26,7 @@
 		color: $buttonTextHover;
 		background-color: $buttonBackHover;
 		@include transAll(.3s);
+		outline: 1px solid $darkGrey;
 	}
 	&:active{
 		color: $buttonTextActive;

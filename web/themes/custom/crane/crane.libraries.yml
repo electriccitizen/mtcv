@@ -3,10 +3,18 @@ global:
   css:
     base:
       css/crane.css: {}
-      js/crane.js: {}
-
+      js/select2/select2.min.css: { minified: true }
+  js:
+    js/crane.js: {}
+    js/select2/select2.min.js: { minified: true }
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery
+    - core/jquery.once
 fonts:
   version: 1.0
   css:
     base:
       https://fonts.googleapis.com/css?family=Lato:400,400i,700|Montserrat:400,700&display=swap: { type: external }
+    
