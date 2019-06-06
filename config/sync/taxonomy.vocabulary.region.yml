@@ -1,7 +1,16 @@
 uuid: f6f5a596-0673-48af-852c-b136db484e3e
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - entity_redirect
+third_party_settings:
+  entity_redirect:
+    personalization:
+      21:
+        destination: default
+        url: ''
+        external: ''
 name: Region
 vid: region
 description: 'These terms are used to associate resources with a specific geographic region.'

@@ -1,7 +1,16 @@
 uuid: f0e0864b-edc5-473e-9945-4fe3bcbe64ca
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - entity_redirect
+third_party_settings:
+  entity_redirect:
+    personalization:
+      21:
+        destination: default
+        url: ''
+        external: ''
 name: Navigator
 vid: navigator
 description: 'Prompts for the Legal Help finder.'

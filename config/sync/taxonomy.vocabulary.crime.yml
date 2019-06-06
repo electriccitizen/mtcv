@@ -1,7 +1,16 @@
 uuid: d95c6cee-7a56-4140-ab85-6993f81946c3
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - entity_redirect
+third_party_settings:
+  entity_redirect:
+    personalization:
+      21:
+        destination: default
+        url: ''
+        external: ''
 name: Crime(s)
 vid: crime
 description: 'These terms are used to associate resources with a specific crime against an individual. '

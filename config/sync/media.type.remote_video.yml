@@ -1,7 +1,16 @@
 uuid: 59de7fcb-1f07-4154-b241-4fc060000c37
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - entity_redirect
+third_party_settings:
+  entity_redirect:
+    personalization:
+      21:
+        destination: default
+        url: ''
+        external: ''
 _core:
   default_config_hash: 2r_Yo2tYXnt7PLx1pnlr1JU3iHmnsoWFdzQFs2sUXGk
 id: remote_video
