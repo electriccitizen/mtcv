@@ -2,6 +2,9 @@
 @import "../node_modules/breakpoint-sass/stylesheets/breakpoint";
 
 // Sheets to compile
+@import "../fonts/**/fontawesome.scss";
+@import "../fonts/**/font-awesome/solid.scss";
+@import "../fonts/**/font-awesome/brands.scss";
 @import "base/**/*.scss";
 @import 'elements/**/*.scss';
 @import 'components/**/*.scss';

@@ -1,0 +1,25 @@
+uuid: 278cd53b-2240-4d6b-befe-e7610a94bcbc
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:011fc979-3c46-4e8d-ad72-9b472391cd65'
+  module:
+    - block_content
+  theme:
+    - crane_front
+id: copyright
+theme: crane_front
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:011fc979-3c46-4e8d-ad72-9b472391cd65'
+settings:
+  id: 'block_content:011fc979-3c46-4e8d-ad72-9b472391cd65'
+  label: Copyright
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

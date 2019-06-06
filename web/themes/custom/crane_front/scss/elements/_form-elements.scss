@@ -1,3 +1,105 @@
 /* ========================
   FORM ELEMENTS
 ========================== */
+@mixin placeholder{
+	$placeTint: .4;
+	&::-webkit-placeholder{
+		opacity: $placeTint;
+		color: $placeColor;
+	}
+	&::-moz-placeholder{
+		opacity: $placeTint;
+		color: $placeColor;
+	}
+	&:-ms-input-placeholder{
+		opacity: $placeTint;
+		color: $placeColor;
+	}
+	&::-webkit-input-placeholder{
+		opacity: $placeTint;
+		color: $placeColor;
+	}
+}
+
+@mixin placeholderFocus{
+	$placeFocusTint: .2;
+	&::-webkit-placeholder{
+		opacity: $placeFocusTint;
+		color: $placeFocusColor;
+	}
+	&::-moz-placeholder{
+		opacity: $placeFocusTint;
+		color: $placeFocusColor;
+	}
+	&:-ms-input-placeholder{
+		opacity: $placeFocusTint;
+		color: $placeFocusColor;
+	}
+	&::-webkit-input-placeholder{
+		opacity: $placeFocusTint;
+		color: $placeFocusColor;
+	}
+}
+
+@mixin textInput{
+	border: 2px solid $formElementBorder;
+	font-size: 1.6rem;
+	font-family: $bodyFont;
+	padding: 10px 6px 11px;
+	width: 100%;
+	line-height: 1;
+	@include placeholder;
+	&:focus{
+		@include placeholderFocus;
+	}
+}
+
+@mixin required{
+	&:after{
+		content: '*';
+		color: $validation;
+		position: relative;
+		top: -1px;
+		right: -.5rem;
+		font-size: 1.2rem;
+	}
+}
+
+/* FORM ELEMENTS
+------------------ */
+input[type="submit"].button{
+	@include submitButton;
+}
+
+// generic form-item
+.form-item{
+	width: 100%;
+	margin-bottom: $spaceMd;
+	label{
+		font-family: $headerFont;
+		font-size: $formLabel;
+		color: $black;
+		display: block;
+		margin-bottom: $spaceXs / 2;
+		padding-bottom: 0;
+	}
+}//end form item
+
+// required items
+.form-required,.js-form-required{
+	position: relative;
+	@include required;
+}
+
+input.form-text{
+	@include textInput;
+}
+
+//descriptions
+.description{
+	font-size: 1.4rem;
+	color: $midGrey;
+}
+input + .description{
+	padding-top: $spaceXs;
+}

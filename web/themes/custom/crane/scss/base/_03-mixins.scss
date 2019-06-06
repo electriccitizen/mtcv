@@ -341,3 +341,17 @@
 	margin-right: $bleedWidth * -0.5;
 	@include calc(width, "100% + "$bleedWidth);
 }
+
+@mixin faSolid($fa-variable,$fa-size){
+	@extend %fa-icon;
+	@extend .fas;
+	content: fa-content(#{$fa-variable});
+	font-size: $fa-size;
+}
+
+@mixin faBrand($fa-variable,$fa-size){
+	@extend %fa-icon;
+	@extend .fab;
+	content: fa-content(#{$fa-variable});
+	font-size: $fa-size;
+}

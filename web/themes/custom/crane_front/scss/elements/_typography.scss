@@ -135,9 +135,7 @@ h2+ul, h3+ul, h4+ul, h5+ul, h6+ul {
 /* GLOBAL TEXT SETTINGS 
 -------------------- */
 html,code{
-	font-family: $bodyFont;
 	font-size: $em-base;
-	line-height: 1.4;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-kerning: normal;
@@ -147,7 +145,24 @@ html,code{
 body {
 	color: $baseText;
 	margin: 0;
+	font-family: $bodyFont;
 	font-size: $baseSize;
+	line-height: 1.4;
+	letter-spacing: .02em;
+}
+
+p{
+	margin-top: 0;
+	&:not(:last-child){
+		margin-bottom: $spaceMd;
+	}
+}
+
+a{
+	color: $link;
+	&:hover,&:focus{
+		color: $hoverLink;
+	}
 }
 
 em{

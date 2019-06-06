@@ -1,3 +1,137 @@
 /* ========================
   BUTTONS
 ========================== */
+
+/* BUTTON MIXINS
+------------------ */
+
+///mixin - button
+@mixin button{
+	background-image: none;
+	background-color: $buttonBack;
+	border: none;
+	color: $buttonText;
+	line-height: 1.15;
+	padding: .35rem 1rem;
+	display: inline-block;
+	vertical-align: top;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: $headerFont;
+	font-weight: $heavy;
+	font-size: $button;
+	margin-bottom: $spaceMd;
+	&:hover,&:focus {
+		color: $buttonTextHover;
+		background-color: $buttonBackHover;
+		@include transAll(.3s);
+		outline: 1px solid $darkGrey;
+	}
+	&:active{
+		color: $buttonTextActive;
+		background-color: $buttonBackActive;
+	}
+	.text-with-summary &,.text-long &{
+		padding: 0;
+		background: none;
+		a{
+			background-color: $buttonBack;
+			padding: 1.6rem 3rem;
+			display: block;
+			max-width: 260px;
+			text-decoration: none;
+			color: $buttonText;
+			&:hover,&:focus {
+				color: $buttonTextHover;
+				background-color: $buttonBackHover;
+				@include transAll(.3s);
+			}
+			&:active{
+				color: $buttonTextActive;
+				background-color: $buttonBackActive;
+			}
+		}//end a
+		& + .button,& + .button-outline{
+			margin-left: 1.5rem;
+		}
+	}//end wysiwyg
+}//end button mixin
+
+///mixin - outlineButton
+@mixin outlineButton($outlineColor){
+	@include button;
+	background: transparent;
+	border: 1px solid $outlineColor;
+	color: $outlineColor;
+	&:hover,&:focus{
+		background: $buttonBackHover;
+		color: $buttonTextHover;
+		border-color: $buttonBackHover;
+		@include transAll(.3s);
+	}
+	&:active{
+		background: $buttonBackActive;
+		color: $buttonTextActive;
+		border-color: $buttonBackActive;
+	}
+	.text-with-summary &,.text-long &{
+		padding: 0;
+		background: none;
+		border: none;
+		width: auto;
+		a{
+			background: transparent;
+			border: 1px solid $outlineColor;
+			display: block;
+			text-decoration: none;
+			color: $outlineColor;
+			&:hover,&:focus {
+				color: $buttonTextHover;
+				background-color: $buttonBackHover;
+				@include transAll(.3s);
+			}
+			&:active{
+				color: $buttonTextActive;
+				background-color: $buttonBackActive;
+			}
+		}//end a
+	}//end wysiwyg 
+}
+
+@mixin submitButton{
+	@include button;
+	background: $submitBack;
+	color: $submitText;
+	padding: 0 3rem;
+	height: 43px;
+	&:hover,&:focus{
+		background: $submitBackHover;
+		border-color: $submitBackHover;
+		color: $submitTextHover;
+	}
+}
+
+@mixin resetButton{
+	@include button;
+	background: $resetBack;
+	color: $resetText;
+	border-color: $resetBack;
+	padding: 0 3rem;
+	height: 43px;
+	&:hover,&:focus{
+		background: $resetBackHover;
+		border-color: $resetBackHover;
+		color: $resetTextHover;
+	}
+}
+
+//button class
+.button {
+	@include button;
+}
+
+//outlineButtons
+.button-outline{
+	@include outlineButton($link);
+}

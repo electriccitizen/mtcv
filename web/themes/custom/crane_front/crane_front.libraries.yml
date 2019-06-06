@@ -3,8 +3,17 @@ global:
   css:
     base:
       css/crane-front.css: {}
-      js/crane-front.js: {}
-
+  js:
+    js/crane-front.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery
+    - core/jquery.once
+forms:
+  version: 1.0
+  js:
+    js/forms.js: {}
 fonts:
   version: 1.0
   css:

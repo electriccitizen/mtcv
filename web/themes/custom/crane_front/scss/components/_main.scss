@@ -1,0 +1,18 @@
+/* ========================
+  MAIN
+========================== */
+
+main{
+	.layout-content > div{
+		@include calc(min-height, "100vh - 140px");
+		padding: $spaceMd $siteMarginMobile;
+		max-width: $siteMaxWidth + 120px;
+		@include auto;
+		@include tab{
+			@include calc(min-height, "100vh - 188px");
+		}
+		@include desk{
+			padding: $spaceLg $siteMarginDesk;
+		}
+	}//end layout content div
+}//end main
