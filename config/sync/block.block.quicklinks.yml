@@ -1,0 +1,25 @@
+uuid: b554ce4c-43fe-4558-94e7-815d4af27fdc
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.quicklinks
+  module:
+    - system
+  theme:
+    - crane_front
+id: quicklinks
+theme: crane_front
+region: content
+weight: -3
+provider: null
+plugin: 'system_menu_block:quicklinks'
+settings:
+  id: 'system_menu_block:quicklinks'
+  label: Quicklinks
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
