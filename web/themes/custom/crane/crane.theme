@@ -40,3 +40,29 @@ function crane_preprocess_html(&$variables) {
   $variables['page']['#attached']['html_head'][] = [$preload, 'preload'];
 }
 
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function crane_form_system_theme_settings_alter(array &$form, FormStateInterface $form_state, $form_id = NULL) {
+  // Work-around for a core bug affecting admin themes. See issue #943212.
+  if (isset($form_id)) {
+    return;
+  }
+  if ($form_state->has('entity_browser')) {
+    $form['#attached']['library'][] = 'citizen_custom/browser';
+  }
+  if ($form['adminimal_theme_settings']) {
+    unset($form['adminimal_theme_settings']);
+  }
+  if ($form['adminimal_custom']) {
+    unset($form['adminimal_custom']);
+  }
+
+  $form['theme_settings']['#open'] = FALSE;
+  unset($form['theme_settings']['toggle_node_user_picture']);
+  unset($form['theme_settings']['toggle_comment_user_picture']);
+  unset($form['theme_settings']['toggle_comment_user_verification']);
+
+  $form['logo']['#open'] = FALSE;
+  $form['favicon']['#open'] = FALSE;
+}

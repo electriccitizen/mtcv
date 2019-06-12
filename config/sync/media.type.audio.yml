@@ -1,7 +1,16 @@
 uuid: cd0d0fc3-7cba-45a2-a157-bac1d5bc9dd1
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - entity_redirect
+third_party_settings:
+  entity_redirect:
+    personalization:
+      21:
+        destination: default
+        url: ''
+        external: ''
 _core:
   default_config_hash: RQ75tMARZvKiI0hge9SKZpZFi-dOzZyq0nlouHHBeLM
 id: audio
