@@ -1,19 +1,22 @@
-uuid: 15b9fd44-95eb-4c06-8d1c-de7de4b9122c
+uuid: 784400df-bcbe-4f36-aaa3-ff17f037e7d7
 langcode: en
 status: true
 dependencies: {  }
-id: editor
-label: Editor
-weight: 3
+id: site_manager
+label: 'Site Manager'
+weight: 4
 is_admin: null
 permissions:
   - 'access administration pages'
   - 'access content overview'
   - 'access in-place editing'
   - 'access media overview'
+  - 'access site reports'
   - 'access taxonomy overview'
   - 'access user profiles'
+  - 'administer blocks'
   - 'administer menu'
+  - 'administer users'
   - 'cancel account'
   - 'change own username'
   - 'create file media'
