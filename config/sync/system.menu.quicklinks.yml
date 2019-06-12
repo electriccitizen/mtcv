@@ -1,0 +1,8 @@
+uuid: 5b85b5a3-0f9e-47f5-946f-213053b33208
+langcode: en
+status: true
+dependencies: {  }
+id: quicklinks
+label: Quicklinks
+description: 'Quicklink navigation for editors and site managers'
+locked: false

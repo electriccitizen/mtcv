@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f7735080884f96040e90c2973e0863ac",
+    "content-hash": "a5755a47d7aed1aa5a760b2102dc330a",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2817,6 +2817,103 @@
             }
         },
         {
+            "name": "drupal/link_attributes",
+            "version": "1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/link_attributes.git",
+                "reference": "8.x-1.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/link_attributes-8.x-1.7.zip",
+                "reference": "8.x-1.7",
+                "shasum": "de997823b01e5230da96e76941a2c5a221943e3a"
+            },
+            "require": {
+                "drupal/core": "^8.4"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.7",
+                    "datestamp": "1559689681",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                }
+            ],
+            "description": "Provides a widget to allow settings of link attributes for menu links.",
+            "homepage": "https://www.drupal.org/project/link_attributes",
+            "support": {
+                "source": "https://git.drupalcode.org/project/link_attributes"
+            }
+        },
+        {
+            "name": "drupal/linkit",
+            "version": "4.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/linkit.git",
+                "reference": "8.x-4.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/linkit-8.x-4.3.zip",
+                "reference": "8.x-4.3",
+                "shasum": "e624ea2f18a6100b76a8337e24f7c08df6e2235e"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-4.x": "4.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-4.3",
+                    "datestamp": "1490205830",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Emil Stjerneman",
+                    "homepage": "https://stjerneman.com",
+                    "email": "emil@stjerneman.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Linkit - Enriched linking experience",
+            "homepage": "http://drupal.org/project/linkit",
+            "support": {
+                "source": "http://cgit.drupalcode.org/linkit",
+                "issues": "http://drupal.org/project/linkit"
+            }
+        },
+        {
             "name": "drupal/markdown",
             "version": "1.2.0",
             "source": {
@@ -3106,7 +3203,7 @@
                     }
                 },
                 "patches_applied": {
-                    "LogicException": "https://www.drupal.org/files/issues/2019-05-03/3013171-13.patch"
+                    "Field Group": "https://www.drupal.org/files/issues/2907094_7_field_group_support.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3203,6 +3300,61 @@
             }
         },
         {
+            "name": "drupal/redirect",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/redirect.git",
+                "reference": "8.x-1.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/redirect-8.x-1.3.zip",
+                "reference": "8.x-1.3",
+                "shasum": "3f9620d186e25f36ac56755979932b8ea965b8c7"
+            },
+            "require": {
+                "drupal/core": "~8"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.3",
+                    "datestamp": "1539682684",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "pifagor",
+                    "homepage": "https://www.drupal.org/user/2375692"
+                }
+            ],
+            "description": "Allows users to redirect from old URLs to new URLs.",
+            "homepage": "https://www.drupal.org/project/redirect",
+            "support": {
+                "source": "https://git.drupalcode.org/project/redirect"
+            }
+        },
+        {
             "name": "drupal/simple_block",
             "version": "1.0.0-beta1",
             "source": {
@@ -3247,6 +3399,69 @@
             "homepage": "https://www.drupal.org/project/simple_block",
             "support": {
                 "source": "https://git.drupalcode.org/project/simple_block"
+            }
+        },
+        {
+            "name": "drupal/structure_sync",
+            "version": "1.16.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/structure_sync.git",
+                "reference": "8.x-1.16"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/structure_sync-8.x-1.16.zip",
+                "reference": "8.x-1.16",
+                "shasum": "b700c424503fa2d7285e972b1042ca6917ec0888"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.16",
+                    "datestamp": "1546851780",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "fidodido06",
+                    "homepage": "https://www.drupal.org/user/1494332"
+                },
+                {
+                    "name": "legolasbo",
+                    "homepage": "https://www.drupal.org/user/2480548"
+                },
+                {
+                    "name": "pdenooijer",
+                    "homepage": "https://www.drupal.org/user/3175437"
+                },
+                {
+                    "name": "timKruijsen",
+                    "homepage": "https://www.drupal.org/user/3513437"
+                },
+                {
+                    "name": "vinlaurens",
+                    "homepage": "https://www.drupal.org/user/2945689"
+                }
+            ],
+            "description": "Tool for syncing structural data that is stored as content.",
+            "homepage": "https://www.drupal.org/project/structure_sync",
+            "support": {
+                "source": "https://git.drupalcode.org/project/structure_sync"
             }
         },
         {
@@ -3417,6 +3632,131 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/tui_editor",
                 "issues": "https://www.drupal.org/project/issues/tui_editor"
+            }
+        },
+        {
+            "name": "drupal/views_bulk_operations",
+            "version": "3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_bulk_operations.git",
+                "reference": "8.x-3.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_bulk_operations-8.x-3.2.zip",
+                "reference": "8.x-3.2",
+                "shasum": "8648525ff00f32aa0b3682c104630cc392d08dbc"
+            },
+            "require": {
+                "drupal/core": "~8.5"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.2",
+                    "datestamp": "1559040784",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Marcin Grabias",
+                    "homepage": "https://www.drupal.org/u/graber"
+                },
+                {
+                    "name": "Jon Pugh",
+                    "homepage": "https://www.drupal.org/user/17028"
+                },
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "infojunkie",
+                    "homepage": "https://www.drupal.org/user/48424"
+                },
+                {
+                    "name": "joelpittet",
+                    "homepage": "https://www.drupal.org/user/160302"
+                }
+            ],
+            "description": "Adds an ability to perform bulk operations on selected entities from view results. Provides an API to create such operations.",
+            "homepage": "https://www.drupal.org/project/views_bulk_operations",
+            "support": {
+                "source": "https://git.drupalcode.org/project/views_bulk_operations",
+                "issues": "https://www.drupal.org/project/issues/views_bulk_operations?version=8.x",
+                "docs": "https://www.drupal.org/docs/8/modules/views-bulk-operations-vbo"
+            }
+        },
+        {
+            "name": "drupal/views_infinite_scroll",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_infinite_scroll.git",
+                "reference": "8.x-1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_infinite_scroll-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "fa19d65a9f6421fe64463b8b64169c6f13d423c3"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.5",
+                    "datestamp": "1503109444",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Bobík",
+                    "homepage": "https://www.drupal.org/user/123612"
+                },
+                {
+                    "name": "Remon",
+                    "homepage": "https://www.drupal.org/user/143827"
+                },
+                {
+                    "name": "Sam152",
+                    "homepage": "https://www.drupal.org/user/1485048"
+                }
+            ],
+            "description": "A pager which allows an infinite scroll effect for views.",
+            "homepage": "https://www.drupal.org/project/views_infinite_scroll",
+            "support": {
+                "source": "https://git.drupalcode.org/project/views_infinite_scroll"
             }
         },
         {
