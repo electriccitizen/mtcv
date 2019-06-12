@@ -4262,8 +4262,17 @@ body .select2-container--default.select2-container--focus .select2-selection--mu
 /* ========================
   GLOBAL
 ========================== */
-body {
-  background: #ffffff; }
+body.adminimal.crane {
+  background-color: #ffffff; }
+  body.adminimal.crane > div {
+    box-sizing: border-box; }
+  body.adminimal.crane .dialog-off-canvas-main-canvas {
+    padding-left: 80px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden; }
+  body.adminimal.crane .visually-hidden {
+    max-width: 1px; }
 
 /* ========================
   BUTTONS

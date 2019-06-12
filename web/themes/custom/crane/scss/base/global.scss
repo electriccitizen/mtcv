@@ -1,6 +1,18 @@
 /* ========================
   GLOBAL
 ========================== */
-body{
-	background: $siteBack;
+body.adminimal.crane{
+	background-color: $siteBack;
+	& > div{
+		box-sizing: border-box;
+	}
+	.dialog-off-canvas-main-canvas{
+		padding-left: 80px;
+		width: 100%;
+		box-sizing: border-box;
+		overflow-x: hidden;
+	}
+	.visually-hidden{
+		max-width: 1px;
+	}
 }
