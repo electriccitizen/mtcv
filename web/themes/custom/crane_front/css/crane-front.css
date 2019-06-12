@@ -42,6 +42,8 @@ body {
       box-sizing: inherit; }
   body .dialog-off-canvas-main-canvas > .layout-container {
     padding-top: 0; }
+  body.logged-in .dialog-off-canvas-main-canvas {
+    padding-left: 80px; }
 
 #block-crane-front-help {
   padding: 3rem 0;
@@ -604,6 +606,15 @@ main .layout-content > div {
 /* ========================
   QUICKLINKS
 ========================== */
+.role-editor:not(.role-site_manager) nav#block-quicklinks ul.root-menu .manager, .role-editor:not(.role-administrator) nav#block-quicklinks ul.root-menu .manager {
+  display: none !important; }
+
+.role-editor:not(.role-administrator) nav#block-quicklinks ul.root-menu .admin, .role-site_manager:not(.role-administrator) nav#block-quicklinks ul.root-menu .admin {
+  display: none !important; }
+
+nav#block-quicklinks ul.root-menu ul {
+  display: none; }
+
 /* ========================
   USER LOGIN & PASSWORD
 ========================== */

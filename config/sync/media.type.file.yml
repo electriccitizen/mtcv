@@ -11,6 +11,14 @@ third_party_settings:
         destination: default
         url: ''
         external: ''
+      24:
+        destination: default
+        url: ''
+        external: ''
+      25:
+        destination: default
+        url: ''
+        external: ''
 _core:
   default_config_hash: s6qJnINiq7zI-ZoQOXM_gtiDpIsHT3fm7RySP1F_BE0
 id: file

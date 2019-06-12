@@ -11,6 +11,14 @@ third_party_settings:
         destination: default
         url: ''
         external: ''
+      24:
+        destination: default
+        url: ''
+        external: ''
+      25:
+        destination: default
+        url: ''
+        external: ''
 name: Region
 vid: region
 description: 'These terms are used to associate resources with a specific geographic region.'

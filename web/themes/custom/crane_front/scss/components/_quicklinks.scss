@@ -1,3 +1,20 @@
 /* ========================
   QUICKLINKS
 ========================== */
+nav#block-quicklinks{
+	ul.root-menu{
+		.manager{
+			.role-editor:not(.role-site_manager) &,.role-editor:not(.role-administrator) &{
+				display: none !important;
+			}
+		}
+		.admin{
+			.role-editor:not(.role-administrator) &,.role-site_manager:not(.role-administrator) &{
+				display: none !important;
+			}
+		}
+		ul{
+			display: none;
+		}
+	}//end 
+}//end quicklinks nav
