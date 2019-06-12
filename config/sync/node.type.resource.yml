@@ -25,5 +25,5 @@ type: resource
 description: 'This content type stores all legal and related services that appear in the self-help resource library.'
 help: ''
 new_revision: true
-preview_mode: 0
+preview_mode: 1
 display_submitted: false

@@ -138,9 +138,7 @@
                 "Media library widget + Paragraphs broken: validation error on required field in paragraphs subform": "https://www.drupal.org/files/issues/2018-12-05/drupal-media-library-paragraphs-3003150-19-8.x.patch"
             },
             "drupal/paragraphs":{
-                "LogicException": "https://www.drupal.org/files/issues/2019-05-03/3013171-13.patch"
-            },
-            "drupal/paragraphs": {
+                "LogicException": "https://www.drupal.org/files/issues/2019-05-03/3013171-13.patch",
                 "Field Group": "https://www.drupal.org/files/issues/2907094_7_field_group_support.patch"
             }
         },

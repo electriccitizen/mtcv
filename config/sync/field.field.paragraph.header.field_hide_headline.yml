@@ -11,7 +11,7 @@ entity_type: paragraph
 bundle: header
 label: 'Hide headline'
 description: 'You can hide your headline completely and use your hero image as stand-alone image!'
-required: true
+required: false
 translatable: false
 default_value:
   -
