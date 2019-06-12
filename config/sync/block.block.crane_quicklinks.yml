@@ -1,4 +1,4 @@
-uuid: 5347ac37-6a74-4b68-8f2c-970581452e51
+uuid: 75d5a863-1d7e-4027-aba5-819e830662a0
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ dependencies:
   theme:
     - crane
 _core:
-  default_config_hash: xXnviv3MSvdtux0riReXvbcDEhQ2ge-sm7zyI9TtH4w
+  default_config_hash: Jl73vtMLMn--4dRuiibKrOFyUudRUMmndA-f8XOQDOQ
 id: crane_quicklinks
 theme: crane
 region: content
@@ -23,5 +23,5 @@ settings:
   label_display: '0'
   level: 1
   depth: 0
-  expand_all_items: false
+  expand_all_items: true
 visibility: {  }
