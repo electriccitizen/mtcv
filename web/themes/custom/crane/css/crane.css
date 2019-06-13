@@ -4281,7 +4281,7 @@ body.adminimal.crane {
 ------------------ */
 .adminimal.crane .button {
   background-image: none;
-  background-color: #bf0e0e;
+  background-color: #3778c1;
   border: none;
   color: #ffffff;
   line-height: 1.15;
@@ -4291,7 +4291,7 @@ body.adminimal.crane {
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
+  font-family: mr-eaves-sans, sans-serif;
   font-weight: 700;
   font-size: 1.4rem;
   margin-bottom: 3rem; }
@@ -4309,7 +4309,7 @@ body.adminimal.crane {
     background-color: #b3b3b3; }
   .adminimal.crane .button.button--small {
     background: transparent;
-    border: 1px solid #323b49;
+    border: 1px solid #3778c1;
     color: #121212;
     font-weight: 400;
     font-size: 1.2rem; }
@@ -4324,7 +4324,7 @@ body.adminimal.crane {
 
 .adminimal.crane .button--primary {
   background-image: none;
-  background-color: #bf0e0e;
+  background-color: #3778c1;
   border: none;
   color: #ffffff;
   line-height: 1.15;
@@ -4334,11 +4334,11 @@ body.adminimal.crane {
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
+  font-family: mr-eaves-sans, sans-serif;
   font-weight: 700;
   font-size: 1.4rem;
   margin-bottom: 3rem;
-  background: #323b49;
+  background: #3778c1;
   color: #ffffff; }
   .adminimal.crane .button--primary:hover, .adminimal.crane .button--primary:focus {
     color: #121212;
@@ -4361,7 +4361,7 @@ body.adminimal.crane {
 
 .adminimal.crane .button-outline {
   background-image: none;
-  background-color: #bf0e0e;
+  background-color: #3778c1;
   border: none;
   color: #ffffff;
   line-height: 1.15;
@@ -4371,13 +4371,13 @@ body.adminimal.crane {
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
+  font-family: mr-eaves-sans, sans-serif;
   font-weight: 700;
   font-size: 1.4rem;
   margin-bottom: 3rem;
   background: transparent;
-  border: 1px solid #bf0e0e;
-  color: #bf0e0e; }
+  border: 1px solid #3778c1;
+  color: #3778c1; }
   .adminimal.crane .button-outline:hover, .adminimal.crane .button-outline:focus {
     color: #121212;
     background-color: #cccccc;
@@ -4413,7 +4413,7 @@ body.adminimal.crane {
 ------------------ */
 input[type="submit"].button {
   background-image: none;
-  background-color: #bf0e0e;
+  background-color: #3778c1;
   border: none;
   color: #ffffff;
   line-height: 1.15;
@@ -4423,11 +4423,11 @@ input[type="submit"].button {
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
+  font-family: mr-eaves-sans, sans-serif;
   font-weight: 700;
   font-size: 1.4rem;
   margin-bottom: 3rem;
-  background: #323b49;
+  background: #3778c1;
   color: #ffffff;
   height: auto;
   min-width: 115px; }
@@ -4452,8 +4452,8 @@ input[type="submit"].button {
   width: 100%;
   margin-bottom: 3rem; }
   .form-item label {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.4rem;
+    font-family: mr-eaves-sans, sans-serif;
+    font-size: 1.8rem;
     color: #121212;
     display: block;
     margin-bottom: 0.5rem;
@@ -4472,7 +4472,7 @@ input[type="submit"].button {
 input.form-text {
   border: 2px solid #121212;
   font-size: 1.6rem;
-  font-family: "Lato", sans-serif;
+  font-family: freight-sans-pro, sans-serif;
   padding: 10px 6px 11px;
   width: 100%;
   line-height: 1; }
@@ -4537,7 +4537,7 @@ body .select2-container--default {
     border: 1px solid #121212;
     border-radius: 2px;
     height: auto;
-    font-family: "Lato", sans-serif; }
+    font-family: freight-sans-pro, sans-serif; }
     body .select2-container--default .select2-selection--single.select2--container--focus {
       box-shadow: 0 2px 2px rgba(35, 35, 35, 0.3); }
     body .select2-container--default .select2-selection--single .select2-selection__choice__remove {
@@ -4566,7 +4566,7 @@ body .select2-container--default {
     border: 1px solid #121212;
     border-radius: 2px;
     height: auto;
-    font-family: "Lato", sans-serif;
+    font-family: freight-sans-pro, sans-serif;
     padding: 3px 0 3px 0; }
     body .select2-container--default .select2-selection--multiple.select2--container--focus {
       box-shadow: 0 2px 2px rgba(35, 35, 35, 0.3); }
@@ -4667,12 +4667,12 @@ body .select2-container--default {
   background-color: #f6f6f6; }
 
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
-  background-color: #bf0e0e !important; }
+  background-color: #3778c1 !important; }
 
 /* CHECKBOXES
 ---------------- */
 .js-form-type-checkbox label {
-  font-family: "Lato", sans-serif;
+  font-family: freight-sans-pro, sans-serif;
   font-size: 1.6rem; }
 
 .js-form-type-checkbox input[type="checkbox"] {
@@ -4683,7 +4683,7 @@ body .select2-container--default {
     border-color: #121212;
     background: rgba(28, 88, 131, 0.25); }
   .js-form-type-checkbox input[type="checkbox"]:checked {
-    background: #0d609b; }
+    background: #3778c1; }
     .js-form-type-checkbox input[type="checkbox"]:checked:hover, .js-form-type-checkbox input[type="checkbox"]:checked:focus {
       background: rgba(28, 88, 131, 0.25); }
 
@@ -4700,7 +4700,7 @@ body .select2-container--default {
 h1 {
   line-height: 1.15;
   font-weight: 700;
-  font-family: "Montserrat", sans-serif;
+  font-family: mr-eaves-sans, sans-serif;
   margin: 0;
   font-feature-settings: "liga", "dlig";
   font-size: 32px; }
@@ -4714,7 +4714,7 @@ h1 {
 h2 {
   line-height: 1.15;
   font-weight: 700;
-  font-family: "Montserrat", sans-serif;
+  font-family: mr-eaves-sans, sans-serif;
   margin: 0;
   font-feature-settings: "liga", "dlig";
   font-size: 26px; }
@@ -4728,7 +4728,7 @@ h2 {
 h3 {
   line-height: 1.15;
   font-weight: 700;
-  font-family: "Montserrat", sans-serif;
+  font-family: mr-eaves-sans, sans-serif;
   margin: 0;
   font-feature-settings: "liga", "dlig";
   font-size: 23px; }
@@ -4739,7 +4739,7 @@ h3 {
 h4 {
   line-height: 1.15;
   font-weight: 700;
-  font-family: "Montserrat", sans-serif;
+  font-family: mr-eaves-sans, sans-serif;
   margin: 0;
   font-feature-settings: "liga", "dlig";
   font-size: 22px; }
@@ -4747,7 +4747,7 @@ h4 {
 h5 {
   line-height: 1.15;
   font-weight: 700;
-  font-family: "Montserrat", sans-serif;
+  font-family: mr-eaves-sans, sans-serif;
   margin: 0;
   font-feature-settings: "liga", "dlig";
   font-size: 20px; }
@@ -4755,7 +4755,7 @@ h5 {
 h6 {
   line-height: 1.15;
   font-weight: 700;
-  font-family: "Montserrat", sans-serif;
+  font-family: mr-eaves-sans, sans-serif;
   margin: 0;
   font-feature-settings: "liga", "dlig";
   font-size: 18px; }
@@ -4777,7 +4777,7 @@ body.adminimal.crane {
   color: #121212;
   margin: 0;
   font-size: 1.6rem;
-  font-family: "Lato", sans-serif;
+  font-family: freight-sans-pro, sans-serif;
   font-weight: 400;
   line-height: 1.4;
   letter-spacing: .02em; }
@@ -4810,6 +4810,136 @@ ol {
 /* ========================
   QUICKLINKS
 ========================== */
+nav#block-crane-quicklinks {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 80px;
+  padding-top: 120px; }
+  .role-administrator nav#block-crane-quicklinks {
+    top: 78px; }
+  nav#block-crane-quicklinks:after {
+    content: '';
+    display: block;
+    height: 100vw;
+    width: 80px;
+    background: #fcd105;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 998; }
+  nav#block-crane-quicklinks .contextual {
+    display: none; }
+  nav#block-crane-quicklinks ul:not(.contextual-links) {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .role-editor:not(.role-site_manager) nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .manager, .role-editor:not(.role-administrator) nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .manager {
+      display: none !important; }
+    .role-editor:not(.role-administrator) nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .admin, .role-site_manager:not(.role-administrator) nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .admin {
+      display: none !important; }
+    nav#block-crane-quicklinks ul:not(.contextual-links).root-menu ul {
+      position: absolute;
+      top: 8px;
+      left: -310px;
+      width: 240px;
+      z-index: 997;
+      background: #ebc304;
+      padding: 10px 0; }
+    nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 {
+      padding: 10px 0;
+      position: relative; }
+      nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a {
+        display: block;
+        width: 80px;
+        height: 66px;
+        position: relative;
+        z-index: 999;
+        color: #121212;
+        font-size: 9px;
+        font-family: mr-eaves-sans, sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        display: -ms-flexbox;
+        flex-direction: column;
+        -ms-flex-direction: column;
+        flex-wrap: nowrap;
+        -ms-flex-wrap: none;
+        justify-content: flex-end;
+        -ms-flex-pack: end;
+        align-items: center;
+        -ms-flex-align: center; }
+        nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a:hover {
+          opacity: .7; }
+        nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.profile {
+          background: url(../images/icons/profile.svg) no-repeat top center;
+          background-size: 48px 48px; }
+          nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.profile:focus {
+            background: url(../images/icons/profile-filled.svg) no-repeat top center;
+            background-size: 48px 48px; }
+        nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.content {
+          background: url(../images/icons/content.svg) no-repeat top center;
+          background-size: 48px 48px; }
+          nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.content:focus {
+            background: url(../images/icons/content-filled.svg) no-repeat top center;
+            background-size: 48px 48px; }
+        nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.structure {
+          background: url(../images/icons/structure.svg) no-repeat top center;
+          background-size: 48px 48px; }
+          nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.structure:focus {
+            background: url(../images/icons/structure-filled.svg) no-repeat top center;
+            background-size: 48px 48px; }
+        nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.users {
+          background: url(../images/icons/users.svg) no-repeat top center;
+          background-size: 48px 48px; }
+          nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.users:focus {
+            background: url(../images/icons/users-filled.svg) no-repeat top center;
+            background-size: 48px 48px; }
+        nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.services {
+          background: url(../images/icons/services.svg) no-repeat top center;
+          background-size: 48px 48px; }
+          nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.services:focus {
+            background: url(../images/icons/services-filled.svg) no-repeat top center;
+            background-size: 48px 48px; }
+        nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.reports {
+          background: url(../images/icons/reports.svg) no-repeat top center;
+          background-size: 48px 48px; }
+          nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.reports:focus {
+            background: url(../images/icons/reports-filled.svg) no-repeat top center;
+            background-size: 48px 48px; }
+      nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.profile {
+        background: url(../images/icons/profile-filled.svg) no-repeat top center;
+        background-size: 48px 48px; }
+      nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.content {
+        background: url(../images/icons/content-filled.svg) no-repeat top center;
+        background-size: 48px 48px; }
+      nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.structure {
+        background: url(../images/icons/structure-filled.svg) no-repeat top center;
+        background-size: 48px 48px; }
+      nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.users {
+        background: url(../images/icons/users-filled.svg) no-repeat top center;
+        background-size: 48px 48px; }
+      nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.services {
+        background: url(../images/icons/services-filled.svg) no-repeat top center;
+        background-size: 48px 48px; }
+      nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.reports {
+        background: url(../images/icons/reports-filled.svg) no-repeat top center;
+        background-size: 48px 48px; }
+    nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-2 > a {
+      padding: 6px 10px;
+      display: block;
+      color: #121212;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-family: mr-eaves-sans, sans-serif;
+      font-weight: 700;
+      font-size: 1.6rem; }
+      nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-2 > a:hover, nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-2 > a:focus {
+        background: #fbd20e; }
+
 /* ==============
 	 SUMMARY BLOCK
 ================== */
@@ -4819,7 +4949,7 @@ body.adminimal.crane .seven-details[open] > .seven-details__summary {
     color: #676767; }
 
 body.adminimal.crane .seven-details__summary {
-  font-family: "Montserrat", sans-serif;
+  font-family: mr-eaves-sans, sans-serif;
   color: #323b49; }
   body.adminimal.crane .seven-details__summary:hover, body.adminimal.crane .seven-details__summary:focus {
     color: #676767; }

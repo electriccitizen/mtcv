@@ -1,3 +1,167 @@
 /* ========================
   QUICKLINKS
 ========================== */
+nav#block-quicklinks{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	width: 80px;
+	padding-top: 120px;
+	.role-administrator &{
+		top: 78px;
+	}
+	&:after{
+		content: '';
+		display: block;
+		height: 100vw;
+		width: 80px;
+		background: $quickLinkBar;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 998;
+	}
+	body:not(.logged-in) &{
+		display: none;
+	}
+	.contextual{
+		display: none;
+	}
+	ul:not(.contextual-links){
+		@include listReset;
+		&.root-menu{
+			.manager{
+				.role-editor:not(.role-site_manager) &,.role-editor:not(.role-administrator) &{
+					display: none !important;
+				}
+			}
+			.admin{
+				.role-editor:not(.role-administrator) &,.role-site_manager:not(.role-administrator) &{
+					display: none !important;
+				}
+			}
+			ul{
+				position: absolute;
+				top: 8px;
+				left: -310px;
+				width: 240px;
+				z-index: 997;
+				background: $quickLinkDrawer;
+				padding: 10px 0;
+			}
+			.item-level-1{
+				padding: 10px 0;
+				position: relative;
+				& > a{
+					display: block;
+					width: 80px;
+					height: 66px;
+					position: relative;
+					z-index: 999;
+					color: $black;
+					font-size: 9px;
+					font-family: $headerFont;
+					text-transform: uppercase;
+					text-align: center;
+					text-decoration: none;
+					@include safeFlex(column,nowrap,end,center);
+					&:hover{
+						opacity: .7;
+					}
+					&.profile{
+						background: url(../images/icons/profile.svg) no-repeat top center;
+						background-size: 48px 48px;
+						&:focus{
+							background: url(../images/icons/profile-filled.svg) no-repeat top center;
+							background-size: 48px 48px;
+						}
+					}
+					&.content{
+						background: url(../images/icons/content.svg) no-repeat top center;
+						background-size: 48px 48px;
+						&:focus{
+							background: url(../images/icons/content-filled.svg) no-repeat top center;
+							background-size: 48px 48px;
+						}
+					}
+					&.structure{
+						background: url(../images/icons/structure.svg) no-repeat top center;
+						background-size: 48px 48px;
+						&:focus{
+							background: url(../images/icons/structure-filled.svg) no-repeat top center;
+							background-size: 48px 48px;
+						}
+					}
+					&.users{
+						background: url(../images/icons/users.svg) no-repeat top center;
+						background-size: 48px 48px;
+						&:focus{
+							background: url(../images/icons/users-filled.svg) no-repeat top center;
+							background-size: 48px 48px;
+						}
+					}
+					&.services{
+						background: url(../images/icons/services.svg) no-repeat top center;
+						background-size: 48px 48px;
+						&:focus{
+							background: url(../images/icons/services-filled.svg) no-repeat top center;
+							background-size: 48px 48px;
+						}
+					}
+					&.reports{
+						background: url(../images/icons/reports.svg) no-repeat top center;
+						background-size: 48px 48px;
+						&:focus{
+							background: url(../images/icons/reports-filled.svg) no-repeat top center;
+							background-size: 48px 48px;
+						}
+					}
+				}//end level 1 > a
+				&.expanded{
+					& > a{
+						&.profile{
+							background: url(../images/icons/profile-filled.svg) no-repeat top center;
+							background-size: 48px 48px;
+						}
+						&.content{
+							background: url(../images/icons/content-filled.svg) no-repeat top center;
+							background-size: 48px 48px;
+						}
+						&.structure{
+							background: url(../images/icons/structure-filled.svg) no-repeat top center;
+							background-size: 48px 48px;
+						}
+						&.users{
+							background: url(../images/icons/users-filled.svg) no-repeat top center;
+							background-size: 48px 48px;
+						}
+						&.services{
+							background: url(../images/icons/services-filled.svg) no-repeat top center;
+							background-size: 48px 48px;
+						}
+						&.reports{
+							background: url(../images/icons/reports-filled.svg) no-repeat top center;
+							background-size: 48px 48px;
+						}
+					}//end > a
+				}//end expanded
+			}//end level 1
+			.item-level-2{
+				& > a{
+					padding: 6px 10px;
+					display: block;
+					color: $black;
+					text-transform: uppercase;
+					text-decoration: none;
+					font-family: $headerFont;
+					font-weight: $heavy;
+					font-size: 1.6rem;
+					&:hover,&:focus{
+						background: $quickLinkDrawerHover;
+					}
+				}
+			}//end level 2
+		}//end root menu
+	}//end ul 
+}//end quicklinks nav

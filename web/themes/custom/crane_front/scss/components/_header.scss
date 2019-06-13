@@ -3,7 +3,6 @@
 ========================== */
 header{
 	& > div{
-		border-top: 6px solid $darkBlue;
 		background: $offWhite;
 		padding: 10px 0;
 	}
@@ -42,7 +41,7 @@ header{
 	}//end logo a
 	a.site-link{
 		font-size: 1.4rem;
-		color: $link;
+		color: darken($link, 5%);
 		text-transform: uppercase;
 		text-decoration: none;
 		&:hover,&:focus{

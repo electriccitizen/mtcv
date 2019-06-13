@@ -11,6 +11,14 @@ third_party_settings:
         destination: default
         url: ''
         external: ''
+      24:
+        destination: default
+        url: ''
+        external: ''
+      25:
+        destination: default
+        url: ''
+        external: ''
 name: 'Related need(s)'
 vid: related_issues
 description: 'These terms are used to associate resources with one or more related legal needs or life issues.'

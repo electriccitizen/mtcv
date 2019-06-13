@@ -39,6 +39,7 @@ $h6Sm: 18px;
 @mixin heading1{
 	@include headerGlobals;
 	font-size: $h1Sm;
+	font-weight: $xHeavy;
 	@include tab{
 		font-size: $h1Mid;
 	}
@@ -138,6 +139,7 @@ html,code{
 	font-size: $em-base;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-stroke: 0.45px rgba(0, 0, 0, 0.1);
 	font-kerning: normal;
 	font-synthesis: none;
 }

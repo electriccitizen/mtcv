@@ -42,6 +42,8 @@ body {
       box-sizing: inherit; }
   body .dialog-off-canvas-main-canvas > .layout-container {
     padding-top: 0; }
+  body.logged-in .dialog-off-canvas-main-canvas {
+    padding-left: 80px; }
 
 #block-crane-front-help {
   padding: 3rem 0;
@@ -105,7 +107,7 @@ body {
 ------------------ */
 .button {
   background-image: none;
-  background-color: #bf0e0e;
+  background-color: #3778c1;
   border: none;
   color: #ffffff;
   line-height: 1.15;
@@ -115,8 +117,8 @@ body {
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+  font-family: mr-eaves-sans, sans-serif;
+  font-weight: 800;
   font-size: 1.6rem;
   margin-bottom: 3rem; }
   .button:hover, .button:focus {
@@ -134,7 +136,7 @@ body {
     padding: 0;
     background: none; }
     .text-with-summary .button a, .text-long .button a {
-      background-color: #bf0e0e;
+      background-color: #3778c1;
       padding: 1.6rem 3rem;
       display: block;
       max-width: 260px;
@@ -155,7 +157,7 @@ body {
 
 .button-outline {
   background-image: none;
-  background-color: #bf0e0e;
+  background-color: #3778c1;
   border: none;
   color: #ffffff;
   line-height: 1.15;
@@ -165,13 +167,13 @@ body {
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+  font-family: mr-eaves-sans, sans-serif;
+  font-weight: 800;
   font-size: 1.6rem;
   margin-bottom: 3rem;
   background: transparent;
-  border: 1px solid #bf0e0e;
-  color: #bf0e0e; }
+  border: 1px solid #3778c1;
+  color: #3778c1; }
   .button-outline:hover, .button-outline:focus {
     color: #121212;
     background-color: #cccccc;
@@ -187,7 +189,7 @@ body {
     padding: 0;
     background: none; }
     .text-with-summary .button-outline a, .text-long .button-outline a {
-      background-color: #bf0e0e;
+      background-color: #3778c1;
       padding: 1.6rem 3rem;
       display: block;
       max-width: 260px;
@@ -224,10 +226,10 @@ body {
     width: auto; }
     .text-with-summary .button-outline a, .text-long .button-outline a {
       background: transparent;
-      border: 1px solid #bf0e0e;
+      border: 1px solid #3778c1;
       display: block;
       text-decoration: none;
-      color: #bf0e0e; }
+      color: #3778c1; }
       .text-with-summary .button-outline a:hover, .text-with-summary .button-outline a:focus, .text-long .button-outline a:hover, .text-long .button-outline a:focus {
         color: #121212;
         background-color: #cccccc;
@@ -249,7 +251,7 @@ body {
 ------------------ */
 input[type="submit"].button {
   background-image: none;
-  background-color: #bf0e0e;
+  background-color: #3778c1;
   border: none;
   color: #ffffff;
   line-height: 1.15;
@@ -259,11 +261,11 @@ input[type="submit"].button {
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+  font-family: mr-eaves-sans, sans-serif;
+  font-weight: 800;
   font-size: 1.6rem;
   margin-bottom: 3rem;
-  background: #323b49;
+  background: #3778c1;
   color: #ffffff;
   padding: 0 3rem;
   height: 43px; }
@@ -282,7 +284,7 @@ input[type="submit"].button {
     padding: 0;
     background: none; }
     .text-with-summary input[type="submit"].button a, .text-long input[type="submit"].button a {
-      background-color: #bf0e0e;
+      background-color: #3778c1;
       padding: 1.6rem 3rem;
       display: block;
       max-width: 260px;
@@ -309,8 +311,9 @@ input[type="submit"].button {
   width: 100%;
   margin-bottom: 3rem; }
   .form-item label {
-    font-family: "Montserrat", sans-serif;
-    font-size: 2rem;
+    font-family: mr-eaves-sans, sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
     color: #121212;
     display: block;
     margin-bottom: 0.5rem;
@@ -329,7 +332,7 @@ input[type="submit"].button {
 input.form-text {
   border: 2px solid #121212;
   font-size: 1.6rem;
-  font-family: "Lato", sans-serif;
+  font-family: freight-sans-pro, sans-serif;
   padding: 10px 6px 11px;
   width: 100%;
   line-height: 1; }
@@ -375,10 +378,11 @@ input + .description {
 h1 {
   line-height: 1.15;
   font-weight: 700;
-  font-family: "Montserrat", sans-serif;
+  font-family: mr-eaves-sans, sans-serif;
   margin: 0;
   font-feature-settings: "liga", "dlig";
-  font-size: 32px; }
+  font-size: 32px;
+  font-weight: 800; }
   @media (min-width: 760px) {
     h1 {
       font-size: 46px; } }
@@ -389,7 +393,7 @@ h1 {
 h2 {
   line-height: 1.15;
   font-weight: 700;
-  font-family: "Montserrat", sans-serif;
+  font-family: mr-eaves-sans, sans-serif;
   margin: 0;
   font-feature-settings: "liga", "dlig";
   font-size: 26px; }
@@ -403,7 +407,7 @@ h2 {
 h3 {
   line-height: 1.15;
   font-weight: 700;
-  font-family: "Montserrat", sans-serif;
+  font-family: mr-eaves-sans, sans-serif;
   margin: 0;
   font-feature-settings: "liga", "dlig";
   font-size: 23px; }
@@ -414,7 +418,7 @@ h3 {
 h4 {
   line-height: 1.15;
   font-weight: 700;
-  font-family: "Montserrat", sans-serif;
+  font-family: mr-eaves-sans, sans-serif;
   margin: 0;
   font-feature-settings: "liga", "dlig";
   font-size: 22px; }
@@ -422,7 +426,7 @@ h4 {
 h5 {
   line-height: 1.15;
   font-weight: 700;
-  font-family: "Montserrat", sans-serif;
+  font-family: mr-eaves-sans, sans-serif;
   margin: 0;
   font-feature-settings: "liga", "dlig";
   font-size: 20px; }
@@ -430,7 +434,7 @@ h5 {
 h6 {
   line-height: 1.15;
   font-weight: 700;
-  font-family: "Montserrat", sans-serif;
+  font-family: mr-eaves-sans, sans-serif;
   margin: 0;
   font-feature-settings: "liga", "dlig";
   font-size: 18px; }
@@ -444,6 +448,7 @@ html, code {
   font-size: 10px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-text-stroke: 0.45px rgba(0, 0, 0, 0.1);
   -webkit-font-kerning: normal;
   font-kerning: normal;
   font-synthesis: none; }
@@ -451,7 +456,7 @@ html, code {
 body {
   color: #121212;
   margin: 0;
-  font-family: "Lato", sans-serif;
+  font-family: freight-sans-pro, sans-serif;
   font-size: 1.8rem;
   line-height: 1.4;
   letter-spacing: .02em; }
@@ -462,7 +467,7 @@ p {
     margin-bottom: 3rem; }
 
 a {
-  color: #bf0e0e; }
+  color: #3778c1; }
   a:hover, a:focus {
     color: #676767; }
 
@@ -532,7 +537,6 @@ footer > div {
   HEADER
 ========================== */
 header > div {
-  border-top: 6px solid #323b49;
   background: #f6f6f6;
   padding: 10px 0; }
 
@@ -575,7 +579,7 @@ header > div {
         border-color: #121212; }
   .block-system-branding-block a.site-link {
     font-size: 1.4rem;
-    color: #bf0e0e;
+    color: #316cad;
     text-transform: uppercase;
     text-decoration: none; }
     .block-system-branding-block a.site-link:hover, .block-system-branding-block a.site-link:focus {
@@ -589,21 +593,158 @@ header > div {
   MAIN
 ========================== */
 main .layout-content > div {
-  min-height: calc(100vh - 140px);
+  min-height: calc(100vh - 134px);
   padding: 3rem 2rem;
   max-width: 1320px;
   margin-left: auto;
   margin-right: auto; }
   @media (min-width: 760px) {
     main .layout-content > div {
-      min-height: calc(100vh - 188px); } }
+      min-height: calc(100vh - 182px); } }
   @media (min-width: 980px) {
     main .layout-content > div {
       padding: 4rem 6rem; } }
+  .role-administrator main .layout-content > div {
+    min-height: calc(100vh - 212px); }
+    @media (min-width: 760px) {
+      .role-administrator main .layout-content > div {
+        min-height: calc(100vh - 262px); } }
 
 /* ========================
   QUICKLINKS
 ========================== */
+nav#block-quicklinks {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 80px;
+  padding-top: 120px; }
+  .role-administrator nav#block-quicklinks {
+    top: 78px; }
+  nav#block-quicklinks:after {
+    content: '';
+    display: block;
+    height: 100vw;
+    width: 80px;
+    background: #fcd105;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 998; }
+  body:not(.logged-in) nav#block-quicklinks {
+    display: none; }
+  nav#block-quicklinks .contextual {
+    display: none; }
+  nav#block-quicklinks ul:not(.contextual-links) {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .role-editor:not(.role-site_manager) nav#block-quicklinks ul:not(.contextual-links).root-menu .manager, .role-editor:not(.role-administrator) nav#block-quicklinks ul:not(.contextual-links).root-menu .manager {
+      display: none !important; }
+    .role-editor:not(.role-administrator) nav#block-quicklinks ul:not(.contextual-links).root-menu .admin, .role-site_manager:not(.role-administrator) nav#block-quicklinks ul:not(.contextual-links).root-menu .admin {
+      display: none !important; }
+    nav#block-quicklinks ul:not(.contextual-links).root-menu ul {
+      position: absolute;
+      top: 8px;
+      left: -310px;
+      width: 240px;
+      z-index: 997;
+      background: #ebc304;
+      padding: 10px 0; }
+    nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 {
+      padding: 10px 0;
+      position: relative; }
+      nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a {
+        display: block;
+        width: 80px;
+        height: 66px;
+        position: relative;
+        z-index: 999;
+        color: #121212;
+        font-size: 9px;
+        font-family: mr-eaves-sans, sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        display: -ms-flexbox;
+        flex-direction: column;
+        -ms-flex-direction: column;
+        flex-wrap: nowrap;
+        -ms-flex-wrap: none;
+        justify-content: flex-end;
+        -ms-flex-pack: end;
+        align-items: center;
+        -ms-flex-align: center; }
+        nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a:hover {
+          opacity: .7; }
+        nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.profile {
+          background: url(../images/icons/profile.svg) no-repeat top center;
+          background-size: 48px 48px; }
+          nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.profile:focus {
+            background: url(../images/icons/profile-filled.svg) no-repeat top center;
+            background-size: 48px 48px; }
+        nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.content {
+          background: url(../images/icons/content.svg) no-repeat top center;
+          background-size: 48px 48px; }
+          nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.content:focus {
+            background: url(../images/icons/content-filled.svg) no-repeat top center;
+            background-size: 48px 48px; }
+        nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.structure {
+          background: url(../images/icons/structure.svg) no-repeat top center;
+          background-size: 48px 48px; }
+          nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.structure:focus {
+            background: url(../images/icons/structure-filled.svg) no-repeat top center;
+            background-size: 48px 48px; }
+        nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.users {
+          background: url(../images/icons/users.svg) no-repeat top center;
+          background-size: 48px 48px; }
+          nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.users:focus {
+            background: url(../images/icons/users-filled.svg) no-repeat top center;
+            background-size: 48px 48px; }
+        nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.services {
+          background: url(../images/icons/services.svg) no-repeat top center;
+          background-size: 48px 48px; }
+          nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.services:focus {
+            background: url(../images/icons/services-filled.svg) no-repeat top center;
+            background-size: 48px 48px; }
+        nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.reports {
+          background: url(../images/icons/reports.svg) no-repeat top center;
+          background-size: 48px 48px; }
+          nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.reports:focus {
+            background: url(../images/icons/reports-filled.svg) no-repeat top center;
+            background-size: 48px 48px; }
+      nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.profile {
+        background: url(../images/icons/profile-filled.svg) no-repeat top center;
+        background-size: 48px 48px; }
+      nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.content {
+        background: url(../images/icons/content-filled.svg) no-repeat top center;
+        background-size: 48px 48px; }
+      nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.structure {
+        background: url(../images/icons/structure-filled.svg) no-repeat top center;
+        background-size: 48px 48px; }
+      nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.users {
+        background: url(../images/icons/users-filled.svg) no-repeat top center;
+        background-size: 48px 48px; }
+      nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.services {
+        background: url(../images/icons/services-filled.svg) no-repeat top center;
+        background-size: 48px 48px; }
+      nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.reports {
+        background: url(../images/icons/reports-filled.svg) no-repeat top center;
+        background-size: 48px 48px; }
+    nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-2 > a {
+      padding: 6px 10px;
+      display: block;
+      color: #121212;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-family: mr-eaves-sans, sans-serif;
+      font-weight: 700;
+      font-size: 1.6rem; }
+      nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-2 > a:hover, nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-2 > a:focus {
+        background: #fbd20e; }
+
 /* ========================
   USER LOGIN & PASSWORD
 ========================== */
@@ -635,7 +776,7 @@ main .layout-content > div {
       color: #767676;
       text-decoration: none; }
       .user-login-form .js-form-type-password .show-password:hover, .user-login-form .js-form-type-password .show-password:focus, #user-pass .js-form-type-password .show-password:hover, #user-pass .js-form-type-password .show-password:focus {
-        color: #bf0e0e; }
+        color: #3778c1; }
     .user-login-form .js-form-type-password input#edit-pass, #user-pass .js-form-type-password input#edit-pass {
       padding-right: 56px; }
     .user-login-form .js-form-type-password .description, #user-pass .js-form-type-password .description {
