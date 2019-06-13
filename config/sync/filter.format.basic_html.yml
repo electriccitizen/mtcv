@@ -14,32 +14,57 @@ filters:
     id: filter_html
     provider: filter
     status: true
-    weight: -10
+    weight: -49
     settings:
-      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <p> <br> <span> <img src alt height width data-entity-type data-entity-uuid data-align data-caption>'
+      allowed_html: '<a href hreflang class target id title><em> <strong> <cite> <blockquote cite> <code> <ul type class> <ol start type class> <li> <dl> <dt> <dd> <h2 id class> <h3 id class> <h4 id class> <h5 id class> <h6 id class> <p class> <br> <span class> <img srcset typeof src alt height width data-entity-type data-entity-uuid data-align data-caption> <u> <hr> <table> <caption> <figcaption> <picture> <source srcset media type> <tbody> <thead> <tfoot> <th> <td> <tr> <div id class data-*> <iframe src class title frameborder aria-describedby tabindex allowtransparency style width height> <drupal-entity data-*><article class data-*><small>'
       filter_html_help: false
       filter_html_nofollow: false
   filter_align:
     id: filter_align
     provider: filter
-    status: true
-    weight: 7
+    status: false
+    weight: -48
     settings: {  }
   filter_caption:
     id: filter_caption
     provider: filter
-    status: true
-    weight: 8
+    status: false
+    weight: -47
     settings: {  }
   filter_html_image_secure:
     id: filter_html_image_secure
     provider: filter
-    status: true
-    weight: 9
+    status: false
+    weight: -46
     settings: {  }
   editor_file_reference:
     id: editor_file_reference
     provider: editor
+    status: false
+    weight: -45
+    settings: {  }
+  filter_url:
+    id: filter_url
+    provider: filter
     status: true
-    weight: 11
+    weight: -50
+    settings:
+      filter_url_length: 72
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: false
+    weight: -43
+    settings: {  }
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: -42
+    settings: {  }
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: false
+    weight: -44
     settings: {  }

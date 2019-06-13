@@ -75,6 +75,7 @@ permissions:
   - 'switch shortcut sets'
   - 'update any media'
   - 'update media'
+  - 'use text format basic_html'
   - 'view all revisions'
   - 'view own unpublished content'
   - 'view page revisions'

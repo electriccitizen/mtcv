@@ -1,0 +1,47 @@
+uuid: 9e81acbc-ba6a-43db-bf2e-b8e2d240b44e
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: wysiwyg
+label: WYSIWYG
+description: ''
+attributes:
+  relationship:
+    id: relationship
+    weight: 0
+    settings: {  }
+  target:
+    id: target
+    weight: 0
+    settings:
+      widget_type: simple_checkbox
+  title:
+    id: title
+    weight: 0
+    settings:
+      automatic_title: false
+matchers:
+  da5c9e47-756c-4398-98c1-aa9dbce80e76:
+    uuid: da5c9e47-756c-4398-98c1-aa9dbce80e76
+    id: 'entity:node'
+    weight: 0
+    settings:
+      result_description: ''
+      bundles: {  }
+      group_by_bundle: true
+      include_unpublished: false
+  0b7caeb2-302b-4ad6-b457-63e788310e1e:
+    uuid: 0b7caeb2-302b-4ad6-b457-63e788310e1e
+    id: 'entity:file'
+    weight: 0
+    settings:
+      result_description: ''
+      bundles: null
+      group_by_bundle: null
+      images:
+        show_dimensions: false
+        show_thumbnail: false
+        thumbnail_image_style: null
