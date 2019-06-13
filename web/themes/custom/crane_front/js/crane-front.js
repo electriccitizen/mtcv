@@ -20,6 +20,6 @@ Drupal.behaviors.pageMenu = {
 
 		});
 	}
-}//end page menu function
+}//end quicklinks
 
 })(jQuery, Drupal);
