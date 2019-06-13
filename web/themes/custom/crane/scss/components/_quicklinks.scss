@@ -16,7 +16,7 @@ nav#block-crane-quicklinks{
 		display: block;
 		height: 100vw;
 		width: 80px;
-		background: $gold;
+		background: $quickLinkBar;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -44,7 +44,7 @@ nav#block-crane-quicklinks{
 				left: -310px;
 				width: 240px;
 				z-index: 997;
-				background: $darkGold;
+				background: $quickLinkDrawer;
 				padding: 10px 0;
 			}
 			.item-level-1{
@@ -155,7 +155,7 @@ nav#block-crane-quicklinks{
 					font-weight: $heavy;
 					font-size: 1.6rem;
 					&:hover,&:focus{
-						background: lighten($darkGold, 5%);
+						background: $quickLinkDrawerHover;
 					}
 				}
 			}//end level 2

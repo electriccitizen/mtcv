@@ -39,6 +39,7 @@ $h6Sm: 18px;
 @mixin heading1{
 	@include headerGlobals;
 	font-size: $h1Sm;
+	font-weight: $xHeavy;
 	@include tab{
 		font-size: $h1Mid;
 	}

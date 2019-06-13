@@ -78,6 +78,7 @@ input[type="submit"].button{
 	label{
 		font-family: $headerFont;
 		font-size: $formLabel;
+		font-weight: $heavy;
 		color: $black;
 		display: block;
 		margin-bottom: $spaceXs / 2;
