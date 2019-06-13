@@ -4,15 +4,21 @@
 
 main{
 	.layout-content > div{
-		@include calc(min-height, "100vh - 140px");
+		@include calc(min-height, "100vh - 134px");
 		padding: $spaceMd $siteMarginMobile;
 		max-width: $siteMaxWidth + 120px;
 		@include auto;
 		@include tab{
-			@include calc(min-height, "100vh - 188px");
+			@include calc(min-height, "100vh - 182px");
 		}
 		@include desk{
 			padding: $spaceLg $siteMarginDesk;
+		}
+		.role-administrator &{
+			@include calc(min-height, "100vh - 212px");
+			@include tab{
+				@include calc(min-height, "100vh - 262px");
+			}
 		}
 	}//end layout content div
 }//end main
