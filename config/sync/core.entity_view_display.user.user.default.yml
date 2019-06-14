@@ -9,58 +9,22 @@ dependencies:
   module:
     - image
     - layout_builder
-    - layout_discovery
     - user
     - views
+  theme:
+    - crane_front
 third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: true
     sections:
       -
-        layout_id: layout_onecol
+        layout_id: two_column_sidebar_left_tabs
         layout_settings: {  }
         components:
-          b6cbd12f-2c2f-41f2-9fb0-6102d5fe09d5:
-            uuid: b6cbd12f-2c2f-41f2-9fb0-6102d5fe09d5
-            region: content
-            configuration:
-              id: 'field_block:user:user:uid'
-              label: 'User ID'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: number_integer
-                settings:
-                  thousand_separator: ''
-                  prefix_suffix: true
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
-          f713f94d-d089-4804-967c-800171652b65:
-            uuid: f713f94d-d089-4804-967c-800171652b65
-            region: content
-            configuration:
-              id: 'field_block:user:user:name'
-              label: Name
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: string
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 1
           5abc39be-729e-4be4-b3e0-dbdde6106047:
             uuid: 5abc39be-729e-4be4-b3e0-dbdde6106047
-            region: content
+            region: first
             configuration:
               id: 'field_block:user:user:created'
               label: Created
@@ -78,14 +42,41 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 2
-        third_party_settings: {  }
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
+          b6cbd12f-2c2f-41f2-9fb0-6102d5fe09d5:
+            uuid: b6cbd12f-2c2f-41f2-9fb0-6102d5fe09d5
+            region: first
+            configuration:
+              id: 'field_block:user:user:uid'
+              label: 'User ID'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: number_integer
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          75dcebb9-c6c4-4b74-bea4-2f9706c0281d:
+            uuid: 75dcebb9-c6c4-4b74-bea4-2f9706c0281d
+            region: last
+            configuration:
+              id: 'views_block:user_dashboard-all_recents'
+              label: ''
+              provider: views
+              label_display: visible
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 1
           f1634350-abab-4a15-8461-9e3dc94e8b0d:
             uuid: f1634350-abab-4a15-8461-9e3dc94e8b0d
-            region: content
+            region: last
             configuration:
               id: 'views_block:user_dashboard-my_recents'
               label: ''
@@ -96,17 +87,22 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 0
-          75dcebb9-c6c4-4b74-bea4-2f9706c0281d:
-            uuid: 75dcebb9-c6c4-4b74-bea4-2f9706c0281d
-            region: content
+          f713f94d-d089-4804-967c-800171652b65:
+            uuid: f713f94d-d089-4804-967c-800171652b65
+            region: first
             configuration:
-              id: 'views_block:user_dashboard-all_recents'
-              label: ''
-              provider: views
-              label_display: visible
-              views_label: ''
-              items_per_page: none
-              context_mapping: {  }
+              id: 'field_block:user:user:name'
+              label: Name
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
             additional: {  }
             weight: 1
         third_party_settings: {  }

@@ -1,3 +1,40 @@
 /* ========================
   USER DASHBOARD
 ========================== */
+
+/* PROFILE INFORMATION
+------------------------- */
+.block-field-blockuseruseruid{
+	width: 250px;
+	.user-image{
+		width: 100%;
+		padding-bottom: 100%;
+		border-radius: 50%;
+	}
+	@include onlySmall{
+		margin-bottom: $spaceSm;
+		@include auto;
+	}
+	@include tab{
+		float: left;
+		margin-bottom: -$spaceMd;
+		position: relative;
+		top: -$spaceMd;
+	}
+}//END PROFILE
+
+
+/* CONTENT VIEWS
+-------------------- */
+.views-block.block-user-dashboard{
+	.view-content{
+		@include tab{
+			display: grid;
+			grid-template-columns: 48.5% 48.5%;
+			grid-column-gap: 3%;
+		}
+	}
+	.views-row{
+		@include cardItem;
+	}
+}

@@ -1,0 +1,61 @@
+/* ===============
+   Section Layouts
+=================== */
+
+/* LAYOUT BUILDER UI
+-------------------- */
+.layout-builder{
+	.layout-builder__region{
+		overflow: hidden;
+		margin-bottom: 2rem;
+		.draggable{
+			margin-bottom: $spaceLg;
+			max-height: 500px;
+			overflow: hidden;
+			min-height: 90px;
+			*{
+				word-break: break-all;
+			}
+		}
+	}
+}
+
+/* RENDERED LAYOUTS 
+-------------------- */
+.layout__region{
+	& > *{
+		margin-bottom: $elementSpace;
+	}
+}
+
+/* TWO COLUMN SIDEBAR LEFT TABS */
+$sideBar: 200px;
+.layout--twocol-sideleft-tabs{
+	width: 100%;
+	@include tab{
+		display: grid;
+		grid-template-columns: $sideBar 1fr;
+		grid-column-gap: 30px;
+	}
+	
+	.layout__region--first{
+		@include tab{
+			grid-area: 1 / 1 / 4 / 1;
+		}
+	}//end layout region second
+	.layout__region--content{
+		@include tab{
+			grid-area: 1 / 2 / 1 / 2;
+		}
+	}
+	.layout__region--tabs{
+		@include tab{
+			grid-area: 2 / 2 / 2 / 2;
+		}
+	}
+	.layout__region--last{
+		@include tab{
+			grid-area: 3 / 2 / 3 / 2;
+		}
+	}
+}//end layout-twocol-sideleft

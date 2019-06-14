@@ -12,9 +12,11 @@ header{
 ----------------- */
 .block-system-branding-block{
 	width: 100%;
-	max-width: $siteMaxWidth + 120px;
-	padding-left: $siteMarginMobile;
-	padding-right: $siteMarginMobile;
+	body:not(.logged-in.path-user) &{
+		max-width: $siteMaxWidth + 120px;
+		padding-left: $siteMarginMobile;
+		padding-right: $siteMarginMobile;
+	}
 	@include safeFlex(row,nowrap,justify,center);
 	@include auto;
 	@include desk{

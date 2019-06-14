@@ -5,9 +5,11 @@
 main{
 	.layout-content > div{
 		@include calc(min-height, "100vh - 134px");
-		padding: $spaceMd $siteMarginMobile;
-		max-width: $siteMaxWidth + 120px;
-		@include auto;
+		body:not(.logged-in.path-user) &{
+			padding: $spaceMd $siteMarginMobile;
+			max-width: $siteMaxWidth + 120px;
+			@include auto;
+		}
 		body:not(.role-administrator) &{
 			@include calc(min-height, "100vh - 184px");
 			@include smallTab{
@@ -21,7 +23,9 @@ main{
 			@include calc(min-height, "100vh - 182px");
 		}
 		@include desk{
-			padding: $spaceLg $siteMarginDesk;
+			body:not(.logged-in.path-user) &{
+				padding: $spaceLg $siteMarginDesk;
+			}
 		}
 		.role-administrator &{
 			@include calc(min-height, "100vh - 212px");
@@ -30,4 +34,5 @@ main{
 			}
 		}
 	}//end layout content div
+
 }//end main

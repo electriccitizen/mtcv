@@ -110,6 +110,50 @@ body {
 .messages__item {
   list-style-image: none; }
 
+/* ===============
+   Section Layouts
+=================== */
+/* LAYOUT BUILDER UI
+-------------------- */
+.layout-builder .layout-builder__region {
+  overflow: hidden;
+  margin-bottom: 2rem; }
+  .layout-builder .layout-builder__region .draggable {
+    margin-bottom: 4rem;
+    max-height: 500px;
+    overflow: hidden;
+    min-height: 90px; }
+    .layout-builder .layout-builder__region .draggable * {
+      word-break: break-all; }
+
+/* RENDERED LAYOUTS 
+-------------------- */
+.layout__region > * {
+  margin-bottom: 3rem; }
+
+/* TWO COLUMN SIDEBAR LEFT TABS */
+.layout--twocol-sideleft-tabs {
+  width: 100%; }
+  @media (min-width: 760px) {
+    .layout--twocol-sideleft-tabs {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: 200px 1fr;
+      grid-template-columns: 200px 1fr;
+      grid-column-gap: 30px; } }
+  @media (min-width: 760px) {
+    .layout--twocol-sideleft-tabs .layout__region--first {
+      grid-area: 1 / 1 / 4 / 1; } }
+  @media (min-width: 760px) {
+    .layout--twocol-sideleft-tabs .layout__region--content {
+      grid-area: 1 / 2 / 1 / 2; } }
+  @media (min-width: 760px) {
+    .layout--twocol-sideleft-tabs .layout__region--tabs {
+      grid-area: 2 / 2 / 2 / 2; } }
+  @media (min-width: 760px) {
+    .layout--twocol-sideleft-tabs .layout__region--last {
+      grid-area: 3 / 2 / 3 / 2; } }
+
 /* ========================
   TYPOGRAPHY
 ========================== */
@@ -554,9 +598,6 @@ header > div {
 ----------------- */
 .block-system-branding-block {
   width: 100%;
-  max-width: 1320px;
-  padding-left: 2rem;
-  padding-right: 2rem;
   display: flex;
   display: -ms-flexbox;
   flex-direction: row;
@@ -569,6 +610,10 @@ header > div {
   -ms-flex-align: center;
   margin-left: auto;
   margin-right: auto; }
+  body:not(.logged-in.path-user) .block-system-branding-block {
+    max-width: 1320px;
+    padding-left: 2rem;
+    padding-right: 2rem; }
   @media (min-width: 976px) {
     .block-system-branding-block {
       padding-left: 6rem;
@@ -603,11 +648,12 @@ header > div {
   MAIN
 ========================== */
 main .layout-content > div {
-  min-height: calc(100vh - 134px);
-  padding: 3rem 2rem;
-  max-width: 1320px;
-  margin-left: auto;
-  margin-right: auto; }
+  min-height: calc(100vh - 134px); }
+  body:not(.logged-in.path-user) main .layout-content > div {
+    padding: 3rem 2rem;
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto; }
   body:not(.role-administrator) main .layout-content > div {
     min-height: calc(100vh - 184px); }
     @media (min-width: 600px) {
@@ -620,7 +666,7 @@ main .layout-content > div {
     main .layout-content > div {
       min-height: calc(100vh - 182px); } }
   @media (min-width: 976px) {
-    main .layout-content > div {
+    body:not(.logged-in.path-user) main .layout-content > div {
       padding: 4rem 6rem; } }
   .role-administrator main .layout-content > div {
     min-height: calc(100vh - 212px); }
@@ -938,5 +984,42 @@ nav#block-quicklinks {
 /* ========================
   USER DASHBOARD
 ========================== */
+/* PROFILE INFORMATION
+------------------------- */
+.block-field-blockuseruseruid {
+  width: 250px; }
+  .block-field-blockuseruseruid .user-image {
+    width: 100%;
+    padding-bottom: 100%;
+    border-radius: 50%; }
+  @media (max-width: 759px) {
+    .block-field-blockuseruseruid {
+      margin-bottom: 2rem;
+      margin-left: auto;
+      margin-right: auto; } }
+  @media (min-width: 760px) {
+    .block-field-blockuseruseruid {
+      float: left;
+      margin-bottom: -3rem;
+      position: relative;
+      top: -3rem; } }
+
+/* CONTENT VIEWS
+-------------------- */
+@media (min-width: 760px) {
+  .views-block.block-user-dashboard .view-content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 48.5% 48.5%;
+    grid-template-columns: 48.5% 48.5%;
+    grid-column-gap: 3%; } }
+
+.views-block.block-user-dashboard .views-row {
+  background: #f6f6f6;
+  border-radius: 4px;
+  box-shadow: 1px 1px 3px rgba(35, 35, 35, 0.1);
+  border: 1px solid #cccccc;
+  padding: 20px 30px;
+  margin-bottom: 4rem; }
 
 /*# sourceMappingURL=crane-front.css.map */
