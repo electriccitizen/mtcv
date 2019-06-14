@@ -12,6 +12,7 @@ global:
     - core/drupalSettings
     - core/jquery
     - core/jquery.once
+    - core/underscore
 fonts:
   version: 1.0
   css:

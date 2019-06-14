@@ -7,10 +7,22 @@ body.adminimal.crane{
 		box-sizing: border-box;
 	}
 	.dialog-off-canvas-main-canvas{
-		padding-left: 80px;
 		width: 100%;
 		box-sizing: border-box;
 		overflow-x: hidden;
+		padding-top: 50px;
+		@include smallTab{
+			padding-top: 0;
+			padding-left: 80px;
+		}
+	}
+	&.role-administrator{
+		.dialog-off-canvas-main-canvas{
+			padding-left: 0;
+			@include desk{
+				padding-left: 80px;
+			}
+		}
 	}
 	.visually-hidden{
 		max-width: 1px;

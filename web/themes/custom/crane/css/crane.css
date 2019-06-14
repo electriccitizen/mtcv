@@ -4267,10 +4267,19 @@ body.adminimal.crane {
   body.adminimal.crane > div {
     box-sizing: border-box; }
   body.adminimal.crane .dialog-off-canvas-main-canvas {
-    padding-left: 80px;
     width: 100%;
     box-sizing: border-box;
-    overflow-x: hidden; }
+    overflow-x: hidden;
+    padding-top: 50px; }
+    @media (min-width: 600px) {
+      body.adminimal.crane .dialog-off-canvas-main-canvas {
+        padding-top: 0;
+        padding-left: 80px; } }
+  body.adminimal.crane.role-administrator .dialog-off-canvas-main-canvas {
+    padding-left: 0; }
+    @media (min-width: 975px) {
+      body.adminimal.crane.role-administrator .dialog-off-canvas-main-canvas {
+        padding-left: 80px; } }
   body.adminimal.crane .visually-hidden {
     max-width: 1px; }
 
@@ -4814,48 +4823,83 @@ nav#block-crane-quicklinks {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999;
-  width: 80px;
-  padding-top: 120px; }
+  z-index: 499;
+  width: 100%; }
+  @media (min-width: 600px) {
+    nav#block-crane-quicklinks {
+      padding-top: 120px;
+      width: 80px; } }
   .role-administrator nav#block-crane-quicklinks {
-    top: 78px; }
+    display: none; }
+    @media (min-width: 975px) {
+      .role-administrator nav#block-crane-quicklinks {
+        padding-top: 198px;
+        display: block; } }
   nav#block-crane-quicklinks:after {
     content: '';
     display: block;
-    height: 100vw;
-    width: 80px;
+    width: 100%;
+    height: 50px;
     background: #fcd105;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 998; }
+    z-index: 498; }
+    @media (min-width: 600px) {
+      nav#block-crane-quicklinks:after {
+        height: 100vh;
+        width: 80px; } }
   nav#block-crane-quicklinks .contextual {
     display: none; }
   nav#block-crane-quicklinks ul:not(.contextual-links) {
     list-style: none;
     margin: 0;
     padding: 0; }
+    nav#block-crane-quicklinks ul:not(.contextual-links) li {
+      list-style-type: none; }
+    @media (max-width: 599px) {
+      nav#block-crane-quicklinks ul:not(.contextual-links).root-menu {
+        display: flex;
+        display: -ms-flexbox;
+        flex-direction: row;
+        -ms-flex-direction: row;
+        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        justify-content: center;
+        -ms-flex-pack: center;
+        align-items: flex-start;
+        -ms-flex-align: start; } }
     .role-editor:not(.role-site_manager) nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .manager, .role-editor:not(.role-administrator) nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .manager {
       display: none !important; }
     .role-editor:not(.role-administrator) nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .admin, .role-site_manager:not(.role-administrator) nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .admin {
       display: none !important; }
     nav#block-crane-quicklinks ul:not(.contextual-links).root-menu ul {
       position: absolute;
-      top: 8px;
-      left: -310px;
-      width: 240px;
-      z-index: 997;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      z-index: 497;
       background: #ebc304;
-      padding: 10px 0; }
-    nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 {
       padding: 10px 0;
-      position: relative; }
+      display: none; }
+      @media (min-width: 600px) {
+        nav#block-crane-quicklinks ul:not(.contextual-links).root-menu ul {
+          top: 8px;
+          left: -310px;
+          width: 240px;
+          display: block !important; } }
+    nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 {
+      padding: 0 4px; }
+      @media (min-width: 600px) {
+        nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 {
+          padding: 10px 0;
+          position: relative; } }
       nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a {
         display: block;
-        width: 80px;
-        height: 66px;
         position: relative;
-        z-index: 999;
+        z-index: 499;
+        width: 50px;
+        height: 50px;
         color: #121212;
         font-size: 9px;
         font-family: mr-eaves-sans, sans-serif;
@@ -4871,63 +4915,159 @@ nav#block-crane-quicklinks {
         justify-content: flex-end;
         -ms-flex-pack: end;
         align-items: center;
-        -ms-flex-align: center; }
+        -ms-flex-align: center;
+        text-indent: -9000px; }
+        @media (min-width: 600px) {
+          nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a {
+            width: 80px;
+            height: 66px;
+            text-indent: 0; } }
         nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a:hover {
           opacity: .7; }
         nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.profile {
-          background: url(../images/icons/profile.svg) no-repeat top center;
-          background-size: 48px 48px; }
+          background: url(../images/icons/profile.svg) no-repeat;
+          background-size: 36px 36px;
+          background-position: center; }
+          @media (min-width: 600px) {
+            nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.profile {
+              background-size: 48px 48px;
+              background-position: top center; } }
           nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.profile:focus {
-            background: url(../images/icons/profile-filled.svg) no-repeat top center;
-            background-size: 48px 48px; }
+            background: url(../images/icons/profile-filled.svg) no-repeat;
+            background-size: 36px 36px;
+            background-position: center; }
+            @media (min-width: 600px) {
+              nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.profile:focus {
+                background-size: 48px 48px;
+                background-position: top center; } }
         nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.content {
-          background: url(../images/icons/content.svg) no-repeat top center;
-          background-size: 48px 48px; }
+          background: url(../images/icons/content.svg) no-repeat;
+          background-size: 36px 36px;
+          background-position: center; }
+          @media (min-width: 600px) {
+            nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.content {
+              background-size: 48px 48px;
+              background-position: top center; } }
           nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.content:focus {
-            background: url(../images/icons/content-filled.svg) no-repeat top center;
-            background-size: 48px 48px; }
+            background: url(../images/icons/content-filled.svg) no-repeat;
+            background-size: 36px 36px;
+            background-position: center; }
+            @media (min-width: 600px) {
+              nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.content:focus {
+                background-size: 48px 48px;
+                background-position: top center; } }
         nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.structure {
-          background: url(../images/icons/structure.svg) no-repeat top center;
-          background-size: 48px 48px; }
+          background: url(../images/icons/structure.svg) no-repeat;
+          background-size: 36px 36px;
+          background-position: center; }
+          @media (min-width: 600px) {
+            nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.structure {
+              background-size: 48px 48px;
+              background-position: top center; } }
           nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.structure:focus {
-            background: url(../images/icons/structure-filled.svg) no-repeat top center;
-            background-size: 48px 48px; }
+            background: url(../images/icons/structure-filled.svg) no-repeat;
+            background-size: 36px 36px;
+            background-position: center; }
+            @media (min-width: 600px) {
+              nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.structure:focus {
+                background-size: 48px 48px;
+                background-position: top center; } }
         nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.users {
-          background: url(../images/icons/users.svg) no-repeat top center;
-          background-size: 48px 48px; }
+          background: url(../images/icons/users.svg) no-repeat;
+          background-size: 36px 36px;
+          background-position: center; }
+          @media (min-width: 600px) {
+            nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.users {
+              background-size: 48px 48px;
+              background-position: top center; } }
           nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.users:focus {
-            background: url(../images/icons/users-filled.svg) no-repeat top center;
-            background-size: 48px 48px; }
+            background: url(../images/icons/users-filled.svg) no-repeat;
+            background-size: 36px 36px;
+            background-position: center; }
+            @media (min-width: 600px) {
+              nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.users:focus {
+                background-size: 48px 48px;
+                background-position: top center; } }
         nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.services {
-          background: url(../images/icons/services.svg) no-repeat top center;
-          background-size: 48px 48px; }
+          background: url(../images/icons/services.svg) no-repeat;
+          background-size: 36px 36px;
+          background-position: center; }
+          @media (min-width: 600px) {
+            nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.services {
+              background-size: 48px 48px;
+              background-position: top center; } }
           nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.services:focus {
-            background: url(../images/icons/services-filled.svg) no-repeat top center;
-            background-size: 48px 48px; }
+            background: url(../images/icons/services-filled.svg) no-repeat;
+            background-size: 36px 36px;
+            background-position: center; }
+            @media (min-width: 600px) {
+              nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.services:focus {
+                background-size: 48px 48px;
+                background-position: top center; } }
         nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.reports {
-          background: url(../images/icons/reports.svg) no-repeat top center;
-          background-size: 48px 48px; }
+          background: url(../images/icons/reports.svg) no-repeat;
+          background-size: 36px 36px;
+          background-position: center; }
+          @media (min-width: 600px) {
+            nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.reports {
+              background-size: 48px 48px;
+              background-position: top center; } }
           nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.reports:focus {
-            background: url(../images/icons/reports-filled.svg) no-repeat top center;
-            background-size: 48px 48px; }
+            background: url(../images/icons/reports-filled.svg) no-repeat;
+            background-size: 36px 36px;
+            background-position: center; }
+            @media (min-width: 600px) {
+              nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.reports:focus {
+                background-size: 48px 48px;
+                background-position: top center; } }
       nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.profile {
-        background: url(../images/icons/profile-filled.svg) no-repeat top center;
-        background-size: 48px 48px; }
+        background: url(../images/icons/profile-filled.svg) no-repeat;
+        background-size: 36px 36px;
+        background-position: center; }
+        @media (min-width: 600px) {
+          nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.profile {
+            background-size: 48px 48px;
+            background-position: top center; } }
       nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.content {
-        background: url(../images/icons/content-filled.svg) no-repeat top center;
-        background-size: 48px 48px; }
+        background: url(../images/icons/content-filled.svg) no-repeat;
+        background-size: 36px 36px;
+        background-position: center; }
+        @media (min-width: 600px) {
+          nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.content {
+            background-size: 48px 48px;
+            background-position: top center; } }
       nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.structure {
-        background: url(../images/icons/structure-filled.svg) no-repeat top center;
-        background-size: 48px 48px; }
+        background: url(../images/icons/structure-filled.svg) no-repeat;
+        background-size: 36px 36px;
+        background-position: center; }
+        @media (min-width: 600px) {
+          nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.structure {
+            background-size: 48px 48px;
+            background-position: top center; } }
       nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.users {
-        background: url(../images/icons/users-filled.svg) no-repeat top center;
-        background-size: 48px 48px; }
+        background: url(../images/icons/users-filled.svg) no-repeat;
+        background-size: 36px 36px;
+        background-position: center; }
+        @media (min-width: 600px) {
+          nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.users {
+            background-size: 48px 48px;
+            background-position: top center; } }
       nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.services {
-        background: url(../images/icons/services-filled.svg) no-repeat top center;
-        background-size: 48px 48px; }
+        background: url(../images/icons/services-filled.svg) no-repeat;
+        background-size: 36px 36px;
+        background-position: center; }
+        @media (min-width: 600px) {
+          nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.services {
+            background-size: 48px 48px;
+            background-position: top center; } }
       nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.reports {
-        background: url(../images/icons/reports-filled.svg) no-repeat top center;
-        background-size: 48px 48px; }
+        background: url(../images/icons/reports-filled.svg) no-repeat;
+        background-size: 36px 36px;
+        background-position: center; }
+        @media (min-width: 600px) {
+          nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.reports {
+            background-size: 48px 48px;
+            background-position: top center; } }
     nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-2 > a {
       padding: 6px 10px;
       display: block;
