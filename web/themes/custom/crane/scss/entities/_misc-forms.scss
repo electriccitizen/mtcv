@@ -1,0 +1,70 @@
+/* ========================
+  MISC FORMS
+========================== */
+.adminimal.crane{
+
+	/* ADD FIELD
+	----------------- */
+	.field-ui-field-storage-add-form{
+		.select2-container--default{
+			min-width: 200px;
+		}
+	}
+
+	.js-form-type-textfield{
+			max-width: 240px;
+	}
+
+	/* DELETE CONFIG
+	-------------------- */
+	.field-config-delete-form.field-config-confirm-form{
+		.seven-details__wrapper{
+			.seven-details__description{
+				margin-bottom: $spaceMd;
+			}
+			h3{
+				@include heading5;
+			}
+		}
+	}
+
+	/* VIEWS
+	--------------------- */
+	.view-preview-form{
+		.js-form-item-live-preview{
+			display: none;
+		}
+	}
+	.views-ui-display-tab-bucket{
+		margin-bottom: $spaceXs;
+		padding-bottom: $spaceXs;
+	}
+	.views-ui-display-tab-bucket .views-display-setting,.views-displays .tabs.secondary a,.views-ui-display-tab-bucket__title{
+		font-size: $baseSize - .2rem;
+	}
+	.views-edit-view .dropbutton-wrapper .dropbutton .dropbutton-action > *{
+		font-size: $baseSize - .4rem;
+	}
+	.views-admin .icon{
+		top: 3px;
+		margin-right: .25em;
+	}
+	.views-displays .tabs .action-list{
+		li{
+			background: $offWhite;
+			&:first-child{
+				border-radius: 0;
+				padding: 10px 9px 2px;
+			}
+			&:last-child{
+				border-radius: 0;
+				padding: 2px 9px 10px;
+			}
+		}
+		input.form-submit.button{
+			display: block;
+			text-align: left;
+		}
+	}
+
+}//end crane

@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.resource.field_related_category
     - field.field.node.resource.field_related_issue
     - field.field.node.resource.field_screenshot
+    - field.field.node.resource.field_summary
     - field.field.node.resource.field_url
     - node.type.resource
   module:
@@ -68,6 +69,13 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
+  field_summary:
+    weight: 109
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
     region: content
   field_url:
     weight: 102

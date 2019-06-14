@@ -85,22 +85,35 @@
 //button class
 .adminimal.crane .button {
 	@include button;
+	&.js-hide{
+		display: none;
+	}
 	&.button--small{
 		background: transparent;
 		border: 1px solid $primaryButtonBack;
 		color: $baseText;
 		font-weight: $regular;
 		font-size: 1.2rem;
+		border-radius: 2px;
+		&.button--small-override{
+			font-size: 1.8rem;
+			border-width: 2px;
+			font-weight: $heavy;
+			margin-bottom: $spaceSm;
+			border-radius: 4px;
+		}
 		&:hover,&:focus{
 			background: $buttonBackHover;
+			border-color: $buttonBackHover;
 			color: $buttonTextHover;
 		}
 		&:active{
 			background: $buttonBackActive;
+			border-color: $buttonBackActive;
 			color: $buttonTextActive;
 		}
 	}
-	&[data-drupal-selector="edit-cancel"],&.button--danger{
+	&[data-drupal-selector="edit-cancel"],&.button--danger,&[data-drupal-selector="edit-actions-cancel"]{
 		@include resetButton;
 	}
 }
