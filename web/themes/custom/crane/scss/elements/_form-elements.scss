@@ -144,6 +144,12 @@ body .select2-container{
 	margin-bottom: 0;
 }
 
+body.adminimal.crane{
+	select{
+		font-size: $baseSize;
+	}
+}
+
 /* SINGLE SELECT 2
 ----------------- */
 body .select2-container--default{
@@ -295,3 +301,43 @@ body .select2-container--default{
 		}
 	}
 }
+
+/* SEPARATORS
+---------------- */
+.form--inline.form-wrapper .form-item-separator{
+	margin: .5em 0 .25em;
+}
+
+
+/* ================
+  SPECIFIC FORMS
+=================== */
+
+body{
+
+	/* ADD FIELD
+	----------------- */
+	.field-ui-field-storage-add-form{
+		.select2-container--default{
+			min-width: 200px;
+		}
+	}
+
+	.js-form-type-textfield{
+			max-width: 240px;
+	}
+
+	/* DELETE CONFIG
+	-------------------- */
+	.field-config-delete-form.field-config-confirm-form{
+		.seven-details__wrapper{
+			.seven-details__description{
+				margin-bottom: $spaceMd;
+			}
+			h3{
+				@include heading5;
+			}
+		}
+	}
+
+}//end body

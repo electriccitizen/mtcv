@@ -5,22 +5,33 @@ nav#block-quicklinks{
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 999;
-	width: 80px;
-	padding-top: 120px;
+	z-index: 499;
+	width: 100%;
+	@include smallTab{
+		padding-top: 120px;
+		width: 80px;
+	}
 	.role-administrator &{
-		top: 78px;
+		display: none;
+		@include desk{
+			display: block;
+			padding-top: 198px;
+		}
 	}
 	&:after{
 		content: '';
 		display: block;
-		height: 100vw;
-		width: 80px;
+		height: 50px;
+		width: 100%;
 		background: $quickLinkBar;
 		position: absolute;
 		top: 0;
 		left: 0;
-		z-index: 998;
+		z-index: 498;
+		@include smallTab{
+			height: 100vh;
+			width: 80px;
+		}
 	}
 	body:not(.logged-in) &{
 		display: none;
@@ -31,6 +42,9 @@ nav#block-quicklinks{
 	ul:not(.contextual-links){
 		@include listReset;
 		&.root-menu{
+			@include onlyPhone{
+				@include safeFlex(row,wrap,center,start);
+			}
 			.manager{
 				.role-editor:not(.role-site_manager) &,.role-editor:not(.role-administrator) &{
 					display: none !important;
@@ -43,22 +57,32 @@ nav#block-quicklinks{
 			}
 			ul{
 				position: absolute;
-				top: 8px;
-				left: -310px;
-				width: 240px;
-				z-index: 997;
+				top: 50px;
+				left: 0;
+				width: 100%;
+				z-index: 497;
 				background: $quickLinkDrawer;
 				padding: 10px 0;
+				display: none;
+				@include smallTab{
+					top: 8px;
+					left: -310px;
+					width: 240px;
+					display: block !important;
+				}
 			}
 			.item-level-1{
-				padding: 10px 0;
-				position: relative;
+				padding: 0 4px;
+				@include smallTab{
+					padding: 10px 0;
+					position: relative;
+				}
 				& > a{
 					display: block;
-					width: 80px;
-					height: 66px;
+					width: 50px;
+					height: 50px;
 					position: relative;
-					z-index: 999;
+					z-index: 499;
 					color: $black;
 					font-size: 9px;
 					font-family: $headerFont;
@@ -66,83 +90,179 @@ nav#block-quicklinks{
 					text-align: center;
 					text-decoration: none;
 					@include safeFlex(column,nowrap,end,center);
+					text-indent: -9000px;
+					@include smallTab{
+						width: 80px;
+						height: 66px;
+						text-indent: 0;
+					}
 					&:hover{
 						opacity: .7;
 					}
 					&.profile{
-						background: url(../images/icons/profile.svg) no-repeat top center;
-						background-size: 48px 48px;
-						&:focus{
-							background: url(../images/icons/profile-filled.svg) no-repeat top center;
+						background: url(../images/icons/profile.svg) no-repeat;
+						background-size: 36px 36px;
+						background-position: center;
+						@include smallTab{
 							background-size: 48px 48px;
+							background-position: top center;
+						}
+						&:focus{
+							background: url(../images/icons/profile-filled.svg) no-repeat;
+							background-size: 36px 36px;
+							background-position: center;
+							@include smallTab{
+								background-size: 48px 48px;
+								background-position: top center;
+							}
 						}
 					}
 					&.content{
-						background: url(../images/icons/content.svg) no-repeat top center;
-						background-size: 48px 48px;
-						&:focus{
-							background: url(../images/icons/content-filled.svg) no-repeat top center;
+						background: url(../images/icons/content.svg) no-repeat;
+						background-size: 36px 36px;
+						background-position: center;
+						@include smallTab{
 							background-size: 48px 48px;
+							background-position: top center;
+						}
+						&:focus{
+							background: url(../images/icons/content-filled.svg) no-repeat;
+							background-size: 36px 36px;
+							background-position: center;
+							@include smallTab{
+								background-size: 48px 48px;
+								background-position: top center;
+							}
 						}
 					}
 					&.structure{
-						background: url(../images/icons/structure.svg) no-repeat top center;
-						background-size: 48px 48px;
-						&:focus{
-							background: url(../images/icons/structure-filled.svg) no-repeat top center;
+						background: url(../images/icons/structure.svg) no-repeat;
+						background-size: 36px 36px;
+						background-position: center;
+						@include smallTab{
 							background-size: 48px 48px;
+							background-position: top center;
+						}
+						&:focus{
+							background: url(../images/icons/structure-filled.svg) no-repeat;
+							background-size: 36px 36px;
+							background-position: center;
+							@include smallTab{
+								background-size: 48px 48px;
+								background-position: top center;
+							}
 						}
 					}
 					&.users{
-						background: url(../images/icons/users.svg) no-repeat top center;
-						background-size: 48px 48px;
-						&:focus{
-							background: url(../images/icons/users-filled.svg) no-repeat top center;
+						background: url(../images/icons/users.svg) no-repeat;
+						background-size: 36px 36px;
+						background-position: center;
+						@include smallTab{
 							background-size: 48px 48px;
+							background-position: top center;
+						}
+						&:focus{
+							background: url(../images/icons/users-filled.svg) no-repeat;
+							background-size: 36px 36px;
+							background-position: center;
+							@include smallTab{
+								background-size: 48px 48px;
+								background-position: top center;
+							}
 						}
 					}
 					&.services{
-						background: url(../images/icons/services.svg) no-repeat top center;
-						background-size: 48px 48px;
-						&:focus{
-							background: url(../images/icons/services-filled.svg) no-repeat top center;
+						background: url(../images/icons/services.svg) no-repeat;
+						background-size: 36px 36px;
+						background-position: center;
+						@include smallTab{
 							background-size: 48px 48px;
+							background-position: top center;
+						}
+						&:focus{
+							background: url(../images/icons/services-filled.svg) no-repeat;
+							background-size: 36px 36px;
+							background-position: center;
+							@include smallTab{
+								background-size: 48px 48px;
+								background-position: top center;
+							}
 						}
 					}
 					&.reports{
-						background: url(../images/icons/reports.svg) no-repeat top center;
-						background-size: 48px 48px;
-						&:focus{
-							background: url(../images/icons/reports-filled.svg) no-repeat top center;
+						background: url(../images/icons/reports.svg) no-repeat;
+						background-size: 36px 36px;
+						background-position: center;
+						@include smallTab{
 							background-size: 48px 48px;
+							background-position: top center;
+						}
+						&:focus{
+							background: url(../images/icons/reports-filled.svg) no-repeat;
+							background-size: 36px 36px;
+							background-position: center;
+							@include smallTab{
+								background-size: 48px 48px;
+								background-position: top center;
+							}
 						}
 					}
 				}//end level 1 > a
 				&.expanded{
 					& > a{
 						&.profile{
-							background: url(../images/icons/profile-filled.svg) no-repeat top center;
-							background-size: 48px 48px;
+							background: url(../images/icons/profile-filled.svg) no-repeat;
+							background-size: 36px 36px;
+							background-position: center;
+							@include smallTab{
+								background-size: 48px 48px;
+								background-position: top center;
+							}
 						}
 						&.content{
-							background: url(../images/icons/content-filled.svg) no-repeat top center;
-							background-size: 48px 48px;
+							background: url(../images/icons/content-filled.svg) no-repeat;
+							background-size: 36px 36px;
+							background-position: center;
+							@include smallTab{
+								background-size: 48px 48px;
+								background-position: top center;
+							}
 						}
 						&.structure{
-							background: url(../images/icons/structure-filled.svg) no-repeat top center;
-							background-size: 48px 48px;
+							background: url(../images/icons/structure-filled.svg) no-repeat;
+							background-size: 36px 36px;
+							background-position: center;
+							@include smallTab{
+								background-size: 48px 48px;
+								background-position: top center;
+							}
 						}
 						&.users{
-							background: url(../images/icons/users-filled.svg) no-repeat top center;
-							background-size: 48px 48px;
+							background: url(../images/icons/users-filled.svg) no-repeat;
+							background-size: 36px 36px;
+							background-position: center;
+							@include smallTab{
+								background-size: 48px 48px;
+								background-position: top center;
+							}
 						}
 						&.services{
-							background: url(../images/icons/services-filled.svg) no-repeat top center;
-							background-size: 48px 48px;
+							background: url(../images/icons/services-filled.svg) no-repeat;
+							background-size: 36px 36px;
+							background-position: center;
+							@include smallTab{
+								background-size: 48px 48px;
+								background-position: top center;
+							}
 						}
 						&.reports{
-							background: url(../images/icons/reports-filled.svg) no-repeat top center;
-							background-size: 48px 48px;
+							background: url(../images/icons/reports-filled.svg) no-repeat;
+							background-size: 36px 36px;
+							background-position: center;
+							@include smallTab{
+								background-size: 48px 48px;
+								background-position: top center;
+							}
 						}
 					}//end > a
 				}//end expanded

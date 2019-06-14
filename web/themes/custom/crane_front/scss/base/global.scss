@@ -21,7 +21,20 @@ body{
 	}
 	&.logged-in{
 		.dialog-off-canvas-main-canvas{
-			padding-left: 80px;
+			padding-top: 50px;
+			@include smallTab{
+				padding-top: 0;
+				padding-left: 80px;
+			}
+		}
+		&.role-administrator{
+			.dialog-off-canvas-main-canvas{
+				padding-top: 0;
+				padding-left: 0;
+				@include desk{
+					padding-left: 80px;
+				}
+			}
 		}
 	}
 }//end body
