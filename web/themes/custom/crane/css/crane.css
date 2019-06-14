@@ -4270,18 +4270,131 @@ body.adminimal.crane {
     width: 100%;
     box-sizing: border-box;
     overflow-x: hidden;
-    padding-top: 50px; }
+    padding-top: 50px;
+    min-height: calc(100vh - 50px); }
     @media (min-width: 600px) {
       body.adminimal.crane .dialog-off-canvas-main-canvas {
         padding-top: 0;
-        padding-left: 80px; } }
+        padding-left: 80px;
+        min-height: 100vh; } }
   body.adminimal.crane.role-administrator .dialog-off-canvas-main-canvas {
-    padding-left: 0; }
+    padding-left: 0;
+    padding-top: 0;
+    min-height: calc(100vh - 39px); }
     @media (min-width: 975px) {
       body.adminimal.crane.role-administrator .dialog-off-canvas-main-canvas {
-        padding-left: 80px; } }
+        padding-left: 80px;
+        min-height: calc(100vh - 79px); } }
   body.adminimal.crane .visually-hidden {
     max-width: 1px; }
+
+/* ========================
+  TYPOGRAPHY
+========================== */
+/* HEADING MIXINS
+------------------ */
+/* HEADING STYLING
+------------------- */
+h1 {
+  line-height: 1.15;
+  font-weight: 700;
+  font-family: mr-eaves-sans, sans-serif;
+  margin: 0;
+  font-feature-settings: "liga", "dlig";
+  font-size: 32px; }
+  @media (min-width: 760px) {
+    h1 {
+      font-size: 46px; } }
+  @media (min-width: 1200px) {
+    h1 {
+      font-size: 60px; } }
+
+h2 {
+  line-height: 1.15;
+  font-weight: 700;
+  font-family: mr-eaves-sans, sans-serif;
+  margin: 0;
+  font-feature-settings: "liga", "dlig";
+  font-size: 26px; }
+  @media (min-width: 760px) {
+    h2 {
+      font-size: 29px; } }
+  @media (min-width: 1200px) {
+    h2 {
+      font-size: 32px; } }
+
+h3 {
+  line-height: 1.15;
+  font-weight: 700;
+  font-family: mr-eaves-sans, sans-serif;
+  margin: 0;
+  font-feature-settings: "liga", "dlig";
+  font-size: 23px; }
+  @media (min-width: 760px) {
+    h3 {
+      font-size: 26px; } }
+
+h4 {
+  line-height: 1.15;
+  font-weight: 700;
+  font-family: mr-eaves-sans, sans-serif;
+  margin: 0;
+  font-feature-settings: "liga", "dlig";
+  font-size: 22px; }
+
+h5 {
+  line-height: 1.15;
+  font-weight: 700;
+  font-family: mr-eaves-sans, sans-serif;
+  margin: 0;
+  font-feature-settings: "liga", "dlig";
+  font-size: 20px; }
+
+h6 {
+  line-height: 1.15;
+  font-weight: 700;
+  font-family: mr-eaves-sans, sans-serif;
+  margin: 0;
+  font-feature-settings: "liga", "dlig";
+  font-size: 18px; }
+
+h2 + ul, h3 + ul, h4 + ul, h5 + ul, h6 + ul {
+  margin-top: 0; }
+
+/* GLOBAL TEXT SETTINGS 
+-------------------- */
+html, code {
+  font-size: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-kerning: normal;
+  font-kerning: normal;
+  font-synthesis: none; }
+
+body.adminimal.crane {
+  color: #121212;
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: freight-sans-pro, sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: .02em; }
+
+em {
+  font-style: italic; }
+
+strong {
+  font-weight: 700; }
+
+ul {
+  list-style-type: disc; }
+
+ol {
+  list-style-type: decimal; }
+  ol[type="A"] {
+    list-style-type: lower-alpha; }
+  ol[type="I"] {
+    list-style-type: upper-roman; }
 
 /* ========================
   BUTTONS
@@ -4300,6 +4413,7 @@ body.adminimal.crane {
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: .04em;
   font-family: mr-eaves-sans, sans-serif;
   font-weight: 700;
   font-size: 1.4rem;
@@ -4328,8 +4442,44 @@ body.adminimal.crane {
     .adminimal.crane .button.button--small:active {
       background: #b3b3b3;
       color: #121212; }
-  .adminimal.crane .button[data-drupal-selector="edit-cancel"] {
+  .adminimal.crane .button[data-drupal-selector="edit-cancel"], .adminimal.crane .button.button--danger {
+    background-image: none;
+    background-color: #3778c1;
+    border: none;
+    color: #ffffff;
+    line-height: 1.15;
+    padding: .75rem 1.5rem;
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    font-family: mr-eaves-sans, sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+    background: #bf0e0e;
+    color: #ffffff;
+    border-color: #bf0e0e;
+    height: auto;
     min-width: 115px; }
+    .adminimal.crane .button[data-drupal-selector="edit-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-cancel"]:focus, .adminimal.crane .button.button--danger:hover, .adminimal.crane .button.button--danger:focus {
+      color: #121212;
+      background-color: #cccccc;
+      box-shadow: none;
+      transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -webkit-transform: translateZ(0);
+      outline: none; }
+    .adminimal.crane .button[data-drupal-selector="edit-cancel"]:active, .adminimal.crane .button.button--danger:active {
+      color: #121212;
+      background-color: #b3b3b3; }
+    .adminimal.crane .button[data-drupal-selector="edit-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-cancel"]:focus, .adminimal.crane .button.button--danger:hover, .adminimal.crane .button.button--danger:focus {
+      background: #cccccc;
+      border-color: #cccccc;
+      color: #121212; }
 
 .adminimal.crane .button--primary {
   background-image: none;
@@ -4343,10 +4493,12 @@ body.adminimal.crane {
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: .04em;
   font-family: mr-eaves-sans, sans-serif;
   font-weight: 700;
   font-size: 1.4rem;
   margin-bottom: 3rem;
+  padding: .85rem 1.5rem .75rem;
   background: #3778c1;
   color: #ffffff; }
   .adminimal.crane .button--primary:hover, .adminimal.crane .button--primary:focus {
@@ -4380,6 +4532,7 @@ body.adminimal.crane {
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: .04em;
   font-family: mr-eaves-sans, sans-serif;
   font-weight: 700;
   font-size: 1.4rem;
@@ -4432,6 +4585,7 @@ input[type="submit"].button {
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: .04em;
   font-family: mr-eaves-sans, sans-serif;
   font-weight: 700;
   font-size: 1.4rem;
@@ -4535,6 +4689,9 @@ optgroup:empty {
 
 body .select2-container {
   margin-bottom: 0; }
+
+body.adminimal.crane select {
+  font-size: 1.6rem; }
 
 /* SINGLE SELECT 2
 ----------------- */
@@ -4696,116 +4853,39 @@ body .select2-container--default {
     .js-form-type-checkbox input[type="checkbox"]:checked:hover, .js-form-type-checkbox input[type="checkbox"]:checked:focus {
       background: rgba(28, 88, 131, 0.25); }
 
+/* SEPARATORS
+---------------- */
+.form--inline.form-wrapper .form-item-separator {
+  margin: .5em 0 .25em; }
+
+/* ================
+  SPECIFIC FORMS
+=================== */
+body {
+  /* ADD FIELD
+	----------------- */
+  /* DELETE CONFIG
+	-------------------- */ }
+  body .field-ui-field-storage-add-form .select2-container--default {
+    min-width: 200px; }
+  body .js-form-type-textfield {
+    max-width: 240px; }
+  body .field-config-delete-form.field-config-confirm-form .seven-details__wrapper .seven-details__description {
+    margin-bottom: 3rem; }
+  body .field-config-delete-form.field-config-confirm-form .seven-details__wrapper h3 {
+    line-height: 1.15;
+    font-weight: 700;
+    font-family: mr-eaves-sans, sans-serif;
+    margin: 0;
+    font-feature-settings: "liga", "dlig";
+    font-size: 20px; }
+
 /* ========================
   TABLES
 ========================== */
-/* ========================
-  TYPOGRAPHY
-========================== */
-/* HEADING MIXINS
------------------- */
-/* HEADING STYLING
-------------------- */
-h1 {
-  line-height: 1.15;
-  font-weight: 700;
-  font-family: mr-eaves-sans, sans-serif;
-  margin: 0;
-  font-feature-settings: "liga", "dlig";
-  font-size: 32px; }
-  @media (min-width: 760px) {
-    h1 {
-      font-size: 46px; } }
-  @media (min-width: 1200px) {
-    h1 {
-      font-size: 60px; } }
-
-h2 {
-  line-height: 1.15;
-  font-weight: 700;
-  font-family: mr-eaves-sans, sans-serif;
-  margin: 0;
-  font-feature-settings: "liga", "dlig";
-  font-size: 26px; }
-  @media (min-width: 760px) {
-    h2 {
-      font-size: 29px; } }
-  @media (min-width: 1200px) {
-    h2 {
-      font-size: 32px; } }
-
-h3 {
-  line-height: 1.15;
-  font-weight: 700;
-  font-family: mr-eaves-sans, sans-serif;
-  margin: 0;
-  font-feature-settings: "liga", "dlig";
-  font-size: 23px; }
-  @media (min-width: 760px) {
-    h3 {
-      font-size: 26px; } }
-
-h4 {
-  line-height: 1.15;
-  font-weight: 700;
-  font-family: mr-eaves-sans, sans-serif;
-  margin: 0;
-  font-feature-settings: "liga", "dlig";
-  font-size: 22px; }
-
-h5 {
-  line-height: 1.15;
-  font-weight: 700;
-  font-family: mr-eaves-sans, sans-serif;
-  margin: 0;
-  font-feature-settings: "liga", "dlig";
-  font-size: 20px; }
-
-h6 {
-  line-height: 1.15;
-  font-weight: 700;
-  font-family: mr-eaves-sans, sans-serif;
-  margin: 0;
-  font-feature-settings: "liga", "dlig";
-  font-size: 18px; }
-
-h2 + ul, h3 + ul, h4 + ul, h5 + ul, h6 + ul {
-  margin-top: 0; }
-
-/* GLOBAL TEXT SETTINGS 
--------------------- */
-html, code {
-  font-size: 10px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-kerning: normal;
-  font-kerning: normal;
-  font-synthesis: none; }
-
-body.adminimal.crane {
-  color: #121212;
-  margin: 0;
+.adminimal.crane table thead th {
   font-size: 1.6rem;
-  font-family: freight-sans-pro, sans-serif;
-  font-weight: 400;
-  line-height: 1.4;
-  letter-spacing: .02em; }
-
-em {
-  font-style: italic; }
-
-strong {
-  font-weight: 700; }
-
-ul {
-  list-style-type: disc; }
-
-ol {
-  list-style-type: decimal; }
-  ol[type="A"] {
-    list-style-type: lower-alpha; }
-  ol[type="I"] {
-    list-style-type: upper-roman; }
+  color: #121212; }
 
 /* ==============
 	 ADMIN-NAV
@@ -4814,7 +4894,13 @@ ol {
   CARD
 ========================== */
 /* ========================
+  HEADER
+========================== */
+/* ========================
   LIST
+========================== */
+/* ========================
+  MAIN
 ========================== */
 /* ========================
   QUICKLINKS
