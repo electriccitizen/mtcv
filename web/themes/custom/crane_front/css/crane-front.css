@@ -1113,11 +1113,11 @@ nav#block-quicklinks {
     font-size: 32px; }
 
 .block-field-blockuserusercreated {
-  text-align: center;
   margin-bottom: 0; }
   @media (max-width: 759px) {
     .block-field-blockuserusercreated {
-      border-bottom: 1px solid #121212; } }
+      border-bottom: 1px solid #121212;
+      text-align: center; } }
   .block-field-blockuserusercreated .user-created {
     margin-bottom: 1rem; }
   .block-field-blockuserusercreated .user-roles {
@@ -1135,6 +1135,8 @@ nav#block-quicklinks {
         width: 1px;
         height: 80%;
         background: #121212; }
+  .block-field-blockuserusercreated .edit-link {
+    text-align: center; }
 
 /* CONTENT VIEWS
 -------------------- */
