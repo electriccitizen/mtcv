@@ -143,6 +143,7 @@ html,code{
 }
 
 body.adminimal.crane {
+	font: inherit;
 	color: $baseText;
 	margin: 0;
 	font-size: $baseSize;

@@ -1,0 +1,122 @@
+/* ===============
+   Section Layouts
+=================== */
+.tabs-instructions{
+	display: none;
+}
+
+/* LAYOUT BUILDER UI
+-------------------- */
+.layout-builder{
+	.layout-builder__region{
+		overflow: hidden;
+		margin-bottom: 2rem;
+		.draggable{
+			margin-bottom: $spaceLg;
+			max-height: 500px;
+			overflow: hidden;
+			min-height: 90px;
+			*{
+				word-break: break-all;
+			}
+		}
+		.tabs-instructions{
+			display: block;
+			font-size: 1.6rem;
+		}
+	}
+}
+
+/* RENDERED LAYOUTS 
+-------------------- */
+.layout__region{
+	& > *{
+		margin-bottom: $elementSpace;
+	}
+}
+
+/* TWO COLUMN SIDEBAR LEFT TABS */
+$sideBar: 200px;
+@include contentStop{
+	$sideBar: 240px;
+}
+.layout--twocol-sideleft-tabs{
+	width: 100%;
+	@include tab{
+		display: grid;
+		grid-template-columns: $sideBar 1fr;
+		grid-column-gap: 30px;
+	}
+	.layout__region--first{
+		padding: $elementSpace $siteMarginMobile;
+		@include tab{
+			grid-area: 1 / 1 / 4 / 1;
+		}
+	}//end layout region second
+	.layout__region--content{
+		padding: $elementSpace $siteMarginMobile 0;
+		&:last-child{
+			padding: $elementSpace $siteMarginMobile;
+		}
+		@include tab{
+			grid-area: 1 / 2 / 1 / 2;
+		}
+	}
+	.layout__region--tabs{
+		padding: $elementSpace $siteMarginMobile 0;
+		&:last-child{
+			padding: $elementSpace $siteMarginMobile;
+		}
+		@include tab{
+			grid-area: 2 / 2 / 2 / 2;
+		}
+		.tabs-wrapper > div:not(:first-of-type){
+			display: none;
+		}
+		ul.tabs-header{
+			@include listReset;
+			@include safeFlex(row,wrap,start,start);
+			li{
+				@include onlyPhone{
+					width: 100%;
+				}
+				@include smallTab{
+					margin-right: -1px;
+				}
+			}
+			.tab-control{
+				@include outlineButton($link);
+				width: 100%;
+				margin-bottom: -1px;
+				&.active-tab{
+					background: $lightGrey;
+					color: $midBlue;
+					border-color: $midBlue;
+					&:hover,&:focus{
+						background: $buttonBackHover;
+						color: $buttonTextHover;
+						border-color: $buttonBackHover;
+					}
+					&:active{
+						background: $buttonBackActive;
+						color: $buttonTextActive;
+						border-color: $buttonBackActive;
+					}
+				}
+			}//end tab control
+		}//end tabs header
+		.tab-item{
+			border-top: 1px solid $link;
+			padding: 30px 0;
+		}
+	}//end region--tabs
+	.layout__region--last{
+		padding: $elementSpace $siteMarginMobile 0;
+		&:last-child{
+			padding: $elementSpace $siteMarginMobile;
+		}
+		@include tab{
+			grid-area: 3 / 2 / 3 / 2;
+		}
+	}
+}//end layout-twocol-sideleft

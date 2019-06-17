@@ -1,3 +1,10 @@
 /* ========================
   FIELD
 ========================== */
+
+.block .field{
+	.inline-label{
+		font-weight: $heavy;
+		margin-right: .5em;
+	}
+}

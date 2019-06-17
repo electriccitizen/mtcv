@@ -14,7 +14,7 @@
 	line-height: 1.15;
 	padding: .75rem 1.5rem;
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: middle;
 	text-decoration: none;
 	text-align: center;
 	text-transform: uppercase;
@@ -42,6 +42,7 @@
 	background: transparent;
 	border: 1px solid $outlineColor;
 	color: $outlineColor;
+	border-radius: 3px;
 	&:hover,&:focus{
 		background: $buttonBackHover;
 		color: $buttonTextHover;
@@ -85,22 +86,36 @@
 //button class
 .adminimal.crane .button {
 	@include button;
+	&.js-hide{
+		display: none;
+	}
 	&.button--small{
 		background: transparent;
 		border: 1px solid $primaryButtonBack;
 		color: $baseText;
 		font-weight: $regular;
 		font-size: 1.2rem;
+		border-radius: 2px;
+		&.button--small-override{
+			font-size: 1.8rem;
+			border-width: 2px;
+			font-weight: $heavy;
+			margin-bottom: $spaceSm;
+			border-radius: 4px;
+		}
 		&:hover,&:focus{
 			background: $buttonBackHover;
+			border-color: $buttonBackHover;
 			color: $buttonTextHover;
+			@include transAll(.3s);
 		}
 		&:active{
 			background: $buttonBackActive;
+			border-color: $buttonBackActive;
 			color: $buttonTextActive;
 		}
 	}
-	&[data-drupal-selector="edit-cancel"],&.button--danger{
+	&[data-drupal-selector="edit-cancel"],&.button--danger,&[data-drupal-selector="edit-actions-cancel"]{
 		@include resetButton;
 	}
 }

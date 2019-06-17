@@ -1,7 +1,10 @@
 /* ==============
-	 SUMMARY BLOCK
+	 CONTAINERS
 ================== */
 body.adminimal.crane{
+
+	/* SUMMARY BLOCK
+	------------------ */
 	.seven-details[open]{
 		& > .seven-details__summary{
 			color: $darkBlue;
@@ -17,4 +20,15 @@ body.adminimal.crane{
 			color: $hoverLink;
 		}
 	}
+
+	/* INLINE CONTAINERS
+	-------------------- */
+	.container-inline{
+		div{
+			display: inline-block;
+			width: auto;
+			margin-right: 1em;
+		}
+	}
 }//end crane
+

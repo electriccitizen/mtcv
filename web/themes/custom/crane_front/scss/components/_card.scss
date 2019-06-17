@@ -1,3 +1,28 @@
 /* ========================
   CARD
 ========================== */
+@mixin cardItem{
+	background: $offWhite;
+	border-radius: 4px;
+	border: 1px solid $grey;
+	padding: 20px 30px;
+	margin-bottom: $spaceLg;
+	a{
+		color: $midBlue;
+		&:hover,&:focus{
+			color: $hoverLink;
+		}
+	}
+	.dropbutton-action{
+		a{
+			color: $white;
+			&:hover,&:focus{
+				color: $buttonTextHover;
+			}
+			&:active{
+				color: $buttonTextActive;
+			}
+		}
+	}
+}//end card item
+

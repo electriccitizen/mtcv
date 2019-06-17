@@ -5,9 +5,22 @@
 main{
 	.layout-content > div{
 		@include calc(min-height, "100vh - 134px");
-		padding: $spaceMd $siteMarginMobile;
-		max-width: $siteMaxWidth + 120px;
-		@include auto;
+		@include tab{
+			@include calc(min-height, "100vh - 182px");
+		}
+		.logged-in:not(.role-administrator) &{
+			@include tab{
+				@include calc(min-height, "100vh - 120px");
+			}
+		}
+		body:not(.logged-in.path-user) &{
+			padding: $spaceMd $siteMarginMobile;
+			max-width: $siteMaxWidth + 120px;
+			@include auto;
+			@include desk{
+				padding: $spaceLg $siteMarginDesk;
+			}
+		}
 		body:not(.role-administrator) &{
 			@include calc(min-height, "100vh - 184px");
 			@include smallTab{
@@ -17,12 +30,6 @@ main{
 				@include calc(min-height, "100vh - 182px");
 			}
 		}
-		@include tab{
-			@include calc(min-height, "100vh - 182px");
-		}
-		@include desk{
-			padding: $spaceLg $siteMarginDesk;
-		}
 		.role-administrator &{
 			@include calc(min-height, "100vh - 212px");
 			@include tab{
@@ -30,4 +37,5 @@ main{
 			}
 		}
 	}//end layout content div
+
 }//end main

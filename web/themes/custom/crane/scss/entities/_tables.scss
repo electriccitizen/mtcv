@@ -1,0 +1,28 @@
+/* ========================
+  TABLES
+========================== */
+
+.adminimal.crane table{
+  thead{
+  	th{
+  		font-size: 1.6rem;
+  		color: $black;
+  	}
+	}
+}//end table
+
+
+/* ===================
+  SPECIFIC TABLES
+=====================*/
+
+/* VIEWS TABLE
+------------------- */
+.views-list-section{
+	margin-top: 2em;
+	.views-ui-view-name{
+		h3{
+			@include heading5;
+		}
+	}
+}//end views listing section

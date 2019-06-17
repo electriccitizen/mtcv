@@ -66,3 +66,11 @@ function crane_form_system_theme_settings_alter(array &$form, FormStateInterface
   $form['logo']['#open'] = FALSE;
   $form['favicon']['#open'] = FALSE;
 }
+
+/**
+ * Implements hook_preprocess_HOOK() for menu-local-action templates.
+ */
+function crane_preprocess_menu_local_action(array &$variables) {
+  $variables['link']['#options']['attributes']['class'][] = 'button--small-override';
+}
+

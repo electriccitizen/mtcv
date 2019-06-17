@@ -1,0 +1,19 @@
+uuid: 31974635-611e-45a0-95ac-429adca9470a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary
+    - node.type.page
+id: node.page.field_summary
+field_name: field_summary
+entity_type: node
+bundle: page
+label: Summary
+description: 'A short description of the page content that will be used in teasers.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

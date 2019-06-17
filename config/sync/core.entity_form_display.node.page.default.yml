@@ -5,10 +5,10 @@ dependencies:
   config:
     - field.field.node.page.field_header
     - field.field.node.page.field_section
+    - field.field.node.page.field_summary
     - node.type.page
   module:
     - paragraphs
-    - path
 _core:
   default_config_hash: sb0qCkzU_8mNq29NehYAU8jCBXWPLeX0UN8sYFVGVcw
 id: node.page.default
@@ -16,15 +16,9 @@ targetEntityType: node
 bundle: page
 mode: default
 content:
-  created:
-    type: datetime_timestamp
-    weight: 2
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_header:
     type: paragraphs
-    weight: 7
+    weight: 2
     settings:
       title: Header
       title_plural: Header
@@ -43,7 +37,7 @@ content:
     region: content
   field_section:
     type: paragraphs
-    weight: 8
+    weight: 3
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -60,31 +54,19 @@ content:
         add_above: '0'
     third_party_settings: {  }
     region: content
-  path:
-    type: path
-    weight: 5
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  promote:
-    type: boolean_checkbox
+  field_summary:
+    weight: 1
     settings:
-      display_label: true
-    weight: 3
-    region: content
+      rows: 5
+      placeholder: ''
     third_party_settings: {  }
+    type: string_textarea
+    region: content
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
-    region: content
-    third_party_settings: {  }
-  sticky:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 4
+    weight: 5
     region: content
     third_party_settings: {  }
   title:
@@ -95,13 +77,14 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  uid:
-    type: entity_reference_autocomplete
-    weight: 1
+  url_redirects:
+    weight: 4
     region: content
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true

@@ -12,10 +12,15 @@ header{
 ----------------- */
 .block-system-branding-block{
 	width: 100%;
-	max-width: $siteMaxWidth + 120px;
 	padding-left: $siteMarginMobile;
 	padding-right: $siteMarginMobile;
+	body:not(.logged-in.path-user) &{
+		max-width: $siteMaxWidth + 120px;	
+	}
 	@include safeFlex(row,nowrap,justify,center);
+	.logged-in &{
+		@include safeFlex(row,nowrap,end,center);
+	}
 	@include auto;
 	@include desk{
 		padding-left: $siteMarginDesk;
@@ -24,6 +29,9 @@ header{
 	a.logo-link{
 		display: block;
 		max-width: 40px;
+		.logged-in &{
+			display: none;
+		}
 		@include tab{
 			max-width: 60px;
 		}

@@ -20,3 +20,7 @@ fonts:
   css:
     base:
       https://use.typekit.net/kpb2dtf.css: { type: external, preprocess: false }
+tabs:
+  version: 1.0
+  js:
+    js/tabs.js: {}

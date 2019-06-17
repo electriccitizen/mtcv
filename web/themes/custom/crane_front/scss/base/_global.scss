@@ -45,6 +45,12 @@ body{
 	@include auto;
 }
 
+#block-crane-front-content{
+	body:not(.logged-in.path-user) &{
+		padding: $elementSpace $siteMarginMobile;
+	}
+}
+
 /* KINTING
 -------------- */
 .kint{

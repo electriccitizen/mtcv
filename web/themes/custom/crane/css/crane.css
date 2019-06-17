@@ -4372,6 +4372,7 @@ html, code {
   font-synthesis: none; }
 
 body.adminimal.crane {
+  font: inherit;
   color: #121212;
   margin: 0;
   font-size: 1.6rem;
@@ -4409,7 +4410,7 @@ ol {
   line-height: 1.15;
   padding: .75rem 1.5rem;
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
@@ -4430,19 +4431,34 @@ ol {
   .adminimal.crane .button:active {
     color: #121212;
     background-color: #b3b3b3; }
+  .adminimal.crane .button.js-hide {
+    display: none; }
   .adminimal.crane .button.button--small {
     background: transparent;
     border: 1px solid #3778c1;
     color: #121212;
     font-weight: 400;
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    border-radius: 2px; }
+    .adminimal.crane .button.button--small.button--small-override {
+      font-size: 1.8rem;
+      border-width: 2px;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      border-radius: 4px; }
     .adminimal.crane .button.button--small:hover, .adminimal.crane .button.button--small:focus {
       background: #cccccc;
-      color: #121212; }
+      border-color: #cccccc;
+      color: #121212;
+      transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -webkit-transform: translateZ(0); }
     .adminimal.crane .button.button--small:active {
       background: #b3b3b3;
+      border-color: #b3b3b3;
       color: #121212; }
-  .adminimal.crane .button[data-drupal-selector="edit-cancel"], .adminimal.crane .button.button--danger {
+  .adminimal.crane .button[data-drupal-selector="edit-cancel"], .adminimal.crane .button.button--danger, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"] {
     background-image: none;
     background-color: #3778c1;
     border: none;
@@ -4450,7 +4466,7 @@ ol {
     line-height: 1.15;
     padding: .75rem 1.5rem;
     display: inline-block;
-    vertical-align: top;
+    vertical-align: middle;
     text-decoration: none;
     text-align: center;
     text-transform: uppercase;
@@ -4464,7 +4480,7 @@ ol {
     border-color: #bf0e0e;
     height: auto;
     min-width: 115px; }
-    .adminimal.crane .button[data-drupal-selector="edit-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-cancel"]:focus, .adminimal.crane .button.button--danger:hover, .adminimal.crane .button.button--danger:focus {
+    .adminimal.crane .button[data-drupal-selector="edit-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-cancel"]:focus, .adminimal.crane .button.button--danger:hover, .adminimal.crane .button.button--danger:focus, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:focus {
       color: #121212;
       background-color: #cccccc;
       box-shadow: none;
@@ -4473,10 +4489,10 @@ ol {
       -webkit-transition: all 0.3s ease;
       -webkit-transform: translateZ(0);
       outline: none; }
-    .adminimal.crane .button[data-drupal-selector="edit-cancel"]:active, .adminimal.crane .button.button--danger:active {
+    .adminimal.crane .button[data-drupal-selector="edit-cancel"]:active, .adminimal.crane .button.button--danger:active, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:active {
       color: #121212;
       background-color: #b3b3b3; }
-    .adminimal.crane .button[data-drupal-selector="edit-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-cancel"]:focus, .adminimal.crane .button.button--danger:hover, .adminimal.crane .button.button--danger:focus {
+    .adminimal.crane .button[data-drupal-selector="edit-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-cancel"]:focus, .adminimal.crane .button.button--danger:hover, .adminimal.crane .button.button--danger:focus, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:focus {
       background: #cccccc;
       border-color: #cccccc;
       color: #121212; }
@@ -4489,7 +4505,7 @@ ol {
   line-height: 1.15;
   padding: .75rem 1.5rem;
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
@@ -4528,7 +4544,7 @@ ol {
   line-height: 1.15;
   padding: .75rem 1.5rem;
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
@@ -4539,7 +4555,8 @@ ol {
   margin-bottom: 3rem;
   background: transparent;
   border: 1px solid #3778c1;
-  color: #3778c1; }
+  color: #3778c1;
+  border-radius: 3px; }
   .adminimal.crane .button-outline:hover, .adminimal.crane .button-outline:focus {
     color: #121212;
     background-color: #cccccc;
@@ -4581,7 +4598,7 @@ input[type="submit"].button {
   line-height: 1.15;
   padding: .75rem 1.5rem;
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
@@ -4858,41 +4875,39 @@ body .select2-container--default {
 .form--inline.form-wrapper .form-item-separator {
   margin: .5em 0 .25em; }
 
-/* ================
-  SPECIFIC FORMS
-=================== */
-body {
-  /* ADD FIELD
-	----------------- */
-  /* DELETE CONFIG
-	-------------------- */ }
-  body .field-ui-field-storage-add-form .select2-container--default {
-    min-width: 200px; }
-  body .js-form-type-textfield {
-    max-width: 240px; }
-  body .field-config-delete-form.field-config-confirm-form .seven-details__wrapper .seven-details__description {
-    margin-bottom: 3rem; }
-  body .field-config-delete-form.field-config-confirm-form .seven-details__wrapper h3 {
-    line-height: 1.15;
-    font-weight: 700;
-    font-family: mr-eaves-sans, sans-serif;
-    margin: 0;
-    font-feature-settings: "liga", "dlig";
-    font-size: 20px; }
-
-/* ========================
-  TABLES
-========================== */
-.adminimal.crane table thead th {
-  font-size: 1.6rem;
-  color: #121212; }
-
 /* ==============
 	 ADMIN-NAV
 ================== */
+/* LOCAL ACTIONS
+------------------ */
+.adminimal.crane #block-crane-local-actions ul.action-links {
+  margin: 2em 0 0; }
+
 /* ========================
   CARD
 ========================== */
+/* ==============
+	 CONTAINERS
+================== */
+body.adminimal.crane {
+  /* SUMMARY BLOCK
+	------------------ */
+  /* INLINE CONTAINERS
+	-------------------- */ }
+  body.adminimal.crane .seven-details[open] > .seven-details__summary {
+    color: #323b49; }
+    body.adminimal.crane .seven-details[open] > .seven-details__summary:hover, body.adminimal.crane .seven-details[open] > .seven-details__summary:focus {
+      color: #676767; }
+  body.adminimal.crane .seven-details__summary {
+    font-family: mr-eaves-sans, sans-serif;
+    color: #323b49; }
+    body.adminimal.crane .seven-details__summary:hover, body.adminimal.crane .seven-details__summary:focus {
+      color: #676767; }
+  body.adminimal.crane .container-inline div {
+    display: inline-block;
+    width: auto;
+    margin-right: 1em; }
+
 /* ========================
   HEADER
 ========================== */
@@ -4934,7 +4949,8 @@ nav#block-crane-quicklinks {
     @media (min-width: 600px) {
       nav#block-crane-quicklinks:after {
         height: 100vh;
-        width: 80px; } }
+        width: 80px;
+        box-shadow: 0 6px 8px rgba(35, 35, 35, 0.35); } }
   nav#block-crane-quicklinks .contextual {
     display: none; }
   nav#block-crane-quicklinks ul:not(.contextual-links) {
@@ -4973,7 +4989,8 @@ nav#block-crane-quicklinks {
           top: 8px;
           left: -310px;
           width: 240px;
-          display: block !important; } }
+          display: block !important;
+          box-shadow: 2px 2px 4px rgba(35, 35, 35, 0.15); } }
     nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 {
       padding: 0 4px; }
       @media (min-width: 600px) {
@@ -5166,25 +5183,76 @@ nav#block-crane-quicklinks {
       nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-2 > a:hover, nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-2 > a:focus {
         background: #fbd20e; }
 
-/* ==============
-	 SUMMARY BLOCK
-================== */
-body.adminimal.crane .seven-details[open] > .seven-details__summary {
-  color: #323b49; }
-  body.adminimal.crane .seven-details[open] > .seven-details__summary:hover, body.adminimal.crane .seven-details[open] > .seven-details__summary:focus {
-    color: #676767; }
-
-body.adminimal.crane .seven-details__summary {
-  font-family: mr-eaves-sans, sans-serif;
-  color: #323b49; }
-  body.adminimal.crane .seven-details__summary:hover, body.adminimal.crane .seven-details__summary:focus {
-    color: #676767; }
+/* ========================
+  MISC FORMS
+========================== */
+.adminimal.crane {
+  /* ADD FIELD
+	----------------- */
+  /* DELETE CONFIG
+	-------------------- */
+  /* VIEWS
+	--------------------- */ }
+  .adminimal.crane .field-ui-field-storage-add-form .select2-container--default {
+    min-width: 200px; }
+  .adminimal.crane .js-form-type-textfield {
+    max-width: 240px; }
+  .adminimal.crane .field-config-delete-form.field-config-confirm-form .seven-details__wrapper .seven-details__description {
+    margin-bottom: 3rem; }
+  .adminimal.crane .field-config-delete-form.field-config-confirm-form .seven-details__wrapper h3 {
+    line-height: 1.15;
+    font-weight: 700;
+    font-family: mr-eaves-sans, sans-serif;
+    margin: 0;
+    font-feature-settings: "liga", "dlig";
+    font-size: 20px; }
+  .adminimal.crane .view-preview-form .js-form-item-live-preview {
+    display: none; }
+  .adminimal.crane .views-ui-display-tab-bucket {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem; }
+  .adminimal.crane .views-ui-display-tab-bucket .views-display-setting, .adminimal.crane .views-displays .tabs.secondary a, .adminimal.crane .views-ui-display-tab-bucket__title {
+    font-size: 1.4rem; }
+  .adminimal.crane .views-edit-view .dropbutton-wrapper .dropbutton .dropbutton-action > * {
+    font-size: 1.2rem; }
+  .adminimal.crane .views-admin .icon {
+    top: 3px;
+    margin-right: .25em; }
+  .adminimal.crane .views-displays .tabs .action-list li {
+    background: #f6f6f6; }
+    .adminimal.crane .views-displays .tabs .action-list li:first-child {
+      border-radius: 0;
+      padding: 10px 9px 2px; }
+    .adminimal.crane .views-displays .tabs .action-list li:last-child {
+      border-radius: 0;
+      padding: 2px 9px 10px; }
+  .adminimal.crane .views-displays .tabs .action-list input.form-submit.button {
+    display: block;
+    text-align: left; }
 
 /* ========================
   NODE FORMS
 ========================== */
 /* ========================
-  USER DASHBOARD
+  TABLES
 ========================== */
+.adminimal.crane table thead th {
+  font-size: 1.6rem;
+  color: #121212; }
+
+/* ===================
+  SPECIFIC TABLES
+=====================*/
+/* VIEWS TABLE
+------------------- */
+.views-list-section {
+  margin-top: 2em; }
+  .views-list-section .views-ui-view-name h3 {
+    line-height: 1.15;
+    font-weight: 700;
+    font-family: mr-eaves-sans, sans-serif;
+    margin: 0;
+    font-feature-settings: "liga", "dlig";
+    font-size: 20px; }
 
 /*# sourceMappingURL=crane.css.map */

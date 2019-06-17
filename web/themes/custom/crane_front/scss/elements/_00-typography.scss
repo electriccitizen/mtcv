@@ -13,8 +13,8 @@ $h2Md: 29px;
 $h2Lg: 32px;
 
 //h3 sizes
-$h3Sm: 23px;
-$h3Mid: 26px;
+$h3Sm: 24px;
+$h3Mid: 28px;
 
 //h4 sizes
 $h4Sm: 22px;
@@ -82,26 +82,6 @@ $h6Sm: 18px;
 	font-size: $h6Sm;
 }
 
-@mixin blockTitle{
-	@include headerGlobals;
-	font-size: 2rem;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	text-align: center;
-	max-width: $textMax;
-	margin-bottom: $spaceMd;
-	@include auto;
-}
-
-@mixin inlineBlockTitle{
-	@include blockTitle;
-	margin-bottom: 0;
-	display: inline-block;
-	& + *{
-		display: inline;
-	}
-}
-
 
 /* HEADING STYLING
 ------------------- */
@@ -131,6 +111,10 @@ h6{
 
 h2+ul, h3+ul, h4+ul, h5+ul, h6+ul {
 	margin-top: 0;
+}
+
+h2.block-title{
+	font-weight: $xHeavy;
 }
 
 /* GLOBAL TEXT SETTINGS 
