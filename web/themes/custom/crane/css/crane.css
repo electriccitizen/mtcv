@@ -4949,7 +4949,8 @@ nav#block-crane-quicklinks {
     @media (min-width: 600px) {
       nav#block-crane-quicklinks:after {
         height: 100vh;
-        width: 80px; } }
+        width: 80px;
+        box-shadow: 0 6px 8px rgba(35, 35, 35, 0.35); } }
   nav#block-crane-quicklinks .contextual {
     display: none; }
   nav#block-crane-quicklinks ul:not(.contextual-links) {
@@ -4988,7 +4989,8 @@ nav#block-crane-quicklinks {
           top: 8px;
           left: -310px;
           width: 240px;
-          display: block !important; } }
+          display: block !important;
+          box-shadow: 2px 2px 4px rgba(35, 35, 35, 0.15); } }
     nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 {
       padding: 0 4px; }
       @media (min-width: 600px) {

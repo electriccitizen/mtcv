@@ -1070,7 +1070,8 @@ nav#block-quicklinks {
     z-index: 496;
     width: 200px;
     border-right: 1px solid #cccccc;
-    padding-top: 95px; }
+    padding-top: 95px;
+    box-shadow: 0 3px 8px rgba(35, 35, 35, 0.15); }
     .role-administrator .user-dashboard .layout__region--first {
       padding-top: 170px; } }
   @media (min-width: 760px) and (min-width: 1200px) {
