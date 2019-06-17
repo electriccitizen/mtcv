@@ -4410,7 +4410,7 @@ ol {
   line-height: 1.15;
   padding: .75rem 1.5rem;
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
@@ -4449,7 +4449,11 @@ ol {
     .adminimal.crane .button.button--small:hover, .adminimal.crane .button.button--small:focus {
       background: #cccccc;
       border-color: #cccccc;
-      color: #121212; }
+      color: #121212;
+      transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -webkit-transform: translateZ(0); }
     .adminimal.crane .button.button--small:active {
       background: #b3b3b3;
       border-color: #b3b3b3;
@@ -4462,7 +4466,7 @@ ol {
     line-height: 1.15;
     padding: .75rem 1.5rem;
     display: inline-block;
-    vertical-align: top;
+    vertical-align: middle;
     text-decoration: none;
     text-align: center;
     text-transform: uppercase;
@@ -4501,7 +4505,7 @@ ol {
   line-height: 1.15;
   padding: .75rem 1.5rem;
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
@@ -4540,7 +4544,7 @@ ol {
   line-height: 1.15;
   padding: .75rem 1.5rem;
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
@@ -4551,7 +4555,8 @@ ol {
   margin-bottom: 3rem;
   background: transparent;
   border: 1px solid #3778c1;
-  color: #3778c1; }
+  color: #3778c1;
+  border-radius: 3px; }
   .adminimal.crane .button-outline:hover, .adminimal.crane .button-outline:focus {
     color: #121212;
     background-color: #cccccc;
@@ -4593,7 +4598,7 @@ input[type="submit"].button {
   line-height: 1.15;
   padding: .75rem 1.5rem;
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;

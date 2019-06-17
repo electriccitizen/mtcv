@@ -5,6 +5,7 @@
  * Functions to support theming in the Adminimal theme.
  */
 use Drupal\Core\Template\Attribute;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements hook_theme_suggestions_block_alter.
@@ -16,5 +17,15 @@ function crane_front_theme_suggestions_block_alter(array &$suggestions, array $v
     array_splice($suggestions, 1, 0, 'block__' . $variables['elements']['content']['#block_content']->bundle());
     array_splice($suggestions, 2, 0, 'block__' . $block_name);
     array_splice($suggestions, 3, 0, 'block__' . $variables['elements']['content']['#block_content']->id());
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for form templates.
+ */
+function crane_front_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+  if (isset($variables['element']['#form_id'])) {
+    $id = $variables['element']['#form_id'];
+    array_push($suggestions, 'form__' . $id);
   }
 }

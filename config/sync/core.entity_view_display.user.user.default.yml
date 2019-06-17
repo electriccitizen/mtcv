@@ -35,7 +35,7 @@ third_party_settings:
                 type: timestamp
                 settings:
                   date_format: custom
-                  custom_date_format: 'F j, Y'
+                  custom_date_format: n/j/y
                   timezone: ''
                 third_party_settings: {  }
               context_mapping:
@@ -47,7 +47,7 @@ third_party_settings:
             region: first
             configuration:
               id: 'field_block:user:user:uid'
-              label: 'User ID'
+              label: 'Custom user image'
               provider: layout_builder
               label_display: '0'
               formatter:
@@ -59,32 +59,6 @@ third_party_settings:
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
-            additional: {  }
-            weight: 0
-          75dcebb9-c6c4-4b74-bea4-2f9706c0281d:
-            uuid: 75dcebb9-c6c4-4b74-bea4-2f9706c0281d
-            region: last
-            configuration:
-              id: 'views_block:user_dashboard-all_recents'
-              label: ''
-              provider: views
-              label_display: visible
-              views_label: ''
-              items_per_page: none
-              context_mapping: {  }
-            additional: {  }
-            weight: 1
-          f1634350-abab-4a15-8461-9e3dc94e8b0d:
-            uuid: f1634350-abab-4a15-8461-9e3dc94e8b0d
-            region: last
-            configuration:
-              id: 'views_block:user_dashboard-my_recents'
-              label: ''
-              provider: views
-              label_display: visible
-              views_label: ''
-              items_per_page: none
-              context_mapping: {  }
             additional: {  }
             weight: 0
           f713f94d-d089-4804-967c-800171652b65:
@@ -105,6 +79,32 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 1
+          75dcebb9-c6c4-4b74-bea4-2f9706c0281d:
+            uuid: 75dcebb9-c6c4-4b74-bea4-2f9706c0281d
+            region: tabs
+            configuration:
+              id: 'views_block:user_dashboard-all_recents'
+              label: ''
+              provider: views
+              label_display: visible
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 1
+          f1634350-abab-4a15-8461-9e3dc94e8b0d:
+            uuid: f1634350-abab-4a15-8461-9e3dc94e8b0d
+            region: tabs
+            configuration:
+              id: 'views_block:user_dashboard-my_recents'
+              label: ''
+              provider: views
+              label_display: visible
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
         third_party_settings: {  }
 _core:
   default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo

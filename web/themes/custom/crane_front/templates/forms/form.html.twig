@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+{% block preform %}{% endblock %}
+{% block form %}
+	<form{{ attributes }}>
+	  {{ children }}
+	</form>
+{% endblock %}
+{% block postform %}{% endblock %}

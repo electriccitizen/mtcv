@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+{% extends 'form.html.twig' %}
+
+{% block preform %}
+	<div class="user-form">
+	<h1>Password Reset</h1>
+{% endblock %}
+
+{% block postform %}
+	<a href="/user" class="pass-back">« Back to login</a>
+	</div>
+{% endblock %}

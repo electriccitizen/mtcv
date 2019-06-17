@@ -10,6 +10,7 @@
  * @ingroup themeable
  */
 #}
+{{ attach_library('crane_front/tabs') }}
 {%
   set classes = [
     'layout',
@@ -30,6 +31,7 @@
     {% endif %}
     {% if content.tabs %}
       <div {{ region_attributes.tabs.addClass('layout__region', 'layout__region--tabs') }}>
+        <span class="tabs-instructions">Always add two or items if using the Tabs region. Each item must have a block title displayed. <strong>Only One tabs region should be used per node.</strong></span>
         {{ content.tabs }}
       </div>
     {% endif %}

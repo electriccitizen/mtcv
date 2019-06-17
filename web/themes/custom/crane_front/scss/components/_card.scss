@@ -4,9 +4,25 @@
 @mixin cardItem{
 	background: $offWhite;
 	border-radius: 4px;
-	box-shadow: 1px 1px 3px rgba(35,35,35,0.10);
 	border: 1px solid $grey;
 	padding: 20px 30px;
 	margin-bottom: $spaceLg;
-}
+	a{
+		color: $midBlue;
+		&:hover,&:focus{
+			color: $hoverLink;
+		}
+	}
+	.dropbutton-action{
+		a{
+			color: $white;
+			&:hover,&:focus{
+				color: $buttonTextHover;
+			}
+			&:active{
+				color: $buttonTextActive;
+			}
+		}
+	}
+}//end card item
 
