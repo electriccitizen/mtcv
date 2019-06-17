@@ -4883,6 +4883,85 @@ body .select2-container--default {
 .adminimal.crane #block-crane-local-actions ul.action-links {
   margin: 2em 0 0; }
 
+/* PRIMARY TABS
+--------------------- */
+.adminimal.crane nav.is-horizontal.is-collapsible.position-container.is-horizontal-enabled ul.tabs.primary {
+  background: transparent;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+  z-index: 99; }
+
+ul.tabs.primary .tabs__tab.is-active {
+  box-shadow: none !important; }
+
+ul.tabs.primary .tabs__tab:not(:last-child) a {
+  margin-right: -1px; }
+
+ul.tabs.primary .tabs__tab a {
+  background-image: none;
+  background-color: #3778c1;
+  border: none;
+  color: #ffffff;
+  line-height: 1.15;
+  padding: .75rem 1.5rem;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  font-family: mr-eaves-sans, sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 3rem;
+  background: transparent;
+  border: 1px solid #3778c1;
+  color: #3778c1;
+  border-radius: 3px;
+  margin-bottom: -1px;
+  background: #ffffff;
+  border-radius: 0;
+  font-weight: 800; }
+  ul.tabs.primary .tabs__tab a:hover, ul.tabs.primary .tabs__tab a:focus {
+    color: #121212;
+    background-color: #cccccc;
+    box-shadow: none;
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -webkit-transform: translateZ(0);
+    outline: none; }
+  ul.tabs.primary .tabs__tab a:active {
+    color: #121212;
+    background-color: #b3b3b3; }
+  ul.tabs.primary .tabs__tab a:hover, ul.tabs.primary .tabs__tab a:focus {
+    background: #cccccc;
+    color: #121212;
+    border-color: #cccccc;
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -webkit-transform: translateZ(0); }
+  ul.tabs.primary .tabs__tab a:active {
+    background: #b3b3b3;
+    color: #121212;
+    border-color: #b3b3b3; }
+  ul.tabs.primary .tabs__tab a.is-active {
+    background: #ededed;
+    color: #2c5580;
+    border-color: #2c5580; }
+    ul.tabs.primary .tabs__tab a.is-active:hover, ul.tabs.primary .tabs__tab a.is-active:focus {
+      background: #cccccc;
+      color: #121212;
+      border-color: #cccccc; }
+    ul.tabs.primary .tabs__tab a.is-active:active {
+      background: #b3b3b3;
+      color: #121212;
+      border-color: #b3b3b3; }
+
 /* ========================
   CARD
 ========================== */
@@ -4911,12 +4990,26 @@ body.adminimal.crane {
 /* ========================
   HEADER
 ========================== */
+.adminimal.crane .content-header {
+  background: #ffffff; }
+  .adminimal.crane .content-header .page-title {
+    color: #121212;
+    font-weight: 800;
+    margin-bottom: 2rem; }
+
 /* ========================
   LIST
 ========================== */
 /* ========================
   MAIN
 ========================== */
+.adminimal.crane .dialog-off-canvas-main-canvas > .layout-container {
+  margin: 0;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  border-top: 1px solid #3778c1;
+  box-shadow: 0 -2px 6px rgba(35, 35, 35, 0.1); }
+
 /* ========================
   QUICKLINKS
 ========================== */

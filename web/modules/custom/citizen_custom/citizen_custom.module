@@ -57,3 +57,10 @@ function citizen_custom_preprocess_html(&$variables){
   }
 }
 
+
+/**
+ * Implements hook_local_actions_alter().
+ */
+function citizen_custom_menu_local_actions_alter(&$local_actions) {
+ $local_actions['node.add_page']['title'] = 'Add Page';
+}

@@ -1,0 +1,7 @@
+citizen_custom.add_resource:
+  route_name: 'node.add'
+  title: 'Add Resource'
+  route_parameters:
+    node_type: 'resource'
+  appears_on:
+    - view.content.page_2

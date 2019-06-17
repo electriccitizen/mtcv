@@ -19,6 +19,10 @@ third_party_settings:
         destination: default
         url: ''
         external: ''
+      30:
+        destination: default
+        url: ''
+        external: ''
 _core:
   default_config_hash: u7OxrscEED35iDR3R0akmw7QNvBSMEPJXFtKP57qBh8
 id: image
