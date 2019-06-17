@@ -3,6 +3,9 @@
 ========================== */
 
 .user-dashboard{
+	.layout--twocol-sideleft-tabs{
+		max-width: 1840px;
+	}
 	.layout__region--first{
 		@include tab{
 			background: $white;

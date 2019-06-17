@@ -303,10 +303,10 @@ h3 {
   font-family: mr-eaves-sans, sans-serif;
   margin: 0;
   font-feature-settings: "liga", "dlig";
-  font-size: 23px; }
+  font-size: 24px; }
   @media (min-width: 760px) {
     h3 {
-      font-size: 26px; } }
+      font-size: 28px; } }
 
 h4 {
   line-height: 1.15;
@@ -334,6 +334,9 @@ h6 {
 
 h2 + ul, h3 + ul, h4 + ul, h5 + ul, h6 + ul {
   margin-top: 0; }
+
+h2.block-title {
+  font-weight: 800; }
 
 /* GLOBAL TEXT SETTINGS 
 -------------------- */
@@ -1060,6 +1063,9 @@ nav#block-quicklinks {
 /* ========================
   USER DASHBOARD
 ========================== */
+.user-dashboard .layout--twocol-sideleft-tabs {
+  max-width: 1840px; }
+
 @media (min-width: 760px) {
   .user-dashboard .layout__region--first {
     background: #ffffff;
