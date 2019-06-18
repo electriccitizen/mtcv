@@ -23,3 +23,23 @@
 	}//end form inline
 }//end views exposed form
 
+/* ==================
+  SPECIFIC VIEWS
+===================== */
+
+/* CONTENT (PAGES, RESOURCES, MEDIA)
+------------------------- */
+.view-id-content{
+	position: relative;
+	@include tab{
+		.vbo-view-form{
+			@include safeFlex(row,wrap,start,start);
+			#edit-actions.form-wrapper{
+				display: none;
+			}
+			#edit-header{
+				@include safeFlexOrder(99);
+			}
+		}
+	}
+}//end view content

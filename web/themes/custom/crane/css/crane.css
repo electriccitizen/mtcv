@@ -4458,7 +4458,7 @@ ol {
       background: #b3b3b3;
       border-color: #b3b3b3;
       color: #121212; }
-  .adminimal.crane .button[data-drupal-selector="edit-cancel"], .adminimal.crane .button.button--danger, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"] {
+  .adminimal.crane .button[data-drupal-selector="edit-cancel"], .adminimal.crane .button.button--danger, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"], .adminimal.crane .button#edit-reset {
     background-image: none;
     background-color: #3778c1;
     border: none;
@@ -4480,7 +4480,7 @@ ol {
     border-color: #bf0e0e;
     height: auto;
     min-width: 115px; }
-    .adminimal.crane .button[data-drupal-selector="edit-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-cancel"]:focus, .adminimal.crane .button.button--danger:hover, .adminimal.crane .button.button--danger:focus, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:focus {
+    .adminimal.crane .button[data-drupal-selector="edit-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-cancel"]:focus, .adminimal.crane .button.button--danger:hover, .adminimal.crane .button.button--danger:focus, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:focus, .adminimal.crane .button#edit-reset:hover, .adminimal.crane .button#edit-reset:focus {
       color: #121212;
       background-color: #cccccc;
       box-shadow: none;
@@ -4489,10 +4489,10 @@ ol {
       -webkit-transition: all 0.3s ease;
       -webkit-transform: translateZ(0);
       outline: none; }
-    .adminimal.crane .button[data-drupal-selector="edit-cancel"]:active, .adminimal.crane .button.button--danger:active, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:active {
+    .adminimal.crane .button[data-drupal-selector="edit-cancel"]:active, .adminimal.crane .button.button--danger:active, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:active, .adminimal.crane .button#edit-reset:active {
       color: #121212;
       background-color: #b3b3b3; }
-    .adminimal.crane .button[data-drupal-selector="edit-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-cancel"]:focus, .adminimal.crane .button.button--danger:hover, .adminimal.crane .button.button--danger:focus, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:focus {
+    .adminimal.crane .button[data-drupal-selector="edit-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-cancel"]:focus, .adminimal.crane .button.button--danger:hover, .adminimal.crane .button.button--danger:focus, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:focus, .adminimal.crane .button#edit-reset:hover, .adminimal.crane .button#edit-reset:focus {
       background: #cccccc;
       border-color: #cccccc;
       color: #121212; }
@@ -4856,20 +4856,21 @@ body .select2-container--default {
 
 /* CHECKBOXES
 ---------------- */
-.js-form-type-checkbox label {
+form .js-form-type-checkbox label {
   font-family: freight-sans-pro, sans-serif;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  display: inline-block; }
 
-.js-form-type-checkbox input[type="checkbox"] {
+form .js-form-type-checkbox input[type="checkbox"] {
   width: 18px !important;
   height: 18px !important;
   border-color: #3778c1; }
-  .js-form-type-checkbox input[type="checkbox"]:hover, .js-form-type-checkbox input[type="checkbox"]:focus {
+  form .js-form-type-checkbox input[type="checkbox"]:hover, form .js-form-type-checkbox input[type="checkbox"]:focus {
     border-color: #3778c1;
     background: rgba(28, 88, 131, 0.25); }
-  .js-form-type-checkbox input[type="checkbox"]:checked {
+  form .js-form-type-checkbox input[type="checkbox"]:checked {
     background: #3778c1; }
-    .js-form-type-checkbox input[type="checkbox"]:checked:hover, .js-form-type-checkbox input[type="checkbox"]:checked:focus {
+    form .js-form-type-checkbox input[type="checkbox"]:checked:hover, form .js-form-type-checkbox input[type="checkbox"]:checked:focus {
       background: rgba(28, 88, 131, 0.25); }
 
 /* SEPARATORS
@@ -5391,5 +5392,30 @@ nav#block-crane-quicklinks {
     width: 100%;
     padding-left: 10px;
     padding-right: 10px; }
+
+/* ==================
+  SPECIFIC VIEWS
+===================== */
+/* CONTENT (PAGES, RESOURCES, MEDIA)
+------------------------- */
+.view-id-content {
+  position: relative; }
+  @media (min-width: 760px) {
+    .view-id-content .vbo-view-form {
+      display: flex;
+      display: -ms-flexbox;
+      flex-direction: row;
+      -ms-flex-direction: row;
+      flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      justify-content: flex-start;
+      -ms-flex-pack: start;
+      align-items: flex-start;
+      -ms-flex-align: start; }
+      .view-id-content .vbo-view-form #edit-actions.form-wrapper {
+        display: none; }
+      .view-id-content .vbo-view-form #edit-header {
+        order: 99;
+        -ms-flex-order: 99; } }
 
 /*# sourceMappingURL=crane.css.map */

@@ -115,7 +115,7 @@
 			color: $buttonTextActive;
 		}
 	}
-	&[data-drupal-selector="edit-cancel"],&.button--danger,&[data-drupal-selector="edit-actions-cancel"]{
+	&[data-drupal-selector="edit-cancel"],&.button--danger,&[data-drupal-selector="edit-actions-cancel"],&#edit-reset{
 		@include resetButton;
 	}
 }

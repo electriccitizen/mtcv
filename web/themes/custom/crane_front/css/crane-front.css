@@ -483,12 +483,12 @@ ol {
     border-color: #b3b3b3; }
 
 .js .dropbutton-widget li.secondary-action {
-  border-top: 1px solid #323b49; }
+  border-top: 1px solid #2c5580; }
 
 .js .dropbutton-widget a {
   color: #323b49;
   padding: 8px 10px 8px 30px;
-  border-right: 1px solid #323b49;
+  border-right: 1px solid #2c5580;
   text-decoration: none;
   background: #dce7f3;
   font-family: mr-eaves-sans, sans-serif;
@@ -1215,10 +1215,11 @@ nav#block-quicklinks {
 .js .views-block.block-user-dashboard .views-field-operations .dropbutton-wrapper {
   position: absolute;
   bottom: 0;
-  left: -1px;
-  width: calc(100% + 2px);
+  width: 100%;
+  left: 0;
   border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px; }
+  border-bottom-left-radius: 4px;
+  border-top: 1px solid #cccccc; }
 
 .views-block.block-user-dashboard .views-field-type, .views-block.block-user-dashboard .views-field-changed, .views-block.block-user-dashboard .views-field-uid {
   font-size: 1.5rem;

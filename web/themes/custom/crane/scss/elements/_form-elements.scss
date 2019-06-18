@@ -285,23 +285,26 @@ body .select2-container--default{
 
 /* CHECKBOXES
 ---------------- */
-.js-form-type-checkbox{
-	label{
-		font-family: $bodyFont;
-		font-size: $baseSize;
-	}
-	input[type="checkbox"]{
-		width: 18px !important;
-		height: 18px !important;
-		border-color: $borderRule;
-		&:hover,&:focus{
-			border-color: $borderRule;
-			background: $transBlueLight;
+form{
+	.js-form-type-checkbox{
+		label{
+			font-family: $bodyFont;
+			font-size: $baseSize;
+			display: inline-block;
 		}
-		&:checked{
-			background: $blue;
+		input[type="checkbox"]{
+			width: 18px !important;
+			height: 18px !important;
+			border-color: $borderRule;
 			&:hover,&:focus{
+				border-color: $borderRule;
 				background: $transBlueLight;
+			}
+			&:checked{
+				background: $blue;
+				&:hover,&:focus{
+					background: $transBlueLight;
+				}
 			}
 		}
 	}
