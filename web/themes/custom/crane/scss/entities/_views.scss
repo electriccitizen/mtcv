@@ -19,6 +19,7 @@
 			width: 100%;
 			padding-left: 10px;
 			padding-right: 10px;
+
 		}
 	}//end form inline
 }//end views exposed form
@@ -31,15 +32,129 @@
 ------------------------- */
 .view-id-content{
 	position: relative;
-	@include tab{
-		.vbo-view-form{
-			@include safeFlex(row,wrap,start,start);
-			#edit-actions.form-wrapper{
-				display: none;
-			}
-			#edit-header{
-				@include safeFlexOrder(99);
-			}
+	.views-exposed-form{
+		@include contentStop{
+			padding-right: 580px;
+			min-height: 240px;
 		}
 	}
+	.vbo-view-form{
+		@include safeFlex(row,wrap,start,stretch);
+		@include bleed(30px);
+		#edit-actions.form-wrapper{
+			display: none;
+		}
+		#edit-header,[data-drupal-selector="edit-header"]{
+			width: 100%;
+			padding-left: 15px;
+			padding-right: 15px;
+			box-sizing: border-box;
+			@include contentStop{
+				position: absolute;
+				top: 0;
+				right: 0;
+				max-width: 580px;
+			}
+			#vbo-action-form-wrapper{
+				& > .form-item{
+					display: inline-block;
+					width: auto;
+					margin-right: 40px;
+					margin-bottom: $spaceSm;
+				}
+				.vbo-multipage-selector{
+					display: none;
+				}
+			}
+			.form-actions{
+				margin-top: 0;
+			}
+		}//end vbo-action-form-wrapper
+	}//end vbo view form
+	.view-content{
+		padding-top: $spaceLg;
+		border-top: 1px solid $borderRule;
+	}
+	.views-row{
+		@include calc(width, "100% - 30px");
+		margin-left: 15px;
+		margin-right: 15px;
+		@include tab{
+			@include calc(width, "50% - 30px");	
+		}
+		@include contentStop{
+			@include calc(width, "33.33% - 30px");
+		}
+		@include largeScreen{
+			@include calc(width, "25% - 30px");
+		}
+		&.Unpublished{
+			background: $lightPink;
+		}
+	}//end views row
 }//end view content
+
+.view-id-media_library.view-display-id-page{
+	position: relative;
+	.views-exposed-form{
+		border-bottom: 1px solid $borderRule;
+		padding-bottom: $spaceLg;
+		margin-bottom: $spaceLg;
+		@include contentStop{
+			padding-right: 580px;
+			min-height: 160px;
+		}
+	}
+	.media-library-views-form{
+		@include safeFlex(row,wrap,start,stretch);
+		#edit-actions.form-wrapper{
+			display: none;
+		}
+		#edit-header,[data-drupal-selector="edit-header"]{
+			width: 100%;
+			box-sizing: border-box;
+			@include contentStop{
+				position: absolute;
+				top: 0;
+				right: 0;
+				max-width: 580px;
+			}
+			.form-actions{
+				margin-top: 0;
+			}
+		}//end vbo-action-form-wrapper
+		.media-library-select-all{
+			width: 100%;
+			padding-left: 7px;
+			label{
+				font-family: $bodyFont;
+				font-size: $baseSize;
+				display: inline-block;
+				font-weight: $regular;
+			}
+			input{
+				width: 18px !important;
+				height: 18px !important;
+				border-color: $borderRule;
+				margin-right: 1rem;
+				&:hover,&:focus{
+					border-color: $borderRule;
+					background: $transBlueLight;
+				}
+				&:checked{
+					background: $blue;
+					&:hover,&:focus{
+						background: $transBlueLight;
+					}
+				}
+			}//end input
+		}//end media library select all
+		.media-library-item{
+			.js-click-to-select-checkbox{
+				right: auto;
+				left: 8px;
+			}
+		}//end media library item
+	}//end media library views form
+}//end media view
+

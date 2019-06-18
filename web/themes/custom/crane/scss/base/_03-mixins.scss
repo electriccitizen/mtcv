@@ -208,17 +208,6 @@
 	background: $ruleColor;
 }
 
-
-///mixin - button
-@mixin button{
-	
-}
-
-///mixin - outlineButton
-@mixin outlineButton($outlineColor){
-	
-}
-
 @mixin triangle($triDirection,$triHeight,$triWidth,$triColor){
 	width: 0;
 	height: 0;

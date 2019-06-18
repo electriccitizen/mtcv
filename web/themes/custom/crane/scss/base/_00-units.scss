@@ -10,6 +10,7 @@ $smallTab: 600px;
 $tab: 760px;
 $desk: 975px;
 $contentStop: 1200px;
+$largeScreen: 1800px;
 $textMax: 800px;
 $onlyTab: 760px 899px;
 $onlySmall: max-width 759px;
@@ -59,6 +60,13 @@ $sectionGutter: 40px;
 ///mixin - contentStop
 @mixin contentStop {
 	@include breakpoint($contentStop) {
+		@content;
+	}
+}
+
+///mixin - largeScreen
+@mixin largeScreen {
+	@include breakpoint($largeScreen) {
 		@content;
 	}
 }

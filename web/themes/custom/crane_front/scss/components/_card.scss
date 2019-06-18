@@ -13,16 +13,54 @@
 			color: $hoverLink;
 		}
 	}
-	.dropbutton-action{
+}//end card item
+
+.views-card{
+	position: relative;
+	@include cardItem;
+	padding-bottom: 70px;
+	.views-label{
+		font-weight: $heavy;
+	}
+	.views-field-title{
+		margin-bottom: $spaceXs;
 		a{
-			color: $darkBlue;
+			text-decoration: none;
 			&:hover,&:focus{
-				color: $buttonTextHover;
-			}
-			&:active{
-				color: $buttonTextActive;
+				text-decoration: underline;
 			}
 		}
 	}
-}//end card item
-
+	.views-field-field-summary{
+		margin-bottom: $spaceXs;
+	}
+	.views-field-operations{
+		.js &{
+			.dropbutton-wrapper{
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				left: 0;
+				border-bottom-right-radius: 4px;
+				border-bottom-left-radius: 4px;
+				border-top: 1px solid $grey;
+				.dropbutton-action{
+					a{
+						color: $darkBlue;
+						&:hover,&:focus{
+							color: $buttonTextHover;
+						}
+						&:active{
+							color: $buttonTextActive;
+						}
+					}
+				}
+			}//end dropbutton-wrapper
+		}//end js &
+	}//end operations
+	.views-field-meta{
+		font-size: 1.5rem;
+		display: inline-block;
+		margin-right: 2rem;
+	}
+}//end views card

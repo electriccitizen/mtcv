@@ -630,6 +630,47 @@ input + .description {
 /* ========================
   CARD
 ========================== */
+.views-card {
+  position: relative;
+  background: #f6f6f6;
+  border-radius: 4px;
+  border: 1px solid #cccccc;
+  padding: 20px 30px;
+  margin-bottom: 4rem;
+  padding-bottom: 70px; }
+  .views-card a {
+    color: #2c5580; }
+    .views-card a:hover, .views-card a:focus {
+      color: #676767; }
+  .views-card .views-label {
+    font-weight: 700; }
+  .views-card .views-field-title {
+    margin-bottom: 1rem; }
+    .views-card .views-field-title a {
+      text-decoration: none; }
+      .views-card .views-field-title a:hover, .views-card .views-field-title a:focus {
+        text-decoration: underline; }
+  .views-card .views-field-field-summary {
+    margin-bottom: 1rem; }
+  .js .views-card .views-field-operations .dropbutton-wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top: 1px solid #cccccc; }
+    .js .views-card .views-field-operations .dropbutton-wrapper .dropbutton-action a {
+      color: #323b49; }
+      .js .views-card .views-field-operations .dropbutton-wrapper .dropbutton-action a:hover, .js .views-card .views-field-operations .dropbutton-wrapper .dropbutton-action a:focus {
+        color: #121212; }
+      .js .views-card .views-field-operations .dropbutton-wrapper .dropbutton-action a:active {
+        color: #121212; }
+  .views-card .views-field-meta {
+    font-size: 1.5rem;
+    display: inline-block;
+    margin-right: 2rem; }
+
 /* ========================
   FOOTER
 ========================== */
@@ -1180,50 +1221,6 @@ nav#block-quicklinks {
     -ms-flex-align: stretch; } }
 
 .views-block.block-user-dashboard .views-row {
-  background: #f6f6f6;
-  border-radius: 4px;
-  border: 1px solid #cccccc;
-  padding: 20px 30px;
-  margin-bottom: 4rem;
-  position: relative;
-  padding-bottom: 60px;
   width: 48.5%; }
-  .views-block.block-user-dashboard .views-row a {
-    color: #2c5580; }
-    .views-block.block-user-dashboard .views-row a:hover, .views-block.block-user-dashboard .views-row a:focus {
-      color: #676767; }
-  .views-block.block-user-dashboard .views-row .dropbutton-action a {
-    color: #323b49; }
-    .views-block.block-user-dashboard .views-row .dropbutton-action a:hover, .views-block.block-user-dashboard .views-row .dropbutton-action a:focus {
-      color: #121212; }
-    .views-block.block-user-dashboard .views-row .dropbutton-action a:active {
-      color: #121212; }
-
-.views-block.block-user-dashboard .views-label {
-  font-weight: 700; }
-
-.views-block.block-user-dashboard .views-field-title {
-  margin-bottom: 1rem; }
-  .views-block.block-user-dashboard .views-field-title a {
-    text-decoration: none; }
-    .views-block.block-user-dashboard .views-field-title a:hover, .views-block.block-user-dashboard .views-field-title a:focus {
-      text-decoration: underline; }
-
-.views-block.block-user-dashboard .views-field-field-summary {
-  margin-bottom: 1rem; }
-
-.js .views-block.block-user-dashboard .views-field-operations .dropbutton-wrapper {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  left: 0;
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
-  border-top: 1px solid #cccccc; }
-
-.views-block.block-user-dashboard .views-field-type, .views-block.block-user-dashboard .views-field-changed, .views-block.block-user-dashboard .views-field-uid {
-  font-size: 1.5rem;
-  display: inline-block;
-  margin-right: 2rem; }
 
 /*# sourceMappingURL=crane-front.css.map */

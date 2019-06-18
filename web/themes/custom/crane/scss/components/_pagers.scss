@@ -1,0 +1,31 @@
+/* ==============
+	 PAGERS
+================== */
+
+.pager{
+	position: relative;
+	padding: 15px 0;
+	border-top: 1px solid $borderRule;
+	.pager__item{
+		padding: 0 2px;
+		font-size: 1.6rem;
+		&:not(.pager__item--first):not(.pager__item--previous):not(.pager__item--next):not(.pager__item--last){
+			font-size: 2rem;
+		}
+		a{
+			color: $link;
+			&:hover,&:focus{
+				color: $hoverLink;
+			}
+		}
+		&.is-active{
+			a{
+				color: $darkBlue;
+				border-bottom-color: $darkBlue;
+				&:focus,&:focus{
+					color: $hoverLink;
+				}
+			}
+		}
+	}//end pager__item
+}//end .pager

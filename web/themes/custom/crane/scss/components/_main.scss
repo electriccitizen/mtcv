@@ -6,6 +6,6 @@
 	margin: 0;
 	padding-left: 2.5em;
 	padding-right: 2.5em;
-	border-top: 1px solid $link;
-	box-shadow: 0 -2px 6px rgba(35,35,35,0.1); 
+	border-top: 1px solid $link; 
+	box-sizing: border-box;
 }
