@@ -14,14 +14,14 @@
 
 .js .dropbutton-widget{
 	li.secondary-action{
-		border-top: 1px solid $white;
+		border-top: 1px solid $darkBlue;
 	}
 	a{
-		color: $white;
+		color: $darkBlue;
 		padding: 8px 10px 8px 30px;
-		border-right: 1px solid $white;
+		border-right: 1px solid $darkBlue;
 		text-decoration: none;
-		background: $buttonBack;
+		background: $blueGrey;
 		font-family: $headerFont;
 		text-transform: uppercase;
 		font-weight: $xHeavy;
@@ -35,8 +35,8 @@
 		}
 	}
 	button{
-		background: $buttonBack;
-		color: $white;
+		background: $blueGrey;
+		color: $darkBlue;
 		&:hover,&:focus{
 			background: $buttonBackHover;
 			color: $buttonTextHover;

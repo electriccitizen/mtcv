@@ -95,15 +95,14 @@
 	}
 	.view-content{
 		@include tab{
-			display: grid;
-			grid-template-columns: 48.5% 48.5%;
-			grid-column-gap: 3%;
+			@include safeFlex(row,wrap,justify,stretch);
 		}
 	}
 	.views-row{
 		@include cardItem;
 		position: relative;
 		padding-bottom: 60px;
+		width: 48.5%;
 	}
 	.views-label{
 		font-weight: $heavy;

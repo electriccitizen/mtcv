@@ -1,0 +1,25 @@
+/* ========================
+  VIEWS
+========================== */
+
+.views-exposed-form{
+	.form--inline{
+		@include safeFlex(row,wrap,start,start);
+		@include bleed(20px);
+		& > .form-item{
+			padding-left: 10px;
+			padding-right: 10px;
+			width: 100%;
+			@include smallTab{
+				max-width: 240px;
+			}
+		}//end form item
+		#edit-actions{
+			margin-top: 0;
+			width: 100%;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}//end form inline
+}//end views exposed form
+

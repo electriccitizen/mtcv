@@ -43,14 +43,23 @@ $sideBar: 200px;
 .layout--twocol-sideleft-tabs{
 	width: 100%;
 	@include tab{
-		display: grid;
-		grid-template-columns: $sideBar 1fr;
-		grid-column-gap: 30px;
+		@include clearFix;
+		@supports (display: grid){
+			display: grid;
+			grid-template-columns: $sideBar 1fr;
+			grid-column-gap: 30px;
+		}
 	}
 	.layout__region--first{
 		padding: $elementSpace $siteMarginMobile;
 		@include tab{
-			grid-area: 1 / 1 / 4 / 1;
+			float: left;
+			width: $sideBar;
+			@supports (display: grid){
+				float: none;
+				width: 100%;
+				grid-area: 1 / 1 / 4 / 1;
+			}
 		}
 	}//end layout region second
 	.layout__region--content{
@@ -59,7 +68,11 @@ $sideBar: 200px;
 			padding: $elementSpace $siteMarginMobile;
 		}
 		@include tab{
-			grid-area: 1 / 2 / 1 / 2;
+			margin-left: $sideBar + 40px;
+			@supports (display: grid){
+				margin-left: 0;
+				grid-area: 1 / 2 / 1 / 2;
+			}
 		}
 	}
 	.layout__region--tabs{
@@ -68,7 +81,11 @@ $sideBar: 200px;
 			padding: $elementSpace $siteMarginMobile;
 		}
 		@include tab{
-			grid-area: 2 / 2 / 2 / 2;
+			margin-left: $sideBar + 40px;
+			@supports (display: grid){
+				margin-left: 0;
+				grid-area: 2 / 2 / 2 / 2;
+			}
 		}
 		.tabs-wrapper > div:not(:first-of-type){
 			display: none;
@@ -116,7 +133,11 @@ $sideBar: 200px;
 			padding: $elementSpace $siteMarginMobile;
 		}
 		@include tab{
-			grid-area: 3 / 2 / 3 / 2;
+			margin-left: $sideBar + 40px;
+			@supports (display: grid){
+				margin-left: 0;
+				grid-area: 3 / 2 / 3 / 2;
+			}
 		}
 	}
 }//end layout-twocol-sideleft

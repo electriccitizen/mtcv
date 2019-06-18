@@ -4590,7 +4590,7 @@ ol {
 ========================== */
 /* FORM ELEMENTS
 ------------------ */
-input[type="submit"].button {
+form input[type="submit"].button {
   background-image: none;
   background-color: #3778c1;
   border: none;
@@ -4611,7 +4611,7 @@ input[type="submit"].button {
   color: #ffffff;
   height: auto;
   min-width: 115px; }
-  input[type="submit"].button:hover, input[type="submit"].button:focus {
+  form input[type="submit"].button:hover, form input[type="submit"].button:focus {
     color: #121212;
     background-color: #cccccc;
     box-shadow: none;
@@ -4620,18 +4620,18 @@ input[type="submit"].button {
     -webkit-transition: all 0.3s ease;
     -webkit-transform: translateZ(0);
     outline: none; }
-  input[type="submit"].button:active {
+  form input[type="submit"].button:active {
     color: #121212;
     background-color: #b3b3b3; }
-  input[type="submit"].button:hover, input[type="submit"].button:focus {
+  form input[type="submit"].button:hover, form input[type="submit"].button:focus {
     background: #cccccc;
     border-color: #cccccc;
     color: #121212; }
 
-.form-item {
+form .form-item {
   width: 100%;
   margin-bottom: 3rem; }
-  .form-item label {
+  form .form-item label {
     font-family: mr-eaves-sans, sans-serif;
     font-size: 1.8rem;
     color: #121212;
@@ -4639,9 +4639,9 @@ input[type="submit"].button {
     margin-bottom: 0.5rem;
     padding-bottom: 0; }
 
-.form-required, .js-form-required {
+form .form-required, form .js-form-required {
   position: relative; }
-  .form-required:after, .js-form-required:after {
+  form .form-required:after, form .js-form-required:after {
     content: '*';
     color: #bf0e0e;
     position: relative;
@@ -4649,43 +4649,45 @@ input[type="submit"].button {
     right: -.5rem;
     font-size: 1.2rem; }
 
-input.form-text {
-  border: 2px solid #121212;
-  font-size: 1.6rem;
+form input.form-text {
+  border: 1px solid #3778c1;
+  border-radius: 2px;
+  font-size: 1.5rem;
   font-family: freight-sans-pro, sans-serif;
-  padding: 10px 6px 11px;
+  padding: 6px;
   width: 100%;
-  line-height: 1; }
-  input.form-text::-webkit-placeholder {
+  line-height: 1;
+  min-height: 30px; }
+  form input.form-text::-webkit-placeholder {
     opacity: 0.4;
     color: #121212; }
-  input.form-text::-moz-placeholder {
+  form input.form-text::-moz-placeholder {
     opacity: 0.4;
     color: #121212; }
-  input.form-text:-ms-input-placeholder {
+  form input.form-text:-ms-input-placeholder {
     opacity: 0.4;
     color: #121212; }
-  input.form-text::-webkit-input-placeholder {
+  form input.form-text::-webkit-input-placeholder {
     opacity: 0.4;
     color: #121212; }
-  input.form-text:focus::-webkit-placeholder {
+  form input.form-text:focus::-webkit-placeholder {
     opacity: 0.2;
     color: #121212; }
-  input.form-text:focus::-moz-placeholder {
+  form input.form-text:focus::-moz-placeholder {
     opacity: 0.2;
     color: #121212; }
-  input.form-text:focus:-ms-input-placeholder {
+  form input.form-text:focus:-ms-input-placeholder {
     opacity: 0.2;
     color: #121212; }
-  input.form-text:focus::-webkit-input-placeholder {
+  form input.form-text:focus::-webkit-input-placeholder {
     opacity: 0.2;
     color: #121212; }
 
-.description {
+form .description {
   font-size: 1.4rem;
   color: #676767; }
 
-input + .description {
+form input + .description {
   padding-top: 1rem; }
 
 /* SELECT 2
@@ -4717,7 +4719,7 @@ body .select2-container--default {
   body .select2-container--default .select2-selection--single {
     min-width: 120px;
     font-size: 1.4rem;
-    border: 1px solid #121212;
+    border: 1px solid #3778c1;
     border-radius: 2px;
     height: auto;
     font-family: freight-sans-pro, sans-serif; }
@@ -4746,7 +4748,7 @@ body .select2-container--default {
   body .select2-container--default .select2-selection--multiple {
     min-width: 120px;
     font-size: 1.4rem;
-    border: 1px solid #121212;
+    border: 1px solid #3778c1;
     border-radius: 2px;
     height: auto;
     font-family: freight-sans-pro, sans-serif;
@@ -4800,14 +4802,14 @@ body .select2-container--default {
       border-radius: 0;
       background-color: #f6f6f6; }
   body .select2-container--default.select2-container--open .select2-selection--single, body .select2-container--default.select2-container--focus .select2-selection--single {
-    border-color: #121212; }
+    border-color: #3778c1; }
     body .select2-container--default.select2-container--open .select2-selection--single .select2-selection__rendered, body .select2-container--default.select2-container--focus .select2-selection--single .select2-selection__rendered {
       background: #f6f6f6; }
       body .select2-container--default.select2-container--open .select2-selection--single .select2-selection__rendered:after, body .select2-container--default.select2-container--focus .select2-selection--single .select2-selection__rendered:after {
         content: "\f106";
         font-size: 20px; }
   body .select2-container--default.select2-container--open .select2-selection--multiple, body .select2-container--default.select2-container--focus .select2-selection--multiple {
-    border-color: #121212; }
+    border-color: #3778c1; }
     body .select2-container--default.select2-container--open .select2-selection--multiple .select2-search--inline, body .select2-container--default.select2-container--focus .select2-selection--multiple .select2-search--inline {
       background: #f6f6f6; }
       body .select2-container--default.select2-container--open .select2-selection--multiple .select2-search--inline:after, body .select2-container--default.select2-container--focus .select2-selection--multiple .select2-search--inline:after {
@@ -4841,7 +4843,7 @@ body .select2-container--default {
 /* SELECT 2 DROPDOWNS
 ---------------- */
 .select2-container .select2-dropdown {
-  border: 1px solid #121212;
+  border: 1px solid #3778c1;
   border-radius: 0;
   border-top: 0;
   padding: 0; }
@@ -4861,9 +4863,9 @@ body .select2-container--default {
 .js-form-type-checkbox input[type="checkbox"] {
   width: 18px !important;
   height: 18px !important;
-  border-color: #121212; }
+  border-color: #3778c1; }
   .js-form-type-checkbox input[type="checkbox"]:hover, .js-form-type-checkbox input[type="checkbox"]:focus {
-    border-color: #121212;
+    border-color: #3778c1;
     background: rgba(28, 88, 131, 0.25); }
   .js-form-type-checkbox input[type="checkbox"]:checked {
     background: #3778c1; }
@@ -4881,7 +4883,19 @@ body .select2-container--default {
 /* LOCAL ACTIONS
 ------------------ */
 .adminimal.crane #block-crane-local-actions ul.action-links {
-  margin: 2em 0 0; }
+  position: relative;
+  margin: 2em 0 1rem;
+  padding: 3rem 0 1rem; }
+  .adminimal.crane #block-crane-local-actions ul.action-links:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -50vw;
+    z-index: -1;
+    width: 200vw;
+    height: 100%;
+    background: #f6f6f6; }
 
 /* PRIMARY TABS
 --------------------- */
@@ -5347,5 +5361,35 @@ nav#block-crane-quicklinks {
     margin: 0;
     font-feature-settings: "liga", "dlig";
     font-size: 20px; }
+
+/* ========================
+  VIEWS
+========================== */
+.views-exposed-form .form--inline {
+  display: flex;
+  display: -ms-flexbox;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  justify-content: flex-start;
+  -ms-flex-pack: start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+  margin-left: -10px;
+  margin-right: -10px;
+  width: calc(100% +  20px); }
+  .views-exposed-form .form--inline > .form-item {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%; }
+    @media (min-width: 600px) {
+      .views-exposed-form .form--inline > .form-item {
+        max-width: 240px; } }
+  .views-exposed-form .form--inline #edit-actions {
+    margin-top: 0;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px; }
 
 /*# sourceMappingURL=crane.css.map */
