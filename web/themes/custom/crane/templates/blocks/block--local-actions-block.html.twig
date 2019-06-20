@@ -1,0 +1,20 @@
+{% extends "@block/block.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override for local actions (primary admin actions.)
+ */
+#}
+{% block content %}
+  {% if content %}
+  	{% set access = '' %}
+  	{% for key, child in content if key|first != '#' %}
+  		{% if child['#access'].isAllowed() == TRUE %}
+  			{% set access = ' can-access' %}
+  		{% endif %}
+  	{% endfor %}
+    <ul class="action-links{{ access|join }}">
+      {{ content }}
+    </ul>
+  {% endif %}
+{% endblock %}

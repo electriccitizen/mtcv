@@ -23,6 +23,15 @@ third_party_settings:
         destination: default
         url: ''
         external: ''
+      52:
+        destination: default
+        url: ''
+        external: ''
+    destination: url
+    url: /admin/structure/taxonomy/manage/navigator/overview
+    personalizable: 0
+    redirect_edit: 0
+    external: ''
 name: Navigator
 vid: navigator
 description: 'Prompts for the Legal Help finder.'

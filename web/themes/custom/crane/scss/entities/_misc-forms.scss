@@ -2,6 +2,38 @@
   MISC FORMS
 ========================== */
 .adminimal.crane{
+	.form-item-prefix{
+		margin-bottom: $spaceSm;
+		color: $darkGrey;
+		span{
+			font-style: italic;
+			color: $black;
+		}
+	}
+
+	/* MENU LINK 
+	----------------- */
+	.menu-link-content-form{
+		.js-form-type-textfield,.js-form-type-entity-autocomplete{
+			input{
+				max-width: 320px;
+			}
+		}
+	}//END MENU LINK FORM
+
+	/* TAXONOMY TERMS
+	------------------- */
+	.taxonomy-term-form{
+		.js-form-type-textfield{
+			input{
+				max-width: 402px;
+			}
+		}
+		details.seven-details{
+			max-width: 400px;
+			margin-bottom: $elementSpace;
+		}
+	}//end taxonomy term form
 
 	/* ADD FIELD
 	----------------- */

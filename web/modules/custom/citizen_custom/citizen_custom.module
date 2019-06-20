@@ -70,3 +70,30 @@ function citizen_custom_local_tasks_alter(&$local_tasks) {
 function citizen_custom_menu_local_actions_alter(&$local_actions) {
   $local_actions['node.add_page']['title'] = 'Add Page';
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function citizen_custom_form_alter(&$form, FormStateInterface $form_state) {
+  $formId = $form['#id'];
+  //clean up menu link form for non-admins
+  if($formId == 'menu-link-content-menu-link-content-form'){
+    $user = \Drupal::currentUser();
+    $userRole = $user->getRoles();
+    $form['title']['#prefix'] = '<div class="form-item-prefix">Go back to the <a href="/admin/structure/menu/manage/main/">main menu</a>.</div>';
+    if((in_array('editor', $userRole)) || (in_array('site_manager', $userRole))){
+      unset($form['description'],$form['weight'],$form['expanded'],$form['link']['widget'][0]['options']);
+    }
+  } //End menu content link form alter
+  
+  //alter taxononmy forms
+  if(isset($form['vid']['#value'])){
+    $vocab = $form['vid']['#value'];
+    $human = ucwords(str_replace('_',' ',$vocab));
+    if(isset($form['tid']['#value'])){
+      $form['name']['#prefix'] = '<div class="form-item-prefix">Edit this <span>'.$human.'</span> term or return to the <a href="/admin/structure/taxonomy/manage/'.$vocab.'/overview">terms list</a>.</div>';
+    }else{
+      $form['name']['#prefix'] = '<div class="form-item-prefix">Add a new <span>'.$human.'</span> term or return to the <a href="/admin/structure/taxonomy/manage/'.$vocab.'/overview">terms list</a>.</div>';
+    }
+  }
+}

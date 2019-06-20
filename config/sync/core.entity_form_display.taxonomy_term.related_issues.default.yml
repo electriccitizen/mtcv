@@ -1,0 +1,22 @@
+uuid: d563513a-77eb-4c50-b1bd-04aa14d2678e
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.related_issues
+id: taxonomy_term.related_issues.default
+targetEntityType: taxonomy_term
+bundle: related_issues
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

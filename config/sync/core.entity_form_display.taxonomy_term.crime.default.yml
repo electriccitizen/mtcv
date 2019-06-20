@@ -1,0 +1,22 @@
+uuid: 2a1fc6a4-f9f4-4040-8744-ede78844c28f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.crime
+id: taxonomy_term.crime.default
+targetEntityType: taxonomy_term
+bundle: crime
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

@@ -218,7 +218,7 @@ body:not(.logged-in.path-user) #block-crane-front-content {
         border: none;
         color: #ffffff;
         line-height: 1.15;
-        padding: .75rem 1.5rem;
+        padding: 1rem 1.5rem;
         display: inline-block;
         vertical-align: middle;
         text-decoration: none;
@@ -227,11 +227,13 @@ body:not(.logged-in.path-user) #block-crane-front-content {
         letter-spacing: .04em;
         font-family: mr-eaves-sans, sans-serif;
         font-weight: 800;
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         margin-bottom: 3rem;
         background: transparent;
-        border: 1px solid #3778c1;
-        color: #3778c1;
+        border: 2px solid #3778c1;
+        color: #121212;
+        font-weight: 700;
+        border-radius: 4px;
         width: 100%;
         margin-bottom: -1px; }
         .layout--twocol-sideleft-tabs .layout__region--tabs ul.tabs-header .tab-control:hover, .layout--twocol-sideleft-tabs .layout__region--tabs ul.tabs-header .tab-control:focus {
@@ -376,7 +378,7 @@ body {
   color: #121212;
   margin: 0;
   font-family: freight-sans-pro, sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 1.4;
   letter-spacing: .02em; }
 
@@ -415,7 +417,7 @@ ol {
   border: none;
   color: #ffffff;
   line-height: 1.15;
-  padding: .75rem 1.5rem;
+  padding: 1rem 1.5rem;
   display: inline-block;
   vertical-align: middle;
   text-decoration: none;
@@ -424,7 +426,7 @@ ol {
   letter-spacing: .04em;
   font-family: mr-eaves-sans, sans-serif;
   font-weight: 800;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   margin-bottom: 3rem; }
   .button:hover, .button:focus {
     color: #121212;
@@ -444,7 +446,7 @@ ol {
   border: none;
   color: #ffffff;
   line-height: 1.15;
-  padding: .75rem 1.5rem;
+  padding: 1rem 1.5rem;
   display: inline-block;
   vertical-align: middle;
   text-decoration: none;
@@ -453,11 +455,13 @@ ol {
   letter-spacing: .04em;
   font-family: mr-eaves-sans, sans-serif;
   font-weight: 800;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   margin-bottom: 3rem;
   background: transparent;
-  border: 1px solid #3778c1;
-  color: #3778c1; }
+  border: 2px solid #3778c1;
+  color: #121212;
+  font-weight: 700;
+  border-radius: 4px; }
   .button-outline:hover, .button-outline:focus {
     color: #121212;
     background-color: #cccccc;
@@ -532,7 +536,7 @@ input[type="submit"].button {
   border: none;
   color: #ffffff;
   line-height: 1.15;
-  padding: .75rem 1.5rem;
+  padding: 1rem 1.5rem;
   display: inline-block;
   vertical-align: middle;
   text-decoration: none;
@@ -541,7 +545,7 @@ input[type="submit"].button {
   letter-spacing: .04em;
   font-family: mr-eaves-sans, sans-serif;
   font-weight: 800;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   margin-bottom: 3rem;
   background: #3778c1;
   color: #ffffff;
@@ -1087,7 +1091,8 @@ nav#block-quicklinks {
 .user-form {
   max-width: 400px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding-top: 6rem; }
   .user-form h1 {
     text-align: center;
     margin-bottom: 3rem; }

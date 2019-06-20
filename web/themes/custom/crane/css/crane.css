@@ -4413,7 +4413,7 @@ ol {
   border: none;
   color: #ffffff;
   line-height: 1.15;
-  padding: .75rem 1.5rem;
+  padding: 1.15rem 1.5rem 1rem;
   display: inline-block;
   vertical-align: middle;
   text-decoration: none;
@@ -4421,8 +4421,8 @@ ol {
   text-transform: uppercase;
   letter-spacing: .04em;
   font-family: mr-eaves-sans, sans-serif;
-  font-weight: 700;
-  font-size: 1.4rem;
+  font-weight: 800;
+  font-size: 1.5rem;
   margin-bottom: 3rem; }
   .adminimal.crane .button:hover, .adminimal.crane .button:focus {
     color: #121212;
@@ -4469,7 +4469,7 @@ ol {
     border: none;
     color: #ffffff;
     line-height: 1.15;
-    padding: .75rem 1.5rem;
+    padding: 1.15rem 1.5rem 1rem;
     display: inline-block;
     vertical-align: middle;
     text-decoration: none;
@@ -4477,8 +4477,8 @@ ol {
     text-transform: uppercase;
     letter-spacing: .04em;
     font-family: mr-eaves-sans, sans-serif;
-    font-weight: 700;
-    font-size: 1.4rem;
+    font-weight: 800;
+    font-size: 1.5rem;
     margin-bottom: 3rem;
     background: #bf0e0e;
     color: #ffffff;
@@ -4508,7 +4508,7 @@ ol {
   border: none;
   color: #ffffff;
   line-height: 1.15;
-  padding: .75rem 1.5rem;
+  padding: 1.15rem 1.5rem 1rem;
   display: inline-block;
   vertical-align: middle;
   text-decoration: none;
@@ -4516,10 +4516,9 @@ ol {
   text-transform: uppercase;
   letter-spacing: .04em;
   font-family: mr-eaves-sans, sans-serif;
-  font-weight: 700;
-  font-size: 1.4rem;
+  font-weight: 800;
+  font-size: 1.5rem;
   margin-bottom: 3rem;
-  padding: .85rem 1.5rem .75rem;
   background: #3778c1;
   color: #ffffff; }
   .adminimal.crane .button--primary:hover, .adminimal.crane .button--primary:focus {
@@ -4547,7 +4546,7 @@ ol {
   border: none;
   color: #ffffff;
   line-height: 1.15;
-  padding: .75rem 1.5rem;
+  padding: 1.15rem 1.5rem 1rem;
   display: inline-block;
   vertical-align: middle;
   text-decoration: none;
@@ -4555,8 +4554,8 @@ ol {
   text-transform: uppercase;
   letter-spacing: .04em;
   font-family: mr-eaves-sans, sans-serif;
-  font-weight: 700;
-  font-size: 1.4rem;
+  font-weight: 800;
+  font-size: 1.5rem;
   margin-bottom: 3rem;
   background: transparent;
   border: 1px solid #3778c1;
@@ -4601,7 +4600,7 @@ form input[type="submit"].button {
   border: none;
   color: #ffffff;
   line-height: 1.15;
-  padding: .75rem 1.5rem;
+  padding: 1.15rem 1.5rem 1rem;
   display: inline-block;
   vertical-align: middle;
   text-decoration: none;
@@ -4609,8 +4608,8 @@ form input[type="submit"].button {
   text-transform: uppercase;
   letter-spacing: .04em;
   font-family: mr-eaves-sans, sans-serif;
-  font-weight: 700;
-  font-size: 1.4rem;
+  font-weight: 800;
+  font-size: 1.5rem;
   margin-bottom: 3rem;
   background: #3778c1;
   color: #ffffff;
@@ -4927,7 +4926,7 @@ form .js-form-type-checkbox input[type="checkbox"], form .js-form-type-checkbox 
 ------------------ */
 .adminimal.crane #block-crane-local-actions ul.action-links {
   position: relative;
-  margin: 2em 0 1rem;
+  margin: 3rem 0 0;
   padding: 3rem 0 1rem; }
   .adminimal.crane #block-crane-local-actions ul.action-links:after {
     content: '';
@@ -4939,6 +4938,14 @@ form .js-form-type-checkbox input[type="checkbox"], form .js-form-type-checkbox 
     width: 200vw;
     height: 100%;
     background: #f6f6f6; }
+  .adminimal.crane #block-crane-local-actions ul.action-links:not(.can-access) {
+    display: none; }
+  .adminimal.crane #block-crane-local-actions ul.action-links a.button.button--small {
+    background: #ffffff; }
+    .adminimal.crane #block-crane-local-actions ul.action-links a.button.button--small:hover, .adminimal.crane #block-crane-local-actions ul.action-links a.button.button--small:focus {
+      background: #cccccc; }
+    .adminimal.crane #block-crane-local-actions ul.action-links a.button.button--small:active {
+      background: #b3b3b3; }
 
 /* PRIMARY TABS
 --------------------- */
@@ -4963,7 +4970,7 @@ ul.tabs.primary .tabs__tab a {
   border: none;
   color: #ffffff;
   line-height: 1.15;
-  padding: .75rem 1.5rem;
+  padding: 1.15rem 1.5rem 1rem;
   display: inline-block;
   vertical-align: middle;
   text-decoration: none;
@@ -4971,8 +4978,8 @@ ul.tabs.primary .tabs__tab a {
   text-transform: uppercase;
   letter-spacing: .04em;
   font-family: mr-eaves-sans, sans-serif;
-  font-weight: 700;
-  font-size: 1.4rem;
+  font-weight: 800;
+  font-size: 1.5rem;
   margin-bottom: 3rem;
   background: transparent;
   border: 1px solid #3778c1;
@@ -5018,6 +5025,15 @@ ul.tabs.primary .tabs__tab a {
       background: #b3b3b3;
       color: #121212;
       border-color: #b3b3b3; }
+
+/* ==============
+	 BLOCKS
+================== */
+#block-crane-help {
+  padding: 3rem 0 0; }
+
+#block-crane-content {
+  padding: 3rem 0; }
 
 /* ========================
   CARD
@@ -5131,6 +5147,7 @@ body.adminimal.crane {
   HEADER
 ========================== */
 .adminimal.crane .content-header {
+  padding: 4rem 0 0;
   /* FF3.6+ */
   /* Chrome10+,Safari5.1+ */
   /* Opera 11.10+ */
@@ -5447,12 +5464,29 @@ nav#block-crane-quicklinks {
   MISC FORMS
 ========================== */
 .adminimal.crane {
+  /* MENU LINK 
+	----------------- */
+  /* TAXONOMY TERMS
+	------------------- */
   /* ADD FIELD
 	----------------- */
   /* DELETE CONFIG
 	-------------------- */
   /* VIEWS
 	--------------------- */ }
+  .adminimal.crane .form-item-prefix {
+    margin-bottom: 2rem;
+    color: #4a4a4a; }
+    .adminimal.crane .form-item-prefix span {
+      font-style: italic;
+      color: #121212; }
+  .adminimal.crane .menu-link-content-form .js-form-type-textfield input, .adminimal.crane .menu-link-content-form .js-form-type-entity-autocomplete input {
+    max-width: 320px; }
+  .adminimal.crane .taxonomy-term-form .js-form-type-textfield input {
+    max-width: 402px; }
+  .adminimal.crane .taxonomy-term-form details.seven-details {
+    max-width: 400px;
+    margin-bottom: 3rem; }
   .adminimal.crane .field-ui-field-storage-add-form .select2-container--default {
     min-width: 200px; }
   .adminimal.crane .js-form-type-textfield input {
