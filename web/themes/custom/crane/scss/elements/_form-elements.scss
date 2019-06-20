@@ -61,9 +61,11 @@
 		content: '*';
 		color: $validation;
 		position: relative;
-		top: -1px;
+		top: 4px;
 		right: -.5rem;
-		font-size: 1.2rem;
+		font-size: 1.6rem;
+		background: transparent;
+		margin: 0;
 	}
 }
 
