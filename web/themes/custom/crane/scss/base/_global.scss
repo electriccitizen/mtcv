@@ -32,4 +32,14 @@ body.adminimal.crane{
 	.visually-hidden{
 		max-width: 1px;
 	}
-}
+	&.path-batch{
+		.dialog-off-canvas-main-canvas{
+			@include smallTab{
+				padding-right: 80px;
+			}
+			& > .layout-container{
+				background: $offWhite;
+			}
+		}
+	}//end path batch
+}//end body adminimal crane

@@ -19,6 +19,10 @@ third_party_settings:
         destination: default
         url: ''
         external: ''
+      30:
+        destination: default
+        url: ''
+        external: ''
 name: Navigator
 vid: navigator
 description: 'Prompts for the Legal Help finder.'

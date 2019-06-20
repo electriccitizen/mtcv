@@ -83,6 +83,59 @@
 	}
 }
 
+@mixin dropbuttonWrapper{
+	li.secondary-action{
+		border-top: 1px solid $midBlue;
+	}
+	a{
+		color: $darkBlue;
+		padding: 8px 10px 8px 30px;
+		border-right: 1px solid $midBlue;
+		text-decoration: none;
+		background: $blueGrey;
+		font-family: $headerFont;
+		text-transform: uppercase;
+		font-weight: $xHeavy;
+		&:hover,&:focus{
+			background: $buttonBackHover;
+			color: $buttonTextHover;
+		}
+		&:active{
+			background: $buttonBackActive;
+			color: $buttonTextActive;
+		}
+	}
+	button{
+		background: $blueGrey;
+		color: $darkBlue;
+		&:hover,&:focus{
+			background: $buttonBackHover;
+			color: $buttonTextHover;
+		}
+		&:active{
+			background: $buttonBackActive;
+			color: $buttonTextActive;
+		}
+		.dropbutton-arrow{
+			font-size: 16px;
+			@include calc(right, "50% - 5px");
+		}
+	}//end button (single)
+	//.js .dropbutton-multiple.open .dropbutton-action:last-child a, .js .dropbutton-multiple.open .dropbutton-action:last-child .button
+	&.dropbutton-multiple{
+		&.open{
+			.dropbutton-action:last-child{
+				a,.button{
+					border-radius: 0;
+				}
+			}
+		}
+		.dropbutton-widget{
+			border: none;
+		}
+	}//end drop burron multiple
+}//end dropbutton widget
+
 //button class
 .adminimal.crane .button {
 	@include button;
@@ -115,7 +168,7 @@
 			color: $buttonTextActive;
 		}
 	}
-	&[data-drupal-selector="edit-cancel"],&.button--danger,&[data-drupal-selector="edit-actions-cancel"]{
+	&[data-drupal-selector="edit-cancel"],&.button--danger,&[data-drupal-selector="edit-actions-cancel"],&#edit-reset{
 		@include resetButton;
 	}
 }
@@ -138,3 +191,6 @@
 .adminimal.crane .button-outline{
 	@include outlineButton($link);
 }
+
+
+

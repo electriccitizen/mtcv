@@ -6,6 +6,55 @@
 ------------------ */
 .adminimal.crane #block-crane-local-actions{
 	ul.action-links{
-		margin: 2em 0 0;
+		position: relative;
+		margin: 2em 0 1rem;
+		padding: 3rem 0 1rem;
+		&:after{
+			@include fullBack($offWhite);
+		}
 	}
 }//end local actions
+
+/* PRIMARY TABS
+--------------------- */
+ul.tabs.primary{
+	.adminimal.crane nav.is-horizontal.is-collapsible.position-container.is-horizontal-enabled &{
+		background: transparent;
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 0;
+		padding-right: 0;
+		position: relative;
+		z-index: 99;
+	}
+	.tabs__tab{
+		&.is-active{
+			box-shadow: none !important;
+		}
+		&:not(:last-child) a{
+			margin-right: -1px;
+		}
+		a{
+			@include outlineButton($link);
+			margin-bottom: -1px;
+			background: $white;
+			border-radius: 0;
+			font-weight: $xHeavy;
+			&.is-active{
+				background: $lightGrey;
+				color: $midBlue;
+				border-color: $midBlue;
+				&:hover,&:focus{
+					background: $buttonBackHover;
+					color: $buttonTextHover;
+					border-color: $buttonBackHover;
+				}
+				&:active{
+					background: $buttonBackActive;
+					color: $buttonTextActive;
+					border-color: $buttonBackActive;
+				}
+			}
+		}
+	}//end tabs__tab
+}//end tabs-primary

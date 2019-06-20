@@ -8,4 +8,73 @@
 	border: 1px solid $grey;
 	padding: 20px 30px;
 	margin-bottom: $spaceLg;
+	box-sizing: border-box;
+	a{
+		color: $midBlue;
+		&:hover,&:focus{
+			color: $hoverLink;
+		}
+	}
 }
+
+.views-card{
+	position: relative;
+	@include cardItem;
+	padding-bottom: 70px;
+	.views-field-views-bulk-operations-bulk-form{
+		float: left;
+		position: relative;
+		top: 2px;
+		.js-form-type-checkbox{
+			margin: 0 1rem 0 0;
+		}
+	}
+	.views-label{
+		font-weight: $heavy;
+	}
+	.views-field-title{
+		margin-bottom: $spaceXs;
+		a{
+			text-decoration: none;
+			&:hover,&:focus{
+				text-decoration: underline;
+			}
+		}
+	}
+	.views-field-field-summary{
+		margin-bottom: $spaceXs;
+	}
+	.views-field-operations{
+		.js .crane &{
+			.dropbutton-wrapper{
+				@include dropbuttonWrapper;
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				left: 0;
+				border-bottom-right-radius: 4px;
+				border-bottom-left-radius: 4px;
+				border-top: 1px solid $grey;
+				.dropbutton-action{
+					a{
+						color: $darkBlue;
+						&:hover,&:focus{
+							color: $buttonTextHover;
+						}
+						&:active{
+							color: $buttonTextActive;
+						}
+					}
+				}
+			}//end dropbutton-wrapper
+		}//end js &
+	}//end operations
+	.views-field-meta{
+		font-size: 1.5rem;
+		display: inline-block;
+		&:nth-child(even){
+			margin-right: 2rem;
+		}
+	}
+}//end views card
+

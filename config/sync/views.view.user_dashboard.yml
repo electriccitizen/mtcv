@@ -54,6 +54,10 @@ display:
           offset: 0
       style:
         type: default
+        options:
+          grouping: {  }
+          row_class: views-card
+          default_row_class: true
       row:
         type: fields
       fields:
@@ -679,7 +683,7 @@ display:
           element_label_class: ''
           element_label_colon: true
           element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_class: views-field-meta
           element_default_classes: true
           empty: ''
           hide_empty: false
@@ -744,7 +748,7 @@ display:
           element_label_class: ''
           element_label_colon: true
           element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_class: views-field-meta
           element_default_classes: true
           empty: ''
           hide_empty: false
@@ -811,7 +815,7 @@ display:
           element_label_class: ''
           element_label_colon: true
           element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_class: views-field-meta
           element_default_classes: true
           empty: ''
           hide_empty: false
@@ -1124,7 +1128,7 @@ display:
           element_label_class: ''
           element_label_colon: true
           element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_class: views-field-meta
           element_default_classes: true
           empty: ''
           hide_empty: false
@@ -1189,7 +1193,7 @@ display:
           element_label_class: ''
           element_label_colon: true
           element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_class: views-field-meta
           element_default_classes: true
           empty: ''
           hide_empty: false

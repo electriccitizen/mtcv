@@ -1,3 +1,15 @@
 /* ========================
   HEADER
 ========================== */
+.adminimal.crane .content-header{
+	background: -moz-linear-gradient(to top, lighten($lightGrey, 2.5%) 0%,$white 10%); /* FF3.6+ */
+	background: -webkit-linear-gradient(to top, lighten($lightGrey, 2.5%) 0%,$white 10%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(to top, lighten($lightGrey, 2.5%) 0%,$white 10%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(to top, lighten($lightGrey, 2.5%) 0%,$white 10%); /* IE10+ */
+	background: linear-gradient(to top, lighten($lightGrey, 2.5%) 0%,$white 10%); /* W3C */
+	.page-title{
+		color: $black;
+		font-weight: $xHeavy;
+		margin-bottom: $spaceSm;
+	}
+}//end content-header

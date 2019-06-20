@@ -28,6 +28,10 @@ third_party_settings:
         destination: default
         url: ''
         external: ''
+      30:
+        destination: default
+        url: ''
+        external: ''
 name: Resource
 type: resource
 description: 'This content type stores all legal and related services that appear in the self-help resource library.'

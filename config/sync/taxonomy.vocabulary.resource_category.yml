@@ -19,6 +19,10 @@ third_party_settings:
         destination: default
         url: ''
         external: ''
+      30:
+        destination: default
+        url: ''
+        external: ''
 name: 'Resource categorie(s)'
 vid: resource_category
 description: 'These terms are used to associate resources with additional, generic categories surrounding victim''s rights.'

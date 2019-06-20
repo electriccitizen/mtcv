@@ -28,6 +28,10 @@ third_party_settings:
         destination: default
         url: ''
         external: ''
+      30:
+        destination: default
+        url: ''
+        external: ''
 _core:
   default_config_hash: KuyA4NHPXcmKAjRtwa0vQc2ZcyrUJy6IlS2TAyMNRbc
 name: Page

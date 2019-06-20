@@ -2,3 +2,10 @@
   MAIN
 ========================== */
 
+.adminimal.crane .dialog-off-canvas-main-canvas > .layout-container{
+	margin: 0;
+	padding-left: 2.5em;
+	padding-right: 2.5em;
+	border-top: 1px solid $link; 
+	box-sizing: border-box;
+}
