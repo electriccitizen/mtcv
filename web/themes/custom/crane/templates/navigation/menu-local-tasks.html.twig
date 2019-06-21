@@ -11,12 +11,14 @@
  * themed in menu-local-task.html.twig.
  */
 #}
+{% set nodeTabs = primary['entity.node.canonical'] ? ' node-tabs' %}
+{% set blockTabs = primary['entity.block_content.collection'] ? ' block-library-tabs' %}
 
 {% if primary %}
 	<h2 id="primary-tabs-title" class="visually-hidden">{{ 'Primary tabs'|t }}</h2>
   <nav role="navigation" class="is-horizontal is-collapsible" aria-labelledby="primary-tabs-title" data-drupal-nav-tabs>
 	  <button class="reset-appearance tabs__tab tabs__trigger" aria-label="{{ 'Primary tabs display toggle'|t }}" data-drupal-nav-tabs-trigger>&bull;&bull;&bull;</button>
-	  <ul class="tabs primary clearfix{% if primary['entity.node.canonical'] %} node-tabs{% endif %}" data-drupal-nav-tabs-target>{{ primary }}</ul>
+	  <ul class="tabs primary clearfix{{ nodeTabs }}{{ blockTabs }}" data-drupal-nav-tabs-target>{{ primary }}</ul>
 	</nav>
 {% endif %}
 {% if secondary %}

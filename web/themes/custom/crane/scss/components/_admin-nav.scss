@@ -52,7 +52,7 @@ ul.tabs.primary{
 			}
 		}
 	}
-	//hide the view and revision tabs from non-admins 
+	//hide the various tabs based on role other criteria
 	&.node-tabs{
 		.tabs__tab.view{
 			.role-editor &,.role-site_manager &{
@@ -70,6 +70,12 @@ ul.tabs.primary{
 			}
 		}
 	}
+	&.block-library-tabs{
+		.role-editor &,.role-site_manager &{
+			display: none;
+		}
+	}
+
 	.tabs__tab{
 		padding-right: 5px;
 		&.is-active{

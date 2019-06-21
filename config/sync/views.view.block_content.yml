@@ -66,52 +66,11 @@ display:
             offset: false
             offset_label: Offset
       style:
-        type: table
+        type: default
         options:
           grouping: {  }
-          row_class: ''
+          row_class: views-card
           default_row_class: true
-          override: true
-          sticky: false
-          caption: ''
-          summary: ''
-          description: ''
-          columns:
-            info: info
-            type: type
-            changed: changed
-            operations: operations
-          info:
-            info:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            type:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            changed:
-              sortable: true
-              default_sort_order: desc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            operations:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-          default: changed
-          empty_table: true
       row:
         type: fields
       fields:
@@ -122,7 +81,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Block description'
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -151,11 +110,11 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: h3
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -222,7 +181,7 @@ display:
           element_label_class: ''
           element_label_colon: true
           element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_class: views-field-meta
           element_default_classes: true
           empty: ''
           hide_empty: false
@@ -252,7 +211,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Updated
+          label: 'Last Updated'
           exclude: false
           alter:
             alter_text: false
@@ -287,19 +246,30 @@ display:
           element_label_class: ''
           element_label_colon: true
           element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_class: views-field-meta
           element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          entity_type: block_content
-          entity_field: changed
+          click_sort_column: value
           type: timestamp
           settings:
             date_format: short
             custom_date_format: ''
             timezone: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: block_content
+          entity_field: changed
           plugin_id: field
         operations:
           id: operations
@@ -308,7 +278,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Operations
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -341,7 +311,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true

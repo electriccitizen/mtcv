@@ -906,7 +906,7 @@ nav#block-quicklinks {
           width: 240px;
           display: block !important; } }
     nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 {
-      padding: 0 4px; }
+      padding: 0; }
       @media (min-width: 600px) {
         nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 {
           padding: 10px 0;
