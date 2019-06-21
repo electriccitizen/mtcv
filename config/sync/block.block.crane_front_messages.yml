@@ -10,8 +10,8 @@ _core:
   default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
 id: crane_front_messages
 theme: crane_front
-region: header
-weight: 0
+region: content
+weight: -2
 provider: null
 plugin: system_messages_block
 settings:

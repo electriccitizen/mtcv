@@ -4723,7 +4723,7 @@ form .form-item-prefix {
     font-style: italic;
     color: #121212; }
 
-form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action) {
+form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide) {
   background-image: none;
   background-color: #3778c1;
   border: none;
@@ -4748,7 +4748,7 @@ form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dr
   min-width: 115px;
   margin-top: 0;
   margin-bottom: 1rem; }
-  form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):hover, form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):focus {
+  form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):hover, form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):focus {
     color: #121212;
     background-color: #cccccc;
     box-shadow: none;
@@ -4757,10 +4757,10 @@ form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dr
     -webkit-transition: all 0.3s ease;
     -webkit-transform: translateZ(0);
     outline: none; }
-  form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):active {
+  form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):active {
     color: #121212;
     background-color: #b3b3b3; }
-  form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):hover, form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):focus {
+  form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):hover, form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):focus {
     background: #cccccc;
     border-color: #cccccc;
     color: #121212; }
@@ -5649,16 +5649,16 @@ nav#block-crane-quicklinks {
 	-------------------- */
   /* VIEWS
 	--------------------- */ }
-  .adminimal.crane .menu-link-content-form .js-form-type-textfield input, .adminimal.crane .menu-link-content-form .js-form-type-entity-autocomplete input {
+  .adminimal.crane .menu-link-content-form .js-form-type-textfield input, .adminimal.crane .menu-link-content-form .node-form .js-form-type-entity-autocomplete input, .adminimal.crane .node-form .menu-link-content-form .js-form-type-entity-autocomplete input, .adminimal.crane .menu-link-content-form .node-confirm-form .js-form-type-entity-autocomplete input, .adminimal.crane .node-confirm-form .menu-link-content-form .js-form-type-entity-autocomplete input, .adminimal.crane .menu-link-content-form .js-form-type-entity-autocomplete input {
     max-width: 320px; }
-  .adminimal.crane .taxonomy-term-form .js-form-type-textfield input {
+  .adminimal.crane .taxonomy-term-form .js-form-type-textfield input, .adminimal.crane .taxonomy-term-form .node-form .js-form-type-entity-autocomplete input, .adminimal.crane .node-form .taxonomy-term-form .js-form-type-entity-autocomplete input, .adminimal.crane .taxonomy-term-form .node-confirm-form .js-form-type-entity-autocomplete input, .adminimal.crane .node-confirm-form .taxonomy-term-form .js-form-type-entity-autocomplete input {
     max-width: 402px; }
   .adminimal.crane .taxonomy-term-form details.seven-details {
     max-width: 400px;
     margin-bottom: 3rem; }
   .adminimal.crane .field-ui-field-storage-add-form .select2-container--default {
     min-width: 200px; }
-  .adminimal.crane .js-form-type-textfield input {
+  .adminimal.crane .js-form-type-textfield input, .adminimal.crane .node-form .js-form-type-entity-autocomplete input, .adminimal.crane .node-confirm-form .js-form-type-entity-autocomplete input {
     max-width: 240px; }
   .adminimal.crane .field-config-delete-form.field-config-confirm-form .seven-details__wrapper .seven-details__description {
     margin-bottom: 3rem; }
@@ -5696,22 +5696,43 @@ nav#block-crane-quicklinks {
 /* ========================
   NODE FORMS
 ========================== */
-.node-form, .node-confirm-form {
+.adminimal.crane .node-form, .adminimal.crane .node-confirm-form {
   /* layout
-	----------- */
+		----------- */
   /* hide entity meta
-	------------------ */
+		------------------ */
   /* node specific form elements
-	---------------------------- */ }
-  .node-form .layout-node-form, .node-confirm-form .layout-node-form {
+		---------------------------- */ }
+  .adminimal.crane .node-form .layout-node-form, .adminimal.crane .node-confirm-form .layout-node-form {
     max-width: 1800px; }
-    .node-form .layout-node-form > .layout-region, .node-confirm-form .layout-node-form > .layout-region {
+    .adminimal.crane .node-form .layout-node-form > .layout-region, .adminimal.crane .node-confirm-form .layout-node-form > .layout-region {
       float: none;
       width: 100%; }
-  .node-form .entity-meta, .node-confirm-form .entity-meta {
+  .adminimal.crane .node-form .entity-meta, .adminimal.crane .node-confirm-form .entity-meta {
     display: none; }
-  .node-form .form-textarea-wrapper, .node-confirm-form .form-textarea-wrapper {
+  .adminimal.crane .node-form .form-textarea-wrapper, .adminimal.crane .node-form .js-text-format-wrapper, .adminimal.crane .node-confirm-form .form-textarea-wrapper, .adminimal.crane .node-confirm-form .js-text-format-wrapper {
     max-width: 800px; }
+  .adminimal.crane .node-form .js-form-type-textfield input, .adminimal.crane .node-form .js-form-type-entity-autocomplete input, .adminimal.crane .node-confirm-form .js-form-type-textfield input, .adminimal.crane .node-confirm-form .js-form-type-entity-autocomplete input {
+    max-width: 400px; }
+  .adminimal.crane .node-form .js-form-type-entity-autocomplete, .adminimal.crane .node-confirm-form .js-form-type-entity-autocomplete {
+    max-width: 800px; }
+  .adminimal.crane .node-form .layout-region-node-main > .field--widget-options-select .select2-container--default, .adminimal.crane .node-confirm-form .layout-region-node-main > .field--widget-options-select .select2-container--default {
+    width: 100% !important;
+    max-width: 240px; }
+  .adminimal.crane .node-form .field--widget-image-image, .adminimal.crane .node-confirm-form .field--widget-image-image {
+    background: #f6f6f6;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px rgba(35, 35, 35, 0.1);
+    border: 1px solid #cccccc;
+    padding: 20px 30px;
+    margin-bottom: 4rem;
+    box-sizing: border-box; }
+    .adminimal.crane .node-form .field--widget-image-image a, .adminimal.crane .node-confirm-form .field--widget-image-image a {
+      color: #2c5580; }
+      .adminimal.crane .node-form .field--widget-image-image a:hover, .adminimal.crane .node-form .field--widget-image-image a:focus, .adminimal.crane .node-confirm-form .field--widget-image-image a:hover, .adminimal.crane .node-confirm-form .field--widget-image-image a:focus {
+        color: #676767; }
+    .adminimal.crane .node-form .field--widget-image-image input[type="file"], .adminimal.crane .node-confirm-form .field--widget-image-image input[type="file"] {
+      padding: 7px .5em; }
 
 /* ========================
   TABLES

@@ -1,28 +1,55 @@
 /* ========================
   NODE FORMS
 ========================== */
+.adminimal.crane{
+	.node-form,.node-confirm-form{
+		/* layout
+		----------- */
+		.layout-node-form{
+			max-width: $largeScreen;
+			& > .layout-region{
+				float: none;
+				width: 100%;
+			}
+		}//end layout node form
 
-.node-form,.node-confirm-form{
-	/* layout
-	----------- */
-	.layout-node-form{
-		max-width: $largeScreen;
-		& > .layout-region{
-			float: none;
-			width: 100%;
+		/* hide entity meta
+		------------------ */
+		.entity-meta{
+			display: none;
 		}
-	}//end layout node form
 
-	/* hide entity meta
-	------------------ */
-	.entity-meta{
-		display: none;
-	}
+		/* node specific form elements
+		---------------------------- */
+		.form-textarea-wrapper,.js-text-format-wrapper{
+			max-width: $textMax;
+		}
 
-	/* node specific form elements
-	---------------------------- */
-	.form-textarea-wrapper{
-		max-width: $textMax;
-	}
+		.js-form-type-textfield{
+			input{
+				max-width: 400px;
+			}
+		}
+		.js-form-type-entity-autocomplete{
+			@extend .js-form-type-textfield;
+			max-width: $textMax;
+		}
 
-}//end node form
+		//increase width of any top level select fields (not nested in paragraphs)
+		.layout-region-node-main{
+			& > .field--widget-options-select{
+				.select2-container--default{
+					width: 100% !important;
+					max-width: 240px;
+				}
+			}
+		}//end layout region node main
+
+		.field--widget-image-image{
+			@include cardItem;
+			input[type="file"]{
+				padding: 7px .5em;
+			}
+		}
+	}//end node form
+}//end crane

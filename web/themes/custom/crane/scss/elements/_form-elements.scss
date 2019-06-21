@@ -89,7 +89,7 @@ form{
 	}
 
 	input[type="submit"].button{
-		&:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action){
+		&:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide){
 			@include submitButton;
 			margin-bottom: $spaceXs;
 		}
