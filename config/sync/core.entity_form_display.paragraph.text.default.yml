@@ -22,9 +22,9 @@ third_party_settings:
       weight: 20
       format_type: tabs
       format_settings:
+        direction: horizontal
         id: ''
         classes: ''
-        direction: vertical
       label: Tabs
       region: content
     group_content:
