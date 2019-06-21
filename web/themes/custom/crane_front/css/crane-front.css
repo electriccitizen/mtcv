@@ -234,6 +234,8 @@ body:not(.logged-in.path-user) #block-crane-front-content {
         color: #121212;
         font-weight: 700;
         border-radius: 4px;
+        border-radius: 0;
+        border-width: 1px;
         width: 100%;
         margin-bottom: -1px; }
         .layout--twocol-sideleft-tabs .layout__region--tabs ul.tabs-header .tab-control:hover, .layout--twocol-sideleft-tabs .layout__region--tabs ul.tabs-header .tab-control:focus {

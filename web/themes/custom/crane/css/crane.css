@@ -4407,7 +4407,10 @@ ol {
 ========================== */
 /* BUTTON MIXINS
 ------------------ */
-.adminimal.crane .button {
+.adminimal.crane .button.js-hide {
+  display: none; }
+
+.adminimal.crane .button--small, .adminimal.crane .button--primary.button--small {
   background-image: none;
   background-color: #3778c1;
   border: none;
@@ -4423,8 +4426,20 @@ ol {
   font-family: mr-eaves-sans, sans-serif;
   font-weight: 800;
   font-size: 1.5rem;
-  margin-bottom: 3rem; }
-  .adminimal.crane .button:hover, .adminimal.crane .button:focus {
+  margin-bottom: 3rem;
+  margin-left: 0;
+  margin-right: 0;
+  background: transparent;
+  border: 1px solid #3778c1;
+  color: #3778c1;
+  border-radius: 3px;
+  background: transparent;
+  border: 1px solid #3778c1;
+  color: #121212;
+  font-weight: 400;
+  font-size: 1.2rem;
+  border-radius: 2px; }
+  .adminimal.crane .button--small:hover, .adminimal.crane .button--small:focus {
     color: #121212;
     background-color: #cccccc;
     box-shadow: none;
@@ -4433,74 +4448,133 @@ ol {
     -webkit-transition: all 0.3s ease;
     -webkit-transform: translateZ(0);
     outline: none; }
-  .adminimal.crane .button:active {
+  .adminimal.crane .button--small:active {
     color: #121212;
     background-color: #b3b3b3; }
-  .adminimal.crane .button.js-hide {
-    display: none; }
-  .adminimal.crane .button.button--small {
-    background: transparent;
-    border: 1px solid #3778c1;
+  .adminimal.crane .button--small:hover, .adminimal.crane .button--small:focus {
+    background: #cccccc;
     color: #121212;
-    font-weight: 400;
-    font-size: 1.2rem;
-    border-radius: 2px; }
-    .adminimal.crane .button.button--small.button--small-override {
-      font-size: 1.8rem;
-      border-width: 2px;
-      font-weight: 700;
-      margin-bottom: 2rem;
-      border-radius: 4px; }
-    .adminimal.crane .button.button--small:hover, .adminimal.crane .button.button--small:focus {
-      background: #cccccc;
-      border-color: #cccccc;
-      color: #121212;
-      transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -webkit-transition: all 0.3s ease;
-      -webkit-transform: translateZ(0); }
-    .adminimal.crane .button.button--small:active {
-      background: #b3b3b3;
-      border-color: #b3b3b3;
-      color: #121212; }
-  .adminimal.crane .button[data-drupal-selector="edit-cancel"], .adminimal.crane .button.button--danger, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"], .adminimal.crane .button#edit-reset {
-    background-image: none;
-    background-color: #3778c1;
-    border: none;
-    color: #ffffff;
-    line-height: 1.15;
-    padding: 1.15rem 1.5rem 1rem;
-    display: inline-block;
-    vertical-align: middle;
-    text-decoration: none;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: .04em;
-    font-family: mr-eaves-sans, sans-serif;
-    font-weight: 800;
-    font-size: 1.5rem;
-    margin-bottom: 3rem;
-    background: #bf0e0e;
-    color: #ffffff;
-    border-color: #bf0e0e;
-    height: auto;
-    min-width: 115px; }
-    .adminimal.crane .button[data-drupal-selector="edit-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-cancel"]:focus, .adminimal.crane .button.button--danger:hover, .adminimal.crane .button.button--danger:focus, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:focus, .adminimal.crane .button#edit-reset:hover, .adminimal.crane .button#edit-reset:focus {
-      color: #121212;
-      background-color: #cccccc;
-      box-shadow: none;
-      transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -webkit-transition: all 0.3s ease;
-      -webkit-transform: translateZ(0);
-      outline: none; }
-    .adminimal.crane .button[data-drupal-selector="edit-cancel"]:active, .adminimal.crane .button.button--danger:active, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:active, .adminimal.crane .button#edit-reset:active {
-      color: #121212;
-      background-color: #b3b3b3; }
-    .adminimal.crane .button[data-drupal-selector="edit-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-cancel"]:focus, .adminimal.crane .button.button--danger:hover, .adminimal.crane .button.button--danger:focus, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:focus, .adminimal.crane .button#edit-reset:hover, .adminimal.crane .button#edit-reset:focus {
-      background: #cccccc;
-      border-color: #cccccc;
-      color: #121212; }
+    border-color: #cccccc;
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -webkit-transform: translateZ(0); }
+  .adminimal.crane .button--small:active {
+    background: #b3b3b3;
+    color: #121212;
+    border-color: #b3b3b3; }
+  .adminimal.crane .button--small.button--small-override {
+    font-size: 1.8rem;
+    border-width: 2px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border-radius: 4px; }
+  .adminimal.crane .button--small:hover, .adminimal.crane .button--small:focus {
+    background: #cccccc;
+    border-color: #cccccc;
+    color: #121212;
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -webkit-transform: translateZ(0); }
+  .adminimal.crane .button--small:active {
+    background: #b3b3b3;
+    border-color: #b3b3b3;
+    color: #121212; }
+
+.adminimal.crane .button[data-drupal-selector="edit-cancel"], .adminimal.crane .button--danger, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"], .adminimal.crane #edit-reset {
+  background-image: none;
+  background-color: #3778c1;
+  border: none;
+  color: #ffffff;
+  line-height: 1.15;
+  padding: 1.15rem 1.5rem 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  font-family: mr-eaves-sans, sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  margin-left: 0;
+  margin-right: 0;
+  background: #bf0e0e;
+  color: #ffffff;
+  border-color: #bf0e0e;
+  height: auto;
+  min-width: 115px;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%; }
+  .adminimal.crane .button[data-drupal-selector="edit-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-cancel"]:focus, .adminimal.crane .button--danger:hover, .adminimal.crane .button--danger:focus, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:focus, .adminimal.crane #edit-reset:hover, .adminimal.crane #edit-reset:focus {
+    color: #121212;
+    background-color: #cccccc;
+    box-shadow: none;
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -webkit-transform: translateZ(0);
+    outline: none; }
+  .adminimal.crane .button[data-drupal-selector="edit-cancel"]:active, .adminimal.crane .button--danger:active, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:active, .adminimal.crane #edit-reset:active {
+    color: #121212;
+    background-color: #b3b3b3; }
+  .adminimal.crane .button[data-drupal-selector="edit-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-cancel"]:focus, .adminimal.crane .button--danger:hover, .adminimal.crane .button--danger:focus, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:focus, .adminimal.crane #edit-reset:hover, .adminimal.crane #edit-reset:focus {
+    background: #cccccc;
+    border-color: #cccccc;
+    color: #121212; }
+  @media (min-width: 600px) {
+    .adminimal.crane .button[data-drupal-selector="edit-cancel"], .adminimal.crane .button--danger, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"], .adminimal.crane #edit-reset {
+      width: auto; } }
+
+.adminimal.crane #edit-preview {
+  background-image: none;
+  background-color: #3778c1;
+  border: none;
+  color: #ffffff;
+  line-height: 1.15;
+  padding: 1.15rem 1.5rem 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  font-family: mr-eaves-sans, sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  margin-left: 0;
+  margin-right: 0;
+  background: #3778c1;
+  color: #ffffff;
+  height: auto;
+  min-width: 115px;
+  margin-top: 0;
+  background: #018901; }
+  .adminimal.crane #edit-preview:hover, .adminimal.crane #edit-preview:focus {
+    color: #121212;
+    background-color: #cccccc;
+    box-shadow: none;
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -webkit-transform: translateZ(0);
+    outline: none; }
+  .adminimal.crane #edit-preview:active {
+    color: #121212;
+    background-color: #b3b3b3; }
+  .adminimal.crane #edit-preview:hover, .adminimal.crane #edit-preview:focus {
+    background: #cccccc;
+    border-color: #cccccc;
+    color: #121212; }
+  .adminimal.crane #edit-preview:hover, .adminimal.crane #edit-preview:focus {
+    background: #cccccc; }
+  .adminimal.crane #edit-preview:active {
+    background: #b3b3b3; }
 
 .adminimal.crane .button--primary {
   background-image: none;
@@ -4519,6 +4593,8 @@ ol {
   font-weight: 800;
   font-size: 1.5rem;
   margin-bottom: 3rem;
+  margin-left: 0;
+  margin-right: 0;
   background: #3778c1;
   color: #ffffff; }
   .adminimal.crane .button--primary:hover, .adminimal.crane .button--primary:focus {
@@ -4557,6 +4633,8 @@ ol {
   font-weight: 800;
   font-size: 1.5rem;
   margin-bottom: 3rem;
+  margin-left: 0;
+  margin-right: 0;
   background: transparent;
   border: 1px solid #3778c1;
   color: #3778c1;
@@ -4586,6 +4664,38 @@ ol {
     color: #121212;
     border-color: #b3b3b3; }
 
+/* PARAGRAPHS ICON BUTTONS
+---------------------------- */
+.button.paragraphs-icon-button {
+  font-size: 1.6rem; }
+  @media (min-width: 760px) {
+    .button.paragraphs-icon-button {
+      background-image: none;
+      background: #3778c1;
+      color: #ffffff; }
+      .button.paragraphs-icon-button:hover, .button.paragraphs-icon-button:focus {
+        border-color: #cccccc;
+        background: #cccccc;
+        color: #121212; }
+      .button.paragraphs-icon-button:active {
+        background: #b3b3b3;
+        color: #121212; } }
+
+.button.paragraphs-dropdown-action {
+  font-size: 1.4rem;
+  padding: 10px 1.5em; }
+  .button.paragraphs-dropdown-action:hover, .button.paragraphs-dropdown-action:focus {
+    background: #cccccc; }
+  .button.paragraphs-dropdown-action:not(:last-child) {
+    border-bottom: 1px solid #3778c1; }
+
+.paragraphs-dropdown-actions {
+  border-radius: 0;
+  top: 45px; }
+  @media (min-width: 760px) {
+    .paragraphs-dropdown-actions {
+      top: 40px; } }
+
 /* ========================
   FIELD
 ========================== */
@@ -4594,7 +4704,26 @@ ol {
 ========================== */
 /* FORM ELEMENTS
 ------------------ */
-form input[type="submit"].button {
+form .form-item-prefix {
+  margin-bottom: 2rem;
+  color: #4a4a4a;
+  padding: 2rem 0;
+  position: relative; }
+  form .form-item-prefix:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -50vw;
+    z-index: -1;
+    width: 200vw;
+    height: 100%;
+    background: #f6f6f6; }
+  form .form-item-prefix span {
+    font-style: italic;
+    color: #121212; }
+
+form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action) {
   background-image: none;
   background-color: #3778c1;
   border: none;
@@ -4611,11 +4740,14 @@ form input[type="submit"].button {
   font-weight: 800;
   font-size: 1.5rem;
   margin-bottom: 3rem;
+  margin-left: 0;
+  margin-right: 0;
   background: #3778c1;
   color: #ffffff;
   height: auto;
-  min-width: 115px; }
-  form input[type="submit"].button:hover, form input[type="submit"].button:focus {
+  min-width: 115px;
+  margin-top: 0; }
+  form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):hover, form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):focus {
     color: #121212;
     background-color: #cccccc;
     box-shadow: none;
@@ -4624,10 +4756,10 @@ form input[type="submit"].button {
     -webkit-transition: all 0.3s ease;
     -webkit-transform: translateZ(0);
     outline: none; }
-  form input[type="submit"].button:active {
+  form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):active {
     color: #121212;
     background-color: #b3b3b3; }
-  form input[type="submit"].button:hover, form input[type="submit"].button:focus {
+  form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):hover, form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):focus {
     background: #cccccc;
     border-color: #cccccc;
     color: #121212; }
@@ -4642,14 +4774,22 @@ form .form-item {
     display: block;
     margin-bottom: 0.5rem;
     padding-bottom: 0; }
+    form .form-item label.form-required {
+      display: inline-block; }
+      form .form-item label.form-required + input {
+        display: block; }
+  form .form-item .description {
+    margin: 0.2em 0 1rem; }
 
 form .form-required, form .js-form-required {
-  position: relative; }
+  position: relative;
+  position: relative;
+  padding-right: .5rem; }
   form .form-required:after, form .js-form-required:after {
     content: '*';
     color: #bf0e0e;
-    position: relative;
-    top: 4px;
+    position: absolute;
+    top: -4px;
     right: -.5rem;
     font-size: 1.6rem;
     background: transparent;
@@ -4725,7 +4865,6 @@ form input.form-email {
     color: #121212; }
 
 form .description {
-  font-size: 1.4rem;
   color: #676767; }
 
 form input + .description {
@@ -4919,6 +5058,23 @@ form .js-form-type-checkbox input[type="checkbox"], form .js-form-type-checkbox 
 .form--inline.form-wrapper .form-item-separator {
   margin: .5em 0 .25em; }
 
+/* FORM ACTIONS
+------------------ */
+.adminimal.crane form .form-actions {
+  display: flex;
+  display: -ms-flexbox;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  justify-content: flex-start;
+  -ms-flex-pack: start;
+  align-items: flex-start;
+  -ms-flex-align: start; }
+  @media (min-width: 600px) {
+    .adminimal.crane form .form-actions > *:not(:last-child) {
+      margin-right: 2rem !important; } }
+
 /* ==============
 	 ADMIN-NAV
 ================== */
@@ -4947,7 +5103,7 @@ form .js-form-type-checkbox input[type="checkbox"], form .js-form-type-checkbox 
     .adminimal.crane #block-crane-local-actions ul.action-links a.button.button--small:active {
       background: #b3b3b3; }
 
-/* PRIMARY TABS
+/* PRIMARY TABS (local tasks)
 --------------------- */
 .adminimal.crane nav.is-horizontal.is-collapsible.position-container.is-horizontal-enabled ul.tabs.primary {
   background: transparent;
@@ -4958,73 +5114,76 @@ form .js-form-type-checkbox input[type="checkbox"], form .js-form-type-checkbox 
   position: relative;
   z-index: 99; }
 
-ul.tabs.primary .tabs__tab.is-active {
-  box-shadow: none !important; }
+.role-editor ul.tabs.primary.node-tabs .tabs__tab.view, .role-site_manager ul.tabs.primary.node-tabs .tabs__tab.view, .role-editor ul.tabs.primary.node-tabs .tabs__tab.revisions, .role-site_manager ul.tabs.primary.node-tabs .tabs__tab.revisions {
+  display: none; }
 
-ul.tabs.primary .tabs__tab:not(:last-child) a {
-  margin-right: -1px; }
-
-ul.tabs.primary .tabs__tab a {
-  background-image: none;
-  background-color: #3778c1;
-  border: none;
-  color: #ffffff;
-  line-height: 1.15;
-  padding: 1.15rem 1.5rem 1rem;
-  display: inline-block;
-  vertical-align: middle;
-  text-decoration: none;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: .04em;
-  font-family: mr-eaves-sans, sans-serif;
-  font-weight: 800;
-  font-size: 1.5rem;
-  margin-bottom: 3rem;
-  background: transparent;
-  border: 1px solid #3778c1;
-  color: #3778c1;
-  border-radius: 3px;
-  margin-bottom: -1px;
-  background: #ffffff;
-  border-radius: 0;
-  font-weight: 800; }
-  ul.tabs.primary .tabs__tab a:hover, ul.tabs.primary .tabs__tab a:focus {
-    color: #121212;
-    background-color: #cccccc;
-    box-shadow: none;
-    transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    -webkit-transform: translateZ(0);
-    outline: none; }
-  ul.tabs.primary .tabs__tab a:active {
-    color: #121212;
-    background-color: #b3b3b3; }
-  ul.tabs.primary .tabs__tab a:hover, ul.tabs.primary .tabs__tab a:focus {
-    background: #cccccc;
-    color: #121212;
-    border-color: #cccccc;
-    transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    -webkit-transform: translateZ(0); }
-  ul.tabs.primary .tabs__tab a:active {
-    background: #b3b3b3;
-    color: #121212;
-    border-color: #b3b3b3; }
-  ul.tabs.primary .tabs__tab a.is-active {
-    background: #ededed;
-    color: #2c5580;
-    border-color: #2c5580; }
-    ul.tabs.primary .tabs__tab a.is-active:hover, ul.tabs.primary .tabs__tab a.is-active:focus {
+ul.tabs.primary .tabs__tab {
+  padding-right: 5px; }
+  ul.tabs.primary .tabs__tab.is-active {
+    box-shadow: none !important; }
+  ul.tabs.primary .tabs__tab a {
+    background-image: none;
+    background-color: #3778c1;
+    border: none;
+    color: #ffffff;
+    line-height: 1.15;
+    padding: 1.15rem 1.5rem 1rem;
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    font-family: mr-eaves-sans, sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    margin-left: 0;
+    margin-right: 0;
+    background: transparent;
+    border: 1px solid #3778c1;
+    color: #3778c1;
+    border-radius: 3px;
+    margin-bottom: -1px;
+    background: #ffffff;
+    border-radius: 0;
+    font-weight: 800; }
+    ul.tabs.primary .tabs__tab a:hover, ul.tabs.primary .tabs__tab a:focus {
+      color: #121212;
+      background-color: #cccccc;
+      box-shadow: none;
+      transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -webkit-transform: translateZ(0);
+      outline: none; }
+    ul.tabs.primary .tabs__tab a:active {
+      color: #121212;
+      background-color: #b3b3b3; }
+    ul.tabs.primary .tabs__tab a:hover, ul.tabs.primary .tabs__tab a:focus {
       background: #cccccc;
       color: #121212;
-      border-color: #cccccc; }
-    ul.tabs.primary .tabs__tab a.is-active:active {
+      border-color: #cccccc;
+      transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -webkit-transform: translateZ(0); }
+    ul.tabs.primary .tabs__tab a:active {
       background: #b3b3b3;
       color: #121212;
       border-color: #b3b3b3; }
+    ul.tabs.primary .tabs__tab a.is-active {
+      background: #ededed;
+      color: #2c5580;
+      border-color: #2c5580; }
+      ul.tabs.primary .tabs__tab a.is-active:hover, ul.tabs.primary .tabs__tab a.is-active:focus {
+        background: #cccccc;
+        color: #121212;
+        border-color: #cccccc; }
+      ul.tabs.primary .tabs__tab a.is-active:active {
+        background: #b3b3b3;
+        color: #121212;
+        border-color: #b3b3b3; }
 
 /* ==============
 	 BLOCKS
@@ -5474,12 +5633,6 @@ nav#block-crane-quicklinks {
 	-------------------- */
   /* VIEWS
 	--------------------- */ }
-  .adminimal.crane .form-item-prefix {
-    margin-bottom: 2rem;
-    color: #4a4a4a; }
-    .adminimal.crane .form-item-prefix span {
-      font-style: italic;
-      color: #121212; }
   .adminimal.crane .menu-link-content-form .js-form-type-textfield input, .adminimal.crane .menu-link-content-form .js-form-type-entity-autocomplete input {
     max-width: 320px; }
   .adminimal.crane .taxonomy-term-form .js-form-type-textfield input {
@@ -5527,6 +5680,27 @@ nav#block-crane-quicklinks {
 /* ========================
   NODE FORMS
 ========================== */
+.node-form {
+  /* layout
+	----------- */
+  /* hide entity meta
+	------------------ */
+  /* node specific form elements
+	---------------------------- */
+  /* save, preview, delete
+	------------------- */ }
+  .node-form .layout-node-form {
+    max-width: 1800px; }
+    .node-form .layout-node-form > .layout-region {
+      float: none;
+      width: 100%; }
+  .node-form .entity-meta {
+    display: none; }
+  .node-form .form-textarea-wrapper {
+    max-width: 800px; }
+  .node-form .form-actions input.form-submit {
+    margin-bottom: 1rem; }
+
 /* ========================
   TABLES
 ========================== */

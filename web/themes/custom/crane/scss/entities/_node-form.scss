@@ -1,3 +1,35 @@
 /* ========================
   NODE FORMS
 ========================== */
+
+.node-form{
+	/* layout
+	----------- */
+	.layout-node-form{
+		max-width: $largeScreen;
+		& > .layout-region{
+			float: none;
+			width: 100%;
+		}
+	}//end layout node form
+
+	/* hide entity meta
+	------------------ */
+	.entity-meta{
+		display: none;
+	}
+
+	/* node specific form elements
+	---------------------------- */
+	.form-textarea-wrapper{
+		max-width: $textMax;
+	}
+
+	/* save, preview, delete
+	------------------- */
+	.form-actions{
+		input.form-submit{
+			margin-bottom: $spaceXs;
+		}
+	}
+}//end node form

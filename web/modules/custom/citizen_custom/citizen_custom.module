@@ -80,7 +80,9 @@ function citizen_custom_form_alter(&$form, FormStateInterface $form_state) {
   if($formId == 'menu-link-content-menu-link-content-form'){
     $user = \Drupal::currentUser();
     $userRole = $user->getRoles();
-    $form['title']['#prefix'] = '<div class="form-item-prefix">Go back to the <a href="/admin/structure/menu/manage/main/">main menu</a>.</div>';
+    $parentMenu = substr($form['menu_parent']['#default_value'], 0, -1);
+    $humanParent = ucwords(str_replace('_',' ',$parentMenu));
+    $form['title']['#prefix'] = '<div class="form-item-prefix">Go back to the <a href="/admin/structure/menu/manage/'.$parentMenu.'/">'.$humanParent.' menu</a>.</div>';
     if((in_array('editor', $userRole)) || (in_array('site_manager', $userRole))){
       unset($form['description'],$form['weight'],$form['expanded'],$form['link']['widget'][0]['options']);
     }

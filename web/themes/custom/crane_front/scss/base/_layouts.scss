@@ -103,6 +103,8 @@ $sideBar: 200px;
 			}
 			.tab-control{
 				@include outlineButton($link);
+				border-radius: 0;
+				border-width: 1px;
 				width: 100%;
 				margin-bottom: -1px;
 				&.active-tab{

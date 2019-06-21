@@ -27,7 +27,7 @@
 	}//end action links
 }//end local actions
 
-/* PRIMARY TABS
+/* PRIMARY TABS (local tasks)
 --------------------- */
 ul.tabs.primary{
 	.adminimal.crane nav.is-horizontal.is-collapsible.position-container.is-horizontal-enabled &{
@@ -39,12 +39,18 @@ ul.tabs.primary{
 		position: relative;
 		z-index: 99;
 	}
+	//hide the view and revision tabs from non-admins 
+	&.node-tabs{
+		.tabs__tab.view,.tabs__tab.revisions{
+			.role-editor &,.role-site_manager &{
+				display: none;
+			}
+		}
+	}
 	.tabs__tab{
+		padding-right: 5px;
 		&.is-active{
 			box-shadow: none !important;
-		}
-		&:not(:last-child) a{
-			margin-right: -1px;
 		}
 		a{
 			@include outlineButton($link);
