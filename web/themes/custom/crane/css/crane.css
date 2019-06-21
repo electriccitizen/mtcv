@@ -5114,7 +5114,7 @@ form .js-form-type-checkbox input[type="checkbox"], form .js-form-type-checkbox 
   position: relative;
   z-index: 99; }
 
-.role-editor ul.tabs.primary.node-tabs .tabs__tab.view, .role-site_manager ul.tabs.primary.node-tabs .tabs__tab.view, .role-editor ul.tabs.primary.node-tabs .tabs__tab.revisions, .role-site_manager ul.tabs.primary.node-tabs .tabs__tab.revisions {
+.role-editor ul.tabs.primary.node-tabs .tabs__tab.view, .role-site_manager ul.tabs.primary.node-tabs .tabs__tab.view {
   display: none; }
 
 ul.tabs.primary .tabs__tab {

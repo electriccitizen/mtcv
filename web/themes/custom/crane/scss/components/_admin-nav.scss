@@ -41,7 +41,7 @@ ul.tabs.primary{
 	}
 	//hide the view and revision tabs from non-admins 
 	&.node-tabs{
-		.tabs__tab.view,.tabs__tab.revisions{
+		.tabs__tab.view{
 			.role-editor &,.role-site_manager &{
 				display: none;
 			}
