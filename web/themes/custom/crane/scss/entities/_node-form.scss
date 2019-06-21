@@ -2,7 +2,7 @@
   NODE FORMS
 ========================== */
 
-.node-form{
+.node-form,.node-confirm-form{
 	/* layout
 	----------- */
 	.layout-node-form{
@@ -25,11 +25,4 @@
 		max-width: $textMax;
 	}
 
-	/* save, preview, delete
-	------------------- */
-	.form-actions{
-		input.form-submit{
-			margin-bottom: $spaceXs;
-		}
-	}
 }//end node form

@@ -4746,7 +4746,8 @@ form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dr
   color: #ffffff;
   height: auto;
   min-width: 115px;
-  margin-top: 0; }
+  margin-top: 0;
+  margin-bottom: 1rem; }
   form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):hover, form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):focus {
     color: #121212;
     background-color: #cccccc;
@@ -5114,7 +5115,22 @@ form .js-form-type-checkbox input[type="checkbox"], form .js-form-type-checkbox 
   position: relative;
   z-index: 99; }
 
+nav.is-collapse-enabled ul.tabs.primary .tabs__tab {
+  padding-right: 0; }
+  nav.is-collapse-enabled ul.tabs.primary .tabs__tab.is-active {
+    border-bottom: 0;
+    top: -4px; }
+  nav.is-collapse-enabled ul.tabs.primary .tabs__tab a {
+    display: block;
+    margin-bottom: 0; }
+
 .role-editor ul.tabs.primary.node-tabs .tabs__tab.view, .role-site_manager ul.tabs.primary.node-tabs .tabs__tab.view {
+  display: none; }
+
+.page-node-type-resource ul.tabs.primary.node-tabs .tabs__tab.all-pages {
+  display: none; }
+
+.page-node-type-page ul.tabs.primary.node-tabs .tabs__tab.all-resources {
   display: none; }
 
 ul.tabs.primary .tabs__tab {
@@ -5680,26 +5696,22 @@ nav#block-crane-quicklinks {
 /* ========================
   NODE FORMS
 ========================== */
-.node-form {
+.node-form, .node-confirm-form {
   /* layout
 	----------- */
   /* hide entity meta
 	------------------ */
   /* node specific form elements
-	---------------------------- */
-  /* save, preview, delete
-	------------------- */ }
-  .node-form .layout-node-form {
+	---------------------------- */ }
+  .node-form .layout-node-form, .node-confirm-form .layout-node-form {
     max-width: 1800px; }
-    .node-form .layout-node-form > .layout-region {
+    .node-form .layout-node-form > .layout-region, .node-confirm-form .layout-node-form > .layout-region {
       float: none;
       width: 100%; }
-  .node-form .entity-meta {
+  .node-form .entity-meta, .node-confirm-form .entity-meta {
     display: none; }
-  .node-form .form-textarea-wrapper {
+  .node-form .form-textarea-wrapper, .node-confirm-form .form-textarea-wrapper {
     max-width: 800px; }
-  .node-form .form-actions input.form-submit {
-    margin-bottom: 1rem; }
 
 /* ========================
   TABLES

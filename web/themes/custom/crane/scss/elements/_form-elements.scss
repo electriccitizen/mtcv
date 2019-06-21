@@ -91,6 +91,7 @@ form{
 	input[type="submit"].button{
 		&:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action){
 			@include submitButton;
+			margin-bottom: $spaceXs;
 		}
 	}
 

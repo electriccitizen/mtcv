@@ -39,10 +39,33 @@ ul.tabs.primary{
 		position: relative;
 		z-index: 99;
 	}
+	nav.is-collapse-enabled &{
+		.tabs__tab{
+			padding-right: 0;
+			&.is-active{
+				border-bottom: 0;
+				top: -4px;
+			}
+			a{
+				display: block;
+				margin-bottom: 0;
+			}
+		}
+	}
 	//hide the view and revision tabs from non-admins 
 	&.node-tabs{
 		.tabs__tab.view{
 			.role-editor &,.role-site_manager &{
+				display: none;
+			}
+		}
+		.tabs__tab.all-pages{
+			.page-node-type-resource &{
+				display: none;
+			}
+		}
+		.tabs__tab.all-resources{
+			.page-node-type-page &{
 				display: none;
 			}
 		}
