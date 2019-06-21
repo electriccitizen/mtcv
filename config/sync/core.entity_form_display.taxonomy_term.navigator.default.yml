@@ -1,0 +1,22 @@
+uuid: 32f32dd5-422b-41c7-9841-4dbc0eaa1f20
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.navigator
+id: taxonomy_term.navigator.default
+targetEntityType: taxonomy_term
+bundle: navigator
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

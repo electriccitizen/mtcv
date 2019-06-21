@@ -7,15 +7,27 @@
 .adminimal.crane #block-crane-local-actions{
 	ul.action-links{
 		position: relative;
-		margin: 2em 0 1rem;
+		margin: $elementSpace 0 0;
 		padding: 3rem 0 1rem;
 		&:after{
 			@include fullBack($offWhite);
 		}
-	}
+		&:not(.can-access){
+			display: none;
+		}
+		a.button.button--small{
+			background: $white;
+			&:hover,&:focus{
+				background: $buttonBackHover;
+			}
+			&:active{
+				background: $buttonBackActive;
+			}
+		}
+	}//end action links
 }//end local actions
 
-/* PRIMARY TABS
+/* PRIMARY TABS (local tasks)
 --------------------- */
 ul.tabs.primary{
 	.adminimal.crane nav.is-horizontal.is-collapsible.position-container.is-horizontal-enabled &{
@@ -27,12 +39,41 @@ ul.tabs.primary{
 		position: relative;
 		z-index: 99;
 	}
+	nav.is-collapse-enabled &{
+		.tabs__tab{
+			padding-right: 0;
+			&.is-active{
+				border-bottom: 0;
+				top: -4px;
+			}
+			a{
+				display: block;
+				margin-bottom: 0;
+			}
+		}
+	}
+	//hide the view and revision tabs from non-admins 
+	&.node-tabs{
+		.tabs__tab.view{
+			.role-editor &,.role-site_manager &{
+				display: none;
+			}
+		}
+		.tabs__tab.all-pages{
+			.page-node-type-resource &{
+				display: none;
+			}
+		}
+		.tabs__tab.all-resources{
+			.page-node-type-page &{
+				display: none;
+			}
+		}
+	}
 	.tabs__tab{
+		padding-right: 5px;
 		&.is-active{
 			box-shadow: none !important;
-		}
-		&:not(:last-child) a{
-			margin-right: -1px;
 		}
 		a{
 			@include outlineButton($link);

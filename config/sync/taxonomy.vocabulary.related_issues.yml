@@ -23,6 +23,15 @@ third_party_settings:
         destination: default
         url: ''
         external: ''
+      52:
+        destination: default
+        url: ''
+        external: ''
+    destination: url
+    url: /admin/structure/taxonomy/manage/related_issues/overview
+    personalizable: 0
+    redirect_edit: 0
+    external: ''
 name: 'Related need(s)'
 vid: related_issues
 description: 'These terms are used to associate resources with one or more related legal needs or life issues.'

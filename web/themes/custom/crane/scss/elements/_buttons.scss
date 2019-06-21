@@ -12,7 +12,7 @@
 	border: none;
 	color: $buttonText;
 	line-height: 1.15;
-	padding: .75rem 1.5rem;
+	padding: 1.15rem 1.5rem 1rem;
 	display: inline-block;
 	vertical-align: middle;
 	text-decoration: none;
@@ -20,9 +20,11 @@
 	text-transform: uppercase;
 	letter-spacing: .04em;
 	font-family: $headerFont;
-	font-weight: $heavy;
+	font-weight: $xHeavy;
 	font-size: $button;
 	margin-bottom: $spaceMd;
+	margin-left: 0;
+	margin-right: 0;
 	&:hover,&:focus {
 		color: $buttonTextHover;
 		background-color: $buttonBackHover;
@@ -62,6 +64,7 @@
 	color: $submitText;
 	height: auto;
 	min-width: 115px;
+	margin-top: 0;
 	&:hover,&:focus{
 		background: $submitBackHover;
 		border-color: $submitBackHover;
@@ -76,6 +79,7 @@
 	border-color: $resetBack;
 	height: auto;
 	min-width: 115px;
+	margin-top: 0;
 	&:hover,&:focus{
 		background: $resetBackHover;
 		border-color: $resetBackHover;
@@ -137,12 +141,12 @@
 }//end dropbutton widget
 
 //button class
-.adminimal.crane .button {
-	@include button;
-	&.js-hide{
+.adminimal.crane{
+	.button.js-hide{
 		display: none;
 	}
-	&.button--small{
+	.button--small{
+		@include outlineButton($link);
 		background: transparent;
 		border: 1px solid $primaryButtonBack;
 		color: $baseText;
@@ -167,30 +171,81 @@
 			border-color: $buttonBackActive;
 			color: $buttonTextActive;
 		}
-	}
-	&[data-drupal-selector="edit-cancel"],&.button--danger,&[data-drupal-selector="edit-actions-cancel"],&#edit-reset{
+	}//end button--small
+	.button[data-drupal-selector="edit-cancel"],.button--danger,.button[data-drupal-selector="edit-actions-cancel"],#edit-reset{
 		@include resetButton;
+		margin-left: 0;
+		margin-right: 0;
+		width: 100%;
+		@include smallTab{
+			width: auto;
+		}
+	}//end reset, cancel, danger buttons
+	#edit-preview{
+		@include submitButton;
+		background: $green;
+		&:hover,&:focus{
+			background: $buttonBackHover;
+		}
+		&:active{
+			background: $buttonBackActive;
+		}
+	}//end preview
+	.button--primary {
+		@include button;
+		background: $primaryButtonBack;
+		color: $primaryButtonText;
+		&:hover,&:focus{
+			background: $primaryBackHover;
+			color: $primaryTextHover;
+		}
+		&:active{
+			background: $primaryBackActive;
+			color: $primaryTextActive;
+		}
+		&.button--small{
+			@extend .button--small;
+		}
+	}//end button primary
+	.button-outline{
+		@include outlineButton($link);
 	}
-}
-.adminimal.crane .button--primary {
-	@include button;
-	padding: .85rem 1.5rem .75rem;
-	background: $primaryButtonBack;
-	color: $primaryButtonText;
+}//end adminimal crane
+
+/* PARAGRAPHS ICON BUTTONS
+---------------------------- */
+.button.paragraphs-icon-button{
+	font-size: 1.6rem;
+	@include tab{
+		background-image: none;
+		background: $buttonBack;
+		color: $buttonText;
+		&:hover,&:focus{
+			border-color: $buttonBackHover;
+			background: $buttonBackHover;
+			color: $buttonTextHover;
+		}
+		&:active{
+			background: $buttonBackActive;
+			color: $buttonTextActive;
+		}
+	}
+}//end apragraphs icon button
+.button.paragraphs-dropdown-action{
+	font-size: 1.4rem;
+	padding: 10px 1.5em;
 	&:hover,&:focus{
-		background: $primaryBackHover;
-		color: $primaryTextHover;
+		background: $buttonBackHover;
 	}
-	&:active{
-		background: $primaryBackActive;
-		color: $primaryTextActive;
+	&:not(:last-child){
+		border-bottom: 1px solid $borderRule;
 	}
 }
-
-//outlineButtons
-.adminimal.crane .button-outline{
-	@include outlineButton($link);
+.paragraphs-dropdown-actions{
+	border-radius: 0;
+	top: 45px;
+	@include tab{
+		top: 40px;
+	}
 }
-
-
 

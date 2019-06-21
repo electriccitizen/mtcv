@@ -1,0 +1,22 @@
+uuid: a297dc08-9b51-4188-b82a-e6b80efa1ad7
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.region
+id: taxonomy_term.region.default
+targetEntityType: taxonomy_term
+bundle: region
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

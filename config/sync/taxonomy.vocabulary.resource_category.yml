@@ -23,6 +23,15 @@ third_party_settings:
         destination: default
         url: ''
         external: ''
+      52:
+        destination: default
+        url: ''
+        external: ''
+    destination: url
+    url: /admin/structure/taxonomy/manage/resource_category/overview
+    personalizable: 0
+    redirect_edit: 0
+    external: ''
 name: 'Resource categorie(s)'
 vid: resource_category
 description: 'These terms are used to associate resources with additional, generic categories surrounding victim''s rights.'

@@ -57,11 +57,13 @@
 }
 
 @mixin required{
+	position: relative;
+	padding-right: .5rem;
 	&:after{
 		content: '*';
 		color: $validation;
-		position: relative;
-		top: 4px;
+		position: absolute;
+		top: -4px;
 		right: -.5rem;
 		font-size: 1.6rem;
 		background: transparent;
@@ -72,8 +74,25 @@
 /* FORM ELEMENTS
 ------------------ */
 form{
+	.form-item-prefix{
+		margin-bottom: $spaceSm;
+		color: $darkGrey;
+		padding: $spaceSm 0;
+		position: relative;
+		&:after{
+			@include fullBack($offWhite);
+		}
+		span{
+			font-style: italic;
+			color: $black;
+		}
+	}
+
 	input[type="submit"].button{
-		@include submitButton;
+		&:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide){
+			@include submitButton;
+			margin-bottom: $spaceXs;
+		}
 	}
 
 	// generic form-item
@@ -87,6 +106,15 @@ form{
 			display: block;
 			margin-bottom: $spaceXs / 2;
 			padding-bottom: 0;
+			&.form-required{
+				display: inline-block;
+				+ input{
+					display: block;
+				}
+			}
+		}
+		.description{
+			margin: 0.2em 0 $spaceXs;
 		}
 	}//end form item
 
@@ -106,7 +134,6 @@ form{
 
 	//descriptions
 	.description{
-		font-size: 1.4rem;
 		color: $midGrey;
 	}
 	input + .description{
@@ -321,3 +348,21 @@ form{
 .form--inline.form-wrapper .form-item-separator{
 	margin: .5em 0 .25em;
 }
+
+/* FORM ACTIONS
+------------------ */
+.adminimal.crane form{
+	.form-actions{
+		@include safeFlex(row,wrap,start,start);
+		@include smallTab{
+			& > *:not(:last-child){
+				margin-right: 2rem !important;
+			}
+		}
+	}
+}//end crane form
+
+
+
+
+
