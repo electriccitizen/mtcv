@@ -1,10 +1,10 @@
-citizen_custom.all_pages:
-  title: 'All Pages'
-  route_name: 'view.content.page_1'
-  base_route: 'entity.node.canonical'
-  weight: 998
-citizen_custom.all_resources:
-  title: 'All Resources'
-  route_name: 'view.content.page_2'
-  base_route: 'entity.node.canonical'
-  weight: 999
+#citizen_custom.all_pages:
+#  title: 'All Pages'
+#  route_name: 'view.content.page_1'
+#  base_route: 'entity.node.canonical'
+#  weight: 998
+#citizen_custom.all_resources:
+#  title: 'All Resources'
+#  route_name: 'view.content.page_2'
+#  base_route: 'entity.node.canonical'
+#  weight: 999
