@@ -1,0 +1,4 @@
+ec_preview.form:
+  path: '/ec_preview_form'
+  requirements:
+    _permission: 'administer site configuration'

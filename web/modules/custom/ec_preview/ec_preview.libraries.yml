@@ -1,0 +1,6 @@
+preview:
+  version: 1.0
+  js:
+    js/preview.js: {}
+  dependencies:
+    - core/jquery
