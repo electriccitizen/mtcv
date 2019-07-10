@@ -5,9 +5,13 @@ dependencies:
   config:
     - field.storage.node.field_content
     - node.type.page
+    - paragraphs.paragraphs_type.accordion_group
     - paragraphs.paragraphs_type.button
+    - paragraphs.paragraphs_type.horizontal_rule
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.text_with_image
+    - paragraphs.paragraphs_type.video
   module:
     - entity_reference_revisions
 id: node.page.field_content
@@ -25,20 +29,39 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      text: text
-      image: image
+      accordion_group: accordion_group
       button: button
+      horizontal_rule: horizontal_rule
+      image: image
+      text: text
+      text_with_image: text_with_image
+      video: video
     target_bundles_drag_drop:
-      text:
+      accordion_group:
         enabled: true
-        weight: -9
-      image:
-        enabled: true
-        weight: -8
+        weight: -19
       button:
         enabled: true
-        weight: -7
+        weight: -18
+      horizontal_rule:
+        enabled: true
+        weight: -17
+      image:
+        enabled: true
+        weight: -16
+      text:
+        enabled: true
+        weight: -15
+      text_with_image:
+        enabled: true
+        weight: -14
+      video:
+        enabled: true
+        weight: -13
       header:
-        weight: -6
+        weight: -12
+        enabled: false
+      accordion_item:
+        weight: -11
         enabled: false
 field_type: entity_reference_revisions

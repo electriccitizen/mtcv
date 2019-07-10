@@ -1,0 +1,10 @@
+uuid: 46171b1b-ea3c-4847-96f0-c17942883a63
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.image_only
+label: 'Image Only'
+targetEntityType: paragraph
+cache: true

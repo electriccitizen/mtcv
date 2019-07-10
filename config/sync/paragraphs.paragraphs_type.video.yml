@@ -1,0 +1,9 @@
+uuid: b7f1a7b2-b4ad-40f1-a720-2e76ab1f6191
+langcode: en
+status: true
+dependencies: {  }
+id: video
+label: Video
+icon_uuid: null
+description: 'Add an embedded video from YouTube.'
+behavior_plugins: {  }

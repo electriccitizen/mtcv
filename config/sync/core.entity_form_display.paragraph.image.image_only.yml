@@ -1,0 +1,30 @@
+uuid: 6fcf8740-0f60-4ed6-ad55-3d90e4e01e9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.paragraph.image_only
+    - field.field.paragraph.image.field_header
+    - field.field.paragraph.image.field_link
+    - field.field.paragraph.image.field_single_image
+    - paragraphs.paragraphs_type.image
+  module:
+    - media_library
+id: paragraph.image.image_only
+targetEntityType: paragraph
+bundle: image
+mode: image_only
+content:
+  field_single_image:
+    type: media_library_widget
+    weight: 0
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_header: true
+  field_link: true
+  status: true
+  uid: true

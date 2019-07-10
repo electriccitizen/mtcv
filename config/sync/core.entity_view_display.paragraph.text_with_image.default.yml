@@ -1,0 +1,45 @@
+uuid: eda4cf6f-913b-49fc-8949-771485ea49f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_with_image.field_header
+    - field.field.paragraph.text_with_image.field_image_placement
+    - field.field.paragraph.text_with_image.field_link
+    - field.field.paragraph.text_with_image.field_single_image
+    - field.field.paragraph.text_with_image.field_text
+    - paragraphs.paragraphs_type.text_with_image
+  module:
+    - text
+id: paragraph.text_with_image.default
+targetEntityType: paragraph
+bundle: text_with_image
+mode: default
+content:
+  field_header:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_single_image:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: media_library
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  field_image_placement: true
+  field_link: true

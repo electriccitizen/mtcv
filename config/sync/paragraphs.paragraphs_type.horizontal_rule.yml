@@ -1,0 +1,9 @@
+uuid: 192445f9-da96-427a-b579-18eeaa2f6b11
+langcode: en
+status: true
+dependencies: {  }
+id: horizontal_rule
+label: 'Horizontal Rule'
+icon_uuid: null
+description: 'Add a rule separating content.'
+behavior_plugins: {  }
