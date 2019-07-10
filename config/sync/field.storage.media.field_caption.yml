@@ -1,12 +1,12 @@
-uuid: 79a248cc-01d5-4bfe-b3c3-b4fe115c4ef7
+uuid: 1afd2842-a3bd-4787-811b-2f4b935f7d74
 langcode: en
 status: true
 dependencies:
   module:
-    - paragraphs
-id: paragraph.field_button_text
-field_name: field_button_text
-entity_type: paragraph
+    - media
+id: media.field_caption
+field_name: field_caption
+entity_type: media
 type: string
 settings:
   max_length: 255

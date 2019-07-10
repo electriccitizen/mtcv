@@ -10,7 +10,7 @@ id: paragraph.image.field_single_image
 field_name: field_single_image
 entity_type: paragraph
 bundle: image
-label: 'Single Image'
+label: Image
 description: ''
 required: true
 translatable: false

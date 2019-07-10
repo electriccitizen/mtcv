@@ -1,9 +1,0 @@
-uuid: 0234cf12-4101-479c-b156-8cc85150e0f3
-langcode: en
-status: true
-dependencies: {  }
-id: grid
-label: Grid
-icon_uuid: null
-description: 'Create a simple or complex grid of items (such as text next to an image.)'
-behavior_plugins: {  }

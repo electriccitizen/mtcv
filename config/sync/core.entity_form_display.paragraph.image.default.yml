@@ -3,76 +3,28 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.image.field_caption
+    - field.field.paragraph.image.field_header
     - field.field.paragraph.image.field_link
     - field.field.paragraph.image.field_single_image
-    - field.field.paragraph.image.field_special_fx
     - paragraphs.paragraphs_type.image
   module:
-    - field_group
     - link
     - media_library
-    - text
-third_party_settings:
-  field_group:
-    group_tabs:
-      children:
-        - group_content
-        - group_special_fx
-      parent_name: ''
-      weight: 0
-      format_type: tabs
-      format_settings:
-        direction: horizontal
-        id: ''
-        classes: ''
-      label: Tabs
-      region: content
-    group_content:
-      children:
-        - field_single_image
-        - field_caption
-        - field_link
-      parent_name: group_tabs
-      weight: 20
-      format_type: tab
-      format_settings:
-        id: ''
-        classes: ''
-        formatter: closed
-        description: ''
-        required_fields: true
-      label: Content
-      region: content
-    group_special_fx:
-      children:
-        - field_special_fx
-      parent_name: group_tabs
-      weight: 21
-      format_type: tab
-      format_settings:
-        id: ''
-        classes: ''
-        formatter: closed
-        description: ''
-        required_fields: true
-      label: 'Special FX'
-      region: content
 id: paragraph.image.default
 targetEntityType: paragraph
 bundle: image
 mode: default
 content:
-  field_caption:
-    weight: 3
+  field_header:
+    weight: 0
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: text_textfield
+    type: string_textfield
     region: content
   field_link:
-    weight: 4
+    weight: 2
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -81,16 +33,10 @@ content:
     region: content
   field_single_image:
     type: media_library_widget
-    weight: 2
+    weight: 1
     settings:
       media_types: {  }
     third_party_settings: {  }
-    region: content
-  field_special_fx:
-    weight: 3
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
     region: content
 hidden:
   created: true

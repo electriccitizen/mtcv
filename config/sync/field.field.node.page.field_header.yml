@@ -1,4 +1,4 @@
-uuid: 582effc3-5d0c-420c-a9e3-c029eb674479
+uuid: 4cbdde94-99ac-44f9-ad91-e4b14cba2cf4
 langcode: en
 status: true
 dependencies:
@@ -12,9 +12,9 @@ id: node.page.field_header
 field_name: field_header
 entity_type: node
 bundle: page
-label: Hero!
-description: 'Add a "hero" section to get your page started! Your hero can be as simple as a plain headline or you can choose one of the more complex options to help your page stand out.'
-required: true
+label: Header
+description: ''
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
@@ -25,25 +25,16 @@ settings:
     target_bundles:
       header: header
     target_bundles_drag_drop:
+      button:
+        weight: 5
+        enabled: false
       header:
         enabled: true
-        weight: 8
-      grid:
-        weight: 9
-        enabled: false
-      grid_content:
-        weight: 10
-        enabled: false
-      grid_text:
-        weight: 11
-        enabled: false
+        weight: 6
       image:
-        weight: 12
-        enabled: false
-      section:
-        weight: 13
+        weight: 7
         enabled: false
       text:
-        weight: 14
+        weight: 8
         enabled: false
 field_type: entity_reference_revisions

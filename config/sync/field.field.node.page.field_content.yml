@@ -1,22 +1,22 @@
-uuid: f0f57cd8-851f-42cf-ae97-b69379d0247c
+uuid: 8fb33b66-b9ea-49da-bafd-0c9da7f0825c
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_content
-    - paragraphs.paragraphs_type.grid
+    - field.storage.node.field_content
+    - node.type.page
+    - paragraphs.paragraphs_type.button
     - paragraphs.paragraphs_type.image
-    - paragraphs.paragraphs_type.section
     - paragraphs.paragraphs_type.text
   module:
     - entity_reference_revisions
-id: paragraph.section.field_content
+id: node.page.field_content
 field_name: field_content
-entity_type: paragraph
-bundle: section
+entity_type: node
+bundle: page
 label: Content
-description: 'Now add your content!'
-required: false
+description: ''
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
@@ -27,27 +27,18 @@ settings:
     target_bundles:
       text: text
       image: image
-      grid: grid
+      button: button
     target_bundles_drag_drop:
       text:
         enabled: true
-        weight: -15
+        weight: -9
       image:
         enabled: true
-        weight: -14
-      grid:
+        weight: -8
+      button:
         enabled: true
-        weight: -13
-      grid_content:
-        weight: -12
-        enabled: false
-      section:
-        weight: -11
-        enabled: false
-      grid_text:
-        weight: -10
-        enabled: false
+        weight: -7
       header:
-        weight: -9
+        weight: -6
         enabled: false
 field_type: entity_reference_revisions
