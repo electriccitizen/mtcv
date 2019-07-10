@@ -3,53 +3,31 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.image.field_caption
+    - field.field.paragraph.image.field_header
     - field.field.paragraph.image.field_link
     - field.field.paragraph.image.field_single_image
-    - field.field.paragraph.image.field_special_fx
     - paragraphs.paragraphs_type.image
-  module:
-    - link
-    - options
-    - text
 id: paragraph.image.default
 targetEntityType: paragraph
 bundle: image
 mode: default
 content:
-  field_caption:
-    weight: 1
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_link:
-    weight: 4
-    label: above
+  field_header:
+    weight: 0
+    label: hidden
     settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
+      link_to_entity: false
     third_party_settings: {  }
-    type: link
+    type: string
     region: content
   field_single_image:
     type: entity_reference_entity_view
-    weight: 2
-    label: above
+    weight: 1
+    label: hidden
     settings:
-      view_mode: default
+      view_mode: media_library
       link: false
     third_party_settings: {  }
     region: content
-  field_special_fx:
-    weight: 3
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-hidden: {  }
+hidden:
+  field_link: true

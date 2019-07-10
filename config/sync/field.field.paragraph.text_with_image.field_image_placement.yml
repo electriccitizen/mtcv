@@ -1,0 +1,23 @@
+uuid: b79bc590-629d-49ba-9f61-1fea940eeba3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_placement
+    - paragraphs.paragraphs_type.text_with_image
+  module:
+    - options
+id: paragraph.text_with_image.field_image_placement
+field_name: field_image_placement
+entity_type: paragraph
+bundle: text_with_image
+label: 'Image Placement'
+description: 'Use this field to place the image to the left or right of the text on most devices (image will always be above the text on small devices).'
+required: true
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

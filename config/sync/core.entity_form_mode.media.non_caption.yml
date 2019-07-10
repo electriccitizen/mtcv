@@ -1,0 +1,10 @@
+uuid: b93f9c47-3d6f-4668-8ff3-242e503570f0
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.non_caption
+label: Non-caption
+targetEntityType: media
+cache: true

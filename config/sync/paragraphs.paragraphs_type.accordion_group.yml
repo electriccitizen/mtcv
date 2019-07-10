@@ -1,0 +1,9 @@
+uuid: e36adf4d-aa51-4ab7-83d1-5e1f121e82a3
+langcode: en
+status: true
+dependencies: {  }
+id: accordion_group
+label: 'Accordion Group'
+icon_uuid: null
+description: 'Create a group of individual accordion items.'
+behavior_plugins: {  }

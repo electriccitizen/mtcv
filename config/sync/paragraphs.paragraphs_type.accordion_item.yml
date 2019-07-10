@@ -1,0 +1,9 @@
+uuid: bc521a66-ad4a-4cf8-ba75-69fceaed4f54
+langcode: en
+status: true
+dependencies: {  }
+id: accordion_item
+label: Accordion
+icon_uuid: null
+description: 'Add accordion content.'
+behavior_plugins: {  }

@@ -1,17 +1,16 @@
-uuid: eb4bb64b-b661-4505-914d-9323ef45f717
+uuid: f23afa71-f1df-42b2-a1fa-7eff5a580b54
 langcode: en
 status: true
 dependencies:
   module:
-    - entity_reference_revisions
+    - link
     - paragraphs
 id: paragraph.field_buttons
 field_name: field_buttons
 entity_type: paragraph
-type: entity_reference_revisions
-settings:
-  target_type: paragraph
-module: entity_reference_revisions
+type: link
+settings: {  }
+module: link
 locked: false
 cardinality: -1
 translatable: true

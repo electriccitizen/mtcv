@@ -1,0 +1,9 @@
+uuid: 00e33fee-3eff-4fff-a24d-51f5cc03cf12
+langcode: en
+status: true
+dependencies: {  }
+id: text_with_image
+label: 'Text & Image'
+icon_uuid: null
+description: 'Add text with an adjacent image.'
+behavior_plugins: {  }

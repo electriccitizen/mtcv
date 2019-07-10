@@ -3,40 +3,19 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.button.field_button_align
-    - field.field.paragraph.button.field_button_color
-    - field.field.paragraph.button.field_button_link
-    - field.field.paragraph.button.field_button_size
-    - field.field.paragraph.button.field_button_style
-    - field.field.paragraph.button.field_button_text
-    - field.field.paragraph.button.field_icon
-    - field.field.paragraph.button.field_icon_placement
+    - field.field.paragraph.button.field_buttons
+    - field.field.paragraph.button.field_header
     - paragraphs.paragraphs_type.button
   module:
     - link
-    - options
 id: paragraph.button.default
 targetEntityType: paragraph
 bundle: button
 mode: default
 content:
-  field_button_align:
-    weight: 8
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_button_color:
-    weight: 7
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_button_link:
+  field_buttons:
     weight: 1
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -46,40 +25,12 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_button_size:
-    weight: 5
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_button_style:
-    weight: 2
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_button_text:
+  field_header:
     weight: 0
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
-  field_icon:
-    weight: 3
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_icon_placement:
-    weight: 6
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
     region: content
 hidden: {  }

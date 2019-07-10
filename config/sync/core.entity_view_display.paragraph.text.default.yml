@@ -3,47 +3,27 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.text.field_buttons
     - field.field.paragraph.text.field_header
-    - field.field.paragraph.text.field_special_fx
     - field.field.paragraph.text.field_text
     - paragraphs.paragraphs_type.text
   module:
-    - entity_reference_revisions
-    - options
     - text
 id: paragraph.text.default
 targetEntityType: paragraph
 bundle: text
 mode: default
 content:
-  field_buttons:
-    type: entity_reference_revisions_entity_view
-    weight: 3
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    region: content
   field_header:
-    weight: 1
-    label: above
+    weight: 0
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-  field_special_fx:
-    weight: 2
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
   field_text:
-    weight: 0
-    label: above
+    weight: 1
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
