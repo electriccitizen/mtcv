@@ -7,6 +7,7 @@ use Drupal\Core\Url;
 function ec_preview_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if ($form_id == 'node_page_edit_form' || 'node_resource_edit_form') {
     $form['#attached']['library'][] = 'ec_preview/preview';
+    // Add the button to the node edit form
     if (isset($form["actions"]["preview"])) {
       $form['actions']['ec_preview'] = [
         '#type' => 'link',
