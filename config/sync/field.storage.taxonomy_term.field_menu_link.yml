@@ -1,0 +1,19 @@
+uuid: f15a9951-fc98-445c-abc1-155c1919a760
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - taxonomy
+id: taxonomy_term.field_menu_link
+field_name: field_menu_link
+entity_type: taxonomy_term
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

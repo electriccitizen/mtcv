@@ -1,0 +1,35 @@
+uuid: 2e3db644-9031-44b1-bfbd-92c0354541a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.main_menu.field_menu_link
+    - taxonomy.vocabulary.main_menu
+  module:
+    - link
+    - text
+id: taxonomy_term.main_menu.default
+targetEntityType: taxonomy_term
+bundle: main_menu
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_menu_link:
+    weight: 1
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

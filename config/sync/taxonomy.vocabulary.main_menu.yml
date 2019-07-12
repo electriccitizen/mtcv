@@ -1,0 +1,17 @@
+uuid: 5abfd0fd-1b2b-4298-8590-65c9b6ca2516
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_redirect
+third_party_settings:
+  entity_redirect:
+    destination: default
+    url: ''
+    personalizable: 1
+    redirect_edit: 0
+    external: ''
+name: 'Main Menu'
+vid: main_menu
+description: 'Main menu/primary navigation'
+weight: 0
