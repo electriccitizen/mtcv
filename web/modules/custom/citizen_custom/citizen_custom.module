@@ -7,6 +7,8 @@
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Component\Utility\UrlHelper;
 
 /**
  * Implements hook_help().
@@ -27,20 +29,26 @@ function citizen_custom_help($route_name, RouteMatchInterface $route_match) {
 /**
  * Implements hook_entity_presave().
  */
-function citizen_custom_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
-
-  dpm($entity->bundle());
-
-  //get the alias for the path and assign it in path
-  //$alias = \Drupal::service('path.alias_manager')->getAliasByPath('/'.$url_params['path']);
-
-
+function citizen_custom_entity_presave(EntityInterface $entity) {
+  // Set value of field_alias for menu taxonomy.
   switch ($entity->bundle()) {
     case 'main_menu':
-      $entity->set('field_alias', '/foo-man');
-      break;
+      $link = $entity->get('field_menu_link')->getValue();
+      $uri = $link[0]['uri'];
+      // Check for external link and process if TRUE.
+      if (UrlHelper::isExternal($uri)) {
+        $entity->set('field_alias', $uri);
+        break;
+      } else {
+        $url = str_replace('entity:', '/', $uri);
+        //get the alias for the path and assign it in path.
+        $alias = Drupal::service('path.alias_manager')->getAliasByPath($url);
+        $entity->set('field_alias', $alias);
+        break;
+      }
   }
 }
+
 
 /**
  * Implements hook_theme().
