@@ -24,7 +24,27 @@ function citizen_custom_help($route_name, RouteMatchInterface $route_match) {
   }
 }
 
+/**
+ * Implements hook_entity_presave().
+ */
+function citizen_custom_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
 
+  dpm($entity->bundle());
+
+  //get the alias for the path and assign it in path
+  //$alias = \Drupal::service('path.alias_manager')->getAliasByPath('/'.$url_params['path']);
+
+
+  switch ($entity->bundle()) {
+
+    // Here you modify only your day content type
+    case 'main_menu':
+      // Setting the title with the value of field_date.
+      //$entity->setTitle($entity->get('field_alias')->value);
+      $entity->set('field_alias', '/foo-man');
+      break;
+  }
+}
 
 /**
  * Implements hook_theme().
