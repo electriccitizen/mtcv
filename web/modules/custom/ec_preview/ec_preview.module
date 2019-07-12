@@ -9,7 +9,6 @@ function ec_preview_form_alter(&$form, FormStateInterface $form_state, $form_id)
     $form['#attached']['library'][] = 'ec_preview/preview';
     // Add the button to the node edit form
     if (isset($form["actions"]["preview"])) {
-      $form['actions']['preview']['#type'] = 'hidden';
       $form['actions']['ec_preview'] = [
         '#type' => 'link',
         '#title' => t('EC Preview Modal'),

@@ -9,6 +9,10 @@
   height: 100% !important;
 }
 
+#edit-preview {
+  display: none !important;
+}
+
 #edit-ec-preview {
   background: #018901;
 }
