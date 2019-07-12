@@ -36,11 +36,7 @@ function citizen_custom_entity_presave(Drupal\Core\Entity\EntityInterface $entit
 
 
   switch ($entity->bundle()) {
-
-    // Here you modify only your day content type
     case 'main_menu':
-      // Setting the title with the value of field_date.
-      //$entity->setTitle($entity->get('field_alias')->value);
       $entity->set('field_alias', '/foo-man');
       break;
   }
