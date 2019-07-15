@@ -41,8 +41,15 @@ function citizen_custom_entity_presave(EntityInterface $entity) {
         break;
       } else {
         $url = str_replace('entity:', '/', $uri);
+        $url = str_replace('internal:', '', $url);
         //get the alias for the path and assign it in path.
-        $alias = Drupal::service('path.alias_manager')->getAliasByPath($url);
+        // TODO: Add if for garbage handleing without blowing up.
+        try {
+          $alias = Drupal::service('path.alias_manager')->getAliasByPath($url);
+        }
+        catch (Exception $e) {
+          $alias = $url;
+        }
         $entity->set('field_alias', $alias);
         break;
       }
