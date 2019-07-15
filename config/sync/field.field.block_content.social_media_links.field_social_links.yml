@@ -1,0 +1,23 @@
+uuid: 92e4a83c-7e08-4aa8-8d4e-05a900c5dd9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.social_media_links
+    - field.storage.block_content.field_social_links
+  module:
+    - link
+id: block_content.social_media_links.field_social_links
+field_name: field_social_links
+entity_type: block_content
+bundle: social_media_links
+label: 'Social Links'
+description: 'Add the url to the social media platform. <strong>NOTE:</strong> Only Facebook, YouTube, LinkedIn, and Twitter are supported.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

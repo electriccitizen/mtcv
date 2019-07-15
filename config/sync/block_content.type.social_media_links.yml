@@ -1,0 +1,8 @@
+uuid: 107fef45-062a-40c2-8170-ac95e281cb85
+langcode: en
+status: true
+dependencies: {  }
+id: social_media_links
+label: 'Social Media Links'
+revision: 0
+description: 'Add links to social media platforms.'
