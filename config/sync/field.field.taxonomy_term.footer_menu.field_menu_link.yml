@@ -1,20 +1,20 @@
-uuid: bb49acf8-da75-4685-9f64-4eb20c883244
+uuid: c67380dd-63fd-42d4-8e47-c3c52235d271
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.taxonomy_term.field_menu_link
-    - taxonomy.vocabulary.main_menu
+    - taxonomy.vocabulary.footer_menu
   module:
     - link
-id: taxonomy_term.main_menu.field_menu_link
+id: taxonomy_term.footer_menu.field_menu_link
 field_name: field_menu_link
 entity_type: taxonomy_term
-bundle: main_menu
+bundle: footer_menu
 label: 'Menu link'
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

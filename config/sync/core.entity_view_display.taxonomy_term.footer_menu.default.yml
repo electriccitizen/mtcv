@@ -1,0 +1,30 @@
+uuid: 3c988b02-76eb-432b-81c9-fbe7e5038fa3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.footer_menu.field_alias
+    - field.field.taxonomy_term.footer_menu.field_menu_link
+    - taxonomy.vocabulary.footer_menu
+  module:
+    - link
+id: taxonomy_term.footer_menu.default
+targetEntityType: taxonomy_term
+bundle: footer_menu
+mode: default
+content:
+  field_menu_link:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  description: true
+  field_alias: true

@@ -1,0 +1,17 @@
+uuid: db291e7a-1fcd-402d-8319-0c24af43acd3
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_redirect
+third_party_settings:
+  entity_redirect:
+    destination: default
+    url: ''
+    personalizable: 1
+    redirect_edit: 0
+    external: ''
+name: 'Footer Menu'
+vid: footer_menu
+description: 'Footer menu links'
+weight: 0
