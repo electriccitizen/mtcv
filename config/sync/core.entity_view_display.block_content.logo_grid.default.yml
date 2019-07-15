@@ -1,0 +1,22 @@
+uuid: 1ff4fc82-5141-42cc-81a0-366125ec0fa0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.logo_grid
+    - field.field.block_content.logo_grid.field_logos
+id: block_content.logo_grid.default
+targetEntityType: block_content
+bundle: logo_grid
+mode: default
+content:
+  field_logos:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden: {  }

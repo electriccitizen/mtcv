@@ -1,0 +1,30 @@
+uuid: 5c1370cd-d280-414c-a454-5b857da8a3a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.logo_grid
+    - field.field.block_content.logo_grid.field_logos
+  module:
+    - media_library
+id: block_content.logo_grid.default
+targetEntityType: block_content
+bundle: logo_grid
+mode: default
+content:
+  field_logos:
+    type: media_library_widget
+    weight: 26
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,8 @@
+uuid: 96a585b4-1dba-488e-aa3a-6004cfd5db0c
+langcode: en
+status: true
+dependencies: {  }
+id: logo_grid
+label: 'Logo Grid'
+revision: 0
+description: 'Add a grid of logo images.'
