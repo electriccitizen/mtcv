@@ -1,0 +1,39 @@
+uuid: 4689ec6e-288e-404f-9393-607e691b3442
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.logo_grid_item.field_link
+    - field.field.paragraph.logo_grid_item.field_single_image
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.logo_grid_item
+  module:
+    - link
+    - media
+id: paragraph.logo_grid_item.default
+targetEntityType: paragraph
+bundle: logo_grid_item
+mode: default
+content:
+  field_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_single_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    third_party_settings: {  }
+    type: media_thumbnail
+    region: content
+hidden: {  }

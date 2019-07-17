@@ -10,7 +10,7 @@ field_name: field_caption
 entity_type: media
 bundle: image
 label: Caption
-description: ''
+description: '<strong>NOTE:</strong> Caption may not be visible everywhere.'
 required: false
 translatable: false
 default_value: {  }

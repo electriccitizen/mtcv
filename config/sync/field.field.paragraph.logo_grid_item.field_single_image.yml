@@ -1,0 +1,28 @@
+uuid: a9c64cbc-8aea-49a9-bb08-efb13c47cf61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_single_image
+    - media.type.image
+    - paragraphs.paragraphs_type.logo_grid_item
+id: paragraph.logo_grid_item.field_single_image
+field_name: field_single_image
+entity_type: paragraph
+bundle: logo_grid_item
+label: Logo
+description: 'Optimal logo width is 200px. '
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

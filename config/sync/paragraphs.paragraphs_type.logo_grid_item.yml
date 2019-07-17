@@ -1,0 +1,9 @@
+uuid: 47954b2f-d316-407a-8b92-a0382c4c0558
+langcode: en
+status: true
+dependencies: {  }
+id: logo_grid_item
+label: 'Logo Grid Item'
+icon_uuid: null
+description: 'Add logo images with optional links to the logo grid block.'
+behavior_plugins: {  }

@@ -1,0 +1,34 @@
+uuid: 8f9ae88d-2822-4200-aeff-fdc5b8f8fc06
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.logo_grid_item.field_link
+    - field.field.paragraph.logo_grid_item.field_single_image
+    - paragraphs.paragraphs_type.logo_grid_item
+  module:
+    - link
+    - media_library
+id: paragraph.logo_grid_item.default
+targetEntityType: paragraph
+bundle: logo_grid_item
+mode: default
+content:
+  field_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_single_image:
+    weight: 0
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+hidden:
+  created: true
+  status: true

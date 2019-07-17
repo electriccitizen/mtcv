@@ -1,0 +1,58 @@
+uuid: bb692a5e-7906-4c42-bddd-6b12677d226a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.logo_grid
+    - field.storage.block_content.field_logo_grid
+    - paragraphs.paragraphs_type.logo_grid_item
+  module:
+    - entity_reference_revisions
+id: block_content.logo_grid.field_logo_grid
+field_name: field_logo_grid
+entity_type: block_content
+bundle: logo_grid
+label: 'Logo Grid'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      logo_grid_item: logo_grid_item
+    target_bundles_drag_drop:
+      logo_grid_item:
+        enabled: true
+        weight: 11
+      accordion_group:
+        weight: 12
+        enabled: false
+      accordion_item:
+        weight: 13
+        enabled: false
+      button:
+        weight: 14
+        enabled: false
+      header:
+        weight: 15
+        enabled: false
+      horizontal_rule:
+        weight: 16
+        enabled: false
+      image:
+        weight: 17
+        enabled: false
+      text:
+        weight: 18
+        enabled: false
+      text_with_image:
+        weight: 19
+        enabled: false
+      video:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions
