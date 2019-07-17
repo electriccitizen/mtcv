@@ -1,0 +1,10 @@
+uuid: 844b8a64-91ed-49ab-9003-b556aa287ebe
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.linked_image
+label: 'Linked Image'
+targetEntityType: media
+cache: true

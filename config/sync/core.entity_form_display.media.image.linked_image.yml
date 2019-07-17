@@ -1,8 +1,9 @@
-uuid: a79da512-9409-4f7a-924a-a7cdb4ea1ea9
+uuid: e77c9e20-e9ec-4945-a68b-90ef59c35948
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.media.linked_image
     - field.field.media.image.field_caption
     - field.field.media.image.field_image_link
     - field.field.media.image.field_media_image
@@ -10,20 +11,21 @@ dependencies:
     - media.type.image
   module:
     - image
+    - link
 _core:
   default_config_hash: nZlttO4YMwMCpkhYMz7bQ1ZMjABGc59YY1us3eSfvTY
-id: media.image.default
+id: media.image.linked_image
 targetEntityType: media
 bundle: image
-mode: default
+mode: linked_image
 content:
-  field_caption:
-    type: string_textfield
+  field_image_link:
+    type: link_default
     weight: 1
     region: content
     settings:
-      size: 60
-      placeholder: ''
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
   field_media_image:
     settings:
@@ -35,7 +37,7 @@ content:
     region: content
 hidden:
   created: true
-  field_image_link: true
+  field_caption: true
   name: true
   path: true
   status: true
