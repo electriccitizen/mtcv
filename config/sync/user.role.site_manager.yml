@@ -16,7 +16,6 @@ permissions:
   - 'access taxonomy overview'
   - 'access user profiles'
   - 'administer blocks'
-  - 'administer menu'
   - 'administer nodes'
   - 'administer redirect settings'
   - 'administer redirects'

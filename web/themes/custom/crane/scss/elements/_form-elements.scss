@@ -140,6 +140,11 @@ form{
 		padding-top: $spaceXs;
 	}
 
+	//autocompletes
+	.js-form-type-entity-autocomplete{
+		max-width: 400px;
+	}
+
 }//end form
 
 /* SELECT 2

@@ -4871,6 +4871,9 @@ form .description {
 form input + .description {
   padding-top: 1rem; }
 
+form .js-form-type-entity-autocomplete {
+  max-width: 400px; }
+
 /* SELECT 2
 -------------- */
 body select, body select:hover, body select:focus {
@@ -5306,7 +5309,8 @@ body.adminimal.crane {
   /* SUMMARY BLOCK
 	------------------ */
   /* INLINE CONTAINERS
-	-------------------- */ }
+	-------------------- */
+  /* taxonomy relations container */ }
   body.adminimal.crane .seven-details[open] > .seven-details__summary {
     color: #323b49; }
     body.adminimal.crane .seven-details[open] > .seven-details__summary:hover, body.adminimal.crane .seven-details[open] > .seven-details__summary:focus {
@@ -5320,6 +5324,8 @@ body.adminimal.crane {
     display: inline-block;
     width: auto;
     margin-right: 1em; }
+  body.adminimal.crane #edit-relations {
+    max-width: 400px; }
 
 /* ========================
   HEADER
