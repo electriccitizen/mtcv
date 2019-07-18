@@ -17,4 +17,8 @@ fonts:
   version: 1.0
   css:
     base:
-       https://use.typekit.net/kpb2dtf.css: { type: external, preprocess: false }    
+       https://use.typekit.net/kpb2dtf.css: { type: external, preprocess: false }  
+menu-vocab:
+  version: 1.0
+  js:
+    js/menu-vocab.js: {}
