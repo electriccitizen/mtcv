@@ -13,7 +13,6 @@ permissions:
   - 'access media overview'
   - 'access taxonomy overview'
   - 'access user profiles'
-  - 'administer menu'
   - 'administer nodes'
   - 'cancel account'
   - 'change own username'
