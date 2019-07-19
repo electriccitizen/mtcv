@@ -1,3 +1,12 @@
 /* ========================
   FIELD
 ========================== */
+
+.field--type-text-long,.field--type-text-with-summary{
+	//hide text format area since only allowing one format
+	.text-format-wrapper{
+		.filter-wrapper{
+			display: none;
+		}
+	}
+}

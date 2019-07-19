@@ -4701,6 +4701,9 @@ ol {
 /* ========================
   FIELD
 ========================== */
+.field--type-text-long .text-format-wrapper .filter-wrapper, .field--type-text-with-summary .text-format-wrapper .filter-wrapper {
+  display: none; }
+
 /* ========================
   FORM ELEMENTS
 ========================== */
