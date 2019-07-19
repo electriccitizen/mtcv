@@ -249,3 +249,13 @@
 	}
 }
 
+/* PARAGRAPH ADD BUTTONS
+-------------------------- */
+.paragraphs-tabs-wrapper{
+	.clearfix{
+		 & > .paragraph-button{
+		 	 @extend .button--small;
+		 }
+	}
+}
+
