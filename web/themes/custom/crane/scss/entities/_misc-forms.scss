@@ -91,4 +91,26 @@
 		}
 	}
 
+	/* BLOCK FORM
+	------------------- */
+	&.path-block{
+		.blocks-back{
+			display: inline-block;
+			margin: $spaceLg 0 -2rem;
+		}
+		.block-content-form{
+			//hide revision information
+			.js-form-type-vertical-tabs{
+				display: none;
+			}
+		}//end block content form
+	}//end path-block
+
+	//hide help text from block library
+	&.entity-block_content-collection:not(.role-administrator){
+		#block-crane-help{
+			display: none;
+		}
+	}
+
 }//end crane

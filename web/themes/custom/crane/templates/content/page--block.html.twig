@@ -39,31 +39,11 @@
  * @see html.html.twig
  */
 #}
+{% extends 'page.html.twig' %}
 
-{% block header %}
-<header class="content-header clearfix">
-  <div class="layout-container">
-    {{ page.header }}
+{% block pageContent %}
+  <div class="blocks-back">
+  	{% if pathName != 'entity-block_content-delete_form' %}Add or edit the block below{% else %} Delete the block {% endif %} or go back to the <a href="/admin/structure/block/block-content">Block Library.</a> {% if pathName != 'entity-block_content-delete_form' %}<strong>NOTE: </strong> New blocks will have to be added to react site by a developer.{% endif %}
   </div>
-</header>
-{% endblock %}
-
-{% block content %}
-<div class="layout-container">
-  {{ page.pre_content }}
-  {{ page.breadcrumb }}
-  <main class="page-content clearfix" role="main">
-    <div class="visually-hidden"><a id="main-content" tabindex="-1"></a></div>
-    {{ page.highlighted }}
-    {% if page.help %}
-      <div class="help">
-        {{ page.help }}
-      </div>
-    {% endif %}
-    {% block pageContent %}
-      {{ page.content }}
-    {% endblock %}
-  </main>
-
-</div>
+  {{ parent() }}
 {% endblock %}

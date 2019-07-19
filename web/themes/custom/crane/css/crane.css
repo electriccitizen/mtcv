@@ -5250,6 +5250,11 @@ ul.tabs.primary .tabs__tab {
         color: #121212;
         border-color: #b3b3b3; }
 
+/* SECONDARY LOCAL TASKS
+----------------------------- */
+body:not(.role-administrator) #block-crane-secondary-local-tasks nav.tabs.blocks.block-types {
+  display: none; }
+
 /* ==============
 	 BLOCKS
 ================== */
@@ -5749,7 +5754,9 @@ nav#block-crane-quicklinks {
   /* DELETE CONFIG
 	-------------------- */
   /* VIEWS
-	--------------------- */ }
+	--------------------- */
+  /* BLOCK FORM
+	------------------- */ }
   .adminimal.crane .menu-link-content-form .js-form-type-textfield input, .adminimal.crane .menu-link-content-form .node-form .js-form-type-entity-autocomplete input, .adminimal.crane .node-form .menu-link-content-form .js-form-type-entity-autocomplete input, .adminimal.crane .menu-link-content-form .node-confirm-form .js-form-type-entity-autocomplete input, .adminimal.crane .node-confirm-form .menu-link-content-form .js-form-type-entity-autocomplete input, .adminimal.crane .menu-link-content-form .js-form-type-entity-autocomplete input {
     max-width: 320px; }
   .adminimal.crane .taxonomy-term-form .js-form-type-textfield input, .adminimal.crane .taxonomy-term-form .node-form .js-form-type-entity-autocomplete input, .adminimal.crane .node-form .taxonomy-term-form .js-form-type-entity-autocomplete input, .adminimal.crane .taxonomy-term-form .node-confirm-form .js-form-type-entity-autocomplete input, .adminimal.crane .node-confirm-form .taxonomy-term-form .js-form-type-entity-autocomplete input {
@@ -5793,6 +5800,13 @@ nav#block-crane-quicklinks {
   .adminimal.crane .views-displays .tabs .action-list input.form-submit.button {
     display: block;
     text-align: left; }
+  .adminimal.crane.path-block .blocks-back {
+    display: inline-block;
+    margin: 4rem 0 -2rem; }
+  .adminimal.crane.path-block .block-content-form .js-form-type-vertical-tabs {
+    display: none; }
+  .adminimal.crane.entity-block_content-collection:not(.role-administrator) #block-crane-help {
+    display: none; }
 
 /* ========================
   NODE FORMS
