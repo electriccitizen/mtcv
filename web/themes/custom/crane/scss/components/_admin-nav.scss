@@ -105,3 +105,17 @@ ul.tabs.primary{
 		}
 	}//end tabs__tab
 }//end tabs-primary
+
+/* SECONDARY LOCAL TASKS
+----------------------------- */
+#block-crane-secondary-local-tasks{
+	nav.tabs{
+		//hide block secondary tasks from non-admins
+		&.blocks.block-types{
+			body:not(.role-administrator) &{
+				display: none;
+			}
+		}
+	}
+}//end secondary local tasks
+

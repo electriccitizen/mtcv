@@ -59,6 +59,7 @@
 @mixin required{
 	position: relative;
 	padding-right: .5rem;
+	margin-right: 3rem;
 	&:after{
 		content: '*';
 		color: $validation;
@@ -89,9 +90,12 @@ form{
 	}
 
 	input[type="submit"].button{
-		&:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide){
+		&:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button){
 			@include submitButton;
 			margin-bottom: $spaceXs;
+			&[value="Remove"]{
+				@include resetButton;
+			}
 		}
 	}
 
@@ -120,7 +124,6 @@ form{
 
 	// required items
 	.form-required,.js-form-required{
-		position: relative;
 		@include required;
 	}
 

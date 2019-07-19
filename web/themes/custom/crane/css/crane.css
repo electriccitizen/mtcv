@@ -4410,7 +4410,7 @@ ol {
 .adminimal.crane .button.js-hide {
   display: none; }
 
-.adminimal.crane .button--small, .adminimal.crane .button--primary.button--small {
+.adminimal.crane .button--small, .adminimal.crane .button--primary.button--small, .adminimal.crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button, .paragraphs-tabs-wrapper .adminimal.crane .clearfix > .paragraph-button {
   background-image: none;
   background-color: #3778c1;
   border: none;
@@ -4439,7 +4439,7 @@ ol {
   font-weight: 400;
   font-size: 1.2rem;
   border-radius: 2px; }
-  .adminimal.crane .button--small:hover, .adminimal.crane .button--small:focus {
+  .adminimal.crane .button--small:hover, .adminimal.crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button:hover, .paragraphs-tabs-wrapper .adminimal.crane .clearfix > .paragraph-button:hover, .adminimal.crane .button--small:focus, .adminimal.crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button:focus, .paragraphs-tabs-wrapper .adminimal.crane .clearfix > .paragraph-button:focus {
     color: #121212;
     background-color: #cccccc;
     box-shadow: none;
@@ -4448,10 +4448,10 @@ ol {
     -webkit-transition: all 0.3s ease;
     -webkit-transform: translateZ(0);
     outline: none; }
-  .adminimal.crane .button--small:active {
+  .adminimal.crane .button--small:active, .adminimal.crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button:active, .paragraphs-tabs-wrapper .adminimal.crane .clearfix > .paragraph-button:active {
     color: #121212;
     background-color: #b3b3b3; }
-  .adminimal.crane .button--small:hover, .adminimal.crane .button--small:focus {
+  .adminimal.crane .button--small:hover, .adminimal.crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button:hover, .paragraphs-tabs-wrapper .adminimal.crane .clearfix > .paragraph-button:hover, .adminimal.crane .button--small:focus, .adminimal.crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button:focus, .paragraphs-tabs-wrapper .adminimal.crane .clearfix > .paragraph-button:focus {
     background: #cccccc;
     color: #121212;
     border-color: #cccccc;
@@ -4459,17 +4459,17 @@ ol {
     -moz-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -webkit-transform: translateZ(0); }
-  .adminimal.crane .button--small:active {
+  .adminimal.crane .button--small:active, .adminimal.crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button:active, .paragraphs-tabs-wrapper .adminimal.crane .clearfix > .paragraph-button:active {
     background: #b3b3b3;
     color: #121212;
     border-color: #b3b3b3; }
-  .adminimal.crane .button--small.button--small-override {
+  .adminimal.crane .button--small.button--small-override, .adminimal.crane .paragraphs-tabs-wrapper .clearfix > .button--small-override.paragraph-button, .paragraphs-tabs-wrapper .adminimal.crane .clearfix > .button--small-override.paragraph-button {
     font-size: 1.8rem;
     border-width: 2px;
     font-weight: 700;
     margin-bottom: 2rem;
     border-radius: 4px; }
-  .adminimal.crane .button--small:hover, .adminimal.crane .button--small:focus {
+  .adminimal.crane .button--small:hover, .adminimal.crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button:hover, .paragraphs-tabs-wrapper .adminimal.crane .clearfix > .paragraph-button:hover, .adminimal.crane .button--small:focus, .adminimal.crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button:focus, .paragraphs-tabs-wrapper .adminimal.crane .clearfix > .paragraph-button:focus {
     background: #cccccc;
     border-color: #cccccc;
     color: #121212;
@@ -4477,7 +4477,7 @@ ol {
     -moz-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -webkit-transform: translateZ(0); }
-  .adminimal.crane .button--small:active {
+  .adminimal.crane .button--small:active, .adminimal.crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button:active, .paragraphs-tabs-wrapper .adminimal.crane .clearfix > .paragraph-button:active {
     background: #b3b3b3;
     border-color: #b3b3b3;
     color: #121212; }
@@ -4696,6 +4696,8 @@ ol {
     .paragraphs-dropdown-actions {
       top: 40px; } }
 
+/* PARAGRAPH ADD BUTTONS
+-------------------------- */
 /* ========================
   FIELD
 ========================== */
@@ -4723,7 +4725,7 @@ form .form-item-prefix {
     font-style: italic;
     color: #121212; }
 
-form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide) {
+form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button) {
   background-image: none;
   background-color: #3778c1;
   border: none;
@@ -4748,7 +4750,7 @@ form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dr
   min-width: 115px;
   margin-top: 0;
   margin-bottom: 1rem; }
-  form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):hover, form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):focus {
+  form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button):hover, form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button):focus {
     color: #121212;
     background-color: #cccccc;
     box-shadow: none;
@@ -4757,13 +4759,54 @@ form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dr
     -webkit-transition: all 0.3s ease;
     -webkit-transform: translateZ(0);
     outline: none; }
-  form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):active {
+  form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button):active {
     color: #121212;
     background-color: #b3b3b3; }
-  form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):hover, form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):focus {
+  form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button):hover, form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button):focus {
     background: #cccccc;
     border-color: #cccccc;
     color: #121212; }
+  form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button)[value="Remove"] {
+    background-image: none;
+    background-color: #3778c1;
+    border: none;
+    color: #ffffff;
+    line-height: 1.15;
+    padding: 1.15rem 1.5rem 1rem;
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    font-family: mr-eaves-sans, sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    margin-left: 0;
+    margin-right: 0;
+    background: #bf0e0e;
+    color: #ffffff;
+    border-color: #bf0e0e;
+    height: auto;
+    min-width: 115px;
+    margin-top: 0; }
+    form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button)[value="Remove"]:hover, form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button)[value="Remove"]:focus {
+      color: #121212;
+      background-color: #cccccc;
+      box-shadow: none;
+      transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -webkit-transform: translateZ(0);
+      outline: none; }
+    form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button)[value="Remove"]:active {
+      color: #121212;
+      background-color: #b3b3b3; }
+    form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button)[value="Remove"]:hover, form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button)[value="Remove"]:focus {
+      background: #cccccc;
+      border-color: #cccccc;
+      color: #121212; }
 
 form .form-item {
   width: 100%;
@@ -4784,8 +4827,8 @@ form .form-item {
 
 form .form-required, form .js-form-required {
   position: relative;
-  position: relative;
-  padding-right: .5rem; }
+  padding-right: .5rem;
+  margin-right: 3rem; }
   form .form-required:after, form .js-form-required:after {
     content: '*';
     color: #bf0e0e;
@@ -5100,11 +5143,11 @@ form .js-form-type-checkbox input[type="checkbox"], form .js-form-type-checkbox 
     background: #f6f6f6; }
   .adminimal.crane #block-crane-local-actions ul.action-links:not(.can-access) {
     display: none; }
-  .adminimal.crane #block-crane-local-actions ul.action-links a.button.button--small {
+  .adminimal.crane #block-crane-local-actions ul.action-links a.button.button--small, .adminimal.crane #block-crane-local-actions ul.action-links .paragraphs-tabs-wrapper .clearfix > a.button.paragraph-button, .paragraphs-tabs-wrapper .adminimal.crane #block-crane-local-actions ul.action-links .clearfix > a.button.paragraph-button {
     background: #ffffff; }
-    .adminimal.crane #block-crane-local-actions ul.action-links a.button.button--small:hover, .adminimal.crane #block-crane-local-actions ul.action-links a.button.button--small:focus {
+    .adminimal.crane #block-crane-local-actions ul.action-links a.button.button--small:hover, .adminimal.crane #block-crane-local-actions ul.action-links .paragraphs-tabs-wrapper .clearfix > a.button.paragraph-button:hover, .paragraphs-tabs-wrapper .adminimal.crane #block-crane-local-actions ul.action-links .clearfix > a.button.paragraph-button:hover, .adminimal.crane #block-crane-local-actions ul.action-links a.button.button--small:focus, .adminimal.crane #block-crane-local-actions ul.action-links .paragraphs-tabs-wrapper .clearfix > a.button.paragraph-button:focus, .paragraphs-tabs-wrapper .adminimal.crane #block-crane-local-actions ul.action-links .clearfix > a.button.paragraph-button:focus {
       background: #cccccc; }
-    .adminimal.crane #block-crane-local-actions ul.action-links a.button.button--small:active {
+    .adminimal.crane #block-crane-local-actions ul.action-links a.button.button--small:active, .adminimal.crane #block-crane-local-actions ul.action-links .paragraphs-tabs-wrapper .clearfix > a.button.paragraph-button:active, .paragraphs-tabs-wrapper .adminimal.crane #block-crane-local-actions ul.action-links .clearfix > a.button.paragraph-button:active {
       background: #b3b3b3; }
 
 /* PRIMARY TABS (local tasks)
@@ -5206,6 +5249,11 @@ ul.tabs.primary .tabs__tab {
         background: #b3b3b3;
         color: #121212;
         border-color: #b3b3b3; }
+
+/* SECONDARY LOCAL TASKS
+----------------------------- */
+body:not(.role-administrator) #block-crane-secondary-local-tasks nav.tabs.blocks.block-types {
+  display: none; }
 
 /* ==============
 	 BLOCKS
@@ -5346,6 +5394,12 @@ body.adminimal.crane {
 /* ========================
   LIST
 ========================== */
+.admin-list li a {
+  padding: 14px 15px 0 25px !important; }
+
+.admin-list li .description {
+  margin-bottom: 15px; }
+
 /* ========================
   MAIN
 ========================== */
@@ -5355,6 +5409,55 @@ body.adminimal.crane {
   padding-right: 2.5em;
   border-top: 1px solid #3778c1;
   box-sizing: border-box; }
+
+/* ==============
+	 MEDIA BROWSER
+================== */
+.crane .media-library-widget-modal .view-filters {
+  width: 100%; }
+  .crane .media-library-widget-modal .view-filters .views-exposed-form > .form-inline .js-form-item-sort-by {
+    max-width: 130px; }
+  @media (min-width: 600px) {
+    .crane .media-library-widget-modal .view-filters .views-exposed-form > .form-inline .media-library-view--form-actions {
+      margin: 4rem 0 0;
+      -ms-flex-item-align: start;
+      align-self: flex-start; } }
+
+.crane .media-library-widget-modal .image-widget .image-widget-data input.form-submit {
+  display: none !important; }
+
+.crane .media-library-widget-modal .form-actions .form-submit.button {
+  background-image: none;
+  background-color: #3778c1;
+  border: none;
+  color: #ffffff;
+  line-height: 1.15;
+  padding: 1.15rem 1.5rem 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  font-family: mr-eaves-sans, sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  margin-left: 0;
+  margin-right: 0;
+  margin-right: 2rem; }
+  .crane .media-library-widget-modal .form-actions .form-submit.button:hover, .crane .media-library-widget-modal .form-actions .form-submit.button:focus {
+    color: #121212;
+    background-color: #cccccc;
+    box-shadow: none;
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -webkit-transform: translateZ(0);
+    outline: none; }
+  .crane .media-library-widget-modal .form-actions .form-submit.button:active {
+    color: #121212;
+    background-color: #b3b3b3; }
 
 /* ==============
 	 PAGERS
@@ -5657,7 +5760,9 @@ nav#block-crane-quicklinks {
   /* DELETE CONFIG
 	-------------------- */
   /* VIEWS
-	--------------------- */ }
+	--------------------- */
+  /* BLOCK FORM
+	------------------- */ }
   .adminimal.crane .menu-link-content-form .js-form-type-textfield input, .adminimal.crane .menu-link-content-form .node-form .js-form-type-entity-autocomplete input, .adminimal.crane .node-form .menu-link-content-form .js-form-type-entity-autocomplete input, .adminimal.crane .menu-link-content-form .node-confirm-form .js-form-type-entity-autocomplete input, .adminimal.crane .node-confirm-form .menu-link-content-form .js-form-type-entity-autocomplete input, .adminimal.crane .menu-link-content-form .js-form-type-entity-autocomplete input {
     max-width: 320px; }
   .adminimal.crane .taxonomy-term-form .js-form-type-textfield input, .adminimal.crane .taxonomy-term-form .node-form .js-form-type-entity-autocomplete input, .adminimal.crane .node-form .taxonomy-term-form .js-form-type-entity-autocomplete input, .adminimal.crane .taxonomy-term-form .node-confirm-form .js-form-type-entity-autocomplete input, .adminimal.crane .node-confirm-form .taxonomy-term-form .js-form-type-entity-autocomplete input {
@@ -5701,6 +5806,13 @@ nav#block-crane-quicklinks {
   .adminimal.crane .views-displays .tabs .action-list input.form-submit.button {
     display: block;
     text-align: left; }
+  .adminimal.crane.path-block .blocks-back {
+    display: inline-block;
+    margin: 4rem 0 -2rem; }
+  .adminimal.crane.path-block .block-content-form .js-form-type-vertical-tabs {
+    display: none; }
+  .adminimal.crane.entity-block_content-collection:not(.role-administrator) #block-crane-help {
+    display: none; }
 
 /* ========================
   NODE FORMS

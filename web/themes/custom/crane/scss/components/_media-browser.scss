@@ -1,0 +1,33 @@
+/* ==============
+	 MEDIA BROWSER
+================== */
+
+.crane .media-library-widget-modal{
+	.view-filters{
+		width: 100%;
+		.views-exposed-form > .form-inline{
+			.js-form-item-sort-by{
+				max-width: 130px;
+			}
+			.media-library-view--form-actions{
+				@include smallTab{
+					margin: 4rem 0 0;
+					align-self: flex-start;
+				}
+			}
+		}
+	}//end view filters
+	.image-widget{
+		.image-widget-data{
+			input.form-submit{
+				display: none !important;
+			}
+		}
+	}
+	.form-actions{
+		.form-submit.button{
+			@include button;
+			margin-right: 2rem;
+		}
+	}		
+}//end media library widget
