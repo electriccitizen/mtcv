@@ -5379,6 +5379,7 @@ body.adminimal.crane {
   HEADER
 ========================== */
 .adminimal.crane .content-header {
+  position: relative;
   padding: 4rem 0 0;
   /* FF3.6+ */
   /* Chrome10+,Safari5.1+ */
@@ -5386,6 +5387,26 @@ body.adminimal.crane {
   /* IE10+ */
   background: linear-gradient(to top, #f3f3f3 0%, #ffffff 10%);
   /* W3C */ }
+  .adminimal.crane .content-header .live-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #ededed;
+    padding: .75rem 3rem;
+    display: none; }
+    .adminimal.crane .content-header .live-link:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -15px;
+      height: 100%;
+      width: 30px;
+      background: inherit;
+      transform: skew(30deg, 0deg); }
+    @media (min-width: 600px) {
+      .adminimal.crane .content-header .live-link {
+        display: block; } }
   .adminimal.crane .content-header .page-title {
     color: #121212;
     font-weight: 800;
