@@ -5394,6 +5394,12 @@ body.adminimal.crane {
 /* ========================
   LIST
 ========================== */
+.admin-list li a {
+  padding: 14px 15px 0 25px !important; }
+
+.admin-list li .description {
+  margin-bottom: 15px; }
+
 /* ========================
   MAIN
 ========================== */
