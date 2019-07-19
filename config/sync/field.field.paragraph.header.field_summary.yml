@@ -1,0 +1,19 @@
+uuid: bda67b00-87b4-403d-8d1e-700b4e69145c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_summary
+    - paragraphs.paragraphs_type.header
+id: paragraph.header.field_summary
+field_name: field_summary
+entity_type: paragraph
+bundle: header
+label: Summary
+description: 'A short description of the page content that will be used in teasers. '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

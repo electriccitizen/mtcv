@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.header.field_subheader
+    - field.field.paragraph.header.field_summary
     - field.field.paragraph.header.field_title
     - paragraphs.paragraphs_type.header
 id: paragraph.header.default
@@ -18,6 +19,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_summary:
+    weight: 2
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
     region: content
   field_title:
     weight: 0
