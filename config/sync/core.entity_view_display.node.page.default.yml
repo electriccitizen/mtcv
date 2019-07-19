@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.page.field_content
     - field.field.node.page.field_header
     - field.field.node.page.field_prefooter_image
-    - field.field.node.page.field_summary
     - node.type.page
   module:
     - entity_reference_revisions
@@ -46,5 +45,4 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_summary: true
   links: true

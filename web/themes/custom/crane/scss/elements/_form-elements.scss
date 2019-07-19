@@ -205,7 +205,7 @@ body .select2-container--default{
 		@include inputSelect;
 		.select2-selection__choice__remove{
 			position: relative;
-			z-index: 999;
+			z-index: 399;
 		}
 		.select2-selection__placeholder{
 			color: $black;
@@ -236,9 +236,12 @@ body .select2-container--default{
 	.select2-selection--multiple{
 		@include inputSelect;
 		padding: 3px 0 3px 0;
+		.select2-selection__rendered{
+			padding: 0 32px 0 10px;
+		}
 		.select2-selection__choice__remove{
 			position: relative;
-			z-index: 999;
+			z-index: 397;
 		}
 		//selection input
 		.select2-search--inline{ 
@@ -250,8 +253,8 @@ body .select2-container--default{
 				display: block;
 				height: 100%;
 				position: absolute;
-				top: 10px;
-				right: 2px;
+				top: 8px;
+				right: -20px;
 				cursor: pointer;
 				@include faSolid($fa-var-angle-down, 20px);
 			}
@@ -259,7 +262,7 @@ body .select2-container--default{
 				color: $darkGrey;
 				@include placeholder;
 				&:focus{
-					@include placeholderFocus;
+					//@include placeholderFocus;
 				}
 			}
 		}//end serach inline
@@ -285,9 +288,7 @@ body .select2-container--default{
 
 		.select2-selection--multiple{		
 			border-color: $borderRule;	
-			.select2-search--inline{ 
-				background: $offWhite;
-				
+			.select2-search--inline{ 				
 				&:after{
 					@include faSolid($fa-var-angle-up, 20px);
 				}
@@ -314,6 +315,7 @@ body .select2-container--default{
 		border-radius: 0;
 		border-top: 0;
 		padding: 0;
+		z-index: 398;
 	}
 }
 .select2-container--default .select2-results__option[aria-selected="true"]{
@@ -356,6 +358,39 @@ form{
 .form--inline.form-wrapper .form-item-separator{
 	margin: .5em 0 .25em;
 }
+
+/* FILE UPLOAD
+---------------- */
+form .form-type-managed-file{
+	& > label{
+		pointer-events: none;
+		cursor: default;
+	}
+	.file-upload-wrapper{
+		position: relative;
+		overflow: hidden;
+		display:  inline-block;
+		cursor: pointer;
+		.fake-button{
+			@include button;
+			margin-bottom: 0;
+		}
+		input[type="file"]{
+			position: absolute;
+			left: 0;
+			top: 0;
+			opacity: 0;
+			font-size: 100px;
+			z-index: 2;
+			&:hover,&:focus{
+				& + .fake-button{
+					background: $buttonBackHover;
+					color: $buttonTextHover;
+				}
+			}
+		}
+	}//end field upload wrapper
+}//end managed file
 
 /* FORM ACTIONS
 ------------------ */

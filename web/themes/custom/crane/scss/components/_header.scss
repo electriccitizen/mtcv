@@ -2,12 +2,35 @@
   HEADER
 ========================== */
 .adminimal.crane .content-header{
+	position: relative;
 	padding: $spaceLg 0 0;
 	background: -moz-linear-gradient(to top, lighten($lightGrey, 2.5%) 0%,$white 10%); /* FF3.6+ */
 	background: -webkit-linear-gradient(to top, lighten($lightGrey, 2.5%) 0%,$white 10%); /* Chrome10+,Safari5.1+ */
 	background: -o-linear-gradient(to top, lighten($lightGrey, 2.5%) 0%,$white 10%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(to top, lighten($lightGrey, 2.5%) 0%,$white 10%); /* IE10+ */
 	background: linear-gradient(to top, lighten($lightGrey, 2.5%) 0%,$white 10%); /* W3C */
+	.live-link{
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: $lightGrey;
+		padding: .75rem 3rem;
+		display: none;
+		&:before{
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: -15px;
+			height: 100%;
+			width: 30px;
+			background: inherit;
+			@include skew(30,0);
+		}
+		@include smallTab{
+			display: block;
+		}
+	}
 	.page-title{
 		color: $black;
 		font-weight: $xHeavy;

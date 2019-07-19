@@ -21,15 +21,12 @@
 
 		/* node specific form elements
 		---------------------------- */
-		.form-textarea-wrapper,.js-text-format-wrapper{
-			max-width: $textMax;
-		}
-
 		.js-form-type-textfield{
 			input{
 				max-width: 400px;
 			}
 		}
+
 		.js-form-type-entity-autocomplete{
 			@extend .js-form-type-textfield;
 			max-width: $textMax;
@@ -45,11 +42,56 @@
 			}
 		}//end layout region node main
 
+		//non-media image field
 		.field--widget-image-image{
 			@include cardItem;
-			input[type="file"]{
-				padding: 7px .5em;
+			max-width: $textMax;
+			.js-form-type-textfield:last-of-type{
+				margin-bottom: 0;
+			}
+			.form-submit{
+				top: 1.5rem;
+				margin-left: 2.5rem !important;
 			}
 		}
+
+		.layout-region-node-footer{
+			position: relative;
+			.layout-region-node-footer__content{
+				border-top: 0;
+				padding-top: 0;
+				margin-top: 0;
+			}
+			//published checkbox
+			#edit-status-wrapper{
+				margin-top: $spaceLg;
+				padding-top: $spaceSm;
+				border-top: 3px solid $midBlue;
+				.js-form-type-checkbox{
+					input[type="checkbox"]{
+						width: 22px !important;
+						height: 22px !important;
+					}
+					label{
+						font-weight: $heavy;
+						font-size: 2rem;
+					}
+				}
+			}//end published
+			#edit-actions{
+				@include tab{
+					position: absolute;
+					top: 1.5rem;
+					left: 150px;
+				}
+			}
+		}//end footer
+
+		/* RESOURCE SPECIFIC FORM */
+		&.node-resource-edit-form,&.node-resource-form{
+			.layout-region-node-main > .field--widget-options-select .select2-container--default{
+				max-width: 400px;
+			}
+		}//end resource form
 	}//end node form
 }//end crane
