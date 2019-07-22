@@ -331,6 +331,9 @@ body .select2-container--default{
 ---------------- */
 form{
 	.js-form-type-checkbox,.js-form-type-radio{
+		&:not(:last-child){
+			margin-bottom: 0;
+		}
 		label{
 			font-family: $bodyFont;
 			font-size: $baseSize;

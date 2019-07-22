@@ -5079,6 +5079,9 @@ body .select2-container--default {
 
 /* CHECKBOXES
 ---------------- */
+form .js-form-type-checkbox:not(:last-child), form .js-form-type-radio:not(:last-child) {
+  margin-bottom: 0; }
+
 form .js-form-type-checkbox label, form .js-form-type-radio label {
   font-family: freight-sans-pro, sans-serif;
   font-size: 1.6rem;
