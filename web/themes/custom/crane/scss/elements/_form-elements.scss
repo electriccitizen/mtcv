@@ -200,6 +200,7 @@ body.adminimal.crane{
 ----------------- */
 body .select2-container--default{
 	min-width: 120px;
+	max-width: 100%;
 	//single filter
 	.select2-selection--single{
 		@include inputSelect;

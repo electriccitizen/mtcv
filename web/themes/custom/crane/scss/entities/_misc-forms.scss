@@ -113,4 +113,23 @@
 		}
 	}
 
+	/* USER ADD FORM
+	-------------------- */
+	.user-register-form,.user-form{
+		.description{
+			max-width: $textMax;
+		}
+		.js-form-type-password-confirm,.js-form-item-current-pass{
+			input,.password-strength{
+				max-width: 240px;
+			}
+			.js-form-item-pass-pass2{
+				margin-bottom: 0;
+			}
+		}
+		#edit-status--wrapper{
+			margin-bottom: 0;
+		}
+	}//end user register form
+
 }//end crane

@@ -194,3 +194,37 @@
 }//end view content
 
 
+/* USERS LIST
+---------------- */
+.view-user-admin-people{
+	.views-exposed-form{
+		.form--inline{
+			& > .form-item-status{
+				max-width: 120px;
+			}
+			& > .form-item-role{
+				max-width: 140px;
+			}
+		}
+	}//end views exposed form
+	.view-content{
+		//hide duplicate bulk operations button
+		.views-table ~ .form-actions{
+			display: none !important;
+		}
+	}
+}//end user admin people
+
+
+/* REDIRECTS LIST
+--------------------- */
+.view-redirect{
+	.view-content{
+		//hide duplicate bulk operations button
+		.views-table ~ .form-actions{
+			display: none !important;
+		}
+	}
+}//end redirect view
+
+

@@ -918,7 +918,7 @@ nav#block-quicklinks {
         position: relative;
         z-index: 499;
         color: #121212;
-        font-size: 9px;
+        font-size: 12px;
         font-family: mr-eaves-sans, sans-serif;
         text-transform: uppercase;
         text-align: center;
@@ -937,7 +937,7 @@ nav#block-quicklinks {
         @media (min-width: 600px) {
           nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a {
             width: 80px;
-            height: 66px;
+            height: 68px;
             text-indent: 0; } }
         nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a:hover {
           opacity: .7; }

@@ -4948,7 +4948,8 @@ body.adminimal.crane select {
 /* SINGLE SELECT 2
 ----------------- */
 body .select2-container--default {
-  min-width: 120px; }
+  min-width: 120px;
+  max-width: 100%; }
   body .select2-container--default .select2-selection--single {
     min-width: 120px;
     font-size: 1.4rem;
@@ -5654,7 +5655,7 @@ nav#block-crane-quicklinks {
         width: 50px;
         height: 50px;
         color: #121212;
-        font-size: 9px;
+        font-size: 12px;
         font-family: mr-eaves-sans, sans-serif;
         text-transform: uppercase;
         text-align: center;
@@ -5673,7 +5674,7 @@ nav#block-crane-quicklinks {
         @media (min-width: 600px) {
           nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a {
             width: 80px;
-            height: 66px;
+            height: 68px;
             text-indent: 0; } }
         nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a:hover {
           opacity: .7; }
@@ -5848,7 +5849,9 @@ nav#block-crane-quicklinks {
   /* VIEWS
 	--------------------- */
   /* BLOCK FORM
-	------------------- */ }
+	------------------- */
+  /* USER ADD FORM
+	-------------------- */ }
   .adminimal.crane .menu-link-content-form .js-form-type-textfield input, .adminimal.crane .menu-link-content-form .node-form .js-form-type-entity-autocomplete input, .adminimal.crane .node-form .menu-link-content-form .js-form-type-entity-autocomplete input, .adminimal.crane .menu-link-content-form .node-confirm-form .js-form-type-entity-autocomplete input, .adminimal.crane .node-confirm-form .menu-link-content-form .js-form-type-entity-autocomplete input, .adminimal.crane .menu-link-content-form .js-form-type-entity-autocomplete input {
     max-width: 320px; }
   .adminimal.crane .taxonomy-term-form .js-form-type-textfield input, .adminimal.crane .taxonomy-term-form .node-form .js-form-type-entity-autocomplete input, .adminimal.crane .node-form .taxonomy-term-form .js-form-type-entity-autocomplete input, .adminimal.crane .taxonomy-term-form .node-confirm-form .js-form-type-entity-autocomplete input, .adminimal.crane .node-confirm-form .taxonomy-term-form .js-form-type-entity-autocomplete input {
@@ -5899,6 +5902,14 @@ nav#block-crane-quicklinks {
     display: none; }
   .adminimal.crane.entity-block_content-collection:not(.role-administrator) #block-crane-help {
     display: none; }
+  .adminimal.crane .user-register-form .description, .adminimal.crane .user-form .description {
+    max-width: 800px; }
+  .adminimal.crane .user-register-form .js-form-type-password-confirm input, .adminimal.crane .user-register-form .js-form-type-password-confirm .password-strength, .adminimal.crane .user-register-form .js-form-item-current-pass input, .adminimal.crane .user-register-form .js-form-item-current-pass .password-strength, .adminimal.crane .user-form .js-form-type-password-confirm input, .adminimal.crane .user-form .js-form-type-password-confirm .password-strength, .adminimal.crane .user-form .js-form-item-current-pass input, .adminimal.crane .user-form .js-form-item-current-pass .password-strength {
+    max-width: 240px; }
+  .adminimal.crane .user-register-form .js-form-type-password-confirm .js-form-item-pass-pass2, .adminimal.crane .user-register-form .js-form-item-current-pass .js-form-item-pass-pass2, .adminimal.crane .user-form .js-form-type-password-confirm .js-form-item-pass-pass2, .adminimal.crane .user-form .js-form-item-current-pass .js-form-item-pass-pass2 {
+    margin-bottom: 0; }
+  .adminimal.crane .user-register-form #edit-status--wrapper, .adminimal.crane .user-form #edit-status--wrapper {
+    margin-bottom: 0; }
 
 /* ========================
   NODE FORMS
@@ -5988,6 +5999,11 @@ nav#block-crane-quicklinks {
     margin: 0;
     font-feature-settings: "liga", "dlig";
     font-size: 20px; }
+
+/* TAXONOMY OVERVIEW 
+------------------------ */
+#taxonomy ul.dropbutton {
+  min-width: 114px; }
 
 /* ========================
   VIEWS
@@ -6183,5 +6199,21 @@ nav#block-crane-quicklinks {
         width: calc(25% - 30px); } }
   .view-id-block_content .views-field-info {
     margin-bottom: 1rem; }
+
+/* USERS LIST
+---------------- */
+.view-user-admin-people .views-exposed-form .form--inline > .form-item-status {
+  max-width: 120px; }
+
+.view-user-admin-people .views-exposed-form .form--inline > .form-item-role {
+  max-width: 140px; }
+
+.view-user-admin-people .view-content .views-table ~ .form-actions {
+  display: none !important; }
+
+/* REDIRECTS LIST
+--------------------- */
+.view-redirect .view-content .views-table ~ .form-actions {
+  display: none !important; }
 
 /*# sourceMappingURL=crane.css.map */

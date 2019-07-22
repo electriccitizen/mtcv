@@ -75,4 +75,21 @@ function mobileQuickNav() {
   }
 };
 
+
+/* TAXONOMY OVERVIEW MENU VOCAB ALTERS
+----------------------- */
+Drupal.behaviors.menuVocab = {
+  attach: function (context, settings) {
+    $("#taxonomy-overview-vocabularies", context).once('MenuVocabAlter').each(function(){
+      $(document).ready(function(){
+        $('ul[data-drupal-selector*="menu"]').children().each(function() {           
+          $(this).html($(this).html().replace(/term/g,"link"));
+        });
+      });
+    });
+   }
+};
+
+
+
 })(jQuery, Drupal);
