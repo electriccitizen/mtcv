@@ -1,0 +1,17 @@
+uuid: 92141650-4bcb-4d68-b89e-fe7b63d2e78c
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_redirect
+third_party_settings:
+  entity_redirect:
+    destination: default
+    url: ''
+    personalizable: 1
+    redirect_edit: 0
+    external: ''
+name: County
+vid: county
+description: 'A list of MT counties'
+weight: 0
