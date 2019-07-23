@@ -1,0 +1,21 @@
+uuid: fc19d58b-dc97-464e-ba5a-bd9cfedbf331
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.homepage_resources
+    - field.field.block_content.homepage_resources.field_resources
+id: block_content.homepage_resources.default
+targetEntityType: block_content
+bundle: homepage_resources
+mode: default
+content:
+  field_resources:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

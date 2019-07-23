@@ -1,0 +1,28 @@
+uuid: 53e68015-26f8-4a52-b0e3-ef5e24eb1f1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.homepage_featured_content
+    - field.storage.block_content.field_featured_content
+    - node.type.page
+id: block_content.homepage_featured_content.field_featured_content
+field_name: field_featured_content
+entity_type: block_content
+bundle: homepage_featured_content
+label: 'Featured Content'
+description: 'Add featured content pages. <strong>NOTE:</strong> Only published pages should be featured.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      page: page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

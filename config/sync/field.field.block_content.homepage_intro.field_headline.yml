@@ -1,0 +1,21 @@
+uuid: 8c506e73-e76f-4c15-a438-0e18999fb7d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.homepage_intro
+    - field.storage.block_content.field_headline
+  module:
+    - text
+id: block_content.homepage_intro.field_headline
+field_name: field_headline
+entity_type: block_content
+bundle: homepage_intro
+label: Headline
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

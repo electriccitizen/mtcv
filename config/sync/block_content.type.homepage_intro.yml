@@ -1,0 +1,8 @@
+uuid: cb87cb71-155d-49aa-970f-b6a71e9edb9e
+langcode: en
+status: true
+dependencies: {  }
+id: homepage_intro
+label: 'Homepage Intro'
+revision: 1
+description: 'Add the headline, lead-in and image to the top of the home page.'
