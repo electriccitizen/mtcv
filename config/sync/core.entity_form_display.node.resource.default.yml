@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.resource.field_county
     - field.field.node.resource.field_crime
     - field.field.node.resource.field_description
-    - field.field.node.resource.field_region
     - field.field.node.resource.field_related_category
     - field.field.node.resource.field_related_issue
     - field.field.node.resource.field_screenshot
@@ -22,6 +22,15 @@ targetEntityType: node
 bundle: resource
 mode: default
 content:
+  field_county:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_crime:
     weight: 5
     settings: {  }
@@ -35,12 +44,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
-    region: content
-  field_region:
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
     region: content
   field_related_category:
     weight: 7
