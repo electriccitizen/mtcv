@@ -38,6 +38,7 @@
         "drupal/responsive_preview": "^1.0@alpha",
         "drupal/simple_block": "^1.0@beta",
         "drupal/structure_sync": "^1.16",
+        "drupal/taxonomy_import": "^1.0",
         "drupal/text_summary_options": "^1.0",
         "drupal/tui_editor": "^1.9",
         "drupal/twig_tweak": "^2.3",
