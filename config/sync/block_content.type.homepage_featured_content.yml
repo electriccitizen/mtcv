@@ -1,0 +1,8 @@
+uuid: b3670d00-d229-4d78-8ff5-8339e9d09e28
+langcode: en
+status: true
+dependencies: {  }
+id: homepage_featured_content
+label: 'Homepage Featured Content'
+revision: 1
+description: 'Add content to be featured on the home page below the resource slider.'
