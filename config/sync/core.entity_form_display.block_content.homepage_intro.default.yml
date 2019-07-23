@@ -1,0 +1,49 @@
+uuid: aa3017b3-eb23-4054-a4a4-50a79400102f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.homepage_intro
+    - field.field.block_content.homepage_intro.field_headline
+    - field.field.block_content.homepage_intro.field_image
+    - field.field.block_content.homepage_intro.field_leadin
+  module:
+    - media_library
+    - text
+id: block_content.homepage_intro.default
+targetEntityType: block_content
+bundle: homepage_intro
+mode: default
+content:
+  field_headline:
+    weight: 26
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_image:
+    type: media_library_widget
+    weight: 28
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_leadin:
+    weight: 27
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
