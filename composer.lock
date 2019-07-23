@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "34fd26978453e794f3d74d165b295900",
+    "content-hash": "b766999484d72c55937c8aa0ea323b66",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3359,6 +3359,65 @@
             "homepage": "https://www.drupal.org/project/redirect",
             "support": {
                 "source": "https://git.drupalcode.org/project/redirect"
+            }
+        },
+        {
+            "name": "drupal/responsive_preview",
+            "version": "1.0.0-alpha7",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/responsive_preview.git",
+                "reference": "8.x-1.0-alpha7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/responsive_preview-8.x-1.0-alpha7.zip",
+                "reference": "8.x-1.0-alpha7",
+                "shasum": "3d8bf17dfc253a07ce74905b7943a20355690d83"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha7",
+                    "datestamp": "1507210746",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "chr.fritsch",
+                    "homepage": "https://www.drupal.org/user/2103716"
+                },
+                {
+                    "name": "eatings",
+                    "homepage": "https://www.drupal.org/user/105524"
+                },
+                {
+                    "name": "jessebeach",
+                    "homepage": "https://www.drupal.org/user/748566"
+                },
+                {
+                    "name": "willzyx",
+                    "homepage": "https://www.drupal.org/user/1043862"
+                }
+            ],
+            "description": "Provides a component that previews a page in various device dimensions.",
+            "homepage": "https://www.drupal.org/project/responsive_preview",
+            "support": {
+                "source": "https://git.drupalcode.org/project/responsive_preview"
             }
         },
         {
@@ -9613,6 +9672,7 @@
     "stability-flags": {
         "drupal/auto_entitylabel": 20,
         "drupal/entity_reference_layout": 15,
+        "drupal/responsive_preview": 15,
         "drupal/simple_block": 10
     },
     "prefer-stable": true,

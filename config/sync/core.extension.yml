@@ -19,6 +19,7 @@ module:
   dblog: 0
   devel: 0
   dynamic_page_cache: 0
+  ec_preview: 0
   editor: 0
   entity_redirect: 0
   entity_reference_revisions: 0
@@ -50,6 +51,7 @@ module:
   page_cache: 0
   path: 0
   redirect: 0
+  responsive_preview: 0
   serialization: 0
   shortcut: 0
   structure_sync: 0

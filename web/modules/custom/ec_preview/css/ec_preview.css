@@ -1,0 +1,18 @@
+.responsive-preview-active #responsive-preview-frame-container {
+  left: 5% !important;
+  height: 80%;
+  width: 80%;
+}
+
+.responsive-preview-active #responsive-preview-frame {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#edit-preview {
+  display: none !important;
+}
+
+#edit-ec-preview {
+  background: #018901;
+}
