@@ -1,17 +1,17 @@
-uuid: 1df88ed2-157f-4550-9566-12f04d5744dd
+uuid: 74bbad13-bbc7-456e-ae9c-a599e1364678
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_crime
+    - field.storage.node.field_county
     - node.type.resource
-    - taxonomy.vocabulary.crime
-id: node.resource.field_crime
-field_name: field_crime
+    - taxonomy.vocabulary.county
+id: node.resource.field_county
+field_name: field_county
 entity_type: node
 bundle: resource
-label: Crimes
-description: 'Select one or more to associate this resource with a specific crime(s) against an individual.'
+label: County
+description: ''
 required: false
 translatable: false
 default_value: {  }
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      crime: crime
+      county: county
     sort:
       field: name
       direction: asc

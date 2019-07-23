@@ -10,7 +10,7 @@ id: node.resource.field_related_issue
 field_name: field_related_issue
 entity_type: node
 bundle: resource
-label: 'Related need(s)'
+label: 'Related issues'
 description: 'Select one or more to associate this resource with related legal needs.'
 required: false
 translatable: false

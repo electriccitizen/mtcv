@@ -32,7 +32,7 @@ third_party_settings:
     personalizable: 0
     redirect_edit: 0
     external: ''
-name: 'Resource categorie(s)'
+name: Categories
 vid: resource_category
 description: 'These terms are used to associate resources with additional, generic categories surrounding victim''s rights.'
 weight: 0

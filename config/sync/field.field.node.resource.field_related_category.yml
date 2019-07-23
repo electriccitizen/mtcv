@@ -10,7 +10,7 @@ id: node.resource.field_related_category
 field_name: field_related_category
 entity_type: node
 bundle: resource
-label: 'Related categorie(s)'
+label: Categories
 description: 'Select one or more to associate this resource with additional categories surrounding victim''s rights.'
 required: false
 translatable: false

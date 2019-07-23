@@ -1,0 +1,17 @@
+uuid: 5dd16703-4fec-447e-8a6a-dcd4b4ce06ed
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_redirect
+third_party_settings:
+  entity_redirect:
+    destination: default
+    url: ''
+    personalizable: 1
+    redirect_edit: 0
+    external: ''
+name: 'Resource types'
+vid: resource_types
+description: 'Terms for different types of resources'
+weight: 0

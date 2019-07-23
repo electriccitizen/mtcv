@@ -32,7 +32,7 @@ third_party_settings:
     personalizable: 0
     redirect_edit: 0
     external: ''
-name: 'Related need(s)'
+name: 'Related issues'
 vid: related_issues
 description: 'These terms are used to associate resources with one or more related legal needs or life issues.'
 weight: 0
