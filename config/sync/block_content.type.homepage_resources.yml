@@ -1,0 +1,8 @@
+uuid: 28b53643-7913-43ca-a9e0-47db57d24720
+langcode: en
+status: true
+dependencies: {  }
+id: homepage_resources
+label: 'Homepage Resources'
+revision: 1
+description: 'Add a slider of featured resources to the home page.'

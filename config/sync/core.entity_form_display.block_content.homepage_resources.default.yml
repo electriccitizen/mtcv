@@ -1,0 +1,30 @@
+uuid: 0aa1c790-1883-49a1-ab12-ec7d1f049b9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.homepage_resources
+    - field.field.block_content.homepage_resources.field_resources
+id: block_content.homepage_resources.default
+targetEntityType: block_content
+bundle: homepage_resources
+mode: default
+content:
+  field_resources:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

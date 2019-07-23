@@ -12,7 +12,7 @@ field_name: field_headline
 entity_type: block_content
 bundle: homepage_intro
 label: Headline
-description: 'Only bold text should be used for formatting.'
+description: ''
 required: true
 translatable: false
 default_value: {  }
