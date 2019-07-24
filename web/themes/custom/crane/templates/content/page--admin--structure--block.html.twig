@@ -41,10 +41,11 @@
 #}
 {% extends 'page.html.twig' %}
 
+{% block help %}{% endblock %}
+
 {% block pageContent %}
   <div class="blocks-back">
-  	{{ attach_library('crane/block-editing') }}
-  	{% if pathName == 'block_content-add_page' %}Select the block type to add below{% elseif pathName == 'entity-block_content-delete_form' %}Delete the block{% else %}Edit this block{% endif %} or go back to the <a class="block-library" href="/admin/structure/block/block-content">Block Library.</a> {% if pathName == 'block_content-add_page' %}<strong>NOTE: </strong> New blocks will have to be added to react site by a developer.{% endif %}
+  	{% if pathName != 'view-block_content-page_2' %}<p>Add a new custom block or edit custom blocks below. <strong>Note:</strong> New custom blocks will have to be added to the live site by a developer.</p><p><a href="/admin/structure/block/blocks-home">Click here to edit home page blocks.</a></p>{% else %}<p>Edit home page blocks below or return to the <a href="/admin/structure/block/block-content">custom block library.</a></p>{% endif %}
   </div>
   {{ parent() }}
 {% endblock %}

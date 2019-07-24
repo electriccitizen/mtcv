@@ -13,6 +13,10 @@ global:
     - core/jquery
     - core/jquery.once
     - core/underscore
+block-editing:
+  version: 1.0
+  js:
+    js/block-editing.js: {}
 fonts:
   version: 1.0
   css:
