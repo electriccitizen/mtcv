@@ -1,0 +1,28 @@
+uuid: fa123d8f-544b-4860-b7d2-f6505116c3eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_featured_image
+    - media.type.image
+    - paragraphs.paragraphs_type.header
+id: paragraph.header.field_featured_image
+field_name: field_featured_image
+entity_type: paragraph
+bundle: header
+label: 'Featured Image'
+description: "<strong>Optimal image size:</strong> 136x229px.  This image will be show on the home page if this page is added as a featured content item. <br>\r\n<strong>NOTE:</strong> If this field is empty and this page is featured, a placeholder image will be used."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

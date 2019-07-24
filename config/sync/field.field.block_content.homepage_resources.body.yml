@@ -1,0 +1,27 @@
+uuid: bb7cb7dd-89b6-4461-b6a1-f96c6b11a9fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.homepage_resources
+    - field.storage.block_content.body
+  module:
+    - text
+    - text_summary_options
+third_party_settings:
+  text_summary_options:
+    show_summary: 0
+    required_summary: 0
+id: block_content.homepage_resources.body
+field_name: body
+entity_type: block_content
+bundle: homepage_resources
+label: Text
+description: 'Edit the text of the home page resource block here. <strong>NOTE:</strong> The link to the resources page and the resource icons will be automatically generated.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary
