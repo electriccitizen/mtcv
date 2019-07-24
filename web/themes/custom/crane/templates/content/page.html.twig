@@ -58,11 +58,13 @@
   <main class="page-content clearfix" role="main">
     <div class="visually-hidden"><a id="main-content" tabindex="-1"></a></div>
     {{ page.highlighted }}
-    {% if page.help %}
-      <div class="help">
-        {{ page.help }}
-      </div>
-    {% endif %}
+    {% block help %}
+      {% if page.help %}
+        <div class="help">
+          {{ page.help }}
+        </div>
+      {% endif %}
+    {% endblock %}
     {% block pageContent %}
       {{ page.content }}
     {% endblock %}
