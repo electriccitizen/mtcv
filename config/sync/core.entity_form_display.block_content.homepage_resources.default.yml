@@ -4,20 +4,22 @@ status: true
 dependencies:
   config:
     - block_content.type.homepage_resources
-    - field.field.block_content.homepage_resources.field_resources
+    - field.field.block_content.homepage_resources.body
+  module:
+    - text
 id: block_content.homepage_resources.default
 targetEntityType: block_content
 bundle: homepage_resources
 mode: default
 content:
-  field_resources:
+  body:
     weight: 26
     settings:
-      match_operator: CONTAINS
-      size: 60
+      rows: 9
+      summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: text_textarea_with_summary
     region: content
   info:
     type: string_textfield
