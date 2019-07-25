@@ -1,0 +1,22 @@
+uuid: d4a95dbc-3211-47ab-b21b-05ef7aeacc47
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.county
+id: taxonomy_term.county.default
+targetEntityType: taxonomy_term
+bundle: county
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

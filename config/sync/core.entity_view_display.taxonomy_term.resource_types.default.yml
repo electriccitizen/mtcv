@@ -1,0 +1,30 @@
+uuid: 780ff100-9874-40fc-8335-5bb3253a518c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.resource_types.field_icon
+    - taxonomy.vocabulary.resource_types
+  module:
+    - options
+    - text
+id: taxonomy_term.resource_types.default
+targetEntityType: taxonomy_term
+bundle: resource_types
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_icon:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }

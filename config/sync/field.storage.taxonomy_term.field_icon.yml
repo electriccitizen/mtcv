@@ -1,0 +1,42 @@
+uuid: e3423382-10e2-4cc1-8ea1-e18bd20d452c
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+id: taxonomy_term.field_icon
+field_name: field_icon
+entity_type: taxonomy_term
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: advocate
+      label: Advocate
+    -
+      value: database
+      label: Database
+    -
+      value: info
+      label: 'Find Information'
+    -
+      value: search
+      label: 'Form Search'
+    -
+      value: learn
+      label: 'Learn More'
+    -
+      value: toolbox
+      label: Tools
+    -
+      value: question
+      label: Question
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

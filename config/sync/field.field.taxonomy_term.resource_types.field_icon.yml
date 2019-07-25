@@ -1,0 +1,21 @@
+uuid: f91faf52-9861-4064-8d9a-583dbd639524
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_icon
+    - taxonomy.vocabulary.resource_types
+  module:
+    - options
+id: taxonomy_term.resource_types.field_icon
+field_name: field_icon
+entity_type: taxonomy_term
+bundle: resource_types
+label: Icon
+description: 'Select the icon associated with this resource type.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
