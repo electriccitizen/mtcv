@@ -11,7 +11,7 @@ entity_type: paragraph
 bundle: header
 label: 'Page Title'
 description: 'Enter a catchy or informative headline'
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
