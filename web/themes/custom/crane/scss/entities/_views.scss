@@ -24,6 +24,25 @@
 	}//end form inline
 }//end views exposed form
 
+.views-ui-dialog{
+	.views-override.form--inline{
+		.js-form-item-override-dropdown{
+			max-width: 175px;
+		}
+		.js-form-item-override-controls-options-search{
+			max-width: 240px;
+		}
+	}
+	.ui-dialog-buttonset{
+		button{
+			margin-right: 2rem !important;
+			&:not(.button--primary):not(.button--danger){
+				@include cautionButton;
+			}
+		}
+	}
+}
+
 /* ==================
   SPECIFIC VIEWS
 ===================== */

@@ -87,6 +87,21 @@
 	}
 }
 
+@mixin cautionButton{
+	@include button;
+	background: $cautionBack;
+	color: $cautionText;
+	border-color: $cautionBack;
+	height: auto;
+	min-width: 115px;
+	margin-top: 0;
+	&:hover,&:focus{
+		background: $cautionBackHover;
+		border-color: $cautionBackHover;
+		color: $cautionTextHover;
+	}
+}
+
 @mixin dropbuttonWrapper{
 	li.secondary-action{
 		border-top: 1px solid $midBlue;
@@ -172,7 +187,7 @@
 			color: $buttonTextActive;
 		}
 	}//end button--small
-	.button[data-drupal-selector="edit-cancel"],.button--danger,.button[data-drupal-selector="edit-actions-cancel"],#edit-reset{
+	.button--danger,#edit-reset{
 		@include resetButton;
 		margin-left: 0;
 		margin-right: 0;
@@ -180,7 +195,16 @@
 		@include smallTab{
 			width: auto;
 		}
-	}//end reset, cancel, danger buttons
+	}//end reset danger buttons
+	.button[data-drupal-selector="edit-cancel"],.button[data-drupal-selector="edit-actions-cancel"]{
+		@include cautionButton;
+		margin-left: 0;
+		margin-right: 0;
+		width: 100%;
+		@include smallTab{
+			width: auto;
+		}
+	}//end reset danger buttons
 	#edit-preview{
 		@include submitButton;
 		background: $green;

@@ -4483,7 +4483,7 @@ ol {
     border-color: #b3b3b3;
     color: #121212; }
 
-.adminimal.crane .button[data-drupal-selector="edit-cancel"], .adminimal.crane .button--danger, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"], .adminimal.crane #edit-reset {
+.adminimal.crane .button--danger, .adminimal.crane #edit-reset {
   background-image: none;
   background-color: #3778c1;
   border: none;
@@ -4511,7 +4511,7 @@ ol {
   margin-left: 0;
   margin-right: 0;
   width: 100%; }
-  .adminimal.crane .button[data-drupal-selector="edit-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-cancel"]:focus, .adminimal.crane .button--danger:hover, .adminimal.crane .button--danger:focus, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:focus, .adminimal.crane #edit-reset:hover, .adminimal.crane #edit-reset:focus {
+  .adminimal.crane .button--danger:hover, .adminimal.crane .button--danger:focus, .adminimal.crane #edit-reset:hover, .adminimal.crane #edit-reset:focus {
     color: #121212;
     background-color: #cccccc;
     box-shadow: none;
@@ -4520,15 +4520,63 @@ ol {
     -webkit-transition: all 0.3s ease;
     -webkit-transform: translateZ(0);
     outline: none; }
-  .adminimal.crane .button[data-drupal-selector="edit-cancel"]:active, .adminimal.crane .button--danger:active, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:active, .adminimal.crane #edit-reset:active {
+  .adminimal.crane .button--danger:active, .adminimal.crane #edit-reset:active {
     color: #121212;
     background-color: #b3b3b3; }
-  .adminimal.crane .button[data-drupal-selector="edit-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-cancel"]:focus, .adminimal.crane .button--danger:hover, .adminimal.crane .button--danger:focus, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:focus, .adminimal.crane #edit-reset:hover, .adminimal.crane #edit-reset:focus {
+  .adminimal.crane .button--danger:hover, .adminimal.crane .button--danger:focus, .adminimal.crane #edit-reset:hover, .adminimal.crane #edit-reset:focus {
     background: #cccccc;
     border-color: #cccccc;
     color: #121212; }
   @media (min-width: 600px) {
-    .adminimal.crane .button[data-drupal-selector="edit-cancel"], .adminimal.crane .button--danger, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"], .adminimal.crane #edit-reset {
+    .adminimal.crane .button--danger, .adminimal.crane #edit-reset {
+      width: auto; } }
+
+.adminimal.crane .button[data-drupal-selector="edit-cancel"], .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"] {
+  background-image: none;
+  background-color: #3778c1;
+  border: none;
+  color: #ffffff;
+  line-height: 1.15;
+  padding: 1.15rem 1.5rem 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  font-family: mr-eaves-sans, sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  margin-left: 0;
+  margin-right: 0;
+  background: #797501;
+  color: #ffffff;
+  border-color: #797501;
+  height: auto;
+  min-width: 115px;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%; }
+  .adminimal.crane .button[data-drupal-selector="edit-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-cancel"]:focus, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:focus {
+    color: #121212;
+    background-color: #cccccc;
+    box-shadow: none;
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -webkit-transform: translateZ(0);
+    outline: none; }
+  .adminimal.crane .button[data-drupal-selector="edit-cancel"]:active, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:active {
+    color: #121212;
+    background-color: #b3b3b3; }
+  .adminimal.crane .button[data-drupal-selector="edit-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-cancel"]:focus, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:hover, .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"]:focus {
+    background: #cccccc;
+    border-color: #cccccc;
+    color: #121212; }
+  @media (min-width: 600px) {
+    .adminimal.crane .button[data-drupal-selector="edit-cancel"], .adminimal.crane .button[data-drupal-selector="edit-actions-cancel"] {
       width: auto; } }
 
 .adminimal.crane #edit-preview {
@@ -4731,7 +4779,7 @@ form .form-item-prefix {
     font-style: italic;
     color: #121212; }
 
-form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button) {
+form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button):not(.button--danger):not(#edit-reset):not(#edit-cancel):not(#edit-actions-cancel) {
   background-image: none;
   background-color: #3778c1;
   border: none;
@@ -4756,7 +4804,7 @@ form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dr
   min-width: 115px;
   margin-top: 0;
   margin-bottom: 1rem; }
-  form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button):hover, form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button):focus {
+  form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button):not(.button--danger):not(#edit-reset):not(#edit-cancel):not(#edit-actions-cancel):hover, form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button):not(.button--danger):not(#edit-reset):not(#edit-cancel):not(#edit-actions-cancel):focus {
     color: #121212;
     background-color: #cccccc;
     box-shadow: none;
@@ -4765,14 +4813,14 @@ form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dr
     -webkit-transition: all 0.3s ease;
     -webkit-transform: translateZ(0);
     outline: none; }
-  form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button):active {
+  form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button):not(.button--danger):not(#edit-reset):not(#edit-cancel):not(#edit-actions-cancel):active {
     color: #121212;
     background-color: #b3b3b3; }
-  form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button):hover, form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button):focus {
+  form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button):not(.button--danger):not(#edit-reset):not(#edit-cancel):not(#edit-actions-cancel):hover, form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button):not(.button--danger):not(#edit-reset):not(#edit-cancel):not(#edit-actions-cancel):focus {
     background: #cccccc;
     border-color: #cccccc;
     color: #121212; }
-  form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button)[value="Remove"] {
+  form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button):not(.button--danger):not(#edit-reset):not(#edit-cancel):not(#edit-actions-cancel)[value="Remove"] {
     background-image: none;
     background-color: #3778c1;
     border: none;
@@ -4797,7 +4845,7 @@ form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dr
     height: auto;
     min-width: 115px;
     margin-top: 0; }
-    form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button)[value="Remove"]:hover, form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button)[value="Remove"]:focus {
+    form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button):not(.button--danger):not(#edit-reset):not(#edit-cancel):not(#edit-actions-cancel)[value="Remove"]:hover, form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button):not(.button--danger):not(#edit-reset):not(#edit-cancel):not(#edit-actions-cancel)[value="Remove"]:focus {
       color: #121212;
       background-color: #cccccc;
       box-shadow: none;
@@ -4806,10 +4854,10 @@ form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dr
       -webkit-transition: all 0.3s ease;
       -webkit-transform: translateZ(0);
       outline: none; }
-    form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button)[value="Remove"]:active {
+    form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button):not(.button--danger):not(#edit-reset):not(#edit-cancel):not(#edit-actions-cancel)[value="Remove"]:active {
       color: #121212;
       background-color: #b3b3b3; }
-    form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button)[value="Remove"]:hover, form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button)[value="Remove"]:focus {
+    form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button):not(.button--danger):not(#edit-reset):not(#edit-cancel):not(#edit-actions-cancel)[value="Remove"]:hover, form input[type="submit"].button:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button):not(.button--danger):not(#edit-reset):not(#edit-cancel):not(#edit-actions-cancel)[value="Remove"]:focus {
       background: #cccccc;
       border-color: #cccccc;
       color: #121212; }
@@ -6037,6 +6085,56 @@ nav#block-crane-quicklinks {
     width: 100%;
     padding-left: 10px;
     padding-right: 10px; }
+
+.views-ui-dialog .views-override.form--inline .js-form-item-override-dropdown {
+  max-width: 175px; }
+
+.views-ui-dialog .views-override.form--inline .js-form-item-override-controls-options-search {
+  max-width: 240px; }
+
+.views-ui-dialog .ui-dialog-buttonset button {
+  margin-right: 2rem !important; }
+  .views-ui-dialog .ui-dialog-buttonset button:not(.button--primary):not(.button--danger) {
+    background-image: none;
+    background-color: #3778c1;
+    border: none;
+    color: #ffffff;
+    line-height: 1.15;
+    padding: 1.15rem 1.5rem 1rem;
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    font-family: mr-eaves-sans, sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    margin-left: 0;
+    margin-right: 0;
+    background: #797501;
+    color: #ffffff;
+    border-color: #797501;
+    height: auto;
+    min-width: 115px;
+    margin-top: 0; }
+    .views-ui-dialog .ui-dialog-buttonset button:not(.button--primary):not(.button--danger):hover, .views-ui-dialog .ui-dialog-buttonset button:not(.button--primary):not(.button--danger):focus {
+      color: #121212;
+      background-color: #cccccc;
+      box-shadow: none;
+      transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -webkit-transform: translateZ(0);
+      outline: none; }
+    .views-ui-dialog .ui-dialog-buttonset button:not(.button--primary):not(.button--danger):active {
+      color: #121212;
+      background-color: #b3b3b3; }
+    .views-ui-dialog .ui-dialog-buttonset button:not(.button--primary):not(.button--danger):hover, .views-ui-dialog .ui-dialog-buttonset button:not(.button--primary):not(.button--danger):focus {
+      background: #cccccc;
+      border-color: #cccccc;
+      color: #121212; }
 
 /* ==================
   SPECIFIC VIEWS
