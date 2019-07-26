@@ -118,8 +118,8 @@ function citizen_custom_form_alter(&$form, FormStateInterface $form_state) {
       unset($form['description'],$form['weight'],$form['expanded'],$form['link']['widget'][0]['options']);
     }
   } //End menu content link form alter
-  
-  //alter taxononmy forms
+
+  //alter taxononmy term forms
   if(isset($form['vid']['#value'])){
     $vocab = $form['vid']['#value'];
     $human = ucwords(str_replace('_',' ',$vocab));

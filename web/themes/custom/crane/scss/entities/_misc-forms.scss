@@ -13,6 +13,21 @@
 		}
 	}//END MENU LINK FORM
 
+	/* TAXONOMY OVERVIEW
+	---------------------- */
+	.taxonomy-overview-terms{
+		td{
+			a.menu-item__link{
+				pointer-events: none;
+				color: $black;
+				font-weight: 700;
+				&:hover,&:focus{
+					text-decoration: none;
+				}
+			}
+		}
+	}//end taxonomy overview
+
 	/* TAXONOMY TERMS
 	------------------- */
 	.taxonomy-term-form{

@@ -5890,6 +5890,8 @@ nav#block-crane-quicklinks {
 .adminimal.crane {
   /* MENU LINK 
 	----------------- */
+  /* TAXONOMY OVERVIEW
+	---------------------- */
   /* TAXONOMY TERMS
 	------------------- */
   /* ADD FIELD
@@ -5904,6 +5906,12 @@ nav#block-crane-quicklinks {
 	-------------------- */ }
   .adminimal.crane .menu-link-content-form .js-form-type-textfield input, .adminimal.crane .menu-link-content-form .node-form .js-form-type-entity-autocomplete input, .adminimal.crane .node-form .menu-link-content-form .js-form-type-entity-autocomplete input, .adminimal.crane .menu-link-content-form .node-confirm-form .js-form-type-entity-autocomplete input, .adminimal.crane .node-confirm-form .menu-link-content-form .js-form-type-entity-autocomplete input, .adminimal.crane .menu-link-content-form .js-form-type-entity-autocomplete input {
     max-width: 320px; }
+  .adminimal.crane .taxonomy-overview-terms td a.menu-item__link {
+    pointer-events: none;
+    color: #121212;
+    font-weight: 700; }
+    .adminimal.crane .taxonomy-overview-terms td a.menu-item__link:hover, .adminimal.crane .taxonomy-overview-terms td a.menu-item__link:focus {
+      text-decoration: none; }
   .adminimal.crane .taxonomy-term-form .js-form-type-textfield input, .adminimal.crane .taxonomy-term-form .node-form .js-form-type-entity-autocomplete input, .adminimal.crane .node-form .taxonomy-term-form .js-form-type-entity-autocomplete input, .adminimal.crane .taxonomy-term-form .node-confirm-form .js-form-type-entity-autocomplete input, .adminimal.crane .node-confirm-form .taxonomy-term-form .js-form-type-entity-autocomplete input {
     max-width: 402px; }
   .adminimal.crane .taxonomy-term-form details.seven-details {
