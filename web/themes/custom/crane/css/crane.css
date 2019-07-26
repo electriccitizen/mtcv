@@ -5223,6 +5223,12 @@ form .form-type-managed-file .file-upload-wrapper {
     .adminimal.crane form .form-actions > *:not(:last-child) {
       margin-right: 2rem !important; } }
 
+/* FIELDSETS
+---------------- */
+fieldset.form-wrapper {
+  max-width: 100%;
+  box-sizing: border-box; }
+
 /* ==============
 	 ADMIN-NAV
 ================== */

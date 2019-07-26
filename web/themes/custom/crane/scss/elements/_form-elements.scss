@@ -409,7 +409,12 @@ form .form-type-managed-file{
 	}
 }//end crane form
 
-
+/* FIELDSETS
+---------------- */
+fieldset.form-wrapper{
+	max-width: 100%;
+	box-sizing: border-box;
+}
 
 
 
