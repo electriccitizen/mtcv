@@ -5447,9 +5447,8 @@ body:not(.role-administrator) #block-crane-secondary-local-tasks nav.tabs.blocks
         color: #121212; }
   .views-card .views-field-meta {
     font-size: 1.5rem;
-    display: inline-block; }
-    .views-card .views-field-meta:nth-child(even) {
-      margin-right: 2rem; }
+    display: inline-block;
+    margin-right: 2rem; }
 
 /* ==============
 	 CONTAINERS
