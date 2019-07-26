@@ -120,6 +120,11 @@ function citizen_custom_form_alter(&$form, FormStateInterface $form_state) {
   } //End menu content link form alter
 
   //alter taxononmy term forms
+  if($formId == 'taxonomy-overview-terms'){
+    $form['#prefix'] = '<div class="vocab-nav">Add, edit, delete, or rearrange the terms in this vocabulary—or return to the <a href="/admin/structure/taxonomy">vocabularies list</a>.</div><br>';
+  }
+
+  //alter taxononmy term forms
   if(isset($form['vid']['#value'])){
     $vocab = $form['vid']['#value'];
     $human = ucwords(str_replace('_',' ',$vocab));
