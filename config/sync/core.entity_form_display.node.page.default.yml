@@ -9,6 +9,7 @@ dependencies:
     - node.type.page
   module:
     - paragraphs
+    - path
 _core:
   default_config_hash: sb0qCkzU_8mNq29NehYAU8jCBXWPLeX0UN8sYFVGVcw
 id: node.page.default
@@ -18,7 +19,7 @@ mode: default
 content:
   field_content:
     type: paragraphs
-    weight: 3
+    weight: 2
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -56,7 +57,7 @@ content:
     region: content
   field_prefooter_image:
     type: paragraphs
-    weight: 4
+    weight: 3
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -73,11 +74,17 @@ content:
         add_above: '0'
     third_party_settings: {  }
     region: content
+  path:
+    type: path
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 5
+    weight: 4
     region: content
     third_party_settings: {  }
   title:
@@ -90,7 +97,6 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  path: true
   promote: true
   sticky: true
   uid: true
