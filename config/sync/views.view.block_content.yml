@@ -6,6 +6,7 @@ dependencies:
     - block_content.type.basic
     - block_content.type.homepage_featured_content
     - block_content.type.homepage_intro
+    - block_content.type.homepage_prefooter_image
     - block_content.type.homepage_resources
     - block_content.type.logo_grid
     - block_content.type.social_media_links
@@ -714,6 +715,7 @@ display:
           value:
             homepage_featured_content: homepage_featured_content
             homepage_intro: homepage_intro
+            homepage_prefooter_image: homepage_prefooter_image
             homepage_resources: homepage_resources
           group: 1
           exposed: false
