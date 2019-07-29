@@ -1,0 +1,21 @@
+uuid: 53219c87-5556-4af0-9ebb-c47ad7e978c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.homepage_prefooter_image
+    - field.field.block_content.homepage_prefooter_image.field_image
+id: block_content.homepage_prefooter_image.default
+targetEntityType: block_content
+bundle: homepage_prefooter_image
+mode: default
+content:
+  field_image:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: homepage_resources
-label: 'Homepage Resources'
+label: 'Home Resources'
 revision: 1
 description: 'Add a slider of featured resources to the home page.'

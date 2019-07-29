@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: homepage_featured_content
-label: 'Homepage Featured Content'
+label: 'Home Featured Content'
 revision: 1
 description: 'Add content to be featured on the home page below the resource slider.'

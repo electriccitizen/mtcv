@@ -1,0 +1,28 @@
+uuid: b345996a-b014-4ea7-9d4d-0d4677024a93
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.homepage_prefooter_image
+    - field.storage.block_content.field_image
+    - media.type.image
+id: block_content.homepage_prefooter_image.field_image
+field_name: field_image
+entity_type: block_content
+bundle: homepage_prefooter_image
+label: Image
+description: '<strong>Optimal image size:</strong> 2280x376px.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
