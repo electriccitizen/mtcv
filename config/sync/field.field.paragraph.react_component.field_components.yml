@@ -1,0 +1,29 @@
+uuid: ab35307d-932a-4acc-a5b1-d04f5b74ee90
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_components
+    - paragraphs.paragraphs_type.react_component
+    - taxonomy.vocabulary.react_components
+id: paragraph.react_component.field_components
+field_name: field_components
+entity_type: paragraph
+bundle: react_component
+label: Components
+description: 'Select react components to add to the page. <strong>NOTE:</strong> This paragraph type should only be used if by those familiar with the components.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      react_components: react_components
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

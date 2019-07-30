@@ -1,0 +1,22 @@
+uuid: 7c6302ac-5390-4fb7-b71a-7b201650e438
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.react_components
+id: taxonomy_term.react_components.default
+targetEntityType: taxonomy_term
+bundle: react_components
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

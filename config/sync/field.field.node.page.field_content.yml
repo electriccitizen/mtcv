@@ -9,6 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.button
     - paragraphs.paragraphs_type.horizontal_rule
     - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.react_component
     - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.text_with_image
     - paragraphs.paragraphs_type.video
@@ -33,35 +34,42 @@ settings:
       button: button
       horizontal_rule: horizontal_rule
       image: image
+      react_component: react_component
       text: text
       text_with_image: text_with_image
       video: video
     target_bundles_drag_drop:
       accordion_group:
         enabled: true
-        weight: -19
+        weight: -23
       button:
         enabled: true
-        weight: -18
+        weight: -22
       horizontal_rule:
         enabled: true
-        weight: -17
+        weight: -21
       image:
         enabled: true
-        weight: -16
+        weight: -20
+      react_component:
+        enabled: true
+        weight: -19
       text:
         enabled: true
-        weight: -15
+        weight: -18
       text_with_image:
         enabled: true
-        weight: -14
+        weight: -17
       video:
         enabled: true
-        weight: -13
+        weight: -16
       header:
-        weight: -12
+        weight: -15
         enabled: false
       accordion_item:
-        weight: -11
+        weight: -14
+        enabled: false
+      logo_grid_item:
+        weight: -13
         enabled: false
 field_type: entity_reference_revisions

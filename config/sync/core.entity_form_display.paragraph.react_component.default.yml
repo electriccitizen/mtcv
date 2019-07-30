@@ -1,0 +1,21 @@
+uuid: bcb335c8-bc86-48dc-bf84-33c1c6438fae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.react_component.field_components
+    - paragraphs.paragraphs_type.react_component
+id: paragraph.react_component.default
+targetEntityType: paragraph
+bundle: react_component
+mode: default
+content:
+  field_components:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true

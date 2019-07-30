@@ -1,0 +1,17 @@
+uuid: c7d24986-076c-4f8f-8f9e-e693fcfc60ef
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_redirect
+third_party_settings:
+  entity_redirect:
+    destination: default
+    url: ''
+    personalizable: 1
+    redirect_edit: 0
+    external: ''
+name: 'React Components'
+vid: react_components
+description: 'Terms that related to react components. Used in component paragraphs.'
+weight: 0

@@ -1,0 +1,9 @@
+uuid: 719a901f-41a2-4163-8763-146e8d6d83b1
+langcode: en
+status: true
+dependencies: {  }
+id: react_component
+label: 'React Component'
+icon_uuid: null
+description: 'Add a react component to the page.'
+behavior_plugins: {  }

@@ -1,0 +1,21 @@
+uuid: b9b515c9-e57e-499f-8f7c-492cc7cc44d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.react_component.field_components
+    - paragraphs.paragraphs_type.react_component
+id: paragraph.react_component.default
+targetEntityType: paragraph
+bundle: react_component
+mode: default
+content:
+  field_components:
+    weight: 0
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }
