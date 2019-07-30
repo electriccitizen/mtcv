@@ -1,0 +1,30 @@
+uuid: bfbde215-c320-44d1-b47a-ba5b11dbb671
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.triage_questions.field_responses
+    - taxonomy.vocabulary.triage_questions
+  module:
+    - options
+    - text
+id: taxonomy_term.triage_questions.default
+targetEntityType: taxonomy_term
+bundle: triage_questions
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_responses:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }

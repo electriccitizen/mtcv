@@ -1,0 +1,21 @@
+uuid: 38b288e9-8380-4635-a20d-980d032ff0da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_responses
+    - taxonomy.vocabulary.triage_questions
+  module:
+    - options
+id: taxonomy_term.triage_questions.field_responses
+field_name: field_responses
+entity_type: taxonomy_term
+bundle: triage_questions
+label: Responses
+description: 'Select the list of of available responses for this question.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

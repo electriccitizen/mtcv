@@ -1,0 +1,17 @@
+uuid: a9bf5c6c-a1d9-49c0-b26f-778b26b53d43
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_redirect
+third_party_settings:
+  entity_redirect:
+    destination: default
+    url: ''
+    personalizable: 1
+    redirect_edit: 0
+    external: ''
+name: 'Audience options'
+vid: audience_options
+description: 'Types of crime victims'
+weight: 0

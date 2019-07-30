@@ -1,0 +1,17 @@
+uuid: dd49edb7-cb8c-44a5-91a3-ee1b0e12b476
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_redirect
+third_party_settings:
+  entity_redirect:
+    destination: default
+    url: ''
+    personalizable: 1
+    redirect_edit: 0
+    external: ''
+name: 'Triage Questions'
+vid: triage_questions
+description: 'Top-level triage questions'
+weight: 0
