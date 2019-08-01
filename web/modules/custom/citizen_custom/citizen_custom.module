@@ -53,6 +53,27 @@ function citizen_custom_entity_presave(EntityInterface $entity) {
         $entity->set('field_alias', $alias);
         break;
       }
+    case 'footer_menu':
+      $link = $entity->get('field_menu_link')->getValue();
+      $uri = $link[0]['uri'];
+      // Check for external link and process if TRUE.
+      if (UrlHelper::isExternal($uri)) {
+        $entity->set('field_alias', $uri);
+        break;
+      } else {
+        $url = str_replace('entity:', '/', $uri);
+        $url = str_replace('internal:', '', $url);
+        //get the alias for the path and assign it in path.
+        // TODO: Add if for garbage handleing without blowing up.
+        try {
+          $alias = Drupal::service('path.alias_manager')->getAliasByPath($url);
+        }
+        catch (Exception $e) {
+          $alias = $url;
+        }
+        $entity->set('field_alias', $alias);
+        break;
+      }
   }
 }
 
