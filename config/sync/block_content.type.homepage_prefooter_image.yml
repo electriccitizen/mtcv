@@ -1,8 +1,0 @@
-uuid: 3b89a91e-69b4-4433-ae9d-529d10b64f4b
-langcode: en
-status: true
-dependencies: {  }
-id: homepage_prefooter_image
-label: 'Home Pre-footer Image'
-revision: 0
-description: 'Add an image to the bottom of the home page content.'

@@ -12,19 +12,19 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: audience_options
-      label: 'Audience options'
-    -
-      value: resource_category
-      label: Categories
-    -
       value: crime
       label: Crimes
     -
       value: county
       label: Counties
     -
-      value: related_issues
+      value: intro
+      label: 'Audience options'
+    -
+      value: category
+      label: Categories
+    -
+      value: related
       label: 'Related issues'
   allowed_values_function: ''
 module: options
