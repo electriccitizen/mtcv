@@ -10,7 +10,7 @@ id: paragraph.react_component.field_components
 field_name: field_components
 entity_type: paragraph
 bundle: react_component
-label: Components
+label: Component
 description: 'Select react components to add to the page. <strong>NOTE:</strong> This paragraph type should only be used if by those familiar with the components.'
 required: true
 translatable: false
