@@ -43,7 +43,6 @@ function citizen_custom_entity_presave(EntityInterface $entity) {
         $url = str_replace('entity:', '/', $uri);
         $url = str_replace('internal:', '', $url);
         //get the alias for the path and assign it in path.
-        // TODO: Add if for garbage handleing without blowing up.
         try {
           $alias = Drupal::service('path.alias_manager')->getAliasByPath($url);
         }
@@ -64,7 +63,7 @@ function citizen_custom_entity_presave(EntityInterface $entity) {
         $url = str_replace('entity:', '/', $uri);
         $url = str_replace('internal:', '', $url);
         //get the alias for the path and assign it in path.
-        // TODO: Add if for garbage handleing without blowing up.
+        // TODO: Add if for garbage handling without blowing up.
         try {
           $alias = Drupal::service('path.alias_manager')->getAliasByPath($url);
         }

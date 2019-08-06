@@ -1,0 +1,73 @@
+Index: web/core/modules/media_library/js/media_library.widget.es6.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- web/core/modules/media_library/js/media_library.widget.es6.js	(date 1565117494000)
++++ web/core/modules/media_library/js/media_library.widget.es6.js	(date 1565118370000)
+@@ -86,18 +86,19 @@
+       // more items, the button needs to be disabled. Since we can't shift the
+       // focus to disabled elements, the focus is set back to the open button
+       // via JavaScript by adding the 'data-disabled-focus' attribute.
+-      $('.js-media-library-open-button[data-disabled-focus="true"]', context)
+-        .once('media-library-disable')
+-        .each(function() {
+-          $(this).focus();
+-
+-          // There is a small delay between the focus set by the browser and the
+-          // focus of screen readers. We need to give screen readers time to
+-          // shift the focus as well before the button is disabled.
+-          setTimeout(() => {
+-            $(this).attr('disabled', 'disabled');
+-          }, 50);
+-        });
++      if (context == 'div#media-library-wrapper.media-library-wrapper') {
++        $('.js-media-library-open-button[data-disabled-focus="true"]', context)
++          .once('media-library-disable')
++          .each(function () {
++            $(this).focus();
++            // There is a small delay between the focus set by the browser and the
++            // focus of screen readers. We need to give screen readers time to
++            // shift the focus as well before the button is disabled.
++            setTimeout(() => {
++              $(this).attr('disabled', 'disabled');
++            }, 50);
++          });
++      }
+     },
+   };
+ })(jQuery, Drupal);
+Index: web/core/modules/media_library/js/media_library.widget.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- web/core/modules/media_library/js/media_library.widget.js	(date 1565117494000)
++++ web/core/modules/media_library/js/media_library.widget.js	(date 1565118370000)
+@@ -39,15 +39,15 @@
+ 
+   Drupal.behaviors.MediaLibraryWidgetDisableButton = {
+     attach: function attach(context) {
+-      $('.js-media-library-open-button[data-disabled-focus="true"]', context).once('media-library-disable').each(function () {
+-        var _this = this;
+-
+-        $(this).focus();
+-
+-        setTimeout(function () {
+-          $(_this).attr('disabled', 'disabled');
+-        }, 50);
+-      });
++      if (context == 'div#media-library-wrapper.media-library-wrapper') {
++        $('.js-media-library-open-button[data-disabled-focus="true"]', context).once('media-library-disable').each(function () {
++          var _this = this;
++          $(this).focus();
++          setTimeout(function () {
++            $(_this).attr('disabled', 'disabled');
++          }, 50);
++        });
++      }
+     }
+   };
+-})(jQuery, Drupal);
+\ No newline at end of file
++})(jQuery, Drupal);
