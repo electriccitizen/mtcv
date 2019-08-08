@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.media.remote_video.field_media_oembed_video
+    - field.field.media.remote_video.field_video_title
     - media.type.remote_video
   module:
     - media
@@ -16,11 +17,19 @@ mode: default
 content:
   field_media_oembed_video:
     type: oembed_textfield
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_video_title:
     weight: 0
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    type: string_textfield
     region: content
 hidden:
   created: true
