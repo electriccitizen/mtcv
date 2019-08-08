@@ -12,6 +12,7 @@ use Drupal\Component\Utility\UrlHelper;
 use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\node\NodeInterface;
+use Drupal\Core\Url;
 
 /**
  * Implements hook_help().
@@ -141,7 +142,7 @@ function citizen_custom_form_alter(&$form, FormStateInterface $form_state) {
   $formId = $form['#id'];
   $user = \Drupal::currentUser();
   $userRole = $user->getRoles();
-  
+
   //clean up menu link form for non-admins
   if($formId == 'menu-link-content-menu-link-content-form'){
     $parentMenu = substr($form['menu_parent']['#default_value'], 0, -1);
@@ -231,3 +232,19 @@ function citizen_custom_node_access(NodeInterface $node, $op, AccountInterface $
   return AccessResult::neutral();
 }
 
+
+function citizen_custom_preprocess_field(&$variables, $hook){
+  if ($variables['element']['#field_type'] === 'link') {
+    $items = $variables["element"]["#items"];
+    foreach ($items as $item) {
+      $uri = $item->getValue()['uri'];
+      $external = UrlHelper::isExternal($uri);
+      if ($external) {
+      } else {
+        $uri_alias = Url::getRouteParameters($item);
+        $alias = Url::fromRoute('entity.node.canonical', ['node' => $nid])->toString();
+
+      }
+    }
+  }
+}
