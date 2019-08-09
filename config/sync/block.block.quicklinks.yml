@@ -22,4 +22,9 @@ settings:
   level: 1
   depth: 0
   expand_all_items: true
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "/user/*\r\n<front>"
+    negate: false
+    context_mapping: {  }

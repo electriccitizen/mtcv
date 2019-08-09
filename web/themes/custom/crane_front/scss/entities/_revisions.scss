@@ -1,0 +1,32 @@
+/* ========================
+  NODE REVISIONS
+========================== */
+
+/* REVISIONS ACTIONS */
+.revisions-actions{
+	max-width: $previewStop + 40;
+	@include auto;
+	padding: 3rem 20px 0;
+	@include tab{
+		max-width: $previewStop + 70;
+		padding: 3rem 35px 0;
+	}
+	.action-wrapper{
+		@include safeFlex(row,wrap,start,start);
+		border-bottom: 1px solid $black;
+		a{
+			margin-right: 2rem;
+			margin-bottom: 2rem !important;
+			width: 180px;
+		}
+	}
+}//end actions
+
+.node-revision{
+	#block-crane-front-messages{
+		display: none;
+	}
+	.is-node{
+		padding-top: $spaceXl;
+	}
+}//end node revision

@@ -287,6 +287,21 @@
 	}
 }
 
+@mixin cautionButton{
+	@include button;
+	background: $cautionBack;
+	color: $cautionText;
+	border-color: $cautionBack;
+	height: auto;
+	min-width: 115px;
+	margin-top: 0;
+	&:hover,&:focus{
+		background: $cautionBackHover;
+		border-color: $cautionBackHover;
+		color: $cautionTextHover;
+	}
+}
+
 @mixin triangle($triDirection,$triHeight,$triWidth,$triColor){
 	width: 0;
 	height: 0;

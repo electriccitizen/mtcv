@@ -1,0 +1,15 @@
+uuid: 936ca02e-d960-4bf0-a6c1-31b8fa215238
+langcode: en
+status: true
+dependencies: {  }
+name: prefooter_image
+label: 'Prefooter Image'
+effects:
+  0874e861-49ef-491d-a6a0-f81bc3b81ef2:
+    uuid: 0874e861-49ef-491d-a6a0-f81bc3b81ef2
+    id: image_scale
+    weight: 1
+    data:
+      width: 2280
+      height: null
+      upscale: true

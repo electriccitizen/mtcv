@@ -5,6 +5,14 @@
 //button class
 .button {
 	@include button;
+	&.warning{
+		@include cautionButton;
+	}
+	&.danger-robinson{
+		@include resetButton;
+		padding: 1rem 1.5rem;
+		height: auto;
+	}
 }
 
 //outlineButtons

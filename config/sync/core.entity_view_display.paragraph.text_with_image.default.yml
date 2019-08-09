@@ -10,6 +10,7 @@ dependencies:
     - field.field.paragraph.text_with_image.field_text
     - paragraphs.paragraphs_type.text_with_image
   module:
+    - options
     - text
 id: paragraph.text_with_image.default
 targetEntityType: paragraph
@@ -24,22 +25,28 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_image_placement:
+    type: list_key
+    weight: 3
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   field_single_image:
-    weight: 2
+    weight: 1
     label: hidden
     settings:
-      view_mode: media_library
+      view_mode: node_preview
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
   field_text:
-    weight: 1
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
 hidden:
-  field_image_placement: true
   field_link: true
