@@ -1,0 +1,10 @@
+uuid: f0dc16bb-5923-4b3e-91d6-b20c7a715eb6
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.prefooter_image
+label: 'Prefooter Image'
+targetEntityType: media
+cache: true
