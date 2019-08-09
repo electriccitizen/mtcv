@@ -1,0 +1,23 @@
+uuid: 156abd70-5480-4e38-bc9d-6d645653ba87
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sL588ui1E_8-2c_UupwyYxcqX2OVyMFp3HTLbbFqvPc
+id: global
+label: Global
+tags:
+  shortlink: 'http://mtcrimevictimhelp.org/[current-page:url:unaliased:relative]'
+  title: '[current-page:title] | MT Crime Victim Help'
+  content_language: en
+  canonical_url: 'http://mtcrimevictimhelp.org/[current-page:url:relative]'
+  geo_region: US-MT
+  generator: Gatsby.js
+  og_type: Article
+  og_determiner: 'MT Crime Victim Help'
+  og_url: 'http://mtcrimevictimhelp.org/[current-page:url:relative]'
+  og_locale: en_US
+  og_site_name: 'MT Crime Victim Help'
+  og_title: '[current-page:title]'
+  twitter_cards_page_url: 'http://mtcrimevictimhelp.org/[current-page:url:relative]'
+  twitter_cards_title: '[current-page:title]'
