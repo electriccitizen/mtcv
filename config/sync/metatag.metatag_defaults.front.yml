@@ -1,0 +1,26 @@
+uuid: 70d5db30-83a1-4bdc-9274-06f2a261453f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1noCXlegCr5HFehQRF1ViXy1jhU1jZ_sNN99a8Sj5jo
+id: front
+label: 'Front page'
+tags:
+  shortlink: 'http://mtcrimevictimhelp.org/[current-page:url:unaliased:relative]'
+  title: 'MT Crime Victim Help'
+  content_language: en
+  canonical_url: 'http://mtcrimevictimhelp.org/[current-page:url:relative]'
+  geo_region: US-MT
+  image_src: '[site:url]/themes/custom/crane_front/images/site-logo.png'
+  generator: Gatsby.js
+  og_type: Website
+  og_image: '[site:url]/themes/custom/crane_front/images/site-logo.png'
+  og_updated_time: '[node:changed:custom:c]'
+  og_url: 'http://mtcrimevictimhelp.org/[current-page:url:relative]'
+  og_site_name: 'Montana Crime Victim Help'
+  og_image_type: image/svg
+  twitter_cards_image: '[site:url]/themes/custom/crane_front/images/site-logo.png'
+  twitter_cards_page_url: 'http://mtcrimevictimhelp.org/[current-page:url:relative]'
+  twitter_cards_type: summary
+  twitter_cards_title: 'MT Crime Vitim Help'

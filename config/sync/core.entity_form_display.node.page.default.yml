@@ -5,9 +5,11 @@ dependencies:
   config:
     - field.field.node.page.field_content
     - field.field.node.page.field_header
+    - field.field.node.page.field_metatags
     - field.field.node.page.field_prefooter_image
     - node.type.page
   module:
+    - metatag
     - paragraphs
     - path
 _core:
@@ -54,6 +56,12 @@ content:
         collapse_edit_all: '0'
         add_above: '0'
     third_party_settings: {  }
+    region: content
+  field_metatags:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   field_prefooter_image:
     type: paragraphs

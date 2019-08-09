@@ -1,0 +1,30 @@
+uuid: f4b1f522-e2ba-4c73-8be8-6e6b5acd3030
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: rpwvgyEURXLz_JjgMCrkS1rUv-0k3L79BpO-ReN7fDI
+id: node
+label: Content
+tags:
+  shortlink: 'http://mtcrimevictimhelp.org/[node:url:unaliased:relative]'
+  title: '[node:title] | [site:name]'
+  content_language: en
+  canonical_url: 'http://mtcrimevictimhelp.org/[node:url:relative]'
+  description: '[node:field_header:entity:field_summary]'
+  geo_region: US-MT
+  image_src: '[node:field_prefooter_image:entity:field_single_image:entity:field_media_image:entity:url]'
+  abstract: '[node:field_header:entity:field_summary]'
+  og_image: '[node:field_prefooter_image:entity:field_single_image:entity:field_media_image:entity:url]'
+  og_image_alt: '[node:field_prefooter_image:entity:field_single_image:entity:field_media_image:entity:alt]'
+  og_updated_time: '[node:changed:custom:c]'
+  og_url: 'http://mtcrimevictimhelp.org/[current-page:url:relative]'
+  og_description: '[node:field_header:entity:field_summary]'
+  og_locale: en_US
+  og_site_name: 'Montana Crime Victim Help'
+  twitter_cards_image: '[node:field_prefooter_image:entity:field_single_image:entity:field_media_image:entity:url]'
+  twitter_cards_page_url: 'http://mtcrimevictimhelp.org/[node:url:relative]'
+  twitter_cards_description: '[node:field_header:entity:field_summary]'
+  twitter_cards_image_alt: '[node:field_prefooter_image:entity:field_single_image:entity:field_media_image:entity:alt]'
+  twitter_cards_type: summary
+  twitter_cards_title: '[node:title]'
