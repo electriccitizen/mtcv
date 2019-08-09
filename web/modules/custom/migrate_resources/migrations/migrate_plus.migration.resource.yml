@@ -54,9 +54,9 @@ source:
       label: 'URL'
       selector: fields/URL
     -
-      name: Region
-      label: 'Region'
-      selector: fields/Region
+      name: County
+      label: 'County'
+      selector: fields/County
     -
       name: Crime
       label: 'Crime'
@@ -69,10 +69,6 @@ source:
       name: ResourceCategory
       label: 'Related Category'
       selector: fields/ResourceCategory
-    -
-      name: Screenshot
-      label: 'Screenshot'
-      selector: fields/Screenshot
 
   # Under 'ids', we identify source fields populated above which will uniquely
   # identify each imported item. The 'type' makes sure the migration map table
@@ -131,13 +127,6 @@ process:
         - 0
     - plugin: entity_lookup
       ignore_case: true
-  field_screenshot:
-    plugin: image_import
-    source: Screenshot
-    destination: 'public://images/2019'
-    uid: '@uid'
-    title: Title
-    alt: !file
 destination:
   plugin: 'entity:node'
   default_bundle: resource
