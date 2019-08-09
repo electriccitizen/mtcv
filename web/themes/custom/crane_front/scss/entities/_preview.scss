@@ -1,5 +1,5 @@
 /* ========================
-  NODES
+  NODE PREVIEW
 ========================== */
 
 $pvBlue: #1155cc;
@@ -89,7 +89,7 @@ body.logged-in.responsive-preview-frame{
 
 /* BASIC PAGES 
 ----------------- */
-.node-type-page{
+.content-type-page{
 	/* header */
 	.field-header.entity-reference-revisions{
 		@include auto;
@@ -243,12 +243,12 @@ body.logged-in.responsive-preview-frame{
 	@include auto;
 	.ti-wrapper{
 		@include safeFlex(row,wrap,start,start);
-		@include bleed(1.5rem);
+		@include bleed(30px);
 		.img-wrapper{
 			width: 100%;
 			margin-bottom: $spaceSm;
-			padding-left: 1.5rem;
-			padding-right: 1.5rem;
+			padding-left: 15px;
+			padding-right: 15px;
 			@include tab{
 				margin-bottom: 0;
 				width: 50%;
@@ -259,8 +259,8 @@ body.logged-in.responsive-preview-frame{
 		}//end image wrapper
 		.field-text{
 			width: 100%;
-			padding-left: 1.5rem;
-			padding-right: 1.5rem;
+			padding-left: 15px;
+			padding-right: 15px;
 			@include tab{
 				width: 50%;
 			}

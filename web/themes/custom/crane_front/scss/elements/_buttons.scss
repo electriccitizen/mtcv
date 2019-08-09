@@ -5,6 +5,9 @@
 //button class
 .button {
 	@include button;
+	&.warning{
+		@include cautionButton;
+	}
 }
 
 //outlineButtons
