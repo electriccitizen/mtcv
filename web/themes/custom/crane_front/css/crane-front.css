@@ -485,6 +485,45 @@ ol {
       background: #cccccc;
       border-color: #cccccc;
       color: #121212; }
+  .button.danger-robinson {
+    background-image: none;
+    background-color: #3778c1;
+    border: none;
+    color: #ffffff;
+    line-height: 1.15;
+    padding: 1rem 1.5rem;
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    font-family: mr-eaves-sans, sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    background: #bf0e0e;
+    color: #ffffff;
+    border-color: #bf0e0e;
+    padding: 0 3rem;
+    height: 43px;
+    padding: 1rem 1.5rem;
+    height: auto; }
+    .button.danger-robinson:hover, .button.danger-robinson:focus {
+      color: #121212;
+      background-color: #cccccc;
+      transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -webkit-transform: translateZ(0);
+      outline: none; }
+    .button.danger-robinson:active {
+      color: #121212;
+      background-color: #b3b3b3; }
+    .button.danger-robinson:hover, .button.danger-robinson:focus {
+      background: #cccccc;
+      border-color: #cccccc;
+      color: #121212; }
 
 .button-outline {
   background-image: none;
@@ -1507,7 +1546,8 @@ body.logged-in.responsive-preview-frame .layout-container #block-quicklinks, bod
     border-bottom: 1px solid #121212; }
     .revisions-actions .action-wrapper a {
       margin-right: 2rem;
-      margin-bottom: 2rem !important; }
+      margin-bottom: 2rem !important;
+      width: 180px; }
 
 .node-revision #block-crane-front-messages {
   display: none; }
