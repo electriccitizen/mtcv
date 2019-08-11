@@ -10,7 +10,6 @@ source:
   # In this example we get data from a local file, to get data from a URL
   # define http as data_fetcher_plugin.
   data_fetcher_plugin: http
-  data_fetcher_plugin: file
   data_parser_plugin: json
   # The data_parser normally limits the fields passed on to the source plugin
   # to fields configured to be used as part of the migration. To support more
@@ -43,7 +42,7 @@ source:
       selector: id
     -
       name: Title
-      label: 'Product name'
+      label: 'Title'
       selector: fields/Title
     -
       name: Description
@@ -62,13 +61,17 @@ source:
       label: 'Crime'
       selector: fields/Crime
     -
-      name: RelatedNeed
-      label: 'Related Need'
-      selector: fields/RelatedNeed
+      name: Related Issues
+      label: 'Related Related Issues'
+      selector: fields/Related Issues
     -
-      name: ResourceCategory
+      name: Resource Category
       label: 'Related Category'
-      selector: fields/ResourceCategory
+      selector: fields/Resource Category
+    -
+      name: Resource Type
+      label: 'Related Category'
+      selector: fields/Resource Type
 
   # Under 'ids', we identify source fields populated above which will uniquely
   # identify each imported item. The 'type' makes sure the migration map table
@@ -89,38 +92,60 @@ process:
   'field_description/value': Description
   'field_description/format':
     plugin: default_value
-    default_value: 'full_html'
+    default_value: 'basic_html'
   'field_url/uri': URL
+  field_summary: Description
+  crime:
+    plugin: deepen
+    source: Crime
   field_crime:
-    - plugin: explode
-      source: Crime
-      delimiter: ','
-    - plugin: extract
-      index:
-        - 0
-    - plugin: entity_lookup
-      ignore_case: true
+    - plugin: sub_process
+      source: '@crime'
+      process:
+        target_id:
+          plugin: entity_lookup
+          source: value
+          value_key: name
+          entity_type: taxonomy_term
+          bundle: crime
+          bundle_key: vid
+          ignore_case: true
+  related:
+    plugin: deepen
+    source: Crime
   field_related_issue:
-    - plugin: explode
-      source: RelatedNeed
-      delimiter: ','
-    - plugin: extract
-      index:
-        - 0
-    - plugin: entity_lookup
-      ignore_case: true
+    - plugin: sub_process
+      source: '@related'
+      process:
+        target_id:
+          plugin: entity_lookup
+          source: value
+          value_key: name
+          entity_type: taxonomy_term
+          bundle: crime
+          bundle_key: vid
+          ignore_case: true
   field_related_category:
     - plugin: explode
-      source: ResourceCategory
+      source: Resource Category
       delimiter: ','
     - plugin: extract
       index:
         - 0
     - plugin: entity_lookup
       ignore_case: true
-  field_region:
+  field_resource_type:
     - plugin: explode
-      source: Region
+      source: Resource Type
+      delimiter: ','
+    - plugin: extract
+      index:
+        - 0
+    - plugin: entity_lookup
+      ignore_case: true
+  field_county:
+    - plugin: explode
+      source: County
       delimiter: ','
     - plugin: extract
       index:
