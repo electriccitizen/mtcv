@@ -57,13 +57,13 @@ source:
       label: 'County'
       selector: fields/County
     -
-      name: Crime
-      label: 'Crime'
-      selector: fields/Crime
+      name: Crime Category
+      label: 'Crime Category'
+      selector: fields/Crime Category
     -
-      name: Related Issues
-      label: 'Related Related Issues'
-      selector: fields/Related Issues
+      name: Related Issue
+      label: 'Issue'
+      selector: fields/Related Issue
     -
       name: Resource Category
       label: 'Related Category'
@@ -97,7 +97,7 @@ process:
   field_summary: Description
   crime:
     plugin: deepen
-    source: Crime
+    source: Crime Category
   field_crime:
     - plugin: sub_process
       source: '@crime'
@@ -110,48 +110,66 @@ process:
           bundle: crime
           bundle_key: vid
           ignore_case: true
-  related:
+  issue:
     plugin: deepen
-    source: Crime
+    source: Related Issue
   field_related_issue:
     - plugin: sub_process
-      source: '@related'
+      source: '@issue'
       process:
         target_id:
           plugin: entity_lookup
           source: value
           value_key: name
           entity_type: taxonomy_term
-          bundle: crime
+          bundle: related_issues
           bundle_key: vid
           ignore_case: true
+  category:
+    plugin: deepen
+    source: Resource Category
   field_related_category:
-    - plugin: explode
-      source: Resource Category
-      delimiter: ','
-    - plugin: extract
-      index:
-        - 0
-    - plugin: entity_lookup
-      ignore_case: true
+    - plugin: sub_process
+      source: '@category'
+      process:
+        target_id:
+          plugin: entity_lookup
+          source: value
+          value_key: name
+          entity_type: taxonomy_term
+          bundle: resource_category
+          bundle_key: vid
+          ignore_case: true
+  resource_type:
+    plugin: deepen
+    source: Resource Type
   field_resource_type:
-    - plugin: explode
-      source: Resource Type
-      delimiter: ','
-    - plugin: extract
-      index:
-        - 0
-    - plugin: entity_lookup
-      ignore_case: true
+    - plugin: sub_process
+      source: '@resource_type'
+      process:
+        target_id:
+          plugin: entity_lookup
+          source: value
+          value_key: name
+          entity_type: taxonomy_term
+          bundle: resource_types
+          bundle_key: vid
+          ignore_case: true
+  county:
+    plugin: deepen
+    source: County
   field_county:
-    - plugin: explode
-      source: County
-      delimiter: ','
-    - plugin: extract
-      index:
-        - 0
-    - plugin: entity_lookup
-      ignore_case: true
+    - plugin: sub_process
+      source: '@county'
+      process:
+        target_id:
+          plugin: entity_lookup
+          source: value
+          value_key: name
+          entity_type: taxonomy_term
+          bundle: county
+          bundle_key: vid
+          ignore_case: true
 destination:
   plugin: 'entity:node'
   default_bundle: resource
