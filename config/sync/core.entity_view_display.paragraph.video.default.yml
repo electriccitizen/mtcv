@@ -24,7 +24,7 @@ content:
     weight: 1
     label: hidden
     settings:
-      view_mode: media_library
+      view_mode: default
       link: false
     third_party_settings: {  }
     region: content

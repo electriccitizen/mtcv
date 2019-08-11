@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.resource.field_county
     - field.field.node.resource.field_crime
     - field.field.node.resource.field_description
+    - field.field.node.resource.field_metatags
     - field.field.node.resource.field_related_category
     - field.field.node.resource.field_related_issue
     - field.field.node.resource.field_resource_type
@@ -14,6 +15,7 @@ dependencies:
     - node.type.resource
   module:
     - link
+    - metatag
     - text
     - user
 id: node.resource.default
@@ -43,6 +45,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_metatags:
+    weight: 112
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
     region: content
   field_related_category:
     weight: 107

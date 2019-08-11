@@ -12,6 +12,7 @@ $black        : #121212;
 $red          : #bf0e0e;
 $gold         : #fcd105;
 $darkGold     : #ebc304;
+$blackGold    : #797501;
 $blueGrey     : #dce7f3;
 $blue         : #3778c1;
 $midBlue      : #2c5580;
@@ -47,6 +48,10 @@ $resetBack         : $red;
 $resetText         : $white;
 $resetBackHover    : $grey;
 $resetTextHover    : $black;
+$cautionBack       : $blackGold;
+$cautionText       : $white;
+$cautionBackHover  : $grey;
+$cautionTextHover  : $black;
 
 $formElementBorder        : $borderRule;
 $placeColor               : $baseText;

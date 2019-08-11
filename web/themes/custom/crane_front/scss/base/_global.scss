@@ -19,7 +19,7 @@ body{
 			padding-top: 0;
 		}
 	}
-	&.logged-in{
+	&.logged-in:not(.responsive-preview-frame){
 		.dialog-off-canvas-main-canvas{
 			padding-top: 50px;
 			@include smallTab{
@@ -48,6 +48,14 @@ body{
 #block-crane-front-content{
 	body:not(.logged-in.path-user) &{
 		padding: $elementSpace $siteMarginMobile;
+	}
+	.responsive-preview-frame &{
+		& > article{
+			padding: 3rem 2rem 5rem;
+			@include tab{
+				padding: 3rem 3.5rem 5rem;
+			}
+		}
 	}
 }
 

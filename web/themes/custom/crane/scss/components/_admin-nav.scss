@@ -2,6 +2,20 @@
 	 ADMIN-NAV
 ================== */
 
+/* HIDE ADMIN TOOLBAR FROM NON-ADMINS */
+body:not(.role-administrator){
+	#toolbar-administration{
+		display: none !important;
+	}
+	&.toolbar-tray-open.toolbar-vertical{
+		padding-top: 0 !important;
+		&.toolbar-fixed{
+			margin-left: 0;
+		}
+	}
+}
+
+
 /* LOCAL ACTIONS
 ------------------ */
 .adminimal.crane #block-crane-local-actions{

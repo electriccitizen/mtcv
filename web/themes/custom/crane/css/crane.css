@@ -5232,6 +5232,15 @@ fieldset.form-wrapper {
 /* ==============
 	 ADMIN-NAV
 ================== */
+/* HIDE ADMIN TOOLBAR FROM NON-ADMINS */
+body:not(.role-administrator) #toolbar-administration {
+  display: none !important; }
+
+body:not(.role-administrator).toolbar-tray-open.toolbar-vertical {
+  padding-top: 0 !important; }
+  body:not(.role-administrator).toolbar-tray-open.toolbar-vertical.toolbar-fixed {
+    margin-left: 0; }
+
 /* LOCAL ACTIONS
 ------------------ */
 .adminimal.crane #block-crane-local-actions ul.action-links {
