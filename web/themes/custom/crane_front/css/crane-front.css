@@ -752,7 +752,7 @@ input + .description {
       text-decoration: none; }
       .views-card .views-field-title a:hover, .views-card .views-field-title a:focus {
         text-decoration: underline; }
-  .views-card .views-field-field-summary {
+  .views-card .views-field-field-summary-1, .views-card .views-field-field-description {
     margin-bottom: 1rem; }
   .js .views-card .views-field-operations .dropbutton-wrapper {
     position: absolute;
