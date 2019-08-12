@@ -3,10 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_description
     - field.storage.node.field_summary
     - node.type.resource
   module:
     - node
+    - text
     - user
     - views_bulk_operations
 _core:
@@ -1760,10 +1762,10 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
-        field_summary:
-          id: field_summary
-          table: node__field_summary
-          field: field_summary
+        field_description:
+          id: field_description
+          table: node__field_description
+          field: field_description
           relationship: none
           group_type: group
           admin_label: ''
@@ -1786,16 +1788,16 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: 0
+            max_length: 140
             word_boundary: true
             ellipsis: true
             more_link: false
             more_link_text: ''
             more_link_path: ''
-            strip_tags: false
-            trim: false
+            strip_tags: true
+            trim: true
             preserve_tags: ''
-            html: false
+            html: true
           element_type: ''
           element_class: ''
           element_label_type: ''
@@ -1809,7 +1811,7 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: basic_string
+          type: text_default
           settings: {  }
           group_column: value
           group_columns: {  }
@@ -2150,4 +2152,4 @@ display:
         - user.permissions
       max-age: 0
       tags:
-        - 'config:field.storage.node.field_summary'
+        - 'config:field.storage.node.field_description'
