@@ -43,9 +43,9 @@ jobs:
           keys:
               - composer-cache
 
-      - run:
-          name: setup-environment-vars
-          command: /build-tools-ci/scripts/set-environment
+#      - run:
+#          name: setup-environment-vars
+#          command: /build-tools-ci/scripts/set-environment
 
       - run:
           name: log in
