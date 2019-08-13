@@ -37,6 +37,17 @@ body{
 			}
 		}
 	}
+	&:not(.role-administrator){
+		#toolbar-administration{
+			display: none !important;
+		}
+		&.toolbar-tray-open.toolbar-vertical{
+			padding-top: 0 !important;
+			&.toolbar-fixed{
+				margin-left: 0;
+			}
+		}
+	}
 }//end body
 
 #block-crane-front-help{

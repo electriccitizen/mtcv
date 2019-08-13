@@ -54,6 +54,12 @@ body {
     @media (min-width: 976px) {
       body.logged-in:not(.responsive-preview-frame).role-administrator .dialog-off-canvas-main-canvas {
         padding-left: 80px; } }
+  body:not(.role-administrator) #toolbar-administration {
+    display: none !important; }
+  body:not(.role-administrator).toolbar-tray-open.toolbar-vertical {
+    padding-top: 0 !important; }
+    body:not(.role-administrator).toolbar-tray-open.toolbar-vertical.toolbar-fixed {
+      margin-left: 0; }
 
 #block-crane-front-help {
   padding: 3rem 0;
