@@ -87,17 +87,17 @@ jobs:
                 paths:
                     - $HOME/.composer/cache
 
-            - run:
-                name: lint php code for syntax errors
-                command: composer -n lint
-
-            - run:
-                name: check coding standards
-                command: composer -n code-sniff
-
-            - run:
-                name: run unit tests
-                command: composer -n unit-test
+#            - run:
+#                name: lint php code for syntax errors
+#                command: composer -n lint
+#
+#            - run:
+#                name: check coding standards
+#                command: composer -n code-sniff
+#
+#            - run:
+#                name: run unit tests
+#                command: composer -n unit-test
 
     functional:
         <<: *defaults
@@ -133,9 +133,9 @@ jobs:
                 name: run composer install again to get dev dependencies
                 command: composer install
 
-            - run:
-                name: run functional tests with Behat
-                command: ./.ci/scripts/03-test
+#            - run:
+#                name: run functional tests with Behat
+#                command: ./.ci/scripts/03-test
 
             - run:
                 name: post-test actions
