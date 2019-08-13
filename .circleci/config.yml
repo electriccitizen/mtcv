@@ -39,50 +39,50 @@ jobs:
       - run: echo "No unit tests yet."
       - checkout
 
-            - restore_cache:
-                keys:
-                    - composer-cache
+      - restore_cache:
+          keys:
+              - composer-cache
 
-            - run:
-                name: setup-environment-vars
-                command: /build-tools-ci/scripts/set-environment
+      - run:
+          name: setup-environment-vars
+          command: /build-tools-ci/scripts/set-environment
 
-            - run:
-                name: log in
-                command: terminus -n auth:login --machine-token="$TERMINUS_TOKEN"
+      - run:
+          name: log in
+          command: terminus -n auth:login --machine-token="$TERMINUS_TOKEN"
 
-            - run:
-                name: install dev dependencies, build assets, etc.
-                command: ./.ci/scripts/01-prepare
+      - run:
+          name: install dev dependencies, build assets, etc.
+          command: ./.ci/scripts/01-prepare
 
-            - run:
-                name: build assets
-                command: composer -n build-assets
+      - run:
+          name: build assets
+          command: composer -n build-assets
 
-            - run:
-                name: prepare database for site-under test
-                command: ./.ci/scripts/02-init-site-under-test-clone-existing
-                # command: ./.ci/scripts/02-init-site-under-test-reinstall-new
+      - run:
+          name: prepare database for site-under test
+          command: ./.ci/scripts/02-init-site-under-test-clone-existing
+          # command: ./.ci/scripts/02-init-site-under-test-reinstall-new
 
-            - run:
-                name: run composer install again to get dev dependencies
-                command: composer install
+      - run:
+          name: run composer install again to get dev dependencies
+          command: composer install
 
-            #- run:
-            #    name: run functional tests with Behat
-            #    command: ./.ci/scripts/03-test
+      #- run:
+      #    name: run functional tests with Behat
+      #    command: ./.ci/scripts/03-test
 
-            - run:
-                name: post-test actions
-                command: ./.ci/scripts/04-post-test
+      - run:
+          name: post-test actions
+          command: ./.ci/scripts/04-post-test
 
-            - run:
-                name: handle merge to master (if needed)
-                command: ./.ci/scripts/05-merge-master
+      - run:
+          name: handle merge to master (if needed)
+          command: ./.ci/scripts/05-merge-master
 
-            - run:
-                name: remove transient test fixtures
-                command: ./.ci/scripts/09-cleanup-fixtures
+      - run:
+          name: remove transient test fixtures
+          command: ./.ci/scripts/09-cleanup-fixtures
 
   test_drupal_8_github:
     <<: *defaults
