@@ -59,61 +59,6 @@ jobs:
           when: on_fail
           command: ./.circleci/cleanup-fixtures.sh fail
 
-  test_drupal_7_github:
-    <<: *defaults
-    steps:
-      - checkout
-      - run:
-          name: dependencies
-          command: ./.circleci/set-up-globals.sh
-      - run:
-          name: Test D7 with GitHub
-          command: ./.circleci/test-example-repo.sh "pantheon-systems/example-drops-7-composer:dev-master" github
-      - run:
-          name: Clean up D7 GitHub fixtures after pass
-          command: ./.circleci/cleanup-fixtures.sh ok
-      - run:
-          name: Clean up D7 GitHub fixtures after failure
-          when: on_fail
-          command: ./.circleci/cleanup-fixtures.sh fail
-
-  test_drupal_8_bitbucket:
-    <<: *defaults
-    steps:
-      - checkout
-      - run:
-          name: dependencies
-          command: ./.circleci/set-up-globals.sh
-      - run:
-          name: Test D8 with BitBucket
-          command: echo "BitBucket test skipped"
-          #command: ./.circleci/test-example-repo.sh "pantheon-systems/example-drops-8-composer:dev-master" bitbucket
-      - run:
-          name: Clean up D8 Bitbucket fixtures after pass
-          command: ./.circleci/cleanup-fixtures.sh ok
-      - run:
-          name: Clean up D8 Bitbucket fixtures after failure
-          when: on_fail
-          command: ./.circleci/cleanup-fixtures.sh fail
-
-  test_wordpress:
-    <<: *defaults
-    steps:
-      - checkout
-      - run:
-          name: dependencies
-          command: ./.circleci/set-up-globals.sh
-      - run:
-          name: Test WordPress with GitHub
-          command: ./.circleci/test-example-repo.sh "pantheon-systems/example-wordpress-composer:dev-master" github
-      - run:
-          name: Clean up WordPress GitHub fixtures after pass
-          command: ./.circleci/cleanup-fixtures.sh ok
-      - run:
-          name: Clean up WordPress GitHub fixtures after failure
-          when: on_fail
-          command: ./.circleci/cleanup-fixtures.sh fail
-
 workflows:
   version: 2
   build_test:
@@ -122,12 +67,4 @@ workflows:
       - test_drupal_8_github:
           requires:
             - unit
-      - test_drupal_7_github:
-          requires:
-            - unit
-      - test_drupal_8_bitbucket:
-          requires:
-            - unit
-      - test_wordpress:
-          requires:
-            - unit
+
