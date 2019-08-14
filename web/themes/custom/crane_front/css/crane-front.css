@@ -966,8 +966,6 @@ main .layout-content > div {
     padding: 30px 15px; }
     .node-disclaimer.preview p {
       font-size: 1.5rem; }
-  .node-disclaimer.fuckery {
-    display: none !important; }
 
 /* ========================
   QUICKLINKS
