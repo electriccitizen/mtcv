@@ -1,0 +1,58 @@
+/* ========================
+  MISC
+========================== */
+
+/* NODE DISCLAIMER 
+---------------------- */
+.node-disclaimer{
+	position: fixed;
+	z-index: 499;
+	top: 200px;
+	right: 40px;
+	width: 220px;
+	border: 2px solid $gold;
+	background: $offWhite;
+	padding: 30px 20px;
+	box-shadow: 4px 4px 3px rgba(35,35,35,0.2);
+	a{
+		position: absolute;
+		top: 2px;
+		right: 2px;
+		width: 20px;
+		height: 20px;
+		display: block;
+		background: url('../images/icons/close-black.svg') no-repeat;
+		background-position: center;
+		background-size: 13px 13px;
+		&:hover,&:focus{
+			opacity: .6;
+		}
+	}
+	h2{
+		margin-bottom: 1rem;
+		padding-bottom: .5rem;
+		font-size: 2rem;
+		text-align: center;
+		color: $darkGrey;
+		border-bottom: 1px solid $darkGrey;
+		text-transform: uppercase;
+	}
+	p{
+		margin-bottom: 1rem;
+		font-size: 1.6rem;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&.preview{
+		top: 120px;
+		width: 200px;
+		padding: 30px 15px;
+		p{
+			font-size: 1.5rem;
+		}
+	}
+	&.fuckery{
+		display: none !important;
+	}
+}//end disclaimer

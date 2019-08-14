@@ -11,6 +11,10 @@ global:
     - core/jquery
     - core/jquery.once
     - core/underscore
+disclaimer:
+  version: 1.0
+  js:
+    js/disclaimer.js: {}
 forms:
   version: 1.0
   js:

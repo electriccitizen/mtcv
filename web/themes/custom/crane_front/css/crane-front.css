@@ -921,6 +921,55 @@ main .layout-content > div {
         min-height: calc(100vh - 262px); } }
 
 /* ========================
+  MISC
+========================== */
+/* NODE DISCLAIMER 
+---------------------- */
+.node-disclaimer {
+  position: fixed;
+  z-index: 499;
+  top: 200px;
+  right: 40px;
+  width: 220px;
+  border: 2px solid #fcd105;
+  background: #f6f6f6;
+  padding: 30px 20px;
+  box-shadow: 4px 4px 3px rgba(35, 35, 35, 0.2); }
+  .node-disclaimer a {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: url("../images/icons/close-black.svg") no-repeat;
+    background-position: center;
+    background-size: 13px 13px; }
+    .node-disclaimer a:hover, .node-disclaimer a:focus {
+      opacity: .6; }
+  .node-disclaimer h2 {
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+    font-size: 2rem;
+    text-align: center;
+    color: #4a4a4a;
+    border-bottom: 1px solid #4a4a4a;
+    text-transform: uppercase; }
+  .node-disclaimer p {
+    margin-bottom: 1rem;
+    font-size: 1.6rem; }
+    .node-disclaimer p:last-child {
+      margin-bottom: 0; }
+  .node-disclaimer.preview {
+    top: 120px;
+    width: 200px;
+    padding: 30px 15px; }
+    .node-disclaimer.preview p {
+      font-size: 1.5rem; }
+  .node-disclaimer.fuckery {
+    display: none !important; }
+
+/* ========================
   QUICKLINKS
 ========================== */
 nav#block-quicklinks {
