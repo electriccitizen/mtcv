@@ -1,0 +1,8 @@
+uuid: 7d860c7a-7830-4824-bb2b-dc281fa70059
+langcode: en
+status: true
+dependencies: {  }
+id: escape
+label: Escape
+revision: 0
+description: 'Editable block for the Escape button react component.'

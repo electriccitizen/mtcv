@@ -1,0 +1,19 @@
+uuid: a5a315c9-3a62-44ea-8ec1-1d0e232f247a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.escape
+    - field.storage.block_content.field_search_terms
+id: block_content.escape.field_search_terms
+field_name: field_search_terms
+entity_type: block_content
+bundle: escape
+label: 'Google Search Terms'
+description: 'Enter the search phrase as you would type it into the Google search box. <strong>EXAMPLE:</strong> Weather in Helena.  '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

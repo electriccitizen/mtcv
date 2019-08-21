@@ -1,0 +1,21 @@
+uuid: ecfe5f90-a84b-45d0-869b-11cfe20c1455
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.escape
+    - field.storage.block_content.field_headline
+  module:
+    - text
+id: block_content.escape.field_headline
+field_name: field_headline
+entity_type: block_content
+bundle: escape
+label: 'Escape Text'
+description: 'Text that will show in the dropdown above the buttons. <strong>NOTE: </strong> Space is limited so please use 1-2 short sentences.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
