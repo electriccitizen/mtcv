@@ -1,0 +1,18 @@
+{% extends "field.html.twig" %}
+
+{% block fieldSingleNo%}
+	{% set textStripped = item.content['#text']|striptags %}
+	{% if textStripped|length > 60 %}
+		{% set textTrimmed = textStripped|slice(0, 60) ~ '...' %}
+	{% else %}
+		{% set textTrimmed = textStripped %}
+	{% endif %}
+	
+	{% set text = {
+		'#type': 'processed_text',
+		'#text': textTrimmed,
+		'#langcode': item.content['#langcode'],
+		'#format': item.content['#format']
+	} %}
+	{{ text }}
+{% endblock %}

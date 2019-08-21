@@ -1,0 +1,28 @@
+uuid: 7e0dc985-cf13-439d-82b7-64135e6e661c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.react_component.field_components
+    - paragraphs.paragraphs_type.react_component
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: paragraph.react_component.preview
+targetEntityType: paragraph
+bundle: react_component
+mode: preview
+content:
+  field_components:
+    weight: 0
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

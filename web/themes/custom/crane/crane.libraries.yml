@@ -26,3 +26,8 @@ menu-vocab:
   version: 1.0
   js:
     js/menu-vocab.js: {}
+react-component:
+  version: 1.0
+  js:
+    js/react-component.js: {}
+    

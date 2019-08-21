@@ -34,7 +34,7 @@ function crane_preprocess_html(&$variables) {
     '#tag' => 'meta',
     '#attributes' => [
       'rel' => 'preload',
-      'href' => 'https://fonts.googleapis.com/css?family=Lato:400,400i,700|Montserrat:400,700&display=swap',
+      'href' => 'https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap',
       'as' => 'style',
     ],
   ];
@@ -117,4 +117,3 @@ function crane_theme_suggestions_page_alter(array &$suggestions, array $variable
     $suggestions[] = 'page__taxonomy__' . $term->getVocabularyId();
   }
 }
-

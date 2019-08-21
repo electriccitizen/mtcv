@@ -1,36 +1,35 @@
-uuid: 3b1092ef-f636-4706-b3ad-2a84b91dccb0
+uuid: 3abcc413-aa34-4d70-b63d-d776f7eebe50
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.image.field_header
     - field.field.paragraph.image.field_link
     - field.field.paragraph.image.field_single_image
-    - image.style.prefooter_image
+    - image.style.paragraph_preview
     - paragraphs.paragraphs_type.image
   module:
+    - layout_builder
     - media
-id: paragraph.image.default
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: paragraph.image.preview
 targetEntityType: paragraph
 bundle: image
-mode: default
+mode: preview
 content:
-  field_header:
+  field_single_image:
+    type: media_thumbnail
     weight: 0
     label: hidden
     settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_single_image:
-    type: media_thumbnail
-    weight: 1
-    label: hidden
-    settings:
-      image_style: prefooter_image
+      image_style: paragraph_preview
       image_link: ''
     third_party_settings: {  }
     region: content
 hidden:
+  field_header: true
   field_link: true

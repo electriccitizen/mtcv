@@ -1,0 +1,35 @@
+uuid: 680ba3bc-2013-4a16-9de0-efa748d084ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.button.field_buttons
+    - field.field.paragraph.button.field_header
+    - paragraphs.paragraphs_type.button
+  module:
+    - layout_builder
+    - link
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: paragraph.button.preview
+targetEntityType: paragraph
+bundle: button
+mode: preview
+content:
+  field_buttons:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  field_header: true

@@ -1,0 +1,21 @@
+uuid: e8c9ecf1-ebee-440a-bb22-d083fe2cdfb4
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.react_components
+  module:
+    - text
+id: taxonomy_term.react_components.default
+targetEntityType: taxonomy_term
+bundle: react_components
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
