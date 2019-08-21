@@ -283,3 +283,18 @@
 	}
 }
 
+/* FAKE BUTTONS
+------------------ */
+.button-fake-preview{
+	background-color: $buttonBack;
+	color: $buttonText;
+	padding: .1rem 1rem .05rem;
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: $headerFont;
+	font-weight: $heavy;
+	font-size: 1.4rem;
+}
+

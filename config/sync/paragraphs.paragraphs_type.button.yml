@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: button
-label: Button
+label: Buttons
 icon_uuid: null
-description: 'Add a button that you can use in other components.'
+description: 'Add buttons that you can use in other components.'
 behavior_plugins: {  }

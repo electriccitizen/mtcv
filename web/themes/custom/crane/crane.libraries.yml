@@ -1,7 +1,7 @@
 global:
   version: 1.0
   css:
-    base:
+    theme:
       css/crane.css: {}
       js/select2/select2.min.css: { minified: true }
   js:

@@ -1,0 +1,57 @@
+/* ========================
+  PARAGRAPHS
+========================== */
+
+/* PARAGRAPHS TOP
+---------------------- */
+.paragraph-top{
+	grid-template-column: 250px auto 1fr auto;
+	.paragraph-type{
+		.paragraph-type-label{
+			font-weight: $heavy;
+		}
+	}
+}//end paragraph top
+
+/* GLOBAL PREVIEW
+--------------- */
+.paragraph--view-mode--preview{
+	.field{
+		font-size: 1.5rem;
+		.inline-items{
+			span:not(:first-child){
+				margin-left: .25em;
+			}
+		}
+	}
+}//end preview
+
+
+/* BUTTONS PREVIEW
+------------------ */
+.paragraph--type--button{
+	.button-fake-preview{
+		margin-right: .5rem;
+	}
+	.more{
+		font-size: 1.6rem;
+	}
+}
+
+/* TEXT & IMAGE
+------------------ */
+.paragraph--type--text-with-image{
+	.ti-wrapper{
+		@include safeFlex(row,wrap,start,start);
+		@include bleed(10px);
+		& > *{
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+		.img-wrapper{
+			&.right{
+				@include safeFlexOrder(2);
+			}
+		}
+	}
+}//end text-image

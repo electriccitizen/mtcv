@@ -41,12 +41,11 @@
 {% extends 'paragraph--preview.html.twig' %}
 
 {% block content %}
-  <div class="field field--name-field-accordions field--type-string">
+  <div class="field field--name-buttons field--type-string">
   	<div class="field__item inline-items">
-	    {%- for key, accordion in content.field_accordions['#items'] if key|first != "#" -%}
+	    {%- for key, button in content.field_buttons['#items'] if key|first != "#" -%}
 	    	{%- if loop.index0 < 2 -%}
-		      {%- if loop.index0 > 0 -%},{%- endif -%}
-		       <span>{{- accordion.entity.field_accordion_header.0.value -}}</span>
+		       <span class="button-fake-preview">{{ button.title }}</span>
 		    {%- endif -%}
 		    {%- if loop.index0 >= 2 -%}
 		    	<span class="more">...</span>

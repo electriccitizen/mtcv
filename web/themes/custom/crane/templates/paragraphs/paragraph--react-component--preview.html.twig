@@ -40,7 +40,7 @@
 #}
 {% extends 'paragraph--preview.html.twig' %}
 
-{% block content %}
+{% block content %}	
 	{% set nodeDestination = '?destination=/node/' ~ elements['#paragraph'].parent_id.0.value ~ '/edit?destination=/admin/content' %}
 	{% if content.field_components['#items'].0.target_id == '288' %}
 		{% set path = '/block/6' ~ nodeDestination %}
@@ -51,9 +51,11 @@
 	{% endif %}
 	<div class="field field--name-components field--type-entity-reference field--label-hidden field__item">
 		{{- content.field_components.0['#plain_text'] -}}
-		{%- if path -%}
-			{{ attach_library('crane/react-component') }}
-			<a href="{{ path }}" class="component-edit">Edit Component</a>
-		{%- endif -%}
+		{% if ('administrator' in user.getRoles()) or ('site_manager' in user.getRoles())  %}
+			{%- if path -%}
+				{{ attach_library('crane/react-component') }}
+				| <a href="{{ path }}" class="component-edit">Edit Component</a>
+			{%- endif -%}
+		{% endif %}
 	</div>	
 {% endblock %}
