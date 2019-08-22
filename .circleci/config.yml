@@ -1,7 +1,7 @@
 # https://circleci.com/docs/2.0/workflows/#using-workspaces-to-share-data-among-jobs
 defaults: &defaults
   docker:
-    - image: quay.io/pantheon-public/build-tools-ci:6.x
+    - image: quay.io/pantheon-public/build-tools-ci:4.x
   working_directory: ~/example_drops_8_composer
   environment:
     #=========================================================================
@@ -38,177 +38,177 @@ defaults: &defaults
 
 version: 2
 jobs:
-    configure_env_vars:
-        <<: *defaults
+  configure_env_vars:
+    <<: *defaults
 
-        docker:
-            - image: quay.io/pantheon-public/build-tools-ci:5.x
+    docker:
+      - image: quay.io/pantheon-public/build-tools-ci:4.x
 
-        steps:
-            - checkout
+    steps:
+      - checkout
 
-            - run:
-                # Set TERMINUS_ENV and related environment variables.
-                # https://github.com/pantheon-systems/docker-build-tools-ci/blob/5.x/scripts/set-environment
-                name: setup-environment-vars
-                command: /build-tools-ci/scripts/set-environment
+      - run:
+          # Set TERMINUS_ENV and related environment variables.
+          # https://github.com/pantheon-systems/docker-build-tools-ci/blob/4.x/scripts/set-environment
+          name: setup-environment-vars
+          command: /build-tools-ci/scripts/set-environment
 
-            - run:
-                name: clone-bash-env
-                command: cp $BASH_ENV bash_env.txt
+      - run:
+          name: clone-bash-env
+          command: cp $BASH_ENV bash_env.txt
 
-            # https://circleci.com/docs/2.0/workflows/#using-workspaces-to-share-data-among-jobs
-            - persist_to_workspace:
-                root: .
-                paths:
-                    - bash_env.txt
+      # https://circleci.com/docs/2.0/workflows/#using-workspaces-to-share-data-among-jobs
+      - persist_to_workspace:
+          root: .
+          paths:
+            - bash_env.txt
 
-    # @todo: common initialization: 'composer install' for the site-under-test
-    unit:
-        <<: *defaults
+  # @todo: common initialization: 'composer install' for the site-under-test
+  unit:
+    <<: *defaults
 
-        steps:
-            - checkout
+    steps:
+      - checkout
 
-            - restore_cache:
-                keys:
-                    - composer-cache
+      - restore_cache:
+          keys:
+            - composer-cache
 
-            - run:
-                name: setup-environment-vars
-                command: /build-tools-ci/scripts/set-environment
+      - run:
+          name: setup-environment-vars
+          command: /build-tools-ci/scripts/set-environment
 
-            - run:
-                name: run composer install to get the vendor directory
-                command: composer install
+      - run:
+          name: run composer install to get the vendor directory
+          command: composer install
 
-            - save_cache:
-                key: composer-cache
-                paths:
-                    - $HOME/.composer/cache
+      - save_cache:
+          key: composer-cache
+          paths:
+            - $HOME/.composer/cache
 
-#            - run:
-#                name: lint php code for syntax errors
-#                command: composer -n lint
-#
-#            - run:
-#                name: check coding standards
-#                command: composer -n code-sniff
-#
-#            - run:
-#                name: run unit tests
-#                command: composer -n unit-test
+              #- run:
+              #name: lint php code for syntax errors
+              #command: composer -n lint
 
-    functional:
-        <<: *defaults
-        steps:
-            - checkout
+              #- run:
+              #name: check coding standards
+              #command: composer -n code-sniff
 
-            - restore_cache:
-                keys:
-                    - composer-cache
+              #- run:
+              #name: run unit tests
+            #command: composer -n unit-test
 
-            - run:
-                name: setup-environment-vars
-                command: /build-tools-ci/scripts/set-environment
+  functional:
+    <<: *defaults
+    steps:
+      - checkout
 
-            - run:
-                name: log in
-                command: terminus -n auth:login --machine-token="$TERMINUS_TOKEN"
+      - restore_cache:
+          keys:
+            - composer-cache
 
-            - run:
-                name: install dev dependencies, build assets, etc.
-                command: ./.ci/scripts/01-prepare
+      - run:
+          name: setup-environment-vars
+          command: /build-tools-ci/scripts/set-environment
 
-            - run:
-                name: build assets
-                command: composer -n build-assets
+      - run:
+          name: log in
+          command: terminus -n auth:login --machine-token="$TERMINUS_TOKEN"
 
-            - run:
-                name: prepare database for site-under test
-                command: ./.ci/scripts/02-init-site-under-test-clone-existing
-                # command: ./.ci/scripts/02-init-site-under-test-reinstall-new
+      - run:
+          name: install dev dependencies, build assets, etc.
+          command: ./.ci/scripts/01-prepare
 
-            - run:
-                name: run composer install again to get dev dependencies
-                command: composer install
+      - run:
+          name: build assets
+          command: composer -n build-assets
 
-#            - run:
-#                name: run functional tests with Behat
-#                command: ./.ci/scripts/03-test
+      - run:
+          name: prepare database for site-under test
+          command: ./.ci/scripts/02-init-site-under-test-clone-existing
+          # command: ./.ci/scripts/02-init-site-under-test-reinstall-new
 
-            - run:
-                name: post-test actions
-                command: ./.ci/scripts/04-post-test
+      - run:
+          name: run composer install again to get dev dependencies
+          command: composer install
 
-            - run:
-                name: handle merge to master (if needed)
-                command: ./.ci/scripts/05-merge-master
+      #- run:
+      #    name: run functional tests with Behat
+      #    command: ./.ci/scripts/03-test
 
-            - run:
-                name: remove transient test fixtures
-                command: ./.ci/scripts/09-cleanup-fixtures
+      - run:
+          name: post-test actions
+          command: ./.ci/scripts/04-post-test
 
-    composer_lock_updater:
-        <<: *defaults
-        docker:
-            - image: quay.io/pantheon-public/build-tools-ci:5.x
-        steps:
-            - checkout
+      - run:
+          name: handle merge to master (if needed)
+          command: ./.ci/scripts/05-merge-master
 
-            - run:
-                name: setup-environment-vars
-                command: /build-tools-ci/scripts/set-environment
+      - run:
+          name: remove transient test fixtures
+          command: ./.ci/scripts/09-cleanup-fixtures
 
-            - run:
-                name: run composer lock updater
-                command: set -e && clu https://${GITHUB_TOKEN}:x-oauth-basic@github.com/${CI_PROJECT_USERNAME}/${CI_PROJECT_REPONAME}.git | sed -e "s/${GITHUB_TOKEN}/[REDACTED]/g"
+  composer_lock_updater:
+    <<: *defaults
+    docker:
+      - image: quay.io/pantheon-public/build-tools-ci:4.x
+    steps:
+      - checkout
 
-    visual_regression_test:
-        <<: *defaults
-        docker:
-            - image: backstopjs/backstopjs:3.9.5
-        steps:
-            - checkout
+      - run:
+          name: setup-environment-vars
+          command: /build-tools-ci/scripts/set-environment
 
-            - attach_workspace:
-                at: /tmp/workspace
+      - run:
+          name: run composer lock updater
+          command: set -e && clu https://${GITHUB_TOKEN}:x-oauth-basic@github.com/${CI_PROJECT_USERNAME}/${CI_PROJECT_REPONAME}.git | sed -e "s/${GITHUB_TOKEN}/[REDACTED]/g"
 
-            - run: cp /tmp/workspace/bash_env.txt $BASH_ENV
-            - run: echo "export CI_BUILD_URL='${CIRCLE_BUILD_URL}'" >> $BASH_ENV
-            - run: echo "export CI_NODE_INDEX='${CIRCLE_NODE_INDEX}'" >> $BASH_ENV
-            - run: source $BASH_ENV
+  visual_regression_test:
+    <<: *defaults
+    docker:
+      - image: backstopjs/backstopjs:3.9.5
+    steps:
+      - checkout
 
-            - run:
-                name: visual regression test
-                command: ./.ci/visual-regression-test.sh
+      - attach_workspace:
+          at: /tmp/workspace
 
-            - store_artifacts:
-                path: /tmp/artifacts
-                destination: artifacts
+      - run: cp /tmp/workspace/bash_env.txt $BASH_ENV
+      - run: echo "export CI_BUILD_URL='${CIRCLE_BUILD_URL}'" >> $BASH_ENV
+      - run: echo "export CI_NODE_INDEX='${CIRCLE_NODE_INDEX}'" >> $BASH_ENV
+      - run: source $BASH_ENV
+
+      - run:
+          name: visual regression test
+          command: ./.ci/visual-regression-test.sh
+
+      - store_artifacts:
+          path: /tmp/artifacts
+          destination: artifacts
 
 workflows:
   version: 2
   build_and_test:
     jobs:
-        # Set up environment variables
-        - configure_env_vars
-        # Install dev dependencies and do simple tests (sniff, unit tests, etc.)
-        - unit
-        # Build deploy and test on target platform
-        - functional
-        # Deploy before running visual test
-        - visual_regression_test:
-            requires:
-                - configure_env_vars
-                - functional
+      # Set up environment variables
+      - configure_env_vars
+      # Install dev dependencies and do simple tests (sniff, unit tests, etc.)
+      - unit
+      # Build deploy and test on target platform
+      - functional
+      # Deploy before running visual test
+      - visual_regression_test:
+          requires:
+            - configure_env_vars
+            - functional
   scheduled_update_check:
     triggers:
-       - schedule:
-           cron: "0 0 * * *"
-           filters:
-             branches:
-               only:
-                 - master
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                - master
     jobs:
       - composer_lock_updater
