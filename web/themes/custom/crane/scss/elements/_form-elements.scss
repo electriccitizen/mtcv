@@ -74,81 +74,69 @@
 
 /* FORM ELEMENTS
 ------------------ */
-form{
-	.form-item-prefix{
-		margin-bottom: $spaceSm;
-		color: $darkGrey;
-		padding: $spaceSm 0;
-		position: relative;
-		&:after{
-			@include fullBack($offWhite);
-		}
-		span{
-			font-style: italic;
-			color: $black;
-		}
+.form-item-prefix{
+	margin-bottom: $spaceSm;
+	color: $darkGrey;
+	padding: $spaceSm 0;
+	position: relative;
+	&:after{
+		@include fullBack($offWhite);
 	}
+	span{
+		font-style: italic;
+		color: $black;
+	}
+}
 
-	input[type="submit"].button{
-		&:not(.paragraphs-icon-button):not(.paragraphs-dropdown-action):not(.js-hide):not(.paragraph-button):not(.button--danger):not(#edit-reset):not(#edit-cancel):not(#edit-actions-cancel){
-			@include submitButton;
-			margin-bottom: $spaceXs;
-			&[value="Remove"]{
-				@include resetButton;
+
+// generic form-item
+.form-item{
+	width: 100%;
+	margin-bottom: $spaceMd;
+	label{
+		font-family: $headerFont;
+		font-size: $formLabel;
+		color: $black;
+		display: block;
+		margin-bottom: $spaceXs / 2;
+		padding-bottom: 0;
+		&.form-required{
+			display: inline-block;
+			+ input{
+				display: block;
 			}
 		}
 	}
-
-	// generic form-item
-	.form-item{
-		width: 100%;
-		margin-bottom: $spaceMd;
-		label{
-			font-family: $headerFont;
-			font-size: $formLabel;
-			color: $black;
-			display: block;
-			margin-bottom: $spaceXs / 2;
-			padding-bottom: 0;
-			&.form-required{
-				display: inline-block;
-				+ input{
-					display: block;
-				}
-			}
-		}
-		.description{
-			margin: 0.2em 0 $spaceXs;
-		}
-	}//end form item
-
-	// required items
-	.form-required,.js-form-required{
-		@include required;
-	}
-
-	input.form-text{
-		@include textInput;
-	}
-	input.form-email{
-		@include textInput;
-		max-width: 240px;
-	}
-
-	//descriptions
 	.description{
-		color: $midGrey;
+		margin: 0.2em 0 $spaceXs;
 	}
-	input + .description{
-		padding-top: $spaceXs;
-	}
+}//end form item
 
-	//autocompletes
-	.js-form-type-entity-autocomplete{
-		max-width: 400px;
-	}
+// required items
+.form-required,.js-form-required{
+	@include required;
+}
 
-}//end form
+input.form-text{
+	@include textInput;
+}
+input.form-email{
+	@include textInput;
+	max-width: 240px;
+}
+
+//descriptions
+.description{
+	color: $midGrey;
+}
+input + .description{
+	padding-top: $spaceXs;
+}
+
+//autocompletes
+.js-form-type-entity-autocomplete{
+	max-width: 400px;
+}
 
 /* SELECT 2
 -------------- */
@@ -198,7 +186,7 @@ body.adminimal.crane{
 
 /* SINGLE SELECT 2
 ----------------- */
-body .select2-container--default{
+.select2-container--default{
 	min-width: 120px;
 	max-width: 100%;
 	//single filter
@@ -329,33 +317,31 @@ body .select2-container--default{
 
 /* CHECKBOXES
 ---------------- */
-form{
-	.js-form-type-checkbox,.js-form-type-radio{
-		&:not(:last-child){
-			margin-bottom: 0;
-		}
-		label{
-			font-family: $bodyFont;
-			font-size: $baseSize;
-			display: inline-block;
-		}
-		input[type="checkbox"],input[type="radio"]{
-			width: 18px !important;
-			height: 18px !important;
+.js-form-type-checkbox,.js-form-type-radio{
+	&:not(:last-child){
+		margin-bottom: 0;
+	}
+	label{
+		font-family: $bodyFont;
+		font-size: $baseSize;
+		display: inline-block;
+	}
+	input[type="checkbox"],input[type="radio"]{
+		width: 18px !important;
+		height: 18px !important;
+		border-color: $borderRule;
+		&:hover,&:focus{
 			border-color: $borderRule;
+			background: $transBlueLight;
+		}
+		&:checked{
+			background: $blue;
 			&:hover,&:focus{
-				border-color: $borderRule;
 				background: $transBlueLight;
 			}
-			&:checked{
-				background: $blue;
-				&:hover,&:focus{
-					background: $transBlueLight;
-				}
-			}
 		}
-	}//end checkbox,radio
-}//end form
+	}
+}//end checkbox,radio
 
 /* SEPARATORS
 ---------------- */
@@ -365,7 +351,7 @@ form{
 
 /* FILE UPLOAD
 ---------------- */
-form .form-type-managed-file{
+.form-type-managed-file{
 	& > label{
 		pointer-events: none;
 		cursor: default;
@@ -398,16 +384,14 @@ form .form-type-managed-file{
 
 /* FORM ACTIONS
 ------------------ */
-.adminimal.crane form{
-	.form-actions{
-		@include safeFlex(row,wrap,start,start);
-		@include smallTab{
-			& > *:not(:last-child){
-				margin-right: 2rem !important;
-			}
+.form-actions{
+	@include safeFlex(row,wrap,start,start);
+	@include smallTab{
+		& > *:not(:last-child){
+			margin-right: 2rem !important;
 		}
 	}
-}//end crane form
+}
 
 /* FIELDSETS
 ---------------- */

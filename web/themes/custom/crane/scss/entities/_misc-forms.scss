@@ -1,150 +1,147 @@
 /* ========================
   MISC FORMS
 ========================== */
-.adminimal.crane{
 	
-	/* MENU LINK 
-	----------------- */
-	.menu-link-content-form{
-		.js-form-type-textfield,.js-form-type-entity-autocomplete{
-			input{
-				max-width: 320px;
-			}
-		}
-	}//END MENU LINK FORM
-
-	/* TAXONOMY OVERVIEW
-	---------------------- */
-	.taxonomy-overview-terms{
-		td{
-			a.menu-item__link{
-				pointer-events: none;
-				color: $black;
-				font-weight: 700;
-				&:hover,&:focus{
-					text-decoration: none;
-				}
-			}
-		}
-	}//end taxonomy overview
-
-	/* TAXONOMY TERMS
-	------------------- */
-	.taxonomy-term-form{
-		.js-form-type-textfield{
-			input{
-				max-width: 402px;
-			}
-		}
-		details.seven-details{
-			max-width: 400px;
-			margin-bottom: $elementSpace;
-		}
-	}//end taxonomy term form
-
-	/* ADD FIELD
-	----------------- */
-	.field-ui-field-storage-add-form{
-		.select2-container--default{
-			min-width: 200px;
+/* MENU LINK 
+----------------- */
+.menu-link-content-form{
+	.js-form-type-textfield,.js-form-type-entity-autocomplete{
+		input{
+			max-width: 320px;
 		}
 	}
+}//END MENU LINK FORM
 
-	.js-form-type-textfield input{
+/* TAXONOMY OVERVIEW
+---------------------- */
+.taxonomy-overview-terms{
+	td{
+		a.menu-item__link{
+			pointer-events: none;
+			color: $black;
+			font-weight: 700;
+			&:hover,&:focus{
+				text-decoration: none;
+			}
+		}
+	}
+}//end taxonomy overview
+
+/* TAXONOMY TERMS
+------------------- */
+.taxonomy-term-form{
+	.js-form-type-textfield{
+		input{
+			max-width: 402px;
+		}
+	}
+	details.seven-details{
+		max-width: 400px;
+		margin-bottom: $elementSpace;
+	}
+}//end taxonomy term form
+
+/* ADD FIELD
+----------------- */
+.field-ui-field-storage-add-form{
+	.select2-container--default{
+		min-width: 200px;
+	}
+}
+
+.js-form-type-textfield input{
+		max-width: 240px;
+}
+
+/* DELETE CONFIG
+-------------------- */
+.field-config-delete-form.field-config-confirm-form{
+	.seven-details__wrapper{
+		.seven-details__description{
+			margin-bottom: $spaceMd;
+		}
+		h3{
+			@include heading5;
+		}
+	}
+}
+
+/* VIEWS
+--------------------- */
+.view-preview-form{
+	.js-form-item-live-preview{
+		display: none;
+	}
+}
+.views-ui-display-tab-bucket{
+	margin-bottom: $spaceXs;
+	padding-bottom: $spaceXs;
+}
+.views-ui-display-tab-bucket .views-display-setting,.views-displays .tabs.secondary a,.views-ui-display-tab-bucket__title{
+	font-size: $baseSize - .2rem;
+}
+.views-edit-view .dropbutton-wrapper .dropbutton .dropbutton-action > *{
+	font-size: $baseSize - .4rem;
+}
+.views-admin .icon{
+	top: 3px;
+	margin-right: .25em;
+}
+.views-displays .tabs .action-list{
+	li{
+		background: $offWhite;
+		&:first-child{
+			border-radius: 0;
+			padding: 10px 9px 2px;
+		}
+		&:last-child{
+			border-radius: 0;
+			padding: 2px 9px 10px;
+		}
+	}
+	input.form-submit.button{
+		display: block;
+		text-align: left;
+	}
+}//end tabs action list
+
+/* BLOCK FORM
+------------------- */
+.path-block{
+	.blocks-back{
+		display: inline-block;
+		margin: $spaceLg 0 -2rem;
+	}
+	.block-content-form{
+		//hide revision information
+		.js-form-type-vertical-tabs{
+			display: none;
+		}
+	}//end block content form
+}//end path-block
+
+//hide help text from block library
+.entity-block_content-collection:not(.role-administrator){
+	#block-crane-help{
+		display: none;
+	}
+}
+
+/* USER ADD FORM
+-------------------- */
+.user-register-form,.user-form{
+	.description{
+		max-width: $textMax;
+	}
+	.js-form-type-password-confirm,.js-form-item-current-pass{
+		input,.password-strength{
 			max-width: 240px;
-	}
-
-	/* DELETE CONFIG
-	-------------------- */
-	.field-config-delete-form.field-config-confirm-form{
-		.seven-details__wrapper{
-			.seven-details__description{
-				margin-bottom: $spaceMd;
-			}
-			h3{
-				@include heading5;
-			}
 		}
-	}
-
-	/* VIEWS
-	--------------------- */
-	.view-preview-form{
-		.js-form-item-live-preview{
-			display: none;
-		}
-	}
-	.views-ui-display-tab-bucket{
-		margin-bottom: $spaceXs;
-		padding-bottom: $spaceXs;
-	}
-	.views-ui-display-tab-bucket .views-display-setting,.views-displays .tabs.secondary a,.views-ui-display-tab-bucket__title{
-		font-size: $baseSize - .2rem;
-	}
-	.views-edit-view .dropbutton-wrapper .dropbutton .dropbutton-action > *{
-		font-size: $baseSize - .4rem;
-	}
-	.views-admin .icon{
-		top: 3px;
-		margin-right: .25em;
-	}
-	.views-displays .tabs .action-list{
-		li{
-			background: $offWhite;
-			&:first-child{
-				border-radius: 0;
-				padding: 10px 9px 2px;
-			}
-			&:last-child{
-				border-radius: 0;
-				padding: 2px 9px 10px;
-			}
-		}
-		input.form-submit.button{
-			display: block;
-			text-align: left;
-		}
-	}
-
-	/* BLOCK FORM
-	------------------- */
-	&.path-block{
-		.blocks-back{
-			display: inline-block;
-			margin: $spaceLg 0 -2rem;
-		}
-		.block-content-form{
-			//hide revision information
-			.js-form-type-vertical-tabs{
-				display: none;
-			}
-		}//end block content form
-	}//end path-block
-
-	//hide help text from block library
-	&.entity-block_content-collection:not(.role-administrator){
-		#block-crane-help{
-			display: none;
-		}
-	}
-
-	/* USER ADD FORM
-	-------------------- */
-	.user-register-form,.user-form{
-		.description{
-			max-width: $textMax;
-		}
-		.js-form-type-password-confirm,.js-form-item-current-pass{
-			input,.password-strength{
-				max-width: 240px;
-			}
-			.js-form-item-pass-pass2{
-				margin-bottom: 0;
-			}
-		}
-		#edit-status--wrapper{
+		.js-form-item-pass-pass2{
 			margin-bottom: 0;
 		}
-	}//end user register form
-
-}//end crane
+	}
+	#edit-status--wrapper{
+		margin-bottom: 0;
+	}
+}//end user register form
