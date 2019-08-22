@@ -18,7 +18,7 @@ body:not(.role-administrator){
 
 /* LOCAL ACTIONS
 ------------------ */
-.adminimal.crane #block-crane-local-actions{
+#block-crane-local-actions{
 	ul.action-links{
 		position: relative;
 		margin: $elementSpace 0 0;
@@ -44,7 +44,7 @@ body:not(.role-administrator){
 /* PRIMARY TABS (local tasks)
 --------------------- */
 ul.tabs.primary{
-	.adminimal.crane nav.is-horizontal.is-collapsible.position-container.is-horizontal-enabled &{
+	nav.is-horizontal.is-collapsible.position-container.is-horizontal-enabled &{
 		background: transparent;
 		margin-left: 0;
 		margin-right: 0;

@@ -1,97 +1,94 @@
 /* ========================
   NODE FORMS
 ========================== */
-.adminimal.crane{
-	.node-form,.node-confirm-form{
-		/* layout
-		----------- */
-		.layout-node-form{
-			max-width: $largeScreen;
-			& > .layout-region{
-				float: none;
-				width: 100%;
+.node-form,.node-confirm-form{
+	/* layout
+	----------- */
+	.layout-node-form{
+		max-width: $largeScreen;
+		& > .layout-region{
+			float: none;
+			width: 100%;
+		}
+	}//end layout node form
+
+	/* hide entity meta
+	------------------ */
+	.entity-meta{
+		display: none;
+	}
+
+	/* node specific form elements
+	---------------------------- */
+	.js-form-type-textfield{
+		input{
+			max-width: 400px;
+		}
+	}
+
+	.js-form-type-entity-autocomplete{
+		@extend .js-form-type-textfield;
+		max-width: $textMax;
+	}
+
+	//increase width of any top level select fields (not nested in paragraphs)
+	.layout-region-node-main{
+		& > .field--widget-options-select{
+			.select2-container--default{
+				width: 100% !important;
+				max-width: 240px;
 			}
-		}//end layout node form
-
-		/* hide entity meta
-		------------------ */
-		.entity-meta{
-			display: none;
 		}
+	}//end layout region node main
 
-		/* node specific form elements
-		---------------------------- */
-		.js-form-type-textfield{
-			input{
-				max-width: 400px;
-			}
+	//non-media image field
+	.field--widget-image-image{
+		max-width: $textMax;
+		.js-form-type-textfield:last-of-type{
+			margin-bottom: 0;
 		}
-
-		.js-form-type-entity-autocomplete{
-			@extend .js-form-type-textfield;
-			max-width: $textMax;
+		.form-submit{
+			top: 1.5rem;
+			margin-left: 2.5rem !important;
 		}
+	}
 
-		//increase width of any top level select fields (not nested in paragraphs)
-		.layout-region-node-main{
-			& > .field--widget-options-select{
-				.select2-container--default{
-					width: 100% !important;
-					max-width: 240px;
+	.layout-region-node-footer{
+		position: relative;
+		.layout-region-node-footer__content{
+			border-top: 0;
+			padding-top: 0;
+			margin-top: 0;
+		}
+		//published checkbox
+		#edit-status-wrapper{
+			margin-top: $spaceLg;
+			padding-top: $spaceSm;
+			border-top: 3px solid $midBlue;
+			.js-form-type-checkbox{
+				input[type="checkbox"]{
+					width: 22px !important;
+					height: 22px !important;
+				}
+				label{
+					font-weight: $heavy;
+					font-size: 2rem;
 				}
 			}
-		}//end layout region node main
-
-		//non-media image field
-		.field--widget-image-image{
-			@include cardItem;
-			max-width: $textMax;
-			.js-form-type-textfield:last-of-type{
-				margin-bottom: 0;
-			}
-			.form-submit{
+		}//end published
+		#edit-actions{
+			@include tab{
+				position: absolute;
 				top: 1.5rem;
-				margin-left: 2.5rem !important;
+				left: 150px;
 			}
 		}
+	}//end footer
 
-		.layout-region-node-footer{
-			position: relative;
-			.layout-region-node-footer__content{
-				border-top: 0;
-				padding-top: 0;
-				margin-top: 0;
-			}
-			//published checkbox
-			#edit-status-wrapper{
-				margin-top: $spaceLg;
-				padding-top: $spaceSm;
-				border-top: 3px solid $midBlue;
-				.js-form-type-checkbox{
-					input[type="checkbox"]{
-						width: 22px !important;
-						height: 22px !important;
-					}
-					label{
-						font-weight: $heavy;
-						font-size: 2rem;
-					}
-				}
-			}//end published
-			#edit-actions{
-				@include tab{
-					position: absolute;
-					top: 1.5rem;
-					left: 150px;
-				}
-			}
-		}//end footer
-
-		/* RESOURCE SPECIFIC FORM */
-		&.node-resource-edit-form,&.node-resource-form{
-			.layout-region-node-main > .field--widget-options-select .select2-container--default{
-				max-width: 400px;
-			}
-		}//end resource form
-	}//end node form
-}//end crane
+	/* RESOURCE SPECIFIC FORM */
+	&.node-resource-edit-form,&.node-resource-form{
+		.layout-region-node-main > .field--widget-options-select .select2-container--default{
+			max-width: 400px;
+		}
+	}//end resource form
+}//end node form

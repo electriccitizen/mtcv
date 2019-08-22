@@ -1,14 +1,9 @@
 /* ========================
   HEADER
 ========================== */
-.adminimal.crane .content-header{
+.content-header{
 	position: relative;
 	padding: $spaceLg 0 0;
-	background: -moz-linear-gradient(to top, lighten($lightGrey, 2.5%) 0%,$white 10%); /* FF3.6+ */
-	background: -webkit-linear-gradient(to top, lighten($lightGrey, 2.5%) 0%,$white 10%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(to top, lighten($lightGrey, 2.5%) 0%,$white 10%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(to top, lighten($lightGrey, 2.5%) 0%,$white 10%); /* IE10+ */
-	background: linear-gradient(to top, lighten($lightGrey, 2.5%) 0%,$white 10%); /* W3C */
 	.live-link{
 		position: absolute;
 		top: 0;

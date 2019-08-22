@@ -1,39 +1,37 @@
 /* ==============
 	 CONTAINERS
 ================== */
-body.adminimal.crane{
 
-	/* SUMMARY BLOCK
-	------------------ */
-	.seven-details[open]{
-		& > .seven-details__summary{
-			color: $darkBlue;
-			&:hover,&:focus{
-				color: $hoverLink;
-			}
-		}
-	}
-	.seven-details__summary{
-		font-family: $headerFont;
+/* SUMMARY BLOCK
+------------------ */
+.seven-details[open]{
+	& > .seven-details__summary{
 		color: $darkBlue;
 		&:hover,&:focus{
 			color: $hoverLink;
 		}
 	}
-
-	/* INLINE CONTAINERS
-	-------------------- */
-	.container-inline{
-		div{
-			display: inline-block;
-			width: auto;
-			margin-right: 1em;
-		}
+}
+.seven-details__summary{
+	font-family: $headerFont;
+	color: $darkBlue;
+	&:hover,&:focus{
+		color: $hoverLink;
 	}
+}
 
-	/* taxonomy relations container */
-	#edit-relations{
-		max-width: 400px;
+/* INLINE CONTAINERS
+-------------------- */
+.container-inline{
+	div{
+		display: inline-block;
+		width: auto;
+		margin-right: 1em;
 	}
-}//end crane
+}
+
+/* taxonomy relations container */
+#edit-relations{
+	max-width: 400px;
+}
 

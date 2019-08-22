@@ -142,7 +142,7 @@ html,code{
 	font-synthesis: none;
 }
 
-body.adminimal.crane {
+body{
 	font: inherit;
 	color: $baseText;
 	margin: 0;
@@ -151,6 +151,9 @@ body.adminimal.crane {
 	font-weight: $regular;
 	line-height: 1.4;
 	letter-spacing: .02em;
+	&.adminimal{
+		font-size: $baseSize;
+	}
 }
 
 em{

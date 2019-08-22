@@ -358,6 +358,8 @@ display:
         - 'config:core.entity_view_display.media.file.media_library'
         - 'config:core.entity_view_display.media.image.default'
         - 'config:core.entity_view_display.media.image.media_library'
+        - 'config:core.entity_view_display.media.image.node_preview'
+        - 'config:core.entity_view_display.media.image.prefooter_image'
         - 'config:core.entity_view_display.media.remote_video.default'
         - 'config:core.entity_view_display.media.remote_video.media_library'
         - 'config:core.entity_view_display.media.video.default'
@@ -371,7 +373,7 @@ display:
       display_extenders: {  }
       path: admin/content/media
       menu:
-        type: tab
+        type: none
         title: Media
         description: 'Allows users to browse and administer media items'
         expanded: false
@@ -525,6 +527,8 @@ display:
         - 'config:core.entity_view_display.media.file.media_library'
         - 'config:core.entity_view_display.media.image.default'
         - 'config:core.entity_view_display.media.image.media_library'
+        - 'config:core.entity_view_display.media.image.node_preview'
+        - 'config:core.entity_view_display.media.image.prefooter_image'
         - 'config:core.entity_view_display.media.remote_video.default'
         - 'config:core.entity_view_display.media.remote_video.media_library'
         - 'config:core.entity_view_display.media.video.default'
@@ -810,6 +814,8 @@ display:
         - 'config:core.entity_view_display.media.file.media_library'
         - 'config:core.entity_view_display.media.image.default'
         - 'config:core.entity_view_display.media.image.media_library'
+        - 'config:core.entity_view_display.media.image.node_preview'
+        - 'config:core.entity_view_display.media.image.prefooter_image'
         - 'config:core.entity_view_display.media.remote_video.default'
         - 'config:core.entity_view_display.media.remote_video.media_library'
         - 'config:core.entity_view_display.media.video.default'
