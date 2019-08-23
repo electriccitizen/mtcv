@@ -13,9 +13,10 @@ header{
 			position: fixed;
 			width: 100%;
 			top: 50px;
-			z-index: 501;
+			z-index: 496;
 			@include tab{
 				top: 0;
+				z-index: 9999;
 			}
 		}
 	}

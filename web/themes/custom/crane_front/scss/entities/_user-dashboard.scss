@@ -33,6 +33,7 @@
 	}
 	h1{
 		font-size: $h1Sm;
+		font-weight: $regular;
 		margin-bottom: $spaceSm;
 		@include safeFlexOrder(1);
 		@include tab{

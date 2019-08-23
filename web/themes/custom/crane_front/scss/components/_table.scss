@@ -106,7 +106,6 @@ table{
 		display: none;
 		tr{
 			@include safeFlex(row,nowrap,start,stretch);
-
 		}
 	}
 }
