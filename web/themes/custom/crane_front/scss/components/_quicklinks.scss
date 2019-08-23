@@ -90,7 +90,6 @@ nav#block-quicklinks{
 				padding: 0;
 				@include tab{
 					padding: 5px 0;
-					background-color: $gold;
 				}
 				& > a{
 					display: block;
@@ -101,8 +100,6 @@ nav#block-quicklinks{
 					color: $black;
 					font-size: 2rem;
 					font-weight: $heavy;
-					font-family: $bodyFont;
-					text-align: left;
 					text-decoration: none;
 					text-indent: -9000px;
 					@include tab{

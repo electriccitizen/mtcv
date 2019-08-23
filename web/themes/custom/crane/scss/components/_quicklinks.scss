@@ -7,15 +7,16 @@ nav#block-crane-quicklinks{
 	left: 0;
 	z-index: 499;
 	width: 100%;
-	@include smallTab{
-		padding-top: 120px;
+	@include tab{
+		padding-top: 115px;
 		width: 225px;
-		z-index: -1;
+		overflow: hidden;
+		height: 100vh;
 	}
 	.role-administrator &{
 		display: none;
 		@include desk{
-			padding-top: 198px;
+			padding-top: 138px;
 			display: block;
 		}
 	}
@@ -29,10 +30,9 @@ nav#block-crane-quicklinks{
 		top: 0;
 		left: 0;
 		z-index: 498;
-		@include smallTab{
+		@include tab{
 			height: 100vh;
 			width: 225px;
-			z-index: -2;
 		}
 	}
 	.contextual{
@@ -41,11 +41,14 @@ nav#block-crane-quicklinks{
 	ul:not(.contextual-links){
 		@include listReset;
 		&.root-menu{
-			@include onlyPhone{
+			@include onlySmall{
 				@include safeFlex(row,wrap,center,start);
 			}
+			@include tab{
+				position: relative;
+			}
 			.manager{
-				.role-editor:not(.role-site_manager) &,.role-editor:not(.role-administrator) &{
+				.role-editor:not(.role-site_manager) &{
 					display: none !important;
 				}
 			}
@@ -59,23 +62,32 @@ nav#block-crane-quicklinks{
 				top: 50px;
 				left: 0;
 				width: 100%;
-				z-index: 497;
+				z-index: 501;
 				background: $quickLinkDrawer;
 				padding: 10px 0;
 				display: none;
-				@include smallTab{
-					top: 8px;
+				@include tab{
+					top: 0;
 					left: -310px;
-					width: 240px;
+					width: 225px;
 					display: block !important;
 					box-shadow: 2px 2px 4px rgba(35,35,35,0.15);
+					&:after{
+						content: '';
+						display: block;
+						width: 100%;
+						height: 200vh;
+						position: absolute;
+						top: -100vh;
+						left: 0;
+						background: $gold;
+					}
 				}
 			}
 			.item-level-1{
 				padding: 0;
-				@include smallTab{
-					padding: 10px 0;
-					position: relative;
+				@include tab{
+					padding: 5px 0;
 				}
 				& > a{
 					display: block;
@@ -84,203 +96,115 @@ nav#block-crane-quicklinks{
 					width: 50px;
 					height: 50px;
 					color: $black;
-					font-size: 12px;
-					font-family: $headerFont;
-					text-transform: uppercase;
-					text-align: center;
+					font-size: 2rem;
+					font-weight: $heavy;
 					text-decoration: none;
-					@include safeFlex(column,nowrap,end,center);
 					text-indent: -9000px;
-					@include smallTab{
-						width: 80px;
-						height: 68px;
+					box-sizing: border-box;
+					@include tab{
 						text-indent: 0;
+						width: 100%;
+						height: auto;
+						padding: 8px 15px 8px 50px;
 					}
 					&:hover{
 						opacity: .7;
 					}
-					&.profile{
-						background: url(../images/icons/profile.svg) no-repeat;
-						background-size: 36px 36px;
+					&.dashboard{
+						background-image: url('../images/icons/dashboard.svg');
+						background-repeat: no-repeat;
+						background-size: 30px 30px;
 						background-position: center;
-						@include smallTab{
-							background-size: 48px 48px;
-							background-position: top center;
+						.path-user &{
+							background-color: $white;
 						}
-						&:focus{
-							background: url(../images/icons/profile-filled.svg) no-repeat;
-							background-size: 36px 36px;
-							background-position: center;
-							@include smallTab{
-								background-size: 48px 48px;
-								background-position: top center;
-							}
+						@include tab{
+							background-size: 24px 24px;
+							background-position: 15px center;
 						}
 					}
 					&.content{
-						background: url(../images/icons/content.svg) no-repeat;
-						background-size: 36px 36px;
+						background-image: url('../images/icons/content.svg');
+						background-repeat: no-repeat;
+						background-size: 30px 30px;
 						background-position: center;
-						@include smallTab{
-							background-size: 48px 48px;
-							background-position: top center;
-						}
-						&:focus{
-							background: url(../images/icons/content-filled.svg) no-repeat;
-							background-size: 36px 36px;
-							background-position: center;
-							@include smallTab{
-								background-size: 48px 48px;
-								background-position: top center;
-							}
+						@include tab{
+							background-size: 24px 24px;
+							background-position: 15px center;
 						}
 					}
 					&.structure{
-						background: url(../images/icons/structure.svg) no-repeat;
-						background-size: 36px 36px;
+						background-image: url('../images/icons/structure.svg');
+						background-size: 30px 30px;
+						background-repeat: no-repeat;
 						background-position: center;
-						@include smallTab{
-							background-size: 48px 48px;
-							background-position: top center;
-						}
-						&:focus{
-							background: url(../images/icons/structure-filled.svg) no-repeat;
-							background-size: 36px 36px;
-							background-position: center;
-							@include smallTab{
-								background-size: 48px 48px;
-								background-position: top center;
-							}
+						@include tab{
+							background-size: 24px 24px;
+							background-position: 15px center;
 						}
 					}
 					&.users{
-						background: url(../images/icons/users.svg) no-repeat;
-						background-size: 36px 36px;
+						background-image: url('../images/icons/users.svg');
+						background-size: 30px 30px;
+						background-repeat: no-repeat;
 						background-position: center;
-						@include smallTab{
-							background-size: 48px 48px;
-							background-position: top center;
-						}
-						&:focus{
-							background: url(../images/icons/users-filled.svg) no-repeat;
-							background-size: 36px 36px;
-							background-position: center;
-							@include smallTab{
-								background-size: 48px 48px;
-								background-position: top center;
-							}
+						@include tab{
+							background-size: 24px 24px;
+							background-position: 15px center;
 						}
 					}
 					&.services{
-						background: url(../images/icons/services.svg) no-repeat;
-						background-size: 36px 36px;
+						background-image: url('../images/icons/services.svg');
+						background-repeat: no-repeat;
+						background-size: 30px 30px;
 						background-position: center;
-						@include smallTab{
-							background-size: 48px 48px;
-							background-position: top center;
-						}
-						&:focus{
-							background: url(../images/icons/services-filled.svg) no-repeat;
-							background-size: 36px 36px;
-							background-position: center;
-							@include smallTab{
-								background-size: 48px 48px;
-								background-position: top center;
-							}
+						@include tab{
+							background-size: 24px 24px;
+							background-position: 15px center;
 						}
 					}
 					&.reports{
-						background: url(../images/icons/reports.svg) no-repeat;
-						background-size: 36px 36px;
+						background-image: url('../images/icons/reports.svg');
+						background-repeat: no-repeat;
+						background-size: 30px 30px;
 						background-position: center;
-						@include smallTab{
-							background-size: 48px 48px;
-							background-position: top center;
-						}
-						&:focus{
-							background: url(../images/icons/reports-filled.svg) no-repeat;
-							background-size: 36px 36px;
-							background-position: center;
-							@include smallTab{
-								background-size: 48px 48px;
-								background-position: top center;
-							}
+						@include tab{
+							background-size: 24px 24px;
+							background-position: 15px center;
 						}
 					}
 				}//end level 1 > a
-				&.expanded{
+				&.menu-item--active-trail{
 					& > a{
-						&.profile{
-							background: url(../images/icons/profile-filled.svg) no-repeat;
-							background-size: 36px 36px;
-							background-position: center;
-							@include smallTab{
-								background-size: 48px 48px;
-								background-position: top center;
-							}
-						}
-						&.content{
-							background: url(../images/icons/content-filled.svg) no-repeat;
-							background-size: 36px 36px;
-							background-position: center;
-							@include smallTab{
-								background-size: 48px 48px;
-								background-position: top center;
-							}
-						}
-						&.structure{
-							background: url(../images/icons/structure-filled.svg) no-repeat;
-							background-size: 36px 36px;
-							background-position: center;
-							@include smallTab{
-								background-size: 48px 48px;
-								background-position: top center;
-							}
-						}
-						&.users{
-							background: url(../images/icons/users-filled.svg) no-repeat;
-							background-size: 36px 36px;
-							background-position: center;
-							@include smallTab{
-								background-size: 48px 48px;
-								background-position: top center;
-							}
-						}
-						&.services{
-							background: url(../images/icons/services-filled.svg) no-repeat;
-							background-size: 36px 36px;
-							background-position: center;
-							@include smallTab{
-								background-size: 48px 48px;
-								background-position: top center;
-							}
-						}
-						&.reports{
-							background: url(../images/icons/reports-filled.svg) no-repeat;
-							background-size: 36px 36px;
-							background-position: center;
-							@include smallTab{
-								background-size: 48px 48px;
-								background-position: top center;
-							}
-						}
-					}//end > a
-				}//end expanded
+						background-color: $white;
+					}
+				}
 			}//end level 1
 			.item-level-2{
 				& > a{
-					padding: 6px 10px;
+					padding: 8px $siteMarginMobile;
 					display: block;
 					color: $black;
-					text-transform: uppercase;
 					text-decoration: none;
-					font-family: $headerFont;
-					font-weight: $heavy;
-					font-size: 1.6rem;
-					&:hover,&:focus{
-						background: $quickLinkDrawerHover;
+					position: relative;
+					z-index: 502;
+					&.subtoggle{
+						font-size: 2rem;
+						font-weight: $heavy;
+						@include onlySmall{
+							display: none;
+						}
 					}
-				}
+					&:hover,&:focus{
+						opacity: .6;
+						text-decoration: underline;
+					}
+					@include tab{
+						&:not(.subtoggle){
+							padding-left: 45px;
+						}
+					}
+				}//end a
 			}//end level 2
 		}//end root menu
 	}//end ul 

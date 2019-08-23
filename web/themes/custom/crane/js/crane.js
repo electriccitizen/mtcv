@@ -30,14 +30,14 @@ Drupal.behaviors.pageMenu = {
       var wwidth = $(window).outerWidth();
 
       //set button roles, tab indexes and keypresses on sidebar links
-      $(document).on('click','#block-crane-quicklinks.desk-quick .item-level-1 > a',function(e){
+      $(document).on('click','#block-crane-quicklinks.desk-quick .item-level-1 > a:not(.live)',function(e){
         e.preventDefault();
-        if($(this).attr('aria-expanded') == 'true'){
-          $(this).attr('aria-expanded', "false").siblings('ul').animate({'left':'-310'}, 300).attr('aria-hidden', 'true').end().closest('li').removeClass('expanded');
-        }else{
-          $('#block-crane-quicklinks li.expanded').removeClass('expanded').find('> a').attr('aria-expanded', 'false').siblings('ul').animate({'left':'-320'}, 300).attr('aria-hidden', 'true');
-          $(this).attr('aria-expanded', "true").siblings('ul').animate({'left':'+80'}, 300).attr('aria-hidden', 'false').end().closest('li').addClass('expanded');
-        }
+        $('#block-crane-quicklinks li.expanded').removeClass('expanded').find('> a').attr('aria-expanded', 'false').siblings('ul').animate({'left':'-310'}, 300).attr('aria-hidden', 'true');
+        $(this).attr('aria-expanded', "true").siblings('ul').animate({'left':'+0'}, 300).attr('aria-hidden', 'false').end().closest('li').addClass('expanded');
+      });
+      $(document).on('click','#block-crane-quicklinks.desk-quick .item-level-2 > a.subtoggle',function(e){
+        e.preventDefault();
+        $('#block-crane-quicklinks li.expanded').removeClass('expanded').find('> a').attr('aria-expanded', 'false').siblings('ul').animate({'left':'-310'}, 300).attr('aria-hidden', 'true');
       });
       $(document).on('click','#block-crane-quicklinks.mobile-quick .item-level-1 > a',function(e){
         e.preventDefault();
@@ -66,7 +66,7 @@ $.fn.removeStyle = function(style) {
 
 function mobileQuickNav() {
   var wwidth = $(window).outerWidth();
-  if (wwidth < 600) {
+  if (wwidth < 759) {
     $('.desk-quick .item-level-1 > a').attr('aria-expanded', "false").siblings('ul').attr('aria-hidden', 'true').removeStyle('left');;
     $('#block-crane-quicklinks').removeClass('desk-quick').addClass('mobile-quick');
   }else{

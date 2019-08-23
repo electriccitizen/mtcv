@@ -995,8 +995,7 @@ nav#block-quicklinks {
       padding: 0; }
       @media (min-width: 760px) {
         nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 {
-          padding: 5px 0;
-          background-color: #fcd105; } }
+          padding: 5px 0; } }
       nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a {
         display: block;
         width: 50px;
@@ -1006,8 +1005,6 @@ nav#block-quicklinks {
         color: #1f2225;
         font-size: 2rem;
         font-weight: 700;
-        font-family: "PT Sans", sans-serif;
-        text-align: left;
         text-decoration: none;
         text-indent: -9000px; }
         @media (min-width: 760px) {

@@ -5640,16 +5640,17 @@ nav#block-crane-quicklinks {
   left: 0;
   z-index: 499;
   width: 100%; }
-  @media (min-width: 600px) {
+  @media (min-width: 760px) {
     nav#block-crane-quicklinks {
-      padding-top: 120px;
+      padding-top: 115px;
       width: 225px;
-      z-index: -1; } }
+      overflow: hidden;
+      height: 100vh; } }
   .role-administrator nav#block-crane-quicklinks {
     display: none; }
     @media (min-width: 975px) {
       .role-administrator nav#block-crane-quicklinks {
-        padding-top: 198px;
+        padding-top: 138px;
         display: block; } }
   nav#block-crane-quicklinks:after {
     content: '';
@@ -5661,11 +5662,10 @@ nav#block-crane-quicklinks {
     top: 0;
     left: 0;
     z-index: 498; }
-    @media (min-width: 600px) {
+    @media (min-width: 760px) {
       nav#block-crane-quicklinks:after {
         height: 100vh;
-        width: 225px;
-        z-index: -2; } }
+        width: 225px; } }
   nav#block-crane-quicklinks .contextual {
     display: none; }
   nav#block-crane-quicklinks ul:not(.contextual-links) {
@@ -5674,7 +5674,7 @@ nav#block-crane-quicklinks {
     padding: 0; }
     nav#block-crane-quicklinks ul:not(.contextual-links) li {
       list-style-type: none; }
-    @media (max-width: 599px) {
+    @media (max-width: 759px) {
       nav#block-crane-quicklinks ul:not(.contextual-links).root-menu {
         display: flex;
         display: -ms-flexbox;
@@ -5686,7 +5686,10 @@ nav#block-crane-quicklinks {
         -ms-flex-pack: center;
         align-items: flex-start;
         -ms-flex-align: start; } }
-    .role-editor:not(.role-site_manager) nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .manager, .role-editor:not(.role-administrator) nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .manager {
+    @media (min-width: 760px) {
+      nav#block-crane-quicklinks ul:not(.contextual-links).root-menu {
+        position: relative; } }
+    .role-editor:not(.role-site_manager) nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .manager {
       display: none !important; }
     .role-editor:not(.role-administrator) nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .admin, .role-site_manager:not(.role-administrator) nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .admin {
       display: none !important; }
@@ -5695,23 +5698,31 @@ nav#block-crane-quicklinks {
       top: 50px;
       left: 0;
       width: 100%;
-      z-index: 497;
+      z-index: 501;
       background: #ebc304;
       padding: 10px 0;
       display: none; }
-      @media (min-width: 600px) {
+      @media (min-width: 760px) {
         nav#block-crane-quicklinks ul:not(.contextual-links).root-menu ul {
-          top: 8px;
+          top: 0;
           left: -310px;
-          width: 240px;
+          width: 225px;
           display: block !important;
-          box-shadow: 2px 2px 4px rgba(35, 35, 35, 0.15); } }
+          box-shadow: 2px 2px 4px rgba(35, 35, 35, 0.15); }
+          nav#block-crane-quicklinks ul:not(.contextual-links).root-menu ul:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 200vh;
+            position: absolute;
+            top: -100vh;
+            left: 0;
+            background: #fcd105; } }
     nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 {
       padding: 0; }
-      @media (min-width: 600px) {
+      @media (min-width: 760px) {
         nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 {
-          padding: 10px 0;
-          position: relative; } }
+          padding: 5px 0; } }
       nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a {
         display: block;
         position: relative;
@@ -5719,184 +5730,96 @@ nav#block-crane-quicklinks {
         width: 50px;
         height: 50px;
         color: #1f2225;
-        font-size: 12px;
-        font-family: mr-eaves-sans, sans-serif;
-        text-transform: uppercase;
-        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
         text-decoration: none;
-        display: flex;
-        display: -ms-flexbox;
-        flex-direction: column;
-        -ms-flex-direction: column;
-        flex-wrap: nowrap;
-        -ms-flex-wrap: none;
-        justify-content: flex-end;
-        -ms-flex-pack: end;
-        align-items: center;
-        -ms-flex-align: center;
-        text-indent: -9000px; }
-        @media (min-width: 600px) {
+        text-indent: -9000px;
+        box-sizing: border-box; }
+        @media (min-width: 760px) {
           nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a {
-            width: 80px;
-            height: 68px;
-            text-indent: 0; } }
+            text-indent: 0;
+            width: 100%;
+            height: auto;
+            padding: 8px 15px 8px 50px; } }
         nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a:hover {
           opacity: .7; }
-        nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.profile {
-          background: url(../images/icons/profile.svg) no-repeat;
-          background-size: 36px 36px;
+        nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.dashboard {
+          background-image: url("../images/icons/dashboard.svg");
+          background-repeat: no-repeat;
+          background-size: 30px 30px;
           background-position: center; }
-          @media (min-width: 600px) {
-            nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.profile {
-              background-size: 48px 48px;
-              background-position: top center; } }
-          nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.profile:focus {
-            background: url(../images/icons/profile-filled.svg) no-repeat;
-            background-size: 36px 36px;
-            background-position: center; }
-            @media (min-width: 600px) {
-              nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.profile:focus {
-                background-size: 48px 48px;
-                background-position: top center; } }
+          .path-user nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.dashboard {
+            background-color: #ffffff; }
+          @media (min-width: 760px) {
+            nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.dashboard {
+              background-size: 24px 24px;
+              background-position: 15px center; } }
         nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.content {
-          background: url(../images/icons/content.svg) no-repeat;
-          background-size: 36px 36px;
+          background-image: url("../images/icons/content.svg");
+          background-repeat: no-repeat;
+          background-size: 30px 30px;
           background-position: center; }
-          @media (min-width: 600px) {
+          @media (min-width: 760px) {
             nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.content {
-              background-size: 48px 48px;
-              background-position: top center; } }
-          nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.content:focus {
-            background: url(../images/icons/content-filled.svg) no-repeat;
-            background-size: 36px 36px;
-            background-position: center; }
-            @media (min-width: 600px) {
-              nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.content:focus {
-                background-size: 48px 48px;
-                background-position: top center; } }
+              background-size: 24px 24px;
+              background-position: 15px center; } }
         nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.structure {
-          background: url(../images/icons/structure.svg) no-repeat;
-          background-size: 36px 36px;
+          background-image: url("../images/icons/structure.svg");
+          background-size: 30px 30px;
+          background-repeat: no-repeat;
           background-position: center; }
-          @media (min-width: 600px) {
+          @media (min-width: 760px) {
             nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.structure {
-              background-size: 48px 48px;
-              background-position: top center; } }
-          nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.structure:focus {
-            background: url(../images/icons/structure-filled.svg) no-repeat;
-            background-size: 36px 36px;
-            background-position: center; }
-            @media (min-width: 600px) {
-              nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.structure:focus {
-                background-size: 48px 48px;
-                background-position: top center; } }
+              background-size: 24px 24px;
+              background-position: 15px center; } }
         nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.users {
-          background: url(../images/icons/users.svg) no-repeat;
-          background-size: 36px 36px;
+          background-image: url("../images/icons/users.svg");
+          background-size: 30px 30px;
+          background-repeat: no-repeat;
           background-position: center; }
-          @media (min-width: 600px) {
+          @media (min-width: 760px) {
             nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.users {
-              background-size: 48px 48px;
-              background-position: top center; } }
-          nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.users:focus {
-            background: url(../images/icons/users-filled.svg) no-repeat;
-            background-size: 36px 36px;
-            background-position: center; }
-            @media (min-width: 600px) {
-              nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.users:focus {
-                background-size: 48px 48px;
-                background-position: top center; } }
+              background-size: 24px 24px;
+              background-position: 15px center; } }
         nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.services {
-          background: url(../images/icons/services.svg) no-repeat;
-          background-size: 36px 36px;
+          background-image: url("../images/icons/services.svg");
+          background-repeat: no-repeat;
+          background-size: 30px 30px;
           background-position: center; }
-          @media (min-width: 600px) {
+          @media (min-width: 760px) {
             nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.services {
-              background-size: 48px 48px;
-              background-position: top center; } }
-          nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.services:focus {
-            background: url(../images/icons/services-filled.svg) no-repeat;
-            background-size: 36px 36px;
-            background-position: center; }
-            @media (min-width: 600px) {
-              nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.services:focus {
-                background-size: 48px 48px;
-                background-position: top center; } }
+              background-size: 24px 24px;
+              background-position: 15px center; } }
         nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.reports {
-          background: url(../images/icons/reports.svg) no-repeat;
-          background-size: 36px 36px;
+          background-image: url("../images/icons/reports.svg");
+          background-repeat: no-repeat;
+          background-size: 30px 30px;
           background-position: center; }
-          @media (min-width: 600px) {
+          @media (min-width: 760px) {
             nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.reports {
-              background-size: 48px 48px;
-              background-position: top center; } }
-          nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.reports:focus {
-            background: url(../images/icons/reports-filled.svg) no-repeat;
-            background-size: 36px 36px;
-            background-position: center; }
-            @media (min-width: 600px) {
-              nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.reports:focus {
-                background-size: 48px 48px;
-                background-position: top center; } }
-      nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.profile {
-        background: url(../images/icons/profile-filled.svg) no-repeat;
-        background-size: 36px 36px;
-        background-position: center; }
-        @media (min-width: 600px) {
-          nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.profile {
-            background-size: 48px 48px;
-            background-position: top center; } }
-      nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.content {
-        background: url(../images/icons/content-filled.svg) no-repeat;
-        background-size: 36px 36px;
-        background-position: center; }
-        @media (min-width: 600px) {
-          nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.content {
-            background-size: 48px 48px;
-            background-position: top center; } }
-      nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.structure {
-        background: url(../images/icons/structure-filled.svg) no-repeat;
-        background-size: 36px 36px;
-        background-position: center; }
-        @media (min-width: 600px) {
-          nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.structure {
-            background-size: 48px 48px;
-            background-position: top center; } }
-      nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.users {
-        background: url(../images/icons/users-filled.svg) no-repeat;
-        background-size: 36px 36px;
-        background-position: center; }
-        @media (min-width: 600px) {
-          nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.users {
-            background-size: 48px 48px;
-            background-position: top center; } }
-      nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.services {
-        background: url(../images/icons/services-filled.svg) no-repeat;
-        background-size: 36px 36px;
-        background-position: center; }
-        @media (min-width: 600px) {
-          nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.services {
-            background-size: 48px 48px;
-            background-position: top center; } }
-      nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.reports {
-        background: url(../images/icons/reports-filled.svg) no-repeat;
-        background-size: 36px 36px;
-        background-position: center; }
-        @media (min-width: 600px) {
-          nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.expanded > a.reports {
-            background-size: 48px 48px;
-            background-position: top center; } }
+              background-size: 24px 24px;
+              background-position: 15px center; } }
+      nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.menu-item--active-trail > a {
+        background-color: #ffffff; }
     nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-2 > a {
-      padding: 6px 10px;
+      padding: 8px 2rem;
       display: block;
       color: #1f2225;
-      text-transform: uppercase;
       text-decoration: none;
-      font-family: mr-eaves-sans, sans-serif;
-      font-weight: 700;
-      font-size: 1.6rem; }
+      position: relative;
+      z-index: 502; }
+      nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-2 > a.subtoggle {
+        font-size: 2rem;
+        font-weight: 700; }
+        @media (max-width: 759px) {
+          nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-2 > a.subtoggle {
+            display: none; } }
       nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-2 > a:hover, nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-2 > a:focus {
-        background: #fbd20e; }
+        opacity: .6;
+        text-decoration: underline; }
+      @media (min-width: 760px) {
+        nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-2 > a:not(.subtoggle) {
+          padding-left: 45px; } }
 
 /* ========================
   MISC FORMS
