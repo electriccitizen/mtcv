@@ -22,6 +22,17 @@
 	}//end form inline
 }//end views exposed form
 
+.views-table{
+	.crane &{
+		td.views-field-operations{
+			padding: .75rem 1.5rem;
+			.dropbutton-widget{
+				min-width: 120px;
+			}
+		}
+	}
+}
+
 .views-ui-dialog{
 	.views-override.form--inline{
 		.js-form-item-override-dropdown{
@@ -89,4 +100,19 @@
 	}
 }//end redirect view
 
+/* CONTENT VIEWS
+------------------ */
+.view-id-content{
+	.views-table{
+		*{
+			box-sizing: border-box;
+		}
+		.views-field-changed{
+			max-width: 140px;
+		}
+		.views-field-operations{
+			max-width: 120px;
+		}
+	}
+}//end content views
 

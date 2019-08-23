@@ -15,8 +15,8 @@
 	text-decoration: none;
 	text-align: center;
 	letter-spacing: .02em;
-	font-family: $headerFont;
-	font-weight: $xHeavy;
+	font-family: $bodyFont;
+	font-weight: $heavy;
 	font-size: $button;
 	margin-bottom: $spaceMd;
 	margin-left: 0;
@@ -106,7 +106,7 @@
 		background: $siteBack;
 		text-shadow: none;
 		border-color: $borderRule;
-		font-size: 1.2rem;
+		font-size: 1.4rem;
 		&:hover,&:focus{
 			background-color: $offWhite !important;
 			background-image: none !important;
@@ -278,7 +278,7 @@
 	vertical-align: middle;
 	text-align: center;
 	text-transform: uppercase;
-	font-family: $headerFont;
+	font-family: $bodyFont;
 	font-weight: $heavy;
 	font-size: 1.4rem;
 }

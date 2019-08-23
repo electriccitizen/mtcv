@@ -94,7 +94,7 @@
 	width: 100%;
 	margin-bottom: $spaceMd;
 	label{
-		font-family: $headerFont;
+		font-family: $bodyFont;
 		font-size: $formLabel;
 		color: $black;
 		display: block;
@@ -265,6 +265,7 @@ body.adminimal.crane{
 
 	//active select2
 	&.select2-container--open,&.select2-container--focus{
+		z-index: 502;
 		.select2-selection--single{
 			border-color: $borderRule;
 			.select2-selection__rendered{
