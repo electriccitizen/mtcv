@@ -6,21 +6,40 @@
 @mixin table{
 	width: 100%;
 	border-spacing: unset;
+	border: 1px solid $rowBorder;
 	caption{
 		font-weight: $heavy;
 		margin-bottom: $spaceXs;
 	}
 
-	td,th{
-		padding: .5rem 1rem;
+	td{
+		padding: .75rem 1.5rem .5rem;
+		font-size: 1.6rem;
+		&:first-child{
+			padding-left: 3rem;
+		}
+		&:last-child{
+			padding-right: 3rem;
+		}
 	}
 	thead th{
 		background: $tableHeaderBack;
 		color: $tableHeaderText;
+		padding: 2rem 1.5rem;
+		text-align: left;
+		&:first-child{
+			padding-left: 3rem;
+		}
+		&:last-child{
+			padding-right: 3rem;
+		}
 	}
 
 	tbody tr{
 		//set table row colors
+		&:not(:last-child) td{
+			border-bottom: 1px solid $rowBorder;
+		}
 		&:nth-of-type(odd){
 			background: $oddRowBack;
 			td{
@@ -38,7 +57,7 @@
 			color: $tableHeaderText;
 		}
 		//give a bit extra room in the row on mobile
-		@include onlySmall{
+		@include onlyMobile{
 			td{
 				padding: 1rem $siteMarginMobile;
 			}
@@ -53,20 +72,22 @@
 
 /* STACKTABLE
 ---------------- */
+.tableresponsive-toggle-columns{
+	display: none;
+}
 //stack table header on mobile
 table{
 	@include table;
 	.st-key{
-		font-size: 16px;
 		width: 52%;
 		max-width: 200px;
+		background: $tableHeaderBack;
 	}
 	//stack table td on mobile
 	.st-val{
 		min-width: 48%;
-		font-size: 17px;
 		@include breakpoint (400px, true){
-			@include calc(max-width, "100% - 200px");
+			@include calc(width, "100% - 200px");
 		}
 	}
 }
@@ -83,11 +104,15 @@ table{
 	}
 	&.small-only{
 		display: none;
+		tr{
+			@include safeFlex(row,nowrap,start,stretch);
+
+		}
 	}
 }
 
 //hide large stacktable at less than 760
-@include onlySmall{
+@include onlyMobile{
 	.stacktable{
 		&.large-only{
 			display: none;

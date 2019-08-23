@@ -47,7 +47,7 @@
 			@include listReset;
 			@include safeFlex(row,wrap,start,start);
 			li{
-				min-width: 208px;
+				min-width: 224px;
 				@include onlyPhone{
 					width: 100%;
 				}

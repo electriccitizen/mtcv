@@ -172,7 +172,7 @@ body {
       .layout--tabs .layout__region--tabs ul.tabs-header li {
         list-style-type: none; }
       .layout--tabs .layout__region--tabs ul.tabs-header li {
-        min-width: 208px; }
+        min-width: 224px; }
         @media (max-width: 599px) {
           .layout--tabs .layout__region--tabs ul.tabs-header li {
             width: 100%; } }
@@ -367,6 +367,24 @@ ol {
 /* ========================
   BUTTONS
 ========================== */
+.js .dropbutton-multiple .dropbutton-widget .dropbutton-action input, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle input, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-action input, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle input, .js .dropbutton-single .dropbutton-widget .dropbutton-action input, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle input, .js .dropbutton-multiple .dropbutton-action input, .js .dropbutton-wrapper .dropbutton-action input, .js .dropbutton-single .dropbutton-action input, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle .button, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle .button, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle .button, .js .dropbutton-multiple .dropbutton-action .button, .js .dropbutton-wrapper .dropbutton-action .button, .js .dropbutton-single .dropbutton-action .button, .js .dropbutton-multiple .dropbutton-widget .dropbutton-action a, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle a, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-action a, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle a, .js .dropbutton-single .dropbutton-widget .dropbutton-action a, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle a, .js .dropbutton-multiple .dropbutton-action a, .js .dropbutton-wrapper .dropbutton-action a, .js .dropbutton-single .dropbutton-action a, .js .dropbutton-multiple .dropbutton-widget .dropbutton-action button, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle button, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-action button, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button, .js .dropbutton-single .dropbutton-widget .dropbutton-action button, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle button, .js .dropbutton-multiple .dropbutton-action button, .js .dropbutton-wrapper .dropbutton-action button, .js .dropbutton-single .dropbutton-action button {
+  border-radius: 0 !important;
+  box-shadow: none;
+  background: #ffffff;
+  text-shadow: none;
+  border-color: #979797;
+  font-size: 1.6rem;
+  color: #1f2225; }
+  .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle input:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle input:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle input:hover, .js .dropbutton-multiple .dropbutton-action input:hover, .js .dropbutton-wrapper .dropbutton-action input:hover, .js .dropbutton-single .dropbutton-action input:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle input:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle input:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle input:focus, .js .dropbutton-multiple .dropbutton-action input:focus, .js .dropbutton-wrapper .dropbutton-action input:focus, .js .dropbutton-single .dropbutton-action input:focus, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle .button:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle .button:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle .button:hover, .js .dropbutton-multiple .dropbutton-action .button:hover, .js .dropbutton-wrapper .dropbutton-action .button:hover, .js .dropbutton-single .dropbutton-action .button:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle .button:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle .button:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle .button:focus, .js .dropbutton-multiple .dropbutton-action .button:focus, .js .dropbutton-wrapper .dropbutton-action .button:focus, .js .dropbutton-single .dropbutton-action .button:focus, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle a:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle a:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle a:hover, .js .dropbutton-multiple .dropbutton-action a:hover, .js .dropbutton-wrapper .dropbutton-action a:hover, .js .dropbutton-single .dropbutton-action a:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle a:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle a:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle a:focus, .js .dropbutton-multiple .dropbutton-action a:focus, .js .dropbutton-wrapper .dropbutton-action a:focus, .js .dropbutton-single .dropbutton-action a:focus, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle button:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle button:hover, .js .dropbutton-multiple .dropbutton-action button:hover, .js .dropbutton-wrapper .dropbutton-action button:hover, .js .dropbutton-single .dropbutton-action button:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle button:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle button:focus, .js .dropbutton-multiple .dropbutton-action button:focus, .js .dropbutton-wrapper .dropbutton-action button:focus, .js .dropbutton-single .dropbutton-action button:focus {
+    background-color: #f6f6f6 !important;
+    background-image: none !important;
+    border-radius: 0 !important;
+    box-shadow: none; }
+  .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle input:active, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle input:active, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle input:active, .js .dropbutton-multiple .dropbutton-action input:active, .js .dropbutton-wrapper .dropbutton-action input:active, .js .dropbutton-single .dropbutton-action input:active, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle .button:active, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle .button:active, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle .button:active, .js .dropbutton-multiple .dropbutton-action .button:active, .js .dropbutton-wrapper .dropbutton-action .button:active, .js .dropbutton-single .dropbutton-action .button:active, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle a:active, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle a:active, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle a:active, .js .dropbutton-multiple .dropbutton-action a:active, .js .dropbutton-wrapper .dropbutton-action a:active, .js .dropbutton-single .dropbutton-action a:active, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle button:active, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button:active, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle button:active, .js .dropbutton-multiple .dropbutton-action button:active, .js .dropbutton-wrapper .dropbutton-action button:active, .js .dropbutton-single .dropbutton-action button:active {
+    background: #eeeeee;
+    border-radius: 0;
+    box-shadow: none; }
+
 .button {
   background-image: none;
   background-color: #1155cc;
@@ -514,37 +532,17 @@ ol {
     color: #1f2225;
     border-color: #b3b3b3; }
 
-.js .dropbutton-widget li.secondary-action {
-  border-top: 1px solid #2c5580; }
+.js .dropbutton-multiple .dropbutton-widget, .js .dropbutton-wrapper .dropbutton-widget, .js .dropbutton-single .dropbutton-widget {
+  border-radius: 0;
+  text-shadow: none;
+  background: #ffffff;
+  border: 1px solid #979797;
+  min-width: 120px; }
+  .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle button, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle button {
+    border-left: 1px solid #979797; }
 
-.js .dropbutton-widget a {
-  color: #323b49;
-  padding: 8px 10px 8px 30px;
-  border-right: 1px solid #2c5580;
-  text-decoration: none;
-  background: #dce7f3;
-  font-family: "PT Sans", sans-serif;
-  text-transform: uppercase;
-  font-weight: 700; }
-  .js .dropbutton-widget a:hover, .js .dropbutton-widget a:focus {
-    background: #cccccc;
-    color: #1f2225; }
-  .js .dropbutton-widget a:active {
-    background: #b3b3b3;
-    color: #1f2225; }
-
-.js .dropbutton-widget button {
-  background: #dce7f3;
-  color: #323b49; }
-  .js .dropbutton-widget button:hover, .js .dropbutton-widget button:focus {
-    background: #cccccc;
-    color: #1f2225; }
-  .js .dropbutton-widget button:active {
-    background: #b3b3b3;
-    color: #1f2225; }
-  .js .dropbutton-widget button .dropbutton-arrow {
-    font-size: 16px;
-    right: calc(50% - 5px); }
+.js .dropbutton-multiple .dropbutton-action a, .js .dropbutton-wrapper .dropbutton-action a, .js .dropbutton-single .dropbutton-action a {
+  padding: .25rem 2rem; }
 
 /* ========================
   FIELD
@@ -727,7 +725,8 @@ header > div {
   .logged-in header > div {
     position: fixed;
     width: 100%;
-    top: 50px; }
+    top: 50px;
+    z-index: 501; }
     @media (min-width: 760px) {
       .logged-in header > div {
         top: 0; } }
@@ -831,13 +830,13 @@ header > div {
 /* ========================
   MAIN
 ========================== */
-body.logged-in:not(.role-adminstrator) main {
+body.logged-in:not(.role-administrator) main {
   padding-top: 166px; }
   @media (min-width: 600px) {
-    body.logged-in:not(.role-adminstrator) main {
+    body.logged-in:not(.role-administrator) main {
       padding-top: 141px; } }
   @media (min-width: 760px) {
-    body.logged-in:not(.role-adminstrator) main {
+    body.logged-in:not(.role-administrator) main {
       padding-left: 225px;
       padding-top: 56px; } }
 
@@ -1079,17 +1078,34 @@ nav#block-quicklinks {
 ========================== */
 /* STACKTABLE
 ---------------- */
+.tableresponsive-toggle-columns {
+  display: none; }
+
 table {
   width: 100%;
-  border-spacing: unset; }
+  border-spacing: unset;
+  border: 1px solid #979797; }
   table caption {
     font-weight: 700;
     margin-bottom: 1rem; }
-  table td, table th {
-    padding: .5rem 1rem; }
+  table td {
+    padding: .75rem 1.5rem .5rem;
+    font-size: 1.6rem; }
+    table td:first-child {
+      padding-left: 3rem; }
+    table td:last-child {
+      padding-right: 3rem; }
   table thead th {
     background: #eeeeee;
-    color: #1f2225; }
+    color: #1f2225;
+    padding: 2rem 1.5rem;
+    text-align: left; }
+    table thead th:first-child {
+      padding-left: 3rem; }
+    table thead th:last-child {
+      padding-right: 3rem; }
+  table tbody tr:not(:last-child) td {
+    border-bottom: 1px solid #979797; }
   table tbody tr:nth-of-type(odd) {
     background: #ffffff; }
     table tbody tr:nth-of-type(odd) td {
@@ -1101,22 +1117,21 @@ table {
   table tbody tr th {
     background: #eeeeee;
     color: #1f2225; }
-  @media (max-width: 759px) {
+  @media (max-width: 975px) {
     table tbody tr td {
       padding: 1rem 2rem; }
     table tbody tr > td.st-key {
       text-transform: uppercase;
       font-weight: 700; } }
   table .st-key {
-    font-size: 16px;
     width: 52%;
-    max-width: 200px; }
+    max-width: 200px;
+    background: #eeeeee; }
   table .st-val {
-    min-width: 48%;
-    font-size: 17px; }
+    min-width: 48%; }
     @media (min-width: 400px) {
       table .st-val {
-        max-width: calc(100% - 200px); } }
+        width: calc(100% - 200px); } }
 
 .responsive-table > caption {
   display: none; }
@@ -1126,8 +1141,19 @@ table {
 
 .stacktable.small-only {
   display: none; }
+  .stacktable.small-only tr {
+    display: flex;
+    display: -ms-flexbox;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    flex-wrap: nowrap;
+    -ms-flex-wrap: none;
+    justify-content: flex-start;
+    -ms-flex-pack: start;
+    align-items: stretch;
+    -ms-flex-align: stretch; }
 
-@media (max-width: 759px) {
+@media (max-width: 975px) {
   .stacktable.large-only {
     display: none; }
   .stacktable.small-only {
@@ -1681,10 +1707,48 @@ body.logged-in.responsive-preview-frame .layout-container #block-quicklinks, bod
 
 /* CONTENT VIEWS
 -------------------- */
+@media (max-width: 975px) {
+  .views-block.block-user-dashboard {
+    padding-top: 1rem; } }
+
 .views-block.block-user-dashboard h2.block-title {
   display: none; }
 
 .views-block.block-user-dashboard .view-empty {
   padding-top: 4rem; }
+
+@media (min-width: 976px) {
+  .views-block.block-user-dashboard table {
+    border-top: 0; } }
+
+@media (min-width: 976px) {
+  .views-block.block-user-dashboard .views-field-title {
+    width: calc(100% - 345px); } }
+
+.views-block.block-user-dashboard .views-field-title a {
+  text-decoration: none; }
+  .views-block.block-user-dashboard .views-field-title a:hover, .views-block.block-user-dashboard .views-field-title a:focus {
+    text-decoration: underline; }
+
+@media (min-width: 976px) {
+  .views-block.block-user-dashboard.all-recents .views-field-title {
+    width: calc(100% - 515px); } }
+
+@media (min-width: 976px) {
+  .views-block.block-user-dashboard .views-field-changed {
+    width: 170px; } }
+
+@media (min-width: 976px) {
+  .views-block.block-user-dashboard .views-field-uid {
+    width: 180px; } }
+
+.views-block.block-user-dashboard .views-field-operations.st-val {
+  padding-top: .6rem;
+  padding-bottom: .5rem; }
+
+@media (min-width: 976px) {
+  .views-block.block-user-dashboard .views-field-operations {
+    width: 165px !important;
+    max-width: 165px; } }
 
 /*# sourceMappingURL=crane-front.css.map */

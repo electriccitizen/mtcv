@@ -3,7 +3,7 @@
 ========================== */
 
 main{
-	body.logged-in:not(.role-adminstrator) &{
+	body.logged-in:not(.role-administrator) &{
 		padding-top: 166px;
 		@include smallTab{
 			padding-top: 141px;

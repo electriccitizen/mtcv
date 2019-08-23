@@ -121,11 +121,58 @@
 /* CONTENT VIEWS
 -------------------- */
 .views-block.block-user-dashboard{
+	@include onlyMobile{
+		padding-top: 1rem;
+	}
 	h2.block-title{
 		display: none;
 	}
 	.view-empty{
 		padding-top: $spaceLg;
+	}
+	table{
+		@include desk{
+			border-top: 0;
+		}
+	}
+	
+	.views-field-title{
+		@include desk{
+			@include calc(width, "100% - 345px");
+		}
+		a{
+			text-decoration: none;
+			&:hover,&:focus{
+				text-decoration: underline;
+			}
+		}
+	}
+	&.all-recents{
+		.views-field-title{
+			@include desk{
+				@include calc(width, "100% - 515px");
+			}
+		}
+	}
+	.views-field-changed{
+		@include desk{
+			width: 170px;
+		}
+	}
+	.views-field-uid{
+		@include desk{
+			width: 180px;
+		}
+	}
+	.views-field-operations{
+		&.st-val{
+			padding-top: .6rem;
+			padding-bottom: .5rem;
+		}
+		@include desk{
+			width: 165px !important;
+			max-width: 165px;
+		}
 	}
 }//end views block
 
