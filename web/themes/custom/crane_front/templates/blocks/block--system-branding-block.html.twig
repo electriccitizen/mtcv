@@ -17,14 +17,23 @@
 {% extends "block.html.twig" %}
 
 {% block blockContent %}
-	<a class="logo-link" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
-		{% if site_logo %}
-    		<img class="logo" src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
-  	{% endif %}
-
-  	{% if site_name %}
-  		<span class="site-name visually-hidden">{{ site_name }}</span>
-  	{% endif %}
-  </a>
-  <a class="site-link" href="https://mlsa.netlify.com/" target="_blank">Live Site</a>
+	{% if site_name %}
+		<span class="site-name">{{ site_name }}</span>
+	{% endif %}
+	<div class="header-actions">
+		{% if logged_in %}
+			<div class="welcome">
+				<img class="user-icon" src="/themes/custom/crane_front/images/icons/profile-icon.svg" alt="user icon" />
+				<span>Welcome, <a href="/user">{{ fname.0.value }}</a></span>
+			</div>
+		{% endif %}
+		<div class="visit-site">
+			<a class="site-link" href="https://mlsa.netlify.com/" target="_blank">View Website</a>
+		</div>
+		{% if logged_in %}
+			<div class="logout">
+				<a href="/user/logout">Log out</a>
+			</div>
+		{% endif %}
+	</div>
 {% endblock %}

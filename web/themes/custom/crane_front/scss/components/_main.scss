@@ -3,39 +3,31 @@
 ========================== */
 
 main{
-	.layout-content > div{
-		@include calc(min-height, "100vh - 134px");
-		@include tab{
-			@include calc(min-height, "100vh - 182px");
+	body.logged-in:not(.role-adminstrator) &{
+		padding-top: 166px;
+		@include smallTab{
+			padding-top: 141px;
 		}
-		.logged-in:not(.role-administrator) &{
+		@include tab{
+			padding-left: 225px;
+			padding-top: 56px;
+		}
+	}
+	.role-administrator &{
+		@include desk{
+			padding-left: 225px;
+		}
+	}
+	.layout-content > div{
+		body:not(.logged-in) &{
+			@include calc(min-height, "100vh - 151px");
 			@include tab{
-				@include calc(min-height, "100vh - 120px");
+				@include calc(min-height, "100vh - 136px");
 			}
 		}
 		body:not(.logged-in.path-user) &{
-			padding: $spaceMd $siteMarginMobile;
 			max-width: $siteMaxWidth + 120px;
 			@include auto;
-			@include desk{
-				padding: $spaceLg $siteMarginDesk;
-			}
-		}
-		body:not(.role-administrator) &{
-			@include calc(min-height, "100vh - 184px");
-			@include smallTab{
-				@include calc(min-height, "100vh - 134px");
-			}
-			@include tab{
-				@include calc(min-height, "100vh - 182px");
-			}
-		}
-		.role-administrator &{
-			@include calc(min-height, "100vh - 212px");
-			@include tab{
-				@include calc(min-height, "100vh - 262px");
-			}
 		}
 	}//end layout content div
-
 }//end main

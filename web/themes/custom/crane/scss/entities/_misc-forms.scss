@@ -144,4 +144,17 @@
 	#edit-status--wrapper{
 		margin-bottom: 0;
 	}
+	#edit-entity-options{
+		.crane:not(.role-administrator) &{
+			display: none;
+		}
+	}
+	#edit-actions{
+		.form-submit{
+			min-width: 175px;
+		}
+	}
 }//end user register form
+
+
+

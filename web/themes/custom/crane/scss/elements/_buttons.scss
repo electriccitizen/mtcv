@@ -9,13 +9,12 @@
 	border: none;
 	color: $buttonText;
 	line-height: 1.15;
-	padding: 1.15rem 1.5rem 1rem;
+	padding: 1.15rem 1.5rem;
 	display: inline-block;
 	vertical-align: middle;
 	text-decoration: none;
 	text-align: center;
-	text-transform: uppercase;
-	letter-spacing: .04em;
+	letter-spacing: .02em;
 	font-family: $headerFont;
 	font-weight: $xHeavy;
 	font-size: $button;
@@ -26,10 +25,13 @@
 		color: $buttonTextHover;
 		background-color: $buttonBackHover;
 		box-shadow: none;
+		border: none;
 		@include transAll(.3s);
 		outline: none;
 	}
 	&:active{
+		box-shadow: none;
+		border: none;
 		color: $buttonTextActive;
 		background-color: $buttonBackActive;
 	}
@@ -41,7 +43,6 @@
 	background: transparent;
 	border: 1px solid $outlineColor;
 	color: $outlineColor;
-	border-radius: 3px;
 	&:hover,&:focus{
 		background: $buttonBackHover;
 		color: $buttonTextHover;
@@ -59,43 +60,42 @@
 	@include button;
 	background: $submitBack;
 	color: $submitText;
-	height: auto;
-	min-width: 115px;
-	margin-top: 0;
+	min-width: 120px;
 	&:hover,&:focus{
-		background: $submitBackHover;
-		border-color: $submitBackHover;
-		color: $submitTextHover;
+		background: $buttonBackHover;
+		color: $buttonTextHover;
+	}
+	&:active{
+		background: $buttonBackActive;
+		color: $buttonTextActive;
 	}
 }
 
 @mixin resetButton{
-	@include button;
+	@include submitButton;
 	background: $resetBack;
 	color: $resetText;
-	border-color: $resetBack;
-	height: auto;
-	min-width: 115px;
-	margin-top: 0;
 	&:hover,&:focus{
-		background: $resetBackHover;
-		border-color: $resetBackHover;
-		color: $resetTextHover;
+		background: $buttonBackHover;
+		color: $buttonTextHover;
+	}
+	&:active{
+		background: $buttonBackActive;
+		color: $buttonTextActive;
 	}
 }
 
 @mixin cautionButton{
-	@include button;
+	@include submitButton;
 	background: $cautionBack;
 	color: $cautionText;
-	border-color: $cautionBack;
-	height: auto;
-	min-width: 115px;
-	margin-top: 0;
 	&:hover,&:focus{
-		background: $cautionBackHover;
-		border-color: $cautionBackHover;
-		color: $cautionTextHover;
+		background: $buttonBackHover;
+		color: $buttonTextHover;
+	}
+	&:active{
+		background: $buttonBackActive;
+		color: $buttonTextActive;
 	}
 }
 
@@ -121,84 +121,105 @@
 	}
 }
 
-.button.js-hide{
-	display: none;
-}
+.crane{
+	a.button{
+		@include button;
+	}
 
-.button--small{
-	@include outlineButton($link);
-	background: transparent;
-	border: 1px solid $primaryButtonBack;
-	color: $baseText;
-	font-weight: $regular;
-	font-size: 1.2rem;
-	border-radius: 2px;
-	&.button--small-override{
-		font-size: 1.8rem;
-		border-width: 2px;
-		font-weight: $heavy;
-		margin-bottom: $spaceSm;
-		border-radius: 4px;
+	.button.js-hide{
+		display: none;
 	}
-	&:hover,&:focus{
-		background: $buttonBackHover;
-		border-color: $buttonBackHover;
-		color: $buttonTextHover;
-		@include transAll(.3s);
+
+	.button--small{
+		@include outlineButton($link);
+		background: transparent;
+		border: 1px solid $primaryButtonBack;
+		color: $baseText;
+		font-weight: $regular;
+		font-size: 1.2rem;
+		&.button--small-override{
+			font-size: 2rem;
+			font-weight: $heavy;
+			margin-bottom: $spaceSm;
+		}
+		&:hover,&:focus{
+			background: $buttonBackHover;
+			border-color: $buttonBackHover;
+			border: 1px solid $buttonBackHover;
+			color: $buttonTextHover;
+			@include transAll(.3s);
+		}
+		&:active{
+			background: $buttonBackActive;
+			border-color: $buttonBackActive;
+			color: $buttonTextActive;
+			border: 1px solid $buttonBackHover;
+		}
+	}//end button--small
+
+	.button--primary {
+		@include button;
+		background: $primaryButtonBack;
+		color: $primaryButtonText;
+		&:hover,&:focus{
+			background: $buttonBackHover;
+			color: $buttonTextHover;
+		}
+		&:active{
+			background: $buttonBackActive;
+			color: $buttonTextActive;
+		}
+		&.button--small{
+			@extend .button--small;
+		}
+	}//end button primary
+
+	.form-submit{
+		@include submitButton;
 	}
-	&:active{
-		background: $buttonBackActive;
-		border-color: $buttonBackActive;
-		color: $buttonTextActive;
+
+	.button--danger,#edit-reset,a.button--danger,.button[value="Remove"],.button[value="Delete"]{
+		@include resetButton;
+		margin-left: 0;
+		margin-right: 0;
+		width: 100%;
+		@include smallTab{
+			width: auto;
+		}
+	}//end reset danger buttons
+	.button[data-drupal-selector="edit-cancel"],.button[data-drupal-selector="edit-actions-cancel"]{
+		@include cautionButton;
+		margin-left: 0;
+		margin-right: 0;
+		width: 100%;
+		@include smallTab{
+			width: auto;
+		}
+	}//end reset danger buttons
+	a#edit-ec-preview,{
+		@include submitButton;
+		background: $green;
+		&:hover,&:focus{
+			background: $buttonBackHover;
+			color: $buttonTextHover;
+		}
+		&:active{
+			background: $buttonBackActive;
+			color: $buttonTextActive;
+		}
+	}//end preview
+	.button-outline{
+		@include outlineButton($link);
 	}
-}//end button--small
-.button--danger,#edit-reset{
-	@include resetButton;
-	margin-left: 0;
-	margin-right: 0;
-	width: 100%;
-	@include smallTab{
-		width: auto;
-	}
-}//end reset danger buttons
-.button[data-drupal-selector="edit-cancel"],.button[data-drupal-selector="edit-actions-cancel"]{
-	@include cautionButton;
-	margin-left: 0;
-	margin-right: 0;
-	width: 100%;
-	@include smallTab{
-		width: auto;
-	}
-}//end reset danger buttons
-#edit-preview{
-	@include submitButton;
-	background: $green;
-	&:hover,&:focus{
-		background: $buttonBackHover;
-	}
-	&:active{
-		background: $buttonBackActive;
-	}
-}//end preview
-.button--primary {
-	@include button;
-	background: $primaryButtonBack;
-	color: $primaryButtonText;
-	&:hover,&:focus{
-		background: $primaryBackHover;
-		color: $primaryTextHover;
-	}
-	&:active{
-		background: $primaryBackActive;
-		color: $primaryTextActive;
-	}
-	&.button--small{
-		@extend .button--small;
-	}
-}//end button primary
-.button-outline{
-	@include outlineButton($link);
-}
+	.draggable{
+		.form-submit:not(.image-button){
+			@extend .button--small;
+			padding: .95rem 1rem;
+			min-width: 80px;
+			margin-bottom: 0;
+		}
+	} 
+}//end crane
 
 /* PARAGRAPHS ICON BUTTONS
 ---------------------------- */

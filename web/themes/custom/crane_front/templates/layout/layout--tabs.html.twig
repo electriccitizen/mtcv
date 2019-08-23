@@ -14,30 +14,15 @@
 {%
   set classes = [
     'layout',
-    'layout--twocol-sideleft-tabs',
+    'layout--tabs',
   ]
 %}
 {% if content %}
   <div{{ attributes.addClass(classes) }}>
-    {% if content.first %}
-      <div {{ region_attributes.first.addClass('layout__region', 'layout__region--first') }}>
-        {{ content.first }}
-      </div>
-    {% endif %}
-    {% if content.content %}
-      <div {{ region_attributes.content.addClass('layout__region', 'layout__region--content') }}>
-        {{ content.content }}
-      </div>
-    {% endif %}
     {% if content.tabs %}
       <div {{ region_attributes.tabs.addClass('layout__region', 'layout__region--tabs') }}>
         <span class="tabs-instructions">Always add two or items if using the Tabs region. Each item must have a block title displayed. <strong>Only One tabs region should be used per node.</strong></span>
         {{ content.tabs }}
-      </div>
-    {% endif %}
-    {% if content.last %}
-      <div {{ region_attributes.last.addClass('layout__region', 'layout__region--last') }}>
-        {{ content.last }}
       </div>
     {% endif %}
   </div>

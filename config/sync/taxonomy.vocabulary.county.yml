@@ -11,6 +11,23 @@ third_party_settings:
     personalizable: 1
     redirect_edit: 0
     external: ''
+    personalization:
+      1:
+        destination: default
+        url: ''
+        external: ''
+      75:
+        destination: default
+        url: ''
+        external: ''
+      76:
+        destination: default
+        url: ''
+        external: ''
+      45:
+        destination: default
+        url: ''
+        external: ''
 name: County
 vid: county
 description: 'A list of MT counties'

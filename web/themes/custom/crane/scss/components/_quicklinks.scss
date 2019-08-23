@@ -9,8 +9,8 @@ nav#block-crane-quicklinks{
 	width: 100%;
 	@include smallTab{
 		padding-top: 120px;
-		width: 80px;
-
+		width: 225px;
+		z-index: -1;
 	}
 	.role-administrator &{
 		display: none;
@@ -31,8 +31,8 @@ nav#block-crane-quicklinks{
 		z-index: 498;
 		@include smallTab{
 			height: 100vh;
-			width: 80px;
-			box-shadow: 0 6px 8px rgba(35,35,35,0.35);
+			width: 225px;
+			z-index: -2;
 		}
 	}
 	.contextual{

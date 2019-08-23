@@ -21,6 +21,19 @@ function crane_front_preprocess_page(&$variables) {
 }
 
 /**
+ * Implements hook_page_alter.
+ */
+function crane_front_preprocess_block(&$variables) {
+  //find the logged in user's first name and pass to branding block
+  if ($variables['plugin_id']) {
+    if ($variables['plugin_id'] == 'system_branding_block') {
+      $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
+      $variables['fname'] = $user->field_first_name;
+    }
+  }
+}
+
+/**
  * Implements hook_theme_suggestions_block_alter.
  */
 function crane_front_theme_suggestions_block_alter(array &$suggestions, array $variables) {

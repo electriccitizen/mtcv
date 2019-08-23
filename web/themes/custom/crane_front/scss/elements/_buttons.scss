@@ -17,7 +17,7 @@
 
 //outlineButtons
 .button-outline{
-	@include outlineButton($link);
+	@include outlineButton($borderRule);
 }
 
 .js .dropbutton-widget{
@@ -30,9 +30,9 @@
 		border-right: 1px solid $midBlue;
 		text-decoration: none;
 		background: $blueGrey;
-		font-family: $headerFont;
+		font-family: $bodyFont;
 		text-transform: uppercase;
-		font-weight: $xHeavy;
+		font-weight: $heavy;
 		&:hover,&:focus{
 			background: $buttonBackHover;
 			color: $buttonTextHover;

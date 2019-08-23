@@ -3,21 +3,22 @@
 ========================== */
 $white        : #ffffff;
 $offWhite     : #f6f6f6;
-$lightGrey    : #ededed;
+$lightGrey    : #eeeeee;
+$lightGreyAlt : #979797;
 $grey         : #cccccc;
 $contrastGrey : #767676;
-$midGrey      : #676767;
+$midGrey      : #646569;
 $darkGrey     : #4a4a4a;
-$black        : #121212;
+$black        : #1f2225;
 $red          : #bf0e0e;
 $gold         : #fcd105;
+$fuchsia      : #c028bb;
 $darkGold     : #ebc304;
 $blackGold    : #797501;
 $blueGrey     : #dce7f3;
-$blue         : #3778c1;
+$blue         : #1155cc;
 $midBlue      : #2c5580;
 $darkBlue     : #323b49;
-
 $transBlack   : rgba(35,35,35,0.7);
 $transRed     : rgba(191,14,14,0.03);
 
@@ -25,7 +26,7 @@ $transRed     : rgba(191,14,14,0.03);
 ----------------- */
 $siteBack     : $white;
 $baseText     : $black;
-$borderRule   : $blue;
+$borderRule   : $lightGreyAlt;
 $link         : $blue;
 $hoverLink    : $midGrey;
 $buttonBack        : $link;
@@ -69,3 +70,16 @@ $selectHighlight          : $link;
 $quickLinkBar             : $gold;
 $quickLinkDrawer          : $darkGold;
 $quickLinkDrawerHover     : lighten($darkGold, 5%);
+
+$tableHeaderBack: $lightGrey;
+$tableHeaderBorder: $tableHeaderBack;
+$tableHeaderText: $black;
+$rowBorder: $borderRule;
+$oddRowBack: $siteBack;
+$oddRowText: $black;
+$evenRowBack: $siteBack;
+$evenRowText: $black;
+
+
+
+

@@ -18,6 +18,11 @@
 	&:hover,&:focus{
 		color: $hoverLink;
 	}
+	&.form-required{
+		&:after{
+			content: none;
+		}
+	}
 }
 
 /* INLINE CONTAINERS

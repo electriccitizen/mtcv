@@ -1,0 +1,104 @@
+/* ========================
+  TABLES
+========================== */
+
+/// Default table styling
+@mixin table{
+	width: 100%;
+	border-spacing: unset;
+	caption{
+		font-weight: $heavy;
+		margin-bottom: $spaceXs;
+	}
+
+	td,th{
+		padding: .5rem 1rem;
+	}
+	thead th{
+		background: $tableHeaderBack;
+		color: $tableHeaderText;
+	}
+
+	tbody tr{
+		//set table row colors
+		&:nth-of-type(odd){
+			background: $oddRowBack;
+			td{
+				color: $oddRowText;
+			}
+		}
+		&:nth-of-type(even){
+			background: $evenRowBack;
+			td{
+				color: $evenRowText;
+			}
+		}
+		th{
+			background: $tableHeaderBack;
+			color: $tableHeaderText;
+		}
+		//give a bit extra room in the row on mobile
+		@include onlySmall{
+			td{
+				padding: 1rem $siteMarginMobile;
+			}
+			//style headers
+			& > td.st-key{
+				text-transform: uppercase;
+				font-weight: $heavy;
+			}
+		}
+	}//end tr
+}//end table mixin
+
+/* STACKTABLE
+---------------- */
+//stack table header on mobile
+table{
+	@include table;
+	.st-key{
+		font-size: 16px;
+		width: 52%;
+		max-width: 200px;
+	}
+	//stack table td on mobile
+	.st-val{
+		min-width: 48%;
+		font-size: 17px;
+		@include breakpoint (400px, true){
+			@include calc(max-width, "100% - 200px");
+		}
+	}
+}
+
+.responsive-table{
+	& > caption{
+		display: none;
+	}
+}
+//hide small stacktable by default
+.stacktable{
+	&.large-only{
+		display: table;
+	}
+	&.small-only{
+		display: none;
+	}
+}
+
+//hide large stacktable at less than 760
+@include onlySmall{
+	.stacktable{
+		&.large-only{
+			display: none;
+		}
+		&.small-only{
+			display: table;
+			width: 100%;
+			margin-bottom: $spaceXs;
+			td{
+				display: inline-block;
+			}
+		}
+	}
+}

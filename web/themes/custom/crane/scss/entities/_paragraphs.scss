@@ -42,11 +42,7 @@
 .paragraph--type--text-with-image{
 	.ti-wrapper{
 		@include safeFlex(row,wrap,start,start);
-		@include bleed(10px);
-		& > *{
-			padding-left: 5px;
-			padding-right: 5px;
-		}
+		@include bleed(padding,10px);
 		.img-wrapper{
 			&.right{
 				@include safeFlexOrder(2);

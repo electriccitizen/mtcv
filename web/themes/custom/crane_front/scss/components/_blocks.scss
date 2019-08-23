@@ -5,10 +5,12 @@
 /* MESSAGES
 -------------- */
 .block-system-messages-block{
-	padding: $elementSpace * 2 $siteMarginMobile 0;
-	max-width: $textMax;
-	@include auto;
-	text-align: center;
+	& > *{
+		padding: $elementSpace * 2 $siteMarginMobile 0;
+		max-width: $textMax;
+		@include auto;
+		text-align: center;
+	}
 	div[role="alert"]{
 		border: 1px solid $red;
 		padding: 20px 30px;

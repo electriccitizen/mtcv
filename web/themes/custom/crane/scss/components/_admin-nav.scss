@@ -33,9 +33,13 @@ body:not(.role-administrator){
 			background: $white;
 			&:hover,&:focus{
 				background: $buttonBackHover;
+				border: 2px solid $buttonBackHover;
+				color: $buttonTextHover;
 			}
 			&:active{
 				background: $buttonBackActive;
+				border: 2px solid $buttonBackActive;
+				color: $buttonTextActive;
 			}
 		}
 	}//end action links
@@ -44,7 +48,7 @@ body:not(.role-administrator){
 /* PRIMARY TABS (local tasks)
 --------------------- */
 ul.tabs.primary{
-	nav.is-horizontal.is-collapsible.position-container.is-horizontal-enabled &{
+	.crane nav.is-horizontal.is-collapsible.position-container.is-horizontal-enabled &{
 		background: transparent;
 		margin-left: 0;
 		margin-right: 0;
@@ -53,7 +57,7 @@ ul.tabs.primary{
 		position: relative;
 		z-index: 99;
 	}
-	nav.is-collapse-enabled &{
+	.crane nav.is-collapse-enabled &{
 		.tabs__tab{
 			padding-right: 0;
 			&.is-active{
@@ -92,8 +96,10 @@ ul.tabs.primary{
 
 	.tabs__tab{
 		padding-right: 5px;
+
 		&.is-active{
 			box-shadow: none !important;
+			background-color: transparent;
 		}
 		a{
 			@include outlineButton($link);

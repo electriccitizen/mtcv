@@ -2,6 +2,9 @@
   FOOTER
 ========================== */
 footer{
+	.logged-in &{
+		display: none;
+	}
 	& > div{
 		background: $lightGrey;
 		padding: 10px $siteMarginMobile;

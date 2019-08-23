@@ -1,0 +1,15 @@
+uuid: dae3bde3-81b6-45a7-be6d-4bb3558e7927
+langcode: en
+status: true
+dependencies: {  }
+name: thumbnail_cropped
+label: 'Thumbnail Cropped'
+effects:
+  3667cb9c-1e88-47e2-8e8d-d7970082b8df:
+    uuid: 3667cb9c-1e88-47e2-8e8d-d7970082b8df
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 100
+      height: 100
+      anchor: center-center

@@ -1,19 +1,11 @@
-two_column_sidebar_left_tabs:
-  label: Two Column Sidebar Left Tabs
+tabs:
+  label: Tabs
   category: Crane Layouts
   path: templates/layout
-  template: layout--twocol-sideleft-tabs
-  default_region: content
+  template: layout--tabs
+  default_region: tabs
   icon_map:
-    - [first, content, content, content]
-    - [first, tabs, tabs, tabs]
-    - [first, last, last, last]
+    - [tabs]
   regions:
-    first:
-      label: First
-    content:
-      label: Content
     tabs:
       label: Tabs
-    last:
-      label: Last
