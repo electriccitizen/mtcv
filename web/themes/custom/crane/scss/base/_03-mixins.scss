@@ -328,10 +328,20 @@
 	margin-bottom: 1em * $spaceMultiplier;
 }
 
-@mixin bleed($bleedWidth){
+// set negative edges on a parent to allow children to have equal space between without overflowing edges
+@mixin bleed($bleedType,$bleedWidth){
 	margin-left: $bleedWidth * -0.5;
 	margin-right: $bleedWidth * -0.5;
 	@include calc(width, "100% + "$bleedWidth);
+	& > *{
+		@if $bleedType == 'margin'{
+			margin-left: $bleedWidth * 0.5;
+			margin-right: $bleedWidth * 0.5;
+		}@else if $bleedType == 'padding'{
+			padding-left: $bleedWidth * 0.5;
+			padding-right: $bleedWidth * 0.5;
+		}
+	}
 }
 
 @mixin faSolid($fa-variable,$fa-size){

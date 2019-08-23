@@ -2,13 +2,98 @@
   TABLES
 ========================== */
 
-table{
-  thead{
-  	th{
-  		font-size: 1.6rem;
-  		color: $black;
-  	}
+/// Default table styling
+@mixin table{
+	width: 100%;
+	border-spacing: unset;
+	caption{
+		font-weight: $heavy;
+		margin-bottom: $spaceXs;
 	}
+
+	td{
+		padding: 1rem 1.5rem .75rem;
+		font-size: 1.7rem;
+		.js &{
+			.dropbutton-wrapper{
+				min-height: 28px;
+			}
+		}
+		&:first-child{
+			padding-left: 3rem;
+		}
+		&:last-child{
+			padding-right: 3rem;
+		}
+	}
+	thead th{
+		background: $tableHeaderBack;
+		color: $tableHeaderText;
+		padding: 2rem 1.5rem;
+		text-align: left;
+		font-weight: $heavy;
+		font-size: $baseSize;
+		& > tr{
+			border-bottom: none;
+		}
+		a{
+			color: $black;
+			display: block;
+			&:hover,&:focus{
+				opacity: .6;
+				color: $black;
+			}
+			.tablesort{
+				background: none;
+				float: none;
+				position: relative;
+				top: -3px;
+				&.tablesort--desc{
+					@include triangle(down,5px,8px,$black);
+				}
+				&.tablesort--asc{
+					@include triangle(up,5px,8px,$black);
+				}
+			}
+		}
+		&.is-active{
+			border: none;
+			background: lighten($tableHeaderBack, 3%);
+		}
+		&:first-child{
+			padding-left: 3rem;
+		}
+		&:last-child{
+			padding-right: 3rem;
+		}
+	}
+
+	tbody tr{
+		//set table row colors
+		&:not(:last-child) td{
+			border-bottom: 1px solid $rowBorder;
+		}
+		&:nth-of-type(odd){
+			background: $oddRowBack;
+			td{
+				color: $oddRowText;
+			}
+		}
+		&:nth-of-type(even){
+			background: $evenRowBack;
+			td{
+				color: $evenRowText;
+			}
+		}
+		th{
+			background: $tableHeaderBack;
+			color: $tableHeaderText;
+		}
+	}//end tr
+}//end table mixin
+
+.crane table{
+	@include table;
 }//end table
 
 

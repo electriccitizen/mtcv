@@ -1,15 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 80 80" style="enable-background:new 0 0 80 80;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#121212;}
-</style>
-<title>Artboard 1</title>
-<path class="st0" d="M40,4c19.9,0,36,16.1,36,36S59.9,76,40,76S4,59.9,4,40S20.1,4,40,4 M40,0C17.9,0,0,17.9,0,40s17.9,40,40,40
-	s40-17.9,40-40S62.1,0,40,0z"/>
-<rect x="18.5" y="20.7" class="st0" width="43" height="5.4"/>
-<rect x="18.5" y="31.8" class="st0" width="43" height="5.4"/>
-<rect x="18.5" y="42.9" class="st0" width="43" height="5.4"/>
-<rect x="18.5" y="54" class="st0" width="26.8" height="5.4"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="24px" viewBox="0 0 18 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>icon / reports</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icon-/-reports" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M0.499671577,0 L17.5003284,0 L18,0 L18,0.510648993 L18,23.489351 L18,24 L17.5003284,24 L0.499671577,24 L0,24 L0,23.489351 L0,0.510648993 L0,0 L0.499671577,0 Z M17,1 L1,1 L1,23 L17,23 L17,1 Z" id="Shape" fill="#212121" fill-rule="nonzero"></path>
+        <g id="Group" transform="translate(2.000000, 3.000000)" fill="#212121" fill-rule="nonzero">
+            <polygon id="Path" points="5.42668 5 5.42668 11 4.57332 11 4.57332 5"></polygon>
+            <polygon id="Path" points="7.42666 2 7.42666 11 6.57334 11 6.57334 2"></polygon>
+            <polygon id="Path" points="10.42668 0 10.42668 11 9.57332 11 9.57332 0"></polygon>
+            <polygon id="Path" points="2.42668 7.27764 2.42668 10.72236 1.57332 10.72236 1.57332 7.27764"></polygon>
+            <polygon id="Path" points="2 13.57332 12 13.57332 12 14.42668 2 14.42668"></polygon>
+            <polygon id="Path" points="2 15.57332 12 15.57332 12 16.42668 2 16.42668"></polygon>
+        </g>
+    </g>
 </svg>

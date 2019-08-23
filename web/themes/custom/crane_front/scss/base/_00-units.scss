@@ -12,9 +12,10 @@ $desk: 976px;
 $previewStop: 1080px;
 $contentStop: 1200px;
 $textMax: 800px;
-$onlyTab: 760px 899px;
+$onlyTab: 760px 975px;
 $onlySmall: max-width 759px;
 $onlyPhone: max-width 599px;
+$onlyMobile: max-width 975px;
 $mobileStop: max-width 979px;
 
 
@@ -27,8 +28,7 @@ $spaceLg: 4rem;
 $spaceXl: 6rem;
 
 $siteMarginMobile: 2rem;
-$siteMarginDesk: 6rem;
-
+$siteMarginDesk: 3.2rem;
 
 /* LAYOUT VARIABLES
 -------------------- */
@@ -66,6 +66,12 @@ $sectionGutter: 40px;
 	}
 }
 
+///mixin - onlyMobile
+@mixin onlyMobile {
+	@include breakpoint($onlyMobile) {
+		@content;
+	}
+}
 
 ///mixin - onlyTab
 @mixin onlyTab {

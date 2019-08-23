@@ -30,7 +30,7 @@ $h6Sm: 18px;
 @mixin headerGlobals{
 	line-height: 1.15;
 	font-weight: $heavy;
-	font-family: $headerFont;
+	font-family: $bodyFont;
 	margin: 0;
 	font-feature-settings: "liga", "dlig";
 }
@@ -39,7 +39,7 @@ $h6Sm: 18px;
 @mixin heading1{
 	@include headerGlobals;
 	font-size: $h1Sm;
-	font-weight: $xHeavy;
+	font-weight: $heavy;
 	@include tab{
 		font-size: $h1Mid;
 	}
@@ -114,7 +114,7 @@ h2+ul, h3+ul, h4+ul, h5+ul, h6+ul {
 }
 
 h2.block-title{
-	font-weight: $xHeavy;
+	font-weight: $heavy;
 }
 
 /* GLOBAL TEXT SETTINGS 

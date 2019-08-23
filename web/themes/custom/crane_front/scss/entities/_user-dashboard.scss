@@ -3,103 +3,177 @@
 ========================== */
 
 .user-dashboard{
-	.layout--twocol-sideleft-tabs{
+	.layout--tabs{
 		max-width: 1840px;
-	}
-	.layout__region--first{
-		@include tab{
-			background: $white;
-			position: fixed;
-			top: 0;
-			left: 80px;
-			height: 100vh;
-			z-index: 496;
-			width: 200px;
-			border-right: 1px solid $grey;
-			padding-top: 95px;
-			box-shadow: 0 3px 8px rgba(35,35,35,0.15);
-			.role-administrator &{
-				padding-top: 170px;
-			}
-			@include contentStop{
-				width: 230px;
-			}
-		}
-	}//end layout region first
-	.layout__region--tabs{
-		@include tab{
-			padding-top: 6rem !important;
-		}
-		& > *{
-			@include tab{
-				padding-left: 20px;
-				padding-right: 20px;
-			}
-		}
 	}
 }//end user-dashboard
 
 /* PROFILE INFORMATION
 ------------------------- */
-.block-field-blockuseruseruid{
-	max-width: 220px;
-	width: 100%;
-	@include auto;
-	.user-image{
-		width: 80%;
-		padding-bottom: 80%;
-		border-radius: 50%;
-		margin: 0 auto $spaceXs;
-	}
-}//user image
-
 .block-field-blockuserusername{
 	margin-bottom: $spaceSm;
 	text-align: center;
-	h1{
-		font-size: $h1Sm;
+	max-width: $desk;
+	@include desk{
+		@include clearFix;
 	}
-}
-
-.block-field-blockuserusercreated{
-	margin-bottom: 0;
-	@include onlySmall{
-		border-bottom: 1px solid $borderRule;
-		text-align: center;
-	}
-	.user-created{
-		margin-bottom: $spaceXs;
-	}
-	.user-roles{
-		margin-bottom: $elementSpace;
-		span.role:not(:last-child){
-			margin-right: .7rem;
-			position: relative;
-			padding-right: 1rem;
-			&:after{
-				@include vertRule(right,80%,$borderRule);
+	.field.name{
+		@include safeFlex(column,nowrap,start,center);
+		@include desk{
+			@supports(display: grid){
+				display: grid;
+				grid-template-columns: 1fr 225px;
+				grid-template-rows: auto;
+				grid-template-areas:
+				 "header sidebar"
+				 "middle sidebar"
+				 "bottom sidebar";
 			}
 		}
 	}
-	.edit-link{
-		text-align: center;
-	}
-}//end created
+	h1{
+		font-size: $h1Sm;
+		font-weight: $regular;
+		margin-bottom: $spaceSm;
+		@include safeFlexOrder(1);
+		@include tab{
+			font-size: 4.2rem;
+		}
+		@include desk{
+			@supports(display: grid){
+				grid-area: header;
+				grid-column: 1 / span 1;
+				padding-top: 3rem;
+				text-align: left;
+			}
+		}
+	}//end h1
+
+	.user-image-wrapper{
+		width: 225px;
+		margin-bottom: $spaceSm;
+		@include safeFlexOrder(2);
+		@include desk{
+			@supports(display: grid){
+				grid-area: sidebar;
+				grid-column: 2 / span 1;
+			}
+		}
+		img{
+			border-radius: 50%;
+			display: block;
+		}
+	}//end user image wrapper
+
+	.user-info{
+		@include safeFlex(row,wrap,center,start);
+		@include bleed(padding,20px);
+		@include safeFlexOrder(3);
+		margin-bottom: $spaceMd;
+		@include desk{
+			@supports(display: grid){
+				grid-area: middle;
+				grid-column: 1 / span 1;
+				@include safeFlex(row,wrap,start,start);
+			}
+		}
+		& > div{
+			&:not(:last-child){
+				position: relative;
+				&:after{
+					@include vertRule(right,70%,$baseText);
+				}
+			}
+		}
+		.user-name{
+			span:not(:last-child){
+				margin-rigth: .25em;
+			}
+		}
+		.edit-link a{
+			text-decoration: none;
+			&:hover,&:focus{
+				text-decoration: underline;
+			}
+		}
+	}//user info
+
+	//action buttons
+	.action-buttons{
+		@include safeFlexOrder(4);
+		@include safeFlex(row,wrap,center,start);
+		@include bleed(margin,.8rem);
+		@include desk{
+			@supports(display: grid){
+				grid-area: bottom;
+				grid-column: 1 / span 1;
+				text-align: left;
+				@include safeFlex(row,wrap,start,start);
+			}
+		}
+		& > a{
+			width: 192px;
+			display: block;
+		}
+	}//end action buttons
+}//end username
 
 
 /* CONTENT VIEWS
 -------------------- */
 .views-block.block-user-dashboard{
-	h2.block-title{
-		margin-bottom: .5em;
+	@include onlyMobile{
+		padding-top: 1rem;
 	}
-	.view-content{
-		@include tab{
-			@include safeFlex(row,wrap,justify,stretch);
+	h2.block-title{
+		display: none;
+	}
+	.view-empty{
+		padding-top: $spaceLg;
+	}
+	table{
+		@include desk{
+			border-top: 0;
 		}
 	}
-	.views-row{
-		width: 48.5%;
+	
+	.views-field-title{
+		@include desk{
+			@include calc(width, "100% - 345px");
+		}
+		a{
+			text-decoration: none;
+			&:hover,&:focus{
+				text-decoration: underline;
+			}
+		}
+	}
+	&.all-recents{
+		.views-field-title{
+			@include desk{
+				@include calc(width, "100% - 515px");
+			}
+		}
+	}
+	.views-field-changed{
+		@include desk{
+			width: 170px;
+		}
+	}
+	.views-field-uid{
+		@include desk{
+			width: 180px;
+		}
+	}
+	.views-field-operations{
+		&.st-val{
+			padding-top: .6rem;
+			padding-bottom: .5rem;
+		}
+		@include desk{
+			width: 165px !important;
+			max-width: 165px;
+		}
 	}
 }//end views block
 

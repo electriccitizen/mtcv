@@ -15,8 +15,7 @@ function ec_preview_form_alter(&$form, FormStateInterface $form_state, $form_id)
         '#url' => Url::fromRoute('ec_preview.form'),
         '#attributes' => [
           'class' => [
-            'button',
-            'button--primary'
+            'button'
           ],
         ],
       ];

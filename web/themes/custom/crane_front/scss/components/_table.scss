@@ -1,0 +1,128 @@
+/* ========================
+  TABLES
+========================== */
+
+/// Default table styling
+@mixin table{
+	width: 100%;
+	border-spacing: unset;
+	border: 1px solid $rowBorder;
+	caption{
+		font-weight: $heavy;
+		margin-bottom: $spaceXs;
+	}
+
+	td{
+		padding: .75rem 1.5rem .5rem;
+		font-size: 1.6rem;
+		&:first-child{
+			padding-left: 3rem;
+		}
+		&:last-child{
+			padding-right: 3rem;
+		}
+	}
+	thead th{
+		background: $tableHeaderBack;
+		color: $tableHeaderText;
+		padding: 2rem 1.5rem;
+		text-align: left;
+		&:first-child{
+			padding-left: 3rem;
+		}
+		&:last-child{
+			padding-right: 3rem;
+		}
+	}
+
+	tbody tr{
+		//set table row colors
+		&:not(:last-child) td{
+			border-bottom: 1px solid $rowBorder;
+		}
+		&:nth-of-type(odd){
+			background: $oddRowBack;
+			td{
+				color: $oddRowText;
+			}
+		}
+		&:nth-of-type(even){
+			background: $evenRowBack;
+			td{
+				color: $evenRowText;
+			}
+		}
+		th{
+			background: $tableHeaderBack;
+			color: $tableHeaderText;
+		}
+		//give a bit extra room in the row on mobile
+		@include onlyMobile{
+			td{
+				padding: 1rem $siteMarginMobile;
+			}
+			//style headers
+			& > td.st-key{
+				text-transform: uppercase;
+				font-weight: $heavy;
+			}
+		}
+	}//end tr
+}//end table mixin
+
+/* STACKTABLE
+---------------- */
+.tableresponsive-toggle-columns{
+	display: none;
+}
+//stack table header on mobile
+table{
+	@include table;
+	.st-key{
+		width: 52%;
+		max-width: 200px;
+		background: $tableHeaderBack;
+	}
+	//stack table td on mobile
+	.st-val{
+		min-width: 48%;
+		@include breakpoint (400px, true){
+			@include calc(width, "100% - 200px");
+		}
+	}
+}
+
+.responsive-table{
+	& > caption{
+		display: none;
+	}
+}
+//hide small stacktable by default
+.stacktable{
+	&.large-only{
+		display: table;
+	}
+	&.small-only{
+		display: none;
+		tr{
+			@include safeFlex(row,nowrap,start,stretch);
+		}
+	}
+}
+
+//hide large stacktable at less than 760
+@include onlyMobile{
+	.stacktable{
+		&.large-only{
+			display: none;
+		}
+		&.small-only{
+			display: table;
+			width: 100%;
+			margin-bottom: $spaceXs;
+			td{
+				display: inline-block;
+			}
+		}
+	}
+}

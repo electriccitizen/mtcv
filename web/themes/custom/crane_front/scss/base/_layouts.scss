@@ -35,58 +35,11 @@
 	}
 }
 
-/* TWO COLUMN SIDEBAR LEFT TABS */
-$sideBar: 200px;
-@include contentStop{
-	$sideBar: 240px;
-}
-.layout--twocol-sideleft-tabs{
+/* TABS */
+.layout--tabs{
 	width: 100%;
-	@include tab{
-		@include clearFix;
-		@supports (display: grid){
-			display: grid;
-			grid-template-columns: $sideBar 1fr;
-			grid-column-gap: 30px;
-		}
-	}
-	.layout__region--first{
-		padding: $elementSpace $siteMarginMobile;
-		@include tab{
-			float: left;
-			width: $sideBar;
-			@supports (display: grid){
-				float: none;
-				width: 100%;
-				grid-area: 1 / 1 / 4 / 1;
-			}
-		}
-	}//end layout region second
-	.layout__region--content{
-		padding: $elementSpace $siteMarginMobile 0;
-		&:last-child{
-			padding: $elementSpace $siteMarginMobile;
-		}
-		@include tab{
-			margin-left: $sideBar + 40px;
-			@supports (display: grid){
-				margin-left: 0;
-				grid-area: 1 / 2 / 1 / 2;
-			}
-		}
-	}
 	.layout__region--tabs{
-		padding: $elementSpace $siteMarginMobile 0;
-		&:last-child{
-			padding: $elementSpace $siteMarginMobile;
-		}
-		@include tab{
-			margin-left: $sideBar + 40px;
-			@supports (display: grid){
-				margin-left: 0;
-				grid-area: 2 / 2 / 2 / 2;
-			}
-		}
+		padding: 0 0 $elementSpace;
 		.tabs-wrapper > div:not(:first-of-type){
 			display: none;
 		}
@@ -94,6 +47,7 @@ $sideBar: 200px;
 			@include listReset;
 			@include safeFlex(row,wrap,start,start);
 			li{
+				min-width: 224px;
 				@include onlyPhone{
 					width: 100%;
 				}
@@ -102,15 +56,16 @@ $sideBar: 200px;
 				}
 			}
 			.tab-control{
-				@include outlineButton($link);
+				@include outlineButton($lightGreyAlt);
 				border-radius: 0;
 				border-width: 1px;
 				width: 100%;
 				margin-bottom: -1px;
+				color: $black;
 				&.active-tab{
-					background: $lightGrey;
-					color: $midBlue;
-					border-color: $midBlue;
+					background: $midGrey;
+					color: $white;
+					border-color: $midGrey;
 					&:hover,&:focus{
 						background: $buttonBackHover;
 						color: $buttonTextHover;
@@ -125,21 +80,7 @@ $sideBar: 200px;
 			}//end tab control
 		}//end tabs header
 		.tab-item{
-			border-top: 1px solid $link;
-			padding: 30px 0;
+			border-top: 1px solid $borderRule;
 		}
 	}//end region--tabs
-	.layout__region--last{
-		padding: $elementSpace $siteMarginMobile 0;
-		&:last-child{
-			padding: $elementSpace $siteMarginMobile;
-		}
-		@include tab{
-			margin-left: $sideBar + 40px;
-			@supports (display: grid){
-				margin-left: 0;
-				grid-area: 3 / 2 / 3 / 2;
-			}
-		}
-	}
-}//end layout-twocol-sideleft
+}//end layout-tabs

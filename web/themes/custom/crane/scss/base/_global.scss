@@ -14,8 +14,11 @@ body{
 		@include calc(min-height, "100vh - 50px");
 		@include smallTab{
 			padding-top: 0;
-			padding-left: 80px;
+			padding-left: 225px;
 			min-height: 100vh;
+		}
+		& > .layout-container{
+			background: $siteBack;
 		}
 	}
 	&.role-administrator{
@@ -24,7 +27,7 @@ body{
 			padding-top: 0;
 			@include calc(min-height, "100vh - 39px");
 			@include desk{
-				padding-left: 80px;
+				padding-left: 225px;
 				@include calc(min-height, "100vh - 79px");
 			}
 		}
@@ -42,4 +45,7 @@ body{
 			}
 		}
 	}//end path batch
+	.ui-dialog{
+		z-index: 500 !important;
+	}
 }//end body adminimal crane

@@ -27,6 +27,22 @@ third_party_settings:
         destination: default
         url: ''
         external: ''
+      1:
+        destination: default
+        url: ''
+        external: ''
+      75:
+        destination: default
+        url: ''
+        external: ''
+      76:
+        destination: default
+        url: ''
+        external: ''
+      45:
+        destination: default
+        url: ''
+        external: ''
 _core:
   default_config_hash: _Cj9j8iA9MZ3HWv7QEwv1Pdxni0UlWGKnMw3Ou0rlXo
 id: video

@@ -5,10 +5,8 @@
 .views-exposed-form{
 	.form--inline{
 		@include safeFlex(row,wrap,start,start);
-		@include bleed(20px);
+		@include bleed(padding,20px);
 		& > .form-item{
-			padding-left: 10px;
-			padding-right: 10px;
 			width: 100%;
 			@include smallTab{
 				max-width: 240px;
@@ -24,6 +22,17 @@
 	}//end form inline
 }//end views exposed form
 
+.views-table{
+	.crane &{
+		td.views-field-operations{
+			padding: .75rem 1.5rem;
+			.dropbutton-widget{
+				min-width: 120px;
+			}
+		}
+	}
+}
+
 .views-ui-dialog{
 	.views-override.form--inline{
 		.js-form-item-override-dropdown{
@@ -36,8 +45,13 @@
 	.ui-dialog-buttonset{
 		button{
 			margin-right: 2rem !important;
+			min-width: 185px;
 			&:not(.button--primary):not(.button--danger){
 				@include cautionButton;
+				min-width: 185px;
+			}
+			&.button--danger:not(.image-button){
+				min-width: 185px;
 			}
 		}
 	}
@@ -65,6 +79,12 @@
 		.views-table ~ .form-actions{
 			display: none !important;
 		}
+		.views-field-user-picture{
+			img{
+				width: 50px;
+				border-radius: 50%;
+			}
+		}
 	}
 }//end user admin people
 
@@ -80,4 +100,19 @@
 	}
 }//end redirect view
 
+/* CONTENT VIEWS
+------------------ */
+.view-id-content{
+	.views-table{
+		*{
+			box-sizing: border-box;
+		}
+		.views-field-changed{
+			max-width: 140px;
+		}
+		.views-field-operations{
+			max-width: 120px;
+		}
+	}
+}//end content views
 

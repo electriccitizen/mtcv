@@ -39,6 +39,51 @@
 
 {% extends 'field.html.twig' %}
 {% block fieldSingleNo %}
-  <h1>{{- item.content -}}</h1>
+
+  {% set image = element['#object'].user_picture.0.target_id %}
+  {% set userId = element['#object'].uid.0.value %}
+  {% if userId is divisible by(3) %}
+  	{% set avatar = '/themes/custom/crane_front/images/avatars/avatar-gold.jpg' %}
+  {% elseif userId is even %}
+  	{% set avatar = '/themes/custom/crane_front/images/avatars/avatar-fuchsia.jpg' %}
+  {% else %}
+  	{% set avatar = '/themes/custom/crane_front/images/avatars/avatar-blue.jpg' %}
+  {% endif %}
+
+  <div class="user-image-wrapper">
+		{% if image %}
+			<img src="{{ file_url(element['#object'].user_picture.0.entity.fileuri) }}" width="225px" height="225px" alt="Profile image for {{ item.content['#context'].value }}" />
+		{% else %}
+			<img src="{{ avatar }}" width="225px" height="225px" alt="User profile avatar" />
+		{% endif %}
+	</div>
+
+	<h1>Dashboard</h1>
+
+  <div class="user-info">
+	  <div class="user-name">
+	  	<span>{{- element['#object'].field_first_name.0.value -}}</span>
+	  	<span>{{- element['#object'].field_last_name.0.value -}}</span>
+		</div>
+		<div class="user-roles">
+			{%- if 'administrator' in element['#object'].getroles -%}
+				<span class="role">Administrator</span>
+			{%- endif -%}
+			{%- if 'senior_editor' in element['#object'].getroles -%}
+				<span class="role">Senior Editor</span>
+			{%- endif -%}
+			{%- if 'editor' in element['#object'].getroles -%}
+				<span class="role">Editor</span>
+			{%- endif -%}
+		</div>
+		<div class="edit-link">
+			<a href="/user/{{ element['#object'].uid.0.value }}/edit">Edit Profile</a>
+		</div>
+	</div>
+
+	<div class="action-buttons">
+		<a href="/admin/content" class="button-outline">View Content</a>
+		<a href="/node/add" class="button-outline">+ Add Content</a>
+	</div>
 {% endblock %}
 

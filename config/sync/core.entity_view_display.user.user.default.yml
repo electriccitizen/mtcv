@@ -3,12 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_last_name
     - field.field.user.user.user_picture
     - image.style.thumbnail
     - views.view.user_dashboard
   module:
     - image
     - layout_builder
+    - layout_discovery
     - user
     - views
   theme:
@@ -19,51 +22,12 @@ third_party_settings:
     enabled: true
     sections:
       -
-        layout_id: two_column_sidebar_left_tabs
+        layout_id: layout_onecol
         layout_settings: {  }
         components:
-          5abc39be-729e-4be4-b3e0-dbdde6106047:
-            uuid: 5abc39be-729e-4be4-b3e0-dbdde6106047
-            region: first
-            configuration:
-              id: 'field_block:user:user:created'
-              label: Created
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: timestamp
-                settings:
-                  date_format: custom
-                  custom_date_format: n/j/y
-                  timezone: ''
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 2
-          b6cbd12f-2c2f-41f2-9fb0-6102d5fe09d5:
-            uuid: b6cbd12f-2c2f-41f2-9fb0-6102d5fe09d5
-            region: first
-            configuration:
-              id: 'field_block:user:user:uid'
-              label: 'Custom user image'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: number_integer
-                settings:
-                  thousand_separator: ''
-                  prefix_suffix: true
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
-          f713f94d-d089-4804-967c-800171652b65:
-            uuid: f713f94d-d089-4804-967c-800171652b65
-            region: first
+          a150bc7c-1d9c-429c-85ff-af6bf1b6cec1:
+            uuid: a150bc7c-1d9c-429c-85ff-af6bf1b6cec1
+            region: content
             configuration:
               id: 'field_block:user:user:name'
               label: Name
@@ -78,9 +42,14 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 1
-          75dcebb9-c6c4-4b74-bea4-2f9706c0281d:
-            uuid: 75dcebb9-c6c4-4b74-bea4-2f9706c0281d
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: tabs
+        layout_settings: {  }
+        components:
+          2649d1c4-5404-4395-ab1a-457789396c83:
+            uuid: 2649d1c4-5404-4395-ab1a-457789396c83
             region: tabs
             configuration:
               id: 'views_block:user_dashboard-all_recents'
@@ -92,8 +61,8 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 1
-          f1634350-abab-4a15-8461-9e3dc94e8b0d:
-            uuid: f1634350-abab-4a15-8461-9e3dc94e8b0d
+          fe81fbdc-d4bf-4363-a44e-52a3f81b6669:
+            uuid: fe81fbdc-d4bf-4363-a44e-52a3f81b6669
             region: tabs
             configuration:
               id: 'views_block:user_dashboard-my_recents'
@@ -113,6 +82,22 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
+  field_first_name:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_last_name:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   member_for:
     weight: 5
     region: content

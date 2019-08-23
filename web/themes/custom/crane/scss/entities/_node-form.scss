@@ -82,6 +82,18 @@
 				top: 1.5rem;
 				left: 150px;
 			}
+			#edit-preview{
+				@include submitButton;
+				background: $green;
+				&:hover,&:focus{
+					background: $buttonBackHover;
+					color: $buttonTextHover;
+				}
+				&:active{
+					background: $buttonBackActive;
+					color: $buttonTextActive;
+				}
+			}
 		}
 	}//end footer
 

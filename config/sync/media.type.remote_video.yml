@@ -27,6 +27,22 @@ third_party_settings:
         destination: default
         url: ''
         external: ''
+      1:
+        destination: default
+        url: ''
+        external: ''
+      75:
+        destination: default
+        url: ''
+        external: ''
+      76:
+        destination: default
+        url: ''
+        external: ''
+      45:
+        destination: default
+        url: ''
+        external: ''
 _core:
   default_config_hash: 2r_Yo2tYXnt7PLx1pnlr1JU3iHmnsoWFdzQFs2sUXGk
 id: remote_video

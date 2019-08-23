@@ -2,6 +2,30 @@
   BUTTONS
 ========================== */
 
+%dropbutton{
+	input,.button,a,button{
+		border-radius: 0 !important;
+		box-shadow: none;
+		background: $siteBack;
+		text-shadow: none;
+		border-color: $borderRule;
+		font-size: 1.6rem;
+		color: $baseText;
+		&:hover,&:focus{
+			background-color: $offWhite !important;
+			background-image: none !important;
+			border-radius: 0 !important;
+			box-shadow: none;
+		}
+		&:active{
+			background: $lightGrey;
+			border-radius: 0;
+			box-shadow: none;
+		}
+	}
+}
+
+
 //button class
 .button {
 	@include button;
@@ -17,45 +41,32 @@
 
 //outlineButtons
 .button-outline{
-	@include outlineButton($link);
+	@include outlineButton($borderRule);
 }
 
-.js .dropbutton-widget{
-	li.secondary-action{
-		border-top: 1px solid $midBlue;
-	}
-	a{
-		color: $darkBlue;
-		padding: 8px 10px 8px 30px;
-		border-right: 1px solid $midBlue;
-		text-decoration: none;
-		background: $blueGrey;
-		font-family: $headerFont;
-		text-transform: uppercase;
-		font-weight: $xHeavy;
-		&:hover,&:focus{
-			background: $buttonBackHover;
-			color: $buttonTextHover;
+//dropbuttons
+.js{
+	.dropbutton-multiple,.dropbutton-wrapper,.dropbutton-single{
+		.dropbutton-widget{
+			border-radius: 0;
+			text-shadow: none;
+			background: $siteBack;
+			border: 1px solid $borderRule;
+			min-width: 120px;
+			.dropbutton-action,.dropbutton-toggle{
+				@extend %dropbutton;
+			}
+			.dropbutton-toggle{
+				button{
+					border-left: 1px solid $borderRule;
+				}
+			}
+		}//end dropbutton widget
+		.dropbutton-action{
+			@extend %dropbutton;
+			a{
+				padding: .25rem 2rem;
+			}
 		}
-		&:active{
-			background: $buttonBackActive;
-			color: $buttonTextActive;
-		}
-	}
-	button{
-		background: $blueGrey;
-		color: $darkBlue;
-		&:hover,&:focus{
-			background: $buttonBackHover;
-			color: $buttonTextHover;
-		}
-		&:active{
-			background: $buttonBackActive;
-			color: $buttonTextActive;
-		}
-		.dropbutton-arrow{
-			font-size: 16px;
-			@include calc(right, "50% - 5px");
-		}
-	}//end button
-}//end dropbutton widget 
+	}//end dropbutton
+}//end js

@@ -23,7 +23,12 @@ fonts:
   version: 1.0
   css:
     base:
-      https://use.typekit.net/kpb2dtf.css: { type: external, preprocess: false }
+       https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap: { type: external, preprocess: false }  
+table:
+  version: 1.0
+  js:
+    js/stacktable/stacktable.min.js: { minified: true }
+    js/tables.js: {}
 tabs:
   version: 1.0
   js:

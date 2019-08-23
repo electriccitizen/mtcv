@@ -6,7 +6,6 @@ dependencies:
     - node.type.resource
   module:
     - node
-    - paragraphs
     - user
     - views_bulk_operations
 _core:
@@ -633,7 +632,7 @@ display:
       tags: {  }
   page_1:
     display_options:
-      path: admin/content/node
+      path: admin/content
       menu:
         type: none
         title: Pages
@@ -701,25 +700,26 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: 'not in'
-          value:
-            resource: resource
+          operator: in
+          value: {  }
           group: 1
-          exposed: false
+          exposed: true
           expose:
             operator_id: type_op
-            label: 'Content type'
+            label: 'Content Type'
             description: ''
             use_operator: false
             operator: type_op
             identifier: type
             required: false
             remember: false
-            multiple: false
+            multiple: true
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+              editor: '0'
+              site_manager: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -797,7 +797,7 @@ display:
         type: table
         options:
           grouping: {  }
-          row_class: 'views-card {{ status }}'
+          row_class: ''
           default_row_class: true
           override: true
           sticky: false
@@ -848,7 +848,7 @@ display:
               responsive: ''
             changed:
               sortable: true
-              default_sort_order: asc
+              default_sort_order: desc
               align: ''
               separator: ''
               empty_column: false
@@ -858,7 +858,7 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-          default: '-1'
+          default: changed
           empty_table: false
       row:
         type: fields
@@ -1004,11 +1004,11 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Title
           exclude: false
           alter:
             alter_text: true
-            text: '<h3><a href="{{ edit_node }}">{{ title }}</a></h3>'
+            text: '<a href="{{ edit_node }}">{{ title }}</a>'
             make_link: false
             path: ''
             absolute: false
@@ -1069,7 +1069,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Type of Content'
+          label: 'Content Type'
           exclude: false
           alter:
             alter_text: false
@@ -1268,7 +1268,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Operations
           exclude: false
           alter:
             alter_text: false
@@ -1318,15 +1318,6 @@ display:
           field: uid
           admin_label: author
           required: true
-          plugin_id: standard
-        field_header:
-          id: field_header
-          table: node__field_header
-          field: field_header
-          relationship: none
-          group_type: group
-          admin_label: 'field_header: Paragraph'
-          required: false
           plugin_id: standard
     display_plugin: page
     display_title: Pages

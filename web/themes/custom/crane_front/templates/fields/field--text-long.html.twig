@@ -37,6 +37,11 @@
  */
 #}
 
-{% set image = element['#object'].user_picture.0.target_id %}
-<div class="user-image" style="background:url({% if image %}{{ file_url(element['#object'].user_picture.0.entity.fileuri) }}{% else %}/themes/custom/crane_front/images/avatar-circle-gold.png{% endif %}) no-repeat;background-size: cover;background-position: center;"></div>
+{% extends 'field.html.twig' %}
 
+{% block fieldSingleNo %}
+	{% if '<table>' in item.content['#text'] %}
+		{{ attach_library('crane_front/table') }}
+	{% endif %}
+	{{ parent() }}
+{% endblock %}

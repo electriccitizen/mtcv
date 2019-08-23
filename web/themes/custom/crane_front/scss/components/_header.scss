@@ -3,8 +3,22 @@
 ========================== */
 header{
 	& > div{
-		background: $offWhite;
-		padding: 10px 0;
+		background: $black;
+		color: $white;
+		padding: 18px 0 13px;
+		.role-administrator &{
+			display: none;
+		}
+		.logged-in &{
+			position: fixed;
+			width: 100%;
+			top: 50px;
+			z-index: 496;
+			@include tab{
+				top: 0;
+				z-index: 9999;
+			}
+		}
 	}
 }
 
@@ -14,47 +28,54 @@ header{
 	width: 100%;
 	padding-left: $siteMarginMobile;
 	padding-right: $siteMarginMobile;
-	body:not(.logged-in.path-user) &{
-		max-width: $siteMaxWidth + 120px;	
-	}
-	@include safeFlex(row,nowrap,justify,center);
-	.logged-in &{
-		@include safeFlex(row,nowrap,end,center);
-	}
 	@include auto;
+	@include safeFlex(row,wrap,center,center);
+	body:not(.logged-in) &{
+		max-width: $siteMaxWidth + 120px;		
+	}
+	@include tab{
+		@include safeFlex(row,nowrap,justify,center);
+	}
 	@include desk{
 		padding-left: $siteMarginDesk;
 		padding-right: $siteMarginDesk;
 	}
-	a.logo-link{
+	.site-name{
+		font-weight: $heavy;
 		display: block;
-		max-width: 40px;
-		.logged-in &{
-			display: none;
-		}
-		@include tab{
-			max-width: 60px;
-		}
-		img{
-			border: 1px solid transparent;
-			display: block;
+		@include onlySmall{
 			width: 100%;
-		}
-		&:hover,&:focus{
-			text-decoration: none;
-			img{
-				border-color: $borderRule;
-			}
-		}
-	}//end logo a
-	a.site-link{
-		font-size: 1.4rem;
-		color: darken($link, 5%);
-		text-transform: uppercase;
-		text-decoration: none;
-		&:hover,&:focus{
-			color: $hoverLink;
-			text-decoration: underline;
+			text-align: center;
+			margin-bottom: $spaceXs;
 		}
 	}
+	.header-actions{
+		@include safeFlex(row,wrap,center,start);
+		@include bleed(padding,20px);
+		@include tab{
+			text-align: right;
+			@include calc(width,"100% - 200px");
+			@include safeFlex(row,wrap,end,start);
+		}
+		& > div{
+			&:not(:last-child){
+				position: relative;
+				&:after{
+					@include vertRule(right,70%,$white);
+				}
+			}
+		}
+		.user-icon{
+			width: 14px;
+			margin-right: .75rem;
+		}
+		a{
+			color: $white;
+			text-decoration: none;
+			&:hover,&:focus{
+				opacity: .6;
+				text-decoration: underline;
+			}
+		}
+	}//end header actions
 }//end branding block

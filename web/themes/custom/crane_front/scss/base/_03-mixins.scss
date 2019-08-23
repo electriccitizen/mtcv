@@ -216,15 +216,14 @@
 	border: none;
 	color: $buttonText;
 	line-height: 1.15;
-	padding: 1rem 1.5rem;
+	padding: 1.2rem 1.5rem;
 	display: inline-block;
 	vertical-align: middle;
 	text-decoration: none;
 	text-align: center;
-	text-transform: uppercase;
-	letter-spacing: .04em;
-	font-family: $headerFont;
-	font-weight: $xHeavy;
+	letter-spacing: .02em;
+	font-family: $bodyFont;
+	font-weight: $heavy;
 	font-size: $button;
 	margin-bottom: $spaceMd;
 	&:hover,&:focus {
@@ -243,10 +242,9 @@
 @mixin outlineButton($outlineColor){
 	@include button;
 	background: transparent;
-	border: 2px solid $outlineColor;
-	color: $black;
+	border: 1px solid $outlineColor;
+	color: $link;
 	font-weight: $heavy;
-	border-radius: 4px;
 	&:hover,&:focus{
 		background: $buttonBackHover;
 		color: $buttonTextHover;
@@ -422,8 +420,18 @@
 	margin-bottom: 1em * $spaceMultiplier;
 }
 
-@mixin bleed($bleedWidth){
+// set negative edges on a parent to allow children to have equal space between without overflowing edges
+@mixin bleed($bleedType,$bleedWidth){
 	margin-left: $bleedWidth * -0.5;
 	margin-right: $bleedWidth * -0.5;
 	@include calc(width, "100% + "$bleedWidth);
+	& > *{
+		@if $bleedType == 'margin'{
+			margin-left: $bleedWidth * 0.5;
+			margin-right: $bleedWidth * 0.5;
+		}@else if $bleedType == 'padding'{
+			padding-left: $bleedWidth * 0.5;
+			padding-right: $bleedWidth * 0.5;
+		}
+	}
 }

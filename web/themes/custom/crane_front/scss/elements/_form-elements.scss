@@ -61,7 +61,6 @@
 		position: relative;
 		top: -1px;
 		right: -.5rem;
-		font-size: 1.2rem;
 	}
 }
 
@@ -76,7 +75,7 @@ input[type="submit"].button{
 	width: 100%;
 	margin-bottom: $spaceMd;
 	label{
-		font-family: $headerFont;
+		font-family: $bodyFont;
 		font-size: $formLabel;
 		font-weight: $heavy;
 		color: $black;
