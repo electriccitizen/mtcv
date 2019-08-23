@@ -108,16 +108,14 @@ nav#block-crane-quicklinks{
 						padding: 8px 15px 8px 50px;
 					}
 					&:hover{
-						opacity: .7;
+						opacity: .6;
+						text-decoration: underline;
 					}
 					&.dashboard{
 						background-image: url('../images/icons/dashboard.svg');
 						background-repeat: no-repeat;
 						background-size: 30px 30px;
 						background-position: center;
-						.path-user &{
-							background-color: $white;
-						}
 						@include tab{
 							background-size: 24px 24px;
 							background-position: 15px center;
@@ -128,6 +126,9 @@ nav#block-crane-quicklinks{
 						background-repeat: no-repeat;
 						background-size: 30px 30px;
 						background-position: center;
+						.node-add_page &{
+							background-color: $white;
+						}
 						@include tab{
 							background-size: 24px 24px;
 							background-position: 15px center;
@@ -138,6 +139,9 @@ nav#block-crane-quicklinks{
 						background-size: 30px 30px;
 						background-repeat: no-repeat;
 						background-position: center;
+						.entity-taxonomy_vocabulary-overview_form &,.path-taxonomy &,.path-block &{
+							background-color: $white;
+						}
 						@include tab{
 							background-size: 24px 24px;
 							background-position: 15px center;
@@ -148,6 +152,9 @@ nav#block-crane-quicklinks{
 						background-size: 30px 30px;
 						background-repeat: no-repeat;
 						background-position: center;
+						.path-user &{
+							background-color: $white;
+						}
 						@include tab{
 							background-size: 24px 24px;
 							background-position: 15px center;

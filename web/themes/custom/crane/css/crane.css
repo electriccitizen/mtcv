@@ -5742,14 +5742,13 @@ nav#block-crane-quicklinks {
             height: auto;
             padding: 8px 15px 8px 50px; } }
         nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a:hover {
-          opacity: .7; }
+          opacity: .6;
+          text-decoration: underline; }
         nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.dashboard {
           background-image: url("../images/icons/dashboard.svg");
           background-repeat: no-repeat;
           background-size: 30px 30px;
           background-position: center; }
-          .path-user nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.dashboard {
-            background-color: #ffffff; }
           @media (min-width: 760px) {
             nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.dashboard {
               background-size: 24px 24px;
@@ -5759,6 +5758,8 @@ nav#block-crane-quicklinks {
           background-repeat: no-repeat;
           background-size: 30px 30px;
           background-position: center; }
+          .node-add_page nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.content {
+            background-color: #ffffff; }
           @media (min-width: 760px) {
             nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.content {
               background-size: 24px 24px;
@@ -5768,6 +5769,8 @@ nav#block-crane-quicklinks {
           background-size: 30px 30px;
           background-repeat: no-repeat;
           background-position: center; }
+          .entity-taxonomy_vocabulary-overview_form nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.structure, .path-taxonomy nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.structure, .path-block nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.structure {
+            background-color: #ffffff; }
           @media (min-width: 760px) {
             nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.structure {
               background-size: 24px 24px;
@@ -5777,6 +5780,8 @@ nav#block-crane-quicklinks {
           background-size: 30px 30px;
           background-repeat: no-repeat;
           background-position: center; }
+          .path-user nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.users {
+            background-color: #ffffff; }
           @media (min-width: 760px) {
             nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.users {
               background-size: 24px 24px;

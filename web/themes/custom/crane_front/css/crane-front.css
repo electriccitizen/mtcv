@@ -1014,7 +1014,8 @@ nav#block-quicklinks {
             height: auto;
             padding: 8px 15px 8px 50px; } }
         nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a:hover {
-          opacity: .7; }
+          opacity: .7;
+          text-decoration: underline; }
         nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.dashboard {
           background-image: url("../images/icons/dashboard.svg");
           background-repeat: no-repeat;

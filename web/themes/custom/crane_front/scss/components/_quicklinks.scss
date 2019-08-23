@@ -110,6 +110,7 @@ nav#block-quicklinks{
 					}
 					&:hover{
 						opacity: .7;
+						text-decoration: underline;
 					}
 					&.dashboard{
 						background-image: url('../images/icons/dashboard.svg');
