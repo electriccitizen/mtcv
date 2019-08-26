@@ -32,7 +32,6 @@ $h6Sm: 18px;
 	font-weight: $heavy;
 	font-family: $bodyFont;
 	margin: 0;
-	font-feature-settings: "liga", "dlig";
 }
 
 
@@ -142,7 +141,7 @@ html,code{
 	font-synthesis: none;
 }
 
-body{
+body.crane{
 	font: inherit;
 	color: $baseText;
 	margin: 0;
@@ -177,3 +176,11 @@ ol {
 		list-style-type: upper-roman;
 	}
 }
+
+a,.link{
+	color: $link;
+	&:hover,&:focus{
+		color: $hoverLink;
+	}
+}
+

@@ -1,34 +1,91 @@
 /* ========================
   HEADER
 ========================== */
-.content-header{
-	position: relative;
-	padding: $spaceLg 0 0;
-	.live-link{
-		position: absolute;
+
+.header-bar{
+	box-sizing: border-box;
+	background: $black;
+	color: $white;
+	padding: 18px $siteMarginMobile 13px;
+	position: fixed;
+	width: 100%;
+	top: 50px;
+	left: 0;
+	z-index: 496;
+	@include safeFlex(row,wrap,center,center);
+	@include tab{
 		top: 0;
-		right: 0;
-		background: $lightGrey;
-		padding: .75rem 3rem;
-		display: none;
-		&:before{
-			content: '';
-			display: block;
-			position: absolute;
-			top: 0;
-			left: -15px;
-			height: 100%;
-			width: 30px;
-			background: inherit;
-			@include skew(30,0);
-		}
-		@include smallTab{
-			display: block;
+		left: 0;
+		z-index: 9999;
+		@include safeFlex(row,wrap,justify,center);
+	}
+	.site-name{
+		font-weight: $heavy;
+		display: block;
+		@include onlySmall{
+			width: 100%;
+			text-align: center;
+			margin-bottom: $spaceXs;
 		}
 	}
-	.page-title{
-		color: $black;
-		font-weight: $heavy;
-		margin-bottom: $spaceSm;
+	.header-actions{
+		@include safeFlex(row,wrap,center,start);
+		@include bleed(padding,20px);
+		@include tab{
+			text-align: right;
+			@include calc(width,"100% - 200px");
+			@include safeFlex(row,wrap,end,start);
+		}
+		& > div{
+			&:not(:last-child){
+				position: relative;
+				&:after{
+					@include vertRule(right,70%,$white);
+				}
+			}
+		}
+		.user-icon{
+			width: 14px;
+			margin-right: .75rem;
+		}
+		a{
+			color: $white;
+			text-decoration: none;
+			&:hover,&:focus{
+				opacity: .6;
+				text-decoration: underline;
+			}
+		}
+	}//end header actions
+}//end header-bar
+
+.crane{
+	.content-header{
+		position: relative;
+		padding: $spaceLg 0 0;
+		background-color: $siteBack;
+		@include tab{
+			padding: $spaceXl 0 0;
+		}
+		.region-header{
+			border-bottom: 1px solid $borderRule;
+			@include desk{
+				@include safeFlex(row,wrap,justify,start);
+			}
+		}
+		.block-page-title-block{
+			.page-title{
+				color: $black;
+				margin-bottom: $spaceSm;
+			}
+		}
+	}//end content ehader
+	&.system-admin_content,&.node-add{
+		.region-header{
+			border-bottom: 0;
+		}
+		#block-crane-content{
+			padding-top: 0;
+		}
 	}
 }//end content-header

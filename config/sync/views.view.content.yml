@@ -42,15 +42,15 @@ display:
       pager:
         type: full
         options:
-          items_per_page: 50
+          items_per_page: 20
           offset: 0
           id: 0
           total_pages: null
           tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-            first: '« First'
-            last: 'Last »'
+            previous: Previous
+            next: Next
+            first: First
+            last: Last
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -591,7 +591,7 @@ display:
           entity_type: node
           entity_field: changed
           plugin_id: date
-      title: Pages
+      title: Content
       empty:
         area_text_custom:
           id: area_text_custom
@@ -615,6 +615,17 @@ display:
         groups:
           1: AND
       display_extenders: {  }
+      footer:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: '<span class="count-shim">@page_count</span>'
+          plugin_id: result
     display_plugin: default
     display_title: Master
     id: default
@@ -663,7 +674,7 @@ display:
           exposed: true
           expose:
             operator_id: title_op
-            label: 'Title Keyword(s)'
+            label: Title
             description: ''
             use_operator: false
             operator: title_op
@@ -677,7 +688,7 @@ display:
               administrator: '0'
               editor: '0'
               site_manager: '0'
-            placeholder: ''
+            placeholder: 'Search keywords'
           is_grouped: false
           group_info:
             label: ''
@@ -1320,7 +1331,7 @@ display:
           required: true
           plugin_id: standard
     display_plugin: page
-    display_title: Pages
+    display_title: Content
     id: page_1
     position: 1
     cache_metadata:

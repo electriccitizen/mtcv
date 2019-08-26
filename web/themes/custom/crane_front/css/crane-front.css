@@ -254,7 +254,6 @@ h1 {
   font-weight: 700;
   font-family: "PT Sans", sans-serif;
   margin: 0;
-  font-feature-settings: "liga", "dlig";
   font-size: 32px;
   font-weight: 700; }
   @media (min-width: 760px) {
@@ -269,7 +268,6 @@ h2 {
   font-weight: 700;
   font-family: "PT Sans", sans-serif;
   margin: 0;
-  font-feature-settings: "liga", "dlig";
   font-size: 26px; }
   @media (min-width: 760px) {
     h2 {
@@ -283,7 +281,6 @@ h3 {
   font-weight: 700;
   font-family: "PT Sans", sans-serif;
   margin: 0;
-  font-feature-settings: "liga", "dlig";
   font-size: 24px; }
   @media (min-width: 760px) {
     h3 {
@@ -294,7 +291,6 @@ h4 {
   font-weight: 700;
   font-family: "PT Sans", sans-serif;
   margin: 0;
-  font-feature-settings: "liga", "dlig";
   font-size: 22px; }
 
 h5 {
@@ -302,7 +298,6 @@ h5 {
   font-weight: 700;
   font-family: "PT Sans", sans-serif;
   margin: 0;
-  font-feature-settings: "liga", "dlig";
   font-size: 20px; }
 
 h6 {
@@ -310,7 +305,6 @@ h6 {
   font-weight: 700;
   font-family: "PT Sans", sans-serif;
   margin: 0;
-  font-feature-settings: "liga", "dlig";
   font-size: 18px; }
 
 h2 + ul, h3 + ul, h4 + ul, h5 + ul, h6 + ul {
@@ -764,10 +758,6 @@ header > div {
       -ms-flex-pack: justify;
       align-items: center;
       -ms-flex-align: center; } }
-  @media (min-width: 976px) {
-    .block-system-branding-block {
-      padding-left: 3.2rem;
-      padding-right: 3.2rem; } }
   .block-system-branding-block .site-name {
     font-weight: 700;
     display: block; }
@@ -1279,7 +1269,6 @@ body.logged-in.responsive-preview-frame .layout-container #block-quicklinks, bod
       font-weight: 700;
       font-family: "PT Sans", sans-serif;
       margin: 0;
-      font-feature-settings: "liga", "dlig";
       font-size: 32px;
       font-weight: 700;
       position: relative;
@@ -1306,7 +1295,6 @@ body.logged-in.responsive-preview-frame .layout-container #block-quicklinks, bod
       font-weight: 700;
       font-family: "PT Sans", sans-serif;
       margin: 0;
-      font-feature-settings: "liga", "dlig";
       font-size: 26px;
       font-weight: normal; }
       @media (min-width: 760px) {
@@ -1362,7 +1350,6 @@ body.logged-in.responsive-preview-frame .layout-container #block-quicklinks, bod
       font-weight: 700;
       font-family: "PT Sans", sans-serif;
       margin: 0;
-      font-feature-settings: "liga", "dlig";
       font-size: 24px;
       text-align: center;
       max-width: 800px;
@@ -1384,7 +1371,6 @@ body.logged-in.responsive-preview-frame .layout-container #block-quicklinks, bod
       font-weight: 700;
       font-family: "PT Sans", sans-serif;
       margin: 0;
-      font-feature-settings: "liga", "dlig";
       font-size: 22px;
       color: #1155cc;
       margin-bottom: 2rem; }

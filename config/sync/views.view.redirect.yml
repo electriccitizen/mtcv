@@ -51,15 +51,15 @@ display:
       pager:
         type: full
         options:
-          items_per_page: 50
+          items_per_page: 20
           offset: 0
           id: 0
           total_pages: null
           tags:
-            previous: '‹ previous'
-            next: 'next ›'
-            first: '« first'
-            last: 'last »'
+            previous: Previous
+            next: Next
+            first: First
+            last: Last
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -68,7 +68,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          quantity: 9
+          quantity: 5
       style:
         type: table
         options:
@@ -550,7 +550,17 @@ display:
       sorts: {  }
       title: Redirect
       header: {  }
-      footer: {  }
+      footer:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: '<span class="count-shim">@page_count</span>'
+          plugin_id: result
       empty:
         area_text_custom:
           id: area_text_custom

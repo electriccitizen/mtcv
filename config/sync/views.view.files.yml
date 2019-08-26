@@ -744,8 +744,9 @@ display:
         context: ''
       display_description: ''
       defaults:
-        pager: true
+        pager: false
         relationships: false
+        header: false
       relationships:
         fid:
           id: fid
@@ -756,6 +757,38 @@ display:
           admin_label: 'File usage'
           required: false
       display_extenders: {  }
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: '<span class="count-shim">@page_count</span>'
+          plugin_id: result
+      pager:
+        type: full
+        options:
+          items_per_page: 20
+          offset: 0
+          id: 0
+          total_pages: 0
+          tags:
+            previous: Previous
+            next: Next
+            first: First
+            last: Last
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 5
     cache_metadata:
       contexts:
         - 'languages:language_content'

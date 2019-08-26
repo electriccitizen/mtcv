@@ -122,7 +122,7 @@
 }
 
 .crane{
-	a.button{
+	.button{
 		@include button;
 	}
 
@@ -131,16 +131,33 @@
 	}
 
 	.button--small{
-		@include outlineButton($link);
+		@include outlineButton($borderRule);
 		background: transparent;
-		border: 1px solid $primaryButtonBack;
-		color: $baseText;
+		color: $link;
 		font-weight: $regular;
 		font-size: 1.2rem;
+		margin-bottom: 0;
+		padding-top: .75rem;
+		padding-bottom: .75rem;
+		border-radius: 0;
 		&.button--small-override{
 			font-size: 2rem;
 			font-weight: $heavy;
 			margin-bottom: $spaceSm;
+			padding-left: 3rem;
+			padding-right: 3rem;
+			border-radius: 0;
+			&:hover,&:focus{
+				background: $buttonBackHover;
+				color: $buttonTextHover;
+				border: 1px solid $buttonBackHover;
+				@include transAll(.3s);
+			}
+			&:active{
+				background: $buttonBackActive;
+				color: $buttonTextActive;
+				border: 1px solid $buttonBackActive;
+			}
 		}
 		&:hover,&:focus{
 			background: $buttonBackHover;

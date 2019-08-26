@@ -90,18 +90,4 @@ Drupal.behaviors.menuVocab = {
    }
 };
 
-/* CONTENT OVERVIEW LOCAL TASK LINK
------------------------ */
-Drupal.behaviors.addPage = {
-  attach: function (context, settings) {
-    $(".system-admin_content", context).once('addPageRoute').each(function(){
-      $(document).ready(function(){
-        $('.system-admin_content .action-links a[href="/node/add"]').attr('href', '/node/add/page');
-      });
-    });
-   }
-};
-
-
-
 })(jQuery, Drupal);

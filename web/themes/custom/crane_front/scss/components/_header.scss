@@ -36,10 +36,6 @@ header{
 	@include tab{
 		@include safeFlex(row,nowrap,justify,center);
 	}
-	@include desk{
-		padding-left: $siteMarginDesk;
-		padding-right: $siteMarginDesk;
-	}
 	.site-name{
 		font-weight: $heavy;
 		display: block;

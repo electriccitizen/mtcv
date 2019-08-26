@@ -1,27 +1,87 @@
 /* ========================
   VIEWS
 ========================== */
-
+.vbo-view-form,.media-library-views-form{
+	& > #edit-actions{
+		display: none;
+	}
+}
 .views-exposed-form{
+	#views-filter-wrapper{
+		background: $midGrey;
+		padding: 1px $spaceSm;
+		margin-bottom: $spaceMd;
+	}
 	.form--inline{
-		@include safeFlex(row,wrap,start,start);
-		@include bleed(padding,20px);
+		@include safeFlex(row,wrap,start,end);
+		@include bleed(padding,10px);
 		& > .form-item{
 			width: 100%;
+			margin-bottom: $spaceSm;
+			margin-right: 0;
+			label{
+				color: $white;
+			}
+			.select2-container--default{
+				.crane &{
+					width: 100% !important;
+				}
+			}
 			@include smallTab{
 				max-width: 240px;
 			}
 		}//end form item
 		#edit-actions{
-			margin-top: 0;
-			width: 100%;
-			padding-left: 10px;
-			padding-right: 10px;
-
+			margin: 0;
+			width: 260px;
+			input{
+				margin-bottom: $spaceSm;
+			}
 		}
 	}//end form inline
 }//end views exposed form
 
+/* VIEWS BULK OPERATIONS
+----------------------- */
+#bulk-operations-wrapper > *{
+	@include safeFlex(row,wrap,start,center);
+	margin-bottom: $spaceMd;
+	.form-item{
+		width: auto;
+		margin-right: 2rem;
+		margin-top: 0;
+		margin-bottom: $spaceXs;
+	}
+	.js-form-item-action{
+		label{
+			@include visuallyHidden;
+		}
+		.crane &{
+			.select2-container--default .select2-selection--single{
+				min-width: 200px;
+			}
+		}
+	}
+	.js-form-item-select-all{
+		+ .form-actions{
+			width: 100%;
+		}
+	}
+	.vbo-multipage-selector{
+		display: none;
+	}
+	.form-actions{
+		margin: 0;
+		input{
+			margin-bottom: $spaceXs;
+			padding-left: 5rem;
+			padding-right: 5rem;
+		}
+	}
+}//end vbo form-wrapper
+
+/* VIEWS TABLE
+----------------- */
 .views-table{
 	.crane &{
 		td.views-field-operations{
@@ -33,6 +93,8 @@
 	}
 }
 
+/* VIEWS UI
+----------------- */
 .views-ui-dialog{
 	.views-override.form--inline{
 		.js-form-item-override-dropdown{
@@ -115,4 +177,10 @@
 		}
 	}
 }//end content views
+
+//media
+.crane .media-library-select-all{
+	margin: $spaceXs 8px;
+	font-size: 1.6rem;
+}//end media library select all
 

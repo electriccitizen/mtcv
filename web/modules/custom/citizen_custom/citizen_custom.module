@@ -121,7 +121,14 @@ function citizen_custom_local_tasks_alter(&$local_tasks) {
  * Implements hook_local_actions_alter().
  */
 function citizen_custom_menu_local_actions_alter(&$local_actions) {
-  $local_actions['node.add_page']['title'] = 'Add Page';
+  $local_actions['node.add_page']['title'] = '+ Add Content';
+  $local_actions['block_content_add_action']['title'] = '+ Add Custom Block';
+  $local_actions['media.add']['title'] = '+ Add Media';
+  $local_actions['media_library.add']['title'] = '+ Add Media';
+  $local_actions['redirect.add']['title'] = '+ Add Redirect';
+  $local_actions['shortcut.link_add']['title'] = '+ Add Shortcut';
+  $local_actions['entity.taxonomy_term.add_form']['title'] = '+ Add Term';
+  $local_actions['user_admin_create']['title'] = '+ Add User';
 }
 
 /**

@@ -23,6 +23,9 @@
 
 .admin-list{
 	li{
+		&:first-child{
+			border-top: 0;
+		}
 		a{
 			padding: 14px 15px 0 25px;
 		}
