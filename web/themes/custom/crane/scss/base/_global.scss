@@ -6,14 +6,24 @@ body{
 	& > div{
 		box-sizing: border-box;
 	}
+	.layout-container{
+		margin: 0;
+		box-sizing: border-box;
+		padding-left: $siteMarginMobile;
+		padding-right: $siteMarginMobile;
+		@include desk{
+			padding-left: $siteMarginDesk;
+			padding-right: $siteMarginDesk;
+		}
+	}
 	.dialog-off-canvas-main-canvas{
 		width: 100%;
 		box-sizing: border-box;
 		overflow-x: hidden;
-		padding-top: 50px;
+		padding-top: 166px;
 		@include calc(min-height, "100vh - 50px");
-		@include smallTab{
-			padding-top: 0;
+		@include tab{
+			padding-top: 56px;
 			padding-left: 225px;
 			min-height: 100vh;
 		}

@@ -389,10 +389,10 @@ display:
           id: 0
           total_pages: null
           tags:
-            previous: ‹‹
-            next: ››
-            first: '« First'
-            last: 'Last »'
+            previous: Previous
+            next: Next
+            first: First
+            last: ''
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -405,6 +405,7 @@ display:
       defaults:
         pager: false
         fields: false
+        footer: false
       fields:
         media_bulk_form:
           id: media_bulk_form
@@ -512,6 +513,17 @@ display:
           view_mode: media_library
           entity_type: media
           plugin_id: rendered_entity
+      footer:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: '<span class="count-shim">@page_count</span>'
+          plugin_id: result
     cache_metadata:
       max-age: 0
       contexts:

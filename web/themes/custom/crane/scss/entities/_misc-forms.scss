@@ -127,6 +127,29 @@
 	}
 }
 
+/* BLOCK LAYOUT
+------------------ */
+.crane .block-admin-display-form{
+	table{
+		tbody{
+			tr.region-title{
+				background: $darkGrey;
+				padding: .5rem .6em;
+				td{
+					color: $white;
+					.button--small{
+						border-color: $white;
+						color: $white;
+						&:hover,&:focus,&:active{
+							color: $black;
+						}
+					}
+				}
+			}//end region-title
+		}//end tbody
+	}//end table
+}//end block layout admin form
+
 /* USER ADD FORM
 -------------------- */
 .user-register-form,.user-form{

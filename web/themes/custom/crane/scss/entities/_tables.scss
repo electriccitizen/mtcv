@@ -69,8 +69,9 @@
 	}
 
 	tbody tr{
+		border-bottom: 0;
 		//set table row colors
-		&:not(:last-child) td{
+		td{
 			border-bottom: 1px solid $rowBorder;
 		}
 		&:nth-of-type(odd){

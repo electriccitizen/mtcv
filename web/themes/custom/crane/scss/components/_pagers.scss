@@ -1,31 +1,93 @@
 /* ==============
 	 PAGERS
 ================== */
+.count-shim{
+	display: none;
+}
 
 .pager{
-	position: relative;
-	padding: 15px 0;
-	border-top: 1px solid $borderRule;
+	@include safeFlex(row,wrap,justify,center);
+	padding-top: $spaceSm;
+	.pager__items{
+		@include listReset;;
+		background: $lightGrey;
+		min-height: 64px;
+		text-align: center;
+		@include calc(width, "100% - 200px");
+		@include safeFlex(row,wrap,center,center);
+		@include tab{
+			@include calc(width, "100% - 288px");
+		}
+	}
 	.pager__item{
-		padding: 0 2px;
-		font-size: 1.6rem;
-		&:not(.pager__item--first):not(.pager__item--previous):not(.pager__item--next):not(.pager__item--last){
-			font-size: 2rem;
+		padding: 0;
+		font-size: 1.5rem;
+		&.pager__item--previous{
+			a{
+				font-size: 1.5rem;
+				text-transform: uppercase;
+				@include safeFlex(column,nowrap,center,center);
+				height: 64px;
+				width: 100px;
+				background: $gold;
+				font-weight: $heavy;
+				border-bottom: 0;
+				@include tab{
+					width: 144px;
+					font-size: 1.6rem;
+				}
+				&:hover,&:focus{
+					background: $buttonBackHover;
+					color: $buttonTextHover;
+				}
+				&:active{
+					background: $buttonBackActive;
+					color: $buttonTextActive;
+				}
+			}
+		}
+		&.pager__item--next{
+			@extend .pager__item--previous;
 		}
 		a{
-			color: $link;
+			color: $black;
+			padding: 0 5px;
+			line-height: 1;
+			box-sizing: border-box;
+			border-bottom-width: 3px;
 			&:hover,&:focus{
 				color: $hoverLink;
+				border-bottom-color: $grey;
 			}
 		}
 		&.is-active{
 			a{
-				color: $darkBlue;
-				border-bottom-color: $darkBlue;
+				color: $black;
+				border-bottom-color: $black;
 				&:focus,&:focus{
 					color: $hoverLink;
 				}
 			}
 		}
+		&.pager__number{
+			padding: 0 5px;
+			display: none;
+		}
 	}//end pager__item
+
+	.pager__current{
+		font-size: 1.3rem;
+		letter-spacing: 0;
+		display: none;
+		@include tab{
+			font-size: 1.5rem;
+		}
+	}
+
+	.disabled{
+		a{
+			opacity: .6;
+			pointer-events: none;
+		}
+	}
 }//end .pager

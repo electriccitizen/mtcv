@@ -44,9 +44,20 @@ function crane_preprocess_html(&$variables) {
   $variables['page']['#attached']['html_head'][] = [$preload, 'preload'];
 }
 
+/**
+ * Implements hook_preprocess_page.
+ */
 function crane_preprocess_page(&$variables) {
   $route_name = \Drupal::routeMatch()->getRouteName();
   $variables['pathName'] =  preg_replace('/\W+/','-',strtolower($route_name));
+  
+  //get teh site name and pass to page template
+  $config = \Drupal::config('system.site');
+  $variables['site_name'] = $config->get('name');
+  
+  //find the logged in user's first name and pass to branding block
+  $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
+  $variables['fname'] = $user->field_first_name;
 }
 
 /**

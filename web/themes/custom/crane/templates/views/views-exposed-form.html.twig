@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ * Theme override of a views exposed form.
+ *
+ * Available variables:
+ * - form: A render element representing the form.
+ *
+ * @see template_preprocess_views_exposed_form()
+ */
+#}
+{% if q is not empty %}
+  {#
+    This ensures that, if clean URLs are off, the 'q' is added first,
+    as a hidden form element, so that it shows up first in the POST URL.
+  #}
+{{ q }}
+{% endif %}
+{{ attach_library('crane/views-filters') }}
+<div class="filter-control drawer-toggle">
+	<strong>Filters</strong> [ <a href="#" class="toggle-action" aria-controls="views-filter-wrapper" aria-expanded="false">show</a> ]
+</div>
+<div id="views-filter-wrapper" aria-hidden="true" class="form-drawer">
+	<div class="form--inline">
+		{{ form }}
+	</div>
+</div>

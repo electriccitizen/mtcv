@@ -11,8 +11,8 @@ _core:
   default_config_hash: 8yKVaIGXrfQlBHgtv16d1RBoL6vzWPag5NnbpSB7xR4
 id: crane_breadcrumbs
 theme: crane
-region: breadcrumb
-weight: 0
+region: header
+weight: -4
 provider: null
 plugin: system_breadcrumb_block
 settings:

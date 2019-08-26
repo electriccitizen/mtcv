@@ -26,8 +26,16 @@ menu-vocab:
   version: 1.0
   js:
     js/menu-vocab.js: {}
+pager:
+  version: 1.0
+  js:
+    js/pager.js: {}
 react-component:
   version: 1.0
   js:
     js/react-component.js: {}
+views-filters:
+  version: 1.0
+  js:
+    js/views-filters.js: {}
     

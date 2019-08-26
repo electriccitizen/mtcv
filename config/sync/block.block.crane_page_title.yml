@@ -9,7 +9,7 @@ _core:
 id: crane_page_title
 theme: crane
 region: header
-weight: -30
+weight: -3
 provider: null
 plugin: page_title_block
 settings:
