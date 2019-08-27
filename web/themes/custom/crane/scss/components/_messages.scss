@@ -1,0 +1,87 @@
+/* ========================
+  MESSAGES
+========================== */
+
+.crane .messages{
+	padding: 15px 20px 12px 45px;
+	margin-top: $spaceMd;
+	background-repeat: no-repeat;
+	background-position: 12px center;
+	background-size: 20px 20px;
+	&.messages--error{
+		background-color: $transFuchsia;
+		border-color: $fuchsia;
+		color: $darkFuchsia;
+		background-image: url('../images/icons/message/message-error.svg');
+	}
+	&.messages--warning{
+		background-color: $transGold;
+		border-color: $tan;
+		color: $tan;
+		background-image: url('../images/icons/message/message-warning.svg');
+	}
+	&.messages--status{
+		background-color: $transGreen;
+		border-color: $green;
+		color: darken($green, 3%);
+		background-image: url('../images/icons/message/message-status.svg');
+	}
+}//end messages
+
+/* STATUS REPORT
+------------------- */
+.system-status-general-info__item{
+	h3{
+		font-size: 2rem;
+		margin-bottom: $spaceXxs;
+	}
+	h4{
+		font-size: 1.8rem;
+		margin-bottom: $spaceXxs;
+	}
+	.description{
+		margin-bottom: $spaceXxs;
+	}
+}
+.system-status-counter__details{
+	font-size: 1.6rem;
+}
+.system-status-counter__status-icon--error,.details .system-status-report__status-icon--error{
+	&:before{
+		background-image: url('../images/icons/message/message-error.svg');
+	}
+}
+.system-status-counter__status-icon--warning,.details .system-status-report__status-icon--warning{
+	&:before{
+		background-image: url('../images/icons/message/message-warning.svg');
+	}
+}
+.system-status-counter__status-icon--checked,.details .system-status-report__status-icon--checked{
+	&:before{
+		background-image: url('../images/icons/message/message-status.svg');
+	}
+}
+
+.color-error{
+	color: $darkFuchsia;
+	background-color: $transFuchsia;
+}
+.color-warning{
+	color: $tan;
+	background-color: $transGold;
+}
+
+.system-status-report__status-title{
+	@media screen and (min-width: 48em){
+		width: 30%;
+	}
+}
+.system-status-report__entry__value{
+	h3{
+		font-size: 2rem;
+	}
+	@media screen and (min-width: 48em){
+		width: 70%;
+	}
+}
+

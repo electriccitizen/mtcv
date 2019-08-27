@@ -368,7 +368,8 @@ ol {
   text-shadow: none;
   border-color: #979797;
   font-size: 1.6rem;
-  color: #1f2225; }
+  color: #1f2225;
+  text-decoration: none; }
   .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle input:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle input:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle input:hover, .js .dropbutton-multiple .dropbutton-action input:hover, .js .dropbutton-wrapper .dropbutton-action input:hover, .js .dropbutton-single .dropbutton-action input:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle input:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle input:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle input:focus, .js .dropbutton-multiple .dropbutton-action input:focus, .js .dropbutton-wrapper .dropbutton-action input:focus, .js .dropbutton-single .dropbutton-action input:focus, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle .button:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle .button:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle .button:hover, .js .dropbutton-multiple .dropbutton-action .button:hover, .js .dropbutton-wrapper .dropbutton-action .button:hover, .js .dropbutton-single .dropbutton-action .button:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle .button:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle .button:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle .button:focus, .js .dropbutton-multiple .dropbutton-action .button:focus, .js .dropbutton-wrapper .dropbutton-action .button:focus, .js .dropbutton-single .dropbutton-action .button:focus, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle a:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle a:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle a:hover, .js .dropbutton-multiple .dropbutton-action a:hover, .js .dropbutton-wrapper .dropbutton-action a:hover, .js .dropbutton-single .dropbutton-action a:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle a:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle a:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle a:focus, .js .dropbutton-multiple .dropbutton-action a:focus, .js .dropbutton-wrapper .dropbutton-action a:focus, .js .dropbutton-single .dropbutton-action a:focus, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle button:hover, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button:hover, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle button:hover, .js .dropbutton-multiple .dropbutton-action button:hover, .js .dropbutton-wrapper .dropbutton-action button:hover, .js .dropbutton-single .dropbutton-action button:hover, .js .dropbutton-multiple .dropbutton-widget .dropbutton-toggle button:focus, .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button:focus, .js .dropbutton-single .dropbutton-widget .dropbutton-toggle button:focus, .js .dropbutton-multiple .dropbutton-action button:focus, .js .dropbutton-wrapper .dropbutton-action button:focus, .js .dropbutton-single .dropbutton-action button:focus {
     background-color: #f6f6f6 !important;
     background-image: none !important;
@@ -422,9 +423,9 @@ ol {
     font-weight: 700;
     font-size: 1.8rem;
     margin-bottom: 3rem;
-    background: #797501;
+    background: #8b01e2;
     color: #ffffff;
-    border-color: #797501;
+    border-color: #8b01e2;
     height: auto;
     min-width: 115px;
     margin-top: 0; }
@@ -821,18 +822,18 @@ header > div {
 /* ========================
   MAIN
 ========================== */
-body.logged-in:not(.role-administrator) main {
+body.path-user.logged-in:not(.role-administrator) main {
   padding-top: 166px; }
   @media (min-width: 600px) {
-    body.logged-in:not(.role-administrator) main {
+    body.path-user.logged-in:not(.role-administrator) main {
       padding-top: 141px; } }
   @media (min-width: 760px) {
-    body.logged-in:not(.role-administrator) main {
+    body.path-user.logged-in:not(.role-administrator) main {
       padding-left: 225px;
       padding-top: 56px; } }
 
 @media (min-width: 976px) {
-  .role-administrator main {
+  .path-user.role-administrator main {
     padding-left: 225px; } }
 
 body:not(.logged-in) main .layout-content > div {
@@ -892,6 +893,28 @@ body:not(.logged-in.path-user) main .layout-content > div {
     padding: 30px 15px; }
     .node-disclaimer.preview p {
       font-size: 1.5rem; }
+
+.messages {
+  padding: 15px 20px 12px 45px;
+  margin-top: 3rem;
+  background-repeat: no-repeat;
+  background-position: 12px center;
+  background-size: 20px 20px; }
+  .messages.messages--error {
+    background-color: rgba(192, 40, 187, 0.03);
+    border-color: #c028bb;
+    color: #5d025a;
+    background-image: url("../images/icons/message/message-error.svg"); }
+  .messages.messages--warning {
+    background-color: rgba(252, 217, 1, 0.06);
+    border-color: #8e700b;
+    color: #8e700b;
+    background-image: url("../images/icons/message/message-warning.svg"); }
+  .messages.messages--status {
+    background-color: rgba(1, 185, 1, 0.05);
+    border-color: #018901;
+    color: #017a01;
+    background-image: url("../images/icons/message/message-status.svg"); }
 
 /* ========================
   QUICKLINKS
@@ -963,7 +986,6 @@ nav#block-quicklinks {
       left: 0;
       width: 100%;
       z-index: 501;
-      background: #ebc304;
       padding: 10px 0;
       display: none; }
       @media (min-width: 760px) {

@@ -770,10 +770,10 @@ display:
       display_extenders: {  }
       display_description: ''
       fields:
-        view_node:
-          id: view_node
+        edit_node:
+          id: edit_node
           table: node
-          field: view_node
+          field: edit_node
           relationship: uid
           group_type: group
           admin_label: ''
@@ -818,11 +818,11 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          text: view
+          text: edit
           output_url_as_text: true
           absolute: false
           entity_type: node
-          plugin_id: entity_link
+          plugin_id: entity_link_edit
         title:
           id: title
           table: node_field_data

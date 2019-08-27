@@ -59,16 +59,15 @@
 @mixin required{
 	position: relative;
 	padding-right: .5rem;
-	margin-right: 3rem;
+	margin-right: 1rem;
 	&:after{
 		content: '*';
 		color: $validation;
 		position: absolute;
 		top: -4px;
-		right: -.5rem;
+		right: -8px;
 		font-size: 1.6rem;
 		background: transparent;
-		margin: 0;
 	}
 }
 
@@ -113,7 +112,7 @@
 }//end form item
 
 // required items
-.form-required,.js-form-required{
+.crane .form-required,.js-form-required{
 	@include required;
 }
 
@@ -129,7 +128,7 @@ input.form-email{
 .description{
 	color: $midGrey;
 }
-input + .description{
+input + .description,.select2 + .description{
 	padding-top: $spaceXs;
 }
 
@@ -144,7 +143,7 @@ input + .description{
 	min-width: 120px;
 	font-size: 1.6rem;
 	border: 1px solid $formElementBorder;
-	border-radius: 2px;
+	border-radius: 0;
 	height: auto;
 	font-family: $bodyFont;
 	&.select2--container--focus{
@@ -319,6 +318,19 @@ body.adminimal.crane{
 	background-color: $selectHighlight !important; 
 }
 
+/* SELECT 2 IN TABLE ROWS
+----------------------- */
+.crane td .select2-container--default{
+	.select2-selection--single{
+		.select2-selection__rendered{
+			padding: 0px 32px 0px 10px;
+			font-size: 1.4rem;
+			&:after{
+				bottom: 4px;
+			}
+		}
+	}
+}//end default in td
 
 /* CHECKBOXES
 ---------------- */
@@ -385,6 +397,9 @@ body.adminimal.crane{
 			}
 		}
 	}//end field upload wrapper
+	.button[value="Remove"]{
+		margin-bottom: 0;
+	}
 }//end managed file
 
 /* FORM ACTIONS

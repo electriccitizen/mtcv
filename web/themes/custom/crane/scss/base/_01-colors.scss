@@ -13,19 +13,21 @@ $black        : #1f2225;
 $lightPink    : #fbf3f6;
 $red          : #bf0e0e;
 $green        : #018901;
-$teal         : #01897b;
-$orange       : #fc9605;
 $fuchsia      : #c028bb;
+$darkFuchsia  : #5d025a;
 $gold         : #fcd105;
-$darkGold     : #ebc304;
-$blackGold    : #797501;
+$tan          : #8e700b;
 $blueGrey     : #dce7f3;
 $blue         : #1155cc;
 $midBlue      : #2c5580;
 $darkBlue     : #323b49;
+$purple       : #8b01e2;
 
 $transBlueLight: rgba(28,88,131,0.25);
 $transBlack    : rgba(35,35,35,0.7);
+$transFuchsia  : rgba(192,40,187,0.03);
+$transGold     : rgba(252,217,1,0.06);
+$transGreen    : rgba(1,185,1,0.05);
 
 /* COMPONENT COLORS
 ----------------- */
@@ -47,7 +49,7 @@ $submitBack        : $blue;
 $submitText        : $white;
 $resetBack         : $fuchsia;
 $resetText         : $white;
-$cautionBack       : $blackGold;
+$cautionBack       : $purple;
 $cautionText       : $white;
 
 $formElementBorder        : $borderRule;
@@ -62,10 +64,7 @@ $checkBoxCheckedBack      : $transBlack;
 $checkBoxCheckedBackHover : $black;
 $selectArrow              : $midGrey;
 $selectHighlight          : $link;
-
 $quickLinkBar             : $gold;
-$quickLinkDrawer          : $darkGold;
-$quickLinkDrawerHover     : lighten($darkGold, 5%);
 
 $tableHeaderBack     : $lightGrey;
 $tableHeaderBorder   : $tableHeaderBack;

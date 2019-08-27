@@ -132,7 +132,7 @@
 
 	.button--small{
 		@include outlineButton($borderRule);
-		background: transparent;
+		background: $siteBack;
 		color: $link;
 		font-weight: $regular;
 		font-size: 1.2rem;
@@ -195,7 +195,7 @@
 		@include submitButton;
 	}
 
-	.button--danger,#edit-reset,a.button--danger,.button[value="Remove"],.button[value="Delete"]{
+	.button--danger,#edit-reset,a.button--danger,.button[value="Remove"],.button[value="Delete"],.button[value="Reset to alphabetical"]{
 		@include resetButton;
 		margin-left: 0;
 		margin-right: 0;
@@ -213,6 +213,9 @@
 			width: auto;
 		}
 	}//end reset danger buttons
+	#edit-cancel{
+		margin-left: 0;
+	}
 	a#edit-ec-preview,{
 		@include submitButton;
 		background: $green;
@@ -228,62 +231,41 @@
 	.button-outline{
 		@include outlineButton($link);
 	}
-	.draggable{
-		.form-submit:not(.image-button){
+	.draggable:not([class*="paragraph"]) td{
+		.form-submit{
 			@extend .button--small;
-			padding: .95rem 1rem;
+			padding: .75rem 1rem;
 			min-width: 80px;
 			margin-bottom: 0;
+			&[value="Cancel"]{
+				background: $resetBack;
+				color: $resetText;
+				border-color: $resetBack;
+				&:hover,&:focus{
+					background: $buttonBackHover;
+					color: $buttonTextHover;
+					border-color: $buttonBackHover;
+				}
+				&:active{
+					background: $buttonBackActive;
+					color: $buttonTextActive;
+					border-color: $buttonBackActive;
+				}
+			}
+		}//end form submit
+	}//end draggable td
+	.image-button,.draggable:not([class*="paragraph"]) td .form-submit.image-button{
+		min-width: 20px;
+		border: 0;
+		&:hover,&:focus,&:active{
+			background: transparent;
+			border: 0;
+			opacity: .6;
 		}
 	} 
 }//end crane
 
-/* PARAGRAPHS ICON BUTTONS
----------------------------- */
-.button.paragraphs-icon-button{
-	font-size: 1.6rem;
-	@include tab{
-		background-image: none;
-		background: $buttonBack;
-		color: $buttonText;
-		&:hover,&:focus{
-			border-color: $buttonBackHover;
-			background: $buttonBackHover;
-			color: $buttonTextHover;
-		}
-		&:active{
-			background: $buttonBackActive;
-			color: $buttonTextActive;
-		}
-	}
-}//end apragraphs icon button
-.button.paragraphs-dropdown-action{
-	font-size: 1.4rem;
-	padding: 10px 1.5em;
-	&:hover,&:focus{
-		background: $buttonBackHover;
-	}
-	&:not(:last-child){
-		border-bottom: 1px solid $borderRule;
-	}
-}
-.paragraphs-dropdown-actions{
-	border-radius: 0;
-	top: 45px;
-	@include tab{
-		top: 40px;
-	}
-}
 
-/* PARAGRAPH ADD BUTTONS
--------------------------- */
-.paragraphs-tabs-wrapper{
-	.clearfix{
-		 & > .paragraph-button{
-		 	 @extend .button--small;
-		 }
-	}
-}
 
 /* FAKE BUTTONS
 ------------------ */
