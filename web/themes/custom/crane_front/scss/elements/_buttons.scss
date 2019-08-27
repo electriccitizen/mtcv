@@ -11,6 +11,7 @@
 		border-color: $borderRule;
 		font-size: 1.6rem;
 		color: $baseText;
+		text-decoration: none;
 		&:hover,&:focus{
 			background-color: $offWhite !important;
 			background-image: none !important;

@@ -4474,7 +4474,7 @@ a, .link {
 .crane .button.js-hide {
   display: none; }
 
-.crane .button--small, .crane .button--primary.button--small, .crane .draggable .form-submit:not(.image-button), .crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button, .paragraphs-tabs-wrapper .crane .clearfix > .paragraph-button {
+.crane .button--small, .crane .button--primary.button--small, .crane .draggable:not([class*="paragraph"]) td .form-submit, .crane .paragraphs-actions .paragraphs-icon-button, .paragraphs-actions .crane .paragraphs-icon-button, .crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button, .paragraphs-tabs-wrapper .crane .clearfix > .paragraph-button {
   background-image: none;
   background-color: #1155cc;
   border: none;
@@ -4495,7 +4495,7 @@ a, .link {
   background: transparent;
   border: 1px solid #979797;
   color: #979797;
-  background: transparent;
+  background: #ffffff;
   color: #1155cc;
   font-weight: 400;
   font-size: 1.2rem;
@@ -4503,7 +4503,7 @@ a, .link {
   padding-top: .75rem;
   padding-bottom: .75rem;
   border-radius: 0; }
-  .crane .button--small:hover, .crane .draggable .form-submit:hover:not(.image-button), .crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button:hover, .paragraphs-tabs-wrapper .crane .clearfix > .paragraph-button:hover, .crane .button--small:focus, .crane .draggable .form-submit:focus:not(.image-button), .crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button:focus, .paragraphs-tabs-wrapper .crane .clearfix > .paragraph-button:focus {
+  .crane .button--small:hover, .crane .draggable:not([class*="paragraph"]) td .form-submit:hover, .crane .paragraphs-actions .paragraphs-icon-button:hover, .paragraphs-actions .crane .paragraphs-icon-button:hover, .crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button:hover, .paragraphs-tabs-wrapper .crane .clearfix > .paragraph-button:hover, .crane .button--small:focus, .crane .draggable:not([class*="paragraph"]) td .form-submit:focus, .crane .paragraphs-actions .paragraphs-icon-button:focus, .paragraphs-actions .crane .paragraphs-icon-button:focus, .crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button:focus, .paragraphs-tabs-wrapper .crane .clearfix > .paragraph-button:focus {
     color: #1f2225;
     background-color: #cccccc;
     box-shadow: none;
@@ -4513,12 +4513,12 @@ a, .link {
     -webkit-transition: all 0.3s ease;
     -webkit-transform: translateZ(0);
     outline: none; }
-  .crane .button--small:active, .crane .draggable .form-submit:active:not(.image-button), .crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button:active, .paragraphs-tabs-wrapper .crane .clearfix > .paragraph-button:active {
+  .crane .button--small:active, .crane .draggable:not([class*="paragraph"]) td .form-submit:active, .crane .paragraphs-actions .paragraphs-icon-button:active, .paragraphs-actions .crane .paragraphs-icon-button:active, .crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button:active, .paragraphs-tabs-wrapper .crane .clearfix > .paragraph-button:active {
     box-shadow: none;
     border: none;
     color: #1f2225;
     background-color: #979797; }
-  .crane .button--small:hover, .crane .draggable .form-submit:hover:not(.image-button), .crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button:hover, .paragraphs-tabs-wrapper .crane .clearfix > .paragraph-button:hover, .crane .button--small:focus, .crane .draggable .form-submit:focus:not(.image-button), .crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button:focus, .paragraphs-tabs-wrapper .crane .clearfix > .paragraph-button:focus {
+  .crane .button--small:hover, .crane .draggable:not([class*="paragraph"]) td .form-submit:hover, .crane .paragraphs-actions .paragraphs-icon-button:hover, .paragraphs-actions .crane .paragraphs-icon-button:hover, .crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button:hover, .paragraphs-tabs-wrapper .crane .clearfix > .paragraph-button:hover, .crane .button--small:focus, .crane .draggable:not([class*="paragraph"]) td .form-submit:focus, .crane .paragraphs-actions .paragraphs-icon-button:focus, .paragraphs-actions .crane .paragraphs-icon-button:focus, .crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button:focus, .paragraphs-tabs-wrapper .crane .clearfix > .paragraph-button:focus {
     background: #cccccc;
     color: #1f2225;
     border-color: #cccccc;
@@ -4526,18 +4526,18 @@ a, .link {
     -moz-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -webkit-transform: translateZ(0); }
-  .crane .button--small:active, .crane .draggable .form-submit:active:not(.image-button), .crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button:active, .paragraphs-tabs-wrapper .crane .clearfix > .paragraph-button:active {
+  .crane .button--small:active, .crane .draggable:not([class*="paragraph"]) td .form-submit:active, .crane .paragraphs-actions .paragraphs-icon-button:active, .paragraphs-actions .crane .paragraphs-icon-button:active, .crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button:active, .paragraphs-tabs-wrapper .crane .clearfix > .paragraph-button:active {
     background: #979797;
     color: #1f2225;
     border-color: #979797; }
-  .crane .button--small.button--small-override, .crane .draggable .button--small-override.form-submit:not(.image-button), .crane .paragraphs-tabs-wrapper .clearfix > .button--small-override.paragraph-button, .paragraphs-tabs-wrapper .crane .clearfix > .button--small-override.paragraph-button {
+  .crane .button--small.button--small-override, .crane .draggable:not([class*="paragraph"]) td .button--small-override.form-submit, .crane .paragraphs-actions .button--small-override.paragraphs-icon-button, .paragraphs-actions .crane .button--small-override.paragraphs-icon-button, .crane .paragraphs-tabs-wrapper .clearfix > .button--small-override.paragraph-button, .paragraphs-tabs-wrapper .crane .clearfix > .button--small-override.paragraph-button {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 2rem;
     padding-left: 3rem;
     padding-right: 3rem;
     border-radius: 0; }
-    .crane .button--small.button--small-override:hover, .crane .draggable .button--small-override.form-submit:hover:not(.image-button), .crane .paragraphs-tabs-wrapper .clearfix > .button--small-override.paragraph-button:hover, .paragraphs-tabs-wrapper .crane .clearfix > .button--small-override.paragraph-button:hover, .crane .button--small.button--small-override:focus, .crane .draggable .button--small-override.form-submit:focus:not(.image-button), .crane .paragraphs-tabs-wrapper .clearfix > .button--small-override.paragraph-button:focus, .paragraphs-tabs-wrapper .crane .clearfix > .button--small-override.paragraph-button:focus {
+    .crane .button--small.button--small-override:hover, .crane .draggable:not([class*="paragraph"]) td .button--small-override.form-submit:hover, .crane .paragraphs-actions .button--small-override.paragraphs-icon-button:hover, .paragraphs-actions .crane .button--small-override.paragraphs-icon-button:hover, .crane .paragraphs-tabs-wrapper .clearfix > .button--small-override.paragraph-button:hover, .paragraphs-tabs-wrapper .crane .clearfix > .button--small-override.paragraph-button:hover, .crane .button--small.button--small-override:focus, .crane .draggable:not([class*="paragraph"]) td .button--small-override.form-submit:focus, .crane .paragraphs-actions .button--small-override.paragraphs-icon-button:focus, .paragraphs-actions .crane .button--small-override.paragraphs-icon-button:focus, .crane .paragraphs-tabs-wrapper .clearfix > .button--small-override.paragraph-button:focus, .paragraphs-tabs-wrapper .crane .clearfix > .button--small-override.paragraph-button:focus {
       background: #cccccc;
       color: #1f2225;
       border: 1px solid #cccccc;
@@ -4545,11 +4545,11 @@ a, .link {
       -moz-transition: all 0.3s ease;
       -webkit-transition: all 0.3s ease;
       -webkit-transform: translateZ(0); }
-    .crane .button--small.button--small-override:active, .crane .draggable .button--small-override.form-submit:active:not(.image-button), .crane .paragraphs-tabs-wrapper .clearfix > .button--small-override.paragraph-button:active, .paragraphs-tabs-wrapper .crane .clearfix > .button--small-override.paragraph-button:active {
+    .crane .button--small.button--small-override:active, .crane .draggable:not([class*="paragraph"]) td .button--small-override.form-submit:active, .crane .paragraphs-actions .button--small-override.paragraphs-icon-button:active, .paragraphs-actions .crane .button--small-override.paragraphs-icon-button:active, .crane .paragraphs-tabs-wrapper .clearfix > .button--small-override.paragraph-button:active, .paragraphs-tabs-wrapper .crane .clearfix > .button--small-override.paragraph-button:active {
       background: #979797;
       color: #1f2225;
       border: 1px solid #979797; }
-  .crane .button--small:hover, .crane .draggable .form-submit:hover:not(.image-button), .crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button:hover, .paragraphs-tabs-wrapper .crane .clearfix > .paragraph-button:hover, .crane .button--small:focus, .crane .draggable .form-submit:focus:not(.image-button), .crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button:focus, .paragraphs-tabs-wrapper .crane .clearfix > .paragraph-button:focus {
+  .crane .button--small:hover, .crane .draggable:not([class*="paragraph"]) td .form-submit:hover, .crane .paragraphs-actions .paragraphs-icon-button:hover, .paragraphs-actions .crane .paragraphs-icon-button:hover, .crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button:hover, .paragraphs-tabs-wrapper .crane .clearfix > .paragraph-button:hover, .crane .button--small:focus, .crane .draggable:not([class*="paragraph"]) td .form-submit:focus, .crane .paragraphs-actions .paragraphs-icon-button:focus, .paragraphs-actions .crane .paragraphs-icon-button:focus, .crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button:focus, .paragraphs-tabs-wrapper .crane .clearfix > .paragraph-button:focus {
     background: #cccccc;
     border-color: #cccccc;
     border: 1px solid #cccccc;
@@ -4558,7 +4558,7 @@ a, .link {
     -moz-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -webkit-transform: translateZ(0); }
-  .crane .button--small:active, .crane .draggable .form-submit:active:not(.image-button), .crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button:active, .paragraphs-tabs-wrapper .crane .clearfix > .paragraph-button:active {
+  .crane .button--small:active, .crane .draggable:not([class*="paragraph"]) td .form-submit:active, .crane .paragraphs-actions .paragraphs-icon-button:active, .paragraphs-actions .crane .paragraphs-icon-button:active, .crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button:active, .paragraphs-tabs-wrapper .crane .clearfix > .paragraph-button:active {
     background: #979797;
     border-color: #979797;
     color: #1f2225;
@@ -4649,7 +4649,7 @@ a, .link {
     background: #979797;
     color: #1f2225; }
 
-.crane .button--danger, .crane #edit-reset, .crane a.button--danger, .crane .button[value="Remove"], .crane .button[value="Delete"] {
+.crane .button--danger, .crane #edit-reset, .crane a.button--danger, .crane .button[value="Remove"], .crane .button[value="Delete"], .crane .button[value="Reset to alphabetical"] {
   background-image: none;
   background-color: #1155cc;
   border: none;
@@ -4675,7 +4675,7 @@ a, .link {
   margin-left: 0;
   margin-right: 0;
   width: 100%; }
-  .crane .button--danger:hover, .crane .button--danger:focus, .crane #edit-reset:hover, .crane #edit-reset:focus, .crane a.button--danger:hover, .crane a.button--danger:focus, .crane .button[value="Remove"]:hover, .crane .button[value="Remove"]:focus, .crane .button[value="Delete"]:hover, .crane .button[value="Delete"]:focus {
+  .crane .button--danger:hover, .crane .button--danger:focus, .crane #edit-reset:hover, .crane #edit-reset:focus, .crane a.button--danger:hover, .crane a.button--danger:focus, .crane .button[value="Remove"]:hover, .crane .button[value="Remove"]:focus, .crane .button[value="Delete"]:hover, .crane .button[value="Delete"]:focus, .crane .button[value="Reset to alphabetical"]:hover, .crane .button[value="Reset to alphabetical"]:focus {
     color: #1f2225;
     background-color: #cccccc;
     box-shadow: none;
@@ -4685,25 +4685,25 @@ a, .link {
     -webkit-transition: all 0.3s ease;
     -webkit-transform: translateZ(0);
     outline: none; }
-  .crane .button--danger:active, .crane #edit-reset:active, .crane a.button--danger:active, .crane .button[value="Remove"]:active, .crane .button[value="Delete"]:active {
+  .crane .button--danger:active, .crane #edit-reset:active, .crane a.button--danger:active, .crane .button[value="Remove"]:active, .crane .button[value="Delete"]:active, .crane .button[value="Reset to alphabetical"]:active {
     box-shadow: none;
     border: none;
     color: #1f2225;
     background-color: #979797; }
-  .crane .button--danger:hover, .crane .button--danger:focus, .crane #edit-reset:hover, .crane #edit-reset:focus, .crane a.button--danger:hover, .crane a.button--danger:focus, .crane .button[value="Remove"]:hover, .crane .button[value="Remove"]:focus, .crane .button[value="Delete"]:hover, .crane .button[value="Delete"]:focus {
+  .crane .button--danger:hover, .crane .button--danger:focus, .crane #edit-reset:hover, .crane #edit-reset:focus, .crane a.button--danger:hover, .crane a.button--danger:focus, .crane .button[value="Remove"]:hover, .crane .button[value="Remove"]:focus, .crane .button[value="Delete"]:hover, .crane .button[value="Delete"]:focus, .crane .button[value="Reset to alphabetical"]:hover, .crane .button[value="Reset to alphabetical"]:focus {
     background: #cccccc;
     color: #1f2225; }
-  .crane .button--danger:active, .crane #edit-reset:active, .crane a.button--danger:active, .crane .button[value="Remove"]:active, .crane .button[value="Delete"]:active {
+  .crane .button--danger:active, .crane #edit-reset:active, .crane a.button--danger:active, .crane .button[value="Remove"]:active, .crane .button[value="Delete"]:active, .crane .button[value="Reset to alphabetical"]:active {
     background: #979797;
     color: #1f2225; }
-  .crane .button--danger:hover, .crane .button--danger:focus, .crane #edit-reset:hover, .crane #edit-reset:focus, .crane a.button--danger:hover, .crane a.button--danger:focus, .crane .button[value="Remove"]:hover, .crane .button[value="Remove"]:focus, .crane .button[value="Delete"]:hover, .crane .button[value="Delete"]:focus {
+  .crane .button--danger:hover, .crane .button--danger:focus, .crane #edit-reset:hover, .crane #edit-reset:focus, .crane a.button--danger:hover, .crane a.button--danger:focus, .crane .button[value="Remove"]:hover, .crane .button[value="Remove"]:focus, .crane .button[value="Delete"]:hover, .crane .button[value="Delete"]:focus, .crane .button[value="Reset to alphabetical"]:hover, .crane .button[value="Reset to alphabetical"]:focus {
     background: #cccccc;
     color: #1f2225; }
-  .crane .button--danger:active, .crane #edit-reset:active, .crane a.button--danger:active, .crane .button[value="Remove"]:active, .crane .button[value="Delete"]:active {
+  .crane .button--danger:active, .crane #edit-reset:active, .crane a.button--danger:active, .crane .button[value="Remove"]:active, .crane .button[value="Delete"]:active, .crane .button[value="Reset to alphabetical"]:active {
     background: #979797;
     color: #1f2225; }
   @media (min-width: 600px) {
-    .crane .button--danger, .crane #edit-reset, .crane a.button--danger, .crane .button[value="Remove"], .crane .button[value="Delete"] {
+    .crane .button--danger, .crane #edit-reset, .crane a.button--danger, .crane .button[value="Remove"], .crane .button[value="Delete"], .crane .button[value="Reset to alphabetical"] {
       width: auto; } }
 
 .crane .button[data-drupal-selector="edit-cancel"], .crane .button[data-drupal-selector="edit-actions-cancel"] {
@@ -4727,7 +4727,7 @@ a, .link {
   background: #1155cc;
   color: #ffffff;
   min-width: 120px;
-  background: #797501;
+  background: #8b01e2;
   color: #ffffff;
   margin-left: 0;
   margin-right: 0;
@@ -4762,6 +4762,9 @@ a, .link {
   @media (min-width: 600px) {
     .crane .button[data-drupal-selector="edit-cancel"], .crane .button[data-drupal-selector="edit-actions-cancel"] {
       width: auto; } }
+
+.crane #edit-cancel {
+  margin-left: 0; }
 
 .crane a#edit-ec-preview {
   background-image: none;
@@ -4862,45 +4865,31 @@ a, .link {
     color: #1f2225;
     border-color: #979797; }
 
-.crane .draggable .form-submit:not(.image-button) {
-  padding: .95rem 1rem;
+.crane .draggable:not([class*="paragraph"]) td .form-submit {
+  padding: .75rem 1rem;
   min-width: 80px;
   margin-bottom: 0; }
+  .crane .draggable:not([class*="paragraph"]) td .form-submit[value="Cancel"] {
+    background: #c028bb;
+    color: #ffffff;
+    border-color: #c028bb; }
+    .crane .draggable:not([class*="paragraph"]) td .form-submit[value="Cancel"]:hover, .crane .draggable:not([class*="paragraph"]) td .form-submit[value="Cancel"]:focus {
+      background: #cccccc;
+      color: #1f2225;
+      border-color: #cccccc; }
+    .crane .draggable:not([class*="paragraph"]) td .form-submit[value="Cancel"]:active {
+      background: #979797;
+      color: #1f2225;
+      border-color: #979797; }
 
-/* PARAGRAPHS ICON BUTTONS
----------------------------- */
-.button.paragraphs-icon-button {
-  font-size: 1.6rem; }
-  @media (min-width: 760px) {
-    .button.paragraphs-icon-button {
-      background-image: none;
-      background: #1155cc;
-      color: #ffffff; }
-      .button.paragraphs-icon-button:hover, .button.paragraphs-icon-button:focus {
-        border-color: #cccccc;
-        background: #cccccc;
-        color: #1f2225; }
-      .button.paragraphs-icon-button:active {
-        background: #979797;
-        color: #1f2225; } }
+.crane .image-button, .crane .draggable:not([class*="paragraph"]) td .form-submit.image-button {
+  min-width: 20px;
+  border: 0; }
+  .crane .image-button:hover, .crane .image-button:focus, .crane .image-button:active, .crane .draggable:not([class*="paragraph"]) td .form-submit.image-button:hover, .crane .draggable:not([class*="paragraph"]) td .form-submit.image-button:focus, .crane .draggable:not([class*="paragraph"]) td .form-submit.image-button:active {
+    background: transparent;
+    border: 0;
+    opacity: .6; }
 
-.button.paragraphs-dropdown-action {
-  font-size: 1.4rem;
-  padding: 10px 1.5em; }
-  .button.paragraphs-dropdown-action:hover, .button.paragraphs-dropdown-action:focus {
-    background: #cccccc; }
-  .button.paragraphs-dropdown-action:not(:last-child) {
-    border-bottom: 1px solid #979797; }
-
-.paragraphs-dropdown-actions {
-  border-radius: 0;
-  top: 45px; }
-  @media (min-width: 760px) {
-    .paragraphs-dropdown-actions {
-      top: 40px; } }
-
-/* PARAGRAPH ADD BUTTONS
--------------------------- */
 /* FAKE BUTTONS
 ------------------ */
 .button-fake-preview {
@@ -4932,10 +4921,34 @@ a, .link {
 /* ========================
   FIELD
 ========================== */
+/* LONG TEXT
+--------------- */
 .field--type-text-long, .field--type-text-with-summary, .field--type-string-long {
   max-width: 800px; }
   .field--type-text-long .text-format-wrapper .filter-wrapper, .field--type-text-with-summary .text-format-wrapper .filter-wrapper, .field--type-string-long .text-format-wrapper .filter-wrapper {
     display: none; }
+
+/* MEDIA LIBRARY FIELDS
+------------------ */
+.field--widget-media-library-widget .media-library-widget-empty-text {
+  margin-bottom: 0; }
+
+.field--widget-media-library-widget .media-library-selection {
+  margin-bottom: 0; }
+
+.crane .field--widget-media-library-widget .media-library-open-button {
+  margin-bottom: 0; }
+
+.crane .field--widget-media-library-widget .media-library-item__remove.button {
+  border-radius: 0;
+  padding: .5rem 1.5rem;
+  height: auto;
+  min-width: 0; }
+
+/* REMOVE REVISION FROM MEDIA REFERENCE FIELD
+--------------------------------------------- */
+.field--type-entity-reference .field--name-revision-log-message {
+  display: none; }
 
 /* ========================
   FORM ELEMENTS
@@ -4978,19 +4991,18 @@ a, .link {
   .form-item .description {
     margin: 0.2em 0 1rem; }
 
-.form-required, .js-form-required {
+.crane .form-required, .js-form-required {
   position: relative;
   padding-right: .5rem;
-  margin-right: 3rem; }
-  .form-required:after, .js-form-required:after {
+  margin-right: 1rem; }
+  .crane .form-required:after, .js-form-required:after {
     content: '*';
     color: #bf0e0e;
     position: absolute;
     top: -4px;
-    right: -.5rem;
+    right: -8px;
     font-size: 1.6rem;
-    background: transparent;
-    margin: 0; }
+    background: transparent; }
 
 input.form-text {
   border: 1px solid #979797;
@@ -5064,7 +5076,7 @@ input.form-email {
 .description {
   color: #646569; }
 
-input + .description {
+input + .description, .select2 + .description {
   padding-top: 1rem; }
 
 .js-form-type-entity-autocomplete {
@@ -5101,7 +5113,7 @@ body.adminimal.crane select {
     min-width: 120px;
     font-size: 1.6rem;
     border: 1px solid #979797;
-    border-radius: 2px;
+    border-radius: 0;
     height: auto;
     font-family: "PT Sans", sans-serif; }
     .crane .select2-container--default .select2-selection--single.select2--container--focus {
@@ -5130,7 +5142,7 @@ body.adminimal.crane select {
     min-width: 120px;
     font-size: 1.6rem;
     border: 1px solid #979797;
-    border-radius: 2px;
+    border-radius: 0;
     height: auto;
     font-family: "PT Sans", sans-serif;
     padding: 1px 0; }
@@ -5231,6 +5243,14 @@ body.adminimal.crane select {
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
   background-color: #1155cc !important; }
 
+/* SELECT 2 IN TABLE ROWS
+----------------------- */
+.crane td .select2-container--default .select2-selection--single .select2-selection__rendered {
+  padding: 0px 32px 0px 10px;
+  font-size: 1.4rem; }
+  .crane td .select2-container--default .select2-selection--single .select2-selection__rendered:after {
+    bottom: 4px; }
+
 /* CHECKBOXES
 ---------------- */
 .js-form-type-checkbox:not(:last-child), .js-form-type-radio:not(:last-child), .select-all:not(:last-child) {
@@ -5314,6 +5334,9 @@ body.adminimal.crane select {
       background: #cccccc;
       color: #1f2225; }
 
+.form-type-managed-file .button[value="Remove"] {
+  margin-bottom: 0; }
+
 /* FORM ACTIONS
 ------------------ */
 .form-actions {
@@ -5371,9 +5394,9 @@ body:not(.role-administrator).toolbar-tray-open.toolbar-vertical {
   margin: 0 0 2rem; }
   #block-crane-local-actions ul.action-links:not(.can-access) {
     display: none; }
-  .adminimal #block-crane-local-actions ul.action-links a.button--primary.button--small, .adminimal #block-crane-local-actions ul.action-links .crane .draggable a.button--primary.form-submit:not(.image-button), .crane .draggable .adminimal #block-crane-local-actions ul.action-links a.button--primary.form-submit:not(.image-button), .adminimal #block-crane-local-actions ul.action-links .paragraphs-tabs-wrapper .clearfix > a.button--primary.paragraph-button, .paragraphs-tabs-wrapper .adminimal #block-crane-local-actions ul.action-links .clearfix > a.button--primary.paragraph-button {
+  .adminimal #block-crane-local-actions ul.action-links a.button--primary.button--small, .adminimal #block-crane-local-actions ul.action-links .crane .draggable:not([class*="paragraph"]) td a.button--primary.form-submit, .crane .draggable:not([class*="paragraph"]) td .adminimal #block-crane-local-actions ul.action-links a.button--primary.form-submit, .adminimal #block-crane-local-actions ul.action-links .paragraphs-actions a.button--primary.paragraphs-icon-button, .paragraphs-actions .adminimal #block-crane-local-actions ul.action-links a.button--primary.paragraphs-icon-button, .adminimal #block-crane-local-actions ul.action-links .paragraphs-tabs-wrapper .clearfix > a.button--primary.paragraph-button, .paragraphs-tabs-wrapper .adminimal #block-crane-local-actions ul.action-links .clearfix > a.button--primary.paragraph-button {
     border-radius: 0; }
-    .adminimal #block-crane-local-actions ul.action-links a.button--primary.button--small:hover, .adminimal #block-crane-local-actions ul.action-links .crane .draggable a.button--primary.form-submit:hover:not(.image-button), .crane .draggable .adminimal #block-crane-local-actions ul.action-links a.button--primary.form-submit:hover:not(.image-button), .adminimal #block-crane-local-actions ul.action-links .paragraphs-tabs-wrapper .clearfix > a.button--primary.paragraph-button:hover, .paragraphs-tabs-wrapper .adminimal #block-crane-local-actions ul.action-links .clearfix > a.button--primary.paragraph-button:hover, .adminimal #block-crane-local-actions ul.action-links a.button--primary.button--small:focus, .adminimal #block-crane-local-actions ul.action-links .crane .draggable a.button--primary.form-submit:focus:not(.image-button), .crane .draggable .adminimal #block-crane-local-actions ul.action-links a.button--primary.form-submit:focus:not(.image-button), .adminimal #block-crane-local-actions ul.action-links .paragraphs-tabs-wrapper .clearfix > a.button--primary.paragraph-button:focus, .paragraphs-tabs-wrapper .adminimal #block-crane-local-actions ul.action-links .clearfix > a.button--primary.paragraph-button:focus {
+    .adminimal #block-crane-local-actions ul.action-links a.button--primary.button--small:hover, .adminimal #block-crane-local-actions ul.action-links .crane .draggable:not([class*="paragraph"]) td a.button--primary.form-submit:hover, .crane .draggable:not([class*="paragraph"]) td .adminimal #block-crane-local-actions ul.action-links a.button--primary.form-submit:hover, .adminimal #block-crane-local-actions ul.action-links .paragraphs-actions a.button--primary.paragraphs-icon-button:hover, .paragraphs-actions .adminimal #block-crane-local-actions ul.action-links a.button--primary.paragraphs-icon-button:hover, .adminimal #block-crane-local-actions ul.action-links .paragraphs-tabs-wrapper .clearfix > a.button--primary.paragraph-button:hover, .paragraphs-tabs-wrapper .adminimal #block-crane-local-actions ul.action-links .clearfix > a.button--primary.paragraph-button:hover, .adminimal #block-crane-local-actions ul.action-links a.button--primary.button--small:focus, .adminimal #block-crane-local-actions ul.action-links .crane .draggable:not([class*="paragraph"]) td a.button--primary.form-submit:focus, .crane .draggable:not([class*="paragraph"]) td .adminimal #block-crane-local-actions ul.action-links a.button--primary.form-submit:focus, .adminimal #block-crane-local-actions ul.action-links .paragraphs-actions a.button--primary.paragraphs-icon-button:focus, .paragraphs-actions .adminimal #block-crane-local-actions ul.action-links a.button--primary.paragraphs-icon-button:focus, .adminimal #block-crane-local-actions ul.action-links .paragraphs-tabs-wrapper .clearfix > a.button--primary.paragraph-button:focus, .paragraphs-tabs-wrapper .adminimal #block-crane-local-actions ul.action-links .clearfix > a.button--primary.paragraph-button:focus {
       background: #cccccc;
       color: #1f2225;
       border: 1px solid #cccccc;
@@ -5381,7 +5404,7 @@ body:not(.role-administrator).toolbar-tray-open.toolbar-vertical {
       -moz-transition: all 0.3s ease;
       -webkit-transition: all 0.3s ease;
       -webkit-transform: translateZ(0); }
-    .adminimal #block-crane-local-actions ul.action-links a.button--primary.button--small:active, .adminimal #block-crane-local-actions ul.action-links .crane .draggable a.button--primary.form-submit:active:not(.image-button), .crane .draggable .adminimal #block-crane-local-actions ul.action-links a.button--primary.form-submit:active:not(.image-button), .adminimal #block-crane-local-actions ul.action-links .paragraphs-tabs-wrapper .clearfix > a.button--primary.paragraph-button:active, .paragraphs-tabs-wrapper .adminimal #block-crane-local-actions ul.action-links .clearfix > a.button--primary.paragraph-button:active {
+    .adminimal #block-crane-local-actions ul.action-links a.button--primary.button--small:active, .adminimal #block-crane-local-actions ul.action-links .crane .draggable:not([class*="paragraph"]) td a.button--primary.form-submit:active, .crane .draggable:not([class*="paragraph"]) td .adminimal #block-crane-local-actions ul.action-links a.button--primary.form-submit:active, .adminimal #block-crane-local-actions ul.action-links .paragraphs-actions a.button--primary.paragraphs-icon-button:active, .paragraphs-actions .adminimal #block-crane-local-actions ul.action-links a.button--primary.paragraphs-icon-button:active, .adminimal #block-crane-local-actions ul.action-links .paragraphs-tabs-wrapper .clearfix > a.button--primary.paragraph-button:active, .paragraphs-tabs-wrapper .adminimal #block-crane-local-actions ul.action-links .clearfix > a.button--primary.paragraph-button:active {
       background: #979797;
       color: #1f2225;
       border: 1px solid #979797; }
@@ -5733,12 +5756,12 @@ body:not(.role-administrator) #block-crane-secondary-local-tasks nav.tabs.blocks
 .admin-list li .description {
   margin-bottom: 15px; }
 
-/* ========================
-  MAIN
-========================== */
 /* ==============
 	 MEDIA BROWSER
 ================== */
+.media-library-widget-modal .media-library-add-form {
+  margin-bottom: 2rem; }
+
 .media-library-widget-modal .view-filters {
   width: 100%; }
   .media-library-widget-modal .view-filters .views-exposed-form > .form-inline .js-form-item-sort-by {
@@ -5787,13 +5810,82 @@ body:not(.role-administrator) #block-crane-secondary-local-tasks nav.tabs.blocks
     color: #1f2225;
     background-color: #979797; }
 
+/* ========================
+  MESSAGES
+========================== */
+.crane .messages {
+  padding: 15px 20px 12px 45px;
+  margin-top: 3rem;
+  background-repeat: no-repeat;
+  background-position: 12px center;
+  background-size: 20px 20px; }
+  .crane .messages.messages--error {
+    background-color: rgba(192, 40, 187, 0.03);
+    border-color: #c028bb;
+    color: #5d025a;
+    background-image: url("../images/icons/message/message-error.svg"); }
+  .crane .messages.messages--warning {
+    background-color: rgba(252, 217, 1, 0.06);
+    border-color: #8e700b;
+    color: #8e700b;
+    background-image: url("../images/icons/message/message-warning.svg"); }
+  .crane .messages.messages--status {
+    background-color: rgba(1, 185, 1, 0.05);
+    border-color: #018901;
+    color: #017a01;
+    background-image: url("../images/icons/message/message-status.svg"); }
+
+/* STATUS REPORT
+------------------- */
+.system-status-general-info__item h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem; }
+
+.system-status-general-info__item h4 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem; }
+
+.system-status-general-info__item .description {
+  margin-bottom: 0.5rem; }
+
+.system-status-counter__details {
+  font-size: 1.6rem; }
+
+.system-status-counter__status-icon--error:before, .details .system-status-report__status-icon--error:before {
+  background-image: url("../images/icons/message/message-error.svg"); }
+
+.system-status-counter__status-icon--warning:before, .details .system-status-report__status-icon--warning:before {
+  background-image: url("../images/icons/message/message-warning.svg"); }
+
+.system-status-counter__status-icon--checked:before, .details .system-status-report__status-icon--checked:before {
+  background-image: url("../images/icons/message/message-status.svg"); }
+
+.color-error {
+  color: #5d025a;
+  background-color: rgba(192, 40, 187, 0.03); }
+
+.color-warning {
+  color: #8e700b;
+  background-color: rgba(252, 217, 1, 0.06); }
+
+@media screen and (min-width: 48em) {
+  .system-status-report__status-title {
+    width: 30%; } }
+
+.system-status-report__entry__value h3 {
+  font-size: 2rem; }
+
+@media screen and (min-width: 48em) {
+  .system-status-report__entry__value {
+    width: 70%; } }
+
 /* ==============
 	 PAGERS
 ================== */
 .count-shim {
   display: none; }
 
-.pager {
+.pager:not(.views-ui-display-tab-bucket) {
   display: flex;
   display: -ms-flexbox;
   flex-direction: row;
@@ -5805,7 +5897,7 @@ body:not(.role-administrator) #block-crane-secondary-local-tasks nav.tabs.blocks
   align-items: center;
   -ms-flex-align: center;
   padding-top: 2rem; }
-  .pager .pager__items {
+  .pager:not(.views-ui-display-tab-bucket) .pager__items {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -5823,15 +5915,15 @@ body:not(.role-administrator) #block-crane-secondary-local-tasks nav.tabs.blocks
     -ms-flex-pack: center;
     align-items: center;
     -ms-flex-align: center; }
-    .pager .pager__items li {
+    .pager:not(.views-ui-display-tab-bucket) .pager__items li {
       list-style-type: none; }
     @media (min-width: 760px) {
-      .pager .pager__items {
+      .pager:not(.views-ui-display-tab-bucket) .pager__items {
         width: calc(100% - 288px); } }
-  .pager .pager__item {
+  .pager:not(.views-ui-display-tab-bucket) .pager__item {
     padding: 0;
     font-size: 1.5rem; }
-    .pager .pager__item.pager__item--previous a, .pager .pager__item.pager__item--next a {
+    .pager:not(.views-ui-display-tab-bucket) .pager__item.pager__item--previous a, .pager:not(.views-ui-display-tab-bucket) .pager__item.pager__item--next a {
       font-size: 1.5rem;
       text-transform: uppercase;
       display: flex;
@@ -5850,40 +5942,40 @@ body:not(.role-administrator) #block-crane-secondary-local-tasks nav.tabs.blocks
       font-weight: 700;
       border-bottom: 0; }
       @media (min-width: 760px) {
-        .pager .pager__item.pager__item--previous a, .pager .pager__item.pager__item--next a {
+        .pager:not(.views-ui-display-tab-bucket) .pager__item.pager__item--previous a, .pager:not(.views-ui-display-tab-bucket) .pager__item.pager__item--next a {
           width: 144px;
           font-size: 1.6rem; } }
-      .pager .pager__item.pager__item--previous a:hover, .pager .pager__item.pager__item--next a:hover, .pager .pager__item.pager__item--previous a:focus, .pager .pager__item.pager__item--next a:focus {
+      .pager:not(.views-ui-display-tab-bucket) .pager__item.pager__item--previous a:hover, .pager:not(.views-ui-display-tab-bucket) .pager__item.pager__item--next a:hover, .pager:not(.views-ui-display-tab-bucket) .pager__item.pager__item--previous a:focus, .pager:not(.views-ui-display-tab-bucket) .pager__item.pager__item--next a:focus {
         background: #cccccc;
         color: #1f2225; }
-      .pager .pager__item.pager__item--previous a:active, .pager .pager__item.pager__item--next a:active {
+      .pager:not(.views-ui-display-tab-bucket) .pager__item.pager__item--previous a:active, .pager:not(.views-ui-display-tab-bucket) .pager__item.pager__item--next a:active {
         background: #979797;
         color: #1f2225; }
-    .pager .pager__item a {
+    .pager:not(.views-ui-display-tab-bucket) .pager__item a {
       color: #1f2225;
       padding: 0 5px;
       line-height: 1;
       box-sizing: border-box;
       border-bottom-width: 3px; }
-      .pager .pager__item a:hover, .pager .pager__item a:focus {
+      .pager:not(.views-ui-display-tab-bucket) .pager__item a:hover, .pager:not(.views-ui-display-tab-bucket) .pager__item a:focus {
         color: #646569;
         border-bottom-color: #979797; }
-    .pager .pager__item.is-active a {
+    .pager:not(.views-ui-display-tab-bucket) .pager__item.is-active a {
       color: #1f2225;
       border-bottom-color: #1f2225; }
-      .pager .pager__item.is-active a:focus, .pager .pager__item.is-active a:focus {
+      .pager:not(.views-ui-display-tab-bucket) .pager__item.is-active a:focus, .pager:not(.views-ui-display-tab-bucket) .pager__item.is-active a:focus {
         color: #646569; }
-    .pager .pager__item.pager__number {
+    .pager:not(.views-ui-display-tab-bucket) .pager__item.pager__number {
       padding: 0 5px;
       display: none; }
-  .pager .pager__current {
+  .pager:not(.views-ui-display-tab-bucket) .pager__current {
     font-size: 1.3rem;
     letter-spacing: 0;
     display: none; }
     @media (min-width: 760px) {
-      .pager .pager__current {
+      .pager:not(.views-ui-display-tab-bucket) .pager__current {
         font-size: 1.5rem; } }
-  .pager .disabled a {
+  .pager:not(.views-ui-display-tab-bucket) .disabled a {
     opacity: .6;
     pointer-events: none; }
 
@@ -5955,7 +6047,6 @@ nav#block-crane-quicklinks {
       left: 0;
       width: 100%;
       z-index: 501;
-      background: #ebc304;
       padding: 10px 0;
       display: none; }
       @media (min-width: 760px) {
@@ -6099,8 +6190,14 @@ nav#block-crane-quicklinks {
   .taxonomy-overview-terms td a.menu-item__link:hover, .taxonomy-overview-terms td a.menu-item__link:focus {
     text-decoration: none; }
 
+.taxonomy-overview-terms #edit-actions input.form-submit {
+  min-width: 200px; }
+
 /* TAXONOMY TERMS
 ------------------- */
+.entity-taxonomy_term-edit_form #block-crane-primary-local-tasks {
+  display: none; }
+
 .taxonomy-term-form .js-form-type-textfield input, .taxonomy-term-form .node-form .js-form-type-entity-autocomplete input, .node-form .taxonomy-term-form .js-form-type-entity-autocomplete input, .taxonomy-term-form .node-confirm-form .js-form-type-entity-autocomplete input, .node-confirm-form .taxonomy-term-form .js-form-type-entity-autocomplete input {
   max-width: 402px; }
 
@@ -6179,11 +6276,16 @@ nav#block-crane-quicklinks {
   padding: .5rem .6em; }
   .crane .block-admin-display-form table tbody tr.region-title td {
     color: #ffffff; }
-    .crane .block-admin-display-form table tbody tr.region-title td .button--small, .crane .block-admin-display-form table tbody tr.region-title td .draggable .form-submit:not(.image-button), .crane .draggable .block-admin-display-form table tbody tr.region-title td .form-submit:not(.image-button), .crane .block-admin-display-form table tbody tr.region-title td .paragraphs-tabs-wrapper .clearfix > .paragraph-button, .paragraphs-tabs-wrapper .crane .block-admin-display-form table tbody tr.region-title td .clearfix > .paragraph-button {
+    .crane .block-admin-display-form table tbody tr.region-title td .button--small, .crane .block-admin-display-form table tbody tr.region-title .draggable:not([class*="paragraph"]) td .form-submit, .crane .draggable:not([class*="paragraph"]) .block-admin-display-form table tbody tr.region-title td .form-submit, .crane .block-admin-display-form table tbody tr.region-title td .paragraphs-actions .paragraphs-icon-button, .paragraphs-actions .crane .block-admin-display-form table tbody tr.region-title td .paragraphs-icon-button, .crane .block-admin-display-form table tbody tr.region-title td .paragraphs-tabs-wrapper .clearfix > .paragraph-button, .paragraphs-tabs-wrapper .crane .block-admin-display-form table tbody tr.region-title td .clearfix > .paragraph-button {
       border-color: #ffffff;
-      color: #ffffff; }
-      .crane .block-admin-display-form table tbody tr.region-title td .button--small:hover, .crane .block-admin-display-form table tbody tr.region-title td .draggable .form-submit:hover:not(.image-button), .crane .draggable .block-admin-display-form table tbody tr.region-title td .form-submit:hover:not(.image-button), .crane .block-admin-display-form table tbody tr.region-title td .paragraphs-tabs-wrapper .clearfix > .paragraph-button:hover, .paragraphs-tabs-wrapper .crane .block-admin-display-form table tbody tr.region-title td .clearfix > .paragraph-button:hover, .crane .block-admin-display-form table tbody tr.region-title td .button--small:focus, .crane .block-admin-display-form table tbody tr.region-title td .draggable .form-submit:focus:not(.image-button), .crane .draggable .block-admin-display-form table tbody tr.region-title td .form-submit:focus:not(.image-button), .crane .block-admin-display-form table tbody tr.region-title td .paragraphs-tabs-wrapper .clearfix > .paragraph-button:focus, .paragraphs-tabs-wrapper .crane .block-admin-display-form table tbody tr.region-title td .clearfix > .paragraph-button:focus, .crane .block-admin-display-form table tbody tr.region-title td .button--small:active, .crane .block-admin-display-form table tbody tr.region-title td .draggable .form-submit:active:not(.image-button), .crane .draggable .block-admin-display-form table tbody tr.region-title td .form-submit:active:not(.image-button), .crane .block-admin-display-form table tbody tr.region-title td .paragraphs-tabs-wrapper .clearfix > .paragraph-button:active, .paragraphs-tabs-wrapper .crane .block-admin-display-form table tbody tr.region-title td .clearfix > .paragraph-button:active {
-        color: #1f2225; }
+      color: #ffffff;
+      background: transparent; }
+      .crane .block-admin-display-form table tbody tr.region-title td .button--small:hover, .crane .block-admin-display-form table tbody tr.region-title .draggable:not([class*="paragraph"]) td .form-submit:hover, .crane .draggable:not([class*="paragraph"]) .block-admin-display-form table tbody tr.region-title td .form-submit:hover, .crane .block-admin-display-form table tbody tr.region-title td .paragraphs-actions .paragraphs-icon-button:hover, .paragraphs-actions .crane .block-admin-display-form table tbody tr.region-title td .paragraphs-icon-button:hover, .crane .block-admin-display-form table tbody tr.region-title td .paragraphs-tabs-wrapper .clearfix > .paragraph-button:hover, .paragraphs-tabs-wrapper .crane .block-admin-display-form table tbody tr.region-title td .clearfix > .paragraph-button:hover, .crane .block-admin-display-form table tbody tr.region-title td .button--small:focus, .crane .block-admin-display-form table tbody tr.region-title .draggable:not([class*="paragraph"]) td .form-submit:focus, .crane .draggable:not([class*="paragraph"]) .block-admin-display-form table tbody tr.region-title td .form-submit:focus, .crane .block-admin-display-form table tbody tr.region-title td .paragraphs-actions .paragraphs-icon-button:focus, .paragraphs-actions .crane .block-admin-display-form table tbody tr.region-title td .paragraphs-icon-button:focus, .crane .block-admin-display-form table tbody tr.region-title td .paragraphs-tabs-wrapper .clearfix > .paragraph-button:focus, .paragraphs-tabs-wrapper .crane .block-admin-display-form table tbody tr.region-title td .clearfix > .paragraph-button:focus {
+        color: #1f2225;
+        background: #ffffff; }
+      .crane .block-admin-display-form table tbody tr.region-title td .button--small:active, .crane .block-admin-display-form table tbody tr.region-title .draggable:not([class*="paragraph"]) td .form-submit:active, .crane .draggable:not([class*="paragraph"]) .block-admin-display-form table tbody tr.region-title td .form-submit:active, .crane .block-admin-display-form table tbody tr.region-title td .paragraphs-actions .paragraphs-icon-button:active, .paragraphs-actions .crane .block-admin-display-form table tbody tr.region-title td .paragraphs-icon-button:active, .crane .block-admin-display-form table tbody tr.region-title td .paragraphs-tabs-wrapper .clearfix > .paragraph-button:active, .paragraphs-tabs-wrapper .crane .block-admin-display-form table tbody tr.region-title td .clearfix > .paragraph-button:active {
+        color: #1f2225;
+        background: #eeeeee; }
 
 /* USER ADD FORM
 -------------------- */
@@ -6204,6 +6306,27 @@ nav#block-crane-quicklinks {
 
 .user-register-form #edit-actions .form-submit, .user-form #edit-actions .form-submit {
   min-width: 175px; }
+
+/* MEDIA FORMS
+-------------- */
+.media-form .vertical-tabs {
+  display: none; }
+
+/* MODULES
+-------------- */
+.system-modules .package-listing .seven-details__summary {
+  background: #646569;
+  color: #ffffff;
+  text-shadow: none; }
+  .system-modules .package-listing .seven-details__summary:hover, .system-modules .package-listing .seven-details__summary:focus {
+    color: #1f2225;
+    background: #cccccc; }
+
+.system-modules .package-listing tr {
+  border-bottom: 0; }
+
+.system-modules .package-listing td:last-child {
+  border-bottom: 1px solid #979797; }
 
 /* ========================
   NODE FORMS
@@ -6319,6 +6442,37 @@ nav#block-crane-quicklinks {
   grid-template-column: 250px auto 1fr auto; }
   .paragraph-top .paragraph-type .paragraph-type-label {
     font-weight: 700; }
+
+/* PARAGRAPH ACTIONS
+---------------- */
+.crane .paragraphs-actions .paragraphs-icon-button {
+  font-size: 1.6rem; }
+  @media screen and (max-width: 768px) {
+    .crane .paragraphs-actions .paragraphs-icon-button {
+      background-image: url("../images/icons/paragraphs/icon-edit.svg"); } }
+
+.paragraphs-actions .paragraphs-dropdown-actions {
+  border-radius: 0;
+  box-shadow: none;
+  top: 36px; }
+  @media screen and (max-width: 768px) {
+    .paragraphs-actions .paragraphs-dropdown-actions {
+      top: 32px; } }
+  .paragraphs-actions .paragraphs-dropdown-actions input.js-form-submit {
+    background: none;
+    padding: 4px 0;
+    color: #1155cc;
+    margin: 0;
+    font-weight: 400;
+    box-sizing: border-box; }
+    .paragraphs-actions .paragraphs-dropdown-actions input.js-form-submit:not(:last-child) {
+      border-bottom: 1px solid #979797; }
+
+/* PARAGRAPH ADD BUTTONS
+-------------------------- */
+.crane .paragraphs-tabs-wrapper .clearfix > .paragraph-button {
+  font-size: 1.6rem;
+  font-weight: 700; }
 
 /* GLOBAL PREVIEW
 --------------- */
@@ -6546,6 +6700,9 @@ nav#block-crane-quicklinks {
 
 /* VIEWS UI
 ----------------- */
+.views-ui-display-tab-bucket .views-ui-display-tab-bucket__title {
+  margin-bottom: 1rem; }
+
 .views-ui-dialog .views-override.form--inline .js-form-item-override-dropdown {
   max-width: 175px; }
 
@@ -6576,7 +6733,7 @@ nav#block-crane-quicklinks {
     background: #1155cc;
     color: #ffffff;
     min-width: 120px;
-    background: #797501;
+    background: #8b01e2;
     color: #ffffff;
     min-width: 185px; }
     .views-ui-dialog .ui-dialog-buttonset button:not(.button--primary):not(.button--danger):hover, .views-ui-dialog .ui-dialog-buttonset button:not(.button--primary):not(.button--danger):focus {
@@ -6646,5 +6803,15 @@ nav#block-crane-quicklinks {
 .crane .media-library-select-all {
   margin: 1rem 8px;
   font-size: 1.6rem; }
+
+/* RECENT LOG MESSAGES
+------------------------ */
+.admin-dblog .dblog-error .icon {
+  background-image: url("../images/icons/message/message-error.svg");
+  background-size: 16px 16px; }
+
+.admin-dblog .dblog-warning .icon {
+  background-image: url("../images/icons/message/message-warning.svg");
+  background-size: 16px 16px; }
 
 /*# sourceMappingURL=crane.css.map */

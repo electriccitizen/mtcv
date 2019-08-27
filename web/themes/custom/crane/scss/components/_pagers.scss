@@ -5,7 +5,7 @@
 	display: none;
 }
 
-.pager{
+.pager:not(.views-ui-display-tab-bucket){
 	@include safeFlex(row,wrap,justify,center);
 	padding-top: $spaceSm;
 	.pager__items{

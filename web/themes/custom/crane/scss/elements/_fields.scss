@@ -2,6 +2,8 @@
   FIELD
 ========================== */
 
+/* LONG TEXT
+--------------- */
 .field--type-text-long,.field--type-text-with-summary,.field--type-string-long{
 	max-width: $textMax;
 	//hide text format area since only allowing one format
@@ -11,3 +13,34 @@
 		}
 	}
 }//end long text fields
+
+/* MEDIA LIBRARY FIELDS
+------------------ */
+.field--widget-media-library-widget{
+	.media-library-widget-empty-text{
+		margin-bottom: 0;
+	}
+	.media-library-selection{
+		margin-bottom: 0;
+	}
+	.media-library-open-button{
+		.crane &{
+			margin-bottom: 0;
+		}
+	}
+	.media-library-item__remove.button{
+		.crane &{
+			border-radius: 0;
+			padding: .5rem 1.5rem;
+			height: auto;
+			min-width: 0;
+		}
+	}
+}//end media library widget
+
+/* REMOVE REVISION FROM MEDIA REFERENCE FIELD
+--------------------------------------------- */
+.field--type-entity-reference .field--name-revision-log-message{
+	display: none;
+}
+

@@ -25,10 +25,20 @@
 			}
 		}
 	}
+	#edit-actions{
+		input.form-submit{
+			min-width: 200px;
+		}
+	}
 }//end taxonomy overview
 
 /* TAXONOMY TERMS
 ------------------- */
+.entity-taxonomy_term-edit_form{
+	#block-crane-primary-local-tasks{
+		display: none;
+	}
+}
 .taxonomy-term-form{
 	.js-form-type-textfield{
 		input{
@@ -140,8 +150,14 @@
 					.button--small{
 						border-color: $white;
 						color: $white;
-						&:hover,&:focus,&:active{
+						background: transparent;
+						&:hover,&:focus{
 							color: $black;
+							background: $white;
+						}
+						&:active{
+							color: $black;
+							background: $lightGrey;
 						}
 					}
 				}
@@ -178,6 +194,36 @@
 		}
 	}
 }//end user register form
+
+/* MEDIA FORMS
+-------------- */
+.media-form{
+	.vertical-tabs{
+		display: none;
+	}
+}//end media forms
+
+/* MODULES
+-------------- */
+.system-modules{
+	.package-listing{
+		.seven-details__summary{
+			background: $midGrey;
+			color: $white;
+			text-shadow: none;
+			&:hover,&:focus{
+				color: $black;
+				background: $buttonBackHover;
+			}
+		}//end seven details summary
+		tr{
+			border-bottom: 0;
+		}
+		td:last-child{
+			border-bottom: 1px solid $rowBorder;
+		}
+	}//end package-listing
+}//end system modules
 
 
 

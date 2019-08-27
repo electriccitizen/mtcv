@@ -10,4 +10,9 @@
  * @see template_preprocess_input()
  */
 #}
-<input{{ attributes.addClass('paragraph-button') }} />{{ children }}
+{% if 'Add' in attributes.storage().value.__toString() %}
+	{% set addValue = '+ ' ~ attributes.storage().value.__toString() %}
+{% else %}
+	{% set addValue = attributes.storage().value.__toString() %}
+{% endif %}
+<input{{ attributes.addClass('paragraph-button').removeAttribute('value') }} value="{% autoescape false %}{{ addValue }}{% endautoescape %}" }} />{{ children }}

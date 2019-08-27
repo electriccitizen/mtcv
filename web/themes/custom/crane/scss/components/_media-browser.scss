@@ -3,6 +3,9 @@
 ================== */
 
 .media-library-widget-modal{
+	.media-library-add-form{
+		margin-bottom: $spaceSm;
+	}
 	.view-filters{
 		width: 100%;
 		.views-exposed-form > .form-inline{

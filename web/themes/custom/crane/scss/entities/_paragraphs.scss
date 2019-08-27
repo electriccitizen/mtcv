@@ -13,6 +13,52 @@
 	}
 }//end paragraph top
 
+/* PARAGRAPH ACTIONS
+---------------- */
+.paragraphs-actions{
+	.paragraphs-icon-button{
+		@extend .button--small;
+		.crane &{
+			font-size: 1.6rem;
+			@media screen and (max-width: 768px){
+				background-image: url("../images/icons/paragraphs/icon-edit.svg");
+			}
+		}
+	}
+	.paragraphs-dropdown-actions{
+		border-radius: 0;
+		box-shadow: none;
+		top: 36px;
+		@media screen and (max-width: 768px){
+			top: 32px;
+		}
+		input.js-form-submit{
+			background: none;
+			padding: 4px 0;
+			color: $link;
+			margin: 0;
+			font-weight: $regular;
+			box-sizing: border-box;
+			&:not(:last-child){
+				border-bottom: 1px solid $borderRule;
+			}
+		}
+	}
+}
+/* PARAGRAPH ADD BUTTONS
+-------------------------- */
+.paragraphs-tabs-wrapper{
+	.clearfix{
+	  & > .paragraph-button{
+	 	 	@extend .button--small;
+	 	 	.crane &{
+	 	 		font-size: 1.6rem;
+	 	 		font-weight: $heavy;
+	 		}
+	  }
+	}
+}
+
 /* GLOBAL PREVIEW
 --------------- */
 .paragraph--view-mode--preview{
