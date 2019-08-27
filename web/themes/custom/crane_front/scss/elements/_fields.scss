@@ -8,3 +8,28 @@
 		margin-right: .5em;
 	}
 }
+
+.text-long,.text-with-summary{
+	h2{
+		font-size: 2.8rem;
+		margin-bottom: 2.5rem;
+	}
+	h3{
+		font-size: 2.3rem;
+		margin-bottom: 1rem;
+	}
+	h4{
+		font-size: 2rem;
+		margin-bottom: 1.5rem;
+	}
+	h5{
+		font-size: $baseSize;
+		margin-bottom: 1rem;
+	}
+	h6{
+		margin-bottom: .75rem;
+		font-size: 1.6rem;
+	}
+}//end long text
+
+
