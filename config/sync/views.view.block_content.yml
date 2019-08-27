@@ -3,12 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.basic
     - block_content.type.homepage_featured_content
     - block_content.type.homepage_intro
     - block_content.type.homepage_resources
-    - block_content.type.logo_grid
-    - block_content.type.social_media_links
   module:
     - block_content
     - user
@@ -594,11 +591,11 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: in
+          operator: 'not in'
           value:
-            basic: basic
-            logo_grid: logo_grid
-            social_media_links: social_media_links
+            homepage_featured_content: homepage_featured_content
+            homepage_intro: homepage_intro
+            homepage_resources: homepage_resources
           group: 1
           exposed: false
           expose:
