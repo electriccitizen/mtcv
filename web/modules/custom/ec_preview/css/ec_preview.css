@@ -1,4 +1,7 @@
 /* PREVIEW CONTAINER */
+#responsive-preview.responsive-preview.active{
+	z-index: 600;
+}
 #responsive-preview.responsive-preview.active #responsive-preview-frame-container {
   height: 80%;
   width: 80%;

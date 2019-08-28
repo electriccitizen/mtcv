@@ -5626,7 +5626,7 @@ body:not(.role-administrator) #block-crane-secondary-local-tasks nav.tabs.blocks
     .header-bar {
       top: 0;
       left: 0;
-      z-index: 9999;
+      z-index: 599;
       display: flex;
       display: -ms-flexbox;
       flex-direction: row;
