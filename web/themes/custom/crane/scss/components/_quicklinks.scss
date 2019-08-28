@@ -62,14 +62,16 @@ nav#block-crane-quicklinks{
 				top: 50px;
 				left: 0;
 				width: 100%;
-				z-index: 501;
+				z-index: 601;
 				padding: 10px 0;
 				display: none;
+				background: darken($quickLinkBar, 3%);
 				@include tab{
 					top: 0;
 					left: -310px;
 					width: 225px;
 					display: block !important;
+					z-index: 501;
 					box-shadow: 2px 2px 4px rgba(35,35,35,0.15);
 					&:after{
 						content: '';
@@ -79,7 +81,7 @@ nav#block-crane-quicklinks{
 						position: absolute;
 						top: -100vh;
 						left: 0;
-						background: $gold;
+						background: $quickLinkBar;
 					}
 				}
 			}

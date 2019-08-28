@@ -57,14 +57,19 @@
 		position: relative;
 		.layout-region-node-footer__content{
 			border-top: 0;
-			padding-top: 0;
-			margin-top: 0;
+			padding-top: $spaceLg;
+			margin-top: $spaceMd;
+			border-top: 3px solid $midBlue;
+			@include safeFlex(row,wrap,start,center);
+			.entity-content-form-footer{
+				@include safeFlex(row,wrap,start,center);
+			}
 		}
 		//published checkbox
-		#edit-status-wrapper{
-			margin-top: $spaceLg;
-			padding-top: $spaceSm;
-			border-top: 3px solid $midBlue;
+		#edit-status-wrapper,#edit-field-restricted-wrapper{
+			.form-item{
+				margin: .5rem 3rem 1rem 0;
+			}
 			.js-form-type-checkbox{
 				input[type="checkbox"]{
 					width: 22px !important;
@@ -77,10 +82,9 @@
 			}
 		}//end published
 		#edit-actions{
-			@include tab{
-				position: absolute;
-				top: 1.5rem;
-				left: 150px;
+			& > *{
+				margin-right: 1rem;
+				margin-bottom: 1rem;
 			}
 			#edit-preview{
 				@include submitButton;
@@ -93,6 +97,11 @@
 					background: $buttonBackActive;
 					color: $buttonTextActive;
 				}
+			}
+			#edit-submit,#edit-delete{
+				max-width: 120px;
+				padding-bottom: 1.15rem;
+				margin-top: 0;
 			}
 		}
 	}//end footer

@@ -12,12 +12,19 @@ header{
 		.logged-in &{
 			position: fixed;
 			width: 100%;
-			top: 50px;
 			z-index: 496;
 			@include tab{
-				top: 0;
-				z-index: 9999;
+				z-index: 599;
 			}
+		}
+		.logged-in.path-user &{
+			top: 50px;
+			@include tab{
+				top: 0;
+			}
+		}
+		.logged-in:not(.path-user) &{
+			top: 0;
 		}
 	}
 }
@@ -64,6 +71,7 @@ header{
 		.user-icon{
 			width: 14px;
 			margin-right: .75rem;
+			display: inline;
 		}
 		a{
 			color: $white;

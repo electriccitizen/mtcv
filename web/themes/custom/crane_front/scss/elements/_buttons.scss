@@ -54,6 +54,9 @@
 			background: $siteBack;
 			border: 1px solid $borderRule;
 			min-width: 120px;
+			&:empty{
+				border: 0;
+			}
 			.dropbutton-action,.dropbutton-toggle{
 				@extend %dropbutton;
 			}

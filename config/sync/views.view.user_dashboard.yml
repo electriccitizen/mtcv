@@ -2,6 +2,8 @@ uuid: 4dbc5203-872e-4dd1-8db2-e83ea7b64a3b
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.storage.node.field_restricted
   module:
     - node
     - paragraphs
@@ -453,6 +455,71 @@ display:
       display_description: ''
       title: 'All Recent Content'
       fields:
+        field_restricted:
+          id: field_restricted
+          table: node__field_restricted
+          field: field_restricted
+          relationship: uid
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: yes-no
+            format_custom_true: ''
+            format_custom_false: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         edit_node:
           id: edit_node
           table: node
@@ -517,7 +584,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<a href="{{ edit_node }}">{{ title }}</a>'
+            text: "{% if field_restricted == 'Yes' %}\r\n  {{ title }}<span class=\"restricted\">(restricted)</span>\r\n{% else %}\r\n  <a href=\"{{ edit_node }}\">{{ title }}</a>\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
@@ -760,7 +827,8 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_restricted'
   my_recents:
     display_plugin: block
     id: my_recents
@@ -770,6 +838,71 @@ display:
       display_extenders: {  }
       display_description: ''
       fields:
+        field_restricted:
+          id: field_restricted
+          table: node__field_restricted
+          field: field_restricted
+          relationship: uid
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: yes-no
+            format_custom_true: ''
+            format_custom_false: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         edit_node:
           id: edit_node
           table: node
@@ -834,7 +967,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<a href="{{ edit_node }}">{{ title }}</a>'
+            text: "{% if field_restricted == 'Yes' %}\r\n  {{ title }}<span class=\"restricted\">(restricted)</span>\r\n{% else %}\r\n  <a href=\"{{ edit_node }}\">{{ title }}</a>\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
@@ -1015,4 +1148,5 @@ display:
         - 'languages:language_interface'
         - url
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_restricted'

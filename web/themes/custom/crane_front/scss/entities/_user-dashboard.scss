@@ -147,6 +147,11 @@
 				text-decoration: underline;
 			}
 		}
+		.restricted{
+			margin-left: .5rem;
+			color: $red;
+			font-size: 1.4rem;
+		}
 	}
 	&.all-recents{
 		.views-field-title{

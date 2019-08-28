@@ -4911,12 +4911,16 @@ a, .link {
   text-shadow: none;
   background: #ffffff;
   border-color: #979797; }
+  .js .dropbutton-multiple .dropbutton-widget:empty, .js .dropbutton-wrapper .dropbutton-widget:empty, .js .dropbutton-single .dropbutton-widget:empty {
+    border: none; }
 
 .js .views-edit-view .dropbutton-multiple .dropbutton-widget, .js .views-edit-view .dropbutton-wrapper .dropbutton-widget, .js .views-edit-view .dropbutton-single .dropbutton-widget {
   border-radius: 0;
   text-shadow: none;
   background: #ffffff;
   border-color: #979797; }
+  .js .views-edit-view .dropbutton-multiple .dropbutton-widget:empty, .js .views-edit-view .dropbutton-wrapper .dropbutton-widget:empty, .js .views-edit-view .dropbutton-single .dropbutton-widget:empty {
+    border: none; }
 
 /* ========================
   FIELD
@@ -6049,15 +6053,17 @@ nav#block-crane-quicklinks {
       top: 50px;
       left: 0;
       width: 100%;
-      z-index: 501;
+      z-index: 601;
       padding: 10px 0;
-      display: none; }
+      display: none;
+      background: #efc603; }
       @media (min-width: 760px) {
         nav#block-crane-quicklinks ul:not(.contextual-links).root-menu ul {
           top: 0;
           left: -310px;
           width: 225px;
           display: block !important;
+          z-index: 501;
           box-shadow: 2px 2px 4px rgba(35, 35, 35, 0.15); }
           nav#block-crane-quicklinks ul:not(.contextual-links).root-menu ul:after {
             content: '';
@@ -6367,23 +6373,41 @@ nav#block-crane-quicklinks {
     position: relative; }
     .node-form .layout-region-node-footer .layout-region-node-footer__content, .node-confirm-form .layout-region-node-footer .layout-region-node-footer__content {
       border-top: 0;
-      padding-top: 0;
-      margin-top: 0; }
-    .node-form .layout-region-node-footer #edit-status-wrapper, .node-confirm-form .layout-region-node-footer #edit-status-wrapper {
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 3px solid #2c5580; }
-      .node-form .layout-region-node-footer #edit-status-wrapper .js-form-type-checkbox input[type="checkbox"], .node-confirm-form .layout-region-node-footer #edit-status-wrapper .js-form-type-checkbox input[type="checkbox"] {
-        width: 22px !important;
-        height: 22px !important; }
-      .node-form .layout-region-node-footer #edit-status-wrapper .js-form-type-checkbox label, .node-confirm-form .layout-region-node-footer #edit-status-wrapper .js-form-type-checkbox label {
-        font-weight: 700;
-        font-size: 2rem; }
-    @media (min-width: 760px) {
-      .node-form .layout-region-node-footer #edit-actions, .node-confirm-form .layout-region-node-footer #edit-actions {
-        position: absolute;
-        top: 1.5rem;
-        left: 150px; } }
+      padding-top: 4rem;
+      margin-top: 3rem;
+      border-top: 3px solid #2c5580;
+      display: flex;
+      display: -ms-flexbox;
+      flex-direction: row;
+      -ms-flex-direction: row;
+      flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      justify-content: flex-start;
+      -ms-flex-pack: start;
+      align-items: center;
+      -ms-flex-align: center; }
+      .node-form .layout-region-node-footer .layout-region-node-footer__content .entity-content-form-footer, .node-confirm-form .layout-region-node-footer .layout-region-node-footer__content .entity-content-form-footer {
+        display: flex;
+        display: -ms-flexbox;
+        flex-direction: row;
+        -ms-flex-direction: row;
+        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        justify-content: flex-start;
+        -ms-flex-pack: start;
+        align-items: center;
+        -ms-flex-align: center; }
+    .node-form .layout-region-node-footer #edit-status-wrapper .form-item, .node-form .layout-region-node-footer #edit-field-restricted-wrapper .form-item, .node-confirm-form .layout-region-node-footer #edit-status-wrapper .form-item, .node-confirm-form .layout-region-node-footer #edit-field-restricted-wrapper .form-item {
+      margin: .5rem 3rem 1rem 0; }
+    .node-form .layout-region-node-footer #edit-status-wrapper .js-form-type-checkbox input[type="checkbox"], .node-form .layout-region-node-footer #edit-field-restricted-wrapper .js-form-type-checkbox input[type="checkbox"], .node-confirm-form .layout-region-node-footer #edit-status-wrapper .js-form-type-checkbox input[type="checkbox"], .node-confirm-form .layout-region-node-footer #edit-field-restricted-wrapper .js-form-type-checkbox input[type="checkbox"] {
+      width: 22px !important;
+      height: 22px !important; }
+    .node-form .layout-region-node-footer #edit-status-wrapper .js-form-type-checkbox label, .node-form .layout-region-node-footer #edit-field-restricted-wrapper .js-form-type-checkbox label, .node-confirm-form .layout-region-node-footer #edit-status-wrapper .js-form-type-checkbox label, .node-confirm-form .layout-region-node-footer #edit-field-restricted-wrapper .js-form-type-checkbox label {
+      font-weight: 700;
+      font-size: 2rem; }
+    .node-form .layout-region-node-footer #edit-actions > *, .node-confirm-form .layout-region-node-footer #edit-actions > * {
+      margin-right: 1rem;
+      margin-bottom: 1rem; }
     .node-form .layout-region-node-footer #edit-actions #edit-preview, .node-confirm-form .layout-region-node-footer #edit-actions #edit-preview {
       background-image: none;
       background-color: #1155cc;
@@ -6433,6 +6457,10 @@ nav#block-crane-quicklinks {
       .node-form .layout-region-node-footer #edit-actions #edit-preview:active, .node-confirm-form .layout-region-node-footer #edit-actions #edit-preview:active {
         background: #979797;
         color: #1f2225; }
+    .node-form .layout-region-node-footer #edit-actions #edit-submit, .node-form .layout-region-node-footer #edit-actions #edit-delete, .node-confirm-form .layout-region-node-footer #edit-actions #edit-submit, .node-confirm-form .layout-region-node-footer #edit-actions #edit-delete {
+      max-width: 120px;
+      padding-bottom: 1.15rem;
+      margin-top: 0; }
   .node-form.node-resource-edit-form .layout-region-node-main > .field--widget-options-select .select2-container--default, .node-form.node-resource-form .layout-region-node-main > .field--widget-options-select .select2-container--default, .node-confirm-form.node-resource-edit-form .layout-region-node-main > .field--widget-options-select .select2-container--default, .node-confirm-form.node-resource-form .layout-region-node-main > .field--widget-options-select .select2-container--default {
     max-width: 400px; }
 
@@ -6796,6 +6824,11 @@ nav#block-crane-quicklinks {
 ------------------ */
 .view-id-content .views-table * {
   box-sizing: border-box; }
+
+.view-id-content .views-table .views-field-title .restricted {
+  font-size: 1.4rem;
+  color: #bf0e0e;
+  margin-left: .5rem; }
 
 .view-id-content .views-table .views-field-changed {
   max-width: 140px; }

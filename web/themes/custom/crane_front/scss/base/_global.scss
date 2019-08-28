@@ -32,6 +32,14 @@ body{
 			}
 		}
 	}
+	&.logged-in:not(.responsive-preview-frame):not(.path-user){
+		.dialog-off-canvas-main-canvas{
+			padding-top: 100px;
+			@include tab{
+				padding-top: 60px;
+			}
+		}
+	}
 	&:not(.role-administrator){
 		#toolbar-administration{
 			display: none !important;

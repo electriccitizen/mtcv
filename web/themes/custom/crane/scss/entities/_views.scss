@@ -175,6 +175,13 @@
 		*{
 			box-sizing: border-box;
 		}
+		.views-field-title{
+			.restricted{
+				font-size: 1.4rem;
+				color: $red;
+				margin-left: .5rem;
+			}
+		}
 		.views-field-changed{
 			max-width: 140px;
 		}

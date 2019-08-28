@@ -1,0 +1,23 @@
+uuid: 9bfeefdc-7ac4-435c-8e46-abdefc8b259a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_restricted
+    - node.type.page
+id: node.page.field_restricted
+field_name: field_restricted
+entity_type: node
+bundle: page
+label: 'Admin Access Only'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

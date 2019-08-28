@@ -292,6 +292,9 @@
 			text-shadow: none;
 			background: $siteBack;
 			border-color: $borderRule;
+			&:empty{
+				border: none;
+			}
 			.dropbutton-action,.dropbutton-toggle{
 				@extend %dropbutton;
 			}
@@ -307,6 +310,9 @@
 				text-shadow: none;
 				background: $siteBack;
 				border-color: $borderRule;
+				&:empty{
+					border: none;
+				}
 				.dropbutton-action,.dropbutton-toggle{
 					@extend %dropbutton;
 				}

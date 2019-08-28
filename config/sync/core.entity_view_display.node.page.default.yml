@@ -7,10 +7,10 @@ dependencies:
     - field.field.node.page.field_header
     - field.field.node.page.field_metatags
     - field.field.node.page.field_prefooter_image
+    - field.field.node.page.field_restricted
     - node.type.page
   module:
     - entity_reference_revisions
-    - metatag
     - user
 _core:
   default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
@@ -37,13 +37,6 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
-  field_metatags:
-    weight: 3
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: metatag_empty_formatter
-    region: content
   field_prefooter_image:
     type: entity_reference_revisions_entity_view
     weight: 2
@@ -54,4 +47,6 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_metatags: true
+  field_restricted: true
   links: true

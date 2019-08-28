@@ -9,6 +9,9 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Component\Utility\UrlHelper;
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\node\NodeInterface;
 
 /**
  * Implements hook_help().
@@ -136,10 +139,11 @@ function citizen_custom_menu_local_actions_alter(&$local_actions) {
  */
 function citizen_custom_form_alter(&$form, FormStateInterface $form_state) {
   $formId = $form['#id'];
+  $user = \Drupal::currentUser();
+  $userRole = $user->getRoles();
+  
   //clean up menu link form for non-admins
   if($formId == 'menu-link-content-menu-link-content-form'){
-    $user = \Drupal::currentUser();
-    $userRole = $user->getRoles();
     $parentMenu = substr($form['menu_parent']['#default_value'], 0, -1);
     $humanParent = ucwords(str_replace('_',' ',$parentMenu));
     $form['title']['#prefix'] = '<div class="form-item-prefix">Go back to the <a href="/admin/structure/menu/manage/'.$parentMenu.'/">'.$humanParent.' menu</a>.</div>';
@@ -163,4 +167,36 @@ function citizen_custom_form_alter(&$form, FormStateInterface $form_state) {
       $form['name']['#prefix'] = '<div class="form-item-prefix">Add a new <span>'.$human.'</span> term or return to the <a href="/admin/structure/taxonomy/manage/'.$vocab.'/overview">terms list</a>.</div>';
     }
   }
+
+  //move restricted field to footer and allow only admin access
+  if(isset($form['field_restricted'])){
+    $form['field_restricted']['#group'] = 'footer';
+    if(in_array('administrator', $userRole)){
+      $form['field_restricted']['#access'] = TRUE;
+    }else{
+      $form['field_restricted']['#access'] = FALSE;
+    }
+  }
 }
+
+/**
+ * Implements hook_node_access().
+ *
+ * Enforces our access rules for custom workflow target content to force updates
+ * only if the user is targeted in the user select field
+ */
+function citizen_custom_node_access(NodeInterface $node, $op, AccountInterface $account) {
+  // If a node is being updated
+  if (($op == 'update') || ($op == 'delete') || ($op == 'view')) {
+    if (isset($node->field_restricted)) {
+      if (!empty($node->field_restricted)) {
+        if ($node->get("field_restricted")->getString() == '1') {
+          return AccessResult::forbidden();
+        }
+      }
+    }
+  }
+  // No opinion.
+  return AccessResult::neutral();
+}
+
