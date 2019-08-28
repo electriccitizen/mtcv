@@ -5,7 +5,9 @@
  * Contains citizen_custom.module.
  */
 
+use Drupal\Core\Entity\Entity;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Element\Button;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Component\Utility\UrlHelper;
@@ -13,6 +15,7 @@ use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\node\NodeInterface;
 use Drupal\Core\Url;
+use Drupal\Core\Link;
 
 /**
  * Implements hook_help().
@@ -32,6 +35,7 @@ function citizen_custom_help($route_name, RouteMatchInterface $route_match) {
 
 /**
  * Implements hook_entity_presave().
+ * @throws \Drupal\Core\Entity\EntityStorageException
  */
 function citizen_custom_entity_presave(EntityInterface $entity) {
   // Set value of field_alias for menu taxonomy.
@@ -78,7 +82,65 @@ function citizen_custom_entity_presave(EntityInterface $entity) {
         break;
       }
   }
+
+  // todo: not quite working.
+  if ($entity->bundle() == ('button' /*|| 'resource'*/)) {
+    $buttons = $entity->get('field_citizen_button');
+    foreach ($buttons as $key => $paragraph) {
+      $linkItem = $paragraph->getValue();
+      $uri = $linkItem['uri'];
+      if (UrlHelper::isExternal($uri)) {
+        $linkItem['alias'] = $uri;
+      } else {
+
+        if (strpos($uri, 'internal') === 0) {
+          $input = explode(":", $uri);
+          $current_nid = $entity->getParentEntity()->id();
+          $linkItem['alias'] = Url::fromRoute('entity.node.canonical', ['node' => $current_nid])->toString() . '/' . $input[1];
+        } else {
+          $url = Url::fromUri($uri);
+          $nid = $url->getRouteParameters()['node'];
+          $linkItem['alias'] = Url::fromRoute('entity.node.canonical', ['node' => $nid])->toString();
+        }
+      }
+      $paragraph->setMyValue([
+        'uri' => $linkItem['uri'],
+        'title' => $linkItem['title'],
+        'options' => $linkItem['options'],
+        'alias' => $linkItem['alias']
+      ]);
+//      $paragraph->set('alias', $linkItem['alias']);
+    }
+  }
 }
+
+/**
+ * Implements hook_entity_save().
+ */
+//function citizen_custom_entity_Postsave(EntityInterface $entity) {
+//  if ($entity->bundle() == ('button' /*|| 'resource'*/)) {
+//    $paragraphs = $entity->get('field_citizen_button');
+//    foreach ($paragraphs as $key => $item) {
+//      $uri = $item->getValue()['uri'];
+//      if (UrlHelper::isExternal($uri)) {
+//        $alias = $uri;
+//      } else {
+//
+//        if (strpos($uri, 'internal') === 0) {
+//          $input = explode(":", $uri);
+//          $current_nid = $entity->getParentEntity()->id();
+//          $alias = Url::fromRoute('entity.node.canonical', ['node' => $current_nid])->toString() . '/' . $input[1];
+//        } else {
+//          $url = Url::fromUri($uri);
+//          $nid = $url->getRouteParameters()['node'];
+//          $alias = Url::fromRoute('entity.node.canonical', ['node' => $nid])->toString();
+//        }
+//      }
+//      $item->set('alias', $alias);
+//      $entity->save();
+//    }
+//  }
+//}
 
 
 /**
@@ -233,18 +295,49 @@ function citizen_custom_node_access(NodeInterface $node, $op, AccountInterface $
 }
 
 
-function citizen_custom_preprocess_field(&$variables, $hook){
-  if ($variables['element']['#field_type'] === 'link') {
-    $items = $variables["element"]["#items"];
-    foreach ($items as $item) {
-      $uri = $item->getValue()['uri'];
-      $external = UrlHelper::isExternal($uri);
-      if ($external) {
-      } else {
-        $uri_alias = Url::getRouteParameters($item);
-        $alias = Url::fromRoute('entity.node.canonical', ['node' => $nid])->toString();
+//function citizen_custom_preprocess_field(&$variables, $hook){
+//  if ($variables['element']['#field_type'] === 'link') {
+//    $items = $variables["element"]["#items"];
+//    foreach ($items as $key => $item) {
+//      $uri = $item->getValue()['uri'];
+//      $external = UrlHelper::isExternal($uri);
+//      if ($external) {
+//      } else {
+//
+//        if (strpos($uri, 'internal') === 0) {
+//          $input = explode(":", $uri);
+//          $current_nid = $variables['element']['#object']->getParentEntity()->id();
+//          $alias = Url::fromRoute('entity.node.canonical', ['node' => $current_nid])->toString() . '/' . $input[1];
+//
+//
+//        } else {
+//          $url = Url::fromUri($uri);
+//          $nid = $url->getRouteParameters()['node'];
+//          $alias = Url::fromRoute('entity.node.canonical', ['node' => $nid])->toString();
+//          $variables['items'][$key]['content']['#ec_alias'] = $alias;
+//        }
+//      }
+//    }
+//  }
+//}
 
-      }
-    }
-  }
-}
+//function citizen_custom_field_widget_link_default_form_alter(&$element, FormStateInterface $form_state, $context){
+//  $name = $context;
+//  $e = $element;
+//}
+
+
+//if ($url->isExternal()) {
+//  $alias = $item->uri;
+//} else {
+//  $uri = $item->getValue()['uri'];
+//  if (strpos($uri, 'internal') === 0) {
+//    $input = explode(":", $uri);
+//    $current_nid = $entity->getParentEntity()->id();
+//    $alias = Url::fromRoute('entity.node.canonical', ['node' => $current_nid])->toString() . '/' . $input[1];
+//  } else {
+//    $nid = $url->getRouteParameters()['node'];
+//    $alias = Url::fromRoute('entity.node.canonical', ['node' => $nid])->toString();
+//  }
+//}
+//$element[$delta]['alias'] = $alias;
