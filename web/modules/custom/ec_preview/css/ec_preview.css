@@ -31,18 +31,15 @@
 	border-bottom: 1px solid #262626;
 }
 #responsive-preview-close:hover,#responsive-preview-close:focus{
-	background: #797501;
-	color: #fff;
+	background: #cccccc;
+}
+#responsive-preview-close:active{
+	background: #979797;
 }
 #responsive-preview-close:before{
 	height: 16px;
 	width: 20px;
 	background: url('../icons/close-black.svg') no-repeat;
-	background-size: 16px 16px;
-	background-position: center;
-}
-#responsive-preview-close:hover::before,#responsive-preview-close:focus::before{
-	background: url('../icons/close-white.svg') no-repeat;
 	background-size: 16px 16px;
 	background-position: center;
 }
