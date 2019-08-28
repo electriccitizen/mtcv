@@ -663,6 +663,8 @@ display:
         arguments: false
         css_class: false
         header: false
+        footer: false
+        pager: false
       display_description: ''
       access:
         type: perm
@@ -811,6 +813,38 @@ display:
           label: Table
           plugin_id: display_link
           empty: true
+      footer:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: '<span class="count-shim">@page_count</span>'
+          plugin_id: result
+      pager:
+        type: full
+        options:
+          items_per_page: 24
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: Previous
+            next: Next
+            first: First
+            last: Last
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 5
     cache_metadata:
       max-age: -1
       contexts:
@@ -851,6 +885,7 @@ display:
         filter_groups: false
         arguments: false
         header: false
+        pager: false
       style:
         type: table
         options:
@@ -1066,6 +1101,27 @@ display:
           label: Table
           plugin_id: display_link
           empty: true
+      pager:
+        type: full
+        options:
+          items_per_page: 24
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: Previous
+            next: Next
+            first: First
+            last: Last
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 5
     cache_metadata:
       max-age: -1
       contexts:

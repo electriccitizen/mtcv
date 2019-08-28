@@ -5810,6 +5810,9 @@ body:not(.role-administrator) #block-crane-secondary-local-tasks nav.tabs.blocks
     color: #1f2225;
     background-color: #979797; }
 
+.media-library-widget-modal .pager {
+  width: 100%; }
+
 /* ========================
   MESSAGES
 ========================== */
