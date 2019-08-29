@@ -25,8 +25,9 @@ class CitizenCustomLinkWidget extends LinkWidget {
       '#type' => 'textfield',
       '#title' => $this->t('Alias as text'),
       '#placeholder' => '',
-      '#default_value' => '',
+      '#default_value' => NULL,
       '#maxlength' => 255,
+      '#access' => FALSE,
     ];
     return $element;
   }

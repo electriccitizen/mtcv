@@ -5,9 +5,7 @@
  * Contains citizen_custom.module.
  */
 
-use Drupal\Core\Entity\Entity;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Render\Element\Button;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Component\Utility\UrlHelper;
@@ -15,7 +13,6 @@ use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\node\NodeInterface;
 use Drupal\Core\Url;
-use Drupal\Core\Link;
 
 /**
  * Implements hook_help().
@@ -35,7 +32,6 @@ function citizen_custom_help($route_name, RouteMatchInterface $route_match) {
 
 /**
  * Implements hook_entity_presave().
- * @throws \Drupal\Core\Entity\EntityStorageException
  */
 function citizen_custom_entity_presave(EntityInterface $entity) {
   // Set value of field_alias for menu taxonomy.
@@ -81,84 +77,67 @@ function citizen_custom_entity_presave(EntityInterface $entity) {
         $entity->set('field_alias', $alias);
         break;
       }
-  }
-  // Saving EC Button aliases from link.
-  if ($entity->bundle() == ('page' /*|| 'resource'*/)) {
-    $buttonList = [];
-    $allParagraphs = $entity->get('field_content')->referencedEntities();
-    foreach ($allParagraphs as $paragraph) {
-      $paragraphType = $paragraph->bundle();
-      if ($paragraphType == 'button') {
-        $buttons = $paragraph->get('field_ec_button');
-        foreach ($buttons as $key => $ecLink) {
-          $linkItem = $ecLink->getValue();
-          $uri = $linkItem['uri'];
-          // If the Link is external keep the alias the same as the url.
-          if (UrlHelper::isExternal($uri)) {
-            $linkItem['alias'] = $uri;
-          } else {
-            // If link path is returned as internal:.
-            if (strpos($uri, 'internal') === 0) {
-              // If the internal is actually to a node.
-              if (strpos($uri, 'node')) {
-                $input = explode("/", $uri);
-                $nid = $input[2];
-                $linkItem['alias'] = Url::fromRoute('entity.node.canonical', ['node' => $nid])->toString();
-              // If the internal is a fragment append the fragment onto the current nodes alias.
-              } else {
-                $input = explode(":", $uri);
-                $current_nid = $entity->id();
-                $linkItem['alias'] = Url::fromRoute('entity.node.canonical', ['node' => $current_nid])->toString() . $input[1];
-              }
-            } else {
-              $url = Url::fromUri($uri);
-              $nid = $url->getRouteParameters()['node'];
-              $linkItem['alias'] = Url::fromRoute('entity.node.canonical', ['node' => $nid])->toString();
-            }
-          }
-          // Generate the array of values to assign to the paragraph.
-          $buttonList[] = $linkItem;
+    case 'escape':
+      $links = $entity->get('field_escape_link');
+      $current_nid = '<front>';
+      $linksList = aliasProcess($links, $current_nid);
+      $entity->set('field_escape_link', $linksList);
+      break;
+    case 'page':
+      $current_nid = $entity->id();
+      $allParagraphs = $entity->get('field_content')->referencedEntities();
+      foreach ($allParagraphs as $paragraph) {
+        $paragraphType = $paragraph->bundle();
+        if ($paragraphType == 'button') {
+          $links = $paragraph->get('field_buttons');
+          $linksList = aliasProcess($links, $current_nid);
+          $paragraph->set('field_buttons', $linksList);
+          $paragraph->save();
         }
-        $paragraph->set('field_ec_button', $buttonList);
-        $paragraph->save();
+        if ($paragraphType === ('image' || 'text_with_image')) {
+          $links = $paragraph->get('field_link');
+          $linksList = aliasProcess($links, $current_nid);
+          $paragraph->set('field_link', $linksList);
+          $paragraph->save();
+        }
       }
-    }
+      break;
   }
 }
 
-//// todo: not quite working.
-//if ($entity->bundle() == ('button' /*|| 'resource'*/)) {
-//  $buttonList = [];
-//  $step1 = $entity->get('field_content')->referencedEntities();
-//  foreach ($step1 as $step2) {
-//    $step3 = $step2->bundle();
-//    if ($step3 == 'button') {
-//      $buttons = $step2->get('field_ec_button');
-//      foreach ($buttons as $key => $paragraph) {
-//        $linkItem = $paragraph->getValue();
-//        $uri = $linkItem['uri'];
-//        if (UrlHelper::isExternal($uri)) {
-//          $linkItem['alias'] = $uri;
-//        } else {
-//
-//          if (strpos($uri, 'internal') === 0) {
-//            $input = explode(":", $uri);
-//            $current_nid = $entity->getParentEntity()->id();
-//            $linkItem['alias'] = Url::fromRoute('entity.node.canonical', ['node' => $current_nid])->toString() . $input[1];
-//          } else {
-//            $url = Url::fromUri($uri);
-//            $nid = $url->getRouteParameters()['node'];
-//            $linkItem['alias'] = Url::fromRoute('entity.node.canonical', ['node' => $nid])->toString();
-//          }
-//        }
-//        $buttonList[] = $linkItem;
-//      }
-//      $step2->set('field_ec_button', $buttonList);
-//      $step2->save();
-//    }
-//  }
-//}
-//}
+function aliasProcess($links, $current_nid){
+  $linksList = [];
+  foreach ($links as $key => $ecLink) {
+    $linkItem = $ecLink->getValue();
+    $uri = $linkItem['uri'];
+    // If the Link is external keep the alias the same as the url.
+    if (UrlHelper::isExternal($uri)) {
+      $linkItem['alias'] = $uri;
+    } else {
+      // If link path is returned as internal:.
+      if (strpos($uri, 'internal') === 0) {
+        // If the internal is actually to a node.
+        if (strpos($uri, 'node')) {
+          $input = explode("/", $uri);
+          $nid = $input[2];
+          $linkItem['alias'] = Url::fromRoute('entity.node.canonical', ['node' => $nid])->toString();
+          // If the internal is a fragment append the fragment onto the current nodes alias.
+        } else {
+          $input = explode(":", $uri);
+          $linkItem['alias'] = Url::fromRoute('entity.node.canonical', ['node' => $current_nid])->toString() . $input[1];
+        }
+      } else {
+        $url = Url::fromUri($uri);
+        $nid = $url->getRouteParameters()['node'];
+        $linkItem['alias'] = Url::fromRoute('entity.node.canonical', ['node' => $nid])->toString();
+      }
+    }
+    // Generate the array of values to assign to the paragraph.
+    $linksList[] = $linkItem;
+  }
+  return $linksList;
+}
+
 
 /**
  * Implements hook_theme().
@@ -310,51 +289,3 @@ function citizen_custom_node_access(NodeInterface $node, $op, AccountInterface $
   // No opinion.
   return AccessResult::neutral();
 }
-
-
-//function citizen_custom_preprocess_field(&$variables, $hook){
-//  if ($variables['element']['#field_type'] === 'link') {
-//    $items = $variables["element"]["#items"];
-//    foreach ($items as $key => $item) {
-//      $uri = $item->getValue()['uri'];
-//      $external = UrlHelper::isExternal($uri);
-//      if ($external) {
-//      } else {
-//
-//        if (strpos($uri, 'internal') === 0) {
-//          $input = explode(":", $uri);
-//          $current_nid = $variables['element']['#object']->getParentEntity()->id();
-//          $alias = Url::fromRoute('entity.node.canonical', ['node' => $current_nid])->toString() . '/' . $input[1];
-//
-//
-//        } else {
-//          $url = Url::fromUri($uri);
-//          $nid = $url->getRouteParameters()['node'];
-//          $alias = Url::fromRoute('entity.node.canonical', ['node' => $nid])->toString();
-//          $variables['items'][$key]['content']['#ec_alias'] = $alias;
-//        }
-//      }
-//    }
-//  }
-//}
-
-//function citizen_custom_field_widget_link_default_form_alter(&$element, FormStateInterface $form_state, $context){
-//  $name = $context;
-//  $e = $element;
-//}
-
-
-//if ($url->isExternal()) {
-//  $alias = $item->uri;
-//} else {
-//  $uri = $item->getValue()['uri'];
-//  if (strpos($uri, 'internal') === 0) {
-//    $input = explode(":", $uri);
-//    $current_nid = $entity->getParentEntity()->id();
-//    $alias = Url::fromRoute('entity.node.canonical', ['node' => $current_nid])->toString() . '/' . $input[1];
-//  } else {
-//    $nid = $url->getRouteParameters()['node'];
-//    $alias = Url::fromRoute('entity.node.canonical', ['node' => $nid])->toString();
-//  }
-//}
-//$element[$delta]['alias'] = $alias;
