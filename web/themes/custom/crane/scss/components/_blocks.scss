@@ -9,3 +9,10 @@
 #block-crane-content{
 	padding: $elementSpace 0;
 }
+
+
+.entity-block_content-canonical:not(.role-administrator){
+	#block-crane-primary-local-tasks{
+		display: none;
+	}
+}

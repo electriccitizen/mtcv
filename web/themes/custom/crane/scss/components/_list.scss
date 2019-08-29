@@ -32,5 +32,14 @@
 		.description{
 			margin-bottom: 15px;
 		}
+		//hide one-off block types from non-admins
+		body:not(.role-administrator) &{
+			&.escape,&.home-featured-content,&.home-intro,&.home-resources,&.social-media-links{
+				display: none;
+				a{
+					pointer-events: none;
+				}
+			}
+		}
 	}//end li
 }//end admin list

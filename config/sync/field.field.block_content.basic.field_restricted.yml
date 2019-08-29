@@ -1,0 +1,23 @@
+uuid: a9217d39-0ddc-486d-8938-ebae4dd79680
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - field.storage.block_content.field_restricted
+id: block_content.basic.field_restricted
+field_name: field_restricted
+entity_type: block_content
+bundle: basic
+label: 'Prevent Delete'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

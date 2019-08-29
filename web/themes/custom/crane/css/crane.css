@@ -5574,6 +5574,9 @@ body:not(.role-administrator) #block-crane-secondary-local-tasks nav.tabs.blocks
 #block-crane-content {
   padding: 3rem 0; }
 
+.entity-block_content-canonical:not(.role-administrator) #block-crane-primary-local-tasks {
+  display: none; }
+
 /* ==============
 	 CONTAINERS
 ================== */
@@ -5759,6 +5762,11 @@ body:not(.role-administrator) #block-crane-secondary-local-tasks nav.tabs.blocks
 
 .admin-list li .description {
   margin-bottom: 15px; }
+
+body:not(.role-administrator) .admin-list li.escape, body:not(.role-administrator) .admin-list li.home-featured-content, body:not(.role-administrator) .admin-list li.home-intro, body:not(.role-administrator) .admin-list li.home-resources, body:not(.role-administrator) .admin-list li.social-media-links {
+  display: none; }
+  body:not(.role-administrator) .admin-list li.escape a, body:not(.role-administrator) .admin-list li.home-featured-content a, body:not(.role-administrator) .admin-list li.home-intro a, body:not(.role-administrator) .admin-list li.home-resources a, body:not(.role-administrator) .admin-list li.social-media-links a {
+    pointer-events: none; }
 
 /* ==============
 	 MEDIA BROWSER
@@ -6839,6 +6847,14 @@ nav#block-crane-quicklinks {
 .crane .media-library-select-all {
   margin: 1rem 8px;
   font-size: 1.6rem; }
+
+.view-id-block_content .views-field-info .restricted {
+  color: #bf0e0e;
+  font-size: 1.4rem;
+  margin-left: .5rem; }
+
+body:not(.role-administrator) .view-id-block_content td.views-field-operations.Yes .dropbutton-wrapper .delete, body:not(.role-administrator) .view-id-block_content td.views-field-operations.Social .dropbutton-wrapper .delete, body:not(.role-administrator) .view-id-block_content td.views-field-operations.Home .dropbutton-wrapper .delete, body:not(.role-administrator) .view-id-block_content td.views-field-operations.Escape .dropbutton-wrapper .delete {
+  display: none; }
 
 /* RECENT LOG MESSAGES
 ------------------------ */

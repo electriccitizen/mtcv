@@ -5,6 +5,7 @@ dependencies:
   config:
     - block_content.type.logo_grid
     - field.field.block_content.logo_grid.field_logo_grid
+    - field.field.block_content.logo_grid.field_restricted
   module:
     - entity_reference_revisions
 id: block_content.logo_grid.default
@@ -20,5 +21,15 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
+  field_restricted:
+    weight: 1
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
 hidden: {  }

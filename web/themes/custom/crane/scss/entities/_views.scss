@@ -197,6 +197,25 @@
 	font-size: 1.6rem;
 }//end media library select all
 
+.view-id-block_content{
+	.views-field-info{
+		.restricted{
+			color: $red;
+			font-size: 1.4rem;
+			margin-left: .5rem;
+		}
+	}
+	td.views-field-operations.Yes,td.views-field-operations.Social,td.views-field-operations.Home,td.views-field-operations.Escape{
+		body:not(.role-administrator) &{
+			.dropbutton-wrapper{
+				.delete{
+					display: none;
+				}
+			}
+		}
+	}
+}
+
 /* RECENT LOG MESSAGES
 ------------------------ */
 .admin-dblog{

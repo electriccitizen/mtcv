@@ -1,0 +1,23 @@
+uuid: 1b97ab2e-be3e-4aeb-a351-9d2793673faf
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.logo_grid
+    - field.storage.block_content.field_restricted
+id: block_content.logo_grid.field_restricted
+field_name: field_restricted
+entity_type: block_content
+bundle: logo_grid
+label: 'Prevent Delete'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

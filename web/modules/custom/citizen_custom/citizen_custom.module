@@ -175,15 +175,43 @@ function citizen_custom_form_alter(&$form, FormStateInterface $form_state) {
       $form['field_restricted']['#access'] = TRUE;
     }else{
       $form['field_restricted']['#access'] = FALSE;
+      //remove delete option from basic blocks and logo grid blocks for non-admins
+      if($form['field_restricted']['widget']['value']['#default_value'] == TRUE){
+        if (($formId == 'block-content-basic-edit-form') || ($formId == 'block-content-logo-grid-edit-form')){
+          unset($form['actions']['delete']);
+        }
+      }
     }
+  }
+  //prevent non-admin deletion of all one-off blocks
+  switch($formId){
+    case 'block-content-homepage-featured-content-edit-form':
+      if(!in_array('administrator', $userRole)){
+        unset($form['actions']['delete']);
+      }
+    case 'block-content-homepage-intro-edit-form':
+      if(!in_array('administrator', $userRole)){
+        unset($form['actions']['delete']);
+      }
+    case 'block-content-homepage-resources-edit-form':
+      if(!in_array('administrator', $userRole)){
+        unset($form['actions']['delete']);
+      }
+    case 'block-content-social-media-links-edit-form':
+      if(!in_array('administrator', $userRole)){
+        unset($form['actions']['delete']);
+      }
+    case 'block-content-escape-edit-form':
+      if(!in_array('administrator', $userRole)){
+        unset($form['actions']['delete']);
+      }
   }
 }
 
 /**
  * Implements hook_node_access().
  *
- * Enforces our access rules for custom workflow target content to force updates
- * only if the user is targeted in the user select field
+ * Enforces admin access restriction on marked entities
  */
 function citizen_custom_node_access(NodeInterface $node, $op, AccountInterface $account) {
   // If a node is being updated
