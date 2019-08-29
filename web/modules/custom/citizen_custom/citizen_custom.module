@@ -82,66 +82,83 @@ function citizen_custom_entity_presave(EntityInterface $entity) {
         break;
       }
   }
-
-  // todo: not quite working.
-  if ($entity->bundle() == ('button' /*|| 'resource'*/)) {
-    $buttons = $entity->get('field_citizen_button');
-    foreach ($buttons as $key => $paragraph) {
-      $linkItem = $paragraph->getValue();
-      $uri = $linkItem['uri'];
-      if (UrlHelper::isExternal($uri)) {
-        $linkItem['alias'] = $uri;
-      } else {
-
-        if (strpos($uri, 'internal') === 0) {
-          $input = explode(":", $uri);
-          $current_nid = $entity->getParentEntity()->id();
-          $linkItem['alias'] = Url::fromRoute('entity.node.canonical', ['node' => $current_nid])->toString() . '/' . $input[1];
-        } else {
-          $url = Url::fromUri($uri);
-          $nid = $url->getRouteParameters()['node'];
-          $linkItem['alias'] = Url::fromRoute('entity.node.canonical', ['node' => $nid])->toString();
+  // Saving EC Button aliases from link.
+  if ($entity->bundle() == ('page' /*|| 'resource'*/)) {
+    $buttonList = [];
+    $allParagraphs = $entity->get('field_content')->referencedEntities();
+    foreach ($allParagraphs as $paragraph) {
+      $paragraphType = $paragraph->bundle();
+      if ($paragraphType == 'button') {
+        $buttons = $paragraph->get('field_ec_button');
+        foreach ($buttons as $key => $ecLink) {
+          $linkItem = $ecLink->getValue();
+          $uri = $linkItem['uri'];
+          // If the Link is external keep the alias the same as the url.
+          if (UrlHelper::isExternal($uri)) {
+            $linkItem['alias'] = $uri;
+          } else {
+            // If link path is returned as internal:.
+            if (strpos($uri, 'internal') === 0) {
+              // If the internal is actually to a node.
+              if (strpos($uri, 'node')) {
+                $input = explode("/", $uri);
+                $nid = $input[2];
+                $linkItem['alias'] = Url::fromRoute('entity.node.canonical', ['node' => $nid])->toString();
+              // If the internal is a fragment append the fragment onto the current nodes alias.
+              } else {
+                $input = explode(":", $uri);
+                $current_nid = $entity->id();
+                $linkItem['alias'] = Url::fromRoute('entity.node.canonical', ['node' => $current_nid])->toString() . $input[1];
+              }
+            } else {
+              $url = Url::fromUri($uri);
+              $nid = $url->getRouteParameters()['node'];
+              $linkItem['alias'] = Url::fromRoute('entity.node.canonical', ['node' => $nid])->toString();
+            }
+          }
+          // Generate the array of values to assign to the paragraph.
+          $buttonList[] = $linkItem;
         }
+        $paragraph->set('field_ec_button', $buttonList);
+        $paragraph->save();
       }
-      $paragraph->setMyValue([
-        'uri' => $linkItem['uri'],
-        'title' => $linkItem['title'],
-        'options' => $linkItem['options'],
-        'alias' => $linkItem['alias']
-      ]);
-//      $paragraph->set('alias', $linkItem['alias']);
     }
   }
 }
 
-/**
- * Implements hook_entity_save().
- */
-//function citizen_custom_entity_Postsave(EntityInterface $entity) {
-//  if ($entity->bundle() == ('button' /*|| 'resource'*/)) {
-//    $paragraphs = $entity->get('field_citizen_button');
-//    foreach ($paragraphs as $key => $item) {
-//      $uri = $item->getValue()['uri'];
-//      if (UrlHelper::isExternal($uri)) {
-//        $alias = $uri;
-//      } else {
-//
-//        if (strpos($uri, 'internal') === 0) {
-//          $input = explode(":", $uri);
-//          $current_nid = $entity->getParentEntity()->id();
-//          $alias = Url::fromRoute('entity.node.canonical', ['node' => $current_nid])->toString() . '/' . $input[1];
+//// todo: not quite working.
+//if ($entity->bundle() == ('button' /*|| 'resource'*/)) {
+//  $buttonList = [];
+//  $step1 = $entity->get('field_content')->referencedEntities();
+//  foreach ($step1 as $step2) {
+//    $step3 = $step2->bundle();
+//    if ($step3 == 'button') {
+//      $buttons = $step2->get('field_ec_button');
+//      foreach ($buttons as $key => $paragraph) {
+//        $linkItem = $paragraph->getValue();
+//        $uri = $linkItem['uri'];
+//        if (UrlHelper::isExternal($uri)) {
+//          $linkItem['alias'] = $uri;
 //        } else {
-//          $url = Url::fromUri($uri);
-//          $nid = $url->getRouteParameters()['node'];
-//          $alias = Url::fromRoute('entity.node.canonical', ['node' => $nid])->toString();
+//
+//          if (strpos($uri, 'internal') === 0) {
+//            $input = explode(":", $uri);
+//            $current_nid = $entity->getParentEntity()->id();
+//            $linkItem['alias'] = Url::fromRoute('entity.node.canonical', ['node' => $current_nid])->toString() . $input[1];
+//          } else {
+//            $url = Url::fromUri($uri);
+//            $nid = $url->getRouteParameters()['node'];
+//            $linkItem['alias'] = Url::fromRoute('entity.node.canonical', ['node' => $nid])->toString();
+//          }
 //        }
+//        $buttonList[] = $linkItem;
 //      }
-//      $item->set('alias', $alias);
-//      $entity->save();
+//      $step2->set('field_ec_button', $buttonList);
+//      $step2->save();
 //    }
 //  }
 //}
-
+//}
 
 /**
  * Implements hook_theme().

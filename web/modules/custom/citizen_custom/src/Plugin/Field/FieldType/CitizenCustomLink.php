@@ -5,6 +5,7 @@ namespace Drupal\citizen_custom\Plugin\Field\FieldType;
 use Drupal\Core\TypedData\DataDefinition;
 use Drupal\link\Plugin\Field\FieldType\LinkItem;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
+use Drupal\Core\TypedData\MapDataDefinition;
 
 /**
  * @FieldType(
@@ -39,32 +40,26 @@ class CitizenCustomLink extends LinkItem {
       return $schema;
   }
 
-
   /**
-   * {@inheritdoc}
+   * Overrides \Drupal\Core\TypedData\TypedData::setValue().
+   *
+   * @param array|null $values
+   *   An array of property values.
    */
-  protected function setMyValue($values, $notify = TRUE) {
-    // Treat the values as property value of the main property, if no array is
-    // given.
-    if (isset($values) && !is_array($values)) {
-      $values = [static::mainPropertyName() => $values];
-    }
-    if (isset($values)) {
-      $values += [
-        'options' => [],
-      ];
-    }
-    // Unserialize the values, this is deprecated as the storage takes care of
-    // this, options must not be passed as a string anymore.
-    if (is_string($values['options'])) {
-      @trigger_error('Support for passing options as a serialized string is deprecated in 8.7.0 and will be removed before Drupal 9.0.0. Pass them as an array instead. See https://www.drupal.org/node/2961643.', E_USER_DEPRECATED);
-      if (version_compare(PHP_VERSION, '7.0.0', '>=')) {
-        $values['options'] = unserialize($values['options'], ['allowed_classes' => FALSE]);
-      } else {
-        $values['options'] = unserialize($values['options']);
-      }
-    }
-
-    parent::setMyValue($values, $notify);
-  }
+//  public function setValue($values, $notify = TRUE) {
+//    if (isset($values) && !is_array($values)) {
+//      throw new \InvalidArgumentException("Invalid values given. Values must be represented as an associative array.");
+//    }
+//    $this->values = $values;
+//
+//    // Update any existing property objects.
+//    foreach ($this->properties as $name => $property) {
+//      $value = isset($values[$name]) ? $values[$name] : NULL;
+//      $property->setValue($value, TRUE);
+//    }
+//    // Notify the parent of any changes.
+//    if ($notify && isset($this->parent)) {
+//      $this->parent->onChange($this->name);
+//    }
+//  }
 }

@@ -25,10 +25,8 @@ class CitizenCustomLinkWidget extends LinkWidget {
       '#type' => 'textfield',
       '#title' => $this->t('Alias as text'),
       '#placeholder' => '',
-      '#default_value' => NULL,
+      '#default_value' => '',
       '#maxlength' => 255,
-      '#access' => $this->getFieldSetting('title') != DRUPAL_DISABLED,
-      '#required' => $this->getFieldSetting('title') === DRUPAL_REQUIRED && $element['#required'],
     ];
     return $element;
   }
