@@ -215,7 +215,7 @@ function citizen_custom_form_alter(&$form, FormStateInterface $form_state) {
  */
 function citizen_custom_node_access(NodeInterface $node, $op, AccountInterface $account) {
   // If a node is being updated
-  if (($op == 'update') || ($op == 'delete') || ($op == 'view')) {
+  if (($op == 'update') || ($op == 'delete')) {
     if (isset($node->field_restricted)) {
       if (!empty($node->field_restricted)) {
         if ($node->get("field_restricted")->getString() == '1') {
