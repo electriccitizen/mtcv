@@ -173,6 +173,9 @@ function citizen_custom_form_alter(&$form, FormStateInterface $form_state) {
     $form['field_restricted']['#group'] = 'footer';
     if(in_array('administrator', $userRole)){
       $form['field_restricted']['#access'] = TRUE;
+      if(($form['field_restricted']['widget']['value']['#default_value'] == TRUE) && ($formId == 'node-page-edit-form')){
+        drupal_set_message('Editing or deleting restricted pages can have grave consequences in Gatsby. Proceed with caution.','warning');
+      }
     }else{
       $form['field_restricted']['#access'] = FALSE;
       //remove delete option from basic blocks and logo grid blocks for non-admins

@@ -2,13 +2,13 @@
 
 /**
  * @file
- * Functions to support theming in the Adminimal theme.
+ * Functions to support theming in the Crane theme.
  */
 use Drupal\Core\Template\Attribute;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Implements hook_page_alter.
+ * Implements hook_preprocess_page.
  */
 function crane_front_preprocess_page(&$variables) {
   $node = Drupal::request()->attributes->get('node');
@@ -21,7 +21,7 @@ function crane_front_preprocess_page(&$variables) {
 }
 
 /**
- * Implements hook_page_alter.
+ * Implements hook_preprocess_block.
  */
 function crane_front_preprocess_block(&$variables) {
   //find the logged in user's first name and pass to branding block
@@ -31,6 +31,14 @@ function crane_front_preprocess_block(&$variables) {
       $variables['fname'] = $user->field_first_name;
     }
   }
+}
+
+/**
+ * Implements hook_preprocess_node
+ */
+function crane_front_preprocess_node(&$variables) {
+  $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
+  $variables['userRoles'] = $user->getRoles();
 }
 
 /**

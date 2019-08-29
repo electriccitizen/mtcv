@@ -46,7 +46,16 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
+  field_restricted:
+    type: boolean
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      format: yes-no
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
 hidden:
   field_metatags: true
-  field_restricted: true
   links: true

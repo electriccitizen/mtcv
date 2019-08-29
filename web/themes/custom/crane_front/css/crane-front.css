@@ -573,6 +573,10 @@ ol {
   margin-bottom: .75rem;
   font-size: 1.6rem; }
 
+.restricted {
+  text-align: center;
+  padding: 100px 0 0; }
+
 /* ========================
   FORM ELEMENTS
 ========================== */

@@ -96,7 +96,11 @@
   {% endif %}
 
   <div{{ content_attributes }}>
-    {{ content }}
+    {% if (content.field_restricted.0['#markup'] == 'Yes') and ('administrator' not in userRoles) %}
+      <div class="restricted">You must be logged in as an administrator to view this page.</div>
+    {% else %}
+      {{ content }}
+    {% endif %}
   </div>
 
 </article>
