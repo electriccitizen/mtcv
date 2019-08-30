@@ -79,7 +79,8 @@ function citizen_custom_entity_presave(EntityInterface $entity) {
       }
     case 'escape':
       $links = $entity->get('field_escape_link');
-      $current_nid = '<front>';
+      $config = \Drupal::configFactory()->getEditable('system.site');
+      $current_nid = $config->getRawData()['page']['front'];
       $linksList = aliasProcess($links, $current_nid);
       $entity->set('field_escape_link', $linksList);
       break;
@@ -94,7 +95,7 @@ function citizen_custom_entity_presave(EntityInterface $entity) {
           $paragraph->set('field_buttons', $linksList);
           $paragraph->save();
         }
-        if ($paragraphType === ('image' || 'text_with_image')) {
+        if ($paragraphType === 'image' || $paragraphType === 'text_with_image') {
           $links = $paragraph->get('field_link');
           $linksList = aliasProcess($links, $current_nid);
           $paragraph->set('field_link', $linksList);
@@ -116,6 +117,10 @@ function aliasProcess($links, $current_nid){
     } else {
       // If link path is returned as internal:.
       if (strpos($uri, 'internal') === 0) {
+        if ($uri === 'internal:/') {
+          $config = \Drupal::configFactory()->getEditable('system.site');
+          $linkItem['alias'] = $config->getRawData()['page']['front'];
+        } else
         // If the internal is actually to a node.
         if (strpos($uri, 'node')) {
           $input = explode("/", $uri);
