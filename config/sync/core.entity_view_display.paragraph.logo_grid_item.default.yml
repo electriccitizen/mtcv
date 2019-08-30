@@ -3,19 +3,19 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.logo_grid_item.field_link
+    - field.field.paragraph.logo_grid_item.field_logo_link
     - field.field.paragraph.logo_grid_item.field_single_image
     - image.style.thumbnail
     - paragraphs.paragraphs_type.logo_grid_item
   module:
-    - citizen_custom
+    - link
     - media
 id: paragraph.logo_grid_item.default
 targetEntityType: paragraph
 bundle: logo_grid_item
 mode: default
 content:
-  field_link:
+  field_logo_link:
     weight: 1
     label: hidden
     settings:
@@ -25,7 +25,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: citizen_link
+    type: link
     region: content
   field_single_image:
     weight: 0
