@@ -8,7 +8,7 @@ dependencies:
     - field.field.block_content.escape.field_headline
     - field.field.block_content.escape.field_search_terms
   module:
-    - link
+    - citizen_custom
     - text
 id: block_content.escape.default
 targetEntityType: block_content
@@ -25,7 +25,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    type: citizen_link
     region: content
   field_headline:
     weight: 2

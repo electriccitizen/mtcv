@@ -1,4 +1,4 @@
-uuid: 0b1522fa-d7fe-41da-a068-9fce2f7daad6
+uuid: 0bc98ccc-3a46-4a97-af04-0e0ca04ca673
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     - field.storage.paragraph.field_link
     - paragraphs.paragraphs_type.image
   module:
-    - link
+    - citizen_custom
 id: paragraph.image.field_link
 field_name: field_link
 entity_type: paragraph
@@ -18,6 +18,6 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  link_type: 17
-  title: 2
-field_type: link
+  link_type: '17'
+  title: '2'
+field_type: citizen_custom_link

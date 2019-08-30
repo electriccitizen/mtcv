@@ -8,7 +8,7 @@ dependencies:
     - image.style.thumbnail
     - paragraphs.paragraphs_type.logo_grid_item
   module:
-    - link
+    - citizen_custom
     - media
 id: paragraph.logo_grid_item.default
 targetEntityType: paragraph
@@ -25,7 +25,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    type: citizen_link
     region: content
   field_single_image:
     weight: 0

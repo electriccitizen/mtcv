@@ -1,16 +1,16 @@
-uuid: f23afa71-f1df-42b2-a1fa-7eff5a580b54
+uuid: a23f01c0-b20e-4ef9-bad9-f8ff7adb0a3c
 langcode: en
 status: true
 dependencies:
   module:
-    - link
+    - citizen_custom
     - paragraphs
 id: paragraph.field_buttons
 field_name: field_buttons
 entity_type: paragraph
-type: link
+type: citizen_custom_link
 settings: {  }
-module: link
+module: citizen_custom
 locked: false
 cardinality: -1
 translatable: true

@@ -1,16 +1,16 @@
-uuid: 65170f54-391f-4d1b-992c-ac9a8a0935c3
+uuid: 9ca5c471-c763-4ffb-99aa-fc92fc634814
 langcode: en
 status: true
 dependencies:
   module:
     - block_content
-    - link
+    - citizen_custom
 id: block_content.field_escape_link
 field_name: field_escape_link
 entity_type: block_content
-type: link
+type: citizen_custom_link
 settings: {  }
-module: link
+module: citizen_custom
 locked: false
 cardinality: 1
 translatable: true

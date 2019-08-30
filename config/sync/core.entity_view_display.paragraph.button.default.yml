@@ -7,7 +7,7 @@ dependencies:
     - field.field.paragraph.button.field_header
     - paragraphs.paragraphs_type.button
   module:
-    - link
+    - citizen_custom
 id: paragraph.button.default
 targetEntityType: paragraph
 bundle: button
@@ -23,7 +23,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    type: citizen_link
     region: content
   field_header:
     weight: 0

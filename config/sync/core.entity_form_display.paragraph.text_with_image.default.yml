@@ -10,7 +10,7 @@ dependencies:
     - field.field.paragraph.text_with_image.field_text
     - paragraphs.paragraphs_type.text_with_image
   module:
-    - link
+    - citizen_custom
     - media_library
     - text
 id: paragraph.text_with_image.default
@@ -38,7 +38,7 @@ content:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
+    type: citizen_link
     region: content
   field_single_image:
     weight: 2

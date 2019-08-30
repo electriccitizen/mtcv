@@ -1,4 +1,4 @@
-uuid: 4d849570-3872-4d52-8db7-cb82483bc598
+uuid: c4db29f2-e54e-4915-8d56-a8c64ffa6dc2
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     - block_content.type.escape
     - field.storage.block_content.field_escape_link
   module:
-    - link
+    - citizen_custom
 id: block_content.escape.field_escape_link
 field_name: field_escape_link
 entity_type: block_content
@@ -18,6 +18,6 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  link_type: 17
-  title: 0
-field_type: link
+  link_type: '17'
+  title: '0'
+field_type: citizen_custom_link

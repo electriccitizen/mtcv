@@ -1,4 +1,4 @@
-uuid: d02b15c2-868d-4608-998a-0e4c4a4598c6
+uuid: 326417e0-254f-4621-b84d-66f983057cb0
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     - field.storage.paragraph.field_buttons
     - paragraphs.paragraphs_type.button
   module:
-    - link
+    - citizen_custom
 id: paragraph.button.field_buttons
 field_name: field_buttons
 entity_type: paragraph
@@ -18,6 +18,6 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  link_type: 17
-  title: 2
-field_type: link
+  link_type: '17'
+  title: '2'
+field_type: citizen_custom_link

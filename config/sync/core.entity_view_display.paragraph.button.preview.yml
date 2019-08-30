@@ -8,8 +8,8 @@ dependencies:
     - field.field.paragraph.button.field_header
     - paragraphs.paragraphs_type.button
   module:
+    - citizen_custom
     - layout_builder
-    - link
 third_party_settings:
   layout_builder:
     allow_custom: false
@@ -20,16 +20,16 @@ bundle: button
 mode: preview
 content:
   field_buttons:
+    type: citizen_link
     weight: 0
+    region: content
     label: hidden
     settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
+      trim_length: '80'
+      url_only: ''
+      url_plain: ''
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
-    region: content
 hidden:
   field_header: true
