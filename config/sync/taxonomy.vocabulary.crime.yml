@@ -46,7 +46,7 @@ third_party_settings:
     destination: url
     url: /admin/structure/taxonomy/manage/crime/overview
     personalizable: 0
-    redirect_edit: 1
+    redirect_edit: 0
     external: ''
 name: Crimes
 vid: crime

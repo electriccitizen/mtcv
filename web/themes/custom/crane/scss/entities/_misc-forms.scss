@@ -16,7 +16,7 @@
 ---------------------- */
 .taxonomy-overview-terms{
 	td{
-		a.menu-item__link{
+		a.menu-item__link,& > a[id*="edit-term"]{
 			pointer-events: none;
 			color: $black;
 			font-weight: 700;

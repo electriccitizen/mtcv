@@ -6200,11 +6200,11 @@ nav#block-crane-quicklinks {
 
 /* TAXONOMY OVERVIEW
 ---------------------- */
-.taxonomy-overview-terms td a.menu-item__link {
+.taxonomy-overview-terms td a.menu-item__link, .taxonomy-overview-terms td > a[id*="edit-term"] {
   pointer-events: none;
   color: #1f2225;
   font-weight: 700; }
-  .taxonomy-overview-terms td a.menu-item__link:hover, .taxonomy-overview-terms td a.menu-item__link:focus {
+  .taxonomy-overview-terms td a.menu-item__link:hover, .taxonomy-overview-terms td a.menu-item__link:focus, .taxonomy-overview-terms td > a[id*="edit-term"]:hover, .taxonomy-overview-terms td > a[id*="edit-term"]:focus {
     text-decoration: none; }
 
 .taxonomy-overview-terms #edit-actions input.form-submit {

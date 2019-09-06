@@ -6,9 +6,9 @@ dependencies:
     - entity_redirect
 third_party_settings:
   entity_redirect:
-    destination: default
-    url: ''
-    personalizable: 1
+    destination: url
+    url: /admin/structure/taxonomy/manage/county/overview
+    personalizable: 0
     redirect_edit: 0
     external: ''
     personalization:
