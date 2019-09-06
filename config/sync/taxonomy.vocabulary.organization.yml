@@ -1,0 +1,17 @@
+uuid: c421193c-a1b7-406f-97a3-c6f366bab40d
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_redirect
+third_party_settings:
+  entity_redirect:
+    destination: default
+    url: ''
+    personalizable: 1
+    redirect_edit: 0
+    external: ''
+name: Organization
+vid: organization
+description: 'Organization for Resources'
+weight: 0
