@@ -1,16 +1,16 @@
-uuid: 41f5294d-3eb3-4e59-af85-32f574799e7f
+uuid: 081308af-93aa-45cd-b9a1-58c50eda0418
 langcode: en
 status: true
 dependencies:
   module:
-    - link
+    - citizen_custom
     - paragraphs
 id: paragraph.field_link
 field_name: field_link
 entity_type: paragraph
-type: link
+type: citizen_custom_link
 settings: {  }
-module: link
+module: citizen_custom
 locked: false
 cardinality: 1
 translatable: true

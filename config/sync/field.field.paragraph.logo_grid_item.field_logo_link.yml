@@ -1,20 +1,20 @@
-uuid: 39c8f716-736d-4de2-9c72-edc449582da1
+uuid: 8be2db49-ea09-454b-b8f3-32defc3f83d1
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_link
+    - field.storage.paragraph.field_logo_link
     - paragraphs.paragraphs_type.logo_grid_item
   module:
     - link
-id: paragraph.logo_grid_item.field_link
-field_name: field_link
+id: paragraph.logo_grid_item.field_logo_link
+field_name: field_logo_link
 entity_type: paragraph
 bundle: logo_grid_item
 label: 'Logo Link'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

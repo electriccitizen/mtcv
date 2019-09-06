@@ -1,18 +1,18 @@
-uuid: a23f01c0-b20e-4ef9-bad9-f8ff7adb0a3c
+uuid: 459900d2-9257-4163-a87b-6c948a283a67
 langcode: en
 status: true
 dependencies:
   module:
-    - citizen_custom
+    - link
     - paragraphs
-id: paragraph.field_buttons
-field_name: field_buttons
+id: paragraph.field_logo_link
+field_name: field_logo_link
 entity_type: paragraph
-type: citizen_custom_link
+type: link
 settings: {  }
-module: citizen_custom
+module: link
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

@@ -12,6 +12,7 @@ use Drupal\Component\Utility\UrlHelper;
 use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\node\NodeInterface;
+use Drupal\Core\Url;
 
 /**
  * Implements hook_help().
@@ -76,7 +77,70 @@ function citizen_custom_entity_presave(EntityInterface $entity) {
         $entity->set('field_alias', $alias);
         break;
       }
+    case 'escape':
+      $links = $entity->get('field_escape_link');
+      $config = \Drupal::configFactory()->getEditable('system.site');
+      $current_nid = $config->getRawData()['page']['front'];
+      $linksList = aliasProcess($links, $current_nid);
+      $entity->set('field_escape_link', $linksList);
+      break;
+    case 'page':
+      $current_nid = $entity->id();
+      $allParagraphs = $entity->get('field_content')->referencedEntities();
+      foreach ($allParagraphs as $paragraph) {
+        $paragraphType = $paragraph->bundle();
+        if ($paragraphType == 'button') {
+          $links = $paragraph->get('field_buttons');
+          $linksList = aliasProcess($links, $current_nid);
+          $paragraph->set('field_buttons', $linksList);
+          $paragraph->save();
+        }
+        if ($paragraphType === 'image' || $paragraphType === 'text_with_image') {
+          $links = $paragraph->get('field_link');
+          $linksList = aliasProcess($links, $current_nid);
+          $paragraph->set('field_link', $linksList);
+          $paragraph->save();
+        }
+      }
+      break;
   }
+}
+
+function aliasProcess($links, $current_nid){
+  $linksList = [];
+  foreach ($links as $key => $ecLink) {
+    $linkItem = $ecLink->getValue();
+    $uri = $linkItem['uri'];
+    // If the Link is external keep the alias the same as the url.
+    if (UrlHelper::isExternal($uri)) {
+      $linkItem['alias'] = $uri;
+    } else {
+      // If link path is returned as internal:.
+      if (strpos($uri, 'internal') === 0) {
+        if ($uri === 'internal:/') {
+          $config = \Drupal::configFactory()->getEditable('system.site');
+          $linkItem['alias'] = $config->getRawData()['page']['front'];
+        } else
+        // If the internal is actually to a node.
+        if (strpos($uri, 'node')) {
+          $input = explode("/", $uri);
+          $nid = $input[2];
+          $linkItem['alias'] = Url::fromRoute('entity.node.canonical', ['node' => $nid])->toString();
+          // If the internal is a fragment append the fragment onto the current nodes alias.
+        } else {
+          $input = explode(":", $uri);
+          $linkItem['alias'] = Url::fromRoute('entity.node.canonical', ['node' => $current_nid])->toString() . $input[1];
+        }
+      } else {
+        $url = Url::fromUri($uri);
+        $nid = $url->getRouteParameters()['node'];
+        $linkItem['alias'] = Url::fromRoute('entity.node.canonical', ['node' => $nid])->toString();
+      }
+    }
+    // Generate the array of values to assign to the paragraph.
+    $linksList[] = $linkItem;
+  }
+  return $linksList;
 }
 
 
@@ -141,7 +205,7 @@ function citizen_custom_form_alter(&$form, FormStateInterface $form_state) {
   $formId = $form['#id'];
   $user = \Drupal::currentUser();
   $userRole = $user->getRoles();
-  
+
   //clean up menu link form for non-admins
   if($formId == 'menu-link-content-menu-link-content-form'){
     $parentMenu = substr($form['menu_parent']['#default_value'], 0, -1);
@@ -230,4 +294,3 @@ function citizen_custom_node_access(NodeInterface $node, $op, AccountInterface $
   // No opinion.
   return AccessResult::neutral();
 }
-

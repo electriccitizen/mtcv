@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.logo_grid_item.field_link
+    - field.field.paragraph.logo_grid_item.field_logo_link
     - field.field.paragraph.logo_grid_item.field_single_image
     - image.style.thumbnail
     - paragraphs.paragraphs_type.logo_grid_item
@@ -15,7 +15,7 @@ targetEntityType: paragraph
 bundle: logo_grid_item
 mode: default
 content:
-  field_link:
+  field_logo_link:
     weight: 1
     label: hidden
     settings:
