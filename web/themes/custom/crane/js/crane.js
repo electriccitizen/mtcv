@@ -30,6 +30,16 @@ Drupal.behaviors.pageMenu = {
       var wwidth = $(window).outerWidth();
 
       //set button roles, tab indexes and keypresses on sidebar links
+      $(document).on('click','.crane-menu-toggle',function(e){
+        e.preventDefault();
+        if($(this).is('.crane-menu-toggle.active')){
+          $(this).removeClass('active').next('ul.root-menu').slideUp(300);
+        }else{
+          $(this).addClass('active').next('ul.root-menu').slideDown(300);
+        }
+      });
+
+      //set button roles, tab indexes and keypresses on sidebar links
       $(document).on('click','#block-crane-quicklinks.desk-quick .item-level-1 > a:not(.live)',function(e){
         e.preventDefault();
         $('#block-crane-quicklinks li.expanded').removeClass('expanded').find('> a').attr('aria-expanded', 'false').siblings('ul').animate({'left':'-310'}, 300).attr('aria-hidden', 'true');
@@ -39,7 +49,7 @@ Drupal.behaviors.pageMenu = {
         e.preventDefault();
         $('#block-crane-quicklinks li.expanded').removeClass('expanded').find('> a').attr('aria-expanded', 'false').siblings('ul').animate({'left':'-310'}, 300).attr('aria-hidden', 'true');
       });
-      $(document).on('click','#block-crane-quicklinks.mobile-quick .item-level-1 > a',function(e){
+      $(document).on('click','#block-crane-quicklinks.mobile-quick .item-level-1 > a:not(.live)',function(e){
         e.preventDefault();
         if($(this).attr('aria-expanded') == 'true'){
           $(this).attr('aria-expanded', "false").siblings('ul').slideUp(300).attr('aria-hidden', 'true').end().closest('li').removeClass('expanded');

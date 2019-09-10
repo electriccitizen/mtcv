@@ -9,6 +9,16 @@ Drupal.behaviors.pageMenu = {
 
 			var wwidth = $(window).outerWidth();
 
+      //set button roles, tab indexes and keypresses on sidebar links
+      $(document).on('click','.crane-menu-toggle',function(e){
+        e.preventDefault();
+        if($(this).is('.crane-menu-toggle.active')){
+          $(this).removeClass('active').next('ul.root-menu').slideUp(300);
+        }else{
+          $(this).addClass('active').next('ul.root-menu').slideDown(300);
+        }
+      });
+
 			//set button roles, tab indexes and keypresses on sidebar links
 			$(document).on('click','#block-quicklinks.desk-quick .item-level-1 > a:not(.live)',function(e){
 				e.preventDefault();

@@ -41,14 +41,42 @@ nav#block-quicklinks{
 	.contextual{
 		display: none;
 	}
+	a.crane-menu-toggle{
+		position: absolute;
+		z-index: 499;
+		top: 8px;
+		right: 20px;
+		padding: 3px 10px;
+		color: $black;
+		display: block;
+		border: 1px solid $black;
+		font-weight: $heavy;
+		text-decoration: none;
+		&:hover,&:focus{
+			opacity: .7;
+		}
+		&.active{
+			background: $black;
+			color: $white;
+		}
+		@include tab{
+			display: none;
+		}
+	}
 	ul:not(.contextual-links){
 		@include listReset;
 		&.root-menu{
 			@include onlySmall{
-				@include safeFlex(row,wrap,center,start);
+				display: none;
+				background: $quickLinkBar;
+				position: absolute;
+				top: 54px;
+				left: 0;
+				width: 100%;
 			}
 			@include tab{
 				position: relative;
+				display: block !important;
 			}
 			.manager{
 				.role-editor:not(.role-site_manager) &{
@@ -61,15 +89,9 @@ nav#block-quicklinks{
 				}
 			}
 			ul{
-				position: absolute;
-				top: 50px;
-				left: 0;
-				width: 100%;
-				z-index: 601;
-				padding: 10px 0;
 				display: none;
-				background: darken($quickLinkBar, 3%);
 				@include tab{
+					position: absolute;
 					top: 0;
 					left: -310px;
 					width: 225px;
@@ -94,20 +116,16 @@ nav#block-quicklinks{
 				}
 				& > a{
 					display: block;
-					width: 50px;
-					height: 50px;
 					position: relative;
 					z-index: 499;
 					color: $black;
 					font-size: 2rem;
 					font-weight: $heavy;
 					text-decoration: none;
-					text-indent: -9000px;
+					padding: 8px 15px 8px 50px;
 					@include tab{
 						text-indent: 0;
 						width: 100%;
-						height: auto;
-						padding: 8px 15px 8px 50px;
 					}
 					&:hover{
 						opacity: .7;
@@ -116,65 +134,41 @@ nav#block-quicklinks{
 					&.dashboard{
 						background-image: url('../images/icons/dashboard.svg');
 						background-repeat: no-repeat;
-						background-size: 30px 30px;
-						background-position: center;
+						background-size: 24px 24px;
+						background-position: 15px center;
 						.path-user &{
 							background-color: $white;
-						}
-						@include tab{
-							background-size: 24px 24px;
-							background-position: 15px center;
 						}
 					}
 					&.content{
 						background-image: url('../images/icons/content.svg');
 						background-repeat: no-repeat;
-						background-size: 30px 30px;
-						background-position: center;
-						@include tab{
-							background-size: 24px 24px;
-							background-position: 15px center;
-						}
+						background-size: 24px 24px;
+						background-position: 15px center;
 					}
 					&.structure{
 						background-image: url('../images/icons/structure.svg');
-						background-size: 30px 30px;
 						background-repeat: no-repeat;
-						background-position: center;
-						@include tab{
-							background-size: 24px 24px;
-							background-position: 15px center;
-						}
+						background-size: 24px 24px;
+						background-position: 15px center;
 					}
 					&.users{
 						background-image: url('../images/icons/users.svg');
-						background-size: 30px 30px;
 						background-repeat: no-repeat;
-						background-position: center;
-						@include tab{
-							background-size: 24px 24px;
-							background-position: 15px center;
-						}
+						background-size: 24px 24px;
+						background-position: 15px center;
 					}
 					&.services{
 						background-image: url('../images/icons/services.svg');
 						background-repeat: no-repeat;
-						background-size: 30px 30px;
-						background-position: center;
-						@include tab{
-							background-size: 24px 24px;
-							background-position: 15px center;
-						}
+						background-size: 24px 24px;
+						background-position: 15px center;
 					}
 					&.reports{
 						background-image: url('../images/icons/reports.svg');
 						background-repeat: no-repeat;
-						background-size: 30px 30px;
-						background-position: center;
-						@include tab{
-							background-size: 24px 24px;
-							background-position: 15px center;
-						}
+						background-size: 24px 24px;
+						background-position: 15px center;
 					}
 				}//end level 1 > a
 			}//end level 1
@@ -193,14 +187,15 @@ nav#block-quicklinks{
 							display: none;
 						}
 					}
+					&:not(.subtoggle){
+						padding-left: 50px;
+						@include tab{
+							padding-left: 45px;
+						}
+					}
 					&:hover,&:focus{
 						opacity: .6;
 						text-decoration: underline;
-					}
-					@include tab{
-						&:not(.subtoggle){
-							padding-left: 45px;
-						}
 					}
 				}//end a
 			}//end level 2

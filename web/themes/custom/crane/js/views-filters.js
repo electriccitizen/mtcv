@@ -11,6 +11,20 @@ Drupal.behaviors.viewsFilters = {
           $(this).attr('aria-expanded','true').text('hide').addClass('active-filters').closest('.drawer-toggle').next('.form-drawer').attr('aria-hidden','false').slideDown(300);
         }
       });
+      var filters = 0;
+      $('#views-filter-wrapper option:selected').each(function(){
+        if($(this).val() != 'All'){
+          filters += 1;  
+        }
+      });
+      $('#views-filter-wrapper input[type="text"]').each(function(){
+        if($(this).val().length > 0){
+          filters += 1;
+        }
+      });
+      if(filters > 0){
+        $('.filter-control .toggle-action').attr('aria-expanded','true').text('hide').addClass('active-filters').closest('.drawer-toggle').next('.form-drawer').attr('aria-hidden','false').show(0);
+      }
    	});
    }
 };

@@ -45,7 +45,7 @@
 
 {% block pageContent %}
   <div class="blocks-back">
-  	{% if pathName != 'view-block_content-page_2' %}<p>Add a new custom block or edit custom blocks below. <strong>Note:</strong> New custom blocks will have to be added to the live site by a developer.</p><p><a href="/admin/structure/block/blocks-home">Click here to edit home page blocks.</a></p>{% else %}<p>Edit home page blocks below or return to the <a href="/admin/structure/block/block-content">custom block library.</a></p>{% endif %}
+  	{% if pathName != 'view-block_content-page_2' %}<p>Add a new custom block or edit custom blocks below. <strong>Note:</strong> Note: New custom blocks will have to be placed on the live site by a developer after they are created.</p><p><a href="/admin/structure/block/blocks-home">Click here to edit home page blocks.</a></p>{% else %}<p>Edit home page blocks below or return to the <a href="/admin/structure/block/block-content">custom block library.</a></p>{% endif %}
   </div>
   {{ parent() }}
 {% endblock %}

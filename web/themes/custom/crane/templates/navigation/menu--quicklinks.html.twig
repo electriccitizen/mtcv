@@ -30,6 +30,7 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
+      <a href="#" class="crane-menu-toggle">Menu</a>
       <ul{{ attributes.addClass('root-menu') }}>
     {% else %}
       <ul class="sub-menu">

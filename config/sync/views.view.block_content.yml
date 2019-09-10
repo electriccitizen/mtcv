@@ -46,7 +46,7 @@ display:
         type: basic
         options:
           submit_button: Apply
-          reset_button: false
+          reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
@@ -567,7 +567,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: 'There are no custom blocks available.'
+          content: 'There are no custom blocks available. '
           plugin_id: text_custom
         block_content_listing_empty:
           admin_label: ''
@@ -1209,10 +1209,25 @@ display:
       defaults:
         filters: false
         filter_groups: false
+        title: false
+        empty: false
       filter_groups:
         operator: AND
         groups:
           1: AND
+      title: 'Home page blocks'
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: 'There are no home page blocks that match your filters. Please try again. '
+          plugin_id: text_custom
     cache_metadata:
       contexts:
         - 'languages:language_content'

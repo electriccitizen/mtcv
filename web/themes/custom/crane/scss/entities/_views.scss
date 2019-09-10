@@ -40,6 +40,11 @@
 		}
 	}//end form inline
 }//end views exposed form
+.view-filters + .view-empty{
+	padding: $spaceMd 0;
+	margin-top: $spaceMd;
+	border-top: 1px solid $borderRule;
+}
 
 /* VIEWS BULK OPERATIONS
 ----------------------- */

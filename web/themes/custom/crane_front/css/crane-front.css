@@ -992,6 +992,25 @@ nav#block-quicklinks {
     display: none; }
   nav#block-quicklinks .contextual {
     display: none; }
+  nav#block-quicklinks a.crane-menu-toggle {
+    position: absolute;
+    z-index: 499;
+    top: 8px;
+    right: 20px;
+    padding: 3px 10px;
+    color: #1f2225;
+    display: block;
+    border: 1px solid #1f2225;
+    font-weight: 700;
+    text-decoration: none; }
+    nav#block-quicklinks a.crane-menu-toggle:hover, nav#block-quicklinks a.crane-menu-toggle:focus {
+      opacity: .7; }
+    nav#block-quicklinks a.crane-menu-toggle.active {
+      background: #1f2225;
+      color: #ffffff; }
+    @media (min-width: 760px) {
+      nav#block-quicklinks a.crane-menu-toggle {
+        display: none; } }
   nav#block-quicklinks ul:not(.contextual-links) {
     list-style: none;
     margin: 0;
@@ -1000,34 +1019,25 @@ nav#block-quicklinks {
       list-style-type: none; }
     @media (max-width: 759px) {
       nav#block-quicklinks ul:not(.contextual-links).root-menu {
-        display: flex;
-        display: -ms-flexbox;
-        flex-direction: row;
-        -ms-flex-direction: row;
-        flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-        justify-content: center;
-        -ms-flex-pack: center;
-        align-items: flex-start;
-        -ms-flex-align: start; } }
+        display: none;
+        background: #fcd105;
+        position: absolute;
+        top: 54px;
+        left: 0;
+        width: 100%; } }
     @media (min-width: 760px) {
       nav#block-quicklinks ul:not(.contextual-links).root-menu {
-        position: relative; } }
+        position: relative;
+        display: block !important; } }
     .role-editor:not(.role-site_manager) nav#block-quicklinks ul:not(.contextual-links).root-menu .manager {
       display: none !important; }
     .role-editor:not(.role-administrator) nav#block-quicklinks ul:not(.contextual-links).root-menu .admin, .role-site_manager:not(.role-administrator) nav#block-quicklinks ul:not(.contextual-links).root-menu .admin {
       display: none !important; }
     nav#block-quicklinks ul:not(.contextual-links).root-menu ul {
-      position: absolute;
-      top: 50px;
-      left: 0;
-      width: 100%;
-      z-index: 601;
-      padding: 10px 0;
-      display: none;
-      background: #efc603; }
+      display: none; }
       @media (min-width: 760px) {
         nav#block-quicklinks ul:not(.contextual-links).root-menu ul {
+          position: absolute;
           top: 0;
           left: -310px;
           width: 225px;
@@ -1049,80 +1059,52 @@ nav#block-quicklinks {
           padding: 5px 0; } }
       nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a {
         display: block;
-        width: 50px;
-        height: 50px;
         position: relative;
         z-index: 499;
         color: #1f2225;
         font-size: 2rem;
         font-weight: 700;
         text-decoration: none;
-        text-indent: -9000px; }
+        padding: 8px 15px 8px 50px; }
         @media (min-width: 760px) {
           nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a {
             text-indent: 0;
-            width: 100%;
-            height: auto;
-            padding: 8px 15px 8px 50px; } }
+            width: 100%; } }
         nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a:hover {
           opacity: .7;
           text-decoration: underline; }
         nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.dashboard {
           background-image: url("../images/icons/dashboard.svg");
           background-repeat: no-repeat;
-          background-size: 30px 30px;
-          background-position: center; }
+          background-size: 24px 24px;
+          background-position: 15px center; }
           .path-user nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.dashboard {
             background-color: #ffffff; }
-          @media (min-width: 760px) {
-            nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.dashboard {
-              background-size: 24px 24px;
-              background-position: 15px center; } }
         nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.content {
           background-image: url("../images/icons/content.svg");
           background-repeat: no-repeat;
-          background-size: 30px 30px;
-          background-position: center; }
-          @media (min-width: 760px) {
-            nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.content {
-              background-size: 24px 24px;
-              background-position: 15px center; } }
+          background-size: 24px 24px;
+          background-position: 15px center; }
         nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.structure {
           background-image: url("../images/icons/structure.svg");
-          background-size: 30px 30px;
           background-repeat: no-repeat;
-          background-position: center; }
-          @media (min-width: 760px) {
-            nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.structure {
-              background-size: 24px 24px;
-              background-position: 15px center; } }
+          background-size: 24px 24px;
+          background-position: 15px center; }
         nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.users {
           background-image: url("../images/icons/users.svg");
-          background-size: 30px 30px;
           background-repeat: no-repeat;
-          background-position: center; }
-          @media (min-width: 760px) {
-            nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.users {
-              background-size: 24px 24px;
-              background-position: 15px center; } }
+          background-size: 24px 24px;
+          background-position: 15px center; }
         nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.services {
           background-image: url("../images/icons/services.svg");
           background-repeat: no-repeat;
-          background-size: 30px 30px;
-          background-position: center; }
-          @media (min-width: 760px) {
-            nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.services {
-              background-size: 24px 24px;
-              background-position: 15px center; } }
+          background-size: 24px 24px;
+          background-position: 15px center; }
         nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.reports {
           background-image: url("../images/icons/reports.svg");
           background-repeat: no-repeat;
-          background-size: 30px 30px;
-          background-position: center; }
-          @media (min-width: 760px) {
-            nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.reports {
-              background-size: 24px 24px;
-              background-position: 15px center; } }
+          background-size: 24px 24px;
+          background-position: 15px center; }
     nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-2 > a {
       padding: 8px 2rem;
       display: block;
@@ -1136,12 +1118,14 @@ nav#block-quicklinks {
         @media (max-width: 759px) {
           nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-2 > a.subtoggle {
             display: none; } }
+      nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-2 > a:not(.subtoggle) {
+        padding-left: 50px; }
+        @media (min-width: 760px) {
+          nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-2 > a:not(.subtoggle) {
+            padding-left: 45px; } }
       nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-2 > a:hover, nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-2 > a:focus {
         opacity: .6;
         text-decoration: underline; }
-      @media (min-width: 760px) {
-        nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-2 > a:not(.subtoggle) {
-          padding-left: 45px; } }
 
 /* ========================
   TABLES
