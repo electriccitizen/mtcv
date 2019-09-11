@@ -1,0 +1,30 @@
+uuid: 5b84db3e-d19d-4276-b77c-8ee8e56a96a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.support_book.body
+    - node.type.support_book
+  module:
+    - text
+    - user
+id: node.support_book.teaser
+targetEntityType: node
+bundle: support_book
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

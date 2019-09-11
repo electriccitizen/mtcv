@@ -247,6 +247,35 @@ body {
     .layout--tabs .layout__region--tabs .tab-item {
       border-top: 1px solid #979797; }
 
+/* TWO COLUMN SIDEBAR LEFT */
+.layout--twocol-sideleft {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  display: -ms-flexbox;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  justify-content: flex-start;
+  -ms-flex-pack: start;
+  align-items: flex-start;
+  -ms-flex-align: start; }
+  .layout--twocol-sideleft .layout__region--first {
+    width: 100%; }
+    @media (min-width: 760px) {
+      .layout--twocol-sideleft .layout__region--first {
+        width: 300px; } }
+  .layout--twocol-sideleft .layout__region--content {
+    width: 100%; }
+    @media (min-width: 760px) {
+      .layout--twocol-sideleft .layout__region--content:not(:only-child) {
+        width: calc(100% - 300px); }
+        .layout--twocol-sideleft .layout__region--content:not(:only-child):not(.ui-sortable) {
+          padding-left: 30px; } }
+
 /* ========================
   TYPOGRAPHY
 ========================== */

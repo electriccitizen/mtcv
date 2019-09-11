@@ -84,3 +84,28 @@
 		}
 	}//end region--tabs
 }//end layout-tabs
+
+/* TWO COLUMN SIDEBAR LEFT */
+.layout--twocol-sideleft{
+	width: 100%;
+	max-width: $contentStop;
+	@include auto;
+	@include safeFlex(row,wrap,start,start);
+	.layout__region--first{
+		width: 100%;
+		@include tab{
+			width: 300px;
+		}
+	}//end layout region second
+	.layout__region--content{
+		width: 100%;
+		@include tab{
+			&:not(:only-child){
+				@include calc(width, "100% - 300px");
+				&:not(.ui-sortable){
+					padding-left: 30px;
+				}
+			}
+		}
+	}
+}//end layout-twocol-sideleft

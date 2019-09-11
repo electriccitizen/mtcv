@@ -1,0 +1,75 @@
+uuid: d0a11d96-35ed-45bb-bf78-5058a9443a6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs
+    - node.type.support_book
+    - paragraphs.paragraphs_type.accordion_group
+    - paragraphs.paragraphs_type.button
+    - paragraphs.paragraphs_type.horizontal_rule
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.react_component
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.text_with_image
+    - paragraphs.paragraphs_type.video
+  module:
+    - entity_reference_revisions
+id: node.support_book.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
+bundle: support_book
+label: Paragraphs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      accordion_group: accordion_group
+      button: button
+      horizontal_rule: horizontal_rule
+      image: image
+      react_component: react_component
+      text: text
+      text_with_image: text_with_image
+      video: video
+    target_bundles_drag_drop:
+      accordion_group:
+        enabled: true
+        weight: 12
+      accordion_item:
+        weight: 13
+        enabled: false
+      button:
+        enabled: true
+        weight: 14
+      header:
+        weight: 15
+        enabled: false
+      horizontal_rule:
+        enabled: true
+        weight: 16
+      image:
+        enabled: true
+        weight: 17
+      logo_grid_item:
+        weight: 18
+        enabled: false
+      react_component:
+        enabled: true
+        weight: 19
+      text:
+        enabled: true
+        weight: 20
+      text_with_image:
+        enabled: true
+        weight: 21
+      video:
+        enabled: true
+        weight: 22
+field_type: entity_reference_revisions

@@ -1,0 +1,8 @@
+uuid: 11a0f508-cde9-4751-bab2-8d718704cef4
+langcode: en
+status: true
+dependencies: {  }
+id: support-book
+label: 'Support Book'
+description: 'Menu for the web editor guide.'
+locked: false

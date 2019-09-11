@@ -9,3 +9,16 @@ tabs:
   regions:
     tabs:
       label: Tabs
+two_column_sidebar_left:
+  label: Two Column Sidebar Left
+  category: Crane Layouts
+  path: templates/layout
+  template: layout--twocol-sideleft
+  default_region: content
+  icon_map:
+    - [first, content, content, content]
+  regions:
+    first:
+      label: First
+    content:
+      label: Content
