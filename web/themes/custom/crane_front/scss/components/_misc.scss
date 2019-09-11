@@ -54,25 +54,25 @@
 	}
 }//end disclaimer
 
-.messages{
+.drupal-message{
 	padding: 15px 20px 12px 45px;
 	margin-top: $spaceMd;
 	background-repeat: no-repeat;
 	background-position: 12px center;
 	background-size: 20px 20px;
-	&.messages--error{
+	&.error-message{
 		background-color: $transFuchsia;
 		border-color: $fuchsia;
 		color: $darkFuchsia;
 		background-image: url('../images/icons/message/message-error.svg');
 	}
-	&.messages--warning{
+	&.warning-message{
 		background-color: $transGold;
 		border-color: $tan;
 		color: $tan;
 		background-image: url('../images/icons/message/message-warning.svg');
 	}
-	&.messages--status{
+	&.status-message{
 		background-color: $transGreen;
 		border-color: $green;
 		color: darken($green, 3%);

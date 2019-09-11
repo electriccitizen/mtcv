@@ -112,5 +112,26 @@
 			max-width: 400px;
 		}
 	}//end resource form
+
+	/* RESOURCE SPECIFIC FORM */
+	&.node-support-book-edit-form,&.node-support-book-form{
+		.layout-region-node-secondary{
+			padding-right: 2em;
+			.entity-meta{
+				display: block;
+				.entity-meta__header{
+					display: none;
+				}
+				.menu-link-form{
+					border-top: 1px solid #bfbfbf;
+					background-image: none;
+					background: $offWhite;
+					summary{
+						font-size: 1.6rem;
+					}
+				}
+			}
+		}
+	}
 }//end node form
 

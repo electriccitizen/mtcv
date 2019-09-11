@@ -1,0 +1,22 @@
+uuid: 8ba5fc54-d7ee-4ca5-9cdb-8efd7e410d95
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: web_editor_guide
+label: 'Web Editor Guide'
+type: 'canonical_entities:node'
+pattern: 'web-editor-guide/[node:title]'
+selection_criteria:
+  113de3ae-faf2-4004-bfb0-98268ea9c77a:
+    id: node_type
+    bundles:
+      support_book: support_book
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 113de3ae-faf2-4004-bfb0-98268ea9c77a
+selection_logic: and
+weight: -5
+relationships: {  }

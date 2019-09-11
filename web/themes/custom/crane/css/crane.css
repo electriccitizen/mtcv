@@ -6333,6 +6333,7 @@ nav#block-crane-quicklinks {
 	------------------ */
   /* node specific form elements
 	---------------------------- */
+  /* RESOURCE SPECIFIC FORM */
   /* RESOURCE SPECIFIC FORM */ }
   .node-form .layout-node-form, .node-confirm-form .layout-node-form {
     max-width: 1800px; }
@@ -6449,6 +6450,18 @@ nav#block-crane-quicklinks {
       margin-top: 0; }
   .node-form.node-resource-edit-form .layout-region-node-main > .field--widget-options-select .select2-container--default, .node-form.node-resource-form .layout-region-node-main > .field--widget-options-select .select2-container--default, .node-confirm-form.node-resource-edit-form .layout-region-node-main > .field--widget-options-select .select2-container--default, .node-confirm-form.node-resource-form .layout-region-node-main > .field--widget-options-select .select2-container--default {
     max-width: 400px; }
+  .node-form.node-support-book-edit-form .layout-region-node-secondary, .node-form.node-support-book-form .layout-region-node-secondary, .node-confirm-form.node-support-book-edit-form .layout-region-node-secondary, .node-confirm-form.node-support-book-form .layout-region-node-secondary {
+    padding-right: 2em; }
+    .node-form.node-support-book-edit-form .layout-region-node-secondary .entity-meta, .node-form.node-support-book-form .layout-region-node-secondary .entity-meta, .node-confirm-form.node-support-book-edit-form .layout-region-node-secondary .entity-meta, .node-confirm-form.node-support-book-form .layout-region-node-secondary .entity-meta {
+      display: block; }
+      .node-form.node-support-book-edit-form .layout-region-node-secondary .entity-meta .entity-meta__header, .node-form.node-support-book-form .layout-region-node-secondary .entity-meta .entity-meta__header, .node-confirm-form.node-support-book-edit-form .layout-region-node-secondary .entity-meta .entity-meta__header, .node-confirm-form.node-support-book-form .layout-region-node-secondary .entity-meta .entity-meta__header {
+        display: none; }
+      .node-form.node-support-book-edit-form .layout-region-node-secondary .entity-meta .menu-link-form, .node-form.node-support-book-form .layout-region-node-secondary .entity-meta .menu-link-form, .node-confirm-form.node-support-book-edit-form .layout-region-node-secondary .entity-meta .menu-link-form, .node-confirm-form.node-support-book-form .layout-region-node-secondary .entity-meta .menu-link-form {
+        border-top: 1px solid #bfbfbf;
+        background-image: none;
+        background: #f6f6f6; }
+        .node-form.node-support-book-edit-form .layout-region-node-secondary .entity-meta .menu-link-form summary, .node-form.node-support-book-form .layout-region-node-secondary .entity-meta .menu-link-form summary, .node-confirm-form.node-support-book-edit-form .layout-region-node-secondary .entity-meta .menu-link-form summary, .node-confirm-form.node-support-book-form .layout-region-node-secondary .entity-meta .menu-link-form summary {
+          font-size: 1.6rem; }
 
 /* ========================
   PARAGRAPHS

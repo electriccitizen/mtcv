@@ -13,7 +13,13 @@ main{
 			padding-top: 56px;
 		}
 	}
-	.path-user.role-administrator &{
+	body.node-type-support-book.logged-in:not(.role-administrator) &{
+		padding-top: 60px;
+		@include tab{
+			padding-left: 225px;
+		}
+	}
+	.path-user.role-administrator &,.node-type-support-book.role-administrator &{
 		@include desk{
 			padding-left: 225px;
 		}

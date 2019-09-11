@@ -2,19 +2,99 @@
   BLOCKS
 ========================== */
 
-/* MESSAGES
--------------- */
-.block-system-messages-block{
-	& > *{
-		padding: $elementSpace * 2 $siteMarginMobile 0;
-		max-width: $textMax;
-		@include auto;
-		text-align: center;
+/* PAGE MENU BLOCK
+---------------------- */
+#block-page-menu{
+	border: 2px solid $gold;
+	position: relative;
+	h2.block-title{
+		font-size: 2.2rem;
+		padding: 1.35rem 3rem;
+		background: $gold;
+		@include onlyMobile{
+			padding-right: 100px;
+		}
 	}
-	div[role="alert"]{
-		border: 1px solid $red;
-		padding: 20px 30px;
-		background: $transRed;
+	.crane-menu-toggle{
+		position: absolute;
+		z-index: 499;
+		top: 8px;
+		right: 2rem;
+		padding: 3px 10px;
+		color: $black;
+		display: block;
+		border: 1px solid $black;
+		font-weight: $heavy;
+		text-decoration: none;
+		&:hover,&:focus{
+			opacity: .7;
+		}
+		&.active{
+			background: $black;
+			color: $white;
+		}
+		@include desk{
+			display: none;
+		}
 	}
-}
-
+	ul:not(.contextual-links){
+		@include listReset;
+		&.root-menu{
+			padding: 2rem 3rem 3.5rem 1.5rem;
+			background: $offWhite;
+			margin: 0;
+			display: none;
+			& > li{
+				font-size: 2rem;
+			}
+			@include tab{
+				display: block !important;
+			}
+		}//end top level
+		li{
+			position: relative;
+			padding-left: 1.5rem;
+			&:not(:last-child){
+				margin-bottom: .5rem;
+			}
+			a{
+				text-decoration: none;
+				&:hover,&:focus{
+					color: $hoverLink;
+					text-decoration: underline;
+				}
+				&.is-active{
+					color: $black;
+					pointer-events: none;
+				}
+			}//end a
+			&.parent{
+				& > .expander{
+					position: absolute;
+					top: 0;
+					left: -8px;
+					width: 20px;
+					text-align: center;
+					&:before{
+						content: "+";
+					}
+				}
+				&.expanded{
+					& > .expander{
+						&:before{
+							content: "–";
+						}
+					}
+				}//end when expanded
+			}//end parent li
+			ul{
+				display: none;
+				padding: 10px 0;
+				font-size: $baseSize;
+				&.expanded{
+					display: block;
+				}
+			}//end submenu ul
+		}//end li
+	}//end ul
+}//end page menu block

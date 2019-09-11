@@ -3,11 +3,19 @@ langcode: en
 status: true
 dependencies:
   module:
+    - entity_redirect
     - menu_ui
 third_party_settings:
   menu_ui:
-    available_menus: {  }
-    parent: ''
+    available_menus:
+      - support-book
+    parent: 'support-book:'
+  entity_redirect:
+    destination: default
+    url: ''
+    personalizable: true
+    redirect_edit: false
+    external: ''
 name: 'Support Book'
 type: support_book
 description: 'Learn about key tasks in editing and managing the site.'

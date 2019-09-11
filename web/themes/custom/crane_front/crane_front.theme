@@ -42,6 +42,20 @@ function crane_front_preprocess_node(&$variables) {
 }
 
 /**
+ * Implements hook_theme_suggestions_page_alter.
+ */
+function crane_front_theme_suggestions_page_alter(array &$suggestions, array $variables, $hook) {
+  // Try to get the node, so we can check if we're on the node page.
+  $node = Drupal::request()->attributes->get('node');
+  if ($node) {
+    if ((!$node instanceof NodeInterface) && ($node_revision = \Drupal::routeMatch()->getParameter('node_revision'))) {
+      $node = \Drupal::entityTypeManager()->getStorage('node')->loadRevision($node_revision);
+    }
+    $suggestions[] = 'page__' . $node->getTYpe();
+  }
+}
+
+/**
  * Implements hook_theme_suggestions_block_alter.
  */
 function crane_front_theme_suggestions_block_alter(array &$suggestions, array $variables) {

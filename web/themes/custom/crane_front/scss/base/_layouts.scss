@@ -89,19 +89,21 @@
 .layout--twocol-sideleft{
 	width: 100%;
 	max-width: $contentStop;
-	@include auto;
 	@include safeFlex(row,wrap,start,start);
 	.layout__region--first{
 		width: 100%;
-		@include tab{
-			width: 300px;
+		@include onlyMobile{
+			@include safeFlexOrder(2);
+		}
+		@include desk{
+			width: 240px;
 		}
 	}//end layout region second
 	.layout__region--content{
 		width: 100%;
-		@include tab{
+		@include desk{
 			&:not(:only-child){
-				@include calc(width, "100% - 300px");
+				@include calc(width, "100% - 240px");
 				&:not(.ui-sortable){
 					padding-left: 30px;
 				}

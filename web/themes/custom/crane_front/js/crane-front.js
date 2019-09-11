@@ -2,9 +2,9 @@
 
 /* QUICKLINKS NAV
 ------------------------------------ */
-Drupal.behaviors.pageMenu = {
+Drupal.behaviors.quickMenu = {
 	attach: function (context, settings) {
-		$("#block-quicklinks", context).once('page-menu').each(function(){  		
+		$("#block-quicklinks", context).once('quick-menu').each(function(){  		
 			$('#block-quicklinks .item-level-1 > a:not(.live)').attr('aria-expanded','false').siblings('ul').attr('aria-hidden', true);
 
 			var wwidth = $(window).outerWidth();

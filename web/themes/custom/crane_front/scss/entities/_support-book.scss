@@ -1,0 +1,17 @@
+/* ========================
+  SUPPORT BOOK
+========================== */
+
+.node-actions{
+	max-width: $contentStop + 64px;
+	@include tab{
+		padding-left: 225px;
+	}
+	.action-wrapper{
+		margin: 0 $siteMarginMobile;
+		border-bottom: 1px solid $borderRule;
+		@include desk{
+			margin: 0 $siteMarginDesk;
+		}
+	}
+}

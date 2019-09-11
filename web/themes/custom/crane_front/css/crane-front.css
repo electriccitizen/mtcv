@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ============
 	BREAKPOINTS & GRID VARIABLES
 ======================= */
@@ -251,8 +252,6 @@ body {
 .layout--twocol-sideleft {
   width: 100%;
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
   display: -ms-flexbox;
   flex-direction: row;
@@ -265,14 +264,18 @@ body {
   -ms-flex-align: start; }
   .layout--twocol-sideleft .layout__region--first {
     width: 100%; }
-    @media (min-width: 760px) {
+    @media (max-width: 975px) {
       .layout--twocol-sideleft .layout__region--first {
-        width: 300px; } }
+        order: 2;
+        -ms-flex-order: 2; } }
+    @media (min-width: 976px) {
+      .layout--twocol-sideleft .layout__region--first {
+        width: 240px; } }
   .layout--twocol-sideleft .layout__region--content {
     width: 100%; }
-    @media (min-width: 760px) {
+    @media (min-width: 976px) {
       .layout--twocol-sideleft .layout__region--content:not(:only-child) {
-        width: calc(100% - 300px); }
+        width: calc(100% - 240px); }
         .layout--twocol-sideleft .layout__region--content:not(:only-child):not(.ui-sortable) {
           padding-left: 30px; } }
 
@@ -499,7 +502,7 @@ ol {
     border-color: #bf0e0e;
     padding: 0 3rem;
     height: 43px;
-    padding: 1rem 1.5rem;
+    padding: 1.2rem 1.5rem;
     height: auto; }
     .button.danger-robinson:hover, .button.danger-robinson:focus {
       color: #1f2225;
@@ -710,19 +713,82 @@ input + .description {
 /* ========================
   BLOCKS
 ========================== */
-/* MESSAGES
--------------- */
-.block-system-messages-block > * {
-  padding: 6rem 2rem 0;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center; }
-
-.block-system-messages-block div[role="alert"] {
-  border: 1px solid #bf0e0e;
-  padding: 20px 30px;
-  background: rgba(191, 14, 14, 0.03); }
+/* PAGE MENU BLOCK
+---------------------- */
+#block-page-menu {
+  border: 2px solid #fcd105;
+  position: relative; }
+  #block-page-menu h2.block-title {
+    font-size: 2.2rem;
+    padding: 1.35rem 3rem;
+    background: #fcd105; }
+    @media (max-width: 975px) {
+      #block-page-menu h2.block-title {
+        padding-right: 100px; } }
+  #block-page-menu .crane-menu-toggle {
+    position: absolute;
+    z-index: 499;
+    top: 8px;
+    right: 2rem;
+    padding: 3px 10px;
+    color: #1f2225;
+    display: block;
+    border: 1px solid #1f2225;
+    font-weight: 700;
+    text-decoration: none; }
+    #block-page-menu .crane-menu-toggle:hover, #block-page-menu .crane-menu-toggle:focus {
+      opacity: .7; }
+    #block-page-menu .crane-menu-toggle.active {
+      background: #1f2225;
+      color: #ffffff; }
+    @media (min-width: 976px) {
+      #block-page-menu .crane-menu-toggle {
+        display: none; } }
+  #block-page-menu ul:not(.contextual-links) {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    #block-page-menu ul:not(.contextual-links) li {
+      list-style-type: none; }
+    #block-page-menu ul:not(.contextual-links).root-menu {
+      padding: 2rem 3rem 3.5rem 1.5rem;
+      background: #f6f6f6;
+      margin: 0;
+      display: none; }
+      #block-page-menu ul:not(.contextual-links).root-menu > li {
+        font-size: 2rem; }
+      @media (min-width: 760px) {
+        #block-page-menu ul:not(.contextual-links).root-menu {
+          display: block !important; } }
+    #block-page-menu ul:not(.contextual-links) li {
+      position: relative;
+      padding-left: 1.5rem; }
+      #block-page-menu ul:not(.contextual-links) li:not(:last-child) {
+        margin-bottom: .5rem; }
+      #block-page-menu ul:not(.contextual-links) li a {
+        text-decoration: none; }
+        #block-page-menu ul:not(.contextual-links) li a:hover, #block-page-menu ul:not(.contextual-links) li a:focus {
+          color: #646569;
+          text-decoration: underline; }
+        #block-page-menu ul:not(.contextual-links) li a.is-active {
+          color: #1f2225;
+          pointer-events: none; }
+      #block-page-menu ul:not(.contextual-links) li.parent > .expander {
+        position: absolute;
+        top: 0;
+        left: -8px;
+        width: 20px;
+        text-align: center; }
+        #block-page-menu ul:not(.contextual-links) li.parent > .expander:before {
+          content: "+"; }
+      #block-page-menu ul:not(.contextual-links) li.parent.expanded > .expander:before {
+        content: "–"; }
+      #block-page-menu ul:not(.contextual-links) li ul {
+        display: none;
+        padding: 10px 0;
+        font-size: 1.8rem; }
+        #block-page-menu ul:not(.contextual-links) li ul.expanded {
+          display: block; }
 
 /* ========================
   FOOTER
@@ -784,12 +850,12 @@ header > div {
     @media (min-width: 760px) {
       .logged-in header > div {
         z-index: 599; } }
-  .logged-in.path-user header > div {
+  .logged-in.path-user header > div, .logged-in.node-type-support-book header > div {
     top: 50px; }
     @media (min-width: 760px) {
-      .logged-in.path-user header > div {
+      .logged-in.path-user header > div, .logged-in.node-type-support-book header > div {
         top: 0; } }
-  .logged-in:not(.path-user) header > div {
+  .logged-in:not(.path-user):not(.node-type-support-book) header > div {
     top: 0; }
 
 /* HEADER BLOCKS
@@ -898,8 +964,14 @@ body.path-user.logged-in:not(.role-administrator) main {
       padding-left: 225px;
       padding-top: 56px; } }
 
+body.node-type-support-book.logged-in:not(.role-administrator) main {
+  padding-top: 60px; }
+  @media (min-width: 760px) {
+    body.node-type-support-book.logged-in:not(.role-administrator) main {
+      padding-left: 225px; } }
+
 @media (min-width: 976px) {
-  .path-user.role-administrator main {
+  .path-user.role-administrator main, .node-type-support-book.role-administrator main {
     padding-left: 225px; } }
 
 body:not(.logged-in) main .layout-content > div {
@@ -960,23 +1032,23 @@ body:not(.logged-in.path-user) main .layout-content > div {
     .node-disclaimer.preview p {
       font-size: 1.5rem; }
 
-.messages {
+.drupal-message, .messages--status, .messages--warning, .messages--error {
   padding: 15px 20px 12px 45px;
   margin-top: 3rem;
   background-repeat: no-repeat;
   background-position: 12px center;
   background-size: 20px 20px; }
-  .messages.messages--error {
+  .drupal-message.error-message, .error-message.messages--status, .error-message.messages--warning, .error-message.messages--error {
     background-color: rgba(192, 40, 187, 0.03);
     border-color: #c028bb;
     color: #5d025a;
     background-image: url("../images/icons/message/message-error.svg"); }
-  .messages.messages--warning {
+  .drupal-message.warning-message, .warning-message.messages--status, .warning-message.messages--warning, .warning-message.messages--error {
     background-color: rgba(252, 217, 1, 0.06);
     border-color: #8e700b;
     color: #8e700b;
     background-image: url("../images/icons/message/message-warning.svg"); }
-  .messages.messages--status {
+  .drupal-message.status-message, .status-message.messages--status, .status-message.messages--warning, .status-message.messages--error {
     background-color: rgba(1, 185, 1, 0.05);
     border-color: #018901;
     color: #017a01;
@@ -1328,6 +1400,9 @@ body.logged-in.responsive-preview-frame .layout-container #block-quicklinks, bod
   height: auto;
   display: block; }
 
+.path-node .field-restricted {
+  display: none; }
+
 /* BASIC PAGES 
 ----------------- */
 .content-type-page {
@@ -1618,6 +1693,21 @@ body.logged-in.responsive-preview-frame .layout-container #block-quicklinks, bod
 
 .node-revision .is-node {
   padding-top: 6rem; }
+
+/* ========================
+  SUPPORT BOOK
+========================== */
+.node-actions {
+  max-width: 1264px; }
+  @media (min-width: 760px) {
+    .node-actions {
+      padding-left: 225px; } }
+  .node-actions .action-wrapper {
+    margin: 0 2rem;
+    border-bottom: 1px solid #979797; }
+    @media (min-width: 976px) {
+      .node-actions .action-wrapper {
+        margin: 0 3.2rem; } }
 
 /* ========================
   USER DASHBOARD

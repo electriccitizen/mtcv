@@ -25,6 +25,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/user/*\r\n<front>"
+    pages: "/user/*\r\n<front>\r\n/web-editor-guide\r\n/web-editor-guide/*"
     negate: false
     context_mapping: {  }
