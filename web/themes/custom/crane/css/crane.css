@@ -6063,7 +6063,9 @@ nav#block-crane-quicklinks {
         position: absolute;
         top: 54px;
         left: 0;
-        width: 100%; } }
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 20px; } }
     @media (min-width: 760px) {
       nav#block-crane-quicklinks ul:not(.contextual-links).root-menu {
         position: relative;

@@ -29,7 +29,7 @@ third_party_settings:
             region: first
             configuration:
               id: 'menu_block:support-book'
-              label: 'Web Editor Guide'
+              label: 'Support Guide'
               provider: menu_block
               label_display: visible
               level: 1
