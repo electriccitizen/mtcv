@@ -54,8 +54,9 @@
 		li{
 			position: relative;
 			padding-left: 1.5rem;
+			line-height: 1.15;
 			&:not(:last-child){
-				margin-bottom: .5rem;
+				margin-bottom: 1rem;
 			}
 			a{
 				text-decoration: none;
@@ -89,7 +90,7 @@
 			}//end parent li
 			ul{
 				display: none;
-				padding: 10px 0;
+				padding: 15px 0;
 				font-size: $baseSize;
 				&.expanded{
 					display: block;

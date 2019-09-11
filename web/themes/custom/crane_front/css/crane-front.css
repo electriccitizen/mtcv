@@ -762,9 +762,10 @@ input + .description {
           display: block !important; } }
     #block-page-menu ul:not(.contextual-links) li {
       position: relative;
-      padding-left: 1.5rem; }
+      padding-left: 1.5rem;
+      line-height: 1.15; }
       #block-page-menu ul:not(.contextual-links) li:not(:last-child) {
-        margin-bottom: .5rem; }
+        margin-bottom: 1rem; }
       #block-page-menu ul:not(.contextual-links) li a {
         text-decoration: none; }
         #block-page-menu ul:not(.contextual-links) li a:hover, #block-page-menu ul:not(.contextual-links) li a:focus {
@@ -785,7 +786,7 @@ input + .description {
         content: "–"; }
       #block-page-menu ul:not(.contextual-links) li ul {
         display: none;
-        padding: 10px 0;
+        padding: 15px 0;
         font-size: 1.8rem; }
         #block-page-menu ul:not(.contextual-links) li ul.expanded {
           display: block; }
