@@ -1392,7 +1392,7 @@ body.logged-in.responsive-preview-frame .layout-container #block-quicklinks, bod
 .path-node .overflow-guard footer {
   display: none; }
 
-.path-node .text-long a, .path-node .text-with-summary a {
+.path-node:not(.node-type-support-book) .text-long a, .path-node:not(.node-type-support-book) .text-with-summary a {
   pointer-events: none; }
 
 .path-node .field-caption {

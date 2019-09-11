@@ -66,9 +66,11 @@ body.logged-in.responsive-preview-frame{
 			display: none;
 		}
 	}
-	.text-long,.text-with-summary{
-		a{
-			pointer-events: none;
+	&:not(.node-type-support-book){
+		.text-long,.text-with-summary{
+			a{
+				pointer-events: none;
+			}
 		}
 	}
 	.field-caption{
