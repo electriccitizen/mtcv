@@ -1206,6 +1206,13 @@ nav#block-quicklinks {
           background-repeat: no-repeat;
           background-size: 24px 24px;
           background-position: 15px center; }
+        nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.guide {
+          background-image: url("../images/icons/guide.svg");
+          background-repeat: no-repeat;
+          background-size: 24px 24px;
+          background-position: 15px center; }
+          .node-type-support-book nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.guide {
+            background-color: #ffffff; }
     nav#block-quicklinks ul:not(.contextual-links).root-menu .item-level-2 > a {
       padding: 8px 2rem;
       display: block;

@@ -170,6 +170,15 @@ nav#block-quicklinks{
 						background-size: 24px 24px;
 						background-position: 15px center;
 					}
+					&.guide{
+						background-image: url('../images/icons/guide.svg');
+						background-repeat: no-repeat;
+						background-size: 24px 24px;
+						background-position: 15px center;
+						.node-type-support-book &{
+							background-color: $white;
+						}
+					}
 				}//end level 1 > a
 			}//end level 1
 			.item-level-2{

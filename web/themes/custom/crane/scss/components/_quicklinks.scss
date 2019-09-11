@@ -169,6 +169,12 @@ nav#block-crane-quicklinks{
 						background-size: 24px 24px;
 						background-position: 15px center;
 					}
+					&.guide{
+						background-image: url('../images/icons/guide.svg');
+						background-repeat: no-repeat;
+						background-size: 24px 24px;
+						background-position: 15px center;
+					}
 				}//end level 1 > a
 				&.menu-item--active-trail{
 					& > a{

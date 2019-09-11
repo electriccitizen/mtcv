@@ -6144,6 +6144,11 @@ nav#block-crane-quicklinks {
           background-repeat: no-repeat;
           background-size: 24px 24px;
           background-position: 15px center; }
+        nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1 > a.guide {
+          background-image: url("../images/icons/guide.svg");
+          background-repeat: no-repeat;
+          background-size: 24px 24px;
+          background-position: 15px center; }
       nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-1.menu-item--active-trail > a {
         background-color: #ffffff; }
     nav#block-crane-quicklinks ul:not(.contextual-links).root-menu .item-level-2 > a {
