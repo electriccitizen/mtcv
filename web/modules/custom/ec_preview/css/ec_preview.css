@@ -2,9 +2,8 @@
 #responsive-preview.responsive-preview.active{
 	z-index: 600;
 }
+
 #responsive-preview.responsive-preview.active #responsive-preview-frame-container {
-  height: 80%;
-  width: 80%;
   left: 50% !important;
   -webit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -16,8 +15,18 @@
 
 /* PREVIEW FRAME */
 .responsive-preview-active #responsive-preview-frame {
-  width: 100% !important;
-  height: 100% !important;
+  width: 90vw !important;
+  height: -webkit-calc(100vh - 60px) !important;
+  height: -moz-calc(100vh - 60px) !important;
+  height: -o-calc(100vh - 60px) !important;
+  height: calc(100vh - 60px) !important;
+}
+
+.role-administrator #responsive-preview #responsive-preview-frame{
+	height: -webkit-calc(100vh - 128px) !important;
+  height: -moz-calc(100vh - 128px) !important;
+  height: -o-calc(100vh - 128px) !important;
+  height: calc(100vh - 128px) !important;
 }
 
 /* PREVIEW CONTROLS */
