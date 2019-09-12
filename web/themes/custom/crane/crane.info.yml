@@ -18,8 +18,6 @@ libraries-override:
     css:
       base:
         css/adminimal_fonts.css: false
-ckeditor_stylesheets:
-  - css/cke.css
 regions:
   header: 'Header'
   pre_content: 'Pre-content'

@@ -4,11 +4,11 @@ description: Drupal Front-End theme for Electric Citizen Gatsby sites.
 package: EC
 core: 8.x
 base theme: stable
-
 libraries:
   - crane_front/global
   - crane_front/fonts
-
+ckeditor_stylesheets:
+  - css/cke.css
 regions:
   header: Header
   content: Content
