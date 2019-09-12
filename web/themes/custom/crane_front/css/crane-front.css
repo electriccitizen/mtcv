@@ -1500,11 +1500,11 @@ body.logged-in.responsive-preview-frame .layout-container #block-quicklinks, bod
           height: 372px; } }
 
 /* PARAGRAPHS */
-.field-content.entity-reference-revisions {
+.field-content.entity-reference-revisions, .node-type-support-book .entity-reference-revisions {
   padding-bottom: 4rem; }
-  .field-content.entity-reference-revisions > div > .paragraph {
+  .field-content.entity-reference-revisions > div > .paragraph, .node-type-support-book .entity-reference-revisions > div > .paragraph {
     margin-bottom: 4rem; }
-    .field-content.entity-reference-revisions > div > .paragraph > .field-header {
+    .field-content.entity-reference-revisions > div > .paragraph > .field-header, .node-type-support-book .entity-reference-revisions > div > .paragraph > .field-header {
       line-height: 1.15;
       font-weight: 700;
       font-family: "PT Sans", sans-serif;
@@ -1516,25 +1516,27 @@ body.logged-in.responsive-preview-frame .layout-container #block-quicklinks, bod
       margin-right: auto;
       margin-bottom: 1rem; }
       @media (min-width: 760px) {
-        .field-content.entity-reference-revisions > div > .paragraph > .field-header {
+        .field-content.entity-reference-revisions > div > .paragraph > .field-header, .node-type-support-book .entity-reference-revisions > div > .paragraph > .field-header {
           font-size: 28px; } }
 
 .paragraph--type--accordion-group {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto; }
-  .paragraph--type--accordion-group .field-accordions {
-    margoin-bottom: -2rem; }
-    .paragraph--type--accordion-group .field-accordions .field-accordion-header {
-      line-height: 1.15;
-      font-weight: 700;
-      font-family: "PT Sans", sans-serif;
-      margin: 0;
-      font-size: 22px;
-      color: #1155cc;
-      margin-bottom: 2rem; }
-    .paragraph--type--accordion-group .field-accordions .field-text {
-      display: none; }
+  .paragraph--type--accordion-group .field-accordion-item .accordion-header {
+    line-height: 1.15;
+    font-weight: 700;
+    font-family: "PT Sans", sans-serif;
+    margin: 0;
+    font-size: 22px;
+    color: #1155cc;
+    margin-bottom: 2rem; }
+    .paragraph--type--accordion-group .field-accordion-item .accordion-header a {
+      text-decoration: none; }
+  .paragraph--type--accordion-group .field-accordion-item .field-text {
+    display: none; }
+  #responsive-preview-frame-container .paragraph--type--accordion-group .field-accordion-item .accordion-item:first-child .field-text {
+    display: block; }
 
 .paragraph--type--button {
   max-width: 800px;

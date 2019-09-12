@@ -161,7 +161,7 @@ body.logged-in.responsive-preview-frame{
 } //end basic page
 
 /* PARAGRAPHS */
-.field-content.entity-reference-revisions{
+.field-content.entity-reference-revisions,.node-type-support-book .entity-reference-revisions{
 	padding-bottom: $spaceLg;
 	& > div > .paragraph{
 		margin-bottom: $spaceLg;
@@ -178,17 +178,26 @@ body.logged-in.responsive-preview-frame{
 .paragraph--type--accordion-group{
 	max-width: $textMax;
 	@include auto;
-	.field-accordions{
-		margoin-bottom: -$spaceSm;
-		.field-accordion-header{
+	.field-accordion-item{
+		.accordion-header{
 			@include heading4;
 			color: $pvBlue;
 			margin-bottom: $spaceSm;
+			a{
+				text-decoration: none;
+			}
 		}
 		.field-text{
 			display: none;
 		}
-	}
+		.accordion-item:first-child{
+			#responsive-preview-frame-container &{
+				.field-text{
+					display: block;
+				}
+			}
+		}
+	}//end field-accordion-item
 }//end accordion group
 
 .paragraph--type--button{

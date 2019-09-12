@@ -11,6 +11,10 @@ global:
     - core/jquery
     - core/jquery.once
     - core/underscore
+accordion:
+  version: 1.0
+  js:
+    js/accordion.js: {}
 disclaimer:
   version: 1.0
   js:
