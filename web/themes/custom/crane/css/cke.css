@@ -1,0 +1,32 @@
+/*WYSIWYG for editors*/
+html {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'PT Sans', sans-serif;
+  color: #1f2225;
+}
+
+a{
+  color: #1155cc;
+}
+
+h2{
+  font-size: 29px;
+}
+
+h3{
+  font-size: 23px;
+}
+
+h4{
+  font-size: 21px;
+}
+
+h5{
+  font-size: 18px;
+}
+
+h6{
+  font-size: 17px;
+}
+
