@@ -11,6 +11,11 @@ third_party_settings:
     personalizable: 0
     redirect_edit: 0
     external: ''
+    personalization:
+      45:
+        destination: default
+        url: ''
+        external: ''
 name: Organization
 vid: organization
 description: 'Organization for Resources'

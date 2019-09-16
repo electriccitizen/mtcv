@@ -16,7 +16,6 @@ permissions:
   - 'access toolbar'
   - 'access user profiles'
   - 'administer nodes'
-  - 'cancel account'
   - 'change own username'
   - 'create file media'
   - 'create image media'

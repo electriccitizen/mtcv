@@ -16,6 +16,11 @@ third_party_settings:
     personalizable: true
     redirect_edit: false
     external: ''
+    personalization:
+      45:
+        destination: default
+        url: ''
+        external: ''
 name: 'Support Book'
 type: support_book
 description: 'Learn about key tasks in editing and managing the site.'

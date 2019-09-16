@@ -375,9 +375,11 @@ p {
     margin-bottom: 3rem; }
 
 a {
-  color: #1155cc; }
+  color: #1155cc;
+  -webkit-text-decoration-color: #2c5580;
+  text-decoration-color: #2c5580; }
   a:hover, a:focus {
-    color: #646569; }
+    color: #14662e; }
 
 em {
   font-style: italic; }
@@ -769,7 +771,7 @@ input + .description {
       #block-page-menu ul:not(.contextual-links) li a {
         text-decoration: none; }
         #block-page-menu ul:not(.contextual-links) li a:hover, #block-page-menu ul:not(.contextual-links) li a:focus {
-          color: #646569;
+          color: #14662e;
           text-decoration: underline; }
         #block-page-menu ul:not(.contextual-links) li a.is-active {
           color: #1f2225;
@@ -993,7 +995,7 @@ body:not(.logged-in.path-user) main .layout-content > div {
 ---------------------- */
 .node-disclaimer {
   position: fixed;
-  z-index: 499;
+  z-index: 599;
   top: 200px;
   right: 40px;
   width: 220px;
