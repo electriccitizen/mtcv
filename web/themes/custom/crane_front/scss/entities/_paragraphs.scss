@@ -1,0 +1,158 @@
+/* ========================
+  PARAGRAPHS
+========================== */
+
+/* PARAGRAPHS */
+.field-content.entity-reference-revisions,.node-type-support-book .entity-reference-revisions{
+	padding-bottom: $spaceLg;
+	& > div > .paragraph{
+		margin-bottom: $spaceLg;
+		& > .field-header{
+			@include heading3;
+			text-align: center;
+			max-width: $textMax;
+			@include auto;
+			margin-bottom: $spaceXs;
+		}
+	}
+}//end global paragraphs
+
+.paragraph--type--accordion-group{
+	max-width: $textMax;
+	@include auto;
+	.field-accordion-item{
+		.accordion-header{
+			@include heading4;
+			margin-bottom: $spaceSm;
+			a{
+				text-decoration: none;
+			}
+		}
+		.field-text{
+			display: none;
+		}
+		.accordion-item:first-child{
+			#responsive-preview-frame-container &{
+				.field-text{
+					display: block;
+				}
+			}
+		}
+	}//end field-accordion-item
+}//end accordion group
+
+.paragraph--type--button{
+	max-width: $textMax;
+	@include auto;
+	.field-buttons{
+		@include safeFlex(row,wrap,center,start);
+		@include bleed(padding,1rem);
+		margin-bottom: -2rem;
+		& > div{
+			margin-bottom: 2rem;
+			a{
+				@include pvButton;
+			}
+		}
+	}
+}//end button
+
+.paragraph--type--files{
+	max-width: $textMax;
+	@include auto;
+	.field.files{
+		.file-item{
+			display: inline-block;
+			width: 100%;
+			margin-bottom: $spaceXxs;
+			a{
+				pointer-events: none;
+			}
+		}
+		&.multi-col{
+			@include smallTab{
+				@include cssColumns(2,40px);
+			}
+		}
+	}
+}//end hr
+
+.paragraph--type--horizontal-rule{
+	max-width: $textMax;
+	@include auto;
+	border-top: 1px solid $lightGreyAlt;
+}//end hr
+
+.paragraph--type--image{
+	max-width: $previewStop;
+	@include auto;
+}//end image
+
+.paragraph--type--text{
+	max-width: $textMax;
+	@include auto;
+}//end text
+
+.paragraph--type--react-component{
+	max-width: $previewStop;
+	@include auto;
+	.preview-disclaimer{
+		@include safeFlex(column,nowrap,center,center);
+		padding: 4rem 6rem;
+		min-height: 150px;
+		background: $lightGrey;
+		& > div{
+			font-size: 2rem;
+			margin-bottom: $spaceSm;
+		}
+		.field-components{
+			display: inline;
+		}
+	}
+}
+
+.paragraph--type--text-with-image{
+	max-width: $previewStop;
+	@include auto;
+	.ti-wrapper{
+		@include safeFlex(row,wrap,start,start);
+		@include bleed(padding,30px);
+		.img-wrapper{
+			width: 100%;
+			margin-bottom: $spaceSm;
+			@include tab{
+				margin-bottom: 0;
+				width: 50%;
+				&.right{
+					@include safeFlexOrder(2);
+				}
+			}
+		}//end image wrapper
+		.field-text{
+			width: 100%;
+			padding-left: 15px;
+			padding-right: 15px;
+			@include tab{
+				width: 50%;
+			}
+		}
+	}//end ti-wrapper
+}//end text-with image
+
+.paragraph--type--video{
+	max-width: $previewStop;
+	@include auto;
+	.field-media-oembed-video{
+		position: relative;
+		padding-bottom: 56.25%;
+		iframe{
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}//end video

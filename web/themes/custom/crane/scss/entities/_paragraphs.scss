@@ -83,6 +83,23 @@
 	}
 }
 
+/* FILES PREVIEW
+------------------ */
+.paragraph--type--files{
+	.field__item.inline-items{
+		@include safeFlex(row,wrap,start,start);
+		.contextual{
+			display: none;
+		}
+		span.file{
+			a{
+				pointer-events: none;
+				color: $darkBlue;
+			}
+		}
+	}
+}
+
 /* TEXT & IMAGE
 ------------------ */
 .paragraph--type--text-with-image{

@@ -5,14 +5,12 @@
  *
  * Available variables:
  * - paragraph: Full paragraph entity.
- *   Only method names starting with "get", "has", or "is" and a few common
- *   methods such as "id", "label", and "bundle" are available. For example:
- *   - paragraph.getCreatedTime() will return the paragraph creation timestamp.
- *   - paragraph.id(): The paragraph ID.
- *   - paragraph.bundle(): The type of the paragraph, for example, "image" or "text".
- *   - paragraph.getOwnerId(): The user ID of the paragraph author.
- *   See Drupal\paragraphs\Entity\Paragraph for a full list of public properties
- *   and methods for the paragraph object.
+ *   - id: The paragraph ID.
+ *   - bundle: The type of the paragraph, for example, "image" or "text".
+ *   - authorid: The user ID of the paragraph author.
+ *   - createdtime: Formatted creation date. Preprocess functions can
+ *     reformat it by calling format_date() with the desired parameters on
+ *     $variables['paragraph']->getCreatedTime().
  * - content: All paragraph items. Use {{ content }} to print them all,
  *   or print a subset such as {{ content.field_example }}. Use
  *   {{ content|without('field_example') }} to temporarily suppress the printing
@@ -38,20 +36,16 @@
  * @ingroup themeable
  */
 #}
-{% extends 'paragraph--preview.html.twig' %}
+{% extends "paragraph.html.twig" %}
 
 {% block content %}
-  <div class="field field--name-field-accordions field--type-string">
-  	<div class="field__item inline-items">
-	    {%- for key, accordion in content.field_accordions['#items'] if key|first != "#" -%}
-	    	{%- if loop.index0 < 2 -%}
-		      {%- if loop.index0 > 0 -%},{%- endif -%}
-		       <span>{{- accordion.entity.field_accordion_header.0.value -}}</span>
-		    {%- endif -%}
-		    {%- if loop.index0 == 2 -%}
-		    	<span class="more">...</span>
-		    {%- endif -%}
-	    {%- endfor -%}
-    </div>
-  </div>
+	{{ content.field_header }}
+	{%- if content.field_files.0 -%}
+		<div class="field files{% if content.field_files.3 %} multi-col{% endif %}">
+			{%- for key, file in content.field_files['#items'] if key|first != "#" -%}
+				<div class="file-item">{{ drupal_entity('media', file.entity.id, 'default') }}</div>
+			{%- endfor -%}
+		</div>
+	{%- endif -%}
 {% endblock %}
+

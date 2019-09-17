@@ -85,3 +85,19 @@
 	}
 }
 
+/* RECENT LOG MESSAGES
+------------------------ */
+.admin-dblog{
+	.dblog-error{
+		.icon{
+			background-image: url('../images/icons/message/message-error.svg');
+			background-size: 16px 16px;
+		}
+	}
+	.dblog-warning{
+		.icon{
+			background-image: url('../images/icons/message/message-warning.svg');
+			background-size: 16px 16px;
+		}
+	}
+}

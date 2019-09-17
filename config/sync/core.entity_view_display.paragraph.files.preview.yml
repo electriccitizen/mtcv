@@ -1,0 +1,31 @@
+uuid: 37cd0e8f-d168-416e-ab27-f689e0fb64ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.files.field_files
+    - field.field.paragraph.files.field_header
+    - paragraphs.paragraphs_type.files
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: paragraph.files.preview
+targetEntityType: paragraph
+bundle: files
+mode: preview
+content:
+  field_files:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_header: true

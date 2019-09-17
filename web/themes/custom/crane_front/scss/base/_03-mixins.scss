@@ -300,6 +300,20 @@
 	}
 }
 
+@mixin pvButton{
+	background: $link;
+	display: block;
+	line-height: 1;
+	color: $white;
+	text-transform: uppercase;
+	padding: 20px 35px;
+	font-weight: 900;
+	font-family: $bodyFont;
+	font-size: 1.8rem;
+	pointer-events: none;
+	text-decoration: none;
+}
+
 @mixin triangle($triDirection,$triHeight,$triWidth,$triColor){
 	width: 0;
 	height: 0;

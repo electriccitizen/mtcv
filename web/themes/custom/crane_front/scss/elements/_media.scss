@@ -1,0 +1,64 @@
+/* ========================
+  MEDIA
+========================== */
+
+/* FILE ICONS
+--------------- */
+%docIcons{
+	position: relative;
+	padding-left: 22px;
+	&:hover:before,&:focus:before{
+		opacity: .7;
+	}
+	&:before{
+		content:'';
+		display: block;
+		position: absolute;
+		top: 2px;
+		left: 0px;
+		width: 18px;
+		height: 18px;
+		background-repeat: none;
+		background-position: 0 0;
+		background-size: 18px 18px;
+	}
+}
+.text-with-summary,.text-long,span.file{
+	a[href$='.pdf']{
+		@extend %docIcons;
+		&:before{			
+			background-image: url('../images/icons/files/pdf.svg');
+		}	
+	}
+
+	//word
+	a[href$='.doc'],a[href$=".docx"]{
+		@extend %docIcons;
+		&:before{
+			background-image: url('../images/icons/files/word.svg');
+		}
+	}
+	//excel
+	a[href$='.xls'],a[href$=".xlsx"]{
+		@extend %docIcons;
+		&:before{
+			background-image: url('../images/icons/files/excel.svg');
+		}
+	}
+	//powerpoint
+	a[href$='.ppt'],a[href$=".pptx"]{
+		@extend %docIcons;
+		&:before{
+			background-image: url('../images/icons/files/ppt.svg');
+		}
+	}
+}//end wysiwyg fields
+
+/* GENERIC FILES */
+span.file a{
+	@extend %docIcons;
+	&:before{
+		background-image: url('../images/icons/files/generic.svg');
+	}
+}
+

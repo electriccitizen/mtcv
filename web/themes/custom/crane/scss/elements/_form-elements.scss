@@ -422,9 +422,13 @@ fieldset.form-wrapper{
 
 /* DRAWERS
 ------------------ */
+
 .drawer-toggle{
 	margin-bottom: $spaceXxs;
 	font-size: 1.6rem;
+	#drupal-modal &{
+		display: none;
+	}
 }
 .form-drawer{
 	display: none;

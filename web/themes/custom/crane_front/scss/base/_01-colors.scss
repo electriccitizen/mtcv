@@ -11,20 +11,25 @@ $midGrey      : #646569;
 $darkGrey     : #4a4a4a;
 $black        : #1f2225;
 $red          : #bf0e0e;
-$gold         : #fcd105;
-$green        : #018901;
+$greenLight   : #99cdbb;
 $darkGreen    : #14662e;
-$tan          : #8e700b;
-$fuchsia      : #c028bb;
-$darkFuchsia  : #5d025a;
 $blueGrey     : #dce7f3;
 $blue         : #1155cc;
 $midBlue      : #2c5580;
 $darkBlue     : #323b49;
-$purple       : #8b01e2;
 
 $transBlack   : rgba(35,35,35,0.7);
 $transRed     : rgba(191,14,14,0.03);
+$greenTrans6  : rgba(35,156,74,.6);
+
+
+/* ADMIN COLORS - DO NOT CUSTOMIZE PER SITE */
+$fuchsia      : #c028bb;
+$darkFuchsia  : #5d025a;
+$gold         : #fcd105;
+$tan          : #8e700b;
+$green        : #018901;
+$purple       : #8b01e2;
 $transFuchsia  : rgba(192,40,187,0.03);
 $transGold     : rgba(252,217,1,0.06);
 $transGreen    : rgba(1,185,1,0.05);

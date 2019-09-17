@@ -1,0 +1,9 @@
+uuid: 8fa930d4-2480-4a7c-956b-a6b4ab5a3597
+langcode: en
+status: true
+dependencies: {  }
+id: files
+label: Files
+icon_uuid: null
+description: 'Add document files to a page node.'
+behavior_plugins: {  }

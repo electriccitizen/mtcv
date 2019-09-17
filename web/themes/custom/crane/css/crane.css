@@ -4626,7 +4626,8 @@ a, .link {
   margin-right: 0;
   background: #1155cc;
   color: #ffffff;
-  min-width: 120px; }
+  min-width: 120px;
+  margin-bottom: .6rem; }
   .crane .form-submit:hover, .crane .form-submit:focus {
     color: #1f2225;
     background-color: #cccccc;
@@ -4649,7 +4650,7 @@ a, .link {
     background: #979797;
     color: #1f2225; }
 
-.crane .button--danger, .crane #edit-reset, .crane a.button--danger, .crane .button[value="Remove"], .crane .button[value="Delete"], .crane .button[value="Reset to alphabetical"] {
+.crane .button--danger, .crane #edit-reset, .crane a.button--danger, .crane .button[value="Remove"], .crane .button[value="Delete"], .crane .button[value="Reset to alphabetical"], .crane .button[value="Reset"] {
   background-image: none;
   background-color: #1155cc;
   border: none;
@@ -4670,12 +4671,13 @@ a, .link {
   background: #1155cc;
   color: #ffffff;
   min-width: 120px;
+  margin-bottom: .6rem;
   background: #c028bb;
   color: #ffffff;
   margin-left: 0;
   margin-right: 0;
   width: 100%; }
-  .crane .button--danger:hover, .crane .button--danger:focus, .crane #edit-reset:hover, .crane #edit-reset:focus, .crane a.button--danger:hover, .crane a.button--danger:focus, .crane .button[value="Remove"]:hover, .crane .button[value="Remove"]:focus, .crane .button[value="Delete"]:hover, .crane .button[value="Delete"]:focus, .crane .button[value="Reset to alphabetical"]:hover, .crane .button[value="Reset to alphabetical"]:focus {
+  .crane .button--danger:hover, .crane .button--danger:focus, .crane #edit-reset:hover, .crane #edit-reset:focus, .crane a.button--danger:hover, .crane a.button--danger:focus, .crane .button[value="Remove"]:hover, .crane .button[value="Remove"]:focus, .crane .button[value="Delete"]:hover, .crane .button[value="Delete"]:focus, .crane .button[value="Reset to alphabetical"]:hover, .crane .button[value="Reset to alphabetical"]:focus, .crane .button[value="Reset"]:hover, .crane .button[value="Reset"]:focus {
     color: #1f2225;
     background-color: #cccccc;
     box-shadow: none;
@@ -4685,25 +4687,25 @@ a, .link {
     -webkit-transition: all 0.3s ease;
     -webkit-transform: translateZ(0);
     outline: none; }
-  .crane .button--danger:active, .crane #edit-reset:active, .crane a.button--danger:active, .crane .button[value="Remove"]:active, .crane .button[value="Delete"]:active, .crane .button[value="Reset to alphabetical"]:active {
+  .crane .button--danger:active, .crane #edit-reset:active, .crane a.button--danger:active, .crane .button[value="Remove"]:active, .crane .button[value="Delete"]:active, .crane .button[value="Reset to alphabetical"]:active, .crane .button[value="Reset"]:active {
     box-shadow: none;
     border: none;
     color: #1f2225;
     background-color: #979797; }
-  .crane .button--danger:hover, .crane .button--danger:focus, .crane #edit-reset:hover, .crane #edit-reset:focus, .crane a.button--danger:hover, .crane a.button--danger:focus, .crane .button[value="Remove"]:hover, .crane .button[value="Remove"]:focus, .crane .button[value="Delete"]:hover, .crane .button[value="Delete"]:focus, .crane .button[value="Reset to alphabetical"]:hover, .crane .button[value="Reset to alphabetical"]:focus {
+  .crane .button--danger:hover, .crane .button--danger:focus, .crane #edit-reset:hover, .crane #edit-reset:focus, .crane a.button--danger:hover, .crane a.button--danger:focus, .crane .button[value="Remove"]:hover, .crane .button[value="Remove"]:focus, .crane .button[value="Delete"]:hover, .crane .button[value="Delete"]:focus, .crane .button[value="Reset to alphabetical"]:hover, .crane .button[value="Reset to alphabetical"]:focus, .crane .button[value="Reset"]:hover, .crane .button[value="Reset"]:focus {
     background: #cccccc;
     color: #1f2225; }
-  .crane .button--danger:active, .crane #edit-reset:active, .crane a.button--danger:active, .crane .button[value="Remove"]:active, .crane .button[value="Delete"]:active, .crane .button[value="Reset to alphabetical"]:active {
+  .crane .button--danger:active, .crane #edit-reset:active, .crane a.button--danger:active, .crane .button[value="Remove"]:active, .crane .button[value="Delete"]:active, .crane .button[value="Reset to alphabetical"]:active, .crane .button[value="Reset"]:active {
     background: #979797;
     color: #1f2225; }
-  .crane .button--danger:hover, .crane .button--danger:focus, .crane #edit-reset:hover, .crane #edit-reset:focus, .crane a.button--danger:hover, .crane a.button--danger:focus, .crane .button[value="Remove"]:hover, .crane .button[value="Remove"]:focus, .crane .button[value="Delete"]:hover, .crane .button[value="Delete"]:focus, .crane .button[value="Reset to alphabetical"]:hover, .crane .button[value="Reset to alphabetical"]:focus {
+  .crane .button--danger:hover, .crane .button--danger:focus, .crane #edit-reset:hover, .crane #edit-reset:focus, .crane a.button--danger:hover, .crane a.button--danger:focus, .crane .button[value="Remove"]:hover, .crane .button[value="Remove"]:focus, .crane .button[value="Delete"]:hover, .crane .button[value="Delete"]:focus, .crane .button[value="Reset to alphabetical"]:hover, .crane .button[value="Reset to alphabetical"]:focus, .crane .button[value="Reset"]:hover, .crane .button[value="Reset"]:focus {
     background: #cccccc;
     color: #1f2225; }
-  .crane .button--danger:active, .crane #edit-reset:active, .crane a.button--danger:active, .crane .button[value="Remove"]:active, .crane .button[value="Delete"]:active, .crane .button[value="Reset to alphabetical"]:active {
+  .crane .button--danger:active, .crane #edit-reset:active, .crane a.button--danger:active, .crane .button[value="Remove"]:active, .crane .button[value="Delete"]:active, .crane .button[value="Reset to alphabetical"]:active, .crane .button[value="Reset"]:active {
     background: #979797;
     color: #1f2225; }
   @media (min-width: 600px) {
-    .crane .button--danger, .crane #edit-reset, .crane a.button--danger, .crane .button[value="Remove"], .crane .button[value="Delete"], .crane .button[value="Reset to alphabetical"] {
+    .crane .button--danger, .crane #edit-reset, .crane a.button--danger, .crane .button[value="Remove"], .crane .button[value="Delete"], .crane .button[value="Reset to alphabetical"], .crane .button[value="Reset"] {
       width: auto; } }
 
 .crane .button[data-drupal-selector="edit-cancel"], .crane .button[data-drupal-selector="edit-actions-cancel"] {
@@ -4727,6 +4729,7 @@ a, .link {
   background: #1155cc;
   color: #ffffff;
   min-width: 120px;
+  margin-bottom: .6rem;
   background: #8b01e2;
   color: #ffffff;
   margin-left: 0;
@@ -4787,6 +4790,7 @@ a, .link {
   background: #1155cc;
   color: #ffffff;
   min-width: 120px;
+  margin-bottom: .6rem;
   background: #018901; }
   .crane a#edit-ec-preview:hover, .crane a#edit-ec-preview:focus {
     color: #1f2225;
@@ -5369,9 +5373,55 @@ fieldset.form-wrapper {
 .drawer-toggle {
   margin-bottom: 0.5rem;
   font-size: 1.6rem; }
+  #drupal-modal .drawer-toggle {
+    display: none; }
 
 .form-drawer {
   display: none; }
+
+/* ========================
+  MEDIA
+========================== */
+.media-library-item__attributes {
+  min-height: 22px; }
+
+/* FILE ICONS
+--------------- */
+.text-with-summary a[href$='.pdf'], .text-long a[href$='.pdf'], span.file a[href$='.pdf'], .text-with-summary a[href$='.doc'], .text-with-summary a[href$=".docx"], .text-long a[href$='.doc'], .text-long a[href$=".docx"], span.file a[href$='.doc'], span.file a[href$=".docx"], .text-with-summary a[href$='.xls'], .text-with-summary a[href$=".xlsx"], .text-long a[href$='.xls'], .text-long a[href$=".xlsx"], span.file a[href$='.xls'], span.file a[href$=".xlsx"], .text-with-summary a[href$='.ppt'], .text-with-summary a[href$=".pptx"], .text-long a[href$='.ppt'], .text-long a[href$=".pptx"], span.file a[href$='.ppt'], span.file a[href$=".pptx"], span.file a {
+  position: relative;
+  padding-left: 20px; }
+  .text-with-summary a[href$='.pdf']:hover:before, .text-long a[href$='.pdf']:hover:before, .text-with-summary a[href$='.doc']:hover:before, .text-with-summary a[href$=".docx"]:hover:before, .text-long a[href$='.doc']:hover:before, .text-long a[href$=".docx"]:hover:before, .text-with-summary a[href$='.xls']:hover:before, .text-with-summary a[href$=".xlsx"]:hover:before, .text-long a[href$='.xls']:hover:before, .text-long a[href$=".xlsx"]:hover:before, .text-with-summary a[href$='.ppt']:hover:before, .text-with-summary a[href$=".pptx"]:hover:before, .text-long a[href$='.ppt']:hover:before, .text-long a[href$=".pptx"]:hover:before, span.file a:hover:before, .text-with-summary a[href$='.pdf']:focus:before, .text-long a[href$='.pdf']:focus:before, .text-with-summary a[href$='.doc']:focus:before, .text-with-summary a[href$=".docx"]:focus:before, .text-long a[href$='.doc']:focus:before, .text-long a[href$=".docx"]:focus:before, .text-with-summary a[href$='.xls']:focus:before, .text-with-summary a[href$=".xlsx"]:focus:before, .text-long a[href$='.xls']:focus:before, .text-long a[href$=".xlsx"]:focus:before, .text-with-summary a[href$='.ppt']:focus:before, .text-with-summary a[href$=".pptx"]:focus:before, .text-long a[href$='.ppt']:focus:before, .text-long a[href$=".pptx"]:focus:before, span.file a:focus:before {
+    opacity: .7; }
+  .text-with-summary a[href$='.pdf']:before, .text-long a[href$='.pdf']:before, span.file a[href$='.pdf']:before, .text-with-summary a[href$='.doc']:before, .text-with-summary a[href$=".docx"]:before, .text-long a[href$='.doc']:before, .text-long a[href$=".docx"]:before, span.file a[href$='.doc']:before, span.file a[href$=".docx"]:before, .text-with-summary a[href$='.xls']:before, .text-with-summary a[href$=".xlsx"]:before, .text-long a[href$='.xls']:before, .text-long a[href$=".xlsx"]:before, span.file a[href$='.xls']:before, span.file a[href$=".xlsx"]:before, .text-with-summary a[href$='.ppt']:before, .text-with-summary a[href$=".pptx"]:before, .text-long a[href$='.ppt']:before, .text-long a[href$=".pptx"]:before, span.file a[href$='.ppt']:before, span.file a[href$=".pptx"]:before, span.file a:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-repeat: none;
+    background-position: 0 0;
+    background-size: 16px 16px; }
+
+.text-with-summary a[href$='.pdf']:before, .text-long a[href$='.pdf']:before, span.file a[href$='.pdf']:before {
+  background-image: url("../images/icons/files/pdf.svg"); }
+
+.text-with-summary a[href$='.doc']:before, .text-with-summary a[href$=".docx"]:before, .text-long a[href$='.doc']:before, .text-long a[href$=".docx"]:before, span.file a[href$='.doc']:before, span.file a[href$=".docx"]:before {
+  background-image: url("../images/icons/files/word.svg"); }
+
+.text-with-summary a[href$='.xls']:before, .text-with-summary a[href$=".xlsx"]:before, .text-long a[href$='.xls']:before, .text-long a[href$=".xlsx"]:before, span.file a[href$='.xls']:before, span.file a[href$=".xlsx"]:before {
+  background-image: url("../images/icons/files/excel.svg"); }
+
+.text-with-summary a[href$='.ppt']:before, .text-with-summary a[href$=".pptx"]:before, .text-long a[href$='.ppt']:before, .text-long a[href$=".pptx"]:before, span.file a[href$='.ppt']:before, span.file a[href$=".pptx"]:before {
+  background-image: url("../images/icons/files/ppt.svg"); }
+
+/* GENERIC FILES */
+span.file {
+  background-image: none;
+  padding-left: 0; }
+  span.file a:before {
+    background-image: url("../images/icons/files/generic.svg"); }
 
 /* ==============
 	 ADMIN-NAV
@@ -5893,6 +5943,16 @@ body:not(.role-administrator) .admin-list li.escape, body:not(.role-administrato
 @media screen and (min-width: 48em) {
   .system-status-report__entry__value {
     width: 70%; } }
+
+/* RECENT LOG MESSAGES
+------------------------ */
+.admin-dblog .dblog-error .icon {
+  background-image: url("../images/icons/message/message-error.svg");
+  background-size: 16px 16px; }
+
+.admin-dblog .dblog-warning .icon {
+  background-image: url("../images/icons/message/message-warning.svg");
+  background-size: 16px 16px; }
 
 /* ==============
 	 PAGERS
@@ -6423,6 +6483,7 @@ nav#block-crane-quicklinks {
       background: #1155cc;
       color: #ffffff;
       min-width: 120px;
+      margin-bottom: .6rem;
       background: #018901; }
       .node-form .layout-region-node-footer #edit-actions #edit-preview:hover, .node-form .layout-region-node-footer #edit-actions #edit-preview:focus, .node-confirm-form .layout-region-node-footer #edit-actions #edit-preview:hover, .node-confirm-form .layout-region-node-footer #edit-actions #edit-preview:focus {
         color: #1f2225;
@@ -6525,6 +6586,25 @@ nav#block-crane-quicklinks {
 
 .paragraph--type--button .more {
   font-size: 1.6rem; }
+
+/* FILES PREVIEW
+------------------ */
+.paragraph--type--files .field__item.inline-items {
+  display: flex;
+  display: -ms-flexbox;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  justify-content: flex-start;
+  -ms-flex-pack: start;
+  align-items: flex-start;
+  -ms-flex-align: start; }
+  .paragraph--type--files .field__item.inline-items .contextual {
+    display: none; }
+  .paragraph--type--files .field__item.inline-items span.file a {
+    pointer-events: none;
+    color: #323b49; }
 
 /* TEXT & IMAGE
 ------------------ */
@@ -6775,6 +6855,7 @@ nav#block-crane-quicklinks {
     background: #1155cc;
     color: #ffffff;
     min-width: 120px;
+    margin-bottom: .6rem;
     background: #8b01e2;
     color: #ffffff;
     min-width: 185px; }
@@ -6858,15 +6939,5 @@ nav#block-crane-quicklinks {
 
 body:not(.role-administrator) .view-id-block_content td.views-field-operations.Yes .dropbutton-wrapper .delete, body:not(.role-administrator) .view-id-block_content td.views-field-operations.Social .dropbutton-wrapper .delete, body:not(.role-administrator) .view-id-block_content td.views-field-operations.Home .dropbutton-wrapper .delete, body:not(.role-administrator) .view-id-block_content td.views-field-operations.Escape .dropbutton-wrapper .delete {
   display: none; }
-
-/* RECENT LOG MESSAGES
------------------------- */
-.admin-dblog .dblog-error .icon {
-  background-image: url("../images/icons/message/message-error.svg");
-  background-size: 16px 16px; }
-
-.admin-dblog .dblog-warning .icon {
-  background-image: url("../images/icons/message/message-warning.svg");
-  background-size: 16px 16px; }
 
 /*# sourceMappingURL=crane.css.map */
