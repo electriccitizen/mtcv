@@ -5,10 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.media.media_library
     - field.field.media.file.field_media_file
-    - image.style.thumbnail
     - media.type.file
   module:
-    - image
+    - file
 _core:
   default_config_hash: vhAK2lCOWK2paUpJawj7yiSLFO9wwsx6WE8_oDmvbwU
 id: media.file.media_library
@@ -16,17 +15,16 @@ targetEntityType: media
 bundle: file
 mode: media_library
 content:
-  thumbnail:
-    type: image
+  field_media_file:
+    type: file_default
     weight: 0
     region: content
     label: hidden
     settings:
-      image_style: thumbnail
-      image_link: ''
+      use_description_as_link_text: true
     third_party_settings: {  }
 hidden:
   created: true
-  field_media_file: true
   name: true
+  thumbnail: true
   uid: true

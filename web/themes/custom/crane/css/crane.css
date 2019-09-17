@@ -5414,7 +5414,7 @@ fieldset.form-wrapper {
   background-image: url("../images/icons/files/excel.svg"); }
 
 .text-with-summary a[href$='.ppt']:before, .text-with-summary a[href$=".pptx"]:before, .text-long a[href$='.ppt']:before, .text-long a[href$=".pptx"]:before, span.file a[href$='.ppt']:before, span.file a[href$=".pptx"]:before {
-  background-image: url("../images/icons/files/ppt.svg"); }
+  background-image: url("../images/icons/files/powerpoint.svg"); }
 
 /* GENERIC FILES */
 span.file {

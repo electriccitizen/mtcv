@@ -49,7 +49,7 @@
 	a[href$='.ppt'],a[href$=".pptx"]{
 		@extend %docIcons;
 		&:before{
-			background-image: url('../images/icons/files/ppt.svg');
+			background-image: url('../images/icons/files/powerpoint.svg');
 		}
 	}
 }//end wysiwyg fields
