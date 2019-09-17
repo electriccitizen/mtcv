@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "55b98b4754c952b6ff72444357601404",
+    "content-hash": "2b115c35d9c7e2729e6a564cd1e167ca",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1478,6 +1478,57 @@
                 "issues": "https://www.drupal.org/project/issues/auto_entitylabel"
             },
             "time": "2018-09-05T19:29:54+00:00"
+        },
+        {
+            "name": "drupal/build_hooks",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/build_hooks.git",
+                "reference": "8.x-2.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/build_hooks-8.x-2.2.zip",
+                "reference": "8.x-2.2",
+                "shasum": "e9e3e0ad4c63b4ba6579ce3b8409e0138b69765d"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.2",
+                    "datestamp": "1559417885",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "jmolivas",
+                    "homepage": "https://www.drupal.org/user/678770"
+                },
+                {
+                    "name": "vermario",
+                    "homepage": "https://www.drupal.org/user/121062"
+                }
+            ],
+            "description": "Triggers a build hook on any service provider that supports build hooks.",
+            "homepage": "https://www.drupal.org/project/build_hooks",
+            "support": {
+                "source": "https://git.drupalcode.org/project/build_hooks"
+            }
         },
         {
             "name": "drupal/chosen",
@@ -3007,6 +3058,10 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "Enable using active menus as menu block titles": "https://www.drupal.org/files/issues/menu_block-label_configuration-2809699-51.patch",
+                    "Enable link functionality on menu block titles": "https://www.drupal.org/files/issues/menu_block-title_as_link-1-d8.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3334,7 +3389,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.8",
-                    "datestamp": "1553618281",
+                    "datestamp": "1565881389",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3342,7 +3397,8 @@
                 },
                 "patches_applied": {
                     "LogicException": "https://www.drupal.org/files/issues/2019-05-03/3013171-13.patch",
-                    "Field Group": "https://www.drupal.org/files/issues/2907094_7_field_group_support.patch"
+                    "Field Group": "https://www.drupal.org/files/issues/2907094_7_field_group_support.patch",
+                    "Call to member function missing label": "https://www.drupal.org/files/issues/2019-08-11/paragraphs-call_id_on_null-2948778-16.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3462,7 +3518,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.3",
-                    "datestamp": "1539682684",
+                    "datestamp": "1561757585",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4036,7 +4092,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.5",
-                    "datestamp": "1503109444",
+                    "datestamp": "1561996386",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"

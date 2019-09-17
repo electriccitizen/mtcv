@@ -17,6 +17,7 @@
         "drupal/adminimal_admin_toolbar": "^1.9",
         "drupal/adminimal_theme": "^1.4",
         "drupal/auto_entitylabel": "2.x-dev",
+        "drupal/build_hooks": "^2.2",
         "drupal/chosen": "^2.7",
         "drupal/color_field": "^2.0",
         "drupal/config_direct_save": "^1.0",
