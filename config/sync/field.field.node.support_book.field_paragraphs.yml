@@ -7,6 +7,7 @@ dependencies:
     - node.type.support_book
     - paragraphs.paragraphs_type.accordion_group
     - paragraphs.paragraphs_type.button
+    - paragraphs.paragraphs_type.files
     - paragraphs.paragraphs_type.horizontal_rule
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.react_component
@@ -32,6 +33,7 @@ settings:
     target_bundles:
       accordion_group: accordion_group
       button: button
+      files: files
       horizontal_rule: horizontal_rule
       image: image
       react_component: react_component
@@ -51,6 +53,9 @@ settings:
       header:
         weight: 15
         enabled: false
+      files:
+        enabled: true
+        weight: 16
       horizontal_rule:
         enabled: true
         weight: 16
