@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: react_component
-label: 'React Component'
+label: 'Gatsby Component'
 icon_uuid: null
-description: 'Add a react component to the page.'
+description: 'Add a Gatsby component to the page.'
 behavior_plugins: {  }

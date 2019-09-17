@@ -11,7 +11,7 @@ field_name: field_components
 entity_type: paragraph
 bundle: react_component
 label: Component
-description: 'Select react components to add to the page. <strong>NOTE:</strong> This paragraph type should only be used if by those familiar with the components.'
+description: 'Select Gatsby components to add to the page. <strong>NOTE:</strong> This paragraph type should only be used if you are familiar with the components.'
 required: true
 translatable: false
 default_value: {  }
