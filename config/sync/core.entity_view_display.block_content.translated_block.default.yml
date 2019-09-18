@@ -4,17 +4,26 @@ status: true
 dependencies:
   config:
     - block_content.type.translated_block
+    - field.field.block_content.translated_block.body
     - field.field.block_content.translated_block.field_translations
   module:
     - entity_reference_revisions
+    - text
 id: block_content.translated_block.default
 targetEntityType: block_content
 bundle: translated_block
 mode: default
 content:
+  body:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
   field_translations:
     type: entity_reference_revisions_entity_view
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       view_mode: default

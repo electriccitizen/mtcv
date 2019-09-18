@@ -1,0 +1,27 @@
+uuid: 1019c64a-0fce-4cda-99c7-e3c1a4407f8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.translated_block
+    - field.storage.block_content.body
+  module:
+    - text
+    - text_summary_options
+third_party_settings:
+  text_summary_options:
+    show_summary: 0
+    required_summary: 0
+id: block_content.translated_block.body
+field_name: body
+entity_type: block_content
+bundle: translated_block
+label: 'English Text'
+description: 'Add the default English text. Use the Add Translation Text button to add translated versions.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

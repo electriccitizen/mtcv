@@ -4,17 +4,28 @@ status: true
 dependencies:
   config:
     - block_content.type.translated_block
+    - field.field.block_content.translated_block.body
     - field.field.block_content.translated_block.field_translations
   module:
     - paragraphs
+    - text
 id: block_content.translated_block.default
 targetEntityType: block_content
 bundle: translated_block
 mode: default
 content:
+  body:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+      summary_rows: 3
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
   field_translations:
     type: paragraphs
-    weight: 26
+    weight: 2
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -33,7 +44,7 @@ content:
     region: content
   info:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
