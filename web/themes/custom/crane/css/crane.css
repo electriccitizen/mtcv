@@ -6371,6 +6371,10 @@ nav#block-crane-quicklinks {
 
 /* MEDIA FORMS
 -------------- */
+.media-form .form-actions {
+  border-top: 1px solid #cccccc;
+  padding-top: 3rem; }
+
 .media-form .vertical-tabs {
   display: none; }
 

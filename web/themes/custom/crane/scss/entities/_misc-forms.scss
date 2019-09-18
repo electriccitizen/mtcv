@@ -198,6 +198,10 @@
 /* MEDIA FORMS
 -------------- */
 .media-form{
+	.form-actions{
+		border-top: 1px solid $lightGreyAlt;
+		padding-top: $spaceMd;
+	}
 	.vertical-tabs{
 		display: none;
 	}
