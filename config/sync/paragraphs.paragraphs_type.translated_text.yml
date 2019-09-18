@@ -1,0 +1,9 @@
+uuid: bd3ad5aa-3ff3-4bf9-837e-c28a54083f11
+langcode: en
+status: true
+dependencies: {  }
+id: translated_text
+label: 'Translated Text'
+icon_uuid: null
+description: 'Add text translated into a specific language to the site.'
+behavior_plugins: {  }

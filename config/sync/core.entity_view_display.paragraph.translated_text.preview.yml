@@ -1,0 +1,38 @@
+uuid: 2610f876-4638-413b-b0f0-cdcad240c82a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.translated_text.field_language
+    - field.field.paragraph.translated_text.field_text
+    - paragraphs.paragraphs_type.translated_text
+  module:
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: paragraph.translated_text.preview
+targetEntityType: paragraph
+bundle: translated_text
+mode: preview
+content:
+  field_language:
+    weight: 0
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_text:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 140
+    third_party_settings: {  }
+    type: text_trimmed
+    region: content
+hidden: {  }

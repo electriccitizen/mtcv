@@ -1,0 +1,29 @@
+uuid: f2ea763a-ce66-4e6b-b348-8e93244fcfa0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_language
+    - paragraphs.paragraphs_type.translated_text
+    - taxonomy.vocabulary.translation_languages
+id: paragraph.translated_text.field_language
+field_name: field_language
+entity_type: paragraph
+bundle: translated_text
+label: Language
+description: 'Select the language for the text.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      translation_languages: translation_languages
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

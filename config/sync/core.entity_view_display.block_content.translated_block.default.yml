@@ -1,0 +1,24 @@
+uuid: f315af95-ab55-4fca-b1c4-0e50c9867aa8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.translated_block
+    - field.field.block_content.translated_block.field_translations
+  module:
+    - entity_reference_revisions
+id: block_content.translated_block.default
+targetEntityType: block_content
+bundle: translated_block
+mode: default
+content:
+  field_translations:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

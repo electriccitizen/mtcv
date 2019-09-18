@@ -1,0 +1,8 @@
+uuid: aff0a2d2-2716-47d6-bece-35123be80e32
+langcode: en
+status: true
+dependencies: {  }
+id: translated_block
+label: 'Translated Block'
+revision: 0
+description: 'Add a block of translated items where a user can select which language they wish to view the content in.'

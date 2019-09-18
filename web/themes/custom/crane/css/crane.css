@@ -6941,7 +6941,7 @@ nav#block-crane-quicklinks {
   font-size: 1.4rem;
   margin-left: .5rem; }
 
-body:not(.role-administrator) .view-id-block_content td.views-field-operations.Yes .dropbutton-wrapper .delete, body:not(.role-administrator) .view-id-block_content td.views-field-operations.Social .dropbutton-wrapper .delete, body:not(.role-administrator) .view-id-block_content td.views-field-operations.Home .dropbutton-wrapper .delete, body:not(.role-administrator) .view-id-block_content td.views-field-operations.Escape .dropbutton-wrapper .delete {
+body:not(.role-administrator) .view-id-block_content td.views-field-operations.Yes .dropbutton-wrapper .delete, body:not(.role-administrator) .view-id-block_content td.views-field-operations.Social .dropbutton-wrapper .delete, body:not(.role-administrator) .view-id-block_content td.views-field-operations.Home .dropbutton-wrapper .delete, body:not(.role-administrator) .view-id-block_content td.views-field-operations.Escape .dropbutton-wrapper .delete, body:not(.role-administrator) .view-id-block_content td.views-field-operations.Translated .dropbutton-wrapper .delete {
   display: none; }
 
 /*# sourceMappingURL=crane.css.map */

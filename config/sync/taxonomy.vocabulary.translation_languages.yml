@@ -1,0 +1,17 @@
+uuid: bb32e8ac-f949-49cb-95fc-5fdde3200d8e
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_redirect
+third_party_settings:
+  entity_redirect:
+    destination: url
+    url: /admin/structure/taxonomy/manage/translation_languages/overview
+    personalizable: 0
+    redirect_edit: 1
+    external: ''
+name: 'Translation Languages'
+vid: translation_languages
+description: 'Languages available for use in the translated text paragraph.'
+weight: 0

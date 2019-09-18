@@ -278,6 +278,10 @@ function citizen_custom_form_alter(&$form, FormStateInterface $form_state) {
       if(!in_array('administrator', $userRole)){
         unset($form['actions']['delete']);
       }
+    case 'block-content-translated-block-edit-form':
+      if(!in_array('administrator', $userRole)){
+        unset($form['actions']['delete']);
+      }
     case 'block-content-escape-edit-form':
       if(!in_array('administrator', $userRole)){
         unset($form['actions']['delete']);
