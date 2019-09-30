@@ -6421,6 +6421,12 @@ nav#block-crane-quicklinks {
   #deployment-form #edit-refresher:active {
     background: #979797; }
 
+#deployment-form.preview #ajax-replace-table thead th:nth-child(3) {
+  display: none; }
+
+#deployment-form.preview #ajax-replace-table tbody tr td:nth-child(3) {
+  display: none; }
+
 /* ========================
   NODE FORMS
 ========================== */
