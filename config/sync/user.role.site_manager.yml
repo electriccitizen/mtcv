@@ -104,6 +104,7 @@ permissions:
   - 'revert page revisions'
   - 'revert resource revisions'
   - 'switch shortcut sets'
+  - 'trigger deployments'
   - 'update any basic block_content'
   - 'update any escape block_content'
   - 'update any homepage_featured_content block_content'

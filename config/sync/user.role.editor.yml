@@ -92,6 +92,7 @@ permissions:
   - 'revert page revisions'
   - 'revert resource revisions'
   - 'switch shortcut sets'
+  - 'trigger deployments'
   - 'use text format basic_html'
   - 'view all revisions'
   - 'view own unpublished content'

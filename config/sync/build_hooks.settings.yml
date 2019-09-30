@@ -1,8 +1,8 @@
 logging:
   entity_types:
+    block_content: block_content
     node: node
     taxonomy_term: taxonomy_term
-    block_content: 0
     file: 0
     media: 0
     redirect: 0
