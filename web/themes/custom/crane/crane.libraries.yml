@@ -17,6 +17,10 @@ block-editing:
   version: 1.0
   js:
     js/block-editing.js: {}
+deployment-form:
+  version: 1.0
+  js:
+    js/deployment-form.js: {}
 fonts:
   version: 1.0
   css:

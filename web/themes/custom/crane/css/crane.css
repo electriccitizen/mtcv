@@ -6394,6 +6394,33 @@ nav#block-crane-quicklinks {
 .system-modules .package-listing td:last-child {
   border-bottom: 1px solid #979797; }
 
+/* DEPLOYMENT FORM
+-------------------- */
+#deployment-form .deploy-counter {
+  margin-bottom: 2rem; }
+  #deployment-form .deploy-counter span {
+    color: #018901; }
+
+#deployment-form .view-build-hooks-editing-log .pager:not(.views-ui-display-tab-bucket) .pager__items {
+  width: 100%;
+  min-height: auto;
+  background: transparent; }
+  #deployment-form .view-build-hooks-editing-log .pager:not(.views-ui-display-tab-bucket) .pager__items .pager__item {
+    margin: 0 10px; }
+    #deployment-form .view-build-hooks-editing-log .pager:not(.views-ui-display-tab-bucket) .pager__items .pager__item a {
+      width: 30px;
+      height: 30px; }
+
+#deployment-form .seven-details__wrapper table {
+  margin: 2rem 0; }
+
+#deployment-form #edit-refresher {
+  background: #018901; }
+  #deployment-form #edit-refresher:hover, #deployment-form #edit-refresher:focus {
+    background: #cccccc; }
+  #deployment-form #edit-refresher:active {
+    background: #979797; }
+
 /* ========================
   NODE FORMS
 ========================== */

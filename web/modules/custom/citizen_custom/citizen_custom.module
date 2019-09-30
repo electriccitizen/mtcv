@@ -294,6 +294,18 @@ function citizen_custom_form_alter(&$form, FormStateInterface $form_state) {
       unset($form['account']['roles']['#options']['administrator']);
     }
   }
+  if($formId == 'deployment-form'){
+    if ($form['display']['#markup']) {
+      unset($form['display']['#markup']);
+    }
+    if ($form['frontend_environment']['#value']->label() == 'LIVE') {
+      $form['#attributes']['class'] = 'deployment-form live';
+      $form['submit']['#value'] = 'Deploy Live';
+    } else {
+      $form['#attributes']['class'] = 'deployment-form preview';
+      $form['submit']['#value'] = 'Deploy Preview';
+    }
+  }
 }
 
 /**
@@ -314,4 +326,14 @@ function citizen_custom_node_access(NodeInterface $node, $op, AccountInterface $
   }
   // No opinion.
   return AccessResult::neutral();
+}
+
+/**
+ * Implements hook_toolbar_alter().
+ */
+function citizen_custom_toolbar_alter(&$items) {
+  // Not that great, but it works:
+  // add markers to the deployments items so we can switch them to quicklinks
+  $items['build_hooks_deployments']['tray']['deployments']['#items']['build_hooks_live']['#attributes']['class'] = 'deploy-live';
+  $items['build_hooks_deployments']['tray']['deployments']['#items']['build_hooks_preview']['#attributes']['class'] = 'deploy-preview';
 }

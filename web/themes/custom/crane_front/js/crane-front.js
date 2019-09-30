@@ -9,6 +9,12 @@ Drupal.behaviors.quickMenu = {
 
 			var wwidth = $(window).outerWidth();
 
+      //insert deploy items
+      $(document).ready(function(){
+        var liveDeploys = $('.toolbar-menu a.deploy-live').text();
+        $('#block-quicklinks a.live-deploys,.header-bar .deploy-link').text('Deploy ' + liveDeploys);
+      });
+
       //set button roles, tab indexes and keypresses on sidebar links
       $(document).on('click','.crane-menu-toggle',function(e){
         e.preventDefault();
