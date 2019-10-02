@@ -11,7 +11,7 @@ third_party_settings:
     parent: ''
   entity_redirect:
     destination: url
-    url: /admin/content/resources
+    url: /admin/content
     personalizable: false
     redirect_edit: true
     external: ''
