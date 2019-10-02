@@ -1,0 +1,23 @@
+uuid: f8c0be46-e8a7-4009-b3f1-cba0e8b305db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_url
+    - node.type.resource
+  module:
+    - citizen_custom
+id: node.resource.field_resource_url
+field_name: field_resource_url
+entity_type: node
+bundle: resource
+label: 'Resource URL'
+description: 'If this is an external resource, you must paste the whole link (including https://) into this field. If this is an internal video resource, you can use the autocomplete function to search for the video''s page. '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: '17'
+  title: '0'
+field_type: citizen_custom_link

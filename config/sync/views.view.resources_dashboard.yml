@@ -8,14 +8,14 @@ dependencies:
     - field.storage.node.field_description
     - field.storage.node.field_related_category
     - field.storage.node.field_related_issue
-    - field.storage.node.field_url
+    - field.storage.node.field_resource_url
     - node.type.resource
     - taxonomy.vocabulary.county
     - taxonomy.vocabulary.crime
     - taxonomy.vocabulary.related_issues
     - taxonomy.vocabulary.resource_category
   module:
-    - link
+    - citizen_custom
     - node
     - taxonomy
     - text
@@ -95,7 +95,7 @@ display:
           columns:
             title: title
             field_description: field_description
-            field_url: field_description
+            field_resource_url: field_description
             field_crime: field_crime
             field_related_issue: field_related_issue
             field_related_category: field_related_category
@@ -117,7 +117,9 @@ display:
               separator: '<br />'
               empty_column: false
               responsive: ''
-            field_url:
+            field_resource_url:
+              sortable: false
+              default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
@@ -288,14 +290,14 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_url:
-          id: field_url
-          table: node__field_url
-          field: field_url
+        field_resource_url:
+          id: field_resource_url
+          table: node__field_resource_url
+          field: field_resource_url
           relationship: none
           group_type: group
           admin_label: ''
-          label: URL
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -328,7 +330,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -337,13 +339,13 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: uri
-          type: link
+          type: citizen_link
           settings:
-            trim_length: 80
-            url_only: true
-            url_plain: false
-            rel: '0'
-            target: '0'
+            trim_length: '80'
+            url_only: ''
+            url_plain: ''
+            rel: 0
+            target: _blank
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -1020,7 +1022,7 @@ display:
         - 'config:field.storage.node.field_description'
         - 'config:field.storage.node.field_related_category'
         - 'config:field.storage.node.field_related_issue'
-        - 'config:field.storage.node.field_url'
+        - 'config:field.storage.node.field_resource_url'
   page_1:
     display_plugin: page
     id: page_1
@@ -1045,4 +1047,4 @@ display:
         - 'config:field.storage.node.field_description'
         - 'config:field.storage.node.field_related_category'
         - 'config:field.storage.node.field_related_issue'
-        - 'config:field.storage.node.field_url'
+        - 'config:field.storage.node.field_resource_url'

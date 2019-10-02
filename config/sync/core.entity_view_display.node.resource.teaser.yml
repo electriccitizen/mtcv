@@ -4,7 +4,14 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.resource.field_url
+    - field.field.node.resource.field_county
+    - field.field.node.resource.field_crime
+    - field.field.node.resource.field_description
+    - field.field.node.resource.field_metatags
+    - field.field.node.resource.field_organization
+    - field.field.node.resource.field_related_category
+    - field.field.node.resource.field_related_issue
+    - field.field.node.resource.field_resource_type
     - node.type.resource
   module:
     - user
@@ -19,10 +26,13 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_county: true
   field_crime: true
   field_description: true
+  field_metatags: true
+  field_organization: true
   field_region: true
   field_related_category: true
   field_related_issue: true
+  field_resource_type: true
   field_screenshot: true
-  field_url: true

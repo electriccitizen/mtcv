@@ -11,10 +11,10 @@ dependencies:
     - field.field.node.resource.field_related_category
     - field.field.node.resource.field_related_issue
     - field.field.node.resource.field_resource_type
-    - field.field.node.resource.field_url
+    - field.field.node.resource.field_resource_url
     - node.type.resource
   module:
-    - link
+    - citizen_custom
     - metatag
     - text
     - user
@@ -24,7 +24,7 @@ bundle: resource
 mode: default
 content:
   field_county:
-    weight: 110
+    weight: 5
     label: above
     settings:
       link: true
@@ -32,7 +32,7 @@ content:
     type: entity_reference_label
     region: content
   field_crime:
-    weight: 105
+    weight: 2
     label: above
     settings:
       link: true
@@ -40,21 +40,21 @@ content:
     type: entity_reference_label
     region: content
   field_description:
-    weight: 103
+    weight: 0
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_metatags:
-    weight: 112
+    weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
     region: content
   field_organization:
-    weight: 113
+    weight: 8
     label: above
     settings:
       link: true
@@ -62,7 +62,7 @@ content:
     type: entity_reference_label
     region: content
   field_related_category:
-    weight: 107
+    weight: 4
     label: above
     settings:
       link: true
@@ -70,7 +70,7 @@ content:
     type: entity_reference_label
     region: content
   field_related_issue:
-    weight: 106
+    weight: 3
     label: above
     settings:
       link: true
@@ -78,15 +78,15 @@ content:
     type: entity_reference_label
     region: content
   field_resource_type:
-    weight: 111
+    weight: 6
     label: above
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_url:
-    weight: 102
+  field_resource_url:
+    weight: 1
     label: above
     settings:
       trim_length: 80
@@ -95,11 +95,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    type: citizen_link
     region: content
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-hidden: {  }
+hidden:
+  links: true

@@ -11,10 +11,10 @@ dependencies:
     - field.field.node.resource.field_related_category
     - field.field.node.resource.field_related_issue
     - field.field.node.resource.field_resource_type
-    - field.field.node.resource.field_url
+    - field.field.node.resource.field_resource_url
     - node.type.resource
   module:
-    - link
+    - citizen_custom
     - metatag
     - path
     - text
@@ -73,13 +73,13 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
-  field_url:
+  field_resource_url:
     weight: 2
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
+    type: citizen_link
     region: content
   path:
     type: path
