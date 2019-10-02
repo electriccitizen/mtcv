@@ -12,7 +12,7 @@ field_name: field_resource_url
 entity_type: node
 bundle: resource
 label: 'Resource URL'
-description: 'If this is an external resource, you must paste the whole link (including https://) into this field. If this is an internal video resource, you can use the autocomplete function to search for the video''s page. '
+description: ''
 required: true
 translatable: false
 default_value: {  }
