@@ -53,6 +53,16 @@
 		}
 	}
 
+	//menu link instructions
+	.menu-instruction{
+		background: $lightGrey;
+		padding: $spaceMd $spaceSm $spaceSm;
+		h2{
+			font-size: 20px;
+		}
+	}//end menu instruction
+
+	// footer checkboxes and buttons
 	.layout-region-node-footer{
 		position: relative;
 		.layout-region-node-footer__content{

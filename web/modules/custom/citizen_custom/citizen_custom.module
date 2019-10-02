@@ -143,7 +143,6 @@ function aliasProcess($links, $current_nid){
   return $linksList;
 }
 
-
 /**
  * Implements hook_theme().
  */
@@ -306,6 +305,20 @@ function citizen_custom_form_alter(&$form, FormStateInterface $form_state) {
       $form['submit']['#value'] = 'Deploy Preview';
     }
   }
+
+  //add menu link instructions to page nodes
+  if($formId == 'node-page-form' || $formId == 'node-page-edit-form'){
+    $form['field_menu_insruction'] = array(
+      '#markup' => '<div class="menu-instruction">
+        <h2>Create Menu Link</h2>
+        <p>Now that you\'ve got all this great content, remember to create a link for to it in the <a href="/admin/structure/taxonomy/manage/main_menu/overview" target="_blank">main menu</a> or <a href="/admin/structure/taxonomy/manage/footer_menu/overview" target="_blank">footer menu</a>.</p>
+        <p>You can also link to it via a text field or paragraph widget if you do not want it in the main menu.</p>
+        </div>',
+      '#weight' => 7
+    );
+  }
+  
+
 }
 
 /**

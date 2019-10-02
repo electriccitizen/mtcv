@@ -6460,6 +6460,11 @@ nav#block-crane-quicklinks {
     .node-form .field--widget-image-image .form-submit, .node-confirm-form .field--widget-image-image .form-submit {
       top: 1.5rem;
       margin-left: 2.5rem !important; }
+  .node-form .menu-instruction, .node-confirm-form .menu-instruction {
+    background: #eeeeee;
+    padding: 3rem 2rem 2rem; }
+    .node-form .menu-instruction h2, .node-confirm-form .menu-instruction h2 {
+      font-size: 20px; }
   .node-form .layout-region-node-footer, .node-confirm-form .layout-region-node-footer {
     position: relative; }
     .node-form .layout-region-node-footer .layout-region-node-footer__content, .node-confirm-form .layout-region-node-footer .layout-region-node-footer__content {
