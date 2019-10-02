@@ -103,6 +103,12 @@ function citizen_custom_entity_presave(EntityInterface $entity) {
         }
       }
       break;
+    case 'resource':
+      $links = $entity->get('field_resource_url');
+      $current_nid = $entity->id()
+      $linksList = aliasProcess($links, $current_nid);
+      $entity->set('field_resource_url', $linksList);
+      break;
   }
 }
 
