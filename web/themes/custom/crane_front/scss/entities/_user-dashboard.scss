@@ -8,12 +8,204 @@
 	}
 }//end user-dashboard
 
+/* TOUR 
+------------ */
+.user-tour{
+	@include onlySmall{
+		display: none important;
+	}
+	display: none;
+	position: fixed;
+	top: 12vh;
+	right: 20px;
+	z-index: 999;
+	overflow: hidden;
+	width: 300px;
+	background: $lightGrey;
+	border: 2px solid $gold;
+	border-right-width: 3px;
+	padding-bottom: 10px;
+	box-shadow: -8px 8px 16px rgba(35,35,35,0.3);
+	.tour-reel{
+		@include safeFlex(row,nowrap,start,stretch);
+		width: 1800px;
+		position: relative;
+		top: 0;
+		left: 0;
+		.tour-item{
+			padding-bottom: 60px;
+			font-size: 1.6rem;
+			position: relative;
+			.tour-item-content{
+				position: relative;
+				width: 300px;
+				&:after{
+					content: '';
+					display: block;
+					position: absolute;
+					bottom: 0;
+					left: 20px;
+					@include calc(width, "100% - 40px");
+					height: 50px;
+					@include gradient(top,rgba(255,255,255,0),$lightGrey);
+				}
+				.content-inner{
+					height: 30vh;
+					overflow-y: scroll;
+					*:last-child{
+						padding-bottom: 15px;
+					}
+				}
+			}//end tour-content
+			.tour-nav{
+				position: absolute;
+				bottom: 0;
+				left: 20px;
+				@include calc(width,"100% - 40px");
+				@include safeFlex(row,wrap,justify,start);
+				border-top: 1px solid $black;
+				border-bottom: 1px solid $black;
+				a{
+					display: inline-block;
+					padding: 10px 0;
+					text-decoration: none;
+					&:hover,&:focus{
+						text-decoration: underline;
+					}
+					&.full{
+						width: 100%;
+					}
+					&.right{
+						text-align: right;
+					}
+				}
+			}//end tour nav
+		}//end tour item
+	}//end tour reel
+	h2{
+		font-size: 2rem;
+		margin-bottom: $spaceSm;
+		display: block;
+		background: $gold;
+		padding: 1.35rem 20px;
+		text-align: center;
+		height: 78px;
+		@include safeFlex(column,nowrap,center,center);
+		width: 300px;
+	}
+	p{
+		margin-bottom: $spaceSm;
+		padding-left: 20px;
+		padding-right: 20px;
+		font-size: 1.6rem;
+		&.avatar-note{
+			display: none;
+		}
+	}//end p
+	.close-cookie{
+		text-align: center;
+		padding-top: 20px;
+		width: 300px;
+		.tour-close{
+			@include button;
+			font-size: 1.5rem;
+			padding: 1rem 1.5rem;
+			margin: 0 auto $spaceSm;
+		}
+		span{
+			text-align: left; 
+			display: block;
+			font-size: 1.3rem;
+		}
+	}//end close cookie
+}//end user-tour
+
+//user tour flags
+.flag{
+	display: none;
+	position: absolute;
+	background: $purple;
+	color: $white;
+	padding: 0 2em;
+	line-height: 52px;
+	height: 52px;
+	z-index: 9999;
+	font-size: 2rem;
+	font-weight: 700;
+	box-shadow: 5px 5px 8px rgba(35,35,35,0.2);
+	&:before{
+		content: '';
+		display: block;
+		position: absolute;
+	}
+	&#side-nav{
+		top: 220px;
+		position: fixed;
+		left: 200px;
+		padding: 0 2em 0 1.5em;
+		@include rotate3d(0,1,2,5);
+		&:before{
+			@include triangle(left,52px,26px,$purple);
+			top: 0;
+			left: -26px;
+		}
+	}
+	&#user-nav{
+		top: 25px;
+		position: fixed;
+		right: 660px;
+		@include rotate3d(0,1,2,-6);
+		&:before{
+			@include triangle(right,52px,26px,$purple);
+			top: 0;
+			right: -26px;
+		}
+	}
+	&#your-dash{
+		top: 40px;
+		right: 275px;
+		padding: 0 2em 0 1.5em;
+		@include rotate3d(0,1,2,-12);
+		&:before{
+			@include triangle(left,52px,26px,$purple);
+			top: 0;
+			left: -26px;
+		}
+	}
+	&#deploys{
+		top: 100px;
+		right: 285px;
+		position: fixed;
+		padding: 0 1.5em 0 2em;
+		@include rotate3d(0,1,2,-25);
+		&:before{
+			@include triangle(right,52px,26px,$purple);
+			top: 0;
+			right: -26px;
+		}
+	}
+	&#support{
+		top: 395px;
+		position: fixed;
+		left: 215px;
+		padding: 0 2em 0 1.5em;
+		@include rotate3d(0,1,2,5);
+		&:before{
+			@include triangle(left,52px,26px,$purple);
+			top: 0;
+			left: -26px;
+		}
+	}
+}//end flags
+
+
 /* PROFILE INFORMATION
 ------------------------- */
 .block-field-blockuserusername{
 	margin-bottom: $spaceSm;
 	text-align: center;
 	max-width: $desk;
+	position: relative;
 	@include desk{
 		@include clearFix;
 	}

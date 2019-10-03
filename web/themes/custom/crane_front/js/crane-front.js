@@ -12,7 +12,7 @@ Drupal.behaviors.quickMenu = {
       //insert deploy items
       $(document).ready(function(){
         var liveDeploys = $('.toolbar-menu a.deploy-live').text();
-        $('#block-quicklinks a.live-deploys,.header-bar .deploy-link').text('Deploy ' + liveDeploys);
+        $('#block-quicklinks a.live-deploys,.header-actions .deploy-link').text('Deploy ' + liveDeploys);
       });
 
       //set button roles, tab indexes and keypresses on sidebar links

@@ -37,6 +37,7 @@ header{
 	padding-right: $siteMarginMobile;
 	@include auto;
 	@include safeFlex(row,wrap,center,center);
+	position: relative;
 	body:not(.logged-in) &{
 		max-width: $siteMaxWidth + 120px;		
 	}

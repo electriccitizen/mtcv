@@ -19,6 +19,11 @@ disclaimer:
   version: 1.0
   js:
     js/disclaimer.js: {}
+dashboard:
+  version: 1.0
+  js:
+    https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js: { type: external, minified: true, preprocess: false }
+    js/dashboard.js: {}
 forms:
   version: 1.0
   js:

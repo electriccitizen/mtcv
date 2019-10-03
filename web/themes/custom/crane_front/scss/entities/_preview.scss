@@ -2,24 +2,6 @@
   NODE PREVIEW
 ========================== */
 
-// define a background gradient with direct, start color and stop color
-@mixin gradient($grad-direction,$grad-start,$grad-stop) {
-	background: -moz-linear-gradient($grad-direction, $grad-start 0%,$grad-stop 100%); /* FF3.6+ */
-	background: -webkit-linear-gradient($grad-direction, $grad-start 0%,$grad-stop 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient($grad-direction, $grad-start 0%,$grad-stop 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient($grad-direction, $grad-start 0%,$grad-stop 100%); /* IE10+ */
-	@if $grad-direction == 'top'{
-		background: linear-gradient(to bottom, $grad-start 0%,$grad-stop 100%); /* W3C */
-	}@else if $grad-direction == 'bottom'{
-		background: linear-gradient(to top, $grad-start 0%,$grad-stop 100%); /* W3C */
-	}@else if $grad-direction == 'left'{
-		background: linear-gradient(to right, $grad-start 0%,$grad-stop 100%); /* W3C */
-	}@else if $grad-direction == 'right'{
-		background: linear-gradient(to left, $grad-start 0%,$grad-stop 100%); /* W3C */
-	}
-
-}
-
 /* MODAL NODE PREVIEW */
 body.logged-in.responsive-preview-frame{
 	.dialog-off-canvas-main-canvas{

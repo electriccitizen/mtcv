@@ -54,7 +54,7 @@
 		{% if image %}
 			<img src="{{ file_url(element['#object'].user_picture.0.entity.fileuri) }}" width="225px" height="225px" alt="Profile image for {{ item.content['#context'].value }}" />
 		{% else %}
-			<img src="{{ avatar }}" width="225px" height="225px" alt="User profile avatar" />
+			<img class="avatar" src="{{ avatar }}" width="225px" height="225px" alt="User profile avatar" />
 		{% endif %}
 	</div>
 
@@ -69,8 +69,8 @@
 			{%- if 'administrator' in element['#object'].getroles -%}
 				<span class="role">Administrator</span>
 			{%- endif -%}
-			{%- if 'senior_editor' in element['#object'].getroles -%}
-				<span class="role">Senior Editor</span>
+			{%- if 'site_manager' in element['#object'].getroles -%}
+				<span class="role">Site Manager</span>
 			{%- endif -%}
 			{%- if 'editor' in element['#object'].getroles -%}
 				<span class="role">Editor</span>
