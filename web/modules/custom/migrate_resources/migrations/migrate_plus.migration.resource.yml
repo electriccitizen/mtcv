@@ -56,6 +56,9 @@ source:
       name: County
       label: 'County'
       selector: fields/County
+    - name: Organization
+      label: 'Organization'
+      selector: fields/Organization
     -
       name: Crime Category
       label: 'Crime Category'
@@ -168,6 +171,21 @@ process:
           value_key: name
           entity_type: taxonomy_term
           bundle: county
+          bundle_key: vid
+          ignore_case: true
+  organization:
+    plugin: deepen
+    source: Organization
+  field_organization:
+    - plugin: sub_process
+      source: '@organization'
+      process:
+        target_id:
+          plugin: entity_lookup
+          source: value
+          value_key: name
+          entity_type: taxonomy_term
+          bundle: organization
           bundle_key: vid
           ignore_case: true
 destination:
