@@ -4994,7 +4994,7 @@ a, .link {
     padding-bottom: 0; }
     .form-item label.form-required {
       display: inline-block; }
-      .form-item label.form-required + input {
+      .form-item label.form-required + input, .form-item label.form-required ~ .select2 {
         display: block; }
   .form-item .description {
     margin: 0.2em 0 1rem; }

@@ -101,7 +101,7 @@
 		padding-bottom: 0;
 		&.form-required{
 			display: inline-block;
-			+ input{
+			& + input,& ~ .select2{
 				display: block;
 			}
 		}
