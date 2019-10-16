@@ -76,6 +76,11 @@
 					left: -8px;
 					width: 20px;
 					text-align: center;
+					&:hover,&:focus{
+						text-decoration: none;
+						color: $hoverLink;
+						opacity: .7;
+					}
 					&:before{
 						content: "+";
 					}

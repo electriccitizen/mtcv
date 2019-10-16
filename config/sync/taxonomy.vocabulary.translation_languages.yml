@@ -11,6 +11,11 @@ third_party_settings:
     personalizable: 0
     redirect_edit: 1
     external: ''
+    personalization:
+      1:
+        destination: default
+        url: ''
+        external: ''
 name: 'Translation Languages'
 vid: translation_languages
 description: 'Languages available for use in the translated text paragraph.'

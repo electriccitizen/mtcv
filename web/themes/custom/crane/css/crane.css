@@ -6321,11 +6321,11 @@ nav#block-crane-quicklinks {
 
 /* BLOCK FORM
 ------------------- */
-.path-block .blocks-back {
+.path-block .blocks-back, .entity-block_content-canonical .blocks-back {
   display: inline-block;
   margin: 4rem 0 -2rem; }
 
-.path-block .block-content-form .js-form-type-vertical-tabs {
+.path-block .block-content-form .js-form-type-vertical-tabs, .entity-block_content-canonical .block-content-form .js-form-type-vertical-tabs {
   display: none; }
 
 .entity-block_content-collection:not(.role-administrator) #block-crane-help {

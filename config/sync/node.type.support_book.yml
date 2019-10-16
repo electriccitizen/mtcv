@@ -21,6 +21,10 @@ third_party_settings:
         destination: default
         url: ''
         external: ''
+      1:
+        destination: default
+        url: ''
+        external: ''
 name: 'Support Book'
 type: support_book
 description: 'Learn about key tasks in editing and managing the site.'

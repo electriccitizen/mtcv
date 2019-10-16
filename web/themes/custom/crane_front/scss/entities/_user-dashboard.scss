@@ -243,6 +243,9 @@
 
 	.user-image-wrapper{
 		width: 225px;
+		border-radius: 50%;
+		height: 225px;
+		overflow: hidden;
 		margin-bottom: $spaceSm;
 		@include safeFlexOrder(2);
 		@include desk{
@@ -252,7 +255,6 @@
 			}
 		}
 		img{
-			border-radius: 50%;
 			display: block;
 		}
 	}//end user image wrapper

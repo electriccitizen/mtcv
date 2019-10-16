@@ -16,6 +16,10 @@ third_party_settings:
         destination: default
         url: ''
         external: ''
+      1:
+        destination: default
+        url: ''
+        external: ''
 name: Organization
 vid: organization
 description: 'Organization for Resources'

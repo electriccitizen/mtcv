@@ -52,7 +52,7 @@
 
   <div class="user-image-wrapper">
 		{% if image %}
-			<img src="{{ file_url(element['#object'].user_picture.0.entity.fileuri) }}" width="225px" height="225px" alt="Profile image for {{ item.content['#context'].value }}" />
+			<img src="{{ file_url(element['#object'].user_picture.0.entity.fileuri) }}" width="225px" alt="Profile image for {{ item.content['#context'].value }}" />
 		{% else %}
 			<img class="avatar" src="{{ avatar }}" width="225px" height="225px" alt="User profile avatar" />
 		{% endif %}
