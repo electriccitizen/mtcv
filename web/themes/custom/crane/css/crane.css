@@ -5813,9 +5813,9 @@ body:not(.role-administrator) #block-crane-secondary-local-tasks nav.tabs.blocks
 .admin-list li .description {
   margin-bottom: 15px; }
 
-body:not(.role-administrator) .admin-list li.escape, body:not(.role-administrator) .admin-list li.home-featured-content, body:not(.role-administrator) .admin-list li.home-intro, body:not(.role-administrator) .admin-list li.home-resources, body:not(.role-administrator) .admin-list li.social-media-links {
+body:not(.role-administrator) .admin-list li.escape, body:not(.role-administrator) .admin-list li.home-featured-content, body:not(.role-administrator) .admin-list li.home-intro, body:not(.role-administrator) .admin-list li.home-resources, body:not(.role-administrator) .admin-list li.social-media-links, body:not(.role-administrator) .admin-list li.translated-block {
   display: none; }
-  body:not(.role-administrator) .admin-list li.escape a, body:not(.role-administrator) .admin-list li.home-featured-content a, body:not(.role-administrator) .admin-list li.home-intro a, body:not(.role-administrator) .admin-list li.home-resources a, body:not(.role-administrator) .admin-list li.social-media-links a {
+  body:not(.role-administrator) .admin-list li.escape a, body:not(.role-administrator) .admin-list li.home-featured-content a, body:not(.role-administrator) .admin-list li.home-intro a, body:not(.role-administrator) .admin-list li.home-resources a, body:not(.role-administrator) .admin-list li.social-media-links a, body:not(.role-administrator) .admin-list li.translated-block a {
     pointer-events: none; }
 
 /* ==============
@@ -6266,6 +6266,9 @@ nav#block-crane-quicklinks {
 .taxonomy-term-form details.seven-details {
   max-width: 400px;
   margin-bottom: 3rem; }
+
+.taxonomy-term-form.taxonomy-term-footer-menu-form #edit-relations, .taxonomy-term-form.taxonomy-term-main-menu-form #edit-relations {
+  display: none; }
 
 /* ADD FIELD
 ----------------- */

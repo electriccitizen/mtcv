@@ -34,7 +34,7 @@
 		}
 		//hide one-off block types from non-admins
 		body:not(.role-administrator) &{
-			&.escape,&.home-featured-content,&.home-intro,&.home-resources,&.social-media-links{
+			&.escape,&.home-featured-content,&.home-intro,&.home-resources,&.social-media-links,&.translated-block{
 				display: none;
 				a{
 					pointer-events: none;
