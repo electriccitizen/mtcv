@@ -12,7 +12,7 @@ entity_type: paragraph
 bundle: image
 label: Image
 description: '<strong>Optimal image size: </strong> 1080px wide. Image will not be cropped.'
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
