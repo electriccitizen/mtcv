@@ -1,6 +1,6 @@
-services:
- citizen_custom.event_subscriber:
-   class: Drupal\citizen_custom\EventSubscriber\RedirectAnonymousSubscriber
-   arguments: []
-   tags:
-     - {name: event_subscriber}
+# services:
+#  citizen_custom.event_subscriber:
+#    class: Drupal\citizen_custom\EventSubscriber\RedirectAnonymousSubscriber
+#    arguments: []
+#    tags:
+#      - {name: event_subscriber}
