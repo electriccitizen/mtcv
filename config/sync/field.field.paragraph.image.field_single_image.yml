@@ -11,7 +11,7 @@ field_name: field_single_image
 entity_type: paragraph
 bundle: image
 label: Image
-description: '<strong>Optimal image size: </strong> 1080px wide. Image will not be cropped.'
+description: '<strong>Optimal image size: </strong> 1080px wide. Image will not be cropped.  <strong>NOTE:</strong> If no image is uploaded, this paragraph will not be rendered.'
 required: false
 translatable: false
 default_value: {  }
