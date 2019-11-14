@@ -30,6 +30,7 @@
         "drupal/entity_redirect": "^1.5",
         "drupal/entity_reference_layout": "^1.0@alpha",
         "drupal/field_group": "~3.0-rc1",
+        "drupal/gatsby": "^1.0@alpha",
         "drupal/link_attributes": "^1.7",
         "drupal/linkit": "^4.3",
         "drupal/menu_block": "^1.5",
