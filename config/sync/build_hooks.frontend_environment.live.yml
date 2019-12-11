@@ -16,5 +16,5 @@ settings:
   api_id: 41c426b1-acb1-42b7-80e4-30bec3f213e0
   branch: master
   build_hook_url: 'https://api.netlify.com/build_hooks/5d811f60859d380da191999a'
-url: 'https://mlsa.netlify.com'
+url: 'https://www.mtcrimevictimhelp.org/'
 deployment_strategy: manual
