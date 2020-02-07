@@ -56,7 +56,6 @@
         "pantheon-systems/quicksilver-pushback": "~1",
         "rvtraveller/qs-composer-installer": "^1.1",
         "vlucas/phpdotenv": "^3.3",
-        "webflo/drupal-core-strict": "^8",
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },
     "require-dev": {
@@ -144,8 +143,9 @@
         },
         "patches": {
             "drupal/core":{
-                "Media library widget + Paragraphs broken: validation error on required field in paragraphs subform": "https://www.drupal.org/files/issues/2018-12-05/drupal-media-library-paragraphs-3003150-19-8.x.patch",
-                "Content Edit page jumps when media library item is placed": "web/modules/custom/patches/3073023-2.patch"
+                "Content Edit page jumps when media library item is placed": "https://www.drupal.org/files/issues/2020-02-07/3073023-10.patch",
+                "Media Library error when trying to Insert Selected from the the media library view.": "https://www.drupal.org/files/issues/2020-01-31/media-library-insert-selected-3081319-6.patch",
+                "Duplicated summary item when linking to content with the MediaThumbnailFormatter": "https://www.drupal.org/files/issues/2019-08-29/core-elminate_duplicated_summary-3078030-2-D8.patch"
             },
             "drupal/menu_block": {
                 "Enable using active menus as menu block titles": "https://www.drupal.org/files/issues/menu_block-label_configuration-2809699-51.patch",

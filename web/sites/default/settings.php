@@ -25,10 +25,21 @@ $config_directories = [
   CONFIG_SYNC_DIRECTORY => dirname(DRUPAL_ROOT) . '/config/sync',
 ];
 
+$settings['config_sync_directory'] = dirname(DRUPAL_ROOT) . '/config/sync';
+
 $config['file.settings']['make_unused_managed_files_temporary'] = TRUE;
 $config['system.file']['temporary_maximum_age'] = 30;
 
 
+
+/**
+ * Trusted host patterns
+ */
+$settings['trusted_host_patterns'] = [
+  '^mtcv.docksal$',
+  '^drupal-mtcv.docksal$',
+  '^dev-mtcv.pantheonsite.io$',
+];
 
 
 $primary_domain = $_SERVER['HTTP_HOST'];
