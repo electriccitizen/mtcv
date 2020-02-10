@@ -29,10 +29,12 @@ hidden:
   field_county: true
   field_crime: true
   field_description: true
+  field_internal_resource: true
   field_metatags: true
   field_organization: true
   field_region: true
   field_related_category: true
   field_related_issue: true
   field_resource_type: true
+  field_resource_url: true
   field_screenshot: true

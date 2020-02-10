@@ -10,7 +10,7 @@ $databases['default']['default'] = array (
 
 $settings['hash_salt'] = 'noodle doodle';
 
-$settings['base_url'] = 'http://mtcv.docksal';
+$settings['base_url'] = 'http://drupal-mtcv.docksal/';
 /**
  * Enable local development services.
  */
@@ -107,3 +107,4 @@ $config['system.performance']['js']['preprocess'] = FALSE;
 $settings['skip_permissions_hardening'] = TRUE;
 
 $settings['file_private_path'] = 'sites/default/files/private';
+$settings["file_temp_path"] = '/tmp';
