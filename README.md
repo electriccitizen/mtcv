@@ -5,13 +5,13 @@
 [![Dev Site mtcv](https://img.shields.io/badge/site-mtcv-blue.svg)](http://dev-mtcv.pantheonsite.io/)
 
 Local Setup
-Drupal Site Setup
+Drupal Site Setup:
 Git clone drupal site
 composer install
 fin start
 
 
-Gatsby Site Setup
+Gatsby Site Setup:
 requires npm 10 . If you're using nvm to manage various version: nvm use 10. Newer node will not work.
 git clone gatsby site
 Make the .env file with ALGOLIA and various keys.
