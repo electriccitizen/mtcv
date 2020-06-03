@@ -24,9 +24,9 @@
         "drupal/config_ignore": "^2.1",
         "drupal/config_installer": "^1.0",
         "drupal/console": "^1",
-        "drupal/core": "^8.7.0",
+        "drupal/core": "8.9.*",
         "drupal/devel": "^2.1",
-        "drupal/disable_messages": "^1.1",
+        "drupal/disable_messages": "^2.0",
         "drupal/entity_redirect": "^1.5",
         "drupal/entity_reference_layout": "^1.0@alpha",
         "drupal/field_group": "~3.0-rc1",
@@ -150,9 +150,6 @@
             "drupal/menu_block": {
                 "Enable using active menus as menu block titles": "https://www.drupal.org/files/issues/menu_block-label_configuration-2809699-51.patch",
                 "Enable link functionality on menu block titles": "https://www.drupal.org/files/issues/menu_block-title_as_link-1-d8.patch"
-            },
-            "drupal/paragraphs":{
-                "Paragraphs::label() has a fatal error, a subtle bug and could use some optimization": "https://www.drupal.org/files/issues/2020-01-07/3074114_9.patch"
             }
         },
         "enable-patching": true
