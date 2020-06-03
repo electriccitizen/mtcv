@@ -17,12 +17,23 @@ cd mtcv
 composer install
 fin start
 ```
-Get a copy of the db from the DEV site on Pantheon
-Import
-fin import 
+Get a copy of the db from the DEV site on Pantheon and import
 ```
 gunzip <<filename.gz>> | fin db import
 ```
+Set a .htaccess file for local development
+```
+cp web/.htaccess.drupal web/.htaccess
+```
+At this point, you should have a running local copy of the drupal backend site.  
+
+To sign into the local copy, type:
+```
+fin uli
+```
+
+
+
 
 ### Gatsby Site Setup
 Return to your project root "mt"
