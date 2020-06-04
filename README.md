@@ -4,22 +4,74 @@
 [![Dashboard mtcv](https://img.shields.io/badge/dashboard-mtcv-yellow.svg)](https://dashboard.pantheon.io/sites/ad79477c-5d06-4234-b6b8-582ebeee0e5c#dev/code)
 [![Dev Site mtcv](https://img.shields.io/badge/site-mtcv-blue.svg)](http://dev-mtcv.pantheonsite.io/)
 
-Local Setup
-Drupal Site Setup:
-Git clone drupal site
+## Local Setup
+
+### Make a project directory for the Drupal and Gatsby:
+```mkdir mt```
+
+### Drupal Site Setup
+```
+cd mt
+git clone git@github.com:electriccitizen/mtcv.git
+cd mtcv
 composer install
 fin start
+```
+Get a copy of the db from the DEV site on Pantheon and import
+```
+gunzip <<filename.gz>> | fin db import
+```
+Set a .htaccess file for local development
+```
+cp web/.htaccess.drupal web/.htaccess
+```
+At this point, you should have a running local copy of the drupal backend site.  
+
+To sign into the local copy, type:
+```
+fin uli
+```
 
 
-Gatsby Site Setup:
-requires npm 10 . If you're using nvm to manage various version: nvm use 10. Newer node will not work.
-git clone gatsby site
-Make the .env file with ALGOLIA and various keys.
+
+
+### Gatsby Site Setup
+Return to your project root "mt"
+
+#### Clone the Gatsby site
+```
+git clone git@github.com:electriccitizen/mlsa.git
+cd mlsa
+```
+#### Set NPM version
+Newer node will not work, requires npm 10. If you're using nvm to manage various versions: 
+```
+nvm install 10
+nvm use 10
 npm install
-npm install -g gatsby-cli (if you don't have it)
-npm i -g gatsby-cli (to update to the most recent gatsby)
-change the gatsby-config.js to point to the local drupal install (mtcv.docksal). LN:33-36.
+```
+#### Install Gatsby Globally 
+if you do not have it already
+```
+npm install -g gatsby-cli
+```
+#### Update Gatsby
+(to update to the most recent gatsby)
+```
+npm i -g gatsby-cli 
+```
+#### Point to Drupal Install
+Update gatsby-config.js to point to the local drupal install (mtcv.docksal). 
+Comment out line 35, uncomment line 36
+```
+//baseUrl: 'http://dev-mtcv.pantheonsite.io/',
+baseUrl: 'http://mtcv.docksal/',
+```
+#### Start Gatsby Instance
+
+```
 gatsby develop
+```
 
 If gatsby develop cli has errors. Stop the process (control-c) and run gatsby clean. Then rerun gatsby develop. This may take 3-4 times to get all the systems awake.
 
