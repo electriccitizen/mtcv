@@ -38,7 +38,6 @@ module:
   history: 0
   image: 0
   jsonapi: 0
-  kint: 0
   layout_builder: 0
   layout_discovery: 0
   link: 0
