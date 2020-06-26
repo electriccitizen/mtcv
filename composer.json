@@ -25,7 +25,7 @@
         "drupal/config_installer": "^1.0",
         "drupal/console": "^1",
         "drupal/core": "8.9.*",
-        "drupal/devel": "^2.1",
+        "drupal/devel": "^4.0",
         "drupal/disable_messages": "^2.0",
         "drupal/entity_redirect": "^1.5",
         "drupal/entity_reference_layout": "^1.0@alpha",
