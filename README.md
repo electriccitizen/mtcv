@@ -76,3 +76,38 @@ gatsby develop
 If gatsby develop cli has errors. Stop the process (control-c) and run gatsby clean. Then rerun gatsby develop. This may take 3-4 times to get all the systems awake.
 
 To get new content generated on the local site, use gatsby clean and gatsby develop to rebuild the content.
+
+## Recommended workflow
+
+Here is a safe workflow that will help prevent lost work and other problems.
+
+```fin sync``` [(?)](docs/commands/SYNC.md) to ensure your local site is synced with the upstream environment before starting a new task 
+
+```git checkout -b <your-feature-branch>``` to checkout a new feature branch and do your thing
+
+```fin drush cex``` to export your changes
+
+```git add``` to add any new configuration, theme, or custom module files 
+
+```git commit``` to commit your changes and get your feature branch into a safe, recoverable state
+
+```git push origin <your-feature-branch>``` to push your feature branch to Github if everything looks good
+
+If you see errors or merge conflicts after running [fin sync](docs/commands/SYNC.md) or [fin validate](docs/commands/VALIDATE.md), you will need to work with the team to understand, fix, and commit the conflicting file(s) or other errors before continuing.
+
+## Submit a Github pull request
+
+Each time you push your feature branch, it triggers a Circle CI build to run tests against the development server. You can continue to push to your branch until your work is complete and your site is passing its automated tests. Once your feature branch looks good and is passing its Circle CI tests, submit a Github pull request against your branch. A project maintainer will review the changes and merge into master.
+
+*Note: Advanced or otherwise approved users can submit and merge their own PRs, and/or merge and push a feature branch directly into master without a formal pull request. Ask if you have questions, and err on the side of caution.*
+
+
+## Be a good citizen
+
+You are working in a team environment and must follow a few rules. If you are careless, it can lead to:
+
+* Losing all of your uncommitted work (bad)
+* Overriding or losing the work of others (worse)
+* Uninstallable configuration or deploy errors
+
+See this guide to [following a safe workflow](docs/workflow/WORKFLOW.md) when using configuration management in Drupal 8. The recommended workflow below follows these best practices, and includes two helper commands (```fin sync``` and ```fin validate```) that automate important components of a safe work flow.
