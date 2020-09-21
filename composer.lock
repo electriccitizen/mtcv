@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8b868576f04b28742ab32c8a9e990381",
+    "content-hash": "dcd526f0b73d725238a065c7bbe96968",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1407,29 +1407,26 @@
         },
         {
             "name": "drupal/build_hooks",
-            "version": "2.2.0",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/build_hooks.git",
-                "reference": "8.x-2.2"
+                "reference": "8.x-2.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/build_hooks-8.x-2.2.zip",
-                "reference": "8.x-2.2",
-                "shasum": "e9e3e0ad4c63b4ba6579ce3b8409e0138b69765d"
+                "url": "https://ftp.drupal.org/files/projects/build_hooks-8.x-2.3.zip",
+                "reference": "8.x-2.3",
+                "shasum": "3ed4be9a3f4e8b4abc810f054802c807e1e348dd"
             },
             "require": {
-                "drupal/core": "*"
+                "drupal/core": "^8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-2.2",
-                    "datestamp": "1559417885",
+                    "version": "8.x-2.3",
+                    "datestamp": "1600661090",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1446,6 +1443,10 @@
                     "homepage": "https://www.drupal.org/user/678770"
                 },
                 {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                },
+                {
                     "name": "vermario",
                     "homepage": "https://www.drupal.org/user/121062"
                 }
@@ -1458,17 +1459,17 @@
         },
         {
             "name": "drupal/chosen",
-            "version": "2.10.0",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/chosen.git",
-                "reference": "8.x-2.10"
+                "reference": "3.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/chosen-8.x-2.10.zip",
-                "reference": "8.x-2.10",
-                "shasum": "ce6f3ea7a99ab641385c4310fad86d3e660480e0"
+                "url": "https://ftp.drupal.org/files/projects/chosen-3.0.0.zip",
+                "reference": "3.0.0",
+                "shasum": "d53f7f6039b2c0207d0a7bb4e8039cab71f8ee8e"
             },
             "require": {
                 "drupal/chosen_lib": "*",
@@ -1478,8 +1479,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.10",
-                    "datestamp": "1597305739",
+                    "version": "3.0.0",
+                    "datestamp": "1597480828",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1541,7 +1542,7 @@
         },
         {
             "name": "drupal/chosen_lib",
-            "version": "2.10.0",
+            "version": "3.0.0",
             "require": {
                 "drupal/chosen": "self.version",
                 "drupal/core": "^8 || ^9",
@@ -1550,8 +1551,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.10",
-                    "datestamp": "1597305739",
+                    "version": "3.0.0",
+                    "datestamp": "1597480828",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5431,16 +5432,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.9.1",
+            "version": "v4.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "88e519766fc58bd46b8265561fb79b54e2e00b28"
+                "reference": "1c13d05035deff45f1230ca68bd7d74d621762d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/88e519766fc58bd46b8265561fb79b54e2e00b28",
-                "reference": "88e519766fc58bd46b8265561fb79b54e2e00b28",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/1c13d05035deff45f1230ca68bd7d74d621762d9",
+                "reference": "1c13d05035deff45f1230ca68bd7d74d621762d9",
                 "shasum": ""
             },
             "require": {
@@ -5479,7 +5480,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2020-08-30T16:15:20+00:00"
+            "time": "2020-09-19T14:52:48+00:00"
         },
         {
             "name": "pantheon-systems/quicksilver-pushback",
