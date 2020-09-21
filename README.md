@@ -91,8 +91,6 @@ Here is a safe workflow that will help prevent lost work and other problems.
 
 ```git commit``` to commit your changes and get your feature branch into a safe, recoverable state
 
-```fin validate``` [(?)](docs/commands/VALIDATE.md)  to pull in changes from other team members and check your work against the upstream
-
 ```git push origin <your-feature-branch>``` to push your feature branch to Github if everything looks good
 
 If you see errors or merge conflicts after running [fin sync](docs/commands/SYNC.md) or [fin validate](docs/commands/VALIDATE.md), you will need to work with the team to understand, fix, and commit the conflicting file(s) or other errors before continuing.
