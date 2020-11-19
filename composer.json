@@ -55,6 +55,7 @@
     "drush-ops/behat-drush-endpoint": "^9.3",
     "drush/drush": "~8",
     "egulias/email-validator": "^2",
+    "kint-php/kint": "^3.3",
     "pantheon-systems/quicksilver-pushback": "~1",
     "rvtraveller/qs-composer-installer": "^1.1",
     "vlucas/phpdotenv": "^3.3",
