@@ -1,0 +1,10 @@
+'*':
+  host: appserver.${env-name}.ad79477c-5d06-4234-b6b8-582ebeee0e5c.drush.in
+  paths:
+    files: files
+  uri: ${env-name}-mtcv.pantheonsite.io
+  user: ${env-name}.ad79477c-5d06-4234-b6b8-582ebeee0e5c
+  ssh:
+    options: '-p 2222 -o "AddressFamily inet"'
+    tty: false
+
