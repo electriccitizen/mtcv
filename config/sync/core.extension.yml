@@ -24,6 +24,7 @@ module:
   dblog: 0
   devel: 0
   disable_messages: 0
+  dynamic_entity_reference: 0
   dynamic_page_cache: 0
   ec_preview: 0
   editor: 0
