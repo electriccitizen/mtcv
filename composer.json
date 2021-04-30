@@ -17,11 +17,11 @@
     "drupal/adminimal_admin_toolbar": "^1.9",
     "drupal/adminimal_theme": "^1.4",
     "drupal/auto_entitylabel": "^3.0",
-    "drupal/build_hooks": "^2.2",
+    "drupal/build_hooks": "^3.0",
     "drupal/chosen": "^3.0",
     "drupal/chosen_lib": "^3.0",
     "drupal/color_field": "^2.0",
-    "drupal/config_direct_save": "^1.0",
+    "drupal/config_direct_save": "^2.0",
     "drupal/config_filter": "^2.0",
     "drupal/config_ignore": "^2.1",
     "drupal/config_installer": "^1.0",
@@ -38,7 +38,7 @@
     "drupal/link_attributes": "^1.7",
     "drupal/linkit": "^4.3",
     "drupal/menu_block": "^1.5",
-    "drupal/metatag": "1.x-dev",
+    "drupal/metatag": "^1.16",
     "drupal/migrate_file": "^1.1",
     "drupal/migrate_plus": "^4.2",
     "drupal/migrate_tools": "^4.1",
@@ -155,10 +155,6 @@
       "drupal/core":{
         "Media Library error when trying to Insert Selected from the the media library view.": "https://www.drupal.org/files/issues/2020-01-31/media-library-insert-selected-3081319-6.patch",
         "Duplicated summary item when linking to content with the MediaThumbnailFormatter": "https://www.drupal.org/files/issues/2019-08-29/core-elminate_duplicated_summary-3078030-2-D8.patch"
-      },
-      "drupal/menu_block": {
-        "Enable using active menus as menu block titles": "https://www.drupal.org/files/issues/menu_block-label_configuration-2809699-51.patch",
-        "Enable link functionality on menu block titles": "https://www.drupal.org/files/issues/menu_block-title_as_link-1-d8.patch"
       }
     },
     "enable-patching": true
