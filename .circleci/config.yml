@@ -19,7 +19,7 @@ defaults: &defaults
     # ADMIN_PASSWORD: The admin password to use when installing.
     # ADMIN_EMAIL:    The email address to give the admin when installing.
     #=========================================================================
-    TZ: "/usr/share/zoneinfo/America/Los_Angeles"
+    TZ: "/usr/share/zoneinfo/America/Menominee"
 
     # The variables below usually do not need to be modified.
 
@@ -164,28 +164,28 @@ jobs:
           name: run composer lock updater
           command: set -e && clu https://${GITHUB_TOKEN}:x-oauth-basic@github.com/${CI_PROJECT_USERNAME}/${CI_PROJECT_REPONAME}.git | sed -e "s/${GITHUB_TOKEN}/[REDACTED]/g"
 
-  visual_regression_test:
-    <<: *defaults
-    docker:
-      - image: backstopjs/backstopjs:3.9.5
-    steps:
-      - checkout
+#  visual_regression_test:
+#    <<: *defaults
+#    docker:
+#      - image: backstopjs/backstopjs:3.9.5
+#    steps:
+#     - checkout
+#
+#      - attach_workspace:
+#          at: /tmp/workspace
+#
+#      - run: cp /tmp/workspace/bash_env.txt $BASH_ENV
+#      - run: echo "export CI_BUILD_URL='${CIRCLE_BUILD_URL}'" >> $BASH_ENV
+#      - run: echo "export CI_NODE_INDEX='${CIRCLE_NODE_INDEX}'" >> $BASH_ENV
+#      - run: source $BASH_ENV
 
-      - attach_workspace:
-          at: /tmp/workspace
+#      - run:
+#          name: visual regression test
+#          command: ./.ci/visual-regression-test.sh
 
-      - run: cp /tmp/workspace/bash_env.txt $BASH_ENV
-      - run: echo "export CI_BUILD_URL='${CIRCLE_BUILD_URL}'" >> $BASH_ENV
-      - run: echo "export CI_NODE_INDEX='${CIRCLE_NODE_INDEX}'" >> $BASH_ENV
-      - run: source $BASH_ENV
-
-      - run:
-          name: visual regression test
-          command: ./.ci/visual-regression-test.sh
-
-      - store_artifacts:
-          path: /tmp/artifacts
-          destination: artifacts
+#      - store_artifacts:
+#          path: /tmp/artifacts
+#          destination: artifacts
 
 workflows:
   version: 2
@@ -198,10 +198,10 @@ workflows:
       # Build deploy and test on target platform
       - functional
       # Deploy before running visual test
-      - visual_regression_test:
-          requires:
-            - configure_env_vars
-            - functional
+#      - visual_regression_test:
+#          requires:
+#            - configure_env_vars
+#            - functional
   scheduled_update_check:
     triggers:
       - schedule:
