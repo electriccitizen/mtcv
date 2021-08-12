@@ -10,8 +10,10 @@ services:
       - PMA_PASSWORD=${MYSQL_ROOT_PASSWORD:-root}
     labels:
       - io.docksal.virtual-host=pma.${VIRTUAL_HOST}
+  db:
+    image: docksal/mysql:5.7
   cli:
-    image: docksal/cli:stable-php7.4
+    image: docksal/cli:php7.4
 #    # Uncomment to add support for xdebug - see http://docksal.readthedocs.io/en/master/tools/xdebug/.
     environment:
       - XDEBUG_ENABLED=0
