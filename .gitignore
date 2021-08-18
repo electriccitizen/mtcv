@@ -110,3 +110,4 @@ Thumbs.db
 web/themes/custom/*/node_modules
 
 /.gitattributes
+/.drush-lock-update
