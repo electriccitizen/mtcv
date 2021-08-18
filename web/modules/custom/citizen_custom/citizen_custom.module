@@ -48,7 +48,7 @@ function citizen_custom_entity_presave(EntityInterface $entity) {
         $url = str_replace('internal:', '', $url);
         //get the alias for the path and assign it in path.
         try {
-          $alias = Drupal::service('path.alias_manager')->getAliasByPath($url);
+          $alias = Drupal::service('path_alias.manager')->getAliasByPath($url);
         }
         catch (Exception $e) {
           $alias = $url;
@@ -69,7 +69,7 @@ function citizen_custom_entity_presave(EntityInterface $entity) {
         //get the alias for the path and assign it in path.
         // TODO: Add if for garbage handling without blowing up.
         try {
-          $alias = Drupal::service('path.alias_manager')->getAliasByPath($url);
+          $alias = Drupal::service('path_alias.manager')->getAliasByPath($url);
         }
         catch (Exception $e) {
           $alias = $url;
@@ -253,7 +253,7 @@ function citizen_custom_form_alter(&$form, FormStateInterface $form_state) {
     if(in_array('administrator', $userRole)){
       $form['field_restricted']['#access'] = TRUE;
       if(($form['field_restricted']['widget']['value']['#default_value'] == TRUE) && ($formId == 'node-page-edit-form')){
-        drupal_set_message('Editing or deleting restricted pages can have grave consequences in Gatsby. Proceed with caution.','warning');
+        \Drupal::messenger()->addMessage('Editing or deleting restricted pages can have grave consequences in Gatsby. Proceed with caution.','warning');
       }
     }else{
       $form['field_restricted']['#access'] = FALSE;
@@ -323,8 +323,6 @@ function citizen_custom_form_alter(&$form, FormStateInterface $form_state) {
       '#weight' => 7
     );
   }
-  
-
 }
 
 /**

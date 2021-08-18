@@ -14,7 +14,7 @@ use Drupal\Core\Form\FormStateInterface;
  *
  * Provide editable options for managing layout settings.
  */
-function ec_layouts_field_widget_third_party_settings_form(WidgetInterface $plugin, FieldDefinitionInterface $field_definition, $form_mode, $form, FormStateInterface $form_state) {
+function ec_layouts_field_widget_third_party_settings_form(WidgetInterface $plugin, FieldDefinitionInterface $field_definition, $form_mode, $form, FormStateInterface $form_state): array {
   $element = [];
 
   // Add a 'my_setting' checkbox to the settings form for 'foo_widget' field
@@ -209,7 +209,7 @@ function _ec_layouts_get_mode_options($key = NULL, $type = 'class') {
 /**
  * Return the description for the class select mode.
  */
-function _ec_layouts_select_class_description() {
+function _ec_layouts_select_class_description(): string {
   $description = '<p>' . t('The possible classes a layout or region can have. Enter one value per line, in the format key|label.');
   $description .= '<br/>' . t('The key is the string which will be used as a class on the element. The label will be used on edit forms.');
   $description .= '<br/>' . t('If the key contains several classes, each class must be separated by a <strong>space</strong>.');

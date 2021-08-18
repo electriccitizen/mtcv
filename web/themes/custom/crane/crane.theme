@@ -8,6 +8,7 @@
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\Core\Template\Attribute;
+use Drupal\user\Entity\User;
 
 /**
  * Implements hook_preprocess_HOOK() for HTML document templates.
@@ -15,7 +16,7 @@ use Drupal\Core\Template\Attribute;
 function crane_preprocess_html(&$variables) {
   $route_name = \Drupal::routeMatch()->getRouteName();
   $pathName =  preg_replace('/\W+/','-',strtolower($route_name));
-  $bodyClasses = 'crane ' . $pathName;  
+  $bodyClasses = 'crane ' . $pathName;
   // Add classes to the body.
   if ($variables['attributes'] instanceof Attribute) {
     $variables['attributes']->addClass($bodyClasses);
@@ -50,13 +51,13 @@ function crane_preprocess_html(&$variables) {
 function crane_preprocess_page(&$variables) {
   $route_name = \Drupal::routeMatch()->getRouteName();
   $variables['pathName'] =  preg_replace('/\W+/','-',strtolower($route_name));
-  
+
   //get the site name and pass to page template
   $config = \Drupal::config('system.site');
   $variables['site_name'] = $config->get('name');
-  
+
   //find the logged in user's first name and pass to branding block
-  $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
+  $user = User::load(\Drupal::currentUser()->id());
   $variables['fname'] = $user->field_first_name;
 }
 
@@ -101,7 +102,7 @@ function crane_preprocess_block(&$variables) {
   if($variables['elements']['#id'] == 'crane_secondary_local_tasks' ){
     $secondaryTasks = $variables['content']['#secondary'];
     $taskClass = array();
-    foreach($secondaryTasks as $task){ 
+    foreach($secondaryTasks as $task){
       $taskClass[] = preg_replace('/\W+/','-',strtolower($task['#link']['title']));
     }
     $variables['secondaryClasses'] = implode(' ',$taskClass);
@@ -125,6 +126,6 @@ function crane_theme_suggestions_page_alter(array &$suggestions, array $variable
   if (\Drupal::routeMatch()->getRouteName() == 'entity.taxonomy_term.edit_form') {
     $tid = \Drupal::routeMatch()->getRawParameter('taxonomy_term');
     $term = Term::load($tid);
-    $suggestions[] = 'page__taxonomy__' . $term->getVocabularyId();
+    $suggestions[] = 'page__taxonomy__' . $term->bundle();
   }
 }

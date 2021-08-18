@@ -1,7 +1,7 @@
 name: Crane
 type: theme
 description: 'Drupal administration theme for Electric Citizen Gatsby sites.'
-# core: 8.x
+# core: 8.x || 9.x
 base theme: adminimal_theme
 
 libraries:
@@ -33,5 +33,5 @@ regions_hidden:
 
 # Information added by Drupal.org packaging script on 2019-05-23
 version: '8.x-1.0'
-core: '8.x'
+core_version_requirement: ^8.8 || ^9
 project: 'crane'

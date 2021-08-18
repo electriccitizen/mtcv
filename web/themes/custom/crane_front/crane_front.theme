@@ -4,15 +4,15 @@
  * @file
  * Functions to support theming in the Crane theme.
  */
-use Drupal\Core\Template\Attribute;
-use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\NodeInterface;
+use Drupal\user\Entity\User;
 
 /**
  * Implements hook_preprocess_page.
  */
 function crane_front_preprocess_page(&$variables) {
   $node = Drupal::request()->attributes->get('node');
-  $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
+  $user = User::load(\Drupal::currentUser()->id());
   $variables['fname'] = $user->field_first_name;
   if ($node) {
     if ((!$node instanceof NodeInterface) && ($node_revision = \Drupal::routeMatch()->getParameter('node_revision'))) {
@@ -29,7 +29,7 @@ function crane_front_preprocess_block(&$variables) {
   //find the logged in user's first name and pass to branding block
   if ($variables['plugin_id']) {
     if ($variables['plugin_id'] == 'system_branding_block') {
-      $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
+      $user = User::load(\Drupal::currentUser()->id());
       $variables['fname'] = $user->field_first_name;
     }
   }
@@ -39,7 +39,7 @@ function crane_front_preprocess_block(&$variables) {
  * Implements hook_preprocess_node
  */
 function crane_front_preprocess_node(&$variables) {
-  $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
+  $user = User::load(\Drupal::currentUser()->id());
   $variables['userRoles'] = $user->getRoles();
 }
 

@@ -49,6 +49,7 @@ class Deepen extends ProcessPluginBase {
 
   /**
    * {@inheritdoc}
+   * @throws MigrateException
    */
   public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
     $keyname = (is_string($this->configuration['keyname']) && $this->configuration['keyname'] != '') ? $this->configuration['keyname'] : 'value';

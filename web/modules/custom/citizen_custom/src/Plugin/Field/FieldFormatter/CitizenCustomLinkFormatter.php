@@ -25,7 +25,7 @@ class CitizenCustomLinkFormatter extends LinkFormatter {
   /**
    * {@inheritdoc}
    */
-  public function viewElements(FieldItemListInterface $items, $langcode) {
+  public function viewElements(FieldItemListInterface $items, $langcode): array {
     $element = parent::viewElements($items, $langcode);
 
     $entity = $items->getEntity();
@@ -113,7 +113,7 @@ class CitizenCustomLinkFormatter extends LinkFormatter {
    * @return \Drupal\Core\Url
    *   A Url object.
    */
-  protected function buildUrl(LinkItemInterface $item) {
+  protected function buildUrl(LinkItemInterface $item): Url {
     $url = $item->getUrl() ?: Url::fromRoute('<none>');
 
     $settings = $this->getSettings();

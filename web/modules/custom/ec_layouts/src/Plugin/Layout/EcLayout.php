@@ -6,6 +6,7 @@ use Drupal\Core\Plugin\PluginFormInterface;
 use Drupal\Core\Layout\LayoutDefault;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Entity\ContentEntityFormInterface;
+use phpDocumentor\Reflection\Types\Mixed_;
 
 /**
  * Layout class with various formatting options for custom ERL layouts.
@@ -15,7 +16,7 @@ class EcLayout extends LayoutDefault implements PluginFormInterface {
   /**
    * {@inheritdoc}
    */
-  public function defaultConfiguration() {
+  public function defaultConfiguration(): array {
     $configuration = parent::defaultConfiguration();
     $configuration += [
       'layout_classes' => '',
@@ -31,7 +32,7 @@ class EcLayout extends LayoutDefault implements PluginFormInterface {
   /**
    * {@inheritdoc}
    */
-  public function build(array $regions) {
+  public function build(array $regions): array {
     $configuration = $this->getConfiguration();
     $build = parent::build($regions);
 
@@ -67,7 +68,7 @@ class EcLayout extends LayoutDefault implements PluginFormInterface {
    * If we were adding options that did not depend on
    * third party widget settings, using #process would be unnecessary.
    */
-  public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
+  public function buildConfigurationForm(array $form, FormStateInterface $form_state): array {
     $form['#process'] = [[$this, 'processConfigurationForm']];
     return $form;
   }
@@ -80,11 +81,11 @@ class EcLayout extends LayoutDefault implements PluginFormInterface {
    * @param \Drupal\Core\Form\FormStateInterface $form_state
    *   The Current state of the form.
    */
-  public function processConfigurationForm(array $form_item, FormStateInterface $form_state) {
+  public function processConfigurationForm(array $form_item, FormStateInterface $form_state): array {
 
     $form_object = $form_state->getFormObject();
     if (!$form_object instanceof ContentEntityFormInterface) {
-      return NULL;
+      return [NULL];
     }
 
     $display = $form_object->getFormDisplay($form_state);
@@ -278,7 +279,7 @@ class EcLayout extends LayoutDefault implements PluginFormInterface {
    * @param bool $summary
    *   A flag to return a formatted list of classes available.
    *
-   * @return array
+   * @return array|mixed
    *   An array keyed by the classes.
    */
   protected function getSelectOptions($string, $summary = FALSE) {

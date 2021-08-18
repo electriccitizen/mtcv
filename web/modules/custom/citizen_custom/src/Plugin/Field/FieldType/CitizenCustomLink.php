@@ -20,7 +20,7 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
 
 class CitizenCustomLink extends LinkItem {
 
-  public static function propertyDefinitions(FieldStorageDefinitionInterface $field_definition) {
+  public static function propertyDefinitions(FieldStorageDefinitionInterface $field_definition): array {
     $properties = parent::propertyDefinitions($field_definition);
     $properties['alias'] = DataDefinition::create('string')
       ->setLabel(t('Alias as Text'));
@@ -28,7 +28,7 @@ class CitizenCustomLink extends LinkItem {
   }
 
 
-  public static function schema(FieldStorageDefinitionInterface $field_definition) {
+  public static function schema(FieldStorageDefinitionInterface $field_definition): array {
     $schema = parent::schema($field_definition);
     $schema['columns']['alias'] = [
       'description' => 'The alias as text.',
