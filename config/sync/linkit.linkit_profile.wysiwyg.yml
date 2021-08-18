@@ -7,28 +7,14 @@ dependencies:
 id: wysiwyg
 label: WYSIWYG
 description: ''
-attributes:
-  relationship:
-    id: relationship
-    weight: 0
-    settings: {  }
-  target:
-    id: target
-    weight: 0
-    settings:
-      widget_type: simple_checkbox
-  title:
-    id: title
-    weight: 0
-    settings:
-      automatic_title: false
 matchers:
   da5c9e47-756c-4398-98c1-aa9dbce80e76:
     uuid: da5c9e47-756c-4398-98c1-aa9dbce80e76
     id: 'entity:node'
     weight: 0
     settings:
-      result_description: ''
       bundles: {  }
       group_by_bundle: true
       include_unpublished: false
+      substitution_type: canonical
+      metadata: ''

@@ -23,7 +23,9 @@ third_party_settings:
     sections:
       -
         layout_id: layout_onecol
-        layout_settings: {  }
+        layout_settings:
+          label: ''
+          context_mapping: {  }
         components:
           a150bc7c-1d9c-429c-85ff-af6bf1b6cec1:
             uuid: a150bc7c-1d9c-429c-85ff-af6bf1b6cec1
@@ -46,7 +48,9 @@ third_party_settings:
         third_party_settings: {  }
       -
         layout_id: tabs
-        layout_settings: {  }
+        layout_settings:
+          label: ''
+          context_mapping: {  }
         components:
           2649d1c4-5404-4395-ab1a-457789396c83:
             uuid: 2649d1c4-5404-4395-ab1a-457789396c83

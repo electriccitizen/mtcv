@@ -22,7 +22,9 @@ third_party_settings:
     sections:
       -
         layout_id: two_column_sidebar_left
-        layout_settings: {  }
+        layout_settings:
+          label: ''
+          context_mapping: {  }
         components:
           ae9bfca1-6fd0-4065-b55c-88b42208c0a3:
             uuid: ae9bfca1-6fd0-4065-b55c-88b42208c0a3

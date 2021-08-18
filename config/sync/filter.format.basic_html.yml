@@ -16,7 +16,7 @@ filters:
     status: true
     weight: -49
     settings:
-      allowed_html: '<a href hreflang class target id title><em> <strong> <cite> <blockquote cite> <code> <ul type class> <ol start type class> <li> <dl> <dt> <dd> <h2 id class> <h3 id class> <h4 id class> <h5 id class> <h6 id class> <p class> <br> <span class> <img srcset typeof src alt height width data-entity-type data-entity-uuid data-align data-caption> <u> <hr> <table> <caption> <figcaption> <picture> <source srcset media type> <tbody> <thead> <tfoot> <th> <td> <tr> <div id class data-*> <iframe src class title frameborder aria-describedby tabindex allowtransparency style width height> <drupal-entity data-*><article class data-*><small>'
+      allowed_html: '<a href hreflang class target id title data-entity-type data-entity-uuid data-entity-substitution><em> <strong> <cite> <blockquote cite> <code> <ul type class> <ol start type class> <li> <dl> <dt> <dd> <h2 id class> <h3 id class> <h4 id class> <h5 id class> <h6 id class> <p class> <br> <span class> <img srcset typeof src alt height width data-entity-type data-entity-uuid data-entity-substitution data-align data-caption> <u> <hr> <table> <caption> <figcaption> <picture> <source srcset media type> <tbody> <thead> <tfoot> <th> <td> <tr> <div id class data-*> <iframe src class title frameborder aria-describedby tabindex allowtransparency style width height> <drupal-entity data-*><article class data-*><small>'
       filter_html_help: false
       filter_html_nofollow: false
   filter_align:
@@ -68,3 +68,10 @@ filters:
     status: false
     weight: -44
     settings: {  }
+  linkit:
+    id: linkit
+    provider: linkit
+    status: true
+    weight: -50
+    settings:
+      title: false
