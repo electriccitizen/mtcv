@@ -1,4 +1,4 @@
-# (MLSA) MTCV
+# MT Crime Victims - Local Development
 
 [![CircleCI](https://circleci.com/gh/broeker/mtcv.svg?style=shield)](https://circleci.com/gh/broeker/mtcv)
 [![Dashboard mtcv](https://img.shields.io/badge/dashboard-mtcv-yellow.svg)](https://dashboard.pantheon.io/sites/ad79477c-5d06-4234-b6b8-582ebeee0e5c#dev/code)
@@ -10,30 +10,7 @@
 ```mkdir mt```
 
 ### Drupal Site Setup
-```
-cd mt
-git clone git@github.com:electriccitizen/mtcv.git
-cd mtcv
-composer install
-fin start
-```
-Get a copy of the db from the DEV site on Pantheon and import
-```
-gunzip <<filename.gz>> | fin db import
-```
-Set a .htaccess file for local development
-```
-cp web/.htaccess.drupal web/.htaccess
-```
-At this point, you should have a running local copy of the drupal backend site.  
-
-To sign into the local copy, type:
-```
-fin uli
-```
-
-
-
+Please read the documentation in EC-Install.md.
 
 ### Gatsby Site Setup
 Return to your project root "mt"
@@ -81,7 +58,7 @@ To get new content generated on the local site, use gatsby clean and gatsby deve
 
 Here is a safe workflow that will help prevent lost work and other problems.
 
-```fin sync``` [(?)](docs/commands/SYNC.md) to ensure your local site is synced with the upstream environment before starting a new task 
+```Local Install``` Ensure your local site is synced with the upstream environment before starting a new task - Refer to the EC-Install.md for local development instructions.
 
 ```git checkout -b <your-feature-branch>``` to checkout a new feature branch and do your thing
 
@@ -93,21 +70,9 @@ Here is a safe workflow that will help prevent lost work and other problems.
 
 ```git push origin <your-feature-branch>``` to push your feature branch to Github if everything looks good
 
-If you see errors or merge conflicts after running [fin sync](docs/commands/SYNC.md) or [fin validate](docs/commands/VALIDATE.md), you will need to work with the team to understand, fix, and commit the conflicting file(s) or other errors before continuing.
 
 ## Submit a Github pull request
 
 Each time you push your feature branch, it triggers a Circle CI build to run tests against the development server. You can continue to push to your branch until your work is complete and your site is passing its automated tests. Once your feature branch looks good and is passing its Circle CI tests, submit a Github pull request against your branch. A project maintainer will review the changes and merge into master.
 
 *Note: Advanced or otherwise approved users can submit and merge their own PRs, and/or merge and push a feature branch directly into master without a formal pull request. Ask if you have questions, and err on the side of caution.*
-
-
-## Be a good citizen
-
-You are working in a team environment and must follow a few rules. If you are careless, it can lead to:
-
-* Losing all of your uncommitted work (bad)
-* Overriding or losing the work of others (worse)
-* Uninstallable configuration or deploy errors
-
-See this guide to [following a safe workflow](docs/workflow/WORKFLOW.md) when using configuration management in Drupal 8. The recommended workflow below follows these best practices, and includes two helper commands (```fin sync``` and ```fin validate```) that automate important components of a safe work flow.
