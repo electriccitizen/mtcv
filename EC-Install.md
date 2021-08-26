@@ -47,21 +47,14 @@ This project also requires a local gatsy instance, so make a work folder for the
 `fin start`
 
 ## Load a copy of LIVE DEV DB
-Pull the latest DB backup to local
 
-`fin terminus backup:get --element=db mtcv.dev --to=db.sql.gz`
+`fin pull db -y`
+
+## Load a copy of LIVE DEV Files
+
+`fin pull files -y`
 
 (If this command fails, see Terminus Machine Token instructions in the Pantheon Global Doc listed under More Information)
-
-Load the downloaded DB
-
-`gunzip -dfkv db.sql.gz`
-
-`fin db import db.sql`
-
-## Set local directories
-
-`mkdir -p web/sites/default/files/private`
 
 ## Cache rebuild
 
@@ -85,21 +78,15 @@ Go back to the README.md for instructions on setting up the Gatsby site.
 
 `fin restart`
 
-## Load a copy of LIVE DB
+## Load a copy of LIVE DEV DB
 
-Pull the latest DB backup to local
+`fin pull db -y`
 
-`fin terminus backup:get --element=database mtcv.live --to=db.sql.gz`
+## Load a copy of LIVE DEV Files
 
-Load the downloaded DB
+`fin pull files -y`
 
-`gunzip -dfkv db.sql.gz`
-
-`fin db import db.sql`
-
-## Set local directories
-
-`mkdir -p sites/default/files/private`
+(If this command fails, see Terminus Machine Token instructions in the Pantheon Global Doc listed under More Information)
 
 ## Cache rebuild
 
