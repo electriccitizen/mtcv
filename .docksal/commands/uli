@@ -7,4 +7,4 @@ set -e
 # SETTINGS
 # Either uncommend out the following line, or set in docksal-local.env
 # SITE_URI="newupstream.docksal"
-fin drush uli --uri=$SITE_URI
+fin drush uli "$@" --uri=${VIRTUAL_HOST}
