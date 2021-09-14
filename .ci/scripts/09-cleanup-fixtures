@@ -7,5 +7,5 @@ set -eo pipefail
 #
 # Note that we allow the "ci-BUILD_NUMBER" and "pr-PULL_REQUEST_NUMBER"
 # multidev sites to persist until the next time the 'prepare' or
-# 'merge-master' scripts (respectively) are called.
+# 'merge-main' scripts (respectively) are called.
 #

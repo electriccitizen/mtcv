@@ -1,8 +1,8 @@
 #!/bin/bash
 
-if [[ ${CI_BRANCH} != "master" && -z ${PR_NUMBER} ]];
+if [[ ${CI_BRANCH} != "main" && -z ${PR_NUMBER} ]];
 then
-  echo -e "CI will only deploy to Pantheon if on the master branch or creating a pull requests.\n"
+  echo -e "CI will only deploy to Pantheon if on the main branch or creating a pull requests.\n"
   exit 0;
 fi
 

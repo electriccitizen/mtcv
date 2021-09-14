@@ -4,10 +4,10 @@
 BUILD_DIR=$(pwd)
 GITHUB_API_URL="https://api.github.com/repos/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME"
 
-# Check if we are NOT on the master branch and this is a PR
-if [[ ${CI_BRANCH} != "master" && -z ${CI_PR_URL} ]];
+# Check if we are NOT on the main branch and this is a PR
+if [[ ${CI_BRANCH} != "main" && -z ${CI_PR_URL} ]];
 then
-  echo -e "\nVisual regression tests will only run if we are not on the master branch and making a pull request"
+  echo -e "\nVisual regression tests will only run if we are not on the main branch and making a pull request"
   exit 0;
 fi
 
@@ -16,7 +16,7 @@ echo -e "\nProcessing pull request #$PR_NUMBER"
 GIT_FILE_MODIFIED()
 {
     # Stash list of changed files
-    GIT_FILES_CHANGED="$(git diff origin/master --name-only)"
+    GIT_FILES_CHANGED="$(git diff origin/main --name-only)"
 
     while read -r changedFile; do
         if [[ "${changedFile}" == "$1" ]]
