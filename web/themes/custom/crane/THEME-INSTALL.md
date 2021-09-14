@@ -1,6 +1,4 @@
-
-ABOUT CRANE THEME
-------------
+# ABOUT CRANE THEME
 
 Crane is an minimal Drupal 8 administration theme by Electric Citizen, http://www.electriccitizen.com. 
 
@@ -9,8 +7,7 @@ Crane uses Adminimal as its base them.
 Crane is a theme that is designed to work with Electric Citizen headless Gatsby sites that need a Drupal back-end. The base idea is to make things as clear and simple for the editor as possible.
 
 
-GETTING STARTED
---------------------
+# GETTING STARTED
 
 Working with Crane requires a few things: 
 (a) working knowledge of Sass, Twig, Jquery
@@ -27,4 +24,3 @@ Working:
 (b) run: npm start
 
 NPM Start will trigger a gulp-based watch command that watches all Sass (.scss) files in the /scss folder and rebuilds the css and css.map files on each change. 
-

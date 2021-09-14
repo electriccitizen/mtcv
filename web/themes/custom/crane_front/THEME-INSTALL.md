@@ -1,6 +1,4 @@
-
-ABOUT CRANE FRONT THEME
-------------
+# ABOUT CRANE FRONT THEME
 
 Crane front is an minimal Drupal 8 front-end theme by Electric Citizen, http://www.electriccitizen.com. 
 
@@ -9,8 +7,7 @@ Crane uses Stable as its base them.
 Crane is a theme that is designed to work with Electric Citizen headless Gatsby sites as the most minimalistic way to style the login and other rare front-facing instances. The base idea is that since the site is headless, there should be a seamless experience between the crane front-end and that crane admin theme back-end.
 
 
-GETTING STARTED
---------------------
+# GETTING STARTED
 
 Working with Crane Front requires a few things: 
 (a) working knowledge of Sass, Twig, Jquery
