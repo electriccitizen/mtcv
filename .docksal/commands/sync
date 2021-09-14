@@ -15,12 +15,11 @@ start=$SECONDS
 # HELPERS
 
 # Console colors
-red='\033[0;31m'
-green='\033[0;32m'
-green_bg='\033[42m'
-yellow='\033[1;33m'
-NC='\033[0m'
-bg='\[\033[0;35m\]'
+red=`tput setaf 1`
+green=`tput setaf 2`
+green_bg=`tput setaf 1; tput setab 2`
+yellow=`tput setaf 3`
+NC=`tput sgr0`
 
 echo-red () { echo -e "${red}$1${NC}"; }
 echo-green () { echo -e "${green}$1${NC}"; }
@@ -30,25 +29,21 @@ echo-yellow () { echo -e "${yellow}$1${NC}"; }
 # Windows check
 is_windows ()
 {
-	local res=$(uname | grep 'CYGWIN_NT')
-	if [[ "$res" != "" ]]; then
-		return 0
-	else
-		return 1
-	fi
+  local res=$(uname | grep 'CYGWIN_NT')
+  if [[ "$res" != "" ]]; then
+    return 0
+  else
+    return 1
+  fi
 }
 
 # Execute
 if [[ "${PROJECT_ROOT}" == "" ]]; then
-	echo-red "\$PROJECT_ROOT is not set!"
-	exit 1
+  echo-red "\$PROJECT_ROOT is not set!"
+  exit 1
 fi
 
 cd ${PROJECT_ROOT}
-
-# Make sure docksal is running
-echo -e "${green_bg} fin up ${NC}${green} Creating services...${NC}"
-fin restart
 
 # Check for a clean repository
 if ! [ -z "$(git status --untracked-files=no --porcelain)" ]; then
@@ -58,20 +53,30 @@ if ! [ -z "$(git status --untracked-files=no --porcelain)" ]; then
   git status
 fi
 
-cd ${PROJECT_ROOT}
+# Project Files - Pull from Github
+echo -e  "${green_bg} Get latest code ${NC}${green} Pulling ${REPO_BRANCH} branch from Github...${NC}"
+git checkout ${REPO_BRANCH}
+git pull 
+
+# Fin Restart
+echo -e  "${green_bg} Fin Restart ${NC}${green} Restart fin to get latest container updates...${NC}"
+fin restart
+
+# Composer Install
+echo -e  "${green_bg} Composer Install ${NC}${green} to install latest updates from composer.json...${NC}"
+fin composer install 
+
+if [ "$1" == 'pull' ]; then
+  start2=$SECONDS
+  echo -en "${green_bg} Fin Pull ${NC}${green} Starting Pantheon DB Pull... ${NC}"
+  fin pull db -y
+  ## Calculate Process time
+  duration2=$(( SECONDS - start2 ))
+fi
 
 # Start database sync
-if [ -n "$1" ]; then
-  # Pull DB if needed 
-  if [ "$1" == 'pull' ]; then
-    if [ -f db.sql.gz ]; then 
-      rm db.sql.gz 
-    fi
-    fin terminus backup:get --element=db ${PANTH_ENV} --to=db.sql.gz
-    FILE="db.sql.gz"
-  else
-    FILE="$1"
-  fi
+if [ -n "$1" ] &&  [ "$1" != "pull" ]; then
+  FILE="$1"
   echo -e "${green_bg} fin db import ${NC}${green} from "${FILE}" ${NC}"
   if [ -x "$(command -v pv)" ]; then
     pv ${FILE} | gunzip | fin db import
@@ -79,24 +84,38 @@ if [ -n "$1" ]; then
     gunzip ${FILE} | fin db import
   fi
 else
-  echo -e "${green_bg} No DB Import ${NC}${green} (add file name to end of command or add 'pull')${NC}"
+  echo -e "${green_bg} No DB Import ${NC}${green} (add file name to end of command)${NC}"
 fi
 
 # Cache Rebuild
 echo -e "${green_bg} Drush cr ${NC}${green} Cache Rebuild...${NC}"
 fin drush cr
 
-echo -en "${green_bg} SYNC COMPLETE! ${NC} "
-echo -en
-echo -en "Open ${yellow}http://${VIRTUAL_HOST}${NC} in your browser to verify the setup.${NC}"
-echo -en "${green_bg} fin drush uli! ${NC} "
+# Config Import
+echo -e "${green_bg} Drush cim -y ${NC}${green} Import config...${NC}"
+fin drush cim -y
+
+# Config Import
+echo -e "${green_bg} Drush cim -y ${NC}${green} Import config again to be sure...${NC}"
+fin drush cim -y
+
+echo -e
+echo -e "${green_bg} SYNC COMPLETE! ${NC} "
+echo -e "Open ${yellow}http://${VIRTUAL_HOST}${NC} in your browser to verify the setup.${NC}"
+echo -e
+echo -e "${green_bg} fin drush uli! ${NC} "
 fin drush uli
 
 ## Calculate Process time
 duration=$(( SECONDS - start ))
 ## Echo Process time
-echo -en "${green_bg} Sync runtime ${NC}${green} ${duration} seconds ${NC}"
+echo -e
+if [ "$1" == 'pull' ]; then
+  echo -e "${green_bg} Pull runtime ${NC}${green} ${duration2} seconds ${NC}"
+fi
+echo -e "${green_bg} Sync runtime ${NC}${green} ${duration} seconds ${NC}"
 
 exit
 
 sleep 2
+
