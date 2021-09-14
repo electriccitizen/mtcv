@@ -31,7 +31,7 @@ function createTestPR()
     TEST_COMMENT="$2"
 
     # Make a branch so for our test commit
-    git checkout -b "$TEST_BRANCH_NAME" master
+    git checkout -b "$TEST_BRANCH_NAME" main
 
     # Add a comment to the README so that we know what this was made for
     echo "$TEST_COMMENT" >> "$TARGET_REPO_WORKING_COPY/README.md"
@@ -43,10 +43,10 @@ function createTestPR()
     git push $ORIGIN "$TEST_BRANCH_NAME" 2>&1 | sed -e "s/$GITHUB_TOKEN/[REDACTED]/g"
 
     # Create the pull request
-    hub pull-request -m "$TEST_COMMENT" -b master -h "$TEST_BRANCH_NAME" 2>&1 | sed -e "s/$GITHUB_TOKEN/[REDACTED]/g"
+    hub pull-request -m "$TEST_COMMENT" -b main -h "$TEST_BRANCH_NAME" 2>&1 | sed -e "s/$GITHUB_TOKEN/[REDACTED]/g"
 
-    # Back to master
-    git checkout master
+    # Back to main
+    git checkout main
 }
 
 # Make a pull request to actually run tests

@@ -209,6 +209,6 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - main
     jobs:
       - composer_lock_updater
