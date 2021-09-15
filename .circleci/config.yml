@@ -149,21 +149,21 @@ jobs:
           name: remove transient test fixtures
           command: ./.ci/scripts/09-cleanup-fixtures
 
-  composer_lock_updater:
-    <<: *defaults
-    docker:
-      - image: quay.io/pantheon-public/build-tools-ci:4.x
-    steps:
-      - checkout
-
-      - run:
-          name: setup-environment-vars
-          command: /build-tools-ci/scripts/set-environment
-
-      - run:
-          name: run composer lock updater
-          command: set -e && clu https://${GITHUB_TOKEN}:x-oauth-basic@github.com/${CI_PROJECT_USERNAME}/${CI_PROJECT_REPONAME}.git | sed -e "s/${GITHUB_TOKEN}/[REDACTED]/g"
-
+#  composer_lock_updater:
+#    <<: *defaults
+#    docker:
+#      - image: quay.io/pantheon-public/build-tools-ci:4.x
+#    steps:
+#      - checkout
+#
+#      - run:
+#          name: setup-environment-vars
+#          command: /build-tools-ci/scripts/set-environment
+#
+#      - run:
+#          name: run composer lock updater
+#          command: set -e && clu https://${GITHUB_TOKEN}:x-oauth-basic@github.com/${CI_PROJECT_USERNAME}/${CI_PROJECT_REPONAME}.git | sed -e "s/${GITHUB_TOKEN}/[REDACTED]/g"
+#
 #  visual_regression_test:
 #    <<: *defaults
 #    docker:
@@ -202,13 +202,23 @@ workflows:
 #          requires:
 #            - configure_env_vars
 #            - functional
-  scheduled_update_check:
-    triggers:
-      - schedule:
-          cron: "0 0 * * *"
-          filters:
-            branches:
-              only:
-                - master
-    jobs:
-      - composer_lock_updater
+#  scheduled_update_check:
+#    triggers:
+#      - schedule:
+#          cron: "0 0 * * *"
+#          filters:
+#            branches:
+#              only:
+#                - main
+#    jobs:
+#      - composer_lock_updater
+#  scheduled_update_check:
+#    triggers:
+#      - schedule:
+#          cron: "0 0 * * *"
+#          filters:
+#            branches:
+#              only:
+#                - master
+#    jobs:
+#      - composer_lock_updater

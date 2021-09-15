@@ -48,14 +48,14 @@ terminus -n build:env:delete:pr "$TERMINUS_SITE" --yes
 # Confirm that our test environment still exists.
 terminus env:info "$TERMINUS_SITE.$TERMINUS_ENV"
 
-# Merge the PR branch into master and push it
+# Merge the PR branch into main and push it
 cd "$TARGET_REPO_WORKING_COPY"
-git checkout master
-git merge -m 'Merge to master' test-after-repair
+git checkout main
+git merge -m 'Merge to main' test-after-repair
 
 # Push the branch
 ORIGIN="https://$GITHUB_TOKEN:x-oauth-basic@github.com/$GITHUB_USER/$TERMINUS_SITE.git"
-git push $ORIGIN master | sed -e "s/$GITHUB_TOKEN/[REDACTED]/g"
+git push $ORIGIN main | sed -e "s/$GITHUB_TOKEN/[REDACTED]/g"
 
 # Run `build:env:merge` to see if it works.
 terminus -n build:env:merge "$TERMINUS_SITE.$TERMINUS_ENV" --yes
