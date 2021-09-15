@@ -94,6 +94,12 @@ Open the generated login URL and you should be set to go.
 
 Whenever you start a new task, you'll want to refresh your local environment to pull in the latest changes from other developers.
 
+`cd ~/Projects/mt/mlsa`
+
+`git pull`
+
+`gatsby develop`
+
 `cd ~/Projects/mt/mtcv`
 
 `git checkout main`
@@ -147,7 +153,7 @@ See `~/Projects/mtcv/web/sites/default/settings.docksal.php`
 
 # Enabling Xdebug
 
-Copy the `.docksal/docksal-local.yml.default` file to your project root as `docksal-local.yml` and ensure that `XDEBUG_ENABLED=1`
+Copy the `.docksal/docksal-local.yml.default` file to the .docksal folder as `docksal-local.yml` and ensure that `XDEBUG_ENABLED=1`
 
 Open `.docksal/etc/php/php.ini` and uncomment the three lines of code directly under [xdebug]:
 
