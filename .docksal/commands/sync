@@ -18,7 +18,7 @@ start=$SECONDS
 red=`tput setaf 1`
 green=`tput setaf 2`
 green_bg=`tput setaf 1; tput setab 2`
-yellow=`tput setaf 3`
+yellow=`tput setaf 3; tput setab 234`
 NC=`tput sgr0`
 
 echo-red () { echo -e "${red}$1${NC}"; }
@@ -48,27 +48,36 @@ cd ${PROJECT_ROOT}
 # Check for a clean repository
 if ! [ -z "$(git status --untracked-files=no --porcelain)" ]; then
   # Uncommitted changes in tracked files
+  echo -e
   echo -e  "${red}WARNING: You have uncommitted changes in your branch.${NC}"
   echo
   git status
+  echo -e
+  read -p "Continue (y/n)?" choice
+    case "$choice" in 
+      y|Y ) echo "yes";;
+      n|N ) echo "Exiting"; exit;;
+      * ) echo "invalid";;
+    esac
 fi
 
 # Project Files - Pull from Github
-echo -e  "${green_bg} Get latest code ${NC}${green} Pulling ${REPO_BRANCH} branch from Github...${NC}"
+echo -e  "${green_bg} Get latest code ${NC}${yellow} Pulling ${REPO_BRANCH} branch from Github...${NC}"
+git fetch --all
 git checkout ${REPO_BRANCH}
 git pull 
 
 # Fin Restart
-echo -e  "${green_bg} Fin Restart ${NC}${green} Restart fin to get latest container updates...${NC}"
+echo -e  "${green_bg} Fin Restart ${NC}${yellow} Restart fin to get latest container updates...${NC}"
 fin restart
 
 # Composer Install
-echo -e  "${green_bg} Composer Install ${NC}${green} to install latest updates from composer.json...${NC}"
+echo -e  "${green_bg} Composer Install ${NC}${yellow} to install latest updates from composer.json...${NC}"
 fin composer install 
 
 if [ "$1" == 'pull' ]; then
   start2=$SECONDS
-  echo -en "${green_bg} Fin Pull ${NC}${green} Starting Pantheon DB Pull... ${NC}"
+  echo -en "${green_bg} Fin Pull ${NC}${yellow} Starting Pantheon DB Pull... ${NC}"
   fin pull db -y
   ## Calculate Process time
   duration2=$(( SECONDS - start2 ))
@@ -77,26 +86,26 @@ fi
 # Start database sync
 if [ -n "$1" ] &&  [ "$1" != "pull" ]; then
   FILE="$1"
-  echo -e "${green_bg} fin db import ${NC}${green} from "${FILE}" ${NC}"
+  echo -e "${green_bg} fin db import ${NC}${yellow} from "${FILE}" ${NC}"
   if [ -x "$(command -v pv)" ]; then
-    pv ${FILE} | gunzip | fin db import
+    pv $1 | zcat | fin db import
   else
-    gunzip ${FILE} | fin db import
+    zcat < ${1} | fin db import
   fi
 else
-  echo -e "${green_bg} No DB Import ${NC}${green} (add file name to end of command)${NC}"
+  echo -e "${green_bg} No DB Import ${NC}${yellow} (add file name to end of command)${NC}"
 fi
 
 # Cache Rebuild
-echo -e "${green_bg} Drush cr ${NC}${green} Cache Rebuild...${NC}"
+echo -e "${green_bg} Drush cr ${NC}${yellow} Cache Rebuild...${NC}"
 fin drush cr
 
 # Config Import
-echo -e "${green_bg} Drush cim -y ${NC}${green} Import config...${NC}"
+echo -e "${green_bg} Drush cim -y ${NC}${yellow} Import config...${NC}"
 fin drush cim -y
 
 # Config Import
-echo -e "${green_bg} Drush cim -y ${NC}${green} Import config again to be sure...${NC}"
+echo -e "${green_bg} Drush cim -y ${NC}${yellow} Import config again to be sure...${NC}"
 fin drush cim -y
 
 echo -e
@@ -111,9 +120,9 @@ duration=$(( SECONDS - start ))
 ## Echo Process time
 echo -e
 if [ "$1" == 'pull' ]; then
-  echo -e "${green_bg} Pull runtime ${NC}${green} ${duration2} seconds ${NC}"
+  echo -e "${green_bg} Pull runtime ${NC}${yellow} ${duration2} seconds ${NC}"
 fi
-echo -e "${green_bg} Sync runtime ${NC}${green} ${duration} seconds ${NC}"
+echo -e "${green_bg} Sync runtime ${NC}${yellow} ${duration} seconds ${NC}"
 
 exit
 
