@@ -7,7 +7,7 @@ Reviewed by Wilbur, 2021-09-14
 - **NAME:**  mtcv
 - **URL:** https://www.mtcrimevictimhelp.org/
 - **ADMIN URL:** http://dev-mtcv.pantheonsite.io/
-- **LOCAL URL:** http://ciccweb.docksal
+- **LOCAL URL:** http://mtcv.docksal
 - **BRANCH:** main
 - **HOSTING:** [Pantheon Dashboard](https://dashboard.pantheon.io/sites/ad79477c-5d06-4234-b6b8-582ebeee0e5c)
 - **CIRCLE CI:** [Logs](https://app.circleci.com/pipelines/github/electriccitizen/mtcv)
