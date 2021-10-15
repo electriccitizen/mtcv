@@ -108,13 +108,6 @@ fin drush cim -y
 echo -e "${green_bg} Drush cim -y ${NC}${yellow} Import config again to be sure...${NC}"
 fin drush cim -y
 
-echo -e
-echo -e "${green_bg} SYNC COMPLETE! ${NC} "
-echo -e "Open ${yellow}http://${VIRTUAL_HOST}${NC} in your browser to verify the setup.${NC}"
-echo -e
-echo -e "${green_bg} fin drush uli! ${NC} "
-fin drush uli
-
 ## Calculate Process time
 duration=$(( SECONDS - start ))
 ## Echo Process time
@@ -123,6 +116,12 @@ if [ "$1" == 'pull' ]; then
   echo -e "${green_bg} Pull runtime ${NC}${yellow} ${duration2} seconds ${NC}"
 fi
 echo -e "${green_bg} Sync runtime ${NC}${yellow} ${duration} seconds ${NC}"
+echo -e
+echo -e "${green_bg} SYNC COMPLETE! ${NC} "
+echo -e "Open ${yellow}http://${VIRTUAL_HOST}${NC} in your browser to verify the setup.${NC}"
+echo -e
+echo -e "${green_bg} fin drush uli! ${NC} "
+fin drush uli
 
 exit
 
