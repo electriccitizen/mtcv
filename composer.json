@@ -18,6 +18,8 @@
     "drupal/adminimal_theme": "^1.4",
     "drupal/auto_entitylabel": "^3.0",
     "drupal/build_hooks": "^3.0",
+    "drupal/chosen": "^3.0",
+    "drupal/chosen_lib": "^3.0",
     "drupal/color_field": "^2.0",
     "drupal/config_filter": "^2.0",
     "drupal/config_ignore": "^2.1",
