@@ -29,7 +29,6 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       accordion_group: accordion_group
       button: button
@@ -40,41 +39,42 @@ settings:
       text: text
       text_with_image: text_with_image
       video: video
+    negate: 0
     target_bundles_drag_drop:
       accordion_group:
-        enabled: true
         weight: -25
-      button:
         enabled: true
-        weight: -24
-      files:
-        enabled: true
-        weight: -23
-      react_component:
-        enabled: true
-        weight: -22
-      horizontal_rule:
-        enabled: true
-        weight: -21
-      image:
-        enabled: true
-        weight: -20
-      text:
-        enabled: true
-        weight: -19
-      text_with_image:
-        enabled: true
-        weight: -18
-      video:
-        enabled: true
-        weight: -17
-      header:
-        weight: -16
-        enabled: false
       accordion_item:
         weight: -15
         enabled: false
+      button:
+        weight: -24
+        enabled: true
+      files:
+        weight: -23
+        enabled: true
+      header:
+        weight: -16
+        enabled: false
+      horizontal_rule:
+        weight: -21
+        enabled: true
+      image:
+        weight: -20
+        enabled: true
       logo_grid_item:
         weight: -14
         enabled: false
+      react_component:
+        weight: -22
+        enabled: true
+      text:
+        weight: -19
+        enabled: true
+      text_with_image:
+        weight: -18
+        enabled: true
+      video:
+        weight: -17
+        enabled: true
 field_type: entity_reference_revisions

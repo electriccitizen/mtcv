@@ -1,14 +1,14 @@
+_core:
+  default_config_hash: wIs6Q7ndBaxmH2QphZXy8nJAmrgivttZYPJR1i_xJ7E
 logging:
   entity_types:
     block_content: block_content
     node: node
     taxonomy_term: taxonomy_term
-    file: 0
-    media: 0
-    redirect: 0
-    shortcut: 0
-    user: 0
-    menu_link_content: 0
-    paragraph: 0
-_core:
-  default_config_hash: wIs6Q7ndBaxmH2QphZXy8nJAmrgivttZYPJR1i_xJ7E
+    file: '0'
+    media: '0'
+    redirect: '0'
+    shortcut: '0'
+    user: '0'
+    menu_link_content: '0'
+    paragraph: '0'

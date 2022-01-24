@@ -4,17 +4,17 @@ status: true
 dependencies:
   module:
     - node
-id: wysiwyg
 label: WYSIWYG
+id: wysiwyg
 description: ''
 matchers:
   da5c9e47-756c-4398-98c1-aa9dbce80e76:
-    uuid: da5c9e47-756c-4398-98c1-aa9dbce80e76
     id: 'entity:node'
-    weight: 0
+    uuid: da5c9e47-756c-4398-98c1-aa9dbce80e76
     settings:
+      metadata: ''
       bundles: {  }
       group_by_bundle: true
-      include_unpublished: false
       substitution_type: canonical
-      metadata: ''
+      include_unpublished: false
+    weight: 0

@@ -1,7 +1,14 @@
 uuid: f1a90ba8-3253-480e-a0c7-3e75057df768
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.restricted_html
+  module:
+    - filter
+    - media
+    - redirect
+    - system
 _core:
   default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
 id: anonymous
@@ -9,11 +16,8 @@ label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
-  - 'access comments'
   - 'access content'
-  - 'access site-wide contact form'
   - 'administer redirect settings'
   - 'administer redirects'
-  - 'search content'
   - 'use text format restricted_html'
   - 'view media'

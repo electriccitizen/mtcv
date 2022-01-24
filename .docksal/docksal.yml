@@ -1,4 +1,4 @@
-version: "2.1"
+version: "3.9"
 services:
   # PHPMyAdmin
   pma:
@@ -11,7 +11,7 @@ services:
     labels:
       - io.docksal.virtual-host=pma.${VIRTUAL_HOST}
   db:
-    image: docksal/mysql:5.7
+    image: docksal/mariadb:10.4
   cli:
     image: docksal/cli:php7.4
 #    # Uncomment to add support for xdebug - see http://docksal.readthedocs.io/en/master/tools/xdebug/.

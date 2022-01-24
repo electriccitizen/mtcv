@@ -6,15 +6,15 @@ dependencies:
     - build_hooks_netlify
 id: preview
 label: PREVIEW
-weight: '0'
 provider: null
 plugin: netlify
+deployment_strategy: entitysave
+url: 'https://preview--mlsa.netlify.com'
+weight: 0
 settings:
   id: netlify
   label: null
   provider: build_hooks_netlify
-  api_id: 41c426b1-acb1-42b7-80e4-30bec3f213e0
   branch: preview
   build_hook_url: 'https://api.netlify.com/build_hooks/5d8121a6ade9d1dc8c56163b'
-url: 'https://preview--mlsa.netlify.com'
-deployment_strategy: entitysave
+  api_id: 41c426b1-acb1-42b7-80e4-30bec3f213e0

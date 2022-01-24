@@ -13,8 +13,8 @@ dependencies:
     - media
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 id: paragraph.image.preview
 targetEntityType: paragraph
 bundle: image
@@ -22,12 +22,12 @@ mode: preview
 content:
   field_single_image:
     type: media_thumbnail
-    weight: 0
     label: hidden
     settings:
-      image_style: paragraph_preview
       image_link: ''
+      image_style: paragraph_preview
     third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
   field_header: true

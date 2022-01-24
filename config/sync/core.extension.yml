@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
   admin_toolbar: 0
   admin_toolbar_search: 0
@@ -52,10 +54,6 @@ module:
   metatag_open_graph: 0
   metatag_twitter_cards: 0
   migrate: 0
-  migrate_file: 0
-  migrate_plus: 0
-  migrate_resources: 0
-  migrate_tools: 0
   node: 0
   options: 0
   page_cache: 0
@@ -91,5 +89,3 @@ theme:
   crane_front: 0
   crane: 0
 profile: standard
-_core:
-  default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

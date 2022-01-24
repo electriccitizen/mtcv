@@ -11,8 +11,8 @@ dependencies:
     - layout_builder
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 id: paragraph.video.preview
 targetEntityType: paragraph
 bundle: video
@@ -20,11 +20,11 @@ mode: preview
 content:
   field_video:
     type: entity_reference_label
-    weight: 0
     label: hidden
     settings:
       link: false
     third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
   field_header: true

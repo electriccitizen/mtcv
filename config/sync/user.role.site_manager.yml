@@ -1,7 +1,41 @@
 uuid: 784400df-bcbe-4f36-aaa3-ff17f037e7d7
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.basic_html
+    - media.type.file
+    - media.type.image
+    - media.type.remote_video
+    - node.type.page
+    - node.type.resource
+    - taxonomy.vocabulary.audience_options
+    - taxonomy.vocabulary.county
+    - taxonomy.vocabulary.crime
+    - taxonomy.vocabulary.footer_menu
+    - taxonomy.vocabulary.main_menu
+    - taxonomy.vocabulary.navigator
+    - taxonomy.vocabulary.organization
+    - taxonomy.vocabulary.region
+    - taxonomy.vocabulary.related_issues
+    - taxonomy.vocabulary.resource_category
+    - taxonomy.vocabulary.resource_types
+    - taxonomy.vocabulary.translation_languages
+    - taxonomy.vocabulary.triage_questions
+  module:
+    - block
+    - build_hooks
+    - disable_messages
+    - filter
+    - media
+    - node
+    - paragraphs
+    - redirect
+    - responsive_preview
+    - shortcut
+    - system
+    - taxonomy
+    - toolbar
 id: site_manager
 label: 'Site Manager'
 weight: 4
@@ -9,7 +43,6 @@ is_admin: null
 permissions:
   - 'access administration pages'
   - 'access content overview'
-  - 'access in-place editing'
   - 'access media overview'
   - 'access responsive preview'
   - 'access site in maintenance mode'
@@ -24,7 +57,6 @@ permissions:
   - 'administer users'
   - 'cancel account'
   - 'change own username'
-  - 'create basic block_content'
   - 'create file media'
   - 'create image media'
   - 'create page content'
@@ -49,7 +81,6 @@ permissions:
   - 'delete any page content'
   - 'delete any remote_video media'
   - 'delete any resource content'
-  - 'delete own basic block_content'
   - 'delete own file media'
   - 'delete own image media'
   - 'delete own page content'
@@ -92,33 +123,11 @@ permissions:
   - 'edit terms in resource_types'
   - 'edit terms in translation_languages'
   - 'edit terms in triage_questions'
-  - 'execute entity:delete_action media'
-  - 'execute entity:delete_action node'
-  - 'execute entity:publish_action node'
-  - 'execute entity:unpublish_action node'
-  - 'execute node_save_action node'
-  - 'execute user_add_role_action user'
-  - 'execute user_remove_role_action user'
-  - 'execute vbo_cancel_user_action user'
   - 'revert all revisions'
   - 'revert page revisions'
   - 'revert resource revisions'
   - 'switch shortcut sets'
   - 'trigger deployments'
-  - 'update any basic block_content'
-  - 'update any escape block_content'
-  - 'update any homepage_featured_content block_content'
-  - 'update any homepage_intro block_content'
-  - 'update any homepage_resources block_content'
-  - 'update any logo_grid block_content'
-  - 'update any social_media_links block_content'
-  - 'update own basic block_content'
-  - 'update own escape block_content'
-  - 'update own homepage_featured_content block_content'
-  - 'update own homepage_intro block_content'
-  - 'update own homepage_resources block_content'
-  - 'update own logo_grid block_content'
-  - 'update own social_media_links block_content'
   - 'use text format basic_html'
   - 'view all revisions'
   - 'view error messages'

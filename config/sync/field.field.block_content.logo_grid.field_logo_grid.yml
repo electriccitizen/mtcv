@@ -21,13 +21,10 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       logo_grid_item: logo_grid_item
+    negate: 0
     target_bundles_drag_drop:
-      logo_grid_item:
-        enabled: true
-        weight: 11
       accordion_group:
         weight: 12
         enabled: false
@@ -46,6 +43,9 @@ settings:
       image:
         weight: 17
         enabled: false
+      logo_grid_item:
+        weight: 11
+        enabled: true
       text:
         weight: 18
         enabled: false

@@ -13,8 +13,8 @@ dependencies:
     - layout_builder
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 _core:
   default_config_hash: jOwnt_yq6AKAfqU6f0xKnxEkFQ2eTPJWxrk3WMLbL68
 id: media.image.node_preview
@@ -23,20 +23,20 @@ bundle: image
 mode: node_preview
 content:
   field_caption:
-    weight: 2
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 2
     region: content
   field_media_image:
+    type: image
     label: hidden
     settings:
-      image_style: node_preview
       image_link: ''
+      image_style: node_preview
     third_party_settings: {  }
-    type: image
     weight: 1
     region: content
 hidden:

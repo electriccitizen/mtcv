@@ -40,6 +40,8 @@
 {% extends 'field.html.twig' %}
 
 {% block fieldSingleNo %}
-  {{ drupal_entity('media', item.content['#paragraph'].field_single_image.target_id, 'prefooter_image' ) }}
+  {% if item.content['#paragraph'].field_single_image.target_id %}
+    {{ drupal_entity('media', item.content['#paragraph'].field_single_image.target_id, 'prefooter_image' ) }}
+  {% endif %}
 {% endblock %}
     

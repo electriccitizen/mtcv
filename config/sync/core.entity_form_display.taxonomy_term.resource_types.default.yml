@@ -11,11 +11,11 @@ bundle: resource_types
 mode: default
 content:
   field_icon:
+    type: options_select
     weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   name:
     type: string_textfield
     weight: 0

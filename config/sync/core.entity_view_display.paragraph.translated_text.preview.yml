@@ -12,27 +12,27 @@ dependencies:
     - text
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 id: paragraph.translated_text.preview
 targetEntityType: paragraph
 bundle: translated_text
 mode: preview
 content:
   field_language:
-    weight: 0
+    type: entity_reference_label
     label: inline
     settings:
       link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 0
     region: content
   field_text:
-    weight: 1
+    type: text_trimmed
     label: hidden
     settings:
       trim_length: 140
     third_party_settings: {  }
-    type: text_trimmed
+    weight: 1
     region: content
 hidden: {  }

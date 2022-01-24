@@ -16,20 +16,20 @@ bundle: image
 mode: default
 content:
   field_caption:
-    weight: 2
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 2
     region: content
   field_media_image:
+    type: image
     label: visually_hidden
     settings:
-      image_style: ''
       image_link: file
+      image_style: ''
     third_party_settings: {  }
-    type: image
     weight: 1
     region: content
 hidden:

@@ -14,7 +14,7 @@ bundle: footer_menu
 mode: default
 content:
   field_menu_link:
-    weight: 0
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -23,7 +23,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 0
     region: content
 hidden:
   description: true
