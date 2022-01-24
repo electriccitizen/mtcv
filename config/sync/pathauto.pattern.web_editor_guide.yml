@@ -11,12 +11,12 @@ pattern: 'support-guide/[node:title]'
 selection_criteria:
   e2dfecc2-6120-415d-9333-a9ed3130d472:
     id: node_type
-    bundles:
-      support_book: support_book
     negate: false
+    uuid: e2dfecc2-6120-415d-9333-a9ed3130d472
     context_mapping:
       node: node
-    uuid: e2dfecc2-6120-415d-9333-a9ed3130d472
+    bundles:
+      support_book: support_book
 selection_logic: and
 weight: -5
 relationships: {  }

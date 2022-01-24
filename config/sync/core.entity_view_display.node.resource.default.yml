@@ -25,79 +25,79 @@ bundle: resource
 mode: default
 content:
   field_county:
-    weight: 5
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 5
     region: content
   field_crime:
-    weight: 2
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 2
     region: content
   field_description:
-    weight: 0
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 0
     region: content
   field_internal_resource:
-    weight: 9
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 9
     region: content
   field_metatags:
-    weight: 7
+    type: metatag_empty_formatter
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: metatag_empty_formatter
+    weight: 7
     region: content
   field_organization:
-    weight: 8
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 8
     region: content
   field_related_category:
-    weight: 4
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 4
     region: content
   field_related_issue:
-    weight: 3
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 3
     region: content
   field_resource_type:
-    weight: 6
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 6
     region: content
   field_resource_url:
-    weight: 1
+    type: citizen_link
     label: above
     settings:
       trim_length: 80
@@ -106,7 +106,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: citizen_link
+    weight: 1
     region: content
 hidden:
   links: true

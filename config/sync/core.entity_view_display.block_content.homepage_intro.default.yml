@@ -15,26 +15,26 @@ bundle: homepage_intro
 mode: default
 content:
   field_headline:
-    weight: 0
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 0
     region: content
   field_image:
     type: entity_reference_entity_view
-    weight: 2
     label: above
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
+    weight: 2
     region: content
   field_leadin:
-    weight: 1
+    type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 1
     region: content
 hidden: {  }

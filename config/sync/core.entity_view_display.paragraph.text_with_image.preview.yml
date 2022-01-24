@@ -18,8 +18,8 @@ dependencies:
     - text
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 id: paragraph.text_with_image.preview
 targetEntityType: paragraph
 bundle: text_with_image
@@ -27,26 +27,26 @@ mode: preview
 content:
   field_image_placement:
     type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
     weight: 2
     region: content
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
   field_single_image:
-    weight: 0
+    type: media_thumbnail
     label: hidden
     settings:
-      image_style: paragraph_preview
       image_link: ''
+      image_style: paragraph_preview
     third_party_settings: {  }
-    type: media_thumbnail
+    weight: 0
     region: content
   field_text:
-    weight: 1
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 1
     region: content
 hidden:
   field_header: true

@@ -12,8 +12,8 @@ dependencies:
     - layout_builder
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 id: paragraph.button.preview
 targetEntityType: paragraph
 bundle: button
@@ -21,8 +21,6 @@ mode: preview
 content:
   field_buttons:
     type: citizen_link
-    weight: 0
-    region: content
     label: hidden
     settings:
       trim_length: '80'
@@ -31,5 +29,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   field_header: true

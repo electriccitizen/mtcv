@@ -14,7 +14,7 @@ bundle: button
 mode: default
 content:
   field_buttons:
-    weight: 1
+    type: citizen_link
     label: hidden
     settings:
       trim_length: 80
@@ -23,14 +23,14 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: citizen_link
+    weight: 1
     region: content
   field_header:
-    weight: 0
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 0
     region: content
 hidden: {  }

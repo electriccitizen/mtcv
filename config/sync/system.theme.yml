@@ -1,4 +1,4 @@
-admin: crane
-default: crane_front
 _core:
   default_config_hash: fOjer9hADYYnbCJVZMFZIIM1azTFWyg84ZkFDHfAbUg
+admin: crane
+default: crane_front

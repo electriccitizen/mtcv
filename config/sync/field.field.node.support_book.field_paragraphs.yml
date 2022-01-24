@@ -29,7 +29,6 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       accordion_group: accordion_group
       button: button
@@ -40,41 +39,42 @@ settings:
       text: text
       text_with_image: text_with_image
       video: video
+    negate: 0
     target_bundles_drag_drop:
       accordion_group:
-        enabled: true
         weight: 12
+        enabled: true
       accordion_item:
         weight: 13
         enabled: false
       button:
-        enabled: true
         weight: 14
+        enabled: true
+      files:
+        weight: 16
+        enabled: true
       header:
         weight: 15
         enabled: false
-      files:
-        enabled: true
-        weight: 16
       horizontal_rule:
-        enabled: true
         weight: 16
-      image:
         enabled: true
+      image:
         weight: 17
+        enabled: true
       logo_grid_item:
         weight: 18
         enabled: false
       react_component:
-        enabled: true
         weight: 19
+        enabled: true
       text:
-        enabled: true
         weight: 20
+        enabled: true
       text_with_image:
-        enabled: true
         weight: 21
-      video:
         enabled: true
+      video:
         weight: 22
+        enabled: true
 field_type: entity_reference_revisions

@@ -16,29 +16,29 @@ bundle: escape
 mode: default
 content:
   field_escape_link:
+    type: citizen_link
     weight: 2
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: citizen_link
-    region: content
   field_headline:
+    type: text_textarea
     weight: 1
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_search_terms:
+    type: string_textfield
     weight: 3
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   info:
     type: string_textfield
     weight: 0

@@ -6,15 +6,15 @@ dependencies:
     - build_hooks_netlify
 id: live
 label: LIVE
-weight: '0'
 provider: null
 plugin: netlify
+deployment_strategy: manual
+url: 'https://www.mtcrimevictimhelp.org/'
+weight: 0
 settings:
   id: netlify
   label: null
   provider: build_hooks_netlify
-  api_id: 41c426b1-acb1-42b7-80e4-30bec3f213e0
   branch: master
   build_hook_url: 'https://api.netlify.com/build_hooks/5d811f60859d380da191999a'
-url: 'https://www.mtcrimevictimhelp.org/'
-deployment_strategy: manual
+  api_id: 41c426b1-acb1-42b7-80e4-30bec3f213e0

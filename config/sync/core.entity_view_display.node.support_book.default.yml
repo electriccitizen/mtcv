@@ -17,8 +17,8 @@ dependencies:
     - crane_front
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: true
+    allow_custom: false
     sections:
       -
         layout_id: two_column_sidebar_left
@@ -32,71 +32,71 @@ third_party_settings:
             configuration:
               id: 'menu_block:support-book'
               label: 'Support Guide'
-              provider: menu_block
               label_display: visible
+              provider: menu_block
+              context_mapping: {  }
+              label_link: false
+              label_type: block
               level: 1
               depth: 0
-              expand: 1
               parent: 'support-book:'
-              label_type: block
-              label_link: 0
               suggestion: page_menu
-              context_mapping: {  }
-            additional: {  }
+              expand: 1
             weight: 0
+            additional: {  }
           3e22b23a-3f70-46d6-b6c9-0789d771acbc:
             uuid: 3e22b23a-3f70-46d6-b6c9-0789d771acbc
             region: content
             configuration:
               id: 'field_block:node:support_book:title'
               label: Title
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
               formatter:
-                label: hidden
                 type: string
+                label: hidden
                 settings:
                   link_to_entity: false
                 third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
             weight: 0
+            additional: {  }
           1750b0b5-c671-43f8-b7e9-c47505484520:
             uuid: 1750b0b5-c671-43f8-b7e9-c47505484520
             region: content
             configuration:
               id: 'field_block:node:support_book:body'
               label: Body
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: hidden
-                type: text_default
-                settings: {  }
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
-            additional: {  }
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
             weight: 1
+            additional: {  }
           8572072a-6357-4e83-8516-a77898f06152:
             uuid: 8572072a-6357-4e83-8516-a77898f06152
             region: content
             configuration:
               id: 'field_block:node:support_book:field_paragraphs'
               label: Paragraphs
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
               formatter:
-                label: hidden
                 type: entity_reference_revisions_entity_view
+                label: hidden
                 settings:
                   view_mode: default
                 third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
             weight: 2
+            additional: {  }
         third_party_settings: {  }
 id: node.support_book.default
 targetEntityType: node
@@ -104,20 +104,20 @@ bundle: support_book
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 0
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 0
     region: content
   field_paragraphs:
     type: entity_reference_revisions_entity_view
-    weight: 1
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 1
     region: content
 hidden:
   links: true

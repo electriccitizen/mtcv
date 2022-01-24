@@ -16,28 +16,28 @@ bundle: homepage_intro
 mode: default
 content:
   field_headline:
+    type: text_textarea
     weight: 26
+    region: content
     settings:
       rows: 2
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_image:
     type: media_library_widget
     weight: 28
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    region: content
   field_leadin:
+    type: string_textarea
     weight: 27
+    region: content
     settings:
       rows: 3
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   info:
     type: string_textfield
     weight: -5
