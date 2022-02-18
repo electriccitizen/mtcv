@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+## drush upd
+##
+## Usage: fin upd <module>
+# Abort if anything fails
+set -e
+
+# Console colors
+red=`tput setaf 1`
+green=`tput setaf 2`
+green_bg=`tput setaf 1; tput setab 2`
+yellow=`tput setaf 3; tput setab 234`
+NC=`tput sgr0`
+echo -e 
+echo -e "${green_bg} composer update ${NC}${yellow} $1 module ${NC}"
+fin composer update drupal/"$1" --with-all-dependencies
+echo -e 
+echo -e "${green_bg} drush ${NC}${yellow} update database ${NC}"
+fin drush updb 
+echo -e 
+echo -e "${green_bg} drush ${NC}${yellow} cache rebuild ${NC}"
+fin drush cr
+echo -e 
+echo -e "${green_bg} drush ${NC}${yellow} config export ${NC}"
+fin drush cex
+echo -e 
+echo -e "${green_bg} git commit ${NC}${yellow} Updating $1 module ${NC}"
+git add .
+git commit -m "Updating $1 module";
+
+fin composer outdated drupal/*
