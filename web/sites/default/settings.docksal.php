@@ -30,3 +30,8 @@ $settings['skip_permissions_hardening'] = TRUE;
 
 $settings['file_private_path'] = 'sites/default/files/private';
 $settings["file_temp_path"] = '/tmp';
+
+# enables twig debugging per page load
+$settings['cache']['bins']['render'] = 'cache.backend.null';
+$settings['cache']['bins']['page'] = 'cache.backend.null';
+$settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
