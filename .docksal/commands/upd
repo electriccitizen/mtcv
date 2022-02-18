@@ -27,3 +27,5 @@ echo -e
 echo -e "${green_bg} git commit ${NC}${yellow} Updating $1 module ${NC}"
 git add .
 git commit -m "Updating $1 module";
+
+fin composer outdated drupal/*
