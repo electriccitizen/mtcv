@@ -1,13 +1,13 @@
 MT Local Development
 ====================
-Reviewed by Wilbur, 2022-01-19
+Reviewed by Wilbur, 2022-05-17
 
 # Project Details
 
 - **NAME:**  mtcv
 - **URL:** https://www.mtcrimevictimhelp.org/
 - **ADMIN URL:** http://dev-mtcv.pantheonsite.io/
-- **LOCAL URL:** http://mtcv.docksal
+- **LOCAL URL:** http://mtcv.docksal.site
 - **BRANCH:** main
 - **HOSTING:** [Pantheon Dashboard](https://dashboard.pantheon.io/sites/ad79477c-5d06-4234-b6b8-582ebeee0e5c)
 - **CIRCLE CI:** [Logs](https://app.circleci.com/pipelines/github/electriccitizen/mtcv)
