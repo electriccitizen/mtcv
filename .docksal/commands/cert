@@ -13,7 +13,7 @@ NC=`tput sgr0`
 
 ADDON_DIR=$HOME"/.docksal/addons/mkcert"
 
-if [ -d ${ADDON_DIR} ]; then 
+if [ ! -d ${ADDON_DIR} ]; then 
 	# Instal the mkcert globally
 	echo -e  "${green_bg} Adding mkcert addon! ${NC}${yellow} ${NC}"
 	fin addon install mkcert -g -y

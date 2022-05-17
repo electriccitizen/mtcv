@@ -10,7 +10,7 @@ $databases['default']['default'] = array (
 
 $settings['hash_salt'] = 'noodle doodle';
 
-$settings['base_url'] = 'http://mtcv.docksal/';
+$settings['base_url'] = 'http://mtcv.docksal.site';
 /**
  * Enable local development services.
  */
@@ -30,6 +30,13 @@ $settings['skip_permissions_hardening'] = TRUE;
 
 $settings['file_private_path'] = 'sites/default/files/private';
 $settings["file_temp_path"] = '/tmp';
+
+// Trusted Host Settings
+if (is_array($settings)) {
+  $settings['trusted_host_patterns'] = [
+    '^mtcv\.docksal\.site$',
+  ];
+}
 
 # enables twig debugging per page load
 $settings['cache']['bins']['render'] = 'cache.backend.null';
