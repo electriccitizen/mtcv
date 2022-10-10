@@ -45,6 +45,25 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 0
             additional: {  }
+          f7ea695b-6517-442e-a7b4-4d3f9339badd:
+            uuid: f7ea695b-6517-442e-a7b4-4d3f9339badd
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:user:user:user_picture'
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: content
+                  image_style: thumbnail
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
         third_party_settings: {  }
       -
         layout_id: tabs
@@ -113,6 +132,8 @@ content:
     settings:
       image_link: content
       image_style: thumbnail
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 0
     region: content
