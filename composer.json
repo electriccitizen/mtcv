@@ -44,7 +44,7 @@
     "drupal/views_bulk_operations": "^4.1",
     "drupal/views_infinite_scroll": "^2.0",
     "drush-ops/behat-drush-endpoint": "^9.3",
-    "drush/drush": "^10",
+    "drush/drush": "^11",
     "kint-php/kint": "^3.3",
     "pantheon-systems/drupal-integrations": "^9",
     "pantheon-systems/quicksilver-pushback": "^2.0",
