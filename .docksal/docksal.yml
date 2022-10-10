@@ -11,9 +11,9 @@ services:
     labels:
       - io.docksal.virtual-host=pma.${VIRTUAL_HOST}
   db:
-    image: docksal/mariadb:10.4
+    image: docksal/mariadb:10.6
   cli:
-    image: docksal/cli:php7.4
+    image: docksal/cli:php8.1
 #    # Uncomment to add support for xdebug - see http://docksal.readthedocs.io/en/master/tools/xdebug/.
     environment:
       - XDEBUG_ENABLED=0
