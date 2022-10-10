@@ -21,10 +21,6 @@ include __DIR__ . "/settings.pantheon.php";
 /**
  * Place the config directory outside of the Drupal root.
  */
-$config_directories = [
-  CONFIG_SYNC_DIRECTORY => dirname(DRUPAL_ROOT) . '/config/sync',
-];
-
 $settings['config_sync_directory'] = dirname(DRUPAL_ROOT) . '/config/sync';
 
 $config['file.settings']['make_unused_managed_files_temporary'] = TRUE;

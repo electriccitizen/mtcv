@@ -36,6 +36,8 @@ content:
     settings:
       image_link: ''
       image_style: node_preview
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 1
     region: content
