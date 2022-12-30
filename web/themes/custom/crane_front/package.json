@@ -22,7 +22,7 @@
     "gulp-sass-glob": "^1.0.8",
     "gulp-sourcemaps": "^2.4.0",
     "modularscale-sass": "^2.1.1",
-    "sass-loader": "^4.1.1",
+    "sass-loader": "^13.2.0",
     "susy": "^2.2.12"
   },
   "dependencies": {
