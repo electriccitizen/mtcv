@@ -57,7 +57,7 @@ if ! [ -z "$(git status --untracked-files=no --porcelain)" ]; then
     case "$choice" in 
       y|Y ) echo "yes";;
       n|N ) echo "Exiting"; exit;;
-      * ) echo "invalid";;
+      * ) echo "invalid"; exit;;
     esac
 fi
 
