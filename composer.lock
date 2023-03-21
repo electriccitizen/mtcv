@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5bf2716eeb7fd85cf2a3a8977160dd0e",
+    "content-hash": "406935403a53e53ccb1b4d90b0e05cae",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3779,26 +3779,26 @@
         },
         {
             "name": "drupal/taxonomy_import",
-            "version": "2.0.5",
+            "version": "2.0.11",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/taxonomy_import.git",
-                "reference": "2.0.5"
+                "reference": "2.0.11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/taxonomy_import-2.0.5.zip",
-                "reference": "2.0.5",
-                "shasum": "da575c84b1120512f86a1d3ed00da5a76fd11ffc"
+                "url": "https://ftp.drupal.org/files/projects/taxonomy_import-2.0.11.zip",
+                "reference": "2.0.11",
+                "shasum": "9bcb8bab871c117d84c925814afb3336ad9343c1"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^8 || ^9 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.5",
-                    "datestamp": "1634827639",
+                    "version": "2.0.11",
+                    "datestamp": "1665938897",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
