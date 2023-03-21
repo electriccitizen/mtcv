@@ -74,7 +74,7 @@ fin restart
 # Composer Install
 echo -e  "${green_bg} Composer Install ${NC}${yellow} to install latest updates from composer.json...${NC}"
 rm -rf vendor
-fin composer install 
+fin composer install --no-dev
 
 if [ "$1" == 'pull' ]; then
   start2=$SECONDS
