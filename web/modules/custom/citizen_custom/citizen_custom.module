@@ -355,3 +355,13 @@ function citizen_custom_toolbar_alter(&$items) {
   $items['build_hooks_deployments']['tray']['deployments']['#items']['build_hooks_preview']['#attributes']['class'] = 'deploy-preview';
 }
 
+/**
+ * Implements hook_page_attachments().
+ */
+function citizen_custom_page_attachments(array &$attachments) {
+  // Add custom admin theme files to admin pages.
+  if (\Drupal::service('router.admin_context')->isAdminRoute()) {
+    $attachments['#attached']['library'][] = 'citizen_custom/admin-global';
+  }
+}
+
