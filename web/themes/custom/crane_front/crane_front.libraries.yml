@@ -9,8 +9,8 @@ global:
     - core/drupal
     - core/drupalSettings
     - core/jquery
-    - core/jquery.once
-    - core/underscore
+    - core/once
+    - crane_front/debounce
 accordion:
   version: 1.0
   js:
@@ -24,6 +24,10 @@ dashboard:
   js:
     https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js: { type: external, minified: true, preprocess: false }
     js/dashboard.js: {}
+debounce:
+  version: 1.0
+  js:
+    js/debounce.js: {}
 forms:
   version: 1.0
   js:

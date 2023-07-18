@@ -1,10 +1,10 @@
-(function($, Drupal) {
+(function($, Drupal, once) {
 
 /* USER LOGIN PASSWORD SHOW
 ------------------------------------ */
 Drupal.behaviors.userLogin = {
 	attach: function (context, settings) {
-		$('#user-login-form', context).once('showPass').each(function(){
+		$(once('showPass', '#user-login-form', context)).each(function(){
       $('.show-password').click(function(e){
         e.preventDefault();
         if($(this).is('.show')){
@@ -19,4 +19,4 @@ Drupal.behaviors.userLogin = {
 	}
 };
 
-})(jQuery, Drupal);
+})(jQuery, Drupal, once);

@@ -1,5 +1,5 @@
 name: Citizen Custom
 type: module
 description: Custom glue module for Electric Citizen sites
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^8 || ^9 || ^10
 package: Custom

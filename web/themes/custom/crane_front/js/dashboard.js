@@ -1,9 +1,9 @@
-(function($, Drupal) {
+(function($, Drupal, once) {
 
 //highlight search results
 Drupal.behaviors.dashboard = {
 	attach: function (context, settings) {
-	 	$(".user-tour").once('tSearch').each(function(){  
+		$(once('userT', '.user-tour', context)).each(function(){
       $(function () {
         if (Cookies.get('userTour')) {
           $('.user-tour').remove();
@@ -67,7 +67,7 @@ Drupal.behaviors.dashboard = {
 
 
 
-})(jQuery, Drupal);
+})(jQuery, Drupal, once);
 
 
 

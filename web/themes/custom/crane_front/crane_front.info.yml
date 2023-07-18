@@ -2,13 +2,15 @@ name: Crane Front
 type: theme
 description: Drupal Front-End theme for Electric Citizen Gatsby sites.
 package: EC
-core_version_requirement: ^8.8 || ^9
+core_version_requirement: ^8.8 || ^9 || ^10
 base theme: stable
 libraries:
   - crane_front/global
   - crane_front/fonts
 ckeditor_stylesheets:
   - css/cke.css
+ckeditor5-stylesheets:
+  - css/cke5.css
 regions:
   header: Header
   content: Content

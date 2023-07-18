@@ -1,8 +1,8 @@
-(function($, Drupal) {
+(function($, Drupal, once) {
 
 Drupal.behaviors.accordion = {
     attach: function (context, settings) {
-      $(".accordion-item", context).once('accordion').each(function(){
+      $(once('accordion', '.accordion-item', context)).each(function(){
         //open and shut accordions on click
         $('.accordion-header a', this).click(function(e){
           e.preventDefault();
@@ -19,4 +19,4 @@ Drupal.behaviors.accordion = {
     }
 }
 
-})(jQuery, Drupal);
+})(jQuery, Drupal, once);

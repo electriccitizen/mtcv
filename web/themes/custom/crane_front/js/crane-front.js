@@ -1,10 +1,10 @@
-(function($, Drupal) {
+(function($, Drupal, once) {
 
 /* QUICKLINKS NAV
 ------------------------------------ */
 Drupal.behaviors.quickMenu = {
 	attach: function (context, settings) {
-		$("#block-quicklinks", context).once('quick-menu').each(function(){  		
+		$(once('quick-menu', '#block-quicklinks', context)).each(function(){		
 			$('#block-quicklinks .item-level-1 > a:not(.live)').attr('aria-expanded','false').siblings('ul').attr('aria-hidden', true);
 
 			var wwidth = $(window).outerWidth();
@@ -45,7 +45,7 @@ Drupal.behaviors.quickMenu = {
         }
 			});
 
-			$(window).on('resize',  _.debounce( mobileQuickNav, 10 )).trigger('resize');
+			$(window).on('resize', debounce( mobileQuickNav, 10 )).trigger('resize');
 
 		});
 	}
@@ -71,4 +71,4 @@ function mobileQuickNav() {
   }
 };
 
-})(jQuery, Drupal);
+})(jQuery, Drupal, once);

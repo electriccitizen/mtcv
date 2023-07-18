@@ -2,7 +2,7 @@ name: EC Preview
 description: EC Preview Overrides
 type: module
 package: Custom
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^8 || ^9 || ^10
 
 dependencies:
   - responsive_preview:responsive_preview
