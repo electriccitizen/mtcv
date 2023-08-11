@@ -1,4 +1,4 @@
-uuid: d4ab2a56-bb05-46eb-a94f-2baf0f5d7daa
+uuid: fd0f7be9-d6dc-454c-b74f-348f5d6162b1
 langcode: en
 status: true
 dependencies:
@@ -13,7 +13,7 @@ _core:
 id: crane_quicklinks
 theme: crane
 region: content
-weight: -5
+weight: -3
 provider: null
 plugin: 'system_menu_block:quicklinks'
 settings:

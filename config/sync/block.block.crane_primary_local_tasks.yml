@@ -1,4 +1,4 @@
-uuid: 7d038d0a-29c9-4bc8-b593-e2b5e452472e
+uuid: a56d5367-774d-4fde-8ed8-8c8b3a0b12d9
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: crane_primary_local_tasks
 theme: crane
 region: header
-weight: -1
+weight: 0
 provider: null
 plugin: local_tasks_block
 settings:

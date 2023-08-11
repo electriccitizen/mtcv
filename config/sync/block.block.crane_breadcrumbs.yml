@@ -1,4 +1,4 @@
-uuid: 120a9d28-e3d3-4f9a-8f5b-6b222292765b
+uuid: ca712383-b5af-4361-bc80-60e127f52a19
 langcode: en
 status: true
 dependencies:
@@ -11,8 +11,8 @@ _core:
   default_config_hash: 8yKVaIGXrfQlBHgtv16d1RBoL6vzWPag5NnbpSB7xR4
 id: crane_breadcrumbs
 theme: crane
-region: header
-weight: -4
+region: breadcrumb
+weight: 0
 provider: null
 plugin: system_breadcrumb_block
 settings:
@@ -23,8 +23,8 @@ settings:
 visibility:
   user_role:
     id: user_role
+    roles:
+      administrator: administrator
     negate: false
     context_mapping:
       user: '@user.current_user_context:current_user'
-    roles:
-      administrator: administrator
