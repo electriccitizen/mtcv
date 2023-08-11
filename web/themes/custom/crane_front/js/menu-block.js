@@ -1,7 +1,7 @@
-(function($, Drupal) {
+(function($, Drupal, once) {
 Drupal.behaviors.pageMenu = {
 	attach: function (context, settings) {
-		$("#block-page-menu", context).once('page-menu').each(function(){  
+		$(once('page-menu', '#block-page-menu', context)).each(function(){ 
 			//mobile toggle
 			$('.crane-menu-toggle').click(function(e){
 				e.preventDefault();
@@ -43,4 +43,4 @@ Drupal.behaviors.pageMenu = {
 	}
 }//end page menu function
 
-})(jQuery, Drupal);
+})(jQuery, Drupal, once);

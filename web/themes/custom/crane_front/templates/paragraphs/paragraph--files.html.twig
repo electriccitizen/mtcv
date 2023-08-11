@@ -42,8 +42,10 @@
 	{{ content.field_header }}
 	{%- if content.field_files.0 -%}
 		<div class="field files{% if content.field_files.3 %} multi-col{% endif %}">
-			{%- for key, file in content.field_files['#items'] if key|first != "#" -%}
-				<div class="file-item">{{ drupal_entity('media', file.entity.id, 'default') }}</div>
+			{%- for key, file in content.field_files['#items'] -%}
+				{% if key|first != "#" %}
+					<div class="file-item">{{ drupal_entity('media', file.entity.id, 'default') }}</div>
+				{% endif %}
 			{%- endfor -%}
 		</div>
 	{%- endif -%}

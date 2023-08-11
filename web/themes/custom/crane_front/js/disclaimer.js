@@ -1,10 +1,10 @@
-(function($, Drupal) {
+(function($, Drupal, once) {
 
 /* DISCLAIMER
 ------------------------------------ */
 Drupal.behaviors.disclaimer = {
 	attach: function (context, settings) {
-		$('.node-disclaimer', context).once('legalese').each(function(){
+		$(once('legalese', '.node-disclaimer', context)).each(function(){
       $(document).ready(function(){
         $('.node-disclaimer').delay(10000).fadeOut(500);
         $('.node-disclaimer a').click(function(e){
@@ -16,4 +16,4 @@ Drupal.behaviors.disclaimer = {
 	}
 };
 
-})(jQuery, Drupal);
+})(jQuery, Drupal, once);

@@ -42,6 +42,7 @@
     "drupal/taxonomy_import": "^2.0",
     "drupal/text_summary_options": "^2.0",
     "drupal/twig_tweak": "^3.0",
+    "drupal/upgrade_status": "^4.0",
     "drupal/views_bulk_operations": "^4.1",
     "drupal/views_infinite_scroll": "^2.0",
     "drush-ops/behat-drush-endpoint": "^9.3",

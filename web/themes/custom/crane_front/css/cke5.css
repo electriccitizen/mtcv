@@ -1,31 +1,30 @@
 /*WYSIWYG for editors*/
-html {
+.ck-editor__main {
   font-size: 16px;
   line-height: 24px;
   color: #1f2225;
 }
 
-a{
+.ck-content a{
   color: #1155cc;
 }
 
-h2{
+.ck-content h2{
   font-size: 29px;
 }
 
-h3{
+.ck-content h3{
   font-size: 23px;
 }
 
-h4{
+.ck-content h4{
   font-size: 21px;
 }
 
-h5{
+.ck-content h5{
   font-size: 18px;
 }
 
-h6{
+.ck-content h6{
   font-size: 17px;
 }
-

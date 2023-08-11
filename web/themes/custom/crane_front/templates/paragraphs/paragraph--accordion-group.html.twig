@@ -47,21 +47,23 @@
 
 	<div class="wrapper">
 		<div class="field field-accordion-item" aria-label="Accordion">
-			{%- for key, accordion in content.field_accordions if key|first != '#' -%}
-				{% set control = 'accordion-content-' ~ paragraph.id() ~ '-' ~ (key + 1) %}
-				{% set text = {
-					'#type': 'processed_text',
-					'#text': accordion['#paragraph'].field_text.0.value,
-					'#format': accordion['#paragraph'].field_text.0.format
-				 } %}
-				<div class="accordion-item" aria-label="Accordion">
-					<div class="accordion-header">
-		        <a href="#" role="button" aria-controls="{{ control }}" aria-expanded="false">{{ accordion['#paragraph'].field_accordion_header.value }}</a>
-				  </div>
-					<div class="field field-text" id="{{ controlcontrol }}" aria-hidden="true">
-						{{ text }}
+			{%- for key, accordion in content.field_accordions -%}
+				{% if key|first != '#' %}
+					{% set control = 'accordion-content-' ~ paragraph.id() ~ '-' ~ (key + 1) %}
+					{% set text = {
+						'#type': 'processed_text',
+						'#text': accordion['#paragraph'].field_text.0.value,
+						'#format': accordion['#paragraph'].field_text.0.format
+					 } %}
+					<div class="accordion-item" aria-label="Accordion">
+						<div class="accordion-header">
+			        <a href="#" role="button" aria-controls="{{ control }}" aria-expanded="false">{{ accordion['#paragraph'].field_accordion_header.value }}</a>
+					  </div>
+						<div class="field field-text" id="{{ controlcontrol }}" aria-hidden="true">
+							{{ text }}
+						</div>
 					</div>
-				</div>
+				{% endif %}
 			{%- endfor -%}
 		</div>
 	</div>

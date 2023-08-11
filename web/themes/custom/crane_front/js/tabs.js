@@ -1,10 +1,10 @@
-(function($, Drupal) {
+(function($, Drupal, once) {
 
 /* LAYOUT TABS
 ------------------------------------ */
 Drupal.behaviors.layoutTabs = {
 	attach: function (context, settings) {
-		$('.layout__region--tabs:not(.layout-builder__region)', context).once('isTabs').each(function(){
+		$(once('isTabs', '.layout__region--tabs:not(.layout-builder__region)', context)).each(function(){
       $('.tabs-instructions').remove();
       var tabItems = $(this).children();
       if(tabItems.length > 1){
@@ -33,4 +33,4 @@ Drupal.behaviors.layoutTabs = {
 	}
 };
 
-})(jQuery, Drupal);
+})(jQuery, Drupal, once);
