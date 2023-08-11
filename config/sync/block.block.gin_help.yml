@@ -1,15 +1,15 @@
-uuid: 0df19c91-d239-4ac6-961e-8ed8c7ffa317
+uuid: db647efe-71f1-42a8-a110-d64541861c02
 langcode: en
 status: true
 dependencies:
   module:
     - help
   theme:
-    - crane
+    - gin
 _core:
-  default_config_hash: gRgJH_27Jwdj6PXP2oI_fTHTGx5X34z3nGUyRtHoK2s
-id: crane_help
-theme: crane
+  default_config_hash: 8nOAry2oKqJOr0zbrlJ3sZHDFJLIO6j-0vT0K_TYca4
+id: gin_help
+theme: gin
 region: help
 weight: 0
 provider: null
