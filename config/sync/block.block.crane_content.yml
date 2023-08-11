@@ -1,4 +1,4 @@
-uuid: 032dff5a-e853-4737-a7bb-357dd05f7c88
+uuid: eb07fd61-2fac-4211-aa86-e8ec5b6e662f
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: crane_content
 theme: crane
 region: content
-weight: -4
+weight: 0
 provider: null
 plugin: system_main_block
 settings:

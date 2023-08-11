@@ -35,7 +35,7 @@ Reviewed by Wilbur, 2022-05-17
 
 ## Download and import the database
 
-`fin drush @mtcv.live sql-dump > database.sql`
+`fin drush @mtcv.dev sql-dump > database.sql`
 
 `fin db import database.sql`
 
@@ -59,7 +59,7 @@ nvm install 10
 nvm use 10
 npm install
 ```
-## Install Gatsby Globally 
+## Install Gatsby Globally
 if you do not have it already
 
 `npm install -g gatsby-cli`
@@ -67,11 +67,11 @@ if you do not have it already
 `npm i -g gatsby-cli`
 
 ## Point to Drupal Install
-Update gatsby-config.js to point to the local drupal install (mtcv.docksal). 
+Update gatsby-config.js to point to the local drupal install (mtcv.docksal).
 Comment out line 35, uncomment line 36
 ```
 //baseUrl: 'http://dev-mtcv.pantheonsite.io/',
-baseUrl: 'http://mtcv.docksal/',
+baseUrl: 'http://mtcv.docksal.site/',
 ```
 
 ## Start Gatsby Instance
@@ -111,7 +111,7 @@ Whenever you start a new task, you'll want to refresh your local environment to 
 `composer install`
 
 DB Pull - Optional
-`fin drush @mtcv.live sql-dump > database.sql`
+`fin drush @mtcv.dev sql-dump > database.sql`
 `fin db import database.sql`
 End DB Pull
 

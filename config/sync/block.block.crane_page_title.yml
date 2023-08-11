@@ -1,4 +1,4 @@
-uuid: 2f7be499-7dd5-4b6e-b376-945712d7020e
+uuid: 34f3b585-1928-4fc5-9b17-c0ddb3678728
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: crane_page_title
 theme: crane
 region: header
-weight: -3
+weight: -30
 provider: null
 plugin: page_title_block
 settings:
