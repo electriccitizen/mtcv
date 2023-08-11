@@ -1,15 +1,15 @@
-uuid: eb07fd61-2fac-4211-aa86-e8ec5b6e662f
+uuid: 553eb997-fb95-4e0b-a06e-7cfd386f490c
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - crane
+    - claro
 _core:
-  default_config_hash: csOlsazB2B7ht2OWm9LkdQFoaJ2FsGjcROowRBxwmEo
-id: crane_content
-theme: crane
+  default_config_hash: a0Yyx1GeyKarZ4T_yXQBR_ZFKnXiFLtxAb6gWLd8nr0
+id: claro_content
+theme: claro
 region: content
 weight: 0
 provider: null

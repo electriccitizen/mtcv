@@ -1,13 +1,13 @@
-uuid: 34f3b585-1928-4fc5-9b17-c0ddb3678728
+uuid: 6b193e2c-2bf4-4033-a001-3c3560fc5589
 langcode: en
 status: true
 dependencies:
   theme:
-    - crane
+    - claro
 _core:
-  default_config_hash: 876EIoomEo4ZQguDaWpLzx81Zkkq7QXFxOr5d7V-N30
-id: crane_page_title
-theme: crane
+  default_config_hash: fNwDdW063tk_ktzSWzZVeQS9wzvLooVO280BQ9WrsIs
+id: claro_page_title
+theme: claro
 region: header
 weight: -30
 provider: null

@@ -1,13 +1,13 @@
-uuid: a56d5367-774d-4fde-8ed8-8c8b3a0b12d9
+uuid: 6132485c-b737-4335-b32c-7fc9ace8fa84
 langcode: en
 status: true
 dependencies:
   theme:
-    - crane
+    - gin
 _core:
-  default_config_hash: lh5Hpu8skhSjpioFNwgrVdJ-bf-k1L_sFsuM35--2r8
-id: crane_primary_local_tasks
-theme: crane
+  default_config_hash: Hh01DLj9k7UnNdPpOQXHZHW7GHf2OPNDQyCJF7_R9ac
+id: gin_primary_local_tasks
+theme: gin
 region: header
 weight: 0
 provider: null

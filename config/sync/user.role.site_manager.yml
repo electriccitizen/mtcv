@@ -9,6 +9,7 @@ dependencies:
     - media.type.remote_video
     - node.type.page
     - node.type.resource
+    - node.type.support_book
     - taxonomy.vocabulary.audience_options
     - taxonomy.vocabulary.county
     - taxonomy.vocabulary.crime
@@ -62,6 +63,7 @@ permissions:
   - 'create page content'
   - 'create remote_video media'
   - 'create resource content'
+  - 'create support_book content'
   - 'create terms in audience_options'
   - 'create terms in county'
   - 'create terms in crime'
@@ -81,13 +83,16 @@ permissions:
   - 'delete any page content'
   - 'delete any remote_video media'
   - 'delete any resource content'
+  - 'delete any support_book content'
   - 'delete own file media'
   - 'delete own image media'
   - 'delete own page content'
   - 'delete own remote_video media'
   - 'delete own resource content'
+  - 'delete own support_book content'
   - 'delete page revisions'
   - 'delete resource revisions'
+  - 'delete support_book revisions'
   - 'delete terms in audience_options'
   - 'delete terms in county'
   - 'delete terms in crime'
@@ -105,11 +110,13 @@ permissions:
   - 'edit any page content'
   - 'edit any remote_video media'
   - 'edit any resource content'
+  - 'edit any support_book content'
   - 'edit own file media'
   - 'edit own image media'
   - 'edit own page content'
   - 'edit own remote_video media'
   - 'edit own resource content'
+  - 'edit own support_book content'
   - 'edit terms in audience_options'
   - 'edit terms in county'
   - 'edit terms in crime'
@@ -126,6 +133,7 @@ permissions:
   - 'revert all revisions'
   - 'revert page revisions'
   - 'revert resource revisions'
+  - 'revert support_book revisions'
   - 'switch shortcut sets'
   - 'trigger deployments'
   - 'use text format basic_html'
@@ -135,6 +143,7 @@ permissions:
   - 'view page revisions'
   - 'view resource revisions'
   - 'view status messages'
+  - 'view support_book revisions'
   - 'view the administration theme'
   - 'view unpublished paragraphs'
   - 'view warning messages'
