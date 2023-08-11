@@ -8,4 +8,4 @@ orientation: portrait
 dimensions:
   width: 320
   height: 500
-  dppx: !!float 1
+  dppx: 1.0

@@ -23,8 +23,9 @@
     "drupal/color_field": "^3.0",
     "drupal/config_filter": "^2.0",
     "drupal/config_ignore": "^2.1",
-    "drupal/core-composer-scaffold": "^9.5.0",
-    "drupal/core-recommended": "^9.5.0",
+    "drupal/core-composer-scaffold": "^10.1",
+    "drupal/core-project-message": "^10.1",
+    "drupal/core-recommended": "^10.1",
     "drupal/devel": "^5.0",
     "drupal/disable_messages": "^2.0",
     "drupal/entity_redirect": "^2.0",
@@ -125,8 +126,7 @@
       },
     "patches": {
       "drupal/core":{
-        "Media Library error when trying to Insert Selected from the the media library view.": "https://www.drupal.org/files/issues/2020-01-31/media-library-insert-selected-3081319-6.patch",
-        "Duplicated summary item when linking to content with the MediaThumbnailFormatter": "https://www.drupal.org/files/issues/2019-08-29/core-elminate_duplicated_summary-3078030-2-D8.patch"
+        "Media Library error when trying to Insert Selected from the the media library view.": "https://www.drupal.org/files/issues/2020-01-31/media-library-insert-selected-3081319-6.patch"
       }
     },
     "enable-patching": true
@@ -140,13 +140,12 @@
       "composer/installers": true,
       "dealerdirect/phpcodesniffer-composer-installer": true,
       "cweagans/composer-patches": true,
-      "drupal/core-composer-scaffold": true
+      "drupal/core-composer-scaffold": true,
+      "drupal/core-project-message": true
     }
   },
   "require-dev": {
     "drupal/coder": "^8.3",
-    "drupal/drupal-extension": "^4.1",
-    "jcalderonzumba/mink-phantomjs-driver": "^0.3.3",
     "mikey179/vfsstream": "^1.6",
     "phpunit/phpunit": "^9.5",
     "squizlabs/php_codesniffer": "^3.6"

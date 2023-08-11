@@ -24,8 +24,10 @@ dependencies:
     - taxonomy.vocabulary.triage_questions
   module:
     - block
+    - block_content
     - build_hooks
     - disable_messages
+    - file
     - filter
     - media
     - node
@@ -42,6 +44,7 @@ weight: 4
 is_admin: null
 permissions:
   - 'access administration pages'
+  - 'access block library'
   - 'access content overview'
   - 'access media overview'
   - 'access responsive preview'
@@ -49,6 +52,8 @@ permissions:
   - 'access taxonomy overview'
   - 'access toolbar'
   - 'access user profiles'
+  - 'administer block content'
+  - 'administer block types'
   - 'administer blocks'
   - 'administer nodes'
   - 'administer permissions'
@@ -82,6 +87,7 @@ permissions:
   - 'delete any remote_video media'
   - 'delete any resource content'
   - 'delete own file media'
+  - 'delete own files'
   - 'delete own image media'
   - 'delete own page content'
   - 'delete own remote_video media'

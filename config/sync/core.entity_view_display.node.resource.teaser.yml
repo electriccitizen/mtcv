@@ -7,11 +7,13 @@ dependencies:
     - field.field.node.resource.field_county
     - field.field.node.resource.field_crime
     - field.field.node.resource.field_description
+    - field.field.node.resource.field_internal_resource
     - field.field.node.resource.field_metatags
     - field.field.node.resource.field_organization
     - field.field.node.resource.field_related_category
     - field.field.node.resource.field_related_issue
     - field.field.node.resource.field_resource_type
+    - field.field.node.resource.field_resource_url
     - node.type.resource
   module:
     - user

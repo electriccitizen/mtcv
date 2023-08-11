@@ -25,6 +25,7 @@ dependencies:
   module:
     - build_hooks
     - disable_messages
+    - file
     - filter
     - media
     - node
@@ -73,6 +74,7 @@ permissions:
   - 'delete any remote_video media'
   - 'delete any resource content'
   - 'delete own file media'
+  - 'delete own files'
   - 'delete own image media'
   - 'delete own page content'
   - 'delete own remote_video media'
