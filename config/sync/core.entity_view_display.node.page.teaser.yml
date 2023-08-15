@@ -4,6 +4,11 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.page.field_content
+    - field.field.node.page.field_header
+    - field.field.node.page.field_metatags
+    - field.field.node.page.field_prefooter_image
+    - field.field.node.page.field_restricted
     - node.type.page
   module:
     - user
@@ -18,5 +23,9 @@ content:
     weight: 101
     region: content
 hidden:
+  field_content: true
   field_header: true
+  field_metatags: true
+  field_prefooter_image: true
+  field_restricted: true
   field_section: true

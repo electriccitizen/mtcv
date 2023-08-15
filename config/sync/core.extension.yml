@@ -60,6 +60,7 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  phpass: 0
   prlp: 0
   redirect: 0
   responsive_preview: 0
@@ -75,7 +76,6 @@ module:
   toolbar: 0
   twig_tweak: 0
   update: 0
-  upgrade_status: 0
   user: 0
   views_bulk_operations: 0
   views_infinite_scroll: 0
