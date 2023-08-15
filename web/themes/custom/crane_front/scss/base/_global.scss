@@ -4,8 +4,10 @@
 body{
 	background: $siteBack;
 	width: 100%;
+	box-sizing: border-box;
 	& > .overflow-guard{
 		overflow-x: hidden;
+		width: 100%;
 	}
 	div{
 		box-sizing: border-box;
@@ -32,14 +34,6 @@ body{
 			}
 		}
 	}
-	&.logged-in:not(.responsive-preview-frame):not(.path-user){
-		.dialog-off-canvas-main-canvas{
-			padding-top: 100px;
-			@include tab{
-				padding-top: 60px;
-			}
-		}
-	}
 	&:not(.role-administrator){
 		#toolbar-administration{
 			display: none !important;
@@ -61,6 +55,7 @@ body{
 
 #block-crane-front-content{
 	padding: $elementSpace $siteMarginMobile;
+	width: 100%;
 	@include desk{
 		padding: $elementSpace $siteMarginDesk;
 	}
@@ -126,3 +121,53 @@ body{
 .messages__item {
 	list-style-image: none;
 }
+
+/* GIN TOOLBAR
+----------------- */
+//fix rem usage of flyout menu sub items from Gin toolbar
+#gin-toolbar-bar{
+	body.gin--vertical-toolbar &{
+		.toolbar-menu-administration{
+			& > .toolbar-menu{
+				& > .menu-item{
+					&.menu-item--active-trail > .toolbar-icon::after,&:hover > .toolbar-icon::after{
+						left: calc(50% - 26px);
+					}
+					.toolbar-menu{
+						.menu-item{
+							.toolbar-icon{
+								font-size: 16px;
+							}
+							&.menu-item--expanded{
+								&:before{
+									top: .75rem;
+								}
+							}
+						}
+					}
+				}//end menu item
+			}//end top level toolbar menu (icons)
+		}//end toolbar administration
+		//
+	}//end gin vertical toolbar
+
+}//end gin toolbar
+//fix responsive preview in gin secondary
+.gin-secondary-toolbar{
+	#responsive-preview-toolbar-tab{
+		button{
+			margin-bottom: 0;
+			&.responsive-preview-icon{
+				font-size: 14px;
+			}
+		}
+		ul.responsive-preview-options{
+			button.responsive-preview-device{
+				font-size: 12px;
+			}
+		}
+		a.responsive-preview-configure{
+			font-size: 10px;
+		}
+	}//end responsive preview toolbar tab
+}//end gin secondary toolbar

@@ -620,17 +620,7 @@ display:
           plugin_id: standard
           required: true
       show_admin_links: false
-      footer:
-        result:
-          id: result
-          table: views
-          field: result
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: result
-          empty: false
-          content: '<span class="count-shim">@page_count</span>'
+      footer: {  }
       display_extenders: {  }
     cache_metadata:
       max-age: 0

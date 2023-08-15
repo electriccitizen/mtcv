@@ -87,7 +87,7 @@ module:
   standard: 1000
 theme:
   crane_front: 0
-  stable9: 0
   claro: 0
+  stable9: 0
   gin: 0
 profile: standard

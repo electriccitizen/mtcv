@@ -1,3 +1,18 @@
-.node-form .layout-region-node-footer #edit-actions #edit-preview {
-  display: none !important;
+#edit-gin-actions input[data-drupal-selector="edit-preview"]{
+	display: none;
+}
+
+/* hide additional buttons added by infinite scroll in media library 
+----------------------------------------- */
+.media-library-widget-modal .ui-dialog-buttonset.form-actions button.media-library-select.ui-widget:not(:first-child){
+	display: none !important;
+}
+[data-drupal-views-infinite-scroll-pager="automatic"] { 
+	bottom: 0; 
+}
+
+/* FIX CKE WRAPPING IN PARAGRAPH SUBFORMS
+-------------------------------*/
+.form-textarea-wrapper .ck.ck-toolbar.ck-toolbar_grouping > .ck-toolbar__items{
+	flex-wrap: wrap;
 }
