@@ -200,20 +200,6 @@ function citizen_custom_local_tasks_alter(&$local_tasks) {
 }
 
 /**
- * Implements hook_local_actions_alter().
- */
-function citizen_custom_menu_local_actions_alter(&$local_actions) {
-  $local_actions['node.add_page']['title'] = '+ Add Content';
-  $local_actions['block_content_add_action']['title'] = '+ Add Custom Block';
-  $local_actions['media.add']['title'] = '+ Add Media';
-  $local_actions['media_library.add']['title'] = '+ Add Media';
-  $local_actions['redirect.add']['title'] = '+ Add Redirect';
-  $local_actions['shortcut.link_add']['title'] = '+ Add Shortcut';
-  $local_actions['entity.taxonomy_term.add_form']['title'] = '+ Add Term';
-  $local_actions['user_admin_create']['title'] = '+ Add User';
-}
-
-/**
  * Implements hook_form_alter().
  */
 function citizen_custom_form_alter(&$form, FormStateInterface $form_state) {
@@ -221,31 +207,6 @@ function citizen_custom_form_alter(&$form, FormStateInterface $form_state) {
   $user = \Drupal::currentUser();
   $userRole = $user->getRoles();
 
-  //clean up menu link form for non-admins
-  if($formId == 'menu-link-content-menu-link-content-form'){
-    $parentMenu = substr($form['menu_parent']['#default_value'], 0, -1);
-    $humanParent = ucwords(str_replace('_',' ',$parentMenu));
-    $form['title']['#prefix'] = '<div class="form-item-prefix">Go back to the <a href="/admin/structure/menu/manage/'.$parentMenu.'/">'.$humanParent.' menu</a>.</div>';
-    if((in_array('editor', $userRole)) || (in_array('site_manager', $userRole))){
-      unset($form['description'],$form['weight'],$form['expanded'],$form['link']['widget'][0]['options']);
-    }
-  } //End menu content link form alter
-
-  //alter taxononmy term forms
-  if($formId == 'taxonomy-overview-terms'){
-    $form['#prefix'] = '<div class="vocab-nav">Add, edit, delete, or rearrange the terms in this vocabulary—or return to the <a href="/admin/structure/taxonomy">vocabularies list</a>.</div><br>';
-  }
-
-  //alter taxononmy term forms
-  if(isset($form['vid']['#value'])){
-    $vocab = $form['vid']['#value'];
-    $human = ucwords(str_replace('_',' ',$vocab));
-    if(isset($form['tid']['#value'])){
-      $form['name']['#prefix'] = '<div class="form-item-prefix">Edit this <span>'.$human.'</span> term or return to the <a href="/admin/structure/taxonomy/manage/'.$vocab.'/overview">terms list</a>.</div>';
-    }else{
-      $form['name']['#prefix'] = '<div class="form-item-prefix">Add a new <span>'.$human.'</span> term or return to the <a href="/admin/structure/taxonomy/manage/'.$vocab.'/overview">terms list</a>.</div>';
-    }
-  }
 
   //move restricted field to footer and allow only admin access
   if(isset($form['field_restricted'])){
@@ -343,16 +304,6 @@ function citizen_custom_node_access(NodeInterface $node, $op, AccountInterface $
   }
   // No opinion.
   return AccessResult::neutral();
-}
-
-/**
- * Implements hook_toolbar_alter().
- */
-function citizen_custom_toolbar_alter(&$items) {
-  // Not that great, but it works:
-  // add markers to the deployments items so we can switch them to quicklinks
-  $items['build_hooks_deployments']['tray']['deployments']['#items']['build_hooks_live']['#attributes']['class'] = 'deploy-live';
-  $items['build_hooks_deployments']['tray']['deployments']['#items']['build_hooks_preview']['#attributes']['class'] = 'deploy-preview';
 }
 
 /**

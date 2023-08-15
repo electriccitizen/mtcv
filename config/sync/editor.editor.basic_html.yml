@@ -1,59 +1,74 @@
-uuid: 3f9a4ff9-63d6-4c27-a48b-786fd6ea8dde
+uuid: 1e2ac243-b7f6-4e65-a2eb-7c5e2b015223
 langcode: en
 status: true
 dependencies:
   config:
     - filter.format.basic_html
   module:
-    - ckeditor
-_core:
-  default_config_hash: AqlPmO16LvJI4D0Ih6u4GFQIzqr5OnLgAUSjcUGWk2g
+    - ckeditor5
 format: basic_html
-editor: ckeditor
+editor: ckeditor5
 settings:
   toolbar:
-    rows:
-      -
-        -
-          name: Formatting
-          items:
-            - Bold
-            - Italic
-        -
-          name: Alignment
-          items:
-            - JustifyLeft
-            - JustifyCenter
-            - JustifyRight
-        -
-          name: Linking
-          items:
-            - DrupalLink
-            - DrupalUnlink
-        -
-          name: Lists
-          items:
-            - BulletedList
-            - NumberedList
-            - Indent
-            - Outdent
-        -
-          name: 'Block Formatting'
-          items:
-            - Format
-        -
-          name: Tools
-          items:
-            - Source
-            - Cut
-            - Copy
-            - Paste
-            - PasteText
-            - PasteFromWord
-            - RemoveFormat
-            - Maximize
+    items:
+      - bold
+      - italic
+      - '|'
+      - alignment
+      - '|'
+      - link
+      - '|'
+      - bulletedList
+      - numberedList
+      - indent
+      - outdent
+      - '|'
+      - heading
+      - '|'
+      - sourceEditing
+      - removeFormat
   plugins:
-    drupallink:
+    ckeditor5_alignment:
+      enabled_alignments:
+        - center
+        - left
+        - right
+    ckeditor5_heading:
+      enabled_headings:
+        - heading2
+        - heading3
+        - heading4
+        - heading5
+        - heading6
+    ckeditor5_list:
+      reversed: false
+      startIndex: false
+    ckeditor5_sourceEditing:
+      allowed_tags:
+        - '<cite>'
+        - '<dl>'
+        - '<dt>'
+        - '<dd>'
+        - '<figcaption>'
+        - '<picture>'
+        - '<small>'
+        - '<blockquote cite>'
+        - '<span class>'
+        - '<img srcset typeof src alt height width data-entity-type data-entity-uuid data-entity-substitution data-align data-caption>'
+        - '<source srcset media type>'
+        - '<div id data-* class>'
+        - '<iframe src title frameborder aria-describedby tabindex allowtransparency width height class>'
+        - '<drupal-entity data-*>'
+        - '<article data-* class>'
+        - '<a hreflang target id title>'
+        - '<ul type>'
+        - '<ol type>'
+        - '<h2 id>'
+        - '<h3 id>'
+        - '<h4 id>'
+        - '<h5 id>'
+        - '<h6 id>'
+    linkit_extension:
       linkit_enabled: true
       linkit_profile: wysiwyg
 image_upload:
