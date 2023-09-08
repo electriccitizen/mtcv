@@ -1,11 +1,12 @@
 uuid: b4312b87-9dbc-4237-8f18-4eae55f63571
 langcode: en
 status: 1
+dependencies: {  }
 id: preview
-label: preview
-weight: 0
-orientation: portrait
+label: Laptop
+weight: -10
+orientation: landscape
 dimensions:
-  width: 320
-  height: 500
+  width: 1200
+  height: 744
   dppx: 1.0

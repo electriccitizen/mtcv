@@ -47,7 +47,6 @@
 {% extends 'page.html.twig' %}
 
 {% block pageMeta %}
-  {{ attach_library('crane_front/disclaimer') }}
 	{{ parent() }}
   <div class="revisions-actions">
   	<div class="action-wrapper">
@@ -56,12 +55,6 @@
   		<a class="button danger-robinson" href="/node/{{ node }}/revisions/{{ currentId.vid.0.value }}/delete">Delete Revision</a>
   	</div>
 	</div>
-  <div class="node-disclaimer">
-    <a href="#"><span class="visually-hidden">Close disclaimer</span></a>
-    <h2>Node Revisions:</h2>
-    <p>This revision is a rough visual mockup of a previous content state and does not accurately reflect how the content will look on the site.</p>
-    <p>Links and some on-page actions may not be functional on revisions.</p>
-  </div>
 {% endblock %}
 
 {% block pageContent %}

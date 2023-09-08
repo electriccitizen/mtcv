@@ -1,0 +1,12 @@
+uuid: 5065b386-fe42-4ccb-8965-f16c0ee9e3b4
+langcode: en
+status: 1
+dependencies: {  }
+id: galaxy_s9
+label: Galaxy
+weight: -8
+orientation: portrait
+dimensions:
+  width: 1440
+  height: 2960
+  dppx: 4.0

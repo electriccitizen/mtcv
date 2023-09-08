@@ -16,35 +16,6 @@ body{
 			box-sizing: inherit;
 		}
 	}
-	.dialog-off-canvas-main-canvas{
-		& > .layout-container{
-			padding-top: 0;
-		}
-	}
-	&.logged-in:not(.responsive-preview-frame){
-		.dialog-off-canvas-main-canvas{
-			@include tab{
-				padding-top: 0;
-			}
-		}
-		&.role-administrator{
-			.dialog-off-canvas-main-canvas{
-				padding-top: 0;
-				padding-left: 0;
-			}
-		}
-	}
-	&:not(.role-administrator){
-		#toolbar-administration{
-			display: none !important;
-		}
-		&.toolbar-tray-open.toolbar-vertical{
-			padding-top: 0 !important;
-			&.toolbar-fixed{
-				margin-left: 0;
-			}
-		}
-	}
 }//end body
 
 #block-crane-front-help{
@@ -155,19 +126,12 @@ body{
 //fix responsive preview in gin secondary
 .gin-secondary-toolbar{
 	#responsive-preview-toolbar-tab{
-		button{
-			margin-bottom: 0;
-			&.responsive-preview-icon{
-				font-size: 14px;
-			}
-		}
-		ul.responsive-preview-options{
-			button.responsive-preview-device{
-				font-size: 12px;
-			}
-		}
-		a.responsive-preview-configure{
-			font-size: 10px;
-		}
+		display: none;
 	}//end responsive preview toolbar tab
+	// disallow clicking on deployments config link for non-admins
+	body:not(.role-administrator) &{
+		#toolbar-item-build-hooks-deployments{
+			pointer-events: none;
+		}
+	}
 }//end gin secondary toolbar

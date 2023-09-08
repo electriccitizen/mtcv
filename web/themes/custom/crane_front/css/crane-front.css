@@ -44,20 +44,6 @@ body {
     box-sizing: border-box; }
     body div * {
       box-sizing: inherit; }
-  body .dialog-off-canvas-main-canvas > .layout-container {
-    padding-top: 0; }
-  @media (min-width: 760px) {
-    body.logged-in:not(.responsive-preview-frame) .dialog-off-canvas-main-canvas {
-      padding-top: 0; } }
-  body.logged-in:not(.responsive-preview-frame).role-administrator .dialog-off-canvas-main-canvas {
-    padding-top: 0;
-    padding-left: 0; }
-  body:not(.role-administrator) #toolbar-administration {
-    display: none !important; }
-  body:not(.role-administrator).toolbar-tray-open.toolbar-vertical {
-    padding-top: 0 !important; }
-    body:not(.role-administrator).toolbar-tray-open.toolbar-vertical.toolbar-fixed {
-      margin-left: 0; }
 
 #block-crane-front-help {
   padding: 3rem 0;
@@ -137,16 +123,11 @@ body.gin--vertical-toolbar #gin-toolbar-bar .toolbar-menu-administration > .tool
 body.gin--vertical-toolbar #gin-toolbar-bar .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu .menu-item.menu-item--expanded:before {
   top: .75rem; }
 
-.gin-secondary-toolbar #responsive-preview-toolbar-tab button {
-  margin-bottom: 0; }
-  .gin-secondary-toolbar #responsive-preview-toolbar-tab button.responsive-preview-icon {
-    font-size: 14px; }
+.gin-secondary-toolbar #responsive-preview-toolbar-tab {
+  display: none; }
 
-.gin-secondary-toolbar #responsive-preview-toolbar-tab ul.responsive-preview-options button.responsive-preview-device {
-  font-size: 12px; }
-
-.gin-secondary-toolbar #responsive-preview-toolbar-tab a.responsive-preview-configure {
-  font-size: 10px; }
+body:not(.role-administrator) .gin-secondary-toolbar #toolbar-item-build-hooks-deployments {
+  pointer-events: none; }
 
 /* ===============
    Section Layouts
@@ -907,22 +888,8 @@ header > div {
   background: #1f2225;
   color: #ffffff;
   padding: 18px 0 13px; }
-  .role-administrator header > div {
-    display: none; }
   .logged-in header > div {
-    position: fixed;
-    width: 100%;
-    z-index: 496; }
-    @media (min-width: 760px) {
-      .logged-in header > div {
-        z-index: 599; } }
-  .logged-in.path-user header > div, .logged-in.node-type-support-book header > div {
-    top: 50px; }
-    @media (min-width: 760px) {
-      .logged-in.path-user header > div, .logged-in.node-type-support-book header > div {
-        top: 0; } }
-  .logged-in:not(.path-user):not(.node-type-support-book) header > div {
-    top: 0; }
+    display: none; }
 
 /* HEADER BLOCKS
 ----------------- */
@@ -1800,7 +1767,7 @@ body.logged-in.responsive-preview-frame .layout-container #block-quicklinks, bod
   right: 20px;
   z-index: 999;
   overflow: hidden;
-  width: 300px;
+  width: 300px !important;
   background: #eeeeee;
   border: 2px solid #fcd105;
   border-right-width: 3px;

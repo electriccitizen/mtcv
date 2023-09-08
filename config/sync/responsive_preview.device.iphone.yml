@@ -1,0 +1,12 @@
+uuid: 36062fb6-c6e3-4e7c-a24e-7cfb9e1d3451
+langcode: en
+status: 1
+dependencies: {  }
+id: iphone
+label: iPhone
+weight: -7
+orientation: portrait
+dimensions:
+  width: 1242
+  height: 2688
+  dppx: 3.0

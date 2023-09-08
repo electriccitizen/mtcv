@@ -1,9 +1,0 @@
-preview:
-  version: 1.0
-  css:
-    theme:
-      css/ec_preview.css: {}
-  js:
-    js/ec_preview.js: {}
-  dependencies:
-    - core/jquery

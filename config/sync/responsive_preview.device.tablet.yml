@@ -1,0 +1,12 @@
+uuid: 20ef492b-5a47-4e5b-a7f4-84312eaba9e4
+langcode: en
+status: 1
+dependencies: {  }
+id: tablet
+label: Tablet
+weight: -9
+orientation: landscape
+dimensions:
+  width: 2388
+  height: 1668
+  dppx: 2.0

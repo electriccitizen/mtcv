@@ -1,5 +1,12 @@
+
+/* hide the default drupal preview */
 #edit-gin-actions input[data-drupal-selector="edit-preview"]{
 	display: none;
+}
+
+/* disallow clicking on deployments config link for non-admins */
+body:not(.role-administrator) #toolbar-item-build-hooks-deployments{
+	pointer-events: none;
 }
 
 /* hide additional buttons added by infinite scroll in media library 

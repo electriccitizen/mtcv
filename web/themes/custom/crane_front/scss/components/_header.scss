@@ -6,25 +6,8 @@ header{
 		background: $black;
 		color: $white;
 		padding: 18px 0 13px;
-		.role-administrator &{
-			display: none;
-		}
 		.logged-in &{
-			position: fixed;
-			width: 100%;
-			z-index: 496;
-			@include tab{
-				z-index: 599;
-			}
-		}
-		.logged-in.path-user &,.logged-in.node-type-support-book &{
-			top: 50px;
-			@include tab{
-				top: 0;
-			}
-		}
-		.logged-in:not(.path-user):not(.node-type-support-book) &{
-			top: 0;
+			display: none;
 		}
 	}
 }
