@@ -3,6 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - block_content.type.basic
+    - block_content.type.escape
+    - block_content.type.homepage_featured_content
+    - block_content.type.homepage_intro
+    - block_content.type.homepage_resources
+    - block_content.type.logo_grid
+    - block_content.type.social_media_links
+    - block_content.type.translated_block
     - filter.format.basic_html
     - media.type.file
     - media.type.image
@@ -54,8 +62,6 @@ permissions:
   - 'access taxonomy overview'
   - 'access toolbar'
   - 'access user profiles'
-  - 'administer block content'
-  - 'administer block types'
   - 'administer blocks'
   - 'administer nodes'
   - 'administer redirect settings'
@@ -65,11 +71,14 @@ permissions:
   - 'assign site_manager role'
   - 'cancel account'
   - 'change own username'
+  - 'create basic block content'
   - 'create file media'
   - 'create image media'
+  - 'create logo_grid block content'
   - 'create page content'
   - 'create remote_video media'
   - 'create resource content'
+  - 'create social_media_links block content'
   - 'create support_book content'
   - 'create terms in audience_options'
   - 'create terms in county'
@@ -85,11 +94,17 @@ permissions:
   - 'create terms in translation_languages'
   - 'customize shortcut links'
   - 'delete all revisions'
+  - 'delete any basic block content'
+  - 'delete any basic block content revisions'
   - 'delete any file media'
   - 'delete any image media'
+  - 'delete any logo_grid block content'
+  - 'delete any logo_grid block content revisions'
   - 'delete any page content'
   - 'delete any remote_video media'
   - 'delete any resource content'
+  - 'delete any social_media_links block content'
+  - 'delete any social_media_links block content revisions'
   - 'delete any support_book content'
   - 'delete own file media'
   - 'delete own files'
@@ -113,12 +128,20 @@ permissions:
   - 'delete terms in resource_category'
   - 'delete terms in resource_types'
   - 'delete terms in translation_languages'
+  - 'edit any basic block content'
+  - 'edit any escape block content'
   - 'edit any file media'
+  - 'edit any homepage_featured_content block content'
+  - 'edit any homepage_intro block content'
+  - 'edit any homepage_resources block content'
   - 'edit any image media'
+  - 'edit any logo_grid block content'
   - 'edit any page content'
   - 'edit any remote_video media'
   - 'edit any resource content'
+  - 'edit any social_media_links block content'
   - 'edit any support_book content'
+  - 'edit any translated_block block content'
   - 'edit own file media'
   - 'edit own image media'
   - 'edit own page content'
@@ -139,6 +162,14 @@ permissions:
   - 'edit terms in translation_languages'
   - 'edit terms in triage_questions'
   - 'revert all revisions'
+  - 'revert any basic block content revisions'
+  - 'revert any escape block content revisions'
+  - 'revert any homepage_featured_content block content revisions'
+  - 'revert any homepage_intro block content revisions'
+  - 'revert any homepage_resources block content revisions'
+  - 'revert any logo_grid block content revisions'
+  - 'revert any social_media_links block content revisions'
+  - 'revert any translated_block block content revisions'
   - 'revert page revisions'
   - 'revert resource revisions'
   - 'revert support_book revisions'
@@ -146,6 +177,14 @@ permissions:
   - 'trigger deployments'
   - 'use text format basic_html'
   - 'view all revisions'
+  - 'view any basic block content history'
+  - 'view any escape block content history'
+  - 'view any homepage_featured_content block content history'
+  - 'view any homepage_intro block content history'
+  - 'view any homepage_resources block content history'
+  - 'view any logo_grid block content history'
+  - 'view any social_media_links block content history'
+  - 'view any translated_block block content history'
   - 'view error messages'
   - 'view own unpublished content'
   - 'view page revisions'
