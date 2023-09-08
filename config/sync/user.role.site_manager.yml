@@ -35,6 +35,7 @@ dependencies:
     - paragraphs
     - redirect
     - responsive_preview
+    - role_delegation
     - shortcut
     - system
     - taxonomy
@@ -57,10 +58,11 @@ permissions:
   - 'administer block types'
   - 'administer blocks'
   - 'administer nodes'
-  - 'administer permissions'
   - 'administer redirect settings'
   - 'administer redirects'
   - 'administer users'
+  - 'assign editor role'
+  - 'assign site_manager role'
   - 'cancel account'
   - 'change own username'
   - 'create file media'

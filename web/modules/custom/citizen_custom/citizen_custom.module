@@ -254,12 +254,6 @@ function citizen_custom_form_alter(&$form, FormStateInterface $form_state) {
       }
   }
 
-  //alter user form to prevent site managers from making themselves admins
-  if(($formId == 'user-form') || ($formId == 'user-register-form')){
-    if(!in_array('administrator', $userRole)){
-      unset($form['account']['roles']['#options']['administrator']);
-    }
-  }
   if($formId == 'deployment-form'){
     if ($form['display']['#markup']) {
       unset($form['display']['#markup']);

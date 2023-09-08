@@ -12,7 +12,7 @@ field_name: field_resource_url
 entity_type: node
 bundle: resource
 label: 'Resource URL'
-description: ''
+description: 'If you are linking to an internal Page node for this resource, be very careful that you are linking to the page instead of an existing resource node (both will be available).'
 required: true
 translatable: false
 default_value: {  }

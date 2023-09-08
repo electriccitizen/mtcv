@@ -65,6 +65,7 @@ module:
   prlp: 0
   redirect: 0
   responsive_preview: 0
+  role_delegation: 0
   serialization: 0
   shortcut: 0
   structure_sync: 0
