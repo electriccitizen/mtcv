@@ -15,7 +15,6 @@
     "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
     "drupal/auto_entitylabel": "^3.0",
     "drupal/build_hooks": "^3.0",
-    "drupal/ckeditor": "^1.0",
     "drupal/color": "^1.0",
     "drupal/color_field": "^3.0",
     "drupal/config_filter": "^2.0",
