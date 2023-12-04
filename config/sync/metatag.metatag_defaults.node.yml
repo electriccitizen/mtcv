@@ -9,7 +9,6 @@ label: Content
 tags:
   shortlink: 'http://mtcrimevictimhelp.org/[node:url:unaliased:relative]'
   title: '[node:title] | [site:name]'
-  content_language: en
   canonical_url: 'http://mtcrimevictimhelp.org/[node:url:relative]'
   description: '[node:field_header:entity:field_summary]'
   geo_region: US-MT
@@ -23,7 +22,6 @@ tags:
   og_locale: en_US
   og_site_name: 'Montana Crime Victim Help'
   twitter_cards_image: '[node:field_prefooter_image:entity:field_single_image:entity:field_media_image:entity:url]'
-  twitter_cards_page_url: 'http://mtcrimevictimhelp.org/[node:url:relative]'
   twitter_cards_description: '[node:field_header:entity:field_summary]'
   twitter_cards_image_alt: '[node:field_prefooter_image:entity:field_single_image:entity:field_media_image:entity:alt]'
   twitter_cards_type: summary

@@ -13,7 +13,6 @@ module:
   build_hooks: 0
   build_hooks_netlify: 0
   citizen_custom: 0
-  ckeditor: 0
   ckeditor5: 0
   color: 0
   color_field: 0
@@ -45,6 +44,7 @@ module:
   layout_discovery: 0
   link: 0
   link_attributes: 0
+  link_attributes_menu_link_content: 0
   linkit: 0
   masquerade: 0
   media: 0
