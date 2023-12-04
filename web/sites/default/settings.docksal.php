@@ -6,6 +6,9 @@ $databases['default']['default'] = array (
   'password' => 'user',
   'host' => 'db',
   'driver' => 'mysql',
+  'init_commands' => [
+    'isolation_level' => 'SET SESSION tx_isolation=\'READ-COMMITTED\'',
+  ],
 );
 
 $settings['hash_salt'] = 'noodle doodle';
