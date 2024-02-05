@@ -11,6 +11,30 @@ name: 'Basic HTML'
 format: basic_html
 weight: 0
 filters:
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: false
+    weight: -45
+    settings: {  }
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: false
+    weight: -48
+    settings: {  }
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: false
+    weight: -43
+    settings: {  }
+  filter_caption:
+    id: filter_caption
+    provider: filter
+    status: false
+    weight: -47
+    settings: {  }
   filter_html:
     id: filter_html
     provider: filter
@@ -20,17 +44,11 @@ filters:
       allowed_html: '<br> <p class="text-align-left text-align-center text-align-right"> <h2 id class="text-align-left text-align-center text-align-right"> <h3 id class="text-align-left text-align-center text-align-right"> <h4 id class="text-align-left text-align-center text-align-right"> <h5 id class="text-align-left text-align-center text-align-right"> <h6 id class="text-align-left text-align-center text-align-right"> <cite> <dl> <dt> <dd> <figcaption> <picture> <small> <blockquote cite> <span class> <img srcset typeof src alt height width data-entity-type data-entity-uuid data-entity-substitution data-align data-caption> <source srcset media type> <div id data-* class> <iframe src title frameborder aria-describedby tabindex allowtransparency width height class> <drupal-entity data-*> <article data-* class> <a hreflang target id title href data-entity-type data-entity-uuid data-entity-substitution> <ul type> <ol type> <strong> <em> <li>'
       filter_html_help: false
       filter_html_nofollow: false
-  filter_align:
-    id: filter_align
+  filter_html_escape:
+    id: filter_html_escape
     provider: filter
     status: false
-    weight: -48
-    settings: {  }
-  filter_caption:
-    id: filter_caption
-    provider: filter
-    status: false
-    weight: -47
+    weight: -44
     settings: {  }
   filter_html_image_secure:
     id: filter_html_image_secure
@@ -38,17 +56,17 @@ filters:
     status: false
     weight: -46
     settings: {  }
-  editor_file_reference:
-    id: editor_file_reference
-    provider: editor
-    status: false
-    weight: -45
-    settings: {  }
-  filter_autop:
-    id: filter_autop
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
     provider: filter
-    status: false
-    weight: -43
+    status: true
+    weight: -42
+    settings: {  }
+  filter_image_lazy_load:
+    id: filter_image_lazy_load
+    provider: filter
+    status: true
+    weight: -44
     settings: {  }
   filter_url:
     id: filter_url
@@ -57,18 +75,6 @@ filters:
     weight: -50
     settings:
       filter_url_length: 72
-  filter_htmlcorrector:
-    id: filter_htmlcorrector
-    provider: filter
-    status: true
-    weight: -42
-    settings: {  }
-  filter_html_escape:
-    id: filter_html_escape
-    provider: filter
-    status: false
-    weight: -44
-    settings: {  }
   linkit:
     id: linkit
     provider: linkit
@@ -76,9 +82,3 @@ filters:
     weight: -50
     settings:
       title: false
-  filter_image_lazy_load:
-    id: filter_image_lazy_load
-    provider: filter
-    status: true
-    weight: -44
-    settings: {  }

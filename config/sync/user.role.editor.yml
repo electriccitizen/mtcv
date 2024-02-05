@@ -27,6 +27,7 @@ dependencies:
     - disable_messages
     - file
     - filter
+    - help
     - media
     - node
     - paragraphs
@@ -42,6 +43,7 @@ is_admin: null
 permissions:
   - 'access administration pages'
   - 'access content overview'
+  - 'access help pages'
   - 'access media overview'
   - 'access responsive preview'
   - 'access taxonomy overview'

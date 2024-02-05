@@ -38,6 +38,7 @@ dependencies:
     - disable_messages
     - file
     - filter
+    - help
     - media
     - node
     - paragraphs
@@ -56,6 +57,7 @@ permissions:
   - 'access administration pages'
   - 'access block library'
   - 'access content overview'
+  - 'access help pages'
   - 'access media overview'
   - 'access responsive preview'
   - 'access site in maintenance mode'
