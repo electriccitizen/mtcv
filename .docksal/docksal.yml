@@ -1,19 +1,8 @@
 version: "3.9"
 services:
-  # PHPMyAdmin
-  pma:
-    hostname: pma
-    image: phpmyadmin/phpmyadmin
-    environment:
-      - PMA_HOST=db
-      - PMA_USER=root
-      - PMA_PASSWORD=${MYSQL_ROOT_PASSWORD:-root}
-    labels:
-      - io.docksal.virtual-host=pma.${VIRTUAL_HOST}
-  db:
-    image: docksal/mariadb:10.6
   cli:
-    image: docksal/cli:php8.1
-#    # Uncomment to add support for xdebug - see http://docksal.readthedocs.io/en/master/tools/xdebug/.
+    image: docksal/cli:php8.2
     environment:
       - XDEBUG_ENABLED=0
+  db:
+    image: docksal/mariadb:10.6
