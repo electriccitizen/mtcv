@@ -45,6 +45,20 @@ Reviewed by Wilbur, 2022-05-17
 
 `fin drush cim`
 
+## Download files
+Even with Stage File Proxy, GraphQL may throw errors that it can't find files
+referenced by the database in "Start Gatsby Instance", which will prevent the
+entire build step from completing. Resolve this by downloading the Drupal files
+directory manually.
+
+1. Login to Pantheon Dashboard.
+2. Navigate to the MTCV Dev site.
+3. Click "Backups" in the left-hand navigation.
+4. Create a new Backup if there has not been a recent one taken (but they
+should be daily).
+5. Download the "Files" of the Pantheon backup.
+6. Unzip the contents of this file into `web/sites/default/files`.
+
 ## Gatsby Site Setup
 
 `cd ~/Projects/mt`
@@ -53,10 +67,22 @@ Reviewed by Wilbur, 2022-05-17
 
 `cd mlsa`
 
+**Note**: If you are using a computer with an Apple M1 processor, or encounter other
+chipset-related errors, you may need to run all MLSA-related functions in a
+virtual architecture. On OSX, this is done using `arch`:
+
+`arch -x86_64`
+
+## Create Environment Variables File
+Without a .env file, Gatsby will display errors related to the Algolia search
+index, which requires an API key to work. Ask another developer on this project
+for their MLSA .env file, and put it in the root of the MLSA project, where
+there should already be a .env.example.
+
 ## Set NPM version
 ```
-nvm install 10
-nvm use 10
+nvm install 18
+nvm use 18
 npm install
 ```
 ## Install Gatsby Globally
