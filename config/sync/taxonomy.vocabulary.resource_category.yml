@@ -52,3 +52,4 @@ name: Categories
 vid: resource_category
 description: "These terms are used to associate resources with additional, generic categories surrounding victim's rights."
 weight: 0
+new_revision: false

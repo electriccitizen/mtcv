@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: homepage_resources
 label: 'Home Resources'
-revision: 1
+revision: true
 description: 'Add a slider of featured resources to the home page.'

@@ -32,3 +32,4 @@ name: 'Triage Questions'
 vid: triage_questions
 description: 'Top-level triage questions'
 weight: 0
+new_revision: false

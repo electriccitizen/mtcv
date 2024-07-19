@@ -52,3 +52,4 @@ name: Crimes
 vid: crime
 description: 'These terms are used to associate resources with a specific crime against an individual. '
 weight: 0
+new_revision: false

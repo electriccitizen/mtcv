@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: logo_grid
 label: 'Logo Grid'
-revision: 0
+revision: false
 description: 'Add a grid of logo images.'

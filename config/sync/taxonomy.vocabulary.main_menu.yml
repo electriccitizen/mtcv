@@ -32,3 +32,4 @@ name: 'Main Menu'
 vid: main_menu
 description: 'Main menu/primary navigation'
 weight: 0
+new_revision: false

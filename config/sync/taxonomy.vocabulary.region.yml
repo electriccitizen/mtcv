@@ -52,3 +52,4 @@ name: Region
 vid: region
 description: 'These terms are used to associate resources with a specific geographic region.'
 weight: 0
+new_revision: false

@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: translated_block
 label: 'Translated Block'
-revision: 0
+revision: false
 description: 'Add a block of translated items where a user can select which language they wish to view the content in.'

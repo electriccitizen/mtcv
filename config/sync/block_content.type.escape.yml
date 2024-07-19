@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: escape
 label: Escape
-revision: 0
+revision: false
 description: 'Editable block for the Escape button react component.'

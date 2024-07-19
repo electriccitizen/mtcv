@@ -32,3 +32,4 @@ name: 'Resource types'
 vid: resource_types
 description: 'Terms for different types of resources'
 weight: 0
+new_revision: false
