@@ -1,6 +1,6 @@
 MT Local Development
 ====================
-Reviewed by Wilbur, 2022-05-17
+Reviewed by Wilbur, 2024-07-19
 
 # Project Details
 
@@ -31,7 +31,7 @@ Reviewed by Wilbur, 2022-05-17
 
 `fin start`
 
-`composer install`
+`fin composer install`
 
 ## Download and import the database
 
@@ -46,10 +46,7 @@ Reviewed by Wilbur, 2022-05-17
 `fin drush cim`
 
 ## Download files
-Even with Stage File Proxy, GraphQL may throw errors that it can't find files
-referenced by the database in "Start Gatsby Instance", which will prevent the
-entire build step from completing. Resolve this by downloading the Drupal files
-directory manually.
+Even with Stage File Proxy, GraphQL may throw errors that it can't find files referenced by the database in "Start Gatsby Instance", which will prevent the entire build step from completing. Resolve this by downloading the Drupal files directory manually.
 
 1. Login to Pantheon Dashboard.
 2. Navigate to the MTCV Dev site.
@@ -67,17 +64,12 @@ should be daily).
 
 `cd mlsa`
 
-**Note**: If you are using a computer with an Apple M1 processor, or encounter other
-chipset-related errors, you may need to run all MLSA-related functions in a
-virtual architecture. On OSX, this is done using `arch`:
+**Note**: If you are using a computer with an Apple M1 processor, or encounter other chipset-related errors, you may need to run all MLSA-related functions in a virtual architecture. On OSX, this is done using `arch`:
 
 `arch -x86_64`
 
 ## Create Environment Variables File
-Without a .env file, Gatsby will display errors related to the Algolia search
-index, which requires an API key to work. Ask another developer on this project
-for their MLSA .env file, and put it in the root of the MLSA project, where
-there should already be a .env.example.
+Without a .env file, Gatsby will display errors related to the Algolia search index, which requires an API key to work. Ask another developer on this project for their MLSA .env file, and put it in the root of the MLSA project, where there should already be a .env.example.
 
 ## Set NPM version
 ```
@@ -158,9 +150,8 @@ See the THEME-INSTALL.md file inside of the theme root for install instructions.
 
 # Project Legend
 ## Docksal Images
-- DB - docksal/mysql:5.7
-- CLI - docksal/cli:stable-php7.4
-- SOLR - docksal/solr:1.0-solr3
+- DB - docksal/mariadb:10.6
+- CLI - docksal/cli:php8.2
 
 See `~/Projects/mtcv/.docksal/docksal.yml`
 
