@@ -52,3 +52,4 @@ name: Navigator
 vid: navigator
 description: 'Prompts for the Legal Help finder.'
 weight: 0
+new_revision: false

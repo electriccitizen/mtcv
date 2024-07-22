@@ -28,7 +28,7 @@ third_party_settings:
 name: 'Support Book'
 type: support_book
 description: 'Learn about key tasks in editing and managing the site.'
-help: ''
+help: null
 new_revision: true
 preview_mode: 0
 display_submitted: false

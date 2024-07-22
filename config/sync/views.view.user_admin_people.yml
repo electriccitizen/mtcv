@@ -7,6 +7,7 @@ dependencies:
     - image.style.thumbnail_cropped
   module:
     - image
+    - role_delegation
     - user
 _core:
   default_config_hash: wTJRNzsLVTenCALONNlVfgm_pBOlqucSPuVFLOD56ck
@@ -635,6 +636,7 @@ display:
             offset: false
             offset_label: Offset
           quantity: 5
+          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:

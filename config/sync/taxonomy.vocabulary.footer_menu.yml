@@ -32,3 +32,4 @@ name: 'Footer Menu'
 vid: footer_menu
 description: 'Footer menu links'
 weight: 0
+new_revision: false

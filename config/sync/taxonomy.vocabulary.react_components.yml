@@ -32,3 +32,4 @@ name: 'Gatsby Components'
 vid: react_components
 description: 'Terms that related to Gatsby components. Used in component paragraphs.'
 weight: 0
+new_revision: false

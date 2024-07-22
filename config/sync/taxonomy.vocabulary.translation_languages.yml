@@ -20,3 +20,4 @@ name: 'Translation Languages'
 vid: translation_languages
 description: 'Languages available for use in the translated text paragraph.'
 weight: 0
+new_revision: false

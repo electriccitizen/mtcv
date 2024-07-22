@@ -52,3 +52,4 @@ name: 'Related issues'
 vid: related_issues
 description: 'These terms are used to associate resources with one or more related legal needs or life issues.'
 weight: 0
+new_revision: false

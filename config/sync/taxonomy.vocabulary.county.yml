@@ -32,3 +32,4 @@ name: County
 vid: county
 description: 'A list of MT counties'
 weight: 0
+new_revision: false
