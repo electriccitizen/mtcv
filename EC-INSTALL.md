@@ -151,7 +151,7 @@ See the THEME-INSTALL.md file inside of the theme root for install instructions.
 # Project Legend
 ## Docksal Images
 - DB - docksal/mariadb:10.6
-- CLI - docksal/cli:php8.2
+- CLI - docksal/cli:php8.3
 
 See `~/Projects/mtcv/.docksal/docksal.yml`
 
