@@ -1,6 +1,6 @@
 services:
   cli:
-    image: docksal/cli:php8.2
+    image: docksal/cli:php8.3
     environment:
       - XDEBUG_ENABLED=0
   db:

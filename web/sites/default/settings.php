@@ -26,7 +26,7 @@ $settings['config_sync_directory'] = dirname(DRUPAL_ROOT) . '/config/sync';
 $config['file.settings']['make_unused_managed_files_temporary'] = TRUE;
 $config['system.file']['temporary_maximum_age'] = 30;
 
-
+$settings['state_cache'] = TRUE;
 
 /**
  * Trusted host patterns
