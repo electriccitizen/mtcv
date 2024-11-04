@@ -943,23 +943,16 @@ display:
           buttons: false
           action_title: Action
           clear_on_exposed: false
+          force_selection_info: false
           selected_actions:
-            -
-              action_id: node_unpublish_action
-              preconfiguration:
-                label_override: Unpublish
-            -
-              action_id: node_publish_action
-              preconfiguration:
-                label_override: Publish
-            -
-              action_id: node_save_action
-              preconfiguration:
-                label_override: Save
             -
               action_id: views_bulk_operations_delete_entity
               preconfiguration:
                 label_override: Delete
+            -
+              action_id: 'entity:save_action:node'
+              preconfiguration:
+                add_confirmation: false
         title:
           id: title
           table: node_field_data
