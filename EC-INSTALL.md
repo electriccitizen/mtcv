@@ -1,6 +1,6 @@
 MT Local Development
 ====================
-Reviewed by Wilbur, 2024-07-19
+Reviewed by Wilbur, 2024-11-04
 
 # Project Details
 
@@ -21,17 +21,14 @@ Reviewed by Wilbur, 2024-07-19
 
 `cd ~/Projects`
 
-`mkdir mt`
-
-`cd mt`
-
-`git clone git@github.com:electriccitizen/mtcv.git mtcv`
-
-`cd mtcv/`
-
-`fin start`
-
-`fin composer install`
+```
+mkdir mt && cd mt
+git clone git@github.com:electriccitizen/mtcv.git mtcv
+cd mtcv
+fin host add
+fin cert
+fin composer install
+```
 
 ## Download and import the database
 
@@ -114,30 +111,26 @@ Whenever you start a new task, you'll want to refresh your local environment to 
 
 `cd ~/Projects/mt/mlsa`
 
-`git pull`
-
-`gatsby develop`
-
-`cd ~/Projects/mt/mtcv`
-
-`git checkout main`
-
-`git pull`
-
-`fin restart`
-
-`composer install`
+```
+git pull
+gatsby develop
+cd ~/Projects/mt/mtcv
+git checkout main
+git pull
+fin restart
+fin composer install
+```
 
 DB Pull - Optional
 `fin drush @mtcv.dev sql-dump > database.sql`
 `fin db import database.sql`
 End DB Pull
 
-`fin drush cr`
-
-`fin drush cim`
-
-`fin drush uli`
+```
+fin drush cr
+fin drush cim
+fin drush uli
+```
 
 Open the generated login URL and you should be set to go.
 
