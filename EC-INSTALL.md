@@ -85,7 +85,7 @@ if you do not have it already
 Update gatsby-config.js to point to the local drupal install (mtcv.docksal).
 Comment out line 35, uncomment line 36
 ```
-//baseUrl: 'http://dev-mtcv.pantheonsite.io/',
+//baseUrl: 'https://dev-mtcv.pantheonsite.io/',
 baseUrl: 'http://mtcv.docksal.site/',
 ```
 
