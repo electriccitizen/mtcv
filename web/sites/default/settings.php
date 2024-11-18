@@ -32,7 +32,7 @@ $settings['state_cache'] = TRUE;
  * Trusted host patterns
  */
 $settings['trusted_host_patterns'] = [
-  '^mtcv.docksal$',
+  '^mtcv.docksal.site$',
   '^drupal-mtcv.docksal$',
   '^dev-mtcv.pantheonsite.io$',
 ];

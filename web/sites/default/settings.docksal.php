@@ -13,7 +13,7 @@ $databases['default']['default'] = array (
 
 $settings['hash_salt'] = 'noodle doodle';
 
-$settings['base_url'] = 'http://mtcv.docksal.site';
+$settings['base_url'] = 'https://mtcv.docksal.site';
 /**
  * Enable local development services.
  */
