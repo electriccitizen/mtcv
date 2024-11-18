@@ -19,6 +19,7 @@ module:
   config: 0
   config_filter: 0
   config_ignore: 0
+  config_split: 0
   contextual: 0
   ctools: 0
   datetime: 0
@@ -41,7 +42,6 @@ module:
   image: 0
   jsonapi: 0
   layout_builder: 0
-  layout_builder_expose_all_field_blocks: 0
   layout_discovery: 0
   link: 0
   link_attributes: 0
@@ -78,7 +78,6 @@ module:
   token: 0
   toolbar: 0
   twig_tweak: 0
-  update: 0
   user: 0
   views_bulk_operations: 0
   views_infinite_scroll: 0

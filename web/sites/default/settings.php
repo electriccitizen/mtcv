@@ -45,11 +45,22 @@ if (is_array($settings)) {
   $settings['trusted_host_patterns'] = ['^' . preg_quote($primary_domain) . '$'];
 }
 
+if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+  switch($_ENV['PANTHEON_ENVIRONMENT']) {
+    default :
+      $config['config_split.config_split.dev']['status'] = TRUE;
+      break;
+  }
+}
+
 /**
  * Include docksal settings if not on Pantheon env.
  */
 
 if (!isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+  // local config split
+  $config['config_split.config_split.local']['status'] = TRUE;
+
   $docksal_settings = __DIR__ . "/settings.docksal.php";
   if (file_exists($docksal_settings)) {
     include $docksal_settings;

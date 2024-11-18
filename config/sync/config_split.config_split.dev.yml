@@ -1,0 +1,16 @@
+uuid: 9fc8e46a-fc86-43c2-a7d7-8f3ff7bb83f0
+langcode: en
+status: false
+dependencies: {  }
+id: dev
+label: DEV
+description: 'Config for the DEV site, which is the client login site.  '
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/dev
+module: {  }
+theme: {  }
+complete_list: {  }
+partial_list: {  }
