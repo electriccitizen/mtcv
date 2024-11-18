@@ -6,8 +6,8 @@ Reviewed by Wilbur, 2024-11-04
 
 - **NAME:**  mtcv
 - **URL:** https://www.mtcrimevictimhelp.org/
-- **ADMIN URL:** http://dev-mtcv.pantheonsite.io/
-- **LOCAL URL:** http://mtcv.docksal.site
+- **ADMIN URL:** https://dev-mtcv.pantheonsite.io/
+- **LOCAL URL:** https://mtcv.docksal.site
 - **BRANCH:** main
 - **HOSTING:** [Pantheon Dashboard](https://dashboard.pantheon.io/sites/ad79477c-5d06-4234-b6b8-582ebeee0e5c)
 - **CIRCLE CI:** [Logs](https://app.circleci.com/pipelines/github/electriccitizen/mtcv)
@@ -86,7 +86,7 @@ Update gatsby-config.js to point to the local drupal install (mtcv.docksal).
 Comment out line 35, uncomment line 36
 ```
 //baseUrl: 'https://dev-mtcv.pantheonsite.io/',
-baseUrl: 'http://mtcv.docksal.site/',
+baseUrl: 'https://mtcv.docksal.site/',
 ```
 
 ## Start Gatsby Instance
