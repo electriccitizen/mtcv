@@ -8,4 +8,4 @@ dependencies:
   - migrate_tools:migrate_tools
 
 version: '8.x-1.0'
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^8 || ^9 || ^10 || ^11
