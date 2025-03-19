@@ -7,4 +7,3 @@
   ssh:
     options: '-p 2222 -o "AddressFamily inet"'
     tty: false
-
