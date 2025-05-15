@@ -7,42 +7,34 @@ Reviewed by Wilbur, 2024-11-04
 - **NAME:**  mtcv
 - **URL:** https://www.mtcrimevictimhelp.org/
 - **ADMIN URL:** https://dev-mtcv.pantheonsite.io/
-- **LOCAL URL:** https://mtcv.docksal.site
+- **LOCAL URL:** https://mtcv.ddev.site
 - **BRANCH:** main
 - **HOSTING:** [Pantheon Dashboard](https://dashboard.pantheon.io/sites/ad79477c-5d06-4234-b6b8-582ebeee0e5c)
 - **CIRCLE CI:** [Logs](https://app.circleci.com/pipelines/github/electriccitizen/mtcv)
 
-## Requirements and platform docs
-
-- [EC: Local development requirements](https://docs.google.com/document/d/1_yeISu5bW5637TCeXByi82LUUfD1jeeSDHh5IeiPz4o/edit?usp=sharing)
-- [EC: Developing on Pantheon](https://docs.google.com/document/d/1oTBHep57WENbf8PnM4LSn2Zx6x5EKA1rSYDEMvBEsUY/edit)
-
 # Local Development Setup
 
-`cd ~/Projects`
-
 ```
-mkdir mt && cd mt
 git clone git@github.com:electriccitizen/mtcv.git mtcv
 cd mtcv
-fin host add
-fin cert
-fin composer install
+ddev host add
+ddev cert
+ddev composer install
 ```
 
 ## Download and import the database
 
-`fin drush @mtcv.dev sql-dump > database.sql`
+`ddev drush @mtcv.dev sql-dump > database.sql`
 
-`fin db import database.sql`
+`ddev db import database.sql`
 
-`fin drush cr`
+`ddev drush cr`
 
 ## Import local configuration
 
-`fin drush cim`
+`ddev drush cim`
 
-## Download files
+## Download files (only if needed)
 Even with Stage File Proxy, GraphQL may throw errors that it can't find files referenced by the database in "Start Gatsby Instance", which will prevent the entire build step from completing. Resolve this by downloading the Drupal files directory manually.
 
 1. Login to Pantheon Dashboard.
@@ -54,8 +46,6 @@ should be daily).
 6. Unzip the contents of this file into `web/sites/default/files`.
 
 ## Gatsby Site Setup
-
-`cd ~/Projects/mt`
 
 `git clone git@github.com:electriccitizen/mlsa.git`
 
@@ -82,11 +72,11 @@ if you do not have it already
 `npm i -g gatsby-cli`
 
 ## Point to Drupal Install
-Update gatsby-config.js to point to the local drupal install (mtcv.docksal).
+Update gatsby-config.js to point to the local drupal install (mtcv.ddev.site).
 Comment out line 35, uncomment line 36
 ```
 //baseUrl: 'https://dev-mtcv.pantheonsite.io/',
-baseUrl: 'https://mtcv.docksal.site/',
+baseUrl: 'https://mtcv.ddev.site/',
 ```
 
 ## Start Gatsby Instance
@@ -99,9 +89,7 @@ To get new content generated on the local site, use gatsby clean and gatsby deve
 
 ## Log into website as admin
 
-`cd ~/Projects/mt/mtcv`
-
-`fin drush uli`
+`ddev drush uli`
 
 Open the generated login URL and you should be set to go.
 
@@ -109,27 +97,28 @@ Open the generated login URL and you should be set to go.
 
 Whenever you start a new task, you'll want to refresh your local environment to pull in the latest changes from other developers.
 
-`cd ~/Projects/mt/mlsa`
+Gatsby
 
 ```
 git pull
 gatsby develop
-cd ~/Projects/mt/mtcv
+```
+Drupal:
+```
 git checkout main
 git pull
-fin restart
-fin composer install
+ddev composer install
 ```
 
 DB Pull - Optional
-`fin drush @mtcv.dev sql-dump > database.sql`
-`fin db import database.sql`
+`ddev drush @mtcv.dev sql-dump > database.sql`
+`ddev db import database.sql`
 End DB Pull
 
 ```
-fin drush cr
-fin drush cim
-fin drush uli
+ddev drush cr
+ddev drush cim
+ddev drush uli
 ```
 
 Open the generated login URL and you should be set to go.
@@ -141,37 +130,21 @@ The active theme for this project is **crane**:
 See the THEME-INSTALL.md file inside of the theme root for install instructions.
 `~/Projects/mt/mtcv/web/themes/custom/crane/THEME-INSTALL.md`
 
-# Project Legend
-## Docksal Images
-- DB - docksal/mariadb:10.6
-- CLI - docksal/cli:php8.3
-
-See `~/Projects/mtcv/.docksal/docksal.yml`
-
-## settings.docksal.php
-- database connection
-- hash_salt
-- base_url
-- development services
-- error level
-- CSS/JS aggregation
-- rebuild_access
-- permissions_hardening
-- file paths
-
-See `~/Projects/mtcv/web/sites/default/settings.docksal.php`
-
 # Enabling Xdebug
 
-Copy the `.docksal/docksal-local.yml.default` file to the .docksal folder as `docksal-local.yml` and ensure that `XDEBUG_ENABLED=1`
+Enable xdebug by running `ddev xdebug`. It will remain enabled for the entirety of your session and you can re-enable when needed. This should remain off in the DDEV config.
 
-Open `.docksal/etc/php/php.ini` and uncomment the three lines of code directly under [xdebug]:
+Auto Configuration for PHPStorm:
 
-```
-[xdebug]
-xdebug.mode=debug
-xdebug.discover_client_host=1
-xdebug.client_host=192.168.64.100
-```
+1. Turn on the listener in PHPStorm
+2. Add a breakpoint at the top of web/index.php
+3. Visit a page on the
+4. This should prompt a dialog that sets up your server
+5. The defaults should work
 
-Run `fin restart` to restart the Docksal project.
+For other platforms and documentation see:
+
+[DDEV DOCS](https://ddev.readthedocs.io/en/stable/users/debugging-profiling/step-debugging/)
+`
+
+Run `ddev restart` to restart the Docksal project.
