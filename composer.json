@@ -27,7 +27,7 @@
     "drupal/devel": "^5.0",
     "drupal/disable_messages": "^2.0",
     "drupal/entity_redirect": "^2.0",
-    "drupal/field_group": "~3.0-rc1",
+    "drupal/field_group": "^4.0",
     "drupal/gatsby": "^2.0@RC",
     "drupal/gin": "^4.0",
     "drupal/gin_toolbar": "^2.0",
