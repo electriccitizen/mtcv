@@ -32,7 +32,7 @@ $settings['state_cache'] = TRUE;
  * Trusted host patterns
  */
 $settings['trusted_host_patterns'] = [
-  '^mtcv.docksal.site$',
+  '^mtcv.ddev.site$',
   '^drupal-mtcv.docksal$',
   '^dev-mtcv.pantheonsite.io$',
 ];
@@ -53,18 +53,10 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
   }
 }
 
-/**
- * Include docksal settings if not on Pantheon env.
- */
 
 if (!isset($_ENV['PANTHEON_ENVIRONMENT'])) {
   // local config split
   $config['config_split.config_split.local']['status'] = TRUE;
-
-  $docksal_settings = __DIR__ . "/settings.docksal.php";
-  if (file_exists($docksal_settings)) {
-    include $docksal_settings;
-  }
 }
 /**
  * If there is a local settings file, then include it.
@@ -72,4 +64,10 @@ if (!isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 $local_settings = __DIR__ . "/settings.local.php";
 if (file_exists($local_settings)) {
   include $local_settings;
+}
+
+// Automatically generated include for settings managed by ddev.
+$ddev_settings = __DIR__ . '/settings.ddev.php';
+if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
+  require $ddev_settings;
 }
